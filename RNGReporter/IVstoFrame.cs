@@ -205,5 +205,20 @@ namespace RNGReporter
                 _Search();
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void setIVs1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void setIVs5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

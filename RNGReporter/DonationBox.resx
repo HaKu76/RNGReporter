@@ -112,31 +112,27 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Thanks for using RNG Reporter!  I hope you've enjoyed using it as much
-as I've enjoyed programming it.
+    <value>感谢您使用RNG Reporter！希望您使用它的感受和我一样，编程它的过程让我非常享受。
 
-Please consider making a donation to support the continued development of RNG Reporter, especially if
-it helped you build a tournament team, saved you tedious hours of soft-resetting, or allowed you
-get that seemingly-impossible flawless shiny Pokémon.
+请考虑进行捐赠以支持RNG Reporter的持续开发，特别是如果它帮助您组建了比赛队伍、节省了您无数次繁琐的软重置时间，或者让您得到了那看似不可能出现的完美闪光宝可梦。
 
-There are many great features planned for future RNG Reporters, and with your support you'll be able to:
-• Breed shiny eggs in Emerald
-• Get flawless chained shinies - with a chain of 1
-• Get flawless Colosseum\XD Pokémon on a real Gamecube or Wii
-• Get the perfect Entralink Pokémon without trying over and over for the right nature
-• Make your item farming with Pickup, Thief, or swirling dust spots quick and easy
-• Manage all your different DS parameters and games with RNG profiles
-• And much more!
+未来的RNG Reporter计划了许多出色的新功能，您的支持将使您能够：
+• 在《绿宝石》中培育闪光蛋
+• 轻松获得完美的连锁闪光宝可梦——仅需连锁1次
+• 在真实的Gamecube或Wii上获得完美的Colosseum/XD宝可梦
+• 不再需要反复尝试即可获得完美的Entralink宝可梦
+• 使您使用拾荒、小偷或旋风尘埃点的物品收集变得既快速又轻松
+• 使用RNG配置文件管理所有不同的DS参数和游戏
+• 还有更多！
 
-NOTE: RNG Reporter will NEVER link directly to any donation sites - always to the RNG help thread on Smogon.
-This is done to protect you from phishing attempts.
+注意：RNG Reporter永远不会直接链接到任何捐赠网站——它总是链接到Smogon的RNG帮助帖子。这是为了保护您免受网络钓鱼攻击。
 
-New features in this version:</value>
+此版本的新功能包括：</value>
   </data>
 </root>

@@ -122,193 +122,192 @@ namespace RNGReporter
             // lblGxStat
             // 
             this.lblGxStat.AutoSize = true;
-            this.lblGxStat.Location = new System.Drawing.Point(40, 128);
+            this.lblGxStat.Location = new System.Drawing.Point(40, 118);
             this.lblGxStat.Name = "lblGxStat";
-            this.lblGxStat.Size = new System.Drawing.Size(39, 13);
+            this.lblGxStat.Size = new System.Drawing.Size(41, 12);
             this.lblGxStat.TabIndex = 0;
             this.lblGxStat.Text = "GxStat";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 39);
+            this.label2.Location = new System.Drawing.Point(105, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 13);
+            this.label2.Size = new System.Drawing.Size(23, 12);
             this.label2.TabIndex = 5;
             this.label2.Text = "Min";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 39);
+            this.label3.Location = new System.Drawing.Point(170, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.Size = new System.Drawing.Size(23, 12);
             this.label3.TabIndex = 6;
             this.label3.Text = "Max";
             // 
             // lblTimer0
             // 
             this.lblTimer0.AutoSize = true;
-            this.lblTimer0.Location = new System.Drawing.Point(38, 106);
+            this.lblTimer0.Location = new System.Drawing.Point(38, 98);
             this.lblTimer0.Name = "lblTimer0";
-            this.lblTimer0.Size = new System.Drawing.Size(39, 13);
+            this.lblTimer0.Size = new System.Drawing.Size(41, 12);
             this.lblTimer0.TabIndex = 7;
             this.lblTimer0.Text = "Timer0";
             // 
             // lblVCount
             // 
             this.lblVCount.AutoSize = true;
-            this.lblVCount.Location = new System.Drawing.Point(37, 82);
+            this.lblVCount.Location = new System.Drawing.Point(37, 76);
             this.lblVCount.Name = "lblVCount";
-            this.lblVCount.Size = new System.Drawing.Size(42, 13);
+            this.lblVCount.Size = new System.Drawing.Size(41, 12);
             this.lblVCount.TabIndex = 8;
             this.lblVCount.Text = "VCount";
             // 
             // lblVFrame
             // 
             this.lblVFrame.AutoSize = true;
-            this.lblVFrame.Location = new System.Drawing.Point(36, 151);
+            this.lblVFrame.Location = new System.Drawing.Point(36, 139);
             this.lblVFrame.Name = "lblVFrame";
-            this.lblVFrame.Size = new System.Drawing.Size(43, 13);
+            this.lblVFrame.Size = new System.Drawing.Size(41, 12);
             this.lblVFrame.TabIndex = 9;
             this.lblVFrame.Text = "VFrame";
             // 
             // lblSeconds
             // 
             this.lblSeconds.AutoSize = true;
-            this.lblSeconds.Location = new System.Drawing.Point(31, 58);
+            this.lblSeconds.Location = new System.Drawing.Point(31, 54);
             this.lblSeconds.Name = "lblSeconds";
-            this.lblSeconds.Size = new System.Drawing.Size(49, 13);
+            this.lblSeconds.Size = new System.Drawing.Size(47, 12);
             this.lblSeconds.TabIndex = 10;
             this.lblSeconds.Text = "Seconds";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(241, 39);
+            this.label8.Location = new System.Drawing.Point(241, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.Size = new System.Drawing.Size(47, 12);
             this.label8.TabIndex = 12;
             this.label8.Text = "Version";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(39, 42);
+            this.label10.Location = new System.Drawing.Point(39, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 13);
+            this.label10.Size = new System.Drawing.Size(17, 12);
             this.label10.TabIndex = 22;
             this.label10.Text = "HP";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(82, 42);
+            this.label11.Location = new System.Drawing.Point(82, 39);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 13);
+            this.label11.Size = new System.Drawing.Size(29, 12);
             this.label11.TabIndex = 23;
-            this.label11.Text = "Atk";
+            this.label11.Text = "攻击";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(125, 42);
+            this.label12.Location = new System.Drawing.Point(125, 39);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.Size = new System.Drawing.Size(29, 12);
             this.label12.TabIndex = 24;
-            this.label12.Text = "Def";
+            this.label12.Text = "防御";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(253, 42);
+            this.label13.Location = new System.Drawing.Point(253, 39);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.Size = new System.Drawing.Size(29, 12);
             this.label13.TabIndex = 27;
-            this.label13.Text = "Speed";
+            this.label13.Text = "速度";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(210, 42);
+            this.label14.Location = new System.Drawing.Point(210, 39);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.Size = new System.Drawing.Size(29, 12);
             this.label14.TabIndex = 26;
-            this.label14.Text = "SpDef";
+            this.label14.Text = "特防";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(167, 42);
+            this.label15.Location = new System.Drawing.Point(167, 39);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 13);
+            this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 25;
-            this.label15.Text = "SpAtk";
+            this.label15.Text = "特攻";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 12);
-            this.label16.MaximumSize = new System.Drawing.Size(240, 26);
+            this.label16.Location = new System.Drawing.Point(13, 11);
+            this.label16.MaximumSize = new System.Drawing.Size(240, 24);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(240, 26);
+            this.label16.Size = new System.Drawing.Size(233, 24);
             this.label16.TabIndex = 28;
-            this.label16.Text = "Enter the IVs of the Pokémon encountered using Sweet Scent immediately after load" +
-    "ing the game.";
+            this.label16.Text = "在进入游戏后，立即使用甜气遭遇宝可梦然后输入个体值。";
             // 
             // datePicker
             // 
             this.datePicker.CustomFormat = "MMMM dd, yyyy";
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePicker.Location = new System.Drawing.Point(12, 228);
+            this.datePicker.Location = new System.Drawing.Point(12, 210);
             this.datePicker.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
             this.datePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(148, 20);
+            this.datePicker.Size = new System.Drawing.Size(148, 21);
             this.datePicker.TabIndex = 15;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(207, 212);
+            this.label17.Location = new System.Drawing.Point(207, 196);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 13);
+            this.label17.Size = new System.Drawing.Size(41, 12);
             this.label17.TabIndex = 33;
             this.label17.Text = "Minute";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(164, 212);
+            this.label18.Location = new System.Drawing.Point(164, 196);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(30, 13);
+            this.label18.Size = new System.Drawing.Size(29, 12);
             this.label18.TabIndex = 32;
             this.label18.Text = "Hour";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 212);
+            this.label19.Location = new System.Drawing.Point(12, 196);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 13);
+            this.label19.Size = new System.Drawing.Size(29, 12);
             this.label19.TabIndex = 34;
             this.label19.Text = "Date";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(249, 212);
+            this.label25.Location = new System.Drawing.Point(249, 196);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 13);
+            this.label25.Size = new System.Drawing.Size(47, 12);
             this.label25.TabIndex = 47;
             this.label25.Text = "Seconds";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(242, 158);
+            this.label26.Location = new System.Drawing.Point(242, 146);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(89, 13);
+            this.label26.Size = new System.Drawing.Size(89, 12);
             this.label26.TabIndex = 59;
             this.label26.Text = "DS MAC Address";
             // 
@@ -350,7 +349,7 @@ namespace RNGReporter
             this.groupBox1.Controls.Add(this.maskedTextBoxAtkMin);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 257);
+            this.groupBox1.Size = new System.Drawing.Size(300, 237);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -358,11 +357,11 @@ namespace RNGReporter
             // 
             this.buttonCalcIVs.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonCalcIVs.ForeColor = System.Drawing.Color.Black;
-            this.buttonCalcIVs.Location = new System.Drawing.Point(58, 129);
+            this.buttonCalcIVs.Location = new System.Drawing.Point(58, 119);
             this.buttonCalcIVs.Name = "buttonCalcIVs";
             this.buttonCalcIVs.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonCalcIVs.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonCalcIVs.Size = new System.Drawing.Size(195, 23);
+            this.buttonCalcIVs.Size = new System.Drawing.Size(195, 21);
             this.buttonCalcIVs.TabIndex = 12;
             this.buttonCalcIVs.Text = "Calculate IVs from Stats";
             this.buttonCalcIVs.Click += new System.EventHandler(this.buttonCalcIVs_Click);
@@ -370,9 +369,9 @@ namespace RNGReporter
             // checkBoxRoamer
             // 
             this.checkBoxRoamer.AutoSize = true;
-            this.checkBoxRoamer.Location = new System.Drawing.Point(41, 108);
+            this.checkBoxRoamer.Location = new System.Drawing.Point(41, 100);
             this.checkBoxRoamer.Name = "checkBoxRoamer";
-            this.checkBoxRoamer.Size = new System.Drawing.Size(230, 17);
+            this.checkBoxRoamer.Size = new System.Drawing.Size(258, 16);
             this.checkBoxRoamer.TabIndex = 87;
             this.checkBoxRoamer.Text = "Use IVs from roaming Thundurus\\Tornadus";
             this.checkBoxRoamer.UseVisualStyleBackColor = true;
@@ -380,87 +379,87 @@ namespace RNGReporter
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 88);
+            this.label1.Location = new System.Drawing.Point(10, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(23, 12);
             this.label1.TabIndex = 85;
             this.label1.Text = "Max";
             // 
             // maskedTextBoxDefMax
             // 
             this.maskedTextBoxDefMax.Hex = false;
-            this.maskedTextBoxDefMax.Location = new System.Drawing.Point(127, 84);
+            this.maskedTextBoxDefMax.Location = new System.Drawing.Point(127, 78);
             this.maskedTextBoxDefMax.Mask = "00";
             this.maskedTextBoxDefMax.Name = "maskedTextBoxDefMax";
-            this.maskedTextBoxDefMax.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxDefMax.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxDefMax.TabIndex = 8;
             this.maskedTextBoxDefMax.Tag = "ivs";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 63);
+            this.label4.Location = new System.Drawing.Point(10, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.Size = new System.Drawing.Size(23, 12);
             this.label4.TabIndex = 86;
             this.label4.Text = "Min";
             // 
             // maskedTextBoxSpeedMax
             // 
             this.maskedTextBoxSpeedMax.Hex = false;
-            this.maskedTextBoxSpeedMax.Location = new System.Drawing.Point(256, 84);
+            this.maskedTextBoxSpeedMax.Location = new System.Drawing.Point(256, 78);
             this.maskedTextBoxSpeedMax.Mask = "00";
             this.maskedTextBoxSpeedMax.Name = "maskedTextBoxSpeedMax";
-            this.maskedTextBoxSpeedMax.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxSpeedMax.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxSpeedMax.TabIndex = 11;
             this.maskedTextBoxSpeedMax.Tag = "ivs";
             // 
             // maskedTextBoxSpDefMax
             // 
             this.maskedTextBoxSpDefMax.Hex = false;
-            this.maskedTextBoxSpDefMax.Location = new System.Drawing.Point(213, 84);
+            this.maskedTextBoxSpDefMax.Location = new System.Drawing.Point(213, 78);
             this.maskedTextBoxSpDefMax.Mask = "00";
             this.maskedTextBoxSpDefMax.Name = "maskedTextBoxSpDefMax";
-            this.maskedTextBoxSpDefMax.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxSpDefMax.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxSpDefMax.TabIndex = 10;
             this.maskedTextBoxSpDefMax.Tag = "ivs";
             // 
             // maskedTextBoxSpAtkMax
             // 
             this.maskedTextBoxSpAtkMax.Hex = false;
-            this.maskedTextBoxSpAtkMax.Location = new System.Drawing.Point(170, 84);
+            this.maskedTextBoxSpAtkMax.Location = new System.Drawing.Point(170, 78);
             this.maskedTextBoxSpAtkMax.Mask = "00";
             this.maskedTextBoxSpAtkMax.Name = "maskedTextBoxSpAtkMax";
-            this.maskedTextBoxSpAtkMax.Size = new System.Drawing.Size(34, 20);
+            this.maskedTextBoxSpAtkMax.Size = new System.Drawing.Size(34, 19);
             this.maskedTextBoxSpAtkMax.TabIndex = 9;
             this.maskedTextBoxSpAtkMax.Tag = "ivs";
             // 
             // maskedTextBoxHPMax
             // 
             this.maskedTextBoxHPMax.Hex = false;
-            this.maskedTextBoxHPMax.Location = new System.Drawing.Point(41, 84);
+            this.maskedTextBoxHPMax.Location = new System.Drawing.Point(41, 78);
             this.maskedTextBoxHPMax.Mask = "00";
             this.maskedTextBoxHPMax.Name = "maskedTextBoxHPMax";
-            this.maskedTextBoxHPMax.Size = new System.Drawing.Size(34, 20);
+            this.maskedTextBoxHPMax.Size = new System.Drawing.Size(34, 19);
             this.maskedTextBoxHPMax.TabIndex = 6;
             this.maskedTextBoxHPMax.Tag = "ivs";
             // 
             // maskedTextBoxAtkMax
             // 
             this.maskedTextBoxAtkMax.Hex = false;
-            this.maskedTextBoxAtkMax.Location = new System.Drawing.Point(84, 84);
+            this.maskedTextBoxAtkMax.Location = new System.Drawing.Point(84, 78);
             this.maskedTextBoxAtkMax.Mask = "00";
             this.maskedTextBoxAtkMax.Name = "maskedTextBoxAtkMax";
-            this.maskedTextBoxAtkMax.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxAtkMax.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxAtkMax.TabIndex = 7;
             this.maskedTextBoxAtkMax.Tag = "ivs";
             // 
             // checkBoxHalfSeed
             // 
             this.checkBoxHalfSeed.AutoSize = true;
-            this.checkBoxHalfSeed.Location = new System.Drawing.Point(168, 189);
+            this.checkBoxHalfSeed.Location = new System.Drawing.Point(168, 174);
             this.checkBoxHalfSeed.Name = "checkBoxHalfSeed";
-            this.checkBoxHalfSeed.Size = new System.Drawing.Size(91, 17);
+            this.checkBoxHalfSeed.Size = new System.Drawing.Size(114, 16);
             this.checkBoxHalfSeed.TabIndex = 14;
             this.checkBoxHalfSeed.Text = "First Half Only";
             this.checkBoxHalfSeed.UseVisualStyleBackColor = true;
@@ -469,10 +468,10 @@ namespace RNGReporter
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(10, 160);
-            this.label21.MaximumSize = new System.Drawing.Size(240, 26);
+            this.label21.Location = new System.Drawing.Point(10, 148);
+            this.label21.MaximumSize = new System.Drawing.Size(240, 24);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(218, 26);
+            this.label21.Size = new System.Drawing.Size(221, 24);
             this.label21.TabIndex = 48;
             this.label21.Text = "If you know the full value of your initial seed, enter it here instead (faster se" +
     "arch)";
@@ -480,10 +479,10 @@ namespace RNGReporter
             // maskedTextBoxDefMin
             // 
             this.maskedTextBoxDefMin.Hex = false;
-            this.maskedTextBoxDefMin.Location = new System.Drawing.Point(127, 58);
+            this.maskedTextBoxDefMin.Location = new System.Drawing.Point(127, 54);
             this.maskedTextBoxDefMin.Mask = "00";
             this.maskedTextBoxDefMin.Name = "maskedTextBoxDefMin";
-            this.maskedTextBoxDefMin.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxDefMin.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxDefMin.TabIndex = 2;
             this.maskedTextBoxDefMin.Tag = "ivs";
             this.maskedTextBoxDefMin.Leave += new System.EventHandler(this.maskedTextBoxDefMin_Leave);
@@ -491,19 +490,19 @@ namespace RNGReporter
             // textBoxDirectSeed
             // 
             this.textBoxDirectSeed.Hex = true;
-            this.textBoxDirectSeed.Location = new System.Drawing.Point(13, 187);
+            this.textBoxDirectSeed.Location = new System.Drawing.Point(13, 173);
             this.textBoxDirectSeed.Mask = "AAAAAAAAAAAAAAAA";
             this.textBoxDirectSeed.Name = "textBoxDirectSeed";
-            this.textBoxDirectSeed.Size = new System.Drawing.Size(148, 20);
+            this.textBoxDirectSeed.Size = new System.Drawing.Size(148, 19);
             this.textBoxDirectSeed.TabIndex = 13;
             // 
             // maskedTextBoxSpeedMin
             // 
             this.maskedTextBoxSpeedMin.Hex = false;
-            this.maskedTextBoxSpeedMin.Location = new System.Drawing.Point(256, 58);
+            this.maskedTextBoxSpeedMin.Location = new System.Drawing.Point(256, 54);
             this.maskedTextBoxSpeedMin.Mask = "00";
             this.maskedTextBoxSpeedMin.Name = "maskedTextBoxSpeedMin";
-            this.maskedTextBoxSpeedMin.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxSpeedMin.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxSpeedMin.TabIndex = 5;
             this.maskedTextBoxSpeedMin.Tag = "ivs";
             this.maskedTextBoxSpeedMin.Leave += new System.EventHandler(this.maskedTextBoxSpeedMin_Leave);
@@ -511,19 +510,19 @@ namespace RNGReporter
             // maskedTextBoxHour
             // 
             this.maskedTextBoxHour.Hex = false;
-            this.maskedTextBoxHour.Location = new System.Drawing.Point(167, 229);
+            this.maskedTextBoxHour.Location = new System.Drawing.Point(167, 211);
             this.maskedTextBoxHour.Mask = "00";
             this.maskedTextBoxHour.Name = "maskedTextBoxHour";
-            this.maskedTextBoxHour.Size = new System.Drawing.Size(34, 20);
+            this.maskedTextBoxHour.Size = new System.Drawing.Size(34, 19);
             this.maskedTextBoxHour.TabIndex = 16;
             // 
             // maskedTextBoxSpDefMin
             // 
             this.maskedTextBoxSpDefMin.Hex = false;
-            this.maskedTextBoxSpDefMin.Location = new System.Drawing.Point(213, 58);
+            this.maskedTextBoxSpDefMin.Location = new System.Drawing.Point(213, 54);
             this.maskedTextBoxSpDefMin.Mask = "00";
             this.maskedTextBoxSpDefMin.Name = "maskedTextBoxSpDefMin";
-            this.maskedTextBoxSpDefMin.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxSpDefMin.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxSpDefMin.TabIndex = 4;
             this.maskedTextBoxSpDefMin.Tag = "ivs";
             this.maskedTextBoxSpDefMin.Leave += new System.EventHandler(this.maskedTextBoxSpDefMin_Leave);
@@ -531,29 +530,29 @@ namespace RNGReporter
             // maskedTextBoxMinute
             // 
             this.maskedTextBoxMinute.Hex = false;
-            this.maskedTextBoxMinute.Location = new System.Drawing.Point(210, 229);
+            this.maskedTextBoxMinute.Location = new System.Drawing.Point(210, 211);
             this.maskedTextBoxMinute.Mask = "00";
             this.maskedTextBoxMinute.Name = "maskedTextBoxMinute";
-            this.maskedTextBoxMinute.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxMinute.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxMinute.TabIndex = 17;
             // 
             // maskedTextBoxSecond
             // 
             this.maskedTextBoxSecond.Hex = false;
-            this.maskedTextBoxSecond.Location = new System.Drawing.Point(253, 229);
+            this.maskedTextBoxSecond.Location = new System.Drawing.Point(253, 211);
             this.maskedTextBoxSecond.Mask = "00";
             this.maskedTextBoxSecond.Name = "maskedTextBoxSecond";
-            this.maskedTextBoxSecond.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxSecond.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxSecond.TabIndex = 18;
             this.maskedTextBoxSecond.TextChanged += new System.EventHandler(this.maskedTextBoxSeconds_TextChanged);
             // 
             // maskedTextBoxSpAtkMin
             // 
             this.maskedTextBoxSpAtkMin.Hex = false;
-            this.maskedTextBoxSpAtkMin.Location = new System.Drawing.Point(170, 58);
+            this.maskedTextBoxSpAtkMin.Location = new System.Drawing.Point(170, 54);
             this.maskedTextBoxSpAtkMin.Mask = "00";
             this.maskedTextBoxSpAtkMin.Name = "maskedTextBoxSpAtkMin";
-            this.maskedTextBoxSpAtkMin.Size = new System.Drawing.Size(34, 20);
+            this.maskedTextBoxSpAtkMin.Size = new System.Drawing.Size(34, 19);
             this.maskedTextBoxSpAtkMin.TabIndex = 3;
             this.maskedTextBoxSpAtkMin.Tag = "ivs";
             this.maskedTextBoxSpAtkMin.Leave += new System.EventHandler(this.maskedTextBoxSpAtkMin_Leave);
@@ -561,10 +560,10 @@ namespace RNGReporter
             // maskedTextBoxHPMin
             // 
             this.maskedTextBoxHPMin.Hex = false;
-            this.maskedTextBoxHPMin.Location = new System.Drawing.Point(41, 58);
+            this.maskedTextBoxHPMin.Location = new System.Drawing.Point(41, 54);
             this.maskedTextBoxHPMin.Mask = "00";
             this.maskedTextBoxHPMin.Name = "maskedTextBoxHPMin";
-            this.maskedTextBoxHPMin.Size = new System.Drawing.Size(34, 20);
+            this.maskedTextBoxHPMin.Size = new System.Drawing.Size(34, 19);
             this.maskedTextBoxHPMin.TabIndex = 0;
             this.maskedTextBoxHPMin.Tag = "ivs";
             this.maskedTextBoxHPMin.Leave += new System.EventHandler(this.maskedTextBoxHPMin_Leave);
@@ -572,10 +571,10 @@ namespace RNGReporter
             // maskedTextBoxAtkMin
             // 
             this.maskedTextBoxAtkMin.Hex = false;
-            this.maskedTextBoxAtkMin.Location = new System.Drawing.Point(84, 58);
+            this.maskedTextBoxAtkMin.Location = new System.Drawing.Point(84, 54);
             this.maskedTextBoxAtkMin.Mask = "00";
             this.maskedTextBoxAtkMin.Name = "maskedTextBoxAtkMin";
-            this.maskedTextBoxAtkMin.Size = new System.Drawing.Size(33, 20);
+            this.maskedTextBoxAtkMin.Size = new System.Drawing.Size(33, 19);
             this.maskedTextBoxAtkMin.TabIndex = 1;
             this.maskedTextBoxAtkMin.Tag = "ivs";
             this.maskedTextBoxAtkMin.Leave += new System.EventHandler(this.maskedTextBoxAtkMin_Leave);
@@ -617,7 +616,7 @@ namespace RNGReporter
             this.groupBox2.Controls.Add(this.textBoxTimer0Min);
             this.groupBox2.Location = new System.Drawing.Point(314, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 298);
+            this.groupBox2.Size = new System.Drawing.Size(420, 275);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seed Encryption Variables";
@@ -625,9 +624,9 @@ namespace RNGReporter
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(242, 78);
+            this.label6.Location = new System.Drawing.Point(242, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 161;
             this.label6.Text = "Language";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -645,10 +644,10 @@ namespace RNGReporter
             "French",
             "Italian",
             "Korean"});
-            this.comboBoxLanguage.Location = new System.Drawing.Point(245, 94);
+            this.comboBoxLanguage.Location = new System.Drawing.Point(245, 87);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLanguage.Size = new System.Drawing.Size(147, 21);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(147, 20);
             this.comboBoxLanguage.TabIndex = 160;
             // 
             // cbGxStat
@@ -656,9 +655,9 @@ namespace RNGReporter
             this.cbGxStat.AutoSize = true;
             this.cbGxStat.Checked = true;
             this.cbGxStat.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbGxStat.Location = new System.Drawing.Point(73, 197);
+            this.cbGxStat.Location = new System.Drawing.Point(73, 182);
             this.cbGxStat.Name = "cbGxStat";
-            this.cbGxStat.Size = new System.Drawing.Size(165, 17);
+            this.cbGxStat.Size = new System.Drawing.Size(180, 16);
             this.cbGxStat.TabIndex = 91;
             this.cbGxStat.Text = "Only Search Min&&Max GxStat";
             this.cbGxStat.UseVisualStyleBackColor = true;
@@ -666,9 +665,9 @@ namespace RNGReporter
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 118);
+            this.label5.Location = new System.Drawing.Point(242, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(47, 12);
             this.label5.TabIndex = 90;
             this.label5.Text = "DS Type";
             // 
@@ -691,10 +690,10 @@ namespace RNGReporter
             "L",
             "X",
             "Y"});
-            this.comboBoxButton3.Location = new System.Drawing.Point(244, 269);
+            this.comboBoxButton3.Location = new System.Drawing.Point(244, 248);
             this.comboBoxButton3.Name = "comboBoxButton3";
             this.comboBoxButton3.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton3.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton3.Size = new System.Drawing.Size(148, 20);
             this.comboBoxButton3.TabIndex = 16;
             // 
             // comboBoxButton2
@@ -716,18 +715,18 @@ namespace RNGReporter
             "L",
             "X",
             "Y"});
-            this.comboBoxButton2.Location = new System.Drawing.Point(244, 242);
+            this.comboBoxButton2.Location = new System.Drawing.Point(244, 223);
             this.comboBoxButton2.Name = "comboBoxButton2";
             this.comboBoxButton2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton2.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton2.Size = new System.Drawing.Size(148, 20);
             this.comboBoxButton2.TabIndex = 15;
             // 
             // checkBoxSoftReset
             // 
             this.checkBoxSoftReset.AutoSize = true;
-            this.checkBoxSoftReset.Location = new System.Drawing.Point(88, 174);
+            this.checkBoxSoftReset.Location = new System.Drawing.Point(88, 161);
             this.checkBoxSoftReset.Name = "checkBoxSoftReset";
-            this.checkBoxSoftReset.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxSoftReset.Size = new System.Drawing.Size(84, 16);
             this.checkBoxSoftReset.TabIndex = 10;
             this.checkBoxSoftReset.Text = "Soft Reset";
             this.checkBoxSoftReset.UseVisualStyleBackColor = true;
@@ -736,9 +735,9 @@ namespace RNGReporter
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(241, 199);
+            this.label100.Location = new System.Drawing.Point(241, 184);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(68, 13);
+            this.label100.Size = new System.Drawing.Size(77, 12);
             this.label100.TabIndex = 84;
             this.label100.Text = "Held Buttons";
             // 
@@ -761,19 +760,19 @@ namespace RNGReporter
             "L",
             "X",
             "Y"});
-            this.comboBoxButton1.Location = new System.Drawing.Point(244, 215);
+            this.comboBoxButton1.Location = new System.Drawing.Point(244, 198);
             this.comboBoxButton1.Name = "comboBoxButton1";
             this.comboBoxButton1.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton1.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton1.Size = new System.Drawing.Size(148, 20);
             this.comboBoxButton1.TabIndex = 14;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 16);
-            this.label27.MaximumSize = new System.Drawing.Size(0, 120);
+            this.label27.Location = new System.Drawing.Point(6, 15);
+            this.label27.MaximumSize = new System.Drawing.Size(0, 111);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(404, 13);
+            this.label27.Size = new System.Drawing.Size(563, 12);
             this.label27.TabIndex = 64;
             this.label27.Text = "If you\'re not sure what to fill in here, just select your DS type to fill them au" +
     "tomatically.";
@@ -781,47 +780,47 @@ namespace RNGReporter
             // textBoxGxStatMax
             // 
             this.textBoxGxStatMax.Hex = true;
-            this.textBoxGxStatMax.Location = new System.Drawing.Point(155, 125);
+            this.textBoxGxStatMax.Location = new System.Drawing.Point(155, 115);
             this.textBoxGxStatMax.Mask = "AA";
             this.textBoxGxStatMax.Name = "textBoxGxStatMax";
-            this.textBoxGxStatMax.Size = new System.Drawing.Size(58, 20);
+            this.textBoxGxStatMax.Size = new System.Drawing.Size(58, 19);
             this.textBoxGxStatMax.TabIndex = 7;
             this.textBoxGxStatMax.Text = "6";
             // 
             // maskedTextBoxSecondsMax
             // 
             this.maskedTextBoxSecondsMax.Hex = false;
-            this.maskedTextBoxSecondsMax.Location = new System.Drawing.Point(155, 55);
+            this.maskedTextBoxSecondsMax.Location = new System.Drawing.Point(155, 51);
             this.maskedTextBoxSecondsMax.Mask = "00";
             this.maskedTextBoxSecondsMax.Name = "maskedTextBoxSecondsMax";
-            this.maskedTextBoxSecondsMax.Size = new System.Drawing.Size(58, 20);
+            this.maskedTextBoxSecondsMax.Size = new System.Drawing.Size(58, 19);
             this.maskedTextBoxSecondsMax.TabIndex = 1;
             // 
             // maskedTextBoxSecondsMin
             // 
             this.maskedTextBoxSecondsMin.Hex = false;
-            this.maskedTextBoxSecondsMin.Location = new System.Drawing.Point(88, 55);
+            this.maskedTextBoxSecondsMin.Location = new System.Drawing.Point(88, 51);
             this.maskedTextBoxSecondsMin.Mask = "00";
             this.maskedTextBoxSecondsMin.Name = "maskedTextBoxSecondsMin";
-            this.maskedTextBoxSecondsMin.Size = new System.Drawing.Size(58, 20);
+            this.maskedTextBoxSecondsMin.Size = new System.Drawing.Size(58, 19);
             this.maskedTextBoxSecondsMin.TabIndex = 0;
             // 
             // textBoxMACAddress
             // 
             this.textBoxMACAddress.Hex = true;
-            this.textBoxMACAddress.Location = new System.Drawing.Point(244, 174);
+            this.textBoxMACAddress.Location = new System.Drawing.Point(244, 161);
             this.textBoxMACAddress.Mask = "AAAAAAAAAAAA";
             this.textBoxMACAddress.Name = "textBoxMACAddress";
-            this.textBoxMACAddress.Size = new System.Drawing.Size(148, 20);
+            this.textBoxMACAddress.Size = new System.Drawing.Size(148, 19);
             this.textBoxMACAddress.TabIndex = 13;
             // 
             // textBoxVFrameMax
             // 
             this.textBoxVFrameMax.Hex = true;
-            this.textBoxVFrameMax.Location = new System.Drawing.Point(155, 148);
+            this.textBoxVFrameMax.Location = new System.Drawing.Point(155, 137);
             this.textBoxVFrameMax.Mask = "AA";
             this.textBoxVFrameMax.Name = "textBoxVFrameMax";
-            this.textBoxVFrameMax.Size = new System.Drawing.Size(58, 20);
+            this.textBoxVFrameMax.Size = new System.Drawing.Size(58, 19);
             this.textBoxVFrameMax.TabIndex = 9;
             this.textBoxVFrameMax.Text = "10";
             // 
@@ -835,20 +834,20 @@ namespace RNGReporter
             "White",
             "Black 2",
             "White 2"});
-            this.comboBoxVersion.Location = new System.Drawing.Point(244, 54);
+            this.comboBoxVersion.Location = new System.Drawing.Point(244, 50);
             this.comboBoxVersion.Name = "comboBoxVersion";
             this.comboBoxVersion.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxVersion.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxVersion.Size = new System.Drawing.Size(148, 20);
             this.comboBoxVersion.TabIndex = 11;
             this.comboBoxVersion.SelectedIndexChanged += new System.EventHandler(this.comboBoxVersion_SelectedIndexChanged);
             // 
             // textBoxVFrameMin
             // 
             this.textBoxVFrameMin.Hex = true;
-            this.textBoxVFrameMin.Location = new System.Drawing.Point(88, 148);
+            this.textBoxVFrameMin.Location = new System.Drawing.Point(88, 137);
             this.textBoxVFrameMin.Mask = "AA";
             this.textBoxVFrameMin.Name = "textBoxVFrameMin";
-            this.textBoxVFrameMin.Size = new System.Drawing.Size(58, 20);
+            this.textBoxVFrameMin.Size = new System.Drawing.Size(58, 19);
             this.textBoxVFrameMin.TabIndex = 8;
             this.textBoxVFrameMin.Text = "0";
             // 
@@ -856,11 +855,11 @@ namespace RNGReporter
             // 
             this.buttonSearch.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonSearch.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearch.Location = new System.Drawing.Point(88, 225);
+            this.buttonSearch.Location = new System.Drawing.Point(88, 208);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonSearch.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonSearch.Size = new System.Drawing.Size(125, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(125, 21);
             this.buttonSearch.TabIndex = 17;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
@@ -868,20 +867,20 @@ namespace RNGReporter
             // textBoxGxStatMin
             // 
             this.textBoxGxStatMin.Hex = true;
-            this.textBoxGxStatMin.Location = new System.Drawing.Point(88, 125);
+            this.textBoxGxStatMin.Location = new System.Drawing.Point(88, 115);
             this.textBoxGxStatMin.Mask = "AA";
             this.textBoxGxStatMin.Name = "textBoxGxStatMin";
-            this.textBoxGxStatMin.Size = new System.Drawing.Size(58, 20);
+            this.textBoxGxStatMin.Size = new System.Drawing.Size(58, 19);
             this.textBoxGxStatMin.TabIndex = 6;
             this.textBoxGxStatMin.Text = "6";
             // 
             // textBoxTimer0Max
             // 
             this.textBoxTimer0Max.Hex = true;
-            this.textBoxTimer0Max.Location = new System.Drawing.Point(155, 102);
+            this.textBoxTimer0Max.Location = new System.Drawing.Point(155, 94);
             this.textBoxTimer0Max.Mask = "AAAA";
             this.textBoxTimer0Max.Name = "textBoxTimer0Max";
-            this.textBoxTimer0Max.Size = new System.Drawing.Size(58, 20);
+            this.textBoxTimer0Max.Size = new System.Drawing.Size(58, 19);
             this.textBoxTimer0Max.TabIndex = 5;
             this.textBoxTimer0Max.Text = "CA0";
             // 
@@ -894,49 +893,49 @@ namespace RNGReporter
             "DS Original\\Lite",
             "DSi\\DSi XL",
             "3DS"});
-            this.comboBoxDSType.Location = new System.Drawing.Point(244, 134);
+            this.comboBoxDSType.Location = new System.Drawing.Point(244, 124);
             this.comboBoxDSType.Name = "comboBoxDSType";
             this.comboBoxDSType.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxDSType.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxDSType.Size = new System.Drawing.Size(148, 20);
             this.comboBoxDSType.TabIndex = 12;
             this.comboBoxDSType.SelectedIndexChanged += new System.EventHandler(this.comboBoxDSType_SelectedIndexChanged);
             // 
             // textBoxVCountMax
             // 
             this.textBoxVCountMax.Hex = true;
-            this.textBoxVCountMax.Location = new System.Drawing.Point(155, 79);
+            this.textBoxVCountMax.Location = new System.Drawing.Point(155, 73);
             this.textBoxVCountMax.Mask = "AA";
             this.textBoxVCountMax.Name = "textBoxVCountMax";
-            this.textBoxVCountMax.Size = new System.Drawing.Size(58, 20);
+            this.textBoxVCountMax.Size = new System.Drawing.Size(58, 19);
             this.textBoxVCountMax.TabIndex = 3;
             this.textBoxVCountMax.Text = "70";
             // 
             // textBoxVCountMin
             // 
             this.textBoxVCountMin.Hex = true;
-            this.textBoxVCountMin.Location = new System.Drawing.Point(88, 79);
+            this.textBoxVCountMin.Location = new System.Drawing.Point(88, 73);
             this.textBoxVCountMin.Mask = "AA";
             this.textBoxVCountMin.Name = "textBoxVCountMin";
-            this.textBoxVCountMin.Size = new System.Drawing.Size(58, 20);
+            this.textBoxVCountMin.Size = new System.Drawing.Size(58, 19);
             this.textBoxVCountMin.TabIndex = 2;
             this.textBoxVCountMin.Text = "50";
             // 
             // textBoxTimer0Min
             // 
             this.textBoxTimer0Min.Hex = true;
-            this.textBoxTimer0Min.Location = new System.Drawing.Point(88, 102);
+            this.textBoxTimer0Min.Location = new System.Drawing.Point(88, 94);
             this.textBoxTimer0Min.Mask = "AAAA";
             this.textBoxTimer0Min.Name = "textBoxTimer0Min";
-            this.textBoxTimer0Min.Size = new System.Drawing.Size(58, 20);
+            this.textBoxTimer0Min.Size = new System.Drawing.Size(58, 19);
             this.textBoxTimer0Min.TabIndex = 4;
             this.textBoxTimer0Min.Text = "C60";
             // 
             // Results
             // 
             this.Results.Controls.Add(this.dataGridView1);
-            this.Results.Location = new System.Drawing.Point(207, 310);
+            this.Results.Location = new System.Drawing.Point(207, 286);
             this.Results.Name = "Results";
-            this.Results.Size = new System.Drawing.Size(527, 106);
+            this.Results.Size = new System.Drawing.Size(527, 98);
             this.Results.TabIndex = 64;
             this.Results.TabStop = false;
             this.Results.Text = "Results";
@@ -971,7 +970,7 @@ namespace RNGReporter
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 15);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -989,7 +988,7 @@ namespace RNGReporter
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowCellErrors = false;
             this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.Size = new System.Drawing.Size(514, 83);
+            this.dataGridView1.Size = new System.Drawing.Size(514, 77);
             this.dataGridView1.TabIndex = 0;
             // 
             // clmnActualSeconds
@@ -1043,21 +1042,21 @@ namespace RNGReporter
             // textBoxDebug
             // 
             this.textBoxDebug.Enabled = false;
-            this.textBoxDebug.Location = new System.Drawing.Point(6, 339);
+            this.textBoxDebug.Location = new System.Drawing.Point(6, 313);
             this.textBoxDebug.Multiline = true;
             this.textBoxDebug.Name = "textBoxDebug";
-            this.textBoxDebug.Size = new System.Drawing.Size(194, 39);
+            this.textBoxDebug.Size = new System.Drawing.Size(194, 36);
             this.textBoxDebug.TabIndex = 65;
             // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonClose.ForeColor = System.Drawing.Color.Black;
-            this.buttonClose.Location = new System.Drawing.Point(6, 384);
+            this.buttonClose.Location = new System.Drawing.Point(6, 354);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonClose.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonClose.Size = new System.Drawing.Size(194, 23);
+            this.buttonClose.Size = new System.Drawing.Size(194, 21);
             this.buttonClose.TabIndex = 3;
             this.buttonClose.Text = "Close Window";
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -1067,20 +1066,20 @@ namespace RNGReporter
             this.btnSendTimeFinder.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnSendTimeFinder.Enabled = false;
             this.btnSendTimeFinder.ForeColor = System.Drawing.Color.Black;
-            this.btnSendTimeFinder.Location = new System.Drawing.Point(6, 310);
+            this.btnSendTimeFinder.Location = new System.Drawing.Point(6, 286);
             this.btnSendTimeFinder.Name = "btnSendTimeFinder";
             this.btnSendTimeFinder.OuterBorderColor = System.Drawing.Color.Transparent;
             this.btnSendTimeFinder.ShineColor = System.Drawing.SystemColors.Window;
-            this.btnSendTimeFinder.Size = new System.Drawing.Size(195, 23);
+            this.btnSendTimeFinder.Size = new System.Drawing.Size(195, 21);
             this.btnSendTimeFinder.TabIndex = 2;
             this.btnSendTimeFinder.Text = "Send Results To Profile";
             this.btnSendTimeFinder.Click += new System.EventHandler(this.btnSendTimeFinder_Click);
             // 
             // DSIDWizard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 420);
+            this.ClientSize = new System.Drawing.Size(739, 388);
             this.Controls.Add(this.textBoxDebug);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.btnSendTimeFinder);
@@ -1092,7 +1091,7 @@ namespace RNGReporter
             this.Name = "DSIDWizard";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "DS Parameter Finder";
+            this.Text = "校准DS参数计算";
             this.Load += new System.EventHandler(this.frmWizard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

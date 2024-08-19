@@ -206,5 +206,10 @@ namespace RNGReporter
                     "The IV ranges you have listed produce a large amount of IV combinations.  It is recommended that you narrow down the IVs to avoid false positives in parameter searches.");
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

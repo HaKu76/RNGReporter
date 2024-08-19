@@ -1474,7 +1474,7 @@ namespace RNGReporter
             this.labelCapMinMaxFrame.Name = "labelCapMinMaxFrame";
             this.labelCapMinMaxFrame.Size = new System.Drawing.Size(87, 13);
             this.labelCapMinMaxFrame.TabIndex = 107;
-            this.labelCapMinMaxFrame.Text = "Min / Max Frame";
+            this.labelCapMinMaxFrame.Text = "Min / 最大帧";
             // 
             // label20
             // 
@@ -2648,7 +2648,7 @@ namespace RNGReporter
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(87, 13);
             this.label25.TabIndex = 339;
-            this.label25.Text = "Min / Max Frame";
+            this.label25.Text = "Min / 最大帧";
             // 
             // label26
             // 

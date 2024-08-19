@@ -73,6 +73,8 @@ namespace RNGReporter.Objects
                     return Translations.powerFRA[type];
                 case (Language.Korean):
                     return Translations.powerKOR[type];
+                case (Language.SimplifiedChinese):
+                    return Translations.powerCHS[type];
                 default:
                     return Translations.powerENG[type];
             }
@@ -104,6 +106,8 @@ namespace RNGReporter.Objects
                     return Translations.NatureStringITA[nature];
                 case (Language.Korean):
                     return Translations.NatureStringKOR[nature];
+                case (Language.SimplifiedChinese):
+                    return Translations.NatureStringCHS[nature];
                 default:
                     return Translations.NatureStringENG[nature];
             }
@@ -185,6 +189,8 @@ namespace RNGReporter.Objects
                     return Translations.encounterItemsITA[slot - 12];
                 case (Language.Korean):
                     return Translations.encounterItemsKOR[slot - 12];
+                case (Language.SimplifiedChinese):
+                    return Translations.encounterItemsCHS[slot - 12];
                 default:
                     return Translations.encounterItemsENG[slot - 12];
             }
@@ -206,6 +212,8 @@ namespace RNGReporter.Objects
                     return Translations.characteristicStringsITA[index];
                 case (Language.Korean):
                     return Translations.characteristicStringsKOR[index];
+                case (Language.SimplifiedChinese):
+                    return Translations.characteristicStringsCHS[index];
                 default:
                     return Translations.characteristicStringsENG[index];
             }

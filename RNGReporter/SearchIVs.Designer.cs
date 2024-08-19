@@ -366,7 +366,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(239, 26);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Enter the IVs of the Pokémon caught immediately\r\nafter turning on the C-Gear.";
+            this.label7.Text = "Enter the IVs of the 宝可梦 caught immediately\r\nafter turning on the C-Gear.";
             // 
             // buttonCancel
             // 

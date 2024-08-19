@@ -82,7 +82,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Min frame";
+            this.label3.Text = "最小帧";
             // 
             // label4
             // 
@@ -92,7 +92,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 30;
-            this.label4.Text = "Max frame";
+            this.label4.Text = "最大帧";
             // 
             // searchText
             // 

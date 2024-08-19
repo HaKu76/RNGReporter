@@ -539,7 +539,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(507, 34);
             this.label10.TabIndex = 72;
-            this.label10.Text = "P - It seems that Pokémon that have been infected with Pokérus level up better. W" +
+            this.label10.Text = "P - It seems that 宝可梦 that have been infected with Pokérus level up better. W" +
                 "e\'re not quite sure why...";
             // 
             // label9
@@ -550,7 +550,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(507, 30);
             this.label9.TabIndex = 71;
-            this.label9.Text = "E - There are so many different ways that Pokémon evolve, aren\'t there?! Some Pok" +
+            this.label9.Text = "E - There are so many different ways that 宝可梦 evolve, aren\'t there?! Some Pok" +
                 "émon don\'t even evolve until they meet certain conditions first!";
             // 
             // label8

@@ -1797,7 +1797,7 @@ namespace RNGReporter
 
                 if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
                 {
-                    labelCapMinMaxFrame.Text = "Min / Max Frame";
+                    labelCapMinMaxFrame.Text = "Min / 最大帧";
                     labelCapMinMaxFrame.Location = oldLocation;
 
                     if (maskedTextBoxCapMinOffset.Text == "0")
@@ -1839,7 +1839,7 @@ namespace RNGReporter
                 maskedTextBoxCapMinDelay.TabStop = true;
                 maskedTextBoxCapMaxDelay.TabStop = true;
 
-                labelCapMinMaxFrame.Text = "Min / Max Frame";
+                labelCapMinMaxFrame.Text = "Min / 最大帧";
                 labelCapMinMaxFrame.Location = oldLocation;
 
                 if (maskedTextBoxCapMinOffset.Text == "0")
@@ -2618,12 +2618,12 @@ namespace RNGReporter
             {
                 if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
                     label9.Text = "IV filters are set for Entralink fast searching, but\r\n" +
-                                  "Min and Max Frames need to be between\r\n" +
+                                  "Min and 最大帧s need to be between\r\n" +
                                   "21 and 26.  (Setting both to 21 is recommended.)";
                 else
                 {
                     label9.Text = "IV filters are set for fast searching, but\r\n" +
-                                  "Min and Max Frames need to be between\r\n" +
+                                  "Min and 最大帧s need to be between\r\n" +
                                   "1 and 6.  (Setting both to 1 is recommended.)";
                     if (((Profile) comboBoxProfiles.SelectedItem).IsBW2())
                     {

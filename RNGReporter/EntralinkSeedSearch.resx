@@ -127,16 +127,13 @@
     <value>452, 17</value>
   </metadata>
   <data name="textBoxChatot.ToolTip" xml:space="preserve">
-    <value>A Chatot with a recorded Chatter (not its normal cry) advances the RNG
-by 1 frame every time its call is heard on the status screen.
-The pitch of the cry also different for each frame.  By listening
-carefully to the pitches, it is possible to determine the current frame.
+    <value>一只聒噪鸟有一个录音后的喋喋不休（不是原本的叫声）则可以用来推进帧数
+	每次在这只聒噪鸟的状态面板查看时，听到他发出你的录音（不用听完），则帧数+1。
+	每一帧的叫声音高也不同。通过倾听仔细地分辨出音高，才有可能确定当前的帧数
 
-"Low" indicates a low pitch and "High" a higher pitch.  The numbers
-in parentheses indicate slight variations in pitch that may be detectable
-by a well-trained ear.
+    "Low"表示低音，"High"表示高音。这些括号内的数字表示可以听到音高的细微区别，这可能被训练有素的耳朵察觉到
 
-L = Low, ML = Mid-Low, M = Mid, MH = Mid-High, H = High</value>
+    L = Low, ML = Mid-Low(中低音), M = Mid(中音), MH = Mid-High(中高音), H = High</value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
     <value>This tool searches all possible dates of a C-Gear seed for a corresponding Standard Seed that has the desired nature on multiple frames close together, which will make the target nature easier to achieve on Entralink Pokémon.</value>

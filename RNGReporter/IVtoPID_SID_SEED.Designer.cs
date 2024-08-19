@@ -433,7 +433,7 @@ namespace RNGReporter
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(430, 25);
             this.label4.TabIndex = 57;
-            this.label4.Text = "This tool cannot be used for 5th Generation Pokémon.";
+            this.label4.Text = "This tool cannot be used for 5th Generation 宝可梦.";
             // 
             // maskedTextBoxID
             // 

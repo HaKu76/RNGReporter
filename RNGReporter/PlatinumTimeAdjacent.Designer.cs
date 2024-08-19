@@ -88,7 +88,7 @@ namespace RNGReporter
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Min / Max Frames";
+            this.label3.Text = "Min / 最大帧s";
             // 
             // label1
             // 

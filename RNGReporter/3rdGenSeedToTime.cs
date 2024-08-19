@@ -54,7 +54,7 @@ namespace RNGReporter
 
             if (year < 2000 || year > 2037)
             {
-                MessageBox.Show("Please enter a year between 2000 and 2037");
+                MessageBox.Show("请输入2000到2037之间的年份");
                 return;
             }
 
@@ -91,6 +91,11 @@ namespace RNGReporter
                 }
                 minDay += (uint)DateTime.DaysInMonth(year, month);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

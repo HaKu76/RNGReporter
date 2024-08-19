@@ -172,7 +172,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 300;
-            this.label5.Text = "Max Frame";
+            this.label5.Text = "最大帧";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6

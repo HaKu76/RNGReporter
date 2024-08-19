@@ -230,7 +230,7 @@ namespace RNGReporter
                                     checkSeedGales(a, b, c, d, e, f);
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeedGales(uint hp, uint atk, uint def, uint spa, uint spd, uint spe)
@@ -598,7 +598,7 @@ namespace RNGReporter
                                     checkSeedColo(a, b, c, d, e, f);
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeedColo(uint hp, uint atk, uint def, uint spa, uint spd, uint spe)
@@ -722,7 +722,7 @@ namespace RNGReporter
             
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeed(uint hp, uint atk, uint def, uint spa, uint spd, uint spe)
@@ -917,7 +917,7 @@ namespace RNGReporter
             
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeedChannel(uint hp, uint atk, uint def, uint spa, uint spd, uint spe)
@@ -1043,7 +1043,7 @@ namespace RNGReporter
             }
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private uint[] createIVsChannel(uint[] iv)
@@ -1136,7 +1136,7 @@ namespace RNGReporter
             
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeedR(uint hp, uint atk, uint def, uint spa, uint spd, uint spe)
@@ -1200,7 +1200,7 @@ namespace RNGReporter
             }
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
         #endregion
 
@@ -1414,7 +1414,7 @@ namespace RNGReporter
             natureLock.rand.Clear();
             isSearching = false;
             Invoke(new Action(() => { bindingShadow.ResetBindings(false); }));
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         public void filterSeedShadow(uint hp, uint atk, uint def, uint spa, uint spd, uint spe, int frame, uint nature, uint pid)

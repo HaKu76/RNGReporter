@@ -2808,6 +2808,37 @@ namespace RNGReporter
                     clearLanguageChecks();
                     한국어ToolStripMenuItem.Checked = true;
                     break;
+                case (Language.SimplifiedChinese):
+                    // 尝试设置字体为微软雅黑  
+                    try
+                    {
+                        CellStyle.Font = new Font("微软雅黑", 7.75F);
+                    }
+                    catch (ArgumentException) // 如果字体不存在，将抛出 ArgumentException  
+                    {
+                        // 如果微软雅黑不可用，则尝试黑体  
+                        CellStyle.Font = new Font("SimHei", 7.75F); // 注意：这里使用 SimHei 作为黑体的常见名称  
+
+                        if (CellStyle.Font.Name != "SimHei") // 如果黑体也不可用（理论上不应该发生，但为了安全起见）  
+                        {
+                            // 如果黑体不可用，则尝试宋体  
+                            CellStyle.Font = new Font("宋体", 7.75F);
+
+                            if (CellStyle.Font.Name != "宋体") // 如果宋体也不可用（理论上更不可能）  
+                            {
+                                // 如果宋体也不可用，则显示警告  
+                                MessageBox.Show("如果没有中文支持的字体，则无法显示中文。",
+                                                "不受支持的语言", MessageBoxButtons.OK, MessageBoxIcon.Warning,
+                                                MessageBoxDefaultButton.Button1);
+                                return false;
+                            }
+                        }
+                    }
+
+                    Settings.Default.Language = (int)Language.SimplifiedChinese;
+                    clearLanguageChecks();
+                    简体中文ToolStripMenuItem.Checked = true;
+                    break;
                 default:
                     CellStyle.Font = DefaultFont;
 
@@ -2865,6 +2896,7 @@ namespace RNGReporter
             françaisToolStripMenuItem.Checked = false;
             italianoToolStripMenuItem.Checked = false;
             한국어ToolStripMenuItem.Checked = false;
+            简体中文ToolStripMenuItem.Checked = false;
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2900,6 +2932,11 @@ namespace RNGReporter
         private void 한국어ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeLanguage(Language.Korean);
+        }
+
+        private void 简体中文ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage(Language.SimplifiedChinese);
         }
 
         private void dataGridViewValues_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -3154,6 +3191,26 @@ namespace RNGReporter
         {
             var ivsToFrame = new IVstoFrame();
             ivsToFrame.Show();
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewValues_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ivFilters_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

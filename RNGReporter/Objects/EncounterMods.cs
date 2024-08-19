@@ -145,6 +145,17 @@ namespace RNGReporter.Objects
                 "알 수없는"
             };
 
+        public static string[] encounterStringCHS =
+    {
+                "无",
+                "同步",
+                "迷人之躯",
+                "吸盘",
+                "复眼",
+                "不变之石",
+                "未知"
+            };
+
         public static EncounterType EncounterString(string encounterType)
         {
             switch (encounterType)
@@ -251,6 +262,8 @@ namespace RNGReporter.Objects
                     return encounterStringITA[index];
                 case (Language.Korean):
                     return encounterStringKOR[index];
+                case (Language.SimplifiedChinese):
+                    return encounterStringCHS[index];
                 default:
                     return encounterStringENG[index];
             }

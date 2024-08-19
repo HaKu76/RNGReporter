@@ -771,6 +771,8 @@ namespace RNGReporter.Objects
                     return Translations.pokemonNamesFRA[index];
                 case (Language.Korean):
                     return Translations.pokemonNamesKOR[index];
+                case (Language.SimplifiedChinese):
+                    return Translations.pokemonNamesCHS[index];
                 default:
                     return Translations.pokemonNamesENG[index];
             }

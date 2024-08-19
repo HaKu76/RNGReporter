@@ -745,7 +745,7 @@ namespace RNGReporter
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(200, 17);
             this.radioButton4.TabIndex = 284;
-            this.radioButton4.Text = "Snagged Pokémon (with nature lock)";
+            this.radioButton4.Text = "Snagged 宝可梦 (with nature lock)";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton6
@@ -757,7 +757,7 @@ namespace RNGReporter
             this.radioButton6.Size = new System.Drawing.Size(180, 17);
             this.radioButton6.TabIndex = 282;
             this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Snagged Pokémon (first position)";
+            this.radioButton6.Text = "Snagged 宝可梦 (first position)";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox29
@@ -2089,7 +2089,7 @@ namespace RNGReporter
             this.labelCapMinMaxFrame.Name = "labelCapMinMaxFrame";
             this.labelCapMinMaxFrame.Size = new System.Drawing.Size(87, 13);
             this.labelCapMinMaxFrame.TabIndex = 366;
-            this.labelCapMinMaxFrame.Text = "Min / Max Frame";
+            this.labelCapMinMaxFrame.Text = "Min / 最大帧";
             // 
             // label7
             // 

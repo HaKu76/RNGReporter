@@ -54,7 +54,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Pokémon";
+            this.label1.Text = "宝可梦";
             // 
             // labelRatio
             // 
