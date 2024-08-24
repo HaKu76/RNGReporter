@@ -12,7 +12,7 @@ namespace RNGReporter
     /// <summary>
     ///     Represents a glass button control.
     /// </summary>
-    [ToolboxBitmap(typeof (GlassButton)), ToolboxItem(true), ToolboxItemFilter("System.Windows.Forms"),
+    [ToolboxBitmap(typeof(GlassButton)), ToolboxItem(true), ToolboxItemFilter("System.Windows.Forms"),
      Description("Raises an event when the user clicks it.")]
     public partial class GlassButton : Button
     {
@@ -24,7 +24,7 @@ namespace RNGReporter
         public GlassButton()
         {
             InitializeComponent();
-            timer.Interval = animationLength/framesCount;
+            timer.Interval = animationLength / framesCount;
             base.BackColor = Color.Transparent;
             BackColor = Color.Black;
             ForeColor = Color.White;
@@ -60,7 +60,7 @@ namespace RNGReporter
         /// <returns>
         ///     A <see cref="T:System.Drawing.Color" /> value representing the background color.
         /// </returns>
-        [DefaultValue(typeof (Color), "Black")]
+        [DefaultValue(typeof(Color), "Black")]
         public new virtual Color BackColor
         {
             get { return _backColor; }
@@ -83,7 +83,7 @@ namespace RNGReporter
         /// <returns>
         ///     The foreground <see cref="T:System.Drawing.Color" /> of the control.
         /// </returns>
-        [DefaultValue(typeof (Color), "White")]
+        [DefaultValue(typeof(Color), "White")]
         public new virtual Color ForeColor
         {
             get { return base.ForeColor; }
@@ -100,7 +100,7 @@ namespace RNGReporter
         /// <returns>
         ///     A <see cref="T:System.Drawing.Color" /> value representing the color of the inner border.
         /// </returns>
-        [DefaultValue(typeof (Color), "Black"), Category("Appearance"),
+        [DefaultValue(typeof(Color), "Black"), Category("Appearance"),
          Description("The inner border color of the control.")]
         public virtual Color InnerBorderColor
         {
@@ -127,7 +127,7 @@ namespace RNGReporter
         /// <returns>
         ///     A <see cref="T:System.Drawing.Color" /> value representing the color of the outer border.
         /// </returns>
-        [DefaultValue(typeof (Color), "White"), Category("Appearance"),
+        [DefaultValue(typeof(Color), "White"), Category("Appearance"),
          Description("The outer border color of the control.")]
         public virtual Color OuterBorderColor
         {
@@ -155,7 +155,7 @@ namespace RNGReporter
         /// <returns>
         ///     A <see cref="T:System.Drawing.Color" /> value representing the shine color.
         /// </returns>
-        [DefaultValue(typeof (Color), "White"), Category("Appearance"), Description("The shine color of the control.")]
+        [DefaultValue(typeof(Color), "White"), Category("Appearance"), Description("The shine color of the control.")]
         public virtual Color ShineColor
         {
             get { return _shineColor; }
@@ -181,7 +181,7 @@ namespace RNGReporter
         /// <returns>
         ///     A <see cref="T:System.Drawing.Color" /> value representing the glow color.
         /// </returns>
-        [DefaultValue(typeof (Color), "255,141,189,255"), Category("Appearance"),
+        [DefaultValue(typeof(Color), "255,141,189,255"), Category("Appearance"),
          Description("The glow color of the control.")]
         public virtual Color GlowColor
         {
@@ -668,12 +668,12 @@ namespace RNGReporter
                     {
                         using (var pgr = new PathGradientBrush(brad))
                         {
-                            var opacity = (int) (0xB2*glowOpacity + .5f);
+                            var opacity = (int)(0xB2 * glowOpacity + .5f);
                             RectangleF bounds = brad.GetBounds();
-                            pgr.CenterPoint = new PointF((bounds.Left + bounds.Right)/2f,
-                                                         (bounds.Top + bounds.Bottom)/2f);
+                            pgr.CenterPoint = new PointF((bounds.Left + bounds.Right) / 2f,
+                                                         (bounds.Top + bounds.Bottom) / 2f);
                             pgr.CenterColor = Color.FromArgb(opacity, glowColor);
-                            pgr.SurroundColors = new[] {Color.FromArgb(0, glowColor)};
+                            pgr.SurroundColors = new[] { Color.FromArgb(0, glowColor) };
                             g.FillPath(pgr, brad);
                         }
                     }
@@ -694,11 +694,11 @@ namespace RNGReporter
                     int opacity = 0x99;
                     if (pressed | !enabled)
                     {
-                        opacity = (int) (.4f*opacity + .5f);
+                        opacity = (int)(.4f * opacity + .5f);
                     }
                     using (
                         var br = new LinearGradientBrush(rect2, Color.FromArgb(opacity, shineColor),
-                                                         Color.FromArgb(opacity/3, shineColor),
+                                                         Color.FromArgb(opacity / 3, shineColor),
                                                          LinearGradientMode.Vertical))
                     {
                         g.FillPath(br, bh);
@@ -756,9 +756,9 @@ namespace RNGReporter
             }
             else
             {
-                _imageButton.ForeColor = Color.FromArgb((3*ForeColor.R + _backColor.R) >> 2,
-                                                        (3*ForeColor.G + _backColor.G) >> 2,
-                                                        (3*ForeColor.B + _backColor.B) >> 2);
+                _imageButton.ForeColor = Color.FromArgb((3 * ForeColor.R + _backColor.R) >> 2,
+                                                        (3 * ForeColor.G + _backColor.G) >> 2,
+                                                        (3 * ForeColor.B + _backColor.B) >> 2);
             }
             _imageButton.Font = Font;
             _imageButton.RightToLeft = RightToLeft;
@@ -767,13 +767,13 @@ namespace RNGReporter
             {
                 Size size = Image.Size;
                 var newColorMatrix = new float[5][];
-                newColorMatrix[0] = new[] {0.2125f, 0.2125f, 0.2125f, 0f, 0f};
-                newColorMatrix[1] = new[] {0.2577f, 0.2577f, 0.2577f, 0f, 0f};
-                newColorMatrix[2] = new[] {0.0361f, 0.0361f, 0.0361f, 0f, 0f};
+                newColorMatrix[0] = new[] { 0.2125f, 0.2125f, 0.2125f, 0f, 0f };
+                newColorMatrix[1] = new[] { 0.2577f, 0.2577f, 0.2577f, 0f, 0f };
+                newColorMatrix[2] = new[] { 0.0361f, 0.0361f, 0.0361f, 0f, 0f };
                 var arr = new float[5];
                 arr[3] = 1f;
                 newColorMatrix[3] = arr;
-                newColorMatrix[4] = new[] {0.38f, 0.38f, 0.38f, 0f, 1f};
+                newColorMatrix[4] = new[] { 0.38f, 0.38f, 0.38f, 0f, 1f };
                 var matrix = new ColorMatrix(newColorMatrix);
                 var disabledImageAttr = new ImageAttributes();
                 disabledImageAttr.ClearColorKey();
@@ -847,8 +847,8 @@ namespace RNGReporter
         {
             var path = new GraphicsPath();
             RectangleF rect = rectangle;
-            rect.X -= rect.Width*.35f;
-            rect.Y -= rect.Height*.15f;
+            rect.X -= rect.Width * .35f;
+            rect.Y -= rect.Height * .15f;
             rect.Width *= 1.7f;
             rect.Height *= 2.3f;
             path.AddEllipse(rect);
@@ -950,7 +950,7 @@ namespace RNGReporter
             }
             for (int i = 0; i < framesCount; i++)
             {
-                _frames.Add(CreateBackgroundFrame(false, true, true, true, i/(framesCount - 1F)));
+                _frames.Add(CreateBackgroundFrame(false, true, true, true, i / (framesCount - 1F)));
             }
         }
 

@@ -50,17 +50,17 @@ namespace RNGReporter.Objects
 
         private static int HSlot(uint result, EncounterType encounterType)
         {
-            uint percent = (result >> 16)%100;
+            uint percent = (result >> 16) % 100;
             switch (encounterType)
             {
                 case EncounterType.WildOldRod:
                     {
-                        Range[] ranges = {new Range(0, 69), new Range(70, 99)};
+                        Range[] ranges = { new Range(0, 69), new Range(70, 99) };
                         return CalcSlot(percent, ranges);
                     }
                 case EncounterType.WildGoodRod:
                     {
-                        Range[] ranges = {new Range(0, 59), new Range(60, 79), new Range(80, 99)};
+                        Range[] ranges = { new Range(0, 59), new Range(60, 79), new Range(80, 99) };
                         return CalcSlot(percent, ranges);
                     }
                 case EncounterType.WildSuperRod:
@@ -96,7 +96,7 @@ namespace RNGReporter.Objects
 
         private static int KSlot(uint result, EncounterType encounterType)
         {
-            uint percent = (result >> 16)%100;
+            uint percent = (result >> 16) % 100;
             switch (encounterType)
             {
                 case EncounterType.WildSurfing:
@@ -130,7 +130,7 @@ namespace RNGReporter.Objects
                         return CalcSlot(percent, ranges);
                     }
                 case EncounterType.SafariZone:
-                    return (int) ((result >> 16)%10);
+                    return (int)((result >> 16) % 10);
                 case EncounterType.Headbutt:
                     {
                         Range[] ranges =
@@ -155,7 +155,7 @@ namespace RNGReporter.Objects
 
         private static int JSlot(uint result, EncounterType encounterType)
         {
-            uint percent = (result >> 16)/656;
+            uint percent = (result >> 16) / 656;
             // Diamond\Pearl\Platinum Slots
             switch (encounterType)
             {
@@ -194,7 +194,7 @@ namespace RNGReporter.Objects
 
         public static int BWSlot(uint result, EncounterType encounterType, bool isBW2)
         {
-            uint percent = isBW2 ? (uint) (((ulong) result*100) >> 32) : (result >> 16)/656;
+            uint percent = isBW2 ? (uint)(((ulong)result * 100) >> 32) : (result >> 16) / 656;
             switch (encounterType)
             {
                 case EncounterType.WildSurfing:

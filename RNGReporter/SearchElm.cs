@@ -1,7 +1,7 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 
 namespace RNGReporter
 {

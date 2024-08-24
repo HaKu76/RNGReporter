@@ -31,9 +31,9 @@ namespace RNGReporter
                         }
                     }
                 }
-                onPropertiesChanged = (EventHandler) Delegate.Combine(onPropertiesChanged, value);
+                onPropertiesChanged = (EventHandler)Delegate.Combine(onPropertiesChanged, value);
             }
-            remove { onPropertiesChanged = (EventHandler) Delegate.Remove(onPropertiesChanged, value); }
+            remove { onPropertiesChanged = (EventHandler)Delegate.Remove(onPropertiesChanged, value); }
         }
 
         /// <summary></summary>

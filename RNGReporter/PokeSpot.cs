@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using System.Globalization;
 
 namespace RNGReporter.Objects
 {
@@ -73,7 +73,7 @@ namespace RNGReporter.Objects
             if (temp.Count != 0)
                 spotList = temp;
             else
-                spotList = new List<String> { "Common", "Uncommon", "Rare" };
+                spotList = new List<String> { "常见的", "不常见的", "稀有的" };
 
             genderFilter = (uint)genderType.SelectedIndex;
             abilityFilter = (uint)abilityType.SelectedIndex;
@@ -165,6 +165,16 @@ namespace RNGReporter.Objects
             calcPokeSpot(pid, frame, nature, gender, ability, shiny);
         }
 
+        private void comboBoxSpotType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abilityType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void calcPokeSpot(uint pid, uint frame, uint nature, uint gender, uint ability, String shiny)
         {
             call1 = rngList[j >= 5 ? j - 5 : j + 1] >> 16;
@@ -180,11 +190,11 @@ namespace RNGReporter.Objects
 
                 call3 = (rngList[j >= 3 ? j - 3 : j + 3] >> 16) % 100;
                 if (call3 < 50)
-                    spotType = "Common";
+                    spotType = "常见的";
                 else if (call3 > 49 && call3 < 85)
-                    spotType = "Uncommon";
+                    spotType = "不常见的";
                 else if (call3 > 84)
-                    spotType = "Rare";
+                    spotType = "稀有的";
 
                 if (!spotList.Contains(spotType))
                     return;
@@ -230,9 +240,9 @@ namespace RNGReporter.Objects
         {
             return new String[]
                 {
-                    "Common",
-                    "Uncommon",
-                    "Rare"
+                    "常见的",
+                    "不常见的",
+                    "稀有的"
                 };
         }
     }

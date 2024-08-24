@@ -18,14 +18,14 @@
  */
 
 
+using Microsoft.Win32;
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -37,7 +37,7 @@ namespace RNGReporter
 
         public SeedToTime()
         {
-            Year = (uint) DateTime.Now.Year;
+            Year = (uint)DateTime.Now.Year;
             InitializeComponent();
         }
 
@@ -70,19 +70,19 @@ namespace RNGReporter
 
                 if (Settings.Default.LastVersion < MainForm.VersionNumber && registryRngReporter != null)
                 {
-                    maskedTextBoxSeconds.Text = (string) registryRngReporter.GetValue("stt_seconds", "0");
+                    maskedTextBoxSeconds.Text = (string)registryRngReporter.GetValue("stt_seconds", "0");
 
                     checkBoxLockSeconds.Checked = false;
 
-                    if ((string) registryRngReporter.GetValue("stt_secondslocked", "0") == "1")
+                    if ((string)registryRngReporter.GetValue("stt_secondslocked", "0") == "1")
                     {
                         checkBoxLockSeconds.Checked = true;
                     }
 
-                    maskedTextBoxMDelay.Text = (string) registryRngReporter.GetValue("stt_mdelay", "10");
-                    maskedTextBoxPDelay.Text = (string) registryRngReporter.GetValue("stt_pdelay", "10");
-                    maskedTextBoxMSecond.Text = (string) registryRngReporter.GetValue("stt_msecond", "1");
-                    maskedTextBoxPSecond.Text = (string) registryRngReporter.GetValue("stt_psecond", "1");
+                    maskedTextBoxMDelay.Text = (string)registryRngReporter.GetValue("stt_mdelay", "10");
+                    maskedTextBoxPDelay.Text = (string)registryRngReporter.GetValue("stt_pdelay", "10");
+                    maskedTextBoxMSecond.Text = (string)registryRngReporter.GetValue("stt_msecond", "1");
+                    maskedTextBoxPSecond.Text = (string)registryRngReporter.GetValue("stt_psecond", "1");
                 }
                 else
                 {
@@ -100,7 +100,7 @@ namespace RNGReporter
             //check and error otherwise
             if (Profiles.List != null || Profiles.List.Count > 0)
             {
-                profilesSource = new BindingSource {DataSource = Profiles.List};
+                profilesSource = new BindingSource { DataSource = Profiles.List };
                 comboBoxProfiles.DataSource = profilesSource;
                 profilesSource.ResetBindings(false);
             }
@@ -259,7 +259,7 @@ namespace RNGReporter
             {
                 MAC_Address = 0;
             }
-            uint partialmac = (uint) MAC_Address & 0xFFFFFF;
+            uint partialmac = (uint)MAC_Address & 0xFFFFFF;
             uint ab = (Seed - partialmac) >> 24;
             uint cd = ((Seed - partialmac) & 0x00FF0000) >> 16;
             uint efgh = (Seed - partialmac) & 0x0000FFFF;
@@ -272,10 +272,10 @@ namespace RNGReporter
             int generateYear = int.Parse(maskedTextBoxYear.Text);
 
             //  Get Delay
-            int delay = (int) efgh + (2000 - generateYear);
+            int delay = (int)efgh + (2000 - generateYear);
 
             //  Get Hour
-            var hour = (int) cd;
+            var hour = (int)cd;
 
             //  We need to check here, as a user could have entered a seed
             //  that is not possible (invalid hour) to lets warn and exit
@@ -296,7 +296,7 @@ namespace RNGReporter
                 int daysInMonth = DateTime.DaysInMonth(generateYear, month);
 
                 //  Loop through all days
-                for (int day = 1; day <= daysInMonth; day ++)
+                for (int day = 1; day <= daysInMonth; day++)
                 {
                     //  Loop through all minutes
                     for (int minute = 0; minute <= 59; minute++)
@@ -304,7 +304,7 @@ namespace RNGReporter
                         //  Loop through all seconds
                         for (int second = 0; second <= 59; second++)
                         {
-                            if (ab == ((month*day + minute + second)&0xFF))
+                            if (ab == ((month * day + minute + second) & 0xFF))
                             {
                                 if (!checkBoxLockSeconds.Checked || second == lockedSecond)
                                 {
@@ -407,7 +407,7 @@ namespace RNGReporter
             int mSecond = int.Parse(maskedTextBoxMSecond.Text);
             int pSecond = int.Parse(maskedTextBoxPSecond.Text);
 
-            var timeAndDelay = (TimeAndDelay) dataGridViewValues.SelectedRows[0].DataBoundItem;
+            var timeAndDelay = (TimeAndDelay)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
             //  From the actual time we need to build a start
             //  time and an end time so that we can iterate
@@ -465,7 +465,7 @@ namespace RNGReporter
                 maxFrame++;
             }
 
-            for (int cnt = 0; cnt <= (int) span.TotalSeconds; cnt++)
+            for (int cnt = 0; cnt <= (int)span.TotalSeconds; cnt++)
             {
                 DateTime seedTime = startTime + new TimeSpan(0, 0, cnt);
 
@@ -479,20 +479,20 @@ namespace RNGReporter
                         //  Create the seed an add to the collection
 
                         var adjacent = new Adjacent
-                            {
-                                Delay = delayCnt,
-                                Date = seedTime,
-                                MinFrame = minFrame,
-                                MaxFrame = maxFrame + 6,
-                                Seed = ((((uint) seedTime.Month*
-                                          (uint) seedTime.Day +
-                                          (uint) seedTime.Minute +
-                                          (uint) seedTime.Second)&0xFF)*0x1000000) +
-                                       ((uint) seedTime.Hour*0x10000) +
-                                       ((uint) seedTime.Year - 2000 + (uint) delayCnt) +
+                        {
+                            Delay = delayCnt,
+                            Date = seedTime,
+                            MinFrame = minFrame,
+                            MaxFrame = maxFrame + 6,
+                            Seed = ((((uint)seedTime.Month *
+                                          (uint)seedTime.Day +
+                                          (uint)seedTime.Minute +
+                                          (uint)seedTime.Second) & 0xFF) * 0x1000000) +
+                                       ((uint)seedTime.Hour * 0x10000) +
+                                       ((uint)seedTime.Year - 2000 + (uint)delayCnt) +
                                        // only part of the MAC Address is used
-                                       ((uint) MAC_Address & 0xFFFFFF)
-                            };
+                                       ((uint)MAC_Address & 0xFFFFFF)
+                        };
 
 
                         adjacent.RoamerInformtion = HgSsRoamers.GetHgSsRoamerInformation(
@@ -550,7 +550,7 @@ namespace RNGReporter
             dataGridViewAdjacents.MultiSelect = false;
             if (radioBtnDPPt.Checked)
             {
-                var adjacents = (List<Adjacent>) dataGridViewAdjacents.DataSource;
+                var adjacents = (List<Adjacent>)dataGridViewAdjacents.DataSource;
                 var searchFlips = new SearchFlips(adjacents);
                 if (searchFlips.ShowDialog() == DialogResult.OK)
                 {
@@ -582,7 +582,7 @@ namespace RNGReporter
             {
                 //  We need to bring up the special searcher for roamers and/or 
                 //  elm flips.  Also need to figure out how we are going to search
-                var adjacents = (List<Adjacent>) dataGridViewAdjacents.DataSource;
+                var adjacents = (List<Adjacent>)dataGridViewAdjacents.DataSource;
 
                 var searchElm = new SearchElm(adjacents);
                 if (adjacents != null && searchElm.ShowDialog() == DialogResult.OK)
@@ -618,7 +618,7 @@ namespace RNGReporter
 
                 if (searchIVs.ShowDialog() == DialogResult.OK)
                 {
-                    var adjacents = (List<Adjacent>) dataGridViewAdjacents.DataSource;
+                    var adjacents = (List<Adjacent>)dataGridViewAdjacents.DataSource;
 
                     if (adjacents != null)
                     {
@@ -650,7 +650,7 @@ namespace RNGReporter
 
         private bool IsTarget(Adjacent adjacent)
         {
-            var timeAndDelay = (TimeAndDelay) dataGridViewValues.SelectedRows[0].DataBoundItem;
+            var timeAndDelay = (TimeAndDelay)dataGridViewValues.SelectedRows[0].DataBoundItem;
             return adjacent.Date == timeAndDelay.Date && adjacent.Delay == timeAndDelay.Delay;
         }
 
@@ -659,7 +659,7 @@ namespace RNGReporter
             var searchRoamers = new SearchRoamers();
             if (searchRoamers.ShowDialog() == DialogResult.OK)
             {
-                var adjacents = (List<Adjacent>) dataGridViewAdjacents.DataSource;
+                var adjacents = (List<Adjacent>)dataGridViewAdjacents.DataSource;
 
                 if (adjacents != null)
                 {
@@ -725,7 +725,7 @@ namespace RNGReporter
         {
             if (dataGridViewAdjacents.SelectedRows[0] != null)
             {
-                var adjacent = (Adjacent) dataGridViewAdjacents.SelectedRows[0].DataBoundItem;
+                var adjacent = (Adjacent)dataGridViewAdjacents.SelectedRows[0].DataBoundItem;
 
                 Clipboard.SetText(adjacent.Seed.ToString("X8"));
             }
@@ -747,7 +747,7 @@ namespace RNGReporter
                 //  Get the name of the file and then go ahead 
                 //  and create and save the thing to the hard
                 //  drive.   
-                var adjacents = (List<Adjacent>) dataGridViewAdjacents.DataSource;
+                var adjacents = (List<Adjacent>)dataGridViewAdjacents.DataSource;
 
                 if (adjacents.Count > 0)
                 {
@@ -811,15 +811,15 @@ namespace RNGReporter
 
             if (radioBtnHgSs.Checked)
             {
-                buttonSearch.Text = "Search Calls";
+                buttonSearch.Text = "打电话反查";
             }
             else if (radioBtnDPPt.Checked)
             {
-                buttonSearch.Text = "Search Flips";
+                buttonSearch.Text = "掷硬币反查";
             }
             else
             {
-                buttonSearch.Text = "Search IVs";
+                buttonSearch.Text = "个体值反查";
             }
         }
 
@@ -835,7 +835,7 @@ namespace RNGReporter
 
         private void comboBoxProfiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MAC_Address = ((Profile) comboBoxProfiles.SelectedItem).MAC_Address;
+            MAC_Address = ((Profile)comboBoxProfiles.SelectedItem).MAC_Address;
             labelMAC.Text = "Profile: " + MAC_Address.ToString("X");
         }
     }

@@ -18,6 +18,9 @@
  */
 
 
+using Microsoft.Win32;
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,11 +33,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 using Version = RNGReporter.Objects.Version;
-using System.Threading;
 
 namespace RNGReporter
 {
@@ -119,9 +118,9 @@ namespace RNGReporter
 
             var ability = new[]
                 {
-                    new ComboBoxItem("Any", -1),
-                    new ComboBoxItem("Ability 0", 0),
-                    new ComboBoxItem("Ability 1", 1)
+                    new ComboBoxItem("任意", -1),
+                    new ComboBoxItem("特性0", 0),
+                    new ComboBoxItem("特性1", 1)
                 };
 
             currentMod = EncounterMod.Synchronize;
@@ -133,7 +132,7 @@ namespace RNGReporter
             }
             catch (ConfigurationErrorsException ex)
             {
-                string filename = ((ConfigurationException) ex.InnerException).Filename;
+                string filename = ((ConfigurationException)ex.InnerException).Filename;
 
                 File.Delete(filename);
                 Settings.Default.Reload();
@@ -145,7 +144,7 @@ namespace RNGReporter
             }
 
             comboBoxNature.Items.AddRange(Objects.Nature.NatureDropDownCollectionSearchNatures());
-            ChangeLanguage((Language) Settings.Default.Language);
+            ChangeLanguage((Language)Settings.Default.Language);
 
             showToolTipsToolStripMenuItem.Checked = Settings.Default.ShowToolTips;
 
@@ -244,7 +243,7 @@ namespace RNGReporter
 
             if (File.Exists(Settings.Default.ProfileLocation))
                 Profiles.LoadProfiles(Settings.Default.ProfileLocation);
-// used for update checks, only do it once a day
+            // used for update checks, only do it once a day
 #if !DEBUG
             if ((DateTime.Now - Settings.Default.LastUpdate).Days > 0)
             {
@@ -310,7 +309,7 @@ namespace RNGReporter
                 var client = new WebClient();
                 string versionString = client.DownloadString(url);
 
-                char[] splitter = {','};
+                char[] splitter = { ',' };
                 string[] versionInfo = versionString.Split(splitter, 4);
                 int latestVersion = int.Parse(versionInfo[0]);
 
@@ -342,7 +341,7 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (dataGridViewValues.Columns[e.ColumnIndex].Name == "Nature")
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
                 if (nature == Functions.NatureStrings(18) ||
                     nature == Functions.NatureStrings(6) ||
@@ -355,7 +354,7 @@ namespace RNGReporter
                     e.CellStyle.ForeColor = Color.Gray;
                 }
 
-                if ((bool) dataGridViewValues.Rows[e.RowIndex].Cells["Synchable"].Value)
+                if ((bool)dataGridViewValues.Rows[e.RowIndex].Cells["Synchable"].Value)
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
                 }
@@ -368,18 +367,18 @@ namespace RNGReporter
                 dataGridViewValues.Columns[e.ColumnIndex].Name == "SpD" ||
                 dataGridViewValues.Columns[e.ColumnIndex].Name == "Spe")
             {
-                if ((string) e.Value == "30" || (string) e.Value == "31")
+                if ((string)e.Value == "30" || (string)e.Value == "31")
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
                 }
 
-                if ((string) e.Value == "0")
+                if ((string)e.Value == "0")
                 {
                     e.CellStyle.ForeColor = Color.Red;
                 }
 
-                if ((string) e.Value == "A" || (string) e.Value == "Ma" ||
-                    (string) e.Value == "B" || (string) e.Value == "Fe")
+                if ((string)e.Value == "A" || (string)e.Value == "Ma" ||
+                    (string)e.Value == "B" || (string)e.Value == "Fe")
                 {
                     e.CellStyle.ForeColor = Color.Blue;
                 }
@@ -425,9 +424,9 @@ namespace RNGReporter
                 generator.EncounterMod = EncounterMod.None;
 
             if (currentMod == EncounterMod.CuteCharm)
-                generator.SynchNature = (int) ((ComboBoxItem) comboBoxSynchNatures.SelectedItem).Reference;
+                generator.SynchNature = (int)((ComboBoxItem)comboBoxSynchNatures.SelectedItem).Reference;
             else
-                generator.SynchNature = ((Nature) comboBoxSynchNatures.SelectedItem).Number;
+                generator.SynchNature = ((Nature)comboBoxSynchNatures.SelectedItem).Number;
 
             generator.EncounterType = EncounterTypeCalc.EncounterString(comboBoxEncounterType.Text);
             generator.DittoUsed = checkBoxDittoParent.Checked;
@@ -446,7 +445,7 @@ namespace RNGReporter
 
             //  Build up a FrameComparer
             List<int> encounterSlots = null;
-            if (comboBoxEncounterSlot.Text != "Any" && comboBoxEncounterSlot.CheckBoxItems.Count > 0)
+            if (comboBoxEncounterSlot.Text != "任意" && comboBoxEncounterSlot.CheckBoxItems.Count > 0)
             {
                 encounterSlots = new List<int>();
                 for (int i = 0; i < comboBoxEncounterSlot.CheckBoxItems.Count; i++)
@@ -458,7 +457,7 @@ namespace RNGReporter
             }
 
             List<uint> natures = null;
-            if (comboBoxNature.Text != "Any" && comboBoxNature.CheckBoxItems.Count > 0)
+            if (comboBoxNature.Text != "任意" && comboBoxNature.CheckBoxItems.Count > 0)
             {
                 natures = (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).ToList();
             }
@@ -496,12 +495,12 @@ namespace RNGReporter
                     0, CompareType.None,
                     0, CompareType.None,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     checkBoxSynchOnly.Checked,
                     false,
                     encounterSlots,
-                    (GenderFilter) (comboBoxGender.SelectedItem));
+                    (GenderFilter)(comboBoxGender.SelectedItem));
 
                 generator.RNGIVs = rngIVs;
             }
@@ -515,12 +514,12 @@ namespace RNGReporter
                     0, CompareType.None,
                     0, CompareType.None,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     false,
                     false,
                     null,
-                    (GenderFilter) (comboBoxGender.SelectedItem));
+                    (GenderFilter)(comboBoxGender.SelectedItem));
             }
             else if (generator.FrameType == FrameType.Method1 ||
                      generator.FrameType == FrameType.Method1Reverse ||
@@ -535,19 +534,19 @@ namespace RNGReporter
                 frameCompare = new FrameCompare(
                     ivFilters.IVFilter,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     false,
                     false,
                     null,
-                    (GenderFilter) (comboBoxGender.SelectedItem));
+                    (GenderFilter)(comboBoxGender.SelectedItem));
             }
             else if (generator.FrameType == FrameType.Wondercard5thGen || generator.FrameType == FrameType.Wondercard5thGenFixed)
             {
                 frameCompare = new FrameCompare(
                     ivFilters.IVFilter,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     false,
                     false,
@@ -562,12 +561,12 @@ namespace RNGReporter
                     frameCompare = new FrameCompare(
                         ivFilters.IVFilter,
                         natures,
-                        (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                        (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                         checkBoxShinyOnly.Checked,
                         checkBoxSynchOnly.Checked,
                         checkBoxDreamWorld.Checked,
                         null,
-                        (GenderFilter) (comboBoxGender.SelectedItem));
+                        (GenderFilter)(comboBoxGender.SelectedItem));
                 }
                 else
                 {
@@ -579,12 +578,12 @@ namespace RNGReporter
                         0, CompareType.None,
                         0, CompareType.None,
                         natures,
-                        (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                        (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                         checkBoxShinyOnly.Checked,
                         checkBoxSynchOnly.Checked,
                         checkBoxDreamWorld.Checked,
                         null,
-                        (GenderFilter) (comboBoxGender.SelectedItem));
+                        (GenderFilter)(comboBoxGender.SelectedItem));
                 }
             }
             else
@@ -592,12 +591,12 @@ namespace RNGReporter
                 frameCompare = new FrameCompare(
                     ivFilters.IVFilter,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     checkBoxSynchOnly.Checked,
                     false,
                     encounterSlots,
-                    (GenderFilter) (comboBoxGender.SelectedItem));
+                    (GenderFilter)(comboBoxGender.SelectedItem));
             }
 
             ulong seed = 0;
@@ -628,7 +627,7 @@ namespace RNGReporter
             generator.InitialSeed = seed;
 
             //  Handle add seed finding activities
-            labelFlipsForSeed.Text = CoinFlips.GetFlips((uint) seed, 10);
+            labelFlipsForSeed.Text = CoinFlips.GetFlips((uint)seed, 10);
 
             // Handle all of the roaming Pokemon here            
             uint rRoute = 0;
@@ -649,7 +648,7 @@ namespace RNGReporter
             //  starting route of each of the roamers the user has
             //  shown interest in --
             HgSsRoamerInformation information = HgSsRoamers.GetHgSsRoamerInformation(
-                (uint) seed,
+                (uint)seed,
                 checkBoxRPresent.Checked,
                 checkBoxEPresent.Checked,
                 checkBoxLPresent.Checked,
@@ -691,20 +690,20 @@ namespace RNGReporter
             if (!firstDisplay)
             {
                 labelRoamerRoutesText += "  ---  ";
-                labelRoamerRoutesText += "Frame(s) Advanced: " + information.RngCalls;
+                labelRoamerRoutesText += "游走消耗的帧数: " + information.RngCalls;
             }
 
             labelRoamerRoutes.Text = labelRoamerRoutesText;
 
             //  Handle elm here, letting it know the foced advancement
-            labelElmForSeed.Text = Responses.ElmResponses((uint) seed, 10, information.RngCalls);
+            labelElmForSeed.Text = Responses.ElmResponses((uint)seed, 10, information.RngCalls);
 
             if (maskedTextBoxStartingFrame.Text != "")
             {
                 ulong startingFrame;
                 ulong.TryParse(maskedTextBoxStartingFrame.Text, out startingFrame);
                 if (startingFrame > uint.MaxValue) startingFrame = uint.MaxValue - offset;
-                generator.InitialFrame = (uint) startingFrame;
+                generator.InitialFrame = (uint)startingFrame;
                 generator.InitialFrame += offset;
             }
 
@@ -713,7 +712,7 @@ namespace RNGReporter
                 ulong maxFrames;
                 ulong.TryParse(maskedTextBoxMaxFrames.Text, out maxFrames);
                 if (maxFrames > uint.MaxValue) maxFrames = uint.MaxValue;
-                generator.MaxResults = (uint) maxFrames;
+                generator.MaxResults = (uint)maxFrames;
             }
 
             //  Figure out if we have something good to pass in
@@ -729,7 +728,7 @@ namespace RNGReporter
             //  that have been passed in.
 
             //Channel
-            if(generator.FrameType == FrameType.Channel)
+            if (generator.FrameType == FrameType.Channel)
                 id = 40122;
 
             frames = generator.Generate(frameCompare, id, sid);
@@ -1629,7 +1628,7 @@ namespace RNGReporter
                 //  disable some items if they are not really
                 //  applicable to the method the user currently
                 //  has selected.
-                var frameType = (FrameType) ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference;
+                var frameType = (FrameType)((ComboBoxItem)comboBoxMethod.SelectedItem).Reference;
 
                 //  We only want the option to calculate Poketch taps 
                 //  to be availible when the user have 4th gen breeding
@@ -1685,7 +1684,7 @@ namespace RNGReporter
                 ClearAllFilters();
 
                 //  Get the currently selected frame.
-                var frame = (Frame) dataGridViewValues.SelectedRows[0].DataBoundItem;
+                var frame = (Frame)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
                 //  Figure out what our starting frame is going to be 
                 //  for the clipping, using the frame number as our
@@ -1695,17 +1694,17 @@ namespace RNGReporter
                 uint selectedIndex = frame.Number < centerFrames + 1U ? frame.Number - 1U : centerFrames;
                 uint maxFrames = frame.Number < centerFrames + 1U
                                      ? frame.Number - 1U + centerFrames + 1
-                                     : centerFrames*2 + 1;
+                                     : centerFrames * 2 + 1;
 
                 maskedTextBoxStartingFrame.Text = startingFrame.ToString();
                 maskedTextBoxMaxFrames.Text = maxFrames.ToString();
 
                 Generate();
 
-                SetTargetFrame((int) selectedIndex);
+                SetTargetFrame((int)selectedIndex);
 
-                dataGridViewValues.FirstDisplayedScrollingRowIndex = (int) selectedIndex;
-                dataGridViewValues.Rows[(int) selectedIndex].Selected = true;
+                dataGridViewValues.FirstDisplayedScrollingRowIndex = (int)selectedIndex;
+                dataGridViewValues.Rows[(int)selectedIndex].Selected = true;
             }
         }
 
@@ -1720,7 +1719,7 @@ namespace RNGReporter
             {
                 if (dataGridViewValues.SelectedRows[0] != null)
                 {
-                    var frame = (Frame) dataGridViewValues.SelectedRows[0].DataBoundItem;
+                    var frame = (Frame)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
                     labelTargetFrame.Text =
                         frame.Number.ToString();
@@ -1790,7 +1789,7 @@ namespace RNGReporter
         {
             if (dataGridViewValues.SelectedRows[0] != null)
             {
-                var frame = (Frame) dataGridViewValues.SelectedRows[0].DataBoundItem;
+                var frame = (Frame)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
                 var pt = new Poketech(frame.Number);
                 pt.ShowDialog();
@@ -1815,7 +1814,7 @@ namespace RNGReporter
 
                 //  Grab a raw list of the frames, since this is the quick way to
                 //  actual search them. Using the grid itself is easier, but slow
-                var frames = (List<Frame>) dataGridViewValues.DataSource;
+                var frames = (List<Frame>)dataGridViewValues.DataSource;
 
                 bool found = true;
                 int nextFrame = 0;
@@ -1876,7 +1875,7 @@ namespace RNGReporter
 
                 //  Grab a raw list of the frames, since this is the quick way to
                 //  actual search them. Using the grid itself is easier, but slow
-                var frames = (List<Frame>) dataGridViewValues.DataSource;
+                var frames = (List<Frame>)dataGridViewValues.DataSource;
 
                 bool found = true;
                 int nextFrame = 0;
@@ -1937,7 +1936,7 @@ namespace RNGReporter
 
                 //  Grab a raw list of the frames, since this is the quick way to
                 //  actual search them. Using the grid itself is easier, but slow
-                var frames = (List<Frame>) dataGridViewValues.DataSource;
+                var frames = (List<Frame>)dataGridViewValues.DataSource;
 
                 bool found = true;
                 int nextFrame = 0;
@@ -1998,7 +1997,7 @@ namespace RNGReporter
                 //  Get the name of the file and then go ahead 
                 //  and create and save the thing to the hard
                 //  drive.   
-                var frames = (List<Frame>) dataGridViewValues.DataSource;
+                var frames = (List<Frame>)dataGridViewValues.DataSource;
 
                 if (frames.Count > 0)
                 {
@@ -2010,7 +2009,7 @@ namespace RNGReporter
 
         private void buttonFindTime_Click(object sender, EventArgs e)
         {
-            var btnSender = (Button) sender;
+            var btnSender = (Button)sender;
             var ptLowerLeft = new Point(0, btnSender.Height);
             ptLowerLeft = btnSender.PointToScreen(ptLowerLeft);
             contextMenuStripTimeFinder.Show(ptLowerLeft);
@@ -2084,7 +2083,7 @@ namespace RNGReporter
             if (comboBoxEncounterType.SelectedItem != null)
                 previousEncounter = comboBoxEncounterType.SelectedItem.ToString();
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK))
             {
                 encounterMenu = new[]
                     {
@@ -2101,10 +2100,10 @@ namespace RNGReporter
 
                 comboBoxEncounterType.DataSource = encounterMenu;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ))
             {
                 encounterMenu = new[]
                     {
@@ -2119,7 +2118,7 @@ namespace RNGReporter
 
                 comboBoxEncounterType.DataSource = encounterMenu;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures))
             {
                 encounterMenu = new[]
                     {
@@ -2140,8 +2139,8 @@ namespace RNGReporter
 
                 comboBoxEncounterType.DataSource = encounterMenu;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
             {
                 encounterMenu = new[]
                     {
@@ -2153,7 +2152,7 @@ namespace RNGReporter
 
                 comboBoxEncounterType.DataSource = encounterMenu;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
             {
                 encounterMenu = new[]
                     {
@@ -2180,8 +2179,8 @@ namespace RNGReporter
                 }
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBred) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBredInternational))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBred) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBredInternational))
             {
                 currentMod = EncounterMod.Everstone;
                 buttonLead.Text = EncounterTypeCalc.StringMod(currentMod);
@@ -2196,12 +2195,12 @@ namespace RNGReporter
                 comboBoxSynchNatures.Enabled = true;
                 buttonLead.Enabled = true;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures))
             {
                 if (currentMod == EncounterMod.Everstone)
                     currentMod = EncounterMod.Synchronize;
@@ -2243,12 +2242,12 @@ namespace RNGReporter
                 buttonLead.Enabled = false;
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGen) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGenFixed) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBred) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBredInternational))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGen) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGenFixed) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBred) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBredInternational))
             {
                 textBoxSeed.Mask = "AAAAAAAAAAAAAAAA";
                 checkBoxBW2.Visible = true;
@@ -2265,11 +2264,11 @@ namespace RNGReporter
                 checkBoxMemoryLink.Visible = false;
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGen) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGenFixed) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBred) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBredInternational))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGen) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGenFixed) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBred) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.BWBredInternational))
             {
                 buttonCalcInitialFrame.Visible = true;
                 checkBoxRoamerReleased.Visible = true;
@@ -2282,15 +2281,15 @@ namespace RNGReporter
                 labelCalcWarning.Visible = false;
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
             {
                 comboBoxEncounterType.Enabled = true;
             }
@@ -2368,7 +2367,7 @@ namespace RNGReporter
             bool showMap = HgSsRoamerSW.Window.Map.Visible;
             HgSsRoamerSW.Window.Hide();
 
-            var seedToTime = new SeedToTime {AutoGenerate = false, ShowMap = showMap};
+            var seedToTime = new SeedToTime { AutoGenerate = false, ShowMap = showMap };
 
             seedToTime.setDPPt();
 
@@ -2384,7 +2383,7 @@ namespace RNGReporter
             }
 
             //  Grab this from what the user had searched on
-            seedToTime.Year = (uint) DateTime.Now.Year;
+            seedToTime.Year = (uint)DateTime.Now.Year;
 
             seedToTime.Show();
         }
@@ -2397,7 +2396,7 @@ namespace RNGReporter
             bool showMap = HgSsRoamerSW.Window.Map.Visible;
             HgSsRoamerSW.Window.Hide();
 
-            var seedToTime = new SeedToTime {AutoGenerate = false, ShowMap = showMap};
+            var seedToTime = new SeedToTime { AutoGenerate = false, ShowMap = showMap };
 
             seedToTime.setBW();
 
@@ -2413,7 +2412,7 @@ namespace RNGReporter
             }
 
             //  Grab this from what the user had searched on
-            seedToTime.Year = (uint) DateTime.Now.Year;
+            seedToTime.Year = (uint)DateTime.Now.Year;
 
             seedToTime.Show();
         }
@@ -2565,7 +2564,7 @@ namespace RNGReporter
             bool showMap = HgSsRoamerSW.Window.Map.Visible;
             HgSsRoamerSW.Window.Hide();
 
-            var seedToTime = new SeedToTime {sekrit = true, AutoGenerate = false, ShowMap = showMap, Seed = 0};
+            var seedToTime = new SeedToTime { sekrit = true, AutoGenerate = false, ShowMap = showMap, Seed = 0 };
 
             if (textBoxSeed.Text != "")
             {
@@ -2577,7 +2576,7 @@ namespace RNGReporter
             }
 
             //  Grab this from what the user had searched on
-            seedToTime.Year = (uint) DateTime.Now.Year;
+            seedToTime.Year = (uint)DateTime.Now.Year;
 
             seedToTime.ShowDialog();
         }
@@ -2606,7 +2605,7 @@ namespace RNGReporter
             // this is terribly bad form
             // but since there's always an entry up on the datagrid
             // This should not fail
-            var frames = (List<Frame>) dataGridViewValues.DataSource;
+            var frames = (List<Frame>)dataGridViewValues.DataSource;
             FrameType frameType = frames[0].FrameType;
             EncounterType encounterType = frames[0].EncounterType;
 
@@ -2713,12 +2712,12 @@ namespace RNGReporter
                 currentMod = EncounterMod.Synchronize;
                 comboBoxSynchNatures.DataSource = Objects.Nature.NatureDropDownCollectionSynch();
 
-                if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
-                    ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
-                    ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
-                    ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
-                    ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK) ||
-                    ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures))
+                if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH1) ||
+                    ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH2) ||
+                    ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodH4) ||
+                    ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
+                    ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK) ||
+                    ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures))
                     comboBoxSynchNatures.Enabled = true;
                 else
                     comboBoxSynchNatures.Enabled = false;
@@ -2751,35 +2750,35 @@ namespace RNGReporter
                         }
                     }
 
-                    Settings.Default.Language = (int) Language.Japanese;
+                    Settings.Default.Language = (int)Language.Japanese;
                     clearLanguageChecks();
                     日本語ToolStripMenuItem.Checked = true;
                     break;
                 case (Language.German):
                     CellStyle.Font = DefaultFont;
 
-                    Settings.Default.Language = (int) Language.German;
+                    Settings.Default.Language = (int)Language.German;
                     clearLanguageChecks();
                     deutschToolStripMenuItem.Checked = true;
                     break;
                 case (Language.Spanish):
                     CellStyle.Font = DefaultFont;
 
-                    Settings.Default.Language = (int) Language.Spanish;
+                    Settings.Default.Language = (int)Language.Spanish;
                     clearLanguageChecks();
                     españolToolStripMenuItem.Checked = true;
                     break;
                 case (Language.French):
                     CellStyle.Font = DefaultFont;
 
-                    Settings.Default.Language = (int) Language.French;
+                    Settings.Default.Language = (int)Language.French;
                     clearLanguageChecks();
                     françaisToolStripMenuItem.Checked = true;
                     break;
                 case (Language.Italian):
                     CellStyle.Font = DefaultFont;
 
-                    Settings.Default.Language = (int) Language.Italian;
+                    Settings.Default.Language = (int)Language.Italian;
                     clearLanguageChecks();
                     italianoToolStripMenuItem.Checked = true;
                     break;
@@ -2804,7 +2803,7 @@ namespace RNGReporter
                             return false;
                     }
 
-                    Settings.Default.Language = (int) Language.Korean;
+                    Settings.Default.Language = (int)Language.Korean;
                     clearLanguageChecks();
                     한국어ToolStripMenuItem.Checked = true;
                     break;
@@ -2842,7 +2841,7 @@ namespace RNGReporter
                 default:
                     CellStyle.Font = DefaultFont;
 
-                    Settings.Default.Language = (int) Language.English;
+                    Settings.Default.Language = (int)Language.English;
                     clearLanguageChecks();
                     englishToolStripMenuItem.Checked = true;
                     break;
@@ -2947,15 +2946,14 @@ namespace RNGReporter
 
                 if (dataGridViewValues.Columns[e.ColumnIndex].Name == "Chatot")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Chatot Pitch";
+                    toolTipDataGrid.ToolTipTitle = "聒噪鸟音高";
 
-                    toolTipDataGrid.Show("A Chatot with a recorded Chatter (not its normal cry) advances the RNG\r\n" +
-                                         "by 1 frame every time its call is heard on the status screen.\r\n" +
-                                         "The pitch of the cry is also different for each frame.  By listening\r\n" +
-                                         "carefully to the pitches, it is possible to determine the current frame.\r\n\r\n" +
-                                         "\"Low\" indicates a low pitch and \"High\", a higher pitch.  The numbers\r\n" +
-                                         "in parentheses indicate slight variations in pitch that may be detectable\r\n" +
-                                         "by a well-trained ear.",
+                    toolTipDataGrid.Show("一只聒噪鸟有一个录音后的喋喋不休（不是原本的叫声）则可以用来推进帧数\r\n" +
+                                         "每次在这只聒噪鸟的状态面板查看时，听到他发出你的录音（不用听完），则帧数+1。\r\n" +
+                                         "每一帧的叫声音高也不同。通过倾听仔细地分辨出音高，才有可能确定当前的帧数\r\n\r\n" +
+                                         "\"Low\"表示低音，\"High\"表示高音。这些括号内的数字表示可以听到音高的细微区别，这可能被训练有素的耳朵察觉到\r\n\r\n" +
+                                         "L = Low, ML = Mid-Low(中低音), M = Mid(中音), MH = Mid-High(中高音), H = High"
+                                         ,
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2963,11 +2961,10 @@ namespace RNGReporter
                 }
                 else if (dataGridViewValues.Columns[e.ColumnIndex].Name == "Nature")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Nature";
+                    toolTipDataGrid.ToolTipTitle = "性格";
 
-                    toolTipDataGrid.Show("A bolded nature indicates that the nature can be changed by a lead\r\n" +
-                                         "Pokémon with Synchronize.\r\n\r\n" +
-                                         "Greyed-out natures are natures with no competitive value.",
+                    toolTipDataGrid.Show("加粗黑色的性格说明可以通过同步特性的宝可梦使其同步性格\r\n\r\n" +
+                                         "灰色的性格则说明该性格的无同步的默认性格",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2975,9 +2972,9 @@ namespace RNGReporter
                 }
                 else if (dataGridViewValues.Columns[e.ColumnIndex].Name == "Shiny")
                 {
-                    toolTipDataGrid.ToolTipTitle = "!!!";
+                    toolTipDataGrid.ToolTipTitle = "异色";
 
-                    toolTipDataGrid.Show("A !!! in this column indicates the frame will be shiny.",
+                    toolTipDataGrid.Show("如果该帧的异色列有!!!则说明该帧是异色",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2995,7 +2992,7 @@ namespace RNGReporter
                 }
                 else if (dataGridViewValues.Columns[e.ColumnIndex].Name == "EncounterSlot")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Encounter Slot";
+                    toolTipDataGrid.ToolTipTitle = "遭遇槽位";
 
                     toolTipDataGrid.Show("Encounter slots are used to determine what Pokémon appears for\r\n" +
                                          "a wild battle.  Use the encounter tables under the menus to look up\r\n" +
@@ -3043,7 +3040,7 @@ namespace RNGReporter
                 }
                 else if (dataGridViewValues.Columns[e.ColumnIndex].DataPropertyName == "EntralinkTime")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Entralink Time";
+                    toolTipDataGrid.ToolTipTitle = "连入之森时间";
 
                     toolTipDataGrid.Show(
                         "Turning on the C-Gear advances the PIDRNG over time.  This column lists the minimum\r\n" +
@@ -3096,7 +3093,7 @@ namespace RNGReporter
 
         private void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
 
         private void profilesToolStripMenuItem_Click(object sender, EventArgs e)

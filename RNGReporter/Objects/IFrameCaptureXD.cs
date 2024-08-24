@@ -25,12 +25,12 @@ namespace RNGReporter.Objects
 
         public uint Ticks
         {
-            get { return (uint) Seed; }
+            get { return (uint)Seed; }
         }
 
         public double Time
         {
-            get { return (double) Seed/6000000; }
+            get { return (double)Seed / 6000000; }
         }
 
         public Frame Frame { get; set; }
@@ -42,7 +42,7 @@ namespace RNGReporter.Objects
 
         public string Nature
         {
-            get { return Functions.NatureStrings((int) Frame.Nature); }
+            get { return Functions.NatureStrings((int)Frame.Nature); }
         }
 
         public uint Ability

@@ -17,18 +17,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using RNGReporter.Objects;
+using RNGReporter.Objects.Searchers;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Objects.Searchers;
-using RNGReporter.Properties;
-using System.Linq;
-using System.Globalization;
-using RNGReporter.Controls;
 
 namespace RNGReporter
 {
@@ -107,9 +106,9 @@ namespace RNGReporter
 
             var ability = new[]
                 {
-                    new ComboBoxItem("Any", -1),
-                    new ComboBoxItem("Ability 0", 0),
-                    new ComboBoxItem("Ability 1", 1)
+                    new ComboBoxItem("任意", -1),
+                    new ComboBoxItem("特性0", 0),
+                    new ComboBoxItem("特性1", 1)
                 };
 
             cbMethod.Items.AddRange(new object[]
@@ -792,7 +791,7 @@ namespace RNGReporter
                 }
             }
         }
-        
+
         private void buttonShiny3rdGenerate_Click(object sender, EventArgs e)
         {
             uint seed = 0;
@@ -921,7 +920,7 @@ namespace RNGReporter
             ivGenerator.ParentB = parentB;
 
             List<uint> natures = null;
-            if (comboBoxShiny3rdNature.Text != "Any" && comboBoxShiny3rdNature.CheckBoxItems.Count > 0)
+            if (comboBoxShiny3rdNature.Text != "任意" && comboBoxShiny3rdNature.CheckBoxItems.Count > 0)
             {
                 natures = new List<uint>();
                 for (int i = 0; i < comboBoxShiny3rdNature.CheckBoxItems.Count; i++)
@@ -975,7 +974,7 @@ namespace RNGReporter
 
             if (parentPassCount < 3)
             {
-                MessageBox.Show("The parent IVs you have listed cannot produce your desired search results.");
+                MessageBox.Show("您填写的亲代个体值，无法生成您想要的结果。");
                 return;
             }
 
@@ -1100,7 +1099,7 @@ namespace RNGReporter
             ivGenerator.ParentB = parentB;
 
             List<uint> natures = null;
-            if (comboBoxShiny3rdNature.Text != "Any" && comboBoxShiny3rdNature.CheckBoxItems.Count > 0)
+            if (comboBoxShiny3rdNature.Text != "任意" && comboBoxShiny3rdNature.CheckBoxItems.Count > 0)
             {
                 natures = new List<uint>();
                 for (int i = 0; i < comboBoxShiny3rdNature.CheckBoxItems.Count; i++)
@@ -1154,7 +1153,7 @@ namespace RNGReporter
 
             if (parentPassCount < 3)
             {
-                MessageBox.Show("The parent IVs you have listed cannot produce your desired search results.");
+                MessageBox.Show("您填写的亲代个体值，无法生成您想要的结果。");
                 return;
             }
 
@@ -1479,7 +1478,7 @@ namespace RNGReporter
             lowerGenerator.InitialSeed = seed;
 
             List<uint> natures = null;
-            if (comboEPIDNature.Text != "Any" && comboEPIDNature.CheckBoxItems.Count > 0)
+            if (comboEPIDNature.Text != "任意" && comboEPIDNature.CheckBoxItems.Count > 0)
             {
                 natures = new List<uint>();
                 for (int i = 0; i < comboEPIDNature.CheckBoxItems.Count; i++)
@@ -1957,7 +1956,7 @@ namespace RNGReporter
             ivGenerator.ParentB = parentB;
 
             List<uint> natures = null;
-            if (checkBoxNatureFRLG.Text != "Any" && checkBoxNatureFRLG.CheckBoxItems.Count > 0)
+            if (checkBoxNatureFRLG.Text != "任意" && checkBoxNatureFRLG.CheckBoxItems.Count > 0)
             {
                 natures = new List<uint>();
                 for (int i = 0; i < checkBoxNatureFRLG.CheckBoxItems.Count; i++)
@@ -2011,7 +2010,7 @@ namespace RNGReporter
 
             if (parentPassCount < 3)
             {
-                MessageBox.Show("The parent IVs you have listed cannot produce your desired search results.");
+                MessageBox.Show("您填写的亲代个体值，无法生成您想要的结果。");
                 return;
             }
 
@@ -2085,7 +2084,7 @@ namespace RNGReporter
                     return;
 
                 isSearching = true;
-                status.Text = "Searching";
+                status.Text = "计算中";
                 int methodNum = comboBoxMethod.SelectedIndex;
                 encounterType = getEncounterType(comboBoxType.SelectedIndex);
                 wildSlots = new List<WildSlots>();
@@ -2096,11 +2095,11 @@ namespace RNGReporter
                 shinyval = ((uint.Parse(wildTID.Text)) ^ (uint.Parse(wildSID.Text))) >> 3;
 
                 natureList = null;
-                if (comboBoxNature.Text != "Any" && comboBoxNature.CheckBoxItems.Count > 0)
+                if (comboBoxNature.Text != "任意" && comboBoxNature.CheckBoxItems.Count > 0)
                     natureList = (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).ToList();
 
                 slotsList = null;
-                if (comboBoxSlots.Text != "Any" && comboBoxSlots.CheckBoxItems.Count > 0)
+                if (comboBoxSlots.Text != "任意" && comboBoxSlots.CheckBoxItems.Count > 0)
                 {
                     slotsList = new List<int>();
                     for (int i = 0; i < comboBoxSlots.CheckBoxItems.Count; i++)
@@ -2113,7 +2112,7 @@ namespace RNGReporter
 
                 hiddenPowerList = null;
                 List<uint> temp = new List<uint>();
-                if (comboBoxHiddenPower.Text != "Any" && comboBoxHiddenPower.CheckBoxItems.Count > 0)
+                if (comboBoxHiddenPower.Text != "任意" && comboBoxHiddenPower.CheckBoxItems.Count > 0)
                     for (int x = 1; x <= 16; x++)
                         if (comboBoxHiddenPower.CheckBoxItems[x].Checked)
                             temp.Add((uint)(x - 1));
@@ -2181,7 +2180,7 @@ namespace RNGReporter
                             }
 
             isSearching = false;
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeed1(uint hp, uint atk, uint def, uint spa, uint spd, uint spe, int method)
@@ -2256,7 +2255,7 @@ namespace RNGReporter
                             }
 
             isSearching = false;
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeed2(uint hp, uint atk, uint def, uint spa, uint spd, uint spe, int method)
@@ -2328,7 +2327,7 @@ namespace RNGReporter
                             }
 
             isSearching = false;
-            status.Invoke((MethodInvoker)(() => status.Text = "Done. - Awaiting Command"));
+            status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
         }
 
         private void checkSeed4(uint hp, uint atk, uint def, uint spa, uint spd, uint spe, int method)
@@ -2983,12 +2982,42 @@ namespace RNGReporter
             }
         }
 
+        private void ivFiltersRSEgg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPageShinyRSEgg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
                 maskedTextBox21.ReadOnly = dateTimePicker1.Enabled = false;
-                minMinute.ReadOnly = maxMinute.ReadOnly = minHour.ReadOnly = maxHour.ReadOnly = true;                
+                minMinute.ReadOnly = maxMinute.ReadOnly = minHour.ReadOnly = maxHour.ReadOnly = true;
             }
             else
             {
@@ -3002,7 +3031,7 @@ namespace RNGReporter
             if (isSearching)
             {
                 isSearching = false;
-                status.Text = "Cancelled. - Awaiting Command";
+                status.Text = "取消了 -等待操作...";
                 searchThread.Abort();
             }
         }

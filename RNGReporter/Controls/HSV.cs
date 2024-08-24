@@ -78,9 +78,9 @@ namespace RNGReporter
             double max;
             double delta;
 
-            double r = color.R/255D;
-            double g = color.G/255D;
-            double b = color.B/255D;
+            double r = color.R / 255D;
+            double g = color.G / 255D;
+            double b = color.B / 255D;
 
             double h;
             double s;
@@ -97,18 +97,18 @@ namespace RNGReporter
             }
             else
             {
-                s = delta/max;
+                s = delta / max;
                 if (r == max)
                 {
-                    h = (60D*((g - b)/delta))%360D;
+                    h = (60D * ((g - b) / delta)) % 360D;
                 }
                 else if (g == max)
                 {
-                    h = 60D*((b - r)/delta) + 120D;
+                    h = 60D * ((b - r) / delta) + 120D;
                 }
                 else
                 {
-                    h = 60D*((r - g)/delta) + 240D;
+                    h = 60D * ((r - g) / delta) + 240D;
                 }
             }
             if (h < 0)
@@ -116,9 +116,9 @@ namespace RNGReporter
                 h += 360D;
             }
 
-            Hue = (int) (h/360D*255D);
-            Saturation = (int) (s*255D);
-            Value = (int) (v*255D);
+            Hue = (int)(h / 360D * 255D);
+            Saturation = (int)(s * 255D);
+            Value = (int)(v * 255D);
         }
 
         private Color ToRGB()
@@ -133,9 +133,9 @@ namespace RNGReporter
 
             // Scale Hue to be between 0 and 360. Saturation
             // and value scale to be between 0 and 1.
-            h = (Hue/255D*360D)%360D;
-            s = Saturation/255D;
-            v = Value/255D;
+            h = (Hue / 255D * 360D) % 360D;
+            s = Saturation / 255D;
+            v = Value / 255D;
 
             if (s == 0)
             {
@@ -153,14 +153,14 @@ namespace RNGReporter
                 int sectorNumber;
                 double sectorPos;
 
-                sectorPos = h/60D;
-                sectorNumber = (int) (Math.Floor(sectorPos));
+                sectorPos = h / 60D;
+                sectorNumber = (int)(Math.Floor(sectorPos));
 
                 fractionalSector = sectorPos - sectorNumber;
 
-                p = v*(1D - s);
-                q = v*(1D - (s*fractionalSector));
-                t = v*(1D - (s*(1D - fractionalSector)));
+                p = v * (1D - s);
+                q = v * (1D - (s * fractionalSector));
+                t = v * (1D - (s * (1D - fractionalSector)));
 
                 switch (sectorNumber)
                 {
@@ -196,7 +196,7 @@ namespace RNGReporter
                         break;
                 }
             }
-            return Color.FromArgb((int) (r*255D), (int) (g*255D), (int) (b*255D));
+            return Color.FromArgb((int)(r * 255D), (int)(g * 255D), (int)(b * 255D));
         }
 
         public static bool operator !=(HSV left, HSV right)

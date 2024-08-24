@@ -208,7 +208,7 @@ namespace RNGReporter.Objects
                 //Checks that ivs line up
                 if ((rng1 & 0x7FFF) == ivs1)
                 {
-                    
+
                     uint choppedPID;
 
                     //  Check Method 1

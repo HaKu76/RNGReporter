@@ -18,12 +18,12 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -86,7 +86,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             Font font;
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     font = new Font("Meiryo", 7.25F);
@@ -135,8 +135,8 @@ namespace RNGReporter
 
             uint level = 1;
 
-            var pokemon = (Pokemon) comboBoxPokemon.SelectedValue;
-            var nature = (Nature) comboBoxNature.SelectedValue;
+            var pokemon = (Pokemon)comboBoxPokemon.SelectedValue;
+            var nature = (Nature)comboBoxNature.SelectedValue;
 
             if (maskedTextBoxHP.Text != "")
                 hp = uint.Parse(maskedTextBoxHP.Text);
@@ -159,13 +159,13 @@ namespace RNGReporter
             if (maskedTextBoxLevel.Text != "")
                 level = uint.Parse(maskedTextBoxLevel.Text);
 
-            var stats = new[] {hp, atk, def, spa, spd, spe};
+            var stats = new[] { hp, atk, def, spa, spd, spe };
 
             Characteristic characteristic = null;
 
             if (comboBoxCharacteristic.SelectedItem.ToString() != "NONE")
             {
-                characteristic = (Characteristic) comboBoxCharacteristic.SelectedItem;
+                characteristic = (Characteristic)comboBoxCharacteristic.SelectedItem;
             }
 
             var ivCheck = new IVCheck(pokemon, level, nature, characteristic, stats);
@@ -197,13 +197,13 @@ namespace RNGReporter
             for (int statCount = 0; statCount < 6; statCount++)
             {
                 uint possibilities = maxstats[statCount] - minstats[statCount] + 1;
-                count = count*possibilities;
+                count = count * possibilities;
             }
 
             if (count > 200)
             {
                 MessageBox.Show(
-                    "The IV ranges you have listed produce a large amount of IV combinations.  It is recommended that you narrow down the IVs to avoid false positives in parameter searches.");
+                    "您输入的个体值范围产生了大量的个体值组合。建议缩小个体值的范围，以避免在参数搜索中出现误报。");
             }
         }
 

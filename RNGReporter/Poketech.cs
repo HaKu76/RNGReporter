@@ -43,8 +43,8 @@ namespace RNGReporter
             {
                 target = offset - 13;
 
-                happy = target/12;
-                coin = target%12;
+                happy = target / 12;
+                coin = target % 12;
 
                 if (happy == 0)
                 {

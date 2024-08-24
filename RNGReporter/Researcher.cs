@@ -18,6 +18,7 @@
  */
 
 
+using RNGReporter.Objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,6 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using RNGReporter.Objects;
 
 namespace RNGReporter
 {
@@ -1043,13 +1043,13 @@ namespace RNGReporter
 
         private void searchValue(bool search)
         {
-            dataGridViewValues.Focus();                     
+            dataGridViewValues.Focus();
 
             if (dataGridViewValues.RowCount > 0 && textBoxSearch.Text.Length > 0)
             {
                 ulong value;
 
-                if(glassComboBox1.SelectedItem.ToString() == "Frame")
+                if (glassComboBox1.SelectedItem.ToString() == "Frame")
                 {
                     try
                     {
@@ -1057,7 +1057,7 @@ namespace RNGReporter
                     }
                     catch
                     {
-                        MessageBox.Show("The Frame research accepts only decimal numbers.", "Error");
+                        MessageBox.Show("The Frame research accepts only decimal numbers.", "错误");
                         return;
                     }
                 }

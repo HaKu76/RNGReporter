@@ -18,14 +18,14 @@
  */
 
 
+using Microsoft.Win32;
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -74,7 +74,7 @@ namespace RNGReporter
 
             foreach (ButtonComboType button in buttons)
             {
-                comboBoxKeypresses.CheckBoxItems[(int) button].Checked = true;
+                comboBoxKeypresses.CheckBoxItems[(int)button].Checked = true;
             }
             this.profile = profile;
             loadSearchResult = true;
@@ -84,7 +84,7 @@ namespace RNGReporter
         {
             if (Profiles.List != null && Profiles.List.Count > 0)
             {
-                profilesSource = new BindingSource {DataSource = Profiles.List};
+                profilesSource = new BindingSource { DataSource = Profiles.List };
                 comboBoxProfiles.DataSource = profilesSource;
             }
             comboBoxProfiles.SelectedIndex = profile;
@@ -230,12 +230,12 @@ namespace RNGReporter
 
                     if (Settings.Default.LastVersion < MainForm.VersionNumber && registryRngReporter != null)
                     {
-                        maskedTextBoxCapMaxOffset.Text = (string) registryRngReporter.GetValue("pt_cap_offset", "1000");
+                        maskedTextBoxCapMaxOffset.Text = (string)registryRngReporter.GetValue("pt_cap_offset", "1000");
 
                         if (maskedTextBoxCapMaxOffset.Text == "0")
                             maskedTextBoxCapMaxOffset.Text = "1";
                     }
-                        //load from settings
+                    //load from settings
                     else
                     {
                         maskedTextBoxCapMaxOffset.Text = Settings.Default.CapOffset;
@@ -258,7 +258,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             var CellStyle = new DataGridViewCellStyle();
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     CellStyle.Font = new Font("Meiryo", 7.25F);
@@ -314,7 +314,7 @@ namespace RNGReporter
 
         private void Generate()
         {
-            var profile = (Profile) comboBoxProfiles.SelectedItem;
+            var profile = (Profile)comboBoxProfiles.SelectedItem;
             uint minFrame = uint.Parse(maskedTextBoxCapMinOffset.Text);
             uint maxFrame = uint.Parse(maskedTextBoxCapMaxOffset.Text);
 
@@ -322,15 +322,15 @@ namespace RNGReporter
             iframes = new List<IFrameCapture>();
 
             generator = new FrameGenerator
-                {
-                    FrameType = (FrameType) ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference,
-                    EncounterType =
-                        (EncounterType) ((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference,
-                    EncounterMod = (EncounterMod) ((ComboBoxItem) comboBoxLead.SelectedItem).Reference,
-                    SynchNature = -2,
-                    InitialFrame = minFrame + (profile.IsBW2() ? 2u : 0),
-                    MaxResults = maxFrame - minFrame + 1
-                };
+            {
+                FrameType = (FrameType)((ComboBoxItem)comboBoxMethod.SelectedItem).Reference,
+                EncounterType =
+                        (EncounterType)((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference,
+                EncounterMod = (EncounterMod)((ComboBoxItem)comboBoxLead.SelectedItem).Reference,
+                SynchNature = -2,
+                InitialFrame = minFrame + (profile.IsBW2() ? 2u : 0),
+                MaxResults = maxFrame - minFrame + 1
+            };
 
             // Now that each combo box item is a custom object containing the FrameType reference
             // We can simply retrieve the FrameType from the selected item
@@ -439,7 +439,7 @@ namespace RNGReporter
                     break;
             }
 
-            for (int seconds = (int) numericUpDownSeconds.Value*-1; seconds <= numericUpDownSeconds.Value; seconds++)
+            for (int seconds = (int)numericUpDownSeconds.Value * -1; seconds <= numericUpDownSeconds.Value; seconds++)
             {
                 for (uint timer0 = profile.Timer0Min - 1; timer0 <= profile.Timer0Max + 1; timer0++)
                 {
@@ -486,13 +486,13 @@ namespace RNGReporter
                 }
             }
 
-            listBindingCap = new BindingSource {DataSource = iframes};
+            listBindingCap = new BindingSource { DataSource = iframes };
             dataGridViewCapValues.DataSource = listBindingCap;
 
 
             foreach (DataGridViewRow row in dataGridViewCapValues.Rows)
             {
-                if ((ulong) row.Cells[0].Value == seedMatch)
+                if ((ulong)row.Cells[0].Value == seedMatch)
                 {
                     dataGridViewCapValues.CurrentCell = row.Cells[0];
                     dataGridViewCapValues.FirstDisplayedScrollingRowIndex = row.Index;
@@ -510,7 +510,7 @@ namespace RNGReporter
             for (int button = 0; button < 13; button++)
             {
                 if (comboBoxKeypresses.CheckBoxItems[button].Checked)
-                    customKeypress.Add((ButtonComboType) button);
+                    customKeypress.Add((ButtonComboType)button);
             }
 
             return Functions.buttonMashed(customKeypress);
@@ -521,9 +521,9 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (e.ColumnIndex == CapNatureIndex)
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
-                if ((bool) dataGridViewCapValues.Rows[e.RowIndex].Cells["Synchable"].Value)
+                if ((bool)dataGridViewCapValues.Rows[e.RowIndex].Cells["Synchable"].Value)
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
                 }
@@ -541,13 +541,13 @@ namespace RNGReporter
 
             if (dataGridViewCapValues.Columns[e.ColumnIndex].Name == "CapSeed")
             {
-                if (seedMatch != (ulong) e.Value)
+                if (seedMatch != (ulong)e.Value)
                     dataGridViewCapValues.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGray;
             }
 
             if (e.ColumnIndex >= CapHPIndex && e.ColumnIndex <= CapSpeedIndex)
             {
-                var number = (uint) e.Value;
+                var number = (uint)e.Value;
 
                 if (number >= 30)
                 {
@@ -608,7 +608,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 Clipboard.SetText(frame.Seed.ToString("X8"));
             }
@@ -623,7 +623,7 @@ namespace RNGReporter
                 DataGridViewColumn selectedColumn = dataGridViewCapValues.Columns[e.ColumnIndex];
 
                 var iframeCaptureComparer = new IFrameCaptureComparer
-                    {CompareType = selectedColumn.DataPropertyName};
+                { CompareType = selectedColumn.DataPropertyName };
 
                 if (selectedColumn.HeaderCell.SortGlyphDirection == SortOrder.Ascending)
                     iframeCaptureComparer.sortOrder = SortOrder.Descending;
@@ -643,7 +643,7 @@ namespace RNGReporter
                 DataObject clipboardContent = dataGridViewCapValues.GetClipboardContent();
                 if (clipboardContent != null)
                 {
-                    var test = (string) clipboardContent.GetData(DataFormats.UnicodeText);
+                    var test = (string)clipboardContent.GetData(DataFormats.UnicodeText);
                     test = test.Replace('\t', ' ');
                     Clipboard.SetText(test);
                 }
@@ -654,16 +654,16 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows.Count > 0)
             {
-                var profile = (Profile) comboBoxProfiles.SelectedItem;
+                var profile = (Profile)comboBoxProfiles.SelectedItem;
                 textBoxChatot.Text =
                     Responses.ChatotResponses64(
-                        ((IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem).Seed, profile);
+                        ((IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem).Seed, profile);
             }
         }
 
         private void comboBoxMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var type = (FrameType) ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference;
+            var type = (FrameType)((ComboBoxItem)comboBoxMethod.SelectedItem).Reference;
 
             switch (type)
             {
@@ -672,8 +672,8 @@ namespace RNGReporter
                     comboBoxLead.Enabled = false;
                     maskedTextBoxCapMaxOffset.Enabled = true;
                     maskedTextBoxCapMinOffset.Enabled = true;
-                    labelMinFrame.Text = "Min Frame";
-                    labelMaxFrame.Text = "Max Frame";
+                    labelMinFrame.Text = "最小帧";
+                    labelMaxFrame.Text = "最大帧";
 
                     if (maskedTextBoxCapMinOffset.Text == "0")
                         maskedTextBoxCapMinOffset.Text = "1";
@@ -688,8 +688,8 @@ namespace RNGReporter
                     comboBoxLead.Enabled = true;
                     maskedTextBoxCapMaxOffset.Enabled = true;
                     maskedTextBoxCapMinOffset.Enabled = true;
-                    labelMinFrame.Text = "Min Advances";
-                    labelMaxFrame.Text = "Max Advances";
+                    labelMinFrame.Text = "最小帧";
+                    labelMaxFrame.Text = "最大帧";
 
                     if (maskedTextBoxCapMinOffset.Text == "1")
                         maskedTextBoxCapMinOffset.Text = "0";
@@ -704,8 +704,8 @@ namespace RNGReporter
                     comboBoxLead.Enabled = false;
                     maskedTextBoxCapMaxOffset.Enabled = false;
                     maskedTextBoxCapMinOffset.Enabled = false;
-                    labelMinFrame.Text = "Min Advances";
-                    labelMaxFrame.Text = "Max Advances";
+                    labelMinFrame.Text = "最小帧";
+                    labelMaxFrame.Text = "最大帧";
                     textBoxDescription.Text =
                         "After obtaining an egg from the Day-Care Man, you must immediately capture a Pokémon to confirm your seed.  " +
                         "The IVs of the captured Pokémon will appear on frames 14-20.";
@@ -715,8 +715,8 @@ namespace RNGReporter
                     comboBoxLead.Enabled = false;
                     maskedTextBoxCapMaxOffset.Enabled = true;
                     maskedTextBoxCapMinOffset.Enabled = true;
-                    labelMinFrame.Text = "Min Advances";
-                    labelMaxFrame.Text = "Max Advances";
+                    labelMinFrame.Text = "最小帧";
+                    labelMaxFrame.Text = "最大帧";
 
                     if (maskedTextBoxCapMinOffset.Text == "1")
                         maskedTextBoxCapMinOffset.Text = "0";
@@ -725,16 +725,16 @@ namespace RNGReporter
                         maskedTextBoxCapMaxOffset.Text = "0";
 
                     textBoxDescription.Text =
-                        "Most Mystery Gifts use this method.  However, Mystery Gifts that can have any nature but are locked into a single gender " +
-                        "must use the GLAN (Gender Locked, Any Nature) Wondercard method.";
+                        "大多数神秘礼物都使用这种算法。神秘礼物宝可梦可以是任何性格，但仅限于单一性别。" +
+                        "必须使用GLAN (Gender Locked, Any Nature) Wondercard method.";
                     break;
                 case FrameType.Wondercard5thGenFixed:
                     comboBoxEncounterType.Enabled = false;
                     comboBoxLead.Enabled = false;
                     maskedTextBoxCapMaxOffset.Enabled = true;
                     maskedTextBoxCapMinOffset.Enabled = true;
-                    labelMinFrame.Text = "Min Advances";
-                    labelMaxFrame.Text = "Max Advances";
+                    labelMinFrame.Text = "最小帧";
+                    labelMaxFrame.Text = "最大帧";
 
                     if (maskedTextBoxCapMinOffset.Text == "1")
                         maskedTextBoxCapMinOffset.Text = "0";
@@ -743,34 +743,39 @@ namespace RNGReporter
                         maskedTextBoxCapMaxOffset.Text = "0";
 
                     textBoxDescription.Text =
-                        "Mystery Gifts that can have any nature but are locked into a single gender " +
-                        "must use the GLAN (Gender Locked, Any Nature) Wondercard method.";
+                        "神秘礼物宝可梦可以是任何性格，但仅限于单一性别 " +
+                        "必须使用GLAN (Gender Locked, Any Nature) Wondercard method.";
                     break;
             }
 
             textBoxDescription.Text += Environment.NewLine +
-                                       "Frames listed with a grey background are from seeds adjacent to the target.";
+                                       "灰色背景的帧数是目标附近的seed";
         }
 
         private void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
 
         private void comboBoxProfiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformationShort();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformationShort();
         }
 
         private void buttonEditProfile_Click(object sender, EventArgs e)
         {
-            var editor = new ProfileEditor {Profile = (Profile) comboBoxProfiles.SelectedItem};
+            var editor = new ProfileEditor { Profile = (Profile)comboBoxProfiles.SelectedItem };
             if (editor.ShowDialog() != DialogResult.OK) return;
             Profiles.List[comboBoxProfiles.SelectedIndex] = editor.Profile;
 
             profilesSource.DataSource = Profiles.List;
             profilesSource.ResetBindings(false);
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformationShort();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformationShort();
+        }
+
+        private void comboBoxEncounterType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

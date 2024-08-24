@@ -18,14 +18,14 @@
  */
 
 
+using Microsoft.Win32;
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 using Version = RNGReporter.Objects.Version;
 
 namespace RNGReporter
@@ -93,21 +93,21 @@ namespace RNGReporter
 
                 if (Settings.Default.LastVersion < MainForm.VersionNumber && registryRngReporter != null)
                 {
-                    maskedTextBoxYear.Text = (string) registryRngReporter.GetValue("year", "2000");
-                    maskedTextBoxMonth.Text = (string) registryRngReporter.GetValue("month", "01");
-                    maskedTextBoxDate.Text = (string) registryRngReporter.GetValue("date", "01");
-                    maskedTextBoxHours.Text = (string) registryRngReporter.GetValue("hours", "00");
-                    maskedTextBoxMinutes.Text = (string) registryRngReporter.GetValue("minutes", "00");
-                    maskedTextBoxSeconds.Text = (string) registryRngReporter.GetValue("seconds", "00");
-                    maskedTextBoxDelay.Text = (string) registryRngReporter.GetValue("wait", "0");
+                    maskedTextBoxYear.Text = (string)registryRngReporter.GetValue("year", "2000");
+                    maskedTextBoxMonth.Text = (string)registryRngReporter.GetValue("month", "01");
+                    maskedTextBoxDate.Text = (string)registryRngReporter.GetValue("date", "01");
+                    maskedTextBoxHours.Text = (string)registryRngReporter.GetValue("hours", "00");
+                    maskedTextBoxMinutes.Text = (string)registryRngReporter.GetValue("minutes", "00");
+                    maskedTextBoxSeconds.Text = (string)registryRngReporter.GetValue("seconds", "00");
+                    maskedTextBoxDelay.Text = (string)registryRngReporter.GetValue("wait", "0");
 
-                    maskedTextBoxYear_A.Text = (string) registryRngReporter.GetValue("year_a", "2000");
-                    maskedTextBoxMonth_A.Text = (string) registryRngReporter.GetValue("month_a", "01");
-                    maskedTextBoxDate_A.Text = (string) registryRngReporter.GetValue("date_a", "01");
-                    maskedTextBoxHours_A.Text = (string) registryRngReporter.GetValue("hours_a", "00");
-                    maskedTextBoxMinutes_A.Text = (string) registryRngReporter.GetValue("minutes_a", "00");
+                    maskedTextBoxYear_A.Text = (string)registryRngReporter.GetValue("year_a", "2000");
+                    maskedTextBoxMonth_A.Text = (string)registryRngReporter.GetValue("month_a", "01");
+                    maskedTextBoxDate_A.Text = (string)registryRngReporter.GetValue("date_a", "01");
+                    maskedTextBoxHours_A.Text = (string)registryRngReporter.GetValue("hours_a", "00");
+                    maskedTextBoxMinutes_A.Text = (string)registryRngReporter.GetValue("minutes_a", "00");
 
-                    var SIV_Mode = (string) registryRngReporter.GetValue("siv_mode", "DPP");
+                    var SIV_Mode = (string)registryRngReporter.GetValue("siv_mode", "DPP");
 
                     switch (SIV_Mode)
                     {
@@ -127,16 +127,16 @@ namespace RNGReporter
 
                     SIV_RadioChange();
 
-                    var SIV_LowDelay = (string) registryRngReporter.GetValue("siv_lowdelay", "FALSE");
+                    var SIV_LowDelay = (string)registryRngReporter.GetValue("siv_lowdelay", "FALSE");
                     checkBoxLowDelay.Checked = SIV_LowDelay == "TRUE";
 
-                    maskedTextBoxYear_Stat.Text = (string) registryRngReporter.GetValue("year_stat", "2000");
-                    maskedTextBoxMonth_Stat.Text = (string) registryRngReporter.GetValue("month_stat", "01");
-                    maskedTextBoxDate_Stat.Text = (string) registryRngReporter.GetValue("date_stat", "01");
-                    maskedTextBoxHours_Stat.Text = (string) registryRngReporter.GetValue("hours_stat", "00");
-                    maskedTextBoxMinutes_Stat.Text = (string) registryRngReporter.GetValue("minutes_stat", "00");
+                    maskedTextBoxYear_Stat.Text = (string)registryRngReporter.GetValue("year_stat", "2000");
+                    maskedTextBoxMonth_Stat.Text = (string)registryRngReporter.GetValue("month_stat", "01");
+                    maskedTextBoxDate_Stat.Text = (string)registryRngReporter.GetValue("date_stat", "01");
+                    maskedTextBoxHours_Stat.Text = (string)registryRngReporter.GetValue("hours_stat", "00");
+                    maskedTextBoxMinutes_Stat.Text = (string)registryRngReporter.GetValue("minutes_stat", "00");
 
-                    var SS_Mode = (string) registryRngReporter.GetValue("ss_mode", "DPP");
+                    var SS_Mode = (string)registryRngReporter.GetValue("ss_mode", "DPP");
 
                     switch (SS_Mode)
                     {
@@ -153,23 +153,23 @@ namespace RNGReporter
 
                     SS_RadioChange();
 
-                    maskedTextBoxYear_IVRange.Text = (string) registryRngReporter.GetValue("year_ivrange", "2000");
-                    maskedTextBoxMonth_IVRange.Text = (string) registryRngReporter.GetValue("month_ivrange", "01");
-                    maskedTextBoxDate_IVRange.Text = (string) registryRngReporter.GetValue("date_ivrange", "01");
-                    maskedTextBoxHours_IVRange.Text = (string) registryRngReporter.GetValue("hours_ivrange", "00");
-                    maskedTextBoxMinutes_IVRange.Text = (string) registryRngReporter.GetValue("minutes_ivrange", "00");
+                    maskedTextBoxYear_IVRange.Text = (string)registryRngReporter.GetValue("year_ivrange", "2000");
+                    maskedTextBoxMonth_IVRange.Text = (string)registryRngReporter.GetValue("month_ivrange", "01");
+                    maskedTextBoxDate_IVRange.Text = (string)registryRngReporter.GetValue("date_ivrange", "01");
+                    maskedTextBoxHours_IVRange.Text = (string)registryRngReporter.GetValue("hours_ivrange", "00");
+                    maskedTextBoxMinutes_IVRange.Text = (string)registryRngReporter.GetValue("minutes_ivrange", "00");
                     maskedTextBoxMinDelay_IVRange.Text =
-                        (string) registryRngReporter.GetValue("min_delay_ivrange", "490");
+                        (string)registryRngReporter.GetValue("min_delay_ivrange", "490");
                     maskedTextBoxMaxDelay_IVRange.Text =
-                        (string) registryRngReporter.GetValue("max_delay_ivrange", "1200");
+                        (string)registryRngReporter.GetValue("max_delay_ivrange", "1200");
 
-                    maskedTextBoxMinDelay_A.Text = (string) registryRngReporter.GetValue("mindelay_a", "490");
-                    maskedTextBoxMaxDelay_A.Text = (string) registryRngReporter.GetValue("maxdelay_a", "1200");
+                    maskedTextBoxMinDelay_A.Text = (string)registryRngReporter.GetValue("mindelay_a", "490");
+                    maskedTextBoxMaxDelay_A.Text = (string)registryRngReporter.GetValue("maxdelay_a", "1200");
 
-                    maskedTextBoxMinDelay_Stat.Text = (string) registryRngReporter.GetValue("mindelay_stat", "490");
-                    maskedTextBoxMaxDelay_Stat.Text = (string) registryRngReporter.GetValue("maxdelay_stat", "1200");
+                    maskedTextBoxMinDelay_Stat.Text = (string)registryRngReporter.GetValue("mindelay_stat", "490");
+                    maskedTextBoxMaxDelay_Stat.Text = (string)registryRngReporter.GetValue("maxdelay_stat", "1200");
                     Font font;
-                    switch ((Language) Settings.Default.Language)
+                    switch ((Language)Settings.Default.Language)
                     {
                         case (Language.Japanese):
                             font = new Font("Meiryo", 7.25F);
@@ -219,8 +219,8 @@ namespace RNGReporter
                     comboBoxCharacteristic_Stat.DataSource = listCharacteristic_Stat;
                     comboBoxCharacteristic_Stat.SelectedIndex = 0;
 
-                    comboBoxVersion.SelectedIndex = (int) registryRngReporter.GetValue("gameversion", 0);
-                    comboBoxDSType.SelectedIndex = (int) registryRngReporter.GetValue("dstype", 0);
+                    comboBoxVersion.SelectedIndex = (int)registryRngReporter.GetValue("gameversion", 0);
+                    comboBoxDSType.SelectedIndex = (int)registryRngReporter.GetValue("dstype", 0);
                 }
                 else
                 {
@@ -292,7 +292,7 @@ namespace RNGReporter
                     maskedTextBoxMaxDelay_IVRange.Text = Settings.Default.DelayMaxIVR;
 
                     Font font;
-                    switch ((Language) Settings.Default.Language)
+                    switch ((Language)Settings.Default.Language)
                     {
                         case (Language.Japanese):
                             font = new Font("Meiryo", 7.25F);
@@ -398,14 +398,14 @@ namespace RNGReporter
             if (maskedTextBoxMinutes_A.Text != "")
                 minutes_a = uint.Parse(maskedTextBoxMinutes_A.Text);
 
-            var nature = (Nature) comboBoxNature_A.SelectedValue;
+            var nature = (Nature)comboBoxNature_A.SelectedValue;
 
             bool showMonster = checkBoxShowMonster.Checked;
 
             //  Get a list of possible starting seeds that we are going to use
             //  to work backwards and find probable initial seeds.
             List<Seed> startingSeeds =
-                IVtoSeed.GetSeeds(hp, atk, def, spa, spd, spe, (uint) nature.Number);
+                IVtoSeed.GetSeeds(hp, atk, def, spa, spd, spe, (uint)nature.Number);
 
             //  Now that we have developed a list of possible seeds we need to
             //  start working those backwards and then building a list of
@@ -464,7 +464,7 @@ namespace RNGReporter
                                 {
                                     for (uint secondsCount = 0; secondsCount < 60; secondsCount++)
                                     {
-                                        if (((month_a*date_a + minutes_a + secondsCount)&0xFF) == seedAB)
+                                        if (((month_a * date_a + minutes_a + secondsCount) & 0xFF) == seedAB)
                                         {
                                             var initialSeed =
                                                 new SeedInitial(
@@ -578,8 +578,8 @@ namespace RNGReporter
 
             uint level = 1;
 
-            var pokemon = (Pokemon) comboBoxPokemon_Stat.SelectedValue;
-            var nature = (Nature) comboBoxNature_Stat.SelectedValue;
+            var pokemon = (Pokemon)comboBoxPokemon_Stat.SelectedValue;
+            var nature = (Nature)comboBoxNature_Stat.SelectedValue;
 
             if (maskedTextBoxHP_Stat.Text != "")
                 hp = uint.Parse(maskedTextBoxHP_Stat.Text);
@@ -619,13 +619,13 @@ namespace RNGReporter
 
             bool showMonster = checkBoxShowMonster.Checked;
 
-            var stats = new[] {hp, atk, def, spa, spd, spe};
+            var stats = new[] { hp, atk, def, spa, spd, spe };
 
             Characteristic characteristic = null;
 
             if (comboBoxCharacteristic_Stat.SelectedItem.ToString() != "NONE")
             {
-                characteristic = (Characteristic) comboBoxCharacteristic_Stat.SelectedItem;
+                characteristic = (Characteristic)comboBoxCharacteristic_Stat.SelectedItem;
             }
 
             //  Run the IV checker with the stats and monster information
@@ -654,11 +654,11 @@ namespace RNGReporter
                     maxDefaultDelay = uint.Parse(maskedTextBoxMaxDelay_Stat.Text);
 
                 int combinations =
-                    ivCheck.Possibilities[0].Count*
-                    ivCheck.Possibilities[1].Count*
-                    ivCheck.Possibilities[2].Count*
-                    ivCheck.Possibilities[3].Count*
-                    ivCheck.Possibilities[4].Count*
+                    ivCheck.Possibilities[0].Count *
+                    ivCheck.Possibilities[1].Count *
+                    ivCheck.Possibilities[2].Count *
+                    ivCheck.Possibilities[3].Count *
+                    ivCheck.Possibilities[4].Count *
                     ivCheck.Possibilities[5].Count;
 
                 //  If there are too many different combinations we need
@@ -686,7 +686,7 @@ namespace RNGReporter
                                                 IVtoSeed.GetSeeds(
                                                     combo_HP, combo_Atk, combo_Def,
                                                     combo_SpA, combo_SpD, combo_Spe,
-                                                    (uint) nature.Number, 0);
+                                                    (uint)nature.Number, 0);
 
                                             allSeeds.AddRange(startingSeeds);
                                         }
@@ -739,7 +739,7 @@ namespace RNGReporter
                                     {
                                         for (uint secondsCount = 0; secondsCount < 60; secondsCount++)
                                         {
-                                            if (((month_stat*date_stat + minutes_stat + secondsCount)&0xFF) == seedAB)
+                                            if (((month_stat * date_stat + minutes_stat + secondsCount) & 0xFF) == seedAB)
                                             {
                                                 var initialSeed =
                                                     new SeedInitial(
@@ -854,16 +854,16 @@ namespace RNGReporter
 
             //  Set seed variable
             if (radioButton4thGen.Checked)
-                ReturnSeed = (((month*date + minutes + seconds)&0xFF)*0x1000000) + (hours*0x10000) +
+                ReturnSeed = (((month * date + minutes + seconds) & 0xFF) * 0x1000000) + (hours * 0x10000) +
                              (year - 2000 + wait);
             else if (radioButton5thGenCGear.Checked)
-                ReturnSeed = (((month*date + minutes + seconds)&0xFF)*0x1000000) + (hours*0x10000) +
+                ReturnSeed = (((month * date + minutes + seconds) & 0xFF) * 0x1000000) + (hours * 0x10000) +
                              (year - 2000 + wait) + (mac_address & 0xFFFFFF);
             else if (radioButton5thGenNonCGear.Checked)
             {
-                var version = (Version) comboBoxVersion.SelectedIndex;
-                var language = (Language) comboBoxLanguage.SelectedIndex;
-                var dstype = (DSType) comboBoxDSType.SelectedIndex;
+                var version = (Version)comboBoxVersion.SelectedIndex;
+                var language = (Language)comboBoxLanguage.SelectedIndex;
+                var dstype = (DSType)comboBoxDSType.SelectedIndex;
 
                 var buttonHeld = new int[7];
                 buttonHeld[0] = comboBoxButton1.SelectedIndex;
@@ -874,8 +874,8 @@ namespace RNGReporter
                 buttonHeld[5] = comboBoxButton6.SelectedIndex;
                 buttonHeld[6] = comboBoxButton7.SelectedIndex;
 
-                var dateTime = new DateTime((int) year, (int) month, (int) date, (int) hours, (int) minutes,
-                                            (int) seconds);
+                var dateTime = new DateTime((int)year, (int)month, (int)date, (int)hours, (int)minutes,
+                                            (int)seconds);
                 ReturnSeed = Functions.EncryptSeed(dateTime, mac_address, version, language, dstype,
                                                    checkBoxSoftReset.Checked,
                                                    vcount, timer0, gxstat, vframe, Functions.buttonMashed(buttonHeld));
@@ -890,7 +890,7 @@ namespace RNGReporter
             uint hours_ivrange = 0;
             uint minutes_ivrange = 0;
 
-            var nature = (Nature) comboBoxNature_IVRange.SelectedValue;
+            var nature = (Nature)comboBoxNature_IVRange.SelectedValue;
 
             if (maskedTextBoxYear_IVRange.Text != "")
                 year_ivrange = uint.Parse(maskedTextBoxYear_IVRange.Text);
@@ -949,11 +949,11 @@ namespace RNGReporter
             }
 
             int combinations =
-                Possibilities[0].Count*
-                Possibilities[1].Count*
-                Possibilities[2].Count*
-                Possibilities[3].Count*
-                Possibilities[4].Count*
+                Possibilities[0].Count *
+                Possibilities[1].Count *
+                Possibilities[2].Count *
+                Possibilities[3].Count *
+                Possibilities[4].Count *
                 Possibilities[5].Count;
 
 
@@ -982,7 +982,7 @@ namespace RNGReporter
                                             IVtoSeed.GetSeeds(
                                                 combo_HP, combo_Atk, combo_Def,
                                                 combo_SpA, combo_SpD, combo_Spe,
-                                                (uint) nature.Number, 0);
+                                                (uint)nature.Number, 0);
 
                                         allSeeds.AddRange(startingSeeds);
                                     }
@@ -1035,7 +1035,7 @@ namespace RNGReporter
                                 {
                                     for (uint secondsCount = 0; secondsCount < 60; secondsCount++)
                                     {
-                                        if (((month_ivrange*date_ivrange + minutes_ivrange + secondsCount)&0xFF) ==
+                                        if (((month_ivrange * date_ivrange + minutes_ivrange + secondsCount) & 0xFF) ==
                                             seedAB)
                                         {
                                             var initialSeed =
@@ -1090,7 +1090,7 @@ namespace RNGReporter
         {
             if (dataGridViewValues.SelectedRows.Count > 0)
             {
-                var seed = (SeedInitial) dataGridViewValues.SelectedRows[0].DataBoundItem;
+                var seed = (SeedInitial)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
                 ReturnSeed = seed.RngSeed;
             }
@@ -1100,7 +1100,7 @@ namespace RNGReporter
         {
             if (dataGridViewValues_Stat.SelectedRows.Count > 0)
             {
-                var seed = (SeedInitial) dataGridViewValues_Stat.SelectedRows[0].DataBoundItem;
+                var seed = (SeedInitial)dataGridViewValues_Stat.SelectedRows[0].DataBoundItem;
 
                 ReturnSeed = seed.RngSeed;
             }

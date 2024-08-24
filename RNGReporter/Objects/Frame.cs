@@ -21,9 +21,9 @@ namespace RNGReporter.Objects
 {
     public class Frame
     {
-        private static readonly uint[] HABCDS = {0, 1, 2, 5, 3, 4};
-        private static readonly uint[] ABCDS = {1, 2, 5, 3, 4};
-        private static readonly uint[] ACDS = {1, 5, 3, 4};
+        private static readonly uint[] HABCDS = { 0, 1, 2, 5, 3, 4 };
+        private static readonly uint[] ABCDS = { 1, 2, 5, 3, 4 };
+        private static readonly uint[] ACDS = { 1, 5, 3, 4 };
 
         /// <summary>
         ///     1 or 2 for the ability number, best we can do since we don't know what the monster is actually going to be.
@@ -124,9 +124,9 @@ namespace RNGReporter.Objects
         {
             get
             {
-                uint minutes = number/3600;
-                uint seconds = (number - (3600*minutes))/60;
-                uint milli = ((number%60)*100)/60;
+                uint minutes = number / 3600;
+                uint seconds = (number - (3600 * minutes)) / 60;
+                uint milli = ((number % 60) * 100) / 60;
 
                 return minutes.ToString() + ":" + seconds.ToString("D2") + "." + milli.ToString("D2");
             }
@@ -144,9 +144,9 @@ namespace RNGReporter.Objects
             {
                 if (cGearTime == 0)
                     return "skip";
-                uint minutes = cGearTime/3600;
-                uint seconds = (cGearTime - (3600*minutes))/60;
-                uint milli = ((cGearTime%60)*100)/60;
+                uint minutes = cGearTime / 3600;
+                uint seconds = (cGearTime - (3600 * minutes)) / 60;
+                uint milli = ((cGearTime % 60) * 100) / 60;
 
                 return minutes.ToString() + ":" + seconds.ToString("D2") + "." + milli.ToString("D2");
             }
@@ -193,7 +193,7 @@ namespace RNGReporter.Objects
             get { return pid; }
             set
             {
-                Nature = (value%25);
+                Nature = (value % 25);
                 ability = (value & 1);
                 coin = (value & 1);
 
@@ -218,17 +218,17 @@ namespace RNGReporter.Objects
             set
             {
                 //  Split up our DV
-                var dv1 = (ushort) value;
-                var dv2 = (ushort) (value >> 16);
+                var dv1 = (ushort)value;
+                var dv2 = (ushort)(value >> 16);
 
                 //  Get the actual Values
-                Hp = (uint) dv1 & 0x1f;
-                Atk = ((uint) dv1 & 0x3E0) >> 5;
-                Def = ((uint) dv1 & 0x7C00) >> 10;
+                Hp = (uint)dv1 & 0x1f;
+                Atk = ((uint)dv1 & 0x3E0) >> 5;
+                Def = ((uint)dv1 & 0x7C00) >> 10;
 
-                Spe = (uint) dv2 & 0x1f;
-                Spa = ((uint) dv2 & 0x3E0) >> 5;
-                Spd = ((uint) dv2 & 0x7C00) >> 10;
+                Spe = (uint)dv2 & 0x1f;
+                Spa = ((uint)dv2 & 0x3E0) >> 5;
+                Spd = ((uint)dv2 & 0x7C00) >> 10;
 
 
                 //  Calculate the inheretence for this frame
@@ -243,7 +243,7 @@ namespace RNGReporter.Objects
                     DisplaySpd = Spd.ToString();
                     DisplaySpe = Spe.ToString();
 
-                    uint inherited1 = HABCDS[inh1%6];
+                    uint inherited1 = HABCDS[inh1 % 6];
                     switch (inherited1)
                     {
                         case 0:
@@ -266,7 +266,7 @@ namespace RNGReporter.Objects
                             break;
                     }
 
-                    uint inherited2 = ABCDS[inh2%5];
+                    uint inherited2 = ABCDS[inh2 % 5];
                     switch (inherited2)
                     {
                         case 1:
@@ -286,7 +286,7 @@ namespace RNGReporter.Objects
                             break;
                     }
 
-                    uint inherited3 = ACDS[inh3&3];
+                    uint inherited3 = ACDS[inh3 & 3];
                     switch (inherited3)
                     {
                         case 1:
@@ -314,7 +314,7 @@ namespace RNGReporter.Objects
                     DisplaySpd = Spd.ToString();
                     DisplaySpe = Spe.ToString();
 
-                    uint[] available = {0, 1, 2, 3, 4, 5};
+                    uint[] available = { 0, 1, 2, 3, 4, 5 };
 
                     // Dumb that we have to do this, but we really
                     // need these guys in an array for things to 
@@ -333,7 +333,7 @@ namespace RNGReporter.Objects
                         uint parent = rngArray[3 + cnt] & 1;
 
                         // Decide which stat to pick for IV inheritance
-                        uint ivslot = available[rngArray[0 + cnt]%(6 - cnt)];
+                        uint ivslot = available[rngArray[0 + cnt] % (6 - cnt)];
                         //  We have our parent and we have our slot, so lets 
                         //  put them in the correct place here 
                         string parentString = (parent == 0 ? "A" : "B");
@@ -395,7 +395,7 @@ namespace RNGReporter.Objects
 
         public string NatureDisplay
         {
-            get { return Functions.NatureStrings((int) Nature); }
+            get { return Functions.NatureStrings((int)Nature); }
         }
 
         public uint Hp { get; set; }
@@ -449,7 +449,7 @@ namespace RNGReporter.Objects
                 uint t_spa = (Spa & 1) << 4;
                 uint t_spd = (Spd & 1) << 5;
 
-                uint hp_type = (t_hp + t_atk + t_def + t_spe + t_spa + t_spd)*15/63;
+                uint hp_type = (t_hp + t_atk + t_def + t_spe + t_spa + t_spd) * 15 / 63;
 
                 return Functions.power(hp_type);
             }
@@ -466,7 +466,7 @@ namespace RNGReporter.Objects
                 uint p_spa = (Spa & 3) > 1u ? 16u : 0u;
                 uint p_spd = (Spd & 3) > 1u ? 32u : 0u;
 
-                uint hp_power = (p_hp + p_atk + p_def + p_spe + p_spa + p_spd)*40/63 + 30;
+                uint hp_power = (p_hp + p_atk + p_def + p_spe + p_spa + p_spd) * 40 / 63 + 30;
 
                 return hp_power;
             }
@@ -556,22 +556,22 @@ namespace RNGReporter.Objects
             uint offset)
         {
             var frame = new Frame(frameType)
-                {
-                    Seed = seed,
-                    Number = number,
-                    RngResult = rngResult,
-                    Offset = offset,
-                    id = id,
-                    sid = sid,
-                    Pid = (pid2 << 16) | pid1,
-                    inh1 = inh1,
-                    inh2 = inh2,
-                    inh3 = inh3,
-                    par1 = par1,
-                    par2 = par2,
-                    par3 = par3,
-                    Dv = (dv2 << 16) | dv1
-                };
+            {
+                Seed = seed,
+                Number = number,
+                RngResult = rngResult,
+                Offset = offset,
+                id = id,
+                sid = sid,
+                Pid = (pid2 << 16) | pid1,
+                inh1 = inh1,
+                inh2 = inh2,
+                inh3 = inh3,
+                par1 = par1,
+                par2 = par2,
+                par3 = par3,
+                Dv = (dv2 << 16) | dv1
+            };
 
 
             //  Set up the ID and SID before we calculate 
@@ -602,21 +602,21 @@ namespace RNGReporter.Objects
             uint offset)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    Offset = offset,
-                    id = id,
-                    sid = sid,
-                    Pid = pid,
-                    inh1 = inh1,
-                    inh2 = inh2,
-                    inh3 = inh3,
-                    par1 = par1,
-                    par2 = par2,
-                    par3 = par3,
-                    Dv = (dv2 << 16) | dv1
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                Offset = offset,
+                id = id,
+                sid = sid,
+                Pid = pid,
+                inh1 = inh1,
+                inh2 = inh2,
+                inh3 = inh3,
+                par1 = par1,
+                par2 = par2,
+                par3 = par3,
+                Dv = (dv2 << 16) | dv1
+            };
 
             //punch in the inheritence values
             if (parentA != null && parentB != null && parentA.Length == 6 && parentB.Length == 6)
@@ -658,18 +658,18 @@ namespace RNGReporter.Objects
             uint offset)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    inh1 = inh1,
-                    inh2 = inh2,
-                    inh3 = inh3,
-                    par1 = par1,
-                    par2 = par2,
-                    par3 = par3
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                inh1 = inh1,
+                inh2 = inh2,
+                inh3 = inh3,
+                par1 = par1,
+                par2 = par2,
+                par3 = par3
+            };
 
 
             //  Set up the ID and SID before we calculate 
@@ -688,13 +688,13 @@ namespace RNGReporter.Objects
 
             if (parentA != null && parentB != null)
             {
-                uint[] available = {0, 1, 2, 3, 4, 5};
+                uint[] available = { 0, 1, 2, 3, 4, 5 };
                 if (frameType == FrameType.HGSSBred)
                 {
                     for (uint cnt = 0; cnt < 3; cnt++)
                     {
                         uint parent = rngArray[3 + cnt] & 1;
-                        uint ivslot = available[rngArray[0 + cnt]%(6 - cnt)];
+                        uint ivslot = available[rngArray[0 + cnt] % (6 - cnt)];
                         //  We have our parent and we have our slot, so lets 
                         //  put them in the correct place here 
 
@@ -737,7 +737,7 @@ namespace RNGReporter.Objects
                 }
                 else
                 {
-                    uint inherited1 = HABCDS[inh1%6];
+                    uint inherited1 = HABCDS[inh1 % 6];
                     switch (inherited1)
                     {
                         case 0:
@@ -760,7 +760,7 @@ namespace RNGReporter.Objects
                             break;
                     }
 
-                    uint inherited2 = ABCDS[inh2%5];
+                    uint inherited2 = ABCDS[inh2 % 5];
                     switch (inherited2)
                     {
                         case 1:
@@ -780,7 +780,7 @@ namespace RNGReporter.Objects
                             break;
                     }
 
-                    uint inherited3 = ACDS[inh3&3];
+                    uint inherited3 = ACDS[inh3 & 3];
                     switch (inherited3)
                     {
                         case 1:
@@ -823,15 +823,15 @@ namespace RNGReporter.Objects
             uint sid)
         {
             var frame = new Frame(frameType)
-                {
-                    seed = seed,
-                    number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    Pid = (pid2 << 16) | pid1,
-                    Dv = (dv2 << 16) | dv1
-                };
+            {
+                seed = seed,
+                number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                Pid = (pid2 << 16) | pid1,
+                Dv = (dv2 << 16) | dv1
+            };
 
 
             //  Set up the ID and SID before we calculate 
@@ -870,7 +870,7 @@ namespace RNGReporter.Objects
                 sid = sid,
                 Pid = (pid1 << 16) | pid2
             };
-            
+
             frame.Hp = dv1;
             frame.Atk = dv2;
             frame.Def = dv3;
@@ -898,18 +898,18 @@ namespace RNGReporter.Objects
             int encounterSlot)
         {
             var frame = new Frame(frameType)
-                {
-                    Seed = seed,
-                    Number = number,
-                    RngResult = rngResult,
-                    Offset = offset,
-                    id = id,
-                    sid = sid,
-                    Pid = (pid2 << 16) | pid1,
-                    Dv = (dv2 << 16) | dv1,
-                    EncounterType = encounterType,
-                    EncounterSlot = encounterSlot
-                };
+            {
+                Seed = seed,
+                Number = number,
+                RngResult = rngResult,
+                Offset = offset,
+                id = id,
+                sid = sid,
+                Pid = (pid2 << 16) | pid1,
+                Dv = (dv2 << 16) | dv1,
+                EncounterType = encounterType,
+                EncounterSlot = encounterSlot
+            };
 
 
             //  Set up the ID and SID before we calculate 
@@ -928,7 +928,7 @@ namespace RNGReporter.Objects
             uint sid)
         {
             var frame = new Frame(frameType)
-                {Number = number, RngResult = rngResult, id = id, sid = sid, Pid = pid, Dv = 0};
+            { Number = number, RngResult = rngResult, id = id, sid = sid, Pid = pid, Dv = 0 };
 
 
             //  Set up the ID and SID before we calculate 
@@ -946,19 +946,19 @@ namespace RNGReporter.Objects
             uint pid,
             uint compatibility)
         {
-            var frame = new Frame(frameType) {RngResult = rngResult};
+            var frame = new Frame(frameType) { RngResult = rngResult };
 
 
             // if upper 8 bits is less than 51
             // Day-Care Man holds an egg
-            if ((rngResult*100)/0xFFFF < compatibility)
+            if ((rngResult * 100) / 0xFFFF < compatibility)
             {
                 // If valid, assign the frame a non-zero number so it doesn't get filtered
                 frame.Number = number;
 
                 if (pid > 0xFFFD)
                 {
-                    frame.Pid = (pid + 3)%0xFFFF;
+                    frame.Pid = (pid + 3) % 0xFFFF;
                 }
                 else
                     frame.Pid = (pid & 0xFFFF) + 1;
@@ -988,23 +988,23 @@ namespace RNGReporter.Objects
             uint sid)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    inh1 = inh1,
-                    inh2 = inh2,
-                    inh3 = inh3,
-                    par1 = par1,
-                    par2 = par2,
-                    par3 = par3,
-                    Pid = (upperPID << 16) | lowerPID,
-                    Dv = (dv2 << 16) | dv1
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                inh1 = inh1,
+                inh2 = inh2,
+                inh3 = inh3,
+                par1 = par1,
+                par2 = par2,
+                par3 = par3,
+                Pid = (upperPID << 16) | lowerPID,
+                Dv = (dv2 << 16) | dv1
+            };
 
 
-            uint[] available = {0, 1, 2, 3, 4, 5};
+            uint[] available = { 0, 1, 2, 3, 4, 5 };
 
             var rngArray = new uint[6];
             rngArray[0] = inh1;
@@ -1019,7 +1019,7 @@ namespace RNGReporter.Objects
                 for (uint cnt = 0; cnt < 3; cnt++)
                 {
                     uint parent = rngArray[3 + cnt] & 1;
-                    uint ivslot = available[rngArray[0 + cnt]%(6 - cnt)];
+                    uint ivslot = available[rngArray[0 + cnt] % (6 - cnt)];
                     //  We have our parent and we have our slot, so lets 
                     //  put them in the correct place here 
 
@@ -1083,19 +1083,19 @@ namespace RNGReporter.Objects
             uint itemCalc)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    Pid = pid,
-                    Nature = natureValue,
-                    ability = (pid >> 16) & 1,
-                    EncounterType = encounterType,
-                    EncounterSlot = encounterSlot,
-                    ItemCalc = itemCalc,
-                    synchable = synch
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                Pid = pid,
+                Nature = natureValue,
+                ability = (pid >> 16) & 1,
+                EncounterType = encounterType,
+                EncounterSlot = encounterSlot,
+                ItemCalc = itemCalc,
+                synchable = synch
+            };
 
 
             //  Set up the ID and SID before we calculate 
@@ -1120,25 +1120,25 @@ namespace RNGReporter.Objects
             uint[] rngIVs)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    Pid = pid,
-                    Nature = natureValue,
-                    ability = (pid >> 16) & 1,
-                    EncounterType = encounterType,
-                    EncounterSlot = encounterSlot,
-                    ItemCalc = itemCalc,
-                    synchable = synch,
-                    Hp = rngIVs[0],
-                    Atk = rngIVs[1],
-                    Def = rngIVs[2],
-                    Spa = rngIVs[3],
-                    Spd = rngIVs[4],
-                    Spe = rngIVs[5]
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                Pid = pid,
+                Nature = natureValue,
+                ability = (pid >> 16) & 1,
+                EncounterType = encounterType,
+                EncounterSlot = encounterSlot,
+                ItemCalc = itemCalc,
+                synchable = synch,
+                Hp = rngIVs[0],
+                Atk = rngIVs[1],
+                Def = rngIVs[2],
+                Spa = rngIVs[3],
+                Spd = rngIVs[4],
+                Spe = rngIVs[5]
+            };
 
 
             //  Set up the ID and SID before we calculate 
@@ -1169,25 +1169,25 @@ namespace RNGReporter.Objects
             uint maxSkips)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    Pid = pid,
-                    Ability = (pid >> 16) & 1,
-                    Nature = natureValue,
-                    dreamAbility = dream,
-                    synchable = everstone,
-                    maleOnlySpecies = maleOnlySpecies,
-                    MaxSkips = maxSkips,
-                    inh1 = inh1,
-                    inh2 = inh2,
-                    inh3 = inh3,
-                    par1 = par1,
-                    par2 = par2,
-                    par3 = par3
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                Pid = pid,
+                Ability = (pid >> 16) & 1,
+                Nature = natureValue,
+                dreamAbility = dream,
+                synchable = everstone,
+                maleOnlySpecies = maleOnlySpecies,
+                MaxSkips = maxSkips,
+                inh1 = inh1,
+                inh2 = inh2,
+                inh3 = inh3,
+                par1 = par1,
+                par2 = par2,
+                par3 = par3
+            };
 
 
             return frame;
@@ -1217,31 +1217,31 @@ namespace RNGReporter.Objects
             uint maxSkips)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    Pid = pid,
-                    Ability = (pid >> 16) & 1,
-                    Nature = natureValue,
-                    dreamAbility = dream,
-                    synchable = everstone,
-                    maleOnlySpecies = maleOnlySpecies,
-                    MaxSkips = maxSkips,
-                    inh1 = inh1,
-                    inh2 = inh2,
-                    inh3 = inh3,
-                    par1 = par1,
-                    par2 = par2,
-                    par3 = par3,
-                    Hp = rngIVs[0],
-                    Atk = rngIVs[1],
-                    Def = rngIVs[2],
-                    Spa = rngIVs[3],
-                    Spd = rngIVs[4],
-                    Spe = rngIVs[5]
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                Pid = pid,
+                Ability = (pid >> 16) & 1,
+                Nature = natureValue,
+                dreamAbility = dream,
+                synchable = everstone,
+                maleOnlySpecies = maleOnlySpecies,
+                MaxSkips = maxSkips,
+                inh1 = inh1,
+                inh2 = inh2,
+                inh3 = inh3,
+                par1 = par1,
+                par2 = par2,
+                par3 = par3,
+                Hp = rngIVs[0],
+                Atk = rngIVs[1],
+                Def = rngIVs[2],
+                Spa = rngIVs[3],
+                Spd = rngIVs[4],
+                Spe = rngIVs[5]
+            };
 
 
             var rngArray = new uint[6];
@@ -1300,16 +1300,16 @@ namespace RNGReporter.Objects
             uint spe)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    seed = rngResult,
-                    Hp = hp,
-                    Atk = atk,
-                    Def = def,
-                    Spa = spa,
-                    Spd = spd,
-                    Spe = spe
-                };
+            {
+                Number = number,
+                seed = rngResult,
+                Hp = hp,
+                Atk = atk,
+                Def = def,
+                Spa = spa,
+                Spd = spd,
+                Spe = spe
+            };
 
 
             return frame;
@@ -1333,22 +1333,22 @@ namespace RNGReporter.Objects
             uint pid)
         {
             var frame = new Frame(frameType)
-                {
-                    Number = number,
-                    RngResult = rngResult,
-                    id = id,
-                    sid = sid,
-                    Hp = hp,
-                    Atk = atk,
-                    Def = def,
-                    Spa = spa,
-                    Spd = spd,
-                    Spe = spe,
-                    Pid = pid ^ 0x10000
-                };
+            {
+                Number = number,
+                RngResult = rngResult,
+                id = id,
+                sid = sid,
+                Hp = hp,
+                Atk = atk,
+                Def = def,
+                Spa = spa,
+                Spd = spd,
+                Spe = spe,
+                Pid = pid ^ 0x10000
+            };
 
 
-            var nature = (uint) ((ulong) natureValue*25 >> 32);
+            var nature = (uint)((ulong)natureValue * 25 >> 32);
             frame.Nature = nature;
             frame.Ability = (pid >> 16) & 1;
 
@@ -1434,28 +1434,28 @@ namespace RNGReporter.Objects
             // Because they can have multiple nearby shiny frames
 
             var clone = new Frame
-                {
-                    FrameType = source.FrameType,
-                    number = source.number,
-                    seed = source.seed,
-                    Hp = source.Hp,
-                    Atk = source.Atk,
-                    Def = source.Def,
-                    Spa = source.Spa,
-                    Spd = source.Spd,
-                    Spe = source.Spe,
-                    DisplayHp = source.DisplayHp,
-                    DisplayAtk = source.DisplayAtk,
-                    DisplayDef = source.DisplayDef,
-                    DisplaySpa = source.DisplaySpa,
-                    DisplaySpd = source.DisplaySpd,
-                    DisplaySpe = source.DisplaySpe,
-                    EncounterMod = source.EncounterMod,
-                    EncounterSlot = source.EncounterSlot,
-                    id = source.id,
-                    sid = source.sid,
-                    Pid = source.Pid
-                };
+            {
+                FrameType = source.FrameType,
+                number = source.number,
+                seed = source.seed,
+                Hp = source.Hp,
+                Atk = source.Atk,
+                Def = source.Def,
+                Spa = source.Spa,
+                Spd = source.Spd,
+                Spe = source.Spe,
+                DisplayHp = source.DisplayHp,
+                DisplayAtk = source.DisplayAtk,
+                DisplayDef = source.DisplayDef,
+                DisplaySpa = source.DisplaySpa,
+                DisplaySpd = source.DisplaySpd,
+                DisplaySpe = source.DisplaySpe,
+                EncounterMod = source.EncounterMod,
+                EncounterSlot = source.EncounterSlot,
+                id = source.id,
+                sid = source.sid,
+                Pid = source.Pid
+            };
 
 
             return clone;

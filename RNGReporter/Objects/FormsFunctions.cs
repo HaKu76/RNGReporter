@@ -81,7 +81,7 @@ namespace RNGReporter.Objects
 
         public static void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
     }
 }

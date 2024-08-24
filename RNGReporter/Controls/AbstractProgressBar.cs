@@ -110,7 +110,7 @@ namespace RNGReporter
                 this.value = value;
                 if (showPercent)
                 {
-                    var percent = (int) ((this.value/(maximum - 1f))*100f);
+                    var percent = (int)((this.value / (maximum - 1f)) * 100f);
                     if (percent > 0)
                     {
                         if (percent > 100)
@@ -241,9 +241,9 @@ namespace RNGReporter
                         }
                     }
                 }
-                OnValueChanged = (EventHandler) Delegate.Combine(OnValueChanged, value);
+                OnValueChanged = (EventHandler)Delegate.Combine(OnValueChanged, value);
             }
-            remove { OnValueChanged = (EventHandler) Delegate.Remove(OnValueChanged, value); }
+            remove { OnValueChanged = (EventHandler)Delegate.Remove(OnValueChanged, value); }
         }
 
         /// <summary></summary>

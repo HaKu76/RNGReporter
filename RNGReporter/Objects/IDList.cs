@@ -93,14 +93,14 @@ namespace RNGReporter.Objects
 
     internal class ProbableGeneration
     {
-        public String Probable { get; set; }
+        public String 可能值Probable { get; set; }
     }
 
     internal class PIDIVS
     {
         public String Seed { get; set; }
-        public String Method { get; set; }
-        public String IVs { get; set; }
+        public String 算法 { get; set; }
+        public String 个体值 { get; set; }
     }
 
     public class IDListComparator : IComparer<IDList>

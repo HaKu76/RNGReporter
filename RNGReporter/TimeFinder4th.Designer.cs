@@ -32,21 +32,21 @@ namespace RNGReporter
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             RNGReporter.Controls.CheckBoxProperties checkBoxProperties1 = new RNGReporter.Controls.CheckBoxProperties();
             RNGReporter.Controls.CheckBoxProperties checkBoxProperties2 = new RNGReporter.Controls.CheckBoxProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStripEggPid = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copySeedToClipboardToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
@@ -160,27 +160,6 @@ namespace RNGReporter
             this.comboBoxCapGender = new RNGReporter.GlassComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.dataGridViewCapValues = new RNGReporter.DoubleBufferedDataGridView();
-            this.CapSeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapOffset = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EncounterMod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EncounterSlot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapAtk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapDef = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapSpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapSpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CapSpe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HiddenPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HiddenPowerPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f125 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripCap = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copySeedToClipboardToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
@@ -216,6 +195,27 @@ namespace RNGReporter
             this.tabControl = new System.Windows.Forms.TabControl();
             this.toolTipDataGrid = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipGenderRatio = new System.Windows.Forms.ToolTip(this.components);
+            this.CapSeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapOffset = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EncounterMod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EncounterSlot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shiny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapAtk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapDef = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapSpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapSpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CapSpe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HiddenPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HiddenPowerPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f125 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripEggPid.SuspendLayout();
             this.contextMenuStrip.SuspendLayout();
             this.tabPageEggIVs.SuspendLayout();
@@ -230,6 +230,7 @@ namespace RNGReporter
             // 
             // contextMenuStripEggPid
             // 
+            this.contextMenuStripEggPid.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripEggPid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copySeedToClipboardToolStripMenuItem2,
             this.toolStripMenuItem7,
@@ -237,42 +238,43 @@ namespace RNGReporter
             this.toolStripMenuItem4,
             this.outputResultsToTXTToolStripMenuItem1});
             this.contextMenuStripEggPid.Name = "contextMenuStripEggPid";
-            this.contextMenuStripEggPid.Size = new System.Drawing.Size(203, 82);
+            this.contextMenuStripEggPid.Size = new System.Drawing.Size(253, 88);
             this.contextMenuStripEggPid.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripEggPid_Opening);
             // 
             // copySeedToClipboardToolStripMenuItem2
             // 
             this.copySeedToClipboardToolStripMenuItem2.Name = "copySeedToClipboardToolStripMenuItem2";
-            this.copySeedToClipboardToolStripMenuItem2.Size = new System.Drawing.Size(202, 22);
-            this.copySeedToClipboardToolStripMenuItem2.Text = "Copy Seed to Clipboard";
+            this.copySeedToClipboardToolStripMenuItem2.Size = new System.Drawing.Size(252, 24);
+            this.copySeedToClipboardToolStripMenuItem2.Text = "复制Seed到剪贴板";
             this.copySeedToClipboardToolStripMenuItem2.Click += new System.EventHandler(this.copySeedToClipboardToolStripMenuItem2_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(199, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(249, 6);
             // 
             // generateTimeToolStripMenuItem
             // 
             this.generateTimeToolStripMenuItem.Name = "generateTimeToolStripMenuItem";
-            this.generateTimeToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.generateTimeToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.generateTimeToolStripMenuItem.Text = "Generate More Times ...";
             this.generateTimeToolStripMenuItem.Click += new System.EventHandler(this.generateTimeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(199, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(249, 6);
             // 
             // outputResultsToTXTToolStripMenuItem1
             // 
             this.outputResultsToTXTToolStripMenuItem1.Name = "outputResultsToTXTToolStripMenuItem1";
-            this.outputResultsToTXTToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
-            this.outputResultsToTXTToolStripMenuItem1.Text = "Output Results to TXT ...";
+            this.outputResultsToTXTToolStripMenuItem1.Size = new System.Drawing.Size(252, 24);
+            this.outputResultsToTXTToolStripMenuItem1.Text = "输出结果至TXT文本文件";
             this.outputResultsToTXTToolStripMenuItem1.Click += new System.EventHandler(this.outputResultsToTXTToolStripMenuItem1_Click);
             // 
             // contextMenuStrip
             // 
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copySeedToClipboardToolStripMenuItem,
             this.toolStripMenuItem5,
@@ -284,51 +286,51 @@ namespace RNGReporter
             this.toolStripMenuItem1,
             this.outputResultsToTXTToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(224, 154);
+            this.contextMenuStrip.Size = new System.Drawing.Size(287, 166);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // copySeedToClipboardToolStripMenuItem
             // 
             this.copySeedToClipboardToolStripMenuItem.Name = "copySeedToClipboardToolStripMenuItem";
-            this.copySeedToClipboardToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.copySeedToClipboardToolStripMenuItem.Text = "Copy Seed to Clipboard";
+            this.copySeedToClipboardToolStripMenuItem.Size = new System.Drawing.Size(286, 24);
+            this.copySeedToClipboardToolStripMenuItem.Text = "复制Seed到剪贴板";
             this.copySeedToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copySeedToClipboardToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(220, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(283, 6);
             // 
             // setAsTargetFrameToolStripMenuItem
             // 
             this.setAsTargetFrameToolStripMenuItem.Name = "setAsTargetFrameToolStripMenuItem";
-            this.setAsTargetFrameToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.setAsTargetFrameToolStripMenuItem.Size = new System.Drawing.Size(286, 24);
             this.setAsTargetFrameToolStripMenuItem.Text = "Set as Target Frame";
             this.setAsTargetFrameToolStripMenuItem.Click += new System.EventHandler(this.setAsTargetFrameToolStripMenuItem_Click);
             // 
             // jumpToTargetFrameToolStripMenuItem
             // 
             this.jumpToTargetFrameToolStripMenuItem.Name = "jumpToTargetFrameToolStripMenuItem";
-            this.jumpToTargetFrameToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.jumpToTargetFrameToolStripMenuItem.Size = new System.Drawing.Size(286, 24);
             this.jumpToTargetFrameToolStripMenuItem.Text = "Jump to Target Frame";
             this.jumpToTargetFrameToolStripMenuItem.Click += new System.EventHandler(this.jumpToTargetFrameToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(220, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(283, 6);
             // 
             // generateAdjacentToolStripMenuItem
             // 
             this.generateAdjacentToolStripMenuItem.Name = "generateAdjacentToolStripMenuItem";
-            this.generateAdjacentToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.generateAdjacentToolStripMenuItem.Size = new System.Drawing.Size(286, 24);
             this.generateAdjacentToolStripMenuItem.Text = "Generate Adjacent Results ...";
             this.generateAdjacentToolStripMenuItem.Click += new System.EventHandler(this.generateAdjacentToolStripMenuItem_Click);
             // 
             // returnToResultsToolStripMenuItem
             // 
             this.returnToResultsToolStripMenuItem.Name = "returnToResultsToolStripMenuItem";
-            this.returnToResultsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.returnToResultsToolStripMenuItem.Size = new System.Drawing.Size(286, 24);
             this.returnToResultsToolStripMenuItem.Text = "Return to Results";
             this.returnToResultsToolStripMenuItem.Visible = false;
             this.returnToResultsToolStripMenuItem.Click += new System.EventHandler(this.returnToResultsToolStripMenuItem_Click);
@@ -336,13 +338,13 @@ namespace RNGReporter
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(220, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(283, 6);
             // 
             // outputResultsToTXTToolStripMenuItem
             // 
             this.outputResultsToTXTToolStripMenuItem.Name = "outputResultsToTXTToolStripMenuItem";
-            this.outputResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.outputResultsToTXTToolStripMenuItem.Text = "Output Results to TXT ...";
+            this.outputResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(286, 24);
+            this.outputResultsToTXTToolStripMenuItem.Text = "输出结果至TXT文本文件";
             this.outputResultsToTXTToolStripMenuItem.Click += new System.EventHandler(this.outputResultsToTXTToolStripMenuItem_Click);
             // 
             // tabPageEggIVs
@@ -382,49 +384,54 @@ namespace RNGReporter
             this.tabPageEggIVs.Controls.Add(this.maskedTextBoxYear);
             this.tabPageEggIVs.Controls.Add(this.maskedTextBoxMinDelay);
             this.tabPageEggIVs.Controls.Add(this.maskedTextBoxMaxDelay);
-            this.tabPageEggIVs.Location = new System.Drawing.Point(4, 22);
+            this.tabPageEggIVs.Location = new System.Drawing.Point(4, 25);
+            this.tabPageEggIVs.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageEggIVs.Name = "tabPageEggIVs";
-            this.tabPageEggIVs.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEggIVs.Size = new System.Drawing.Size(991, 498);
+            this.tabPageEggIVs.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageEggIVs.Size = new System.Drawing.Size(1241, 626);
             this.tabPageEggIVs.TabIndex = 0;
             this.tabPageEggIVs.Text = "Egg IVs";
             this.tabPageEggIVs.UseVisualStyleBackColor = true;
             // 
             // ivFiltersEgg
             // 
-            this.ivFiltersEgg.Location = new System.Drawing.Point(315, 6);
+            this.ivFiltersEgg.Location = new System.Drawing.Point(394, 8);
+            this.ivFiltersEgg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ivFiltersEgg.Name = "ivFiltersEgg";
-            this.ivFiltersEgg.Size = new System.Drawing.Size(315, 166);
+            this.ivFiltersEgg.Size = new System.Drawing.Size(394, 208);
             this.ivFiltersEgg.TabIndex = 101;
             // 
             // radioButtonEggHGSS
             // 
             this.radioButtonEggHGSS.AutoSize = true;
-            this.radioButtonEggHGSS.Location = new System.Drawing.Point(178, 127);
+            this.radioButtonEggHGSS.Location = new System.Drawing.Point(222, 159);
+            this.radioButtonEggHGSS.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonEggHGSS.Name = "radioButtonEggHGSS";
-            this.radioButtonEggHGSS.Size = new System.Drawing.Size(131, 17);
+            this.radioButtonEggHGSS.Size = new System.Drawing.Size(60, 19);
             this.radioButtonEggHGSS.TabIndex = 19;
-            this.radioButtonEggHGSS.Text = "Heart Gold\\Soul Silver";
+            this.radioButtonEggHGSS.Text = "HGSS";
             this.radioButtonEggHGSS.UseVisualStyleBackColor = true;
             // 
             // radioButtonEggDPPt
             // 
             this.radioButtonEggDPPt.AutoSize = true;
             this.radioButtonEggDPPt.Checked = true;
-            this.radioButtonEggDPPt.Location = new System.Drawing.Point(27, 127);
+            this.radioButtonEggDPPt.Location = new System.Drawing.Point(34, 159);
+            this.radioButtonEggDPPt.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonEggDPPt.Name = "radioButtonEggDPPt";
-            this.radioButtonEggDPPt.Size = new System.Drawing.Size(141, 17);
+            this.radioButtonEggDPPt.Size = new System.Drawing.Size(60, 19);
             this.radioButtonEggDPPt.TabIndex = 18;
             this.radioButtonEggDPPt.TabStop = true;
-            this.radioButtonEggDPPt.Text = "Diamond\\Pearl\\Platinum";
+            this.radioButtonEggDPPt.Text = "DPPt";
             this.radioButtonEggDPPt.UseVisualStyleBackColor = true;
             // 
             // checkBoxShowInheritance
             // 
             this.checkBoxShowInheritance.AutoSize = true;
-            this.checkBoxShowInheritance.Location = new System.Drawing.Point(178, 160);
+            this.checkBoxShowInheritance.Location = new System.Drawing.Point(222, 200);
+            this.checkBoxShowInheritance.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShowInheritance.Name = "checkBoxShowInheritance";
-            this.checkBoxShowInheritance.Size = new System.Drawing.Size(109, 17);
+            this.checkBoxShowInheritance.Size = new System.Drawing.Size(157, 19);
             this.checkBoxShowInheritance.TabIndex = 22;
             this.checkBoxShowInheritance.Text = "Show Inheritance";
             this.checkBoxShowInheritance.UseVisualStyleBackColor = true;
@@ -433,59 +440,65 @@ namespace RNGReporter
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(256, 57);
+            this.label29.Location = new System.Drawing.Point(320, 71);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(26, 13);
+            this.label29.Size = new System.Drawing.Size(37, 15);
             this.label29.TabIndex = 100;
-            this.label29.Text = "Spe";
+            this.label29.Text = "速度";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(224, 57);
+            this.label27.Location = new System.Drawing.Point(280, 71);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(28, 13);
+            this.label27.Size = new System.Drawing.Size(37, 15);
             this.label27.TabIndex = 99;
-            this.label27.Text = "SpD";
+            this.label27.Text = "特防";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(191, 57);
+            this.label25.Location = new System.Drawing.Point(239, 71);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(27, 13);
+            this.label25.Size = new System.Drawing.Size(37, 15);
             this.label25.TabIndex = 98;
-            this.label25.Text = "SpA";
+            this.label25.Text = "特攻";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(161, 57);
+            this.label24.Location = new System.Drawing.Point(201, 71);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(24, 13);
+            this.label24.Size = new System.Drawing.Size(37, 15);
             this.label24.TabIndex = 97;
-            this.label24.Text = "Def";
+            this.label24.Text = "防御";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(130, 57);
+            this.label12.Location = new System.Drawing.Point(162, 71);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 13);
+            this.label12.Size = new System.Drawing.Size(37, 15);
             this.label12.TabIndex = 96;
-            this.label12.Text = "Atk";
+            this.label12.Text = "攻击";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(97, 57);
+            this.label11.Location = new System.Drawing.Point(121, 71);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 13);
+            this.label11.Size = new System.Drawing.Size(23, 15);
             this.label11.TabIndex = 95;
             this.label11.Text = "HP";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -493,20 +506,22 @@ namespace RNGReporter
             // lblIVB
             // 
             this.lblIVB.AutoSize = true;
-            this.lblIVB.Location = new System.Drawing.Point(43, 99);
+            this.lblIVB.Location = new System.Drawing.Point(54, 124);
+            this.lblIVB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIVB.Name = "lblIVB";
-            this.lblIVB.Size = new System.Drawing.Size(48, 13);
+            this.lblIVB.Size = new System.Drawing.Size(45, 15);
             this.lblIVB.TabIndex = 87;
-            this.lblIVB.Text = "Parent B";
+            this.lblIVB.Text = "父母B";
             // 
             // lblIVA
             // 
             this.lblIVA.AutoSize = true;
-            this.lblIVA.Location = new System.Drawing.Point(43, 75);
+            this.lblIVA.Location = new System.Drawing.Point(54, 94);
+            this.lblIVA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIVA.Name = "lblIVA";
-            this.lblIVA.Size = new System.Drawing.Size(48, 13);
+            this.lblIVA.Size = new System.Drawing.Size(45, 15);
             this.lblIVA.TabIndex = 86;
-            this.lblIVA.Text = "Parent A";
+            this.lblIVA.Text = "父母A";
             // 
             // dataGridViewEggIVValues
             // 
@@ -516,14 +531,14 @@ namespace RNGReporter
             this.dataGridViewEggIVValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEggIVValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEggIVValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewEggIVValues.ColumnHeadersHeight = 20;
             this.dataGridViewEggIVValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seed,
@@ -538,34 +553,36 @@ namespace RNGReporter
             this.Spe,
             this.Flips});
             this.dataGridViewEggIVValues.ContextMenuStrip = this.contextMenuStrip;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEggIVValues.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEggIVValues.Location = new System.Drawing.Point(6, 189);
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEggIVValues.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewEggIVValues.Location = new System.Drawing.Point(8, 236);
+            this.dataGridViewEggIVValues.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewEggIVValues.MultiSelect = false;
             this.dataGridViewEggIVValues.Name = "dataGridViewEggIVValues";
             this.dataGridViewEggIVValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEggIVValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEggIVValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewEggIVValues.RowHeadersVisible = false;
+            this.dataGridViewEggIVValues.RowHeadersWidth = 51;
             this.dataGridViewEggIVValues.RowTemplate.Height = 20;
             this.dataGridViewEggIVValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEggIVValues.ShowCellErrors = false;
             this.dataGridViewEggIVValues.ShowCellToolTips = false;
             this.dataGridViewEggIVValues.ShowEditingIcon = false;
             this.dataGridViewEggIVValues.ShowRowErrors = false;
-            this.dataGridViewEggIVValues.Size = new System.Drawing.Size(957, 303);
+            this.dataGridViewEggIVValues.Size = new System.Drawing.Size(1196, 379);
             this.dataGridViewEggIVValues.TabIndex = 35;
             this.dataGridViewEggIVValues.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewValues_CellFormatting);
             this.dataGridViewEggIVValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewValues_MouseDown);
@@ -574,6 +591,7 @@ namespace RNGReporter
             // 
             this.Seed.DataPropertyName = "Seed";
             this.Seed.HeaderText = "Seed";
+            this.Seed.MinimumWidth = 6;
             this.Seed.Name = "Seed";
             this.Seed.ReadOnly = true;
             this.Seed.Width = 60;
@@ -582,6 +600,7 @@ namespace RNGReporter
             // 
             this.Date.DataPropertyName = "SeedTime";
             this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             this.Date.Width = 120;
@@ -590,6 +609,7 @@ namespace RNGReporter
             // 
             this.Delay.DataPropertyName = "Delay";
             this.Delay.HeaderText = "Delay";
+            this.Delay.MinimumWidth = 6;
             this.Delay.Name = "Delay";
             this.Delay.ReadOnly = true;
             this.Delay.Width = 40;
@@ -598,6 +618,7 @@ namespace RNGReporter
             // 
             this.Offset.DataPropertyName = "Offset";
             this.Offset.HeaderText = "Frame";
+            this.Offset.MinimumWidth = 6;
             this.Offset.Name = "Offset";
             this.Offset.ReadOnly = true;
             this.Offset.Width = 40;
@@ -606,6 +627,7 @@ namespace RNGReporter
             // 
             this.HP.DataPropertyName = "Hp";
             this.HP.HeaderText = "HP";
+            this.HP.MinimumWidth = 6;
             this.HP.Name = "HP";
             this.HP.ReadOnly = true;
             this.HP.Width = 30;
@@ -613,7 +635,8 @@ namespace RNGReporter
             // Atk
             // 
             this.Atk.DataPropertyName = "Atk";
-            this.Atk.HeaderText = "Atk";
+            this.Atk.HeaderText = "攻击";
+            this.Atk.MinimumWidth = 6;
             this.Atk.Name = "Atk";
             this.Atk.ReadOnly = true;
             this.Atk.Width = 30;
@@ -621,7 +644,8 @@ namespace RNGReporter
             // Def
             // 
             this.Def.DataPropertyName = "Def";
-            this.Def.HeaderText = "Def";
+            this.Def.HeaderText = "防御";
+            this.Def.MinimumWidth = 6;
             this.Def.Name = "Def";
             this.Def.ReadOnly = true;
             this.Def.Width = 30;
@@ -629,7 +653,8 @@ namespace RNGReporter
             // SpA
             // 
             this.SpA.DataPropertyName = "Spa";
-            this.SpA.HeaderText = "SpA";
+            this.SpA.HeaderText = "特攻";
+            this.SpA.MinimumWidth = 6;
             this.SpA.Name = "SpA";
             this.SpA.ReadOnly = true;
             this.SpA.Width = 30;
@@ -637,7 +662,8 @@ namespace RNGReporter
             // SpD
             // 
             this.SpD.DataPropertyName = "Spd";
-            this.SpD.HeaderText = "SpD";
+            this.SpD.HeaderText = "特防";
+            this.SpD.MinimumWidth = 6;
             this.SpD.Name = "SpD";
             this.SpD.ReadOnly = true;
             this.SpD.Width = 30;
@@ -645,7 +671,8 @@ namespace RNGReporter
             // Spe
             // 
             this.Spe.DataPropertyName = "Spe";
-            this.Spe.HeaderText = "Spe";
+            this.Spe.HeaderText = "速度";
+            this.Spe.MinimumWidth = 6;
             this.Spe.Name = "Spe";
             this.Spe.ReadOnly = true;
             this.Spe.Width = 30;
@@ -654,6 +681,7 @@ namespace RNGReporter
             // 
             this.Flips.DataPropertyName = "Flips";
             this.Flips.HeaderText = "Flip Sequence";
+            this.Flips.MinimumWidth = 6;
             this.Flips.Name = "Flips";
             this.Flips.ReadOnly = true;
             this.Flips.Width = 400;
@@ -661,39 +689,43 @@ namespace RNGReporter
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(52, 9);
+            this.label14.Location = new System.Drawing.Point(65, 11);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 13);
+            this.label14.Size = new System.Drawing.Size(37, 15);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Year";
+            this.label14.Text = "年份";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(97, 9);
+            this.label5.Location = new System.Drawing.Point(121, 11);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Min / Max Delay";
+            this.label5.Text = "最小/最大Delay";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(191, 9);
+            this.label3.Location = new System.Drawing.Point(239, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(90, 15);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Min / 最大帧";
+            this.label3.Text = "最小/最大帧";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(93, 157);
+            this.button1.Location = new System.Drawing.Point(116, 196);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.OuterBorderColor = System.Drawing.Color.Transparent;
             this.button1.ShineColor = System.Drawing.SystemColors.Window;
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 21;
             this.button1.Text = "Search Flips";
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -702,22 +734,24 @@ namespace RNGReporter
             // 
             this.buttonEggGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonEggGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonEggGenerate.Location = new System.Drawing.Point(12, 157);
+            this.buttonEggGenerate.Location = new System.Drawing.Point(15, 196);
+            this.buttonEggGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEggGenerate.Name = "buttonEggGenerate";
             this.buttonEggGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonEggGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonEggGenerate.Size = new System.Drawing.Size(73, 23);
+            this.buttonEggGenerate.Size = new System.Drawing.Size(91, 29);
             this.buttonEggGenerate.TabIndex = 20;
-            this.buttonEggGenerate.Text = "Generate";
+            this.buttonEggGenerate.Text = "计算";
             this.buttonEggGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // maskedTextBoxDefB
             // 
             this.maskedTextBoxDefB.Hex = false;
-            this.maskedTextBoxDefB.Location = new System.Drawing.Point(160, 96);
+            this.maskedTextBoxDefB.Location = new System.Drawing.Point(200, 120);
+            this.maskedTextBoxDefB.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxDefB.Mask = "00";
             this.maskedTextBoxDefB.Name = "maskedTextBoxDefB";
-            this.maskedTextBoxDefB.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxDefB.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxDefB.TabIndex = 14;
             this.maskedTextBoxDefB.Tag = "ivs";
             this.maskedTextBoxDefB.ValidatingType = typeof(int);
@@ -725,10 +759,11 @@ namespace RNGReporter
             // maskedTextBoxAtkB
             // 
             this.maskedTextBoxAtkB.Hex = false;
-            this.maskedTextBoxAtkB.Location = new System.Drawing.Point(129, 96);
+            this.maskedTextBoxAtkB.Location = new System.Drawing.Point(161, 120);
+            this.maskedTextBoxAtkB.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxAtkB.Mask = "00";
             this.maskedTextBoxAtkB.Name = "maskedTextBoxAtkB";
-            this.maskedTextBoxAtkB.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxAtkB.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxAtkB.TabIndex = 12;
             this.maskedTextBoxAtkB.Tag = "ivs";
             this.maskedTextBoxAtkB.ValidatingType = typeof(int);
@@ -736,10 +771,11 @@ namespace RNGReporter
             // maskedTextBoxSpeB
             // 
             this.maskedTextBoxSpeB.Hex = false;
-            this.maskedTextBoxSpeB.Location = new System.Drawing.Point(256, 96);
+            this.maskedTextBoxSpeB.Location = new System.Drawing.Point(320, 120);
+            this.maskedTextBoxSpeB.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSpeB.Mask = "00";
             this.maskedTextBoxSpeB.Name = "maskedTextBoxSpeB";
-            this.maskedTextBoxSpeB.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxSpeB.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxSpeB.TabIndex = 17;
             this.maskedTextBoxSpeB.Tag = "ivs";
             this.maskedTextBoxSpeB.ValidatingType = typeof(int);
@@ -747,10 +783,11 @@ namespace RNGReporter
             // maskedTextBoxSpDB
             // 
             this.maskedTextBoxSpDB.Hex = false;
-            this.maskedTextBoxSpDB.Location = new System.Drawing.Point(224, 96);
+            this.maskedTextBoxSpDB.Location = new System.Drawing.Point(280, 120);
+            this.maskedTextBoxSpDB.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSpDB.Mask = "00";
             this.maskedTextBoxSpDB.Name = "maskedTextBoxSpDB";
-            this.maskedTextBoxSpDB.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxSpDB.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxSpDB.TabIndex = 16;
             this.maskedTextBoxSpDB.Tag = "ivs";
             this.maskedTextBoxSpDB.ValidatingType = typeof(int);
@@ -758,10 +795,11 @@ namespace RNGReporter
             // maskedTextBoxSpAB
             // 
             this.maskedTextBoxSpAB.Hex = false;
-            this.maskedTextBoxSpAB.Location = new System.Drawing.Point(192, 96);
+            this.maskedTextBoxSpAB.Location = new System.Drawing.Point(240, 120);
+            this.maskedTextBoxSpAB.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSpAB.Mask = "00";
             this.maskedTextBoxSpAB.Name = "maskedTextBoxSpAB";
-            this.maskedTextBoxSpAB.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxSpAB.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxSpAB.TabIndex = 15;
             this.maskedTextBoxSpAB.Tag = "ivs";
             this.maskedTextBoxSpAB.ValidatingType = typeof(int);
@@ -769,20 +807,22 @@ namespace RNGReporter
             // maskedTextBoxHPB
             // 
             this.maskedTextBoxHPB.Hex = false;
-            this.maskedTextBoxHPB.Location = new System.Drawing.Point(97, 96);
+            this.maskedTextBoxHPB.Location = new System.Drawing.Point(121, 120);
+            this.maskedTextBoxHPB.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxHPB.Mask = "00";
             this.maskedTextBoxHPB.Name = "maskedTextBoxHPB";
-            this.maskedTextBoxHPB.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxHPB.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxHPB.TabIndex = 11;
             this.maskedTextBoxHPB.Tag = "ivs";
             // 
             // maskedTextBoxDefA
             // 
             this.maskedTextBoxDefA.Hex = false;
-            this.maskedTextBoxDefA.Location = new System.Drawing.Point(160, 72);
+            this.maskedTextBoxDefA.Location = new System.Drawing.Point(200, 90);
+            this.maskedTextBoxDefA.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxDefA.Mask = "00";
             this.maskedTextBoxDefA.Name = "maskedTextBoxDefA";
-            this.maskedTextBoxDefA.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxDefA.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxDefA.TabIndex = 7;
             this.maskedTextBoxDefA.Tag = "ivs";
             this.maskedTextBoxDefA.ValidatingType = typeof(int);
@@ -790,10 +830,11 @@ namespace RNGReporter
             // maskedTextBoxAtkA
             // 
             this.maskedTextBoxAtkA.Hex = false;
-            this.maskedTextBoxAtkA.Location = new System.Drawing.Point(129, 72);
+            this.maskedTextBoxAtkA.Location = new System.Drawing.Point(161, 90);
+            this.maskedTextBoxAtkA.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxAtkA.Mask = "00";
             this.maskedTextBoxAtkA.Name = "maskedTextBoxAtkA";
-            this.maskedTextBoxAtkA.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxAtkA.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxAtkA.TabIndex = 6;
             this.maskedTextBoxAtkA.Tag = "ivs";
             this.maskedTextBoxAtkA.ValidatingType = typeof(int);
@@ -801,10 +842,11 @@ namespace RNGReporter
             // maskedTextBoxSpeA
             // 
             this.maskedTextBoxSpeA.Hex = false;
-            this.maskedTextBoxSpeA.Location = new System.Drawing.Point(256, 72);
+            this.maskedTextBoxSpeA.Location = new System.Drawing.Point(320, 90);
+            this.maskedTextBoxSpeA.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSpeA.Mask = "00";
             this.maskedTextBoxSpeA.Name = "maskedTextBoxSpeA";
-            this.maskedTextBoxSpeA.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxSpeA.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxSpeA.TabIndex = 10;
             this.maskedTextBoxSpeA.Tag = "ivs";
             this.maskedTextBoxSpeA.ValidatingType = typeof(int);
@@ -812,10 +854,11 @@ namespace RNGReporter
             // maskedTextBoxSpDA
             // 
             this.maskedTextBoxSpDA.Hex = false;
-            this.maskedTextBoxSpDA.Location = new System.Drawing.Point(224, 72);
+            this.maskedTextBoxSpDA.Location = new System.Drawing.Point(280, 90);
+            this.maskedTextBoxSpDA.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSpDA.Mask = "00";
             this.maskedTextBoxSpDA.Name = "maskedTextBoxSpDA";
-            this.maskedTextBoxSpDA.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxSpDA.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxSpDA.TabIndex = 9;
             this.maskedTextBoxSpDA.Tag = "ivs";
             this.maskedTextBoxSpDA.ValidatingType = typeof(int);
@@ -823,10 +866,11 @@ namespace RNGReporter
             // maskedTextBoxSpAA
             // 
             this.maskedTextBoxSpAA.Hex = false;
-            this.maskedTextBoxSpAA.Location = new System.Drawing.Point(192, 72);
+            this.maskedTextBoxSpAA.Location = new System.Drawing.Point(240, 90);
+            this.maskedTextBoxSpAA.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSpAA.Mask = "00";
             this.maskedTextBoxSpAA.Name = "maskedTextBoxSpAA";
-            this.maskedTextBoxSpAA.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxSpAA.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxSpAA.TabIndex = 8;
             this.maskedTextBoxSpAA.Tag = "ivs";
             this.maskedTextBoxSpAA.ValidatingType = typeof(int);
@@ -834,58 +878,64 @@ namespace RNGReporter
             // maskedTextBoxHPA
             // 
             this.maskedTextBoxHPA.Hex = false;
-            this.maskedTextBoxHPA.Location = new System.Drawing.Point(97, 72);
+            this.maskedTextBoxHPA.Location = new System.Drawing.Point(121, 90);
+            this.maskedTextBoxHPA.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxHPA.Mask = "00";
             this.maskedTextBoxHPA.Name = "maskedTextBoxHPA";
-            this.maskedTextBoxHPA.Size = new System.Drawing.Size(27, 20);
+            this.maskedTextBoxHPA.Size = new System.Drawing.Size(33, 24);
             this.maskedTextBoxHPA.TabIndex = 5;
             this.maskedTextBoxHPA.Tag = "ivs";
             // 
             // maskedTextBoxMaxOffset
             // 
             this.maskedTextBoxMaxOffset.Hex = false;
-            this.maskedTextBoxMaxOffset.Location = new System.Drawing.Point(238, 24);
+            this.maskedTextBoxMaxOffset.Location = new System.Drawing.Point(298, 30);
+            this.maskedTextBoxMaxOffset.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxMaxOffset.Mask = "00";
             this.maskedTextBoxMaxOffset.Name = "maskedTextBoxMaxOffset";
-            this.maskedTextBoxMaxOffset.Size = new System.Drawing.Size(44, 20);
+            this.maskedTextBoxMaxOffset.Size = new System.Drawing.Size(54, 24);
             this.maskedTextBoxMaxOffset.TabIndex = 4;
             // 
             // maskedTextBoxMinOffset
             // 
             this.maskedTextBoxMinOffset.Hex = false;
-            this.maskedTextBoxMinOffset.Location = new System.Drawing.Point(188, 24);
+            this.maskedTextBoxMinOffset.Location = new System.Drawing.Point(235, 30);
+            this.maskedTextBoxMinOffset.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxMinOffset.Mask = "00";
             this.maskedTextBoxMinOffset.Name = "maskedTextBoxMinOffset";
-            this.maskedTextBoxMinOffset.Size = new System.Drawing.Size(44, 20);
+            this.maskedTextBoxMinOffset.Size = new System.Drawing.Size(54, 24);
             this.maskedTextBoxMinOffset.TabIndex = 3;
             // 
             // maskedTextBoxYear
             // 
             this.maskedTextBoxYear.Hex = false;
-            this.maskedTextBoxYear.Location = new System.Drawing.Point(55, 24);
+            this.maskedTextBoxYear.Location = new System.Drawing.Point(69, 30);
+            this.maskedTextBoxYear.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxYear.Mask = "0000";
             this.maskedTextBoxYear.Name = "maskedTextBoxYear";
-            this.maskedTextBoxYear.Size = new System.Drawing.Size(35, 20);
+            this.maskedTextBoxYear.Size = new System.Drawing.Size(43, 24);
             this.maskedTextBoxYear.TabIndex = 0;
             this.maskedTextBoxYear.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTextBoxMinDelay
             // 
             this.maskedTextBoxMinDelay.Hex = false;
-            this.maskedTextBoxMinDelay.Location = new System.Drawing.Point(96, 24);
+            this.maskedTextBoxMinDelay.Location = new System.Drawing.Point(120, 30);
+            this.maskedTextBoxMinDelay.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxMinDelay.Mask = "00000";
             this.maskedTextBoxMinDelay.Name = "maskedTextBoxMinDelay";
-            this.maskedTextBoxMinDelay.Size = new System.Drawing.Size(41, 20);
+            this.maskedTextBoxMinDelay.Size = new System.Drawing.Size(50, 24);
             this.maskedTextBoxMinDelay.TabIndex = 1;
             this.maskedTextBoxMinDelay.ValidatingType = typeof(int);
             // 
             // maskedTextBoxMaxDelay
             // 
             this.maskedTextBoxMaxDelay.Hex = false;
-            this.maskedTextBoxMaxDelay.Location = new System.Drawing.Point(142, 24);
+            this.maskedTextBoxMaxDelay.Location = new System.Drawing.Point(178, 30);
+            this.maskedTextBoxMaxDelay.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxMaxDelay.Mask = "00000";
             this.maskedTextBoxMaxDelay.Name = "maskedTextBoxMaxDelay";
-            this.maskedTextBoxMaxDelay.Size = new System.Drawing.Size(41, 20);
+            this.maskedTextBoxMaxDelay.Size = new System.Drawing.Size(50, 24);
             this.maskedTextBoxMaxDelay.TabIndex = 2;
             // 
             // tabPageShinyEgg
@@ -918,18 +968,20 @@ namespace RNGReporter
             this.tabPageShinyEgg.Controls.Add(this.maskedTextBoxShinyMaxDelay);
             this.tabPageShinyEgg.Controls.Add(this.maskedTextBoxShinyMinDelay);
             this.tabPageShinyEgg.Controls.Add(this.maskedTextBoxShinyYear);
-            this.tabPageShinyEgg.Location = new System.Drawing.Point(4, 22);
+            this.tabPageShinyEgg.Location = new System.Drawing.Point(4, 25);
+            this.tabPageShinyEgg.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageShinyEgg.Name = "tabPageShinyEgg";
-            this.tabPageShinyEgg.Size = new System.Drawing.Size(991, 498);
+            this.tabPageShinyEgg.Size = new System.Drawing.Size(1241, 626);
             this.tabPageShinyEgg.TabIndex = 2;
-            this.tabPageShinyEgg.Text = "Shiny Egg";
+            this.tabPageShinyEgg.Text = "异色蛋";
             this.tabPageShinyEgg.UseVisualStyleBackColor = true;
             // 
             // labelHappinessWarning
             // 
-            this.labelHappinessWarning.Location = new System.Drawing.Point(221, 84);
+            this.labelHappinessWarning.Location = new System.Drawing.Point(276, 105);
+            this.labelHappinessWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHappinessWarning.Name = "labelHappinessWarning";
-            this.labelHappinessWarning.Size = new System.Drawing.Size(269, 81);
+            this.labelHappinessWarning.Size = new System.Drawing.Size(336, 101);
             this.labelHappinessWarning.TabIndex = 325;
             this.labelHappinessWarning.Text = "It also assumes that you start the game from the coin flip application, and then " +
     "switch to the happiness checker application.\r\n";
@@ -937,9 +989,10 @@ namespace RNGReporter
             // checkBoxNoHappiness
             // 
             this.checkBoxNoHappiness.AutoSize = true;
-            this.checkBoxNoHappiness.Location = new System.Drawing.Point(499, 50);
+            this.checkBoxNoHappiness.Location = new System.Drawing.Point(624, 62);
+            this.checkBoxNoHappiness.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxNoHappiness.Name = "checkBoxNoHappiness";
-            this.checkBoxNoHappiness.Size = new System.Drawing.Size(149, 17);
+            this.checkBoxNoHappiness.Size = new System.Drawing.Size(213, 19);
             this.checkBoxNoHappiness.TabIndex = 8;
             this.checkBoxNoHappiness.Text = "Avoid Happiness Checker";
             this.checkBoxNoHappiness.UseVisualStyleBackColor = true;
@@ -948,18 +1001,20 @@ namespace RNGReporter
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(496, 8);
+            this.label8.Location = new System.Drawing.Point(620, 10);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.Size = new System.Drawing.Size(71, 15);
             this.label8.TabIndex = 322;
             this.label8.Text = "Max Taps";
             // 
             // checkBoxIntlParents
             // 
             this.checkBoxIntlParents.AutoSize = true;
-            this.checkBoxIntlParents.Location = new System.Drawing.Point(55, 86);
+            this.checkBoxIntlParents.Location = new System.Drawing.Point(69, 108);
+            this.checkBoxIntlParents.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIntlParents.Name = "checkBoxIntlParents";
-            this.checkBoxIntlParents.Size = new System.Drawing.Size(123, 17);
+            this.checkBoxIntlParents.Size = new System.Drawing.Size(197, 19);
             this.checkBoxIntlParents.TabIndex = 5;
             this.checkBoxIntlParents.Text = "International Parents";
             this.checkBoxIntlParents.UseVisualStyleBackColor = true;
@@ -967,11 +1022,12 @@ namespace RNGReporter
             // radioButtonHGSS
             // 
             this.radioButtonHGSS.AutoSize = true;
-            this.radioButtonHGSS.Location = new System.Drawing.Point(55, 67);
+            this.radioButtonHGSS.Location = new System.Drawing.Point(69, 84);
+            this.radioButtonHGSS.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonHGSS.Name = "radioButtonHGSS";
-            this.radioButtonHGSS.Size = new System.Drawing.Size(131, 17);
+            this.radioButtonHGSS.Size = new System.Drawing.Size(60, 19);
             this.radioButtonHGSS.TabIndex = 4;
-            this.radioButtonHGSS.Text = "Heart Gold\\Soul Silver";
+            this.radioButtonHGSS.Text = "HGSS";
             this.radioButtonHGSS.UseVisualStyleBackColor = true;
             this.radioButtonHGSS.CheckedChanged += new System.EventHandler(this.comboBoxShinyVersion_SelectedIndexChanged);
             // 
@@ -979,39 +1035,43 @@ namespace RNGReporter
             // 
             this.radioButtonDPPt.AutoSize = true;
             this.radioButtonDPPt.Checked = true;
-            this.radioButtonDPPt.Location = new System.Drawing.Point(55, 49);
+            this.radioButtonDPPt.Location = new System.Drawing.Point(69, 61);
+            this.radioButtonDPPt.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonDPPt.Name = "radioButtonDPPt";
-            this.radioButtonDPPt.Size = new System.Drawing.Size(141, 17);
+            this.radioButtonDPPt.Size = new System.Drawing.Size(60, 19);
             this.radioButtonDPPt.TabIndex = 3;
             this.radioButtonDPPt.TabStop = true;
-            this.radioButtonDPPt.Text = "Diamond\\Pearl\\Platinum";
+            this.radioButtonDPPt.Text = "DPPt\r\n";
             this.radioButtonDPPt.UseVisualStyleBackColor = true;
             this.radioButtonDPPt.CheckedChanged += new System.EventHandler(this.comboBoxShinyVersion_SelectedIndexChanged);
             // 
             // label92
             // 
             this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(655, 94);
+            this.label92.Location = new System.Drawing.Point(819, 118);
+            this.label92.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(42, 13);
+            this.label92.Size = new System.Drawing.Size(67, 15);
             this.label92.TabIndex = 317;
-            this.label92.Text = "Gender";
+            this.label92.Text = "性别比例";
             // 
             // checkBoxShinyShinyOnly
             // 
             this.checkBoxShinyShinyOnly.AutoSize = true;
-            this.checkBoxShinyShinyOnly.Location = new System.Drawing.Point(700, 157);
+            this.checkBoxShinyShinyOnly.Location = new System.Drawing.Point(875, 196);
+            this.checkBoxShinyShinyOnly.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShinyShinyOnly.Name = "checkBoxShinyShinyOnly";
-            this.checkBoxShinyShinyOnly.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxShinyShinyOnly.Size = new System.Drawing.Size(74, 19);
             this.checkBoxShinyShinyOnly.TabIndex = 16;
-            this.checkBoxShinyShinyOnly.Text = "Shiny Only";
+            this.checkBoxShinyShinyOnly.Text = "仅异色";
             this.checkBoxShinyShinyOnly.UseVisualStyleBackColor = true;
             // 
             // labelDPPtWarning
             // 
-            this.labelDPPtWarning.Location = new System.Drawing.Point(221, 11);
+            this.labelDPPtWarning.Location = new System.Drawing.Point(276, 14);
+            this.labelDPPtWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDPPtWarning.Name = "labelDPPtWarning";
-            this.labelDPPtWarning.Size = new System.Drawing.Size(269, 71);
+            this.labelDPPtWarning.Size = new System.Drawing.Size(336, 89);
             this.labelDPPtWarning.TabIndex = 117;
             this.labelDPPtWarning.Text = "Please note that number of flips and taps that are listed assume that you will al" +
     "so be doing 10 coin flips to verify your initial seed. ";
@@ -1025,14 +1085,14 @@ namespace RNGReporter
             this.dataGridViewShinyResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewShinyResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewShinyResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewShinyResults.ColumnHeadersHeight = 20;
             this.dataGridViewShinyResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EggSeed,
@@ -1049,34 +1109,36 @@ namespace RNGReporter
             this.ShinyTaps,
             this.ShinyFlips});
             this.dataGridViewShinyResults.ContextMenuStrip = this.contextMenuStripEggPid;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewShinyResults.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewShinyResults.Location = new System.Drawing.Point(6, 189);
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewShinyResults.DefaultCellStyle = dataGridViewCellStyle25;
+            this.dataGridViewShinyResults.Location = new System.Drawing.Point(8, 236);
+            this.dataGridViewShinyResults.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewShinyResults.MultiSelect = false;
             this.dataGridViewShinyResults.Name = "dataGridViewShinyResults";
             this.dataGridViewShinyResults.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewShinyResults.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewShinyResults.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewShinyResults.RowHeadersVisible = false;
+            this.dataGridViewShinyResults.RowHeadersWidth = 51;
             this.dataGridViewShinyResults.RowTemplate.Height = 20;
             this.dataGridViewShinyResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewShinyResults.ShowCellErrors = false;
             this.dataGridViewShinyResults.ShowCellToolTips = false;
             this.dataGridViewShinyResults.ShowEditingIcon = false;
             this.dataGridViewShinyResults.ShowRowErrors = false;
-            this.dataGridViewShinyResults.Size = new System.Drawing.Size(957, 303);
+            this.dataGridViewShinyResults.Size = new System.Drawing.Size(1196, 379);
             this.dataGridViewShinyResults.TabIndex = 17;
             this.dataGridViewShinyResults.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewShinyResults_CellFormatting);
             this.dataGridViewShinyResults.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewShinyResults_MouseDown);
@@ -1084,9 +1146,10 @@ namespace RNGReporter
             // EggSeed
             // 
             this.EggSeed.DataPropertyName = "Seed";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 8.75F);
-            this.EggSeed.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Consolas", 8.75F);
+            this.EggSeed.DefaultCellStyle = dataGridViewCellStyle12;
             this.EggSeed.HeaderText = "Seed";
+            this.EggSeed.MinimumWidth = 6;
             this.EggSeed.Name = "EggSeed";
             this.EggSeed.ReadOnly = true;
             this.EggSeed.Width = 65;
@@ -1095,6 +1158,7 @@ namespace RNGReporter
             // 
             this.ShinyOffset.DataPropertyName = "Offset";
             this.ShinyOffset.HeaderText = "Frame";
+            this.ShinyOffset.MinimumWidth = 6;
             this.ShinyOffset.Name = "ShinyOffset";
             this.ShinyOffset.ReadOnly = true;
             this.ShinyOffset.Width = 45;
@@ -1102,9 +1166,10 @@ namespace RNGReporter
             // EggPID
             // 
             this.EggPID.DataPropertyName = "Pid";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Consolas", 8.75F);
-            this.EggPID.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Consolas", 8.75F);
+            this.EggPID.DefaultCellStyle = dataGridViewCellStyle13;
             this.EggPID.HeaderText = "PID";
+            this.EggPID.MinimumWidth = 6;
             this.EggPID.Name = "EggPID";
             this.EggPID.ReadOnly = true;
             this.EggPID.Width = 70;
@@ -1113,6 +1178,7 @@ namespace RNGReporter
             // 
             this.shinyShinyDisplay.DataPropertyName = "ShinyDisplay";
             this.shinyShinyDisplay.HeaderText = "!!!";
+            this.shinyShinyDisplay.MinimumWidth = 6;
             this.shinyShinyDisplay.Name = "shinyShinyDisplay";
             this.shinyShinyDisplay.ReadOnly = true;
             this.shinyShinyDisplay.Width = 20;
@@ -1120,7 +1186,8 @@ namespace RNGReporter
             // ShinyNature
             // 
             this.ShinyNature.DataPropertyName = "Nature";
-            this.ShinyNature.HeaderText = "Nature";
+            this.ShinyNature.HeaderText = "性格";
+            this.ShinyNature.MinimumWidth = 6;
             this.ShinyNature.Name = "ShinyNature";
             this.ShinyNature.ReadOnly = true;
             this.ShinyNature.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1129,7 +1196,8 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Ability";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ability";
+            this.dataGridViewTextBoxColumn4.HeaderText = "特性";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1139,6 +1207,7 @@ namespace RNGReporter
             // 
             this.ShinyFemale50.DataPropertyName = "Female50";
             this.ShinyFemale50.HeaderText = "50% F";
+            this.ShinyFemale50.MinimumWidth = 6;
             this.ShinyFemale50.Name = "ShinyFemale50";
             this.ShinyFemale50.ReadOnly = true;
             this.ShinyFemale50.Width = 50;
@@ -1147,6 +1216,7 @@ namespace RNGReporter
             // 
             this.ShinyFemale25.DataPropertyName = "Female25";
             this.ShinyFemale25.HeaderText = "25% F";
+            this.ShinyFemale25.MinimumWidth = 6;
             this.ShinyFemale25.Name = "ShinyFemale25";
             this.ShinyFemale25.ReadOnly = true;
             this.ShinyFemale25.Width = 50;
@@ -1155,6 +1225,7 @@ namespace RNGReporter
             // 
             this.ShinyFemale125.DataPropertyName = "Female125";
             this.ShinyFemale125.HeaderText = "12.5%F";
+            this.ShinyFemale125.MinimumWidth = 6;
             this.ShinyFemale125.Name = "ShinyFemale125";
             this.ShinyFemale125.ReadOnly = true;
             this.ShinyFemale125.Width = 50;
@@ -1163,6 +1234,7 @@ namespace RNGReporter
             // 
             this.ShinyFemale75.DataPropertyName = "Female75";
             this.ShinyFemale75.HeaderText = "75% F";
+            this.ShinyFemale75.MinimumWidth = 6;
             this.ShinyFemale75.Name = "ShinyFemale75";
             this.ShinyFemale75.ReadOnly = true;
             this.ShinyFemale75.Width = 50;
@@ -1171,6 +1243,7 @@ namespace RNGReporter
             // 
             this.ShinyFlipSequence.DataPropertyName = "FlipSequence";
             this.ShinyFlipSequence.HeaderText = "Flip Sequence";
+            this.ShinyFlipSequence.MinimumWidth = 6;
             this.ShinyFlipSequence.Name = "ShinyFlipSequence";
             this.ShinyFlipSequence.ReadOnly = true;
             this.ShinyFlipSequence.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1180,6 +1253,7 @@ namespace RNGReporter
             // 
             this.ShinyTaps.DataPropertyName = "Taps";
             this.ShinyTaps.HeaderText = "Taps";
+            this.ShinyTaps.MinimumWidth = 6;
             this.ShinyTaps.Name = "ShinyTaps";
             this.ShinyTaps.ReadOnly = true;
             this.ShinyTaps.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1189,63 +1263,71 @@ namespace RNGReporter
             // 
             this.ShinyFlips.DataPropertyName = "Flips";
             this.ShinyFlips.HeaderText = "Additional Flips";
+            this.ShinyFlips.MinimumWidth = 6;
             this.ShinyFlips.Name = "ShinyFlips";
             this.ShinyFlips.ReadOnly = true;
             this.ShinyFlips.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ShinyFlips.Width = 125;
             // 
             // labelShinySecretID
             // 
             this.labelShinySecretID.AutoSize = true;
-            this.labelShinySecretID.Location = new System.Drawing.Point(753, 117);
+            this.labelShinySecretID.Location = new System.Drawing.Point(941, 146);
+            this.labelShinySecretID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShinySecretID.Name = "labelShinySecretID";
-            this.labelShinySecretID.Size = new System.Drawing.Size(25, 13);
+            this.labelShinySecretID.Size = new System.Drawing.Size(31, 15);
             this.labelShinySecretID.TabIndex = 23;
             this.labelShinySecretID.Text = "SID";
             // 
             // labelShinyNature
             // 
             this.labelShinyNature.AutoSize = true;
-            this.labelShinyNature.Location = new System.Drawing.Point(660, 20);
+            this.labelShinyNature.Location = new System.Drawing.Point(825, 25);
+            this.labelShinyNature.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShinyNature.Name = "labelShinyNature";
-            this.labelShinyNature.Size = new System.Drawing.Size(39, 13);
+            this.labelShinyNature.Size = new System.Drawing.Size(37, 15);
             this.labelShinyNature.TabIndex = 14;
-            this.labelShinyNature.Text = "Nature";
+            this.labelShinyNature.Text = "性格";
             // 
             // labelShinyTrainerID
             // 
             this.labelShinyTrainerID.AutoSize = true;
-            this.labelShinyTrainerID.Location = new System.Drawing.Point(699, 117);
+            this.labelShinyTrainerID.Location = new System.Drawing.Point(874, 146);
+            this.labelShinyTrainerID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShinyTrainerID.Name = "labelShinyTrainerID";
-            this.labelShinyTrainerID.Size = new System.Drawing.Size(18, 13);
+            this.labelShinyTrainerID.Size = new System.Drawing.Size(23, 15);
             this.labelShinyTrainerID.TabIndex = 21;
             this.labelShinyTrainerID.Text = "ID";
             // 
             // labelShinyAbility
             // 
             this.labelShinyAbility.AutoSize = true;
-            this.labelShinyAbility.Location = new System.Drawing.Point(663, 47);
+            this.labelShinyAbility.Location = new System.Drawing.Point(829, 59);
+            this.labelShinyAbility.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShinyAbility.Name = "labelShinyAbility";
-            this.labelShinyAbility.Size = new System.Drawing.Size(34, 13);
+            this.labelShinyAbility.Size = new System.Drawing.Size(37, 15);
             this.labelShinyAbility.TabIndex = 20;
-            this.labelShinyAbility.Text = "Ability";
+            this.labelShinyAbility.Text = "特性";
             // 
             // labelShinyDelay
             // 
             this.labelShinyDelay.AutoSize = true;
-            this.labelShinyDelay.Location = new System.Drawing.Point(97, 9);
+            this.labelShinyDelay.Location = new System.Drawing.Point(121, 11);
+            this.labelShinyDelay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShinyDelay.Name = "labelShinyDelay";
-            this.labelShinyDelay.Size = new System.Drawing.Size(85, 13);
+            this.labelShinyDelay.Size = new System.Drawing.Size(115, 15);
             this.labelShinyDelay.TabIndex = 12;
-            this.labelShinyDelay.Text = "Min / Max Delay";
+            this.labelShinyDelay.Text = "最小/最大Delay";
             // 
             // labelShinyYear
             // 
             this.labelShinyYear.AutoSize = true;
-            this.labelShinyYear.Location = new System.Drawing.Point(52, 9);
+            this.labelShinyYear.Location = new System.Drawing.Point(65, 11);
+            this.labelShinyYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShinyYear.Name = "labelShinyYear";
-            this.labelShinyYear.Size = new System.Drawing.Size(29, 13);
+            this.labelShinyYear.Size = new System.Drawing.Size(37, 15);
             this.labelShinyYear.TabIndex = 2;
-            this.labelShinyYear.Text = "Year";
+            this.labelShinyYear.Text = "年份";
             // 
             // comboBoxShinyGender
             // 
@@ -1262,11 +1344,12 @@ namespace RNGReporter
             "Male (75% Male, 25% Female)",
             "Female (87.5% Male, 12.5% Female)",
             "Male (87.5% Male, 12.5% Female)"});
-            this.comboBoxShinyGender.Location = new System.Drawing.Point(700, 91);
+            this.comboBoxShinyGender.Location = new System.Drawing.Point(875, 114);
+            this.comboBoxShinyGender.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxShinyGender.MaxDropDownItems = 3;
             this.comboBoxShinyGender.Name = "comboBoxShinyGender";
             this.comboBoxShinyGender.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxShinyGender.Size = new System.Drawing.Size(220, 21);
+            this.comboBoxShinyGender.Size = new System.Drawing.Size(274, 23);
             this.comboBoxShinyGender.TabIndex = 13;
             // 
             // buttonShinyClearAbility
@@ -1274,14 +1357,15 @@ namespace RNGReporter
             this.buttonShinyClearAbility.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonShinyClearAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonShinyClearAbility.ForeColor = System.Drawing.Color.Black;
-            this.buttonShinyClearAbility.Location = new System.Drawing.Point(784, 42);
+            this.buttonShinyClearAbility.Location = new System.Drawing.Point(980, 52);
+            this.buttonShinyClearAbility.Margin = new System.Windows.Forms.Padding(4);
             this.buttonShinyClearAbility.Name = "buttonShinyClearAbility";
             this.buttonShinyClearAbility.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonShinyClearAbility.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonShinyClearAbility.Size = new System.Drawing.Size(46, 22);
+            this.buttonShinyClearAbility.Size = new System.Drawing.Size(58, 28);
             this.buttonShinyClearAbility.TabIndex = 12;
             this.buttonShinyClearAbility.TabStop = false;
-            this.buttonShinyClearAbility.Text = "Any";
+            this.buttonShinyClearAbility.Text = "任意";
             this.buttonShinyClearAbility.Click += new System.EventHandler(this.buttonShinyClearAbility_Click);
             // 
             // comboBoxShinyAbility
@@ -1290,27 +1374,29 @@ namespace RNGReporter
             this.comboBoxShinyAbility.ForeColor = System.Drawing.Color.Black;
             this.comboBoxShinyAbility.FormattingEnabled = true;
             this.comboBoxShinyAbility.Items.AddRange(new object[] {
-            "Any",
-            "Ability 0",
-            "Ability 1"});
-            this.comboBoxShinyAbility.Location = new System.Drawing.Point(700, 43);
+            "任意",
+            "特性0",
+            "特性1"});
+            this.comboBoxShinyAbility.Location = new System.Drawing.Point(875, 54);
+            this.comboBoxShinyAbility.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxShinyAbility.MaxDropDownItems = 3;
             this.comboBoxShinyAbility.Name = "comboBoxShinyAbility";
             this.comboBoxShinyAbility.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxShinyAbility.Size = new System.Drawing.Size(76, 21);
+            this.comboBoxShinyAbility.Size = new System.Drawing.Size(94, 23);
             this.comboBoxShinyAbility.TabIndex = 11;
             // 
             // buttonShinyGenerate
             // 
             this.buttonShinyGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonShinyGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonShinyGenerate.Location = new System.Drawing.Point(12, 157);
+            this.buttonShinyGenerate.Location = new System.Drawing.Point(15, 196);
+            this.buttonShinyGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonShinyGenerate.Name = "buttonShinyGenerate";
             this.buttonShinyGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonShinyGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonShinyGenerate.Size = new System.Drawing.Size(73, 23);
+            this.buttonShinyGenerate.Size = new System.Drawing.Size(91, 29);
             this.buttonShinyGenerate.TabIndex = 6;
-            this.buttonShinyGenerate.Text = "Generate";
+            this.buttonShinyGenerate.Text = "计算";
             this.buttonShinyGenerate.Click += new System.EventHandler(this.buttonShinyGenerate_Click);
             // 
             // buttonShinyClearNature
@@ -1318,14 +1404,15 @@ namespace RNGReporter
             this.buttonShinyClearNature.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonShinyClearNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonShinyClearNature.ForeColor = System.Drawing.Color.Black;
-            this.buttonShinyClearNature.Location = new System.Drawing.Point(784, 14);
+            this.buttonShinyClearNature.Location = new System.Drawing.Point(980, 18);
+            this.buttonShinyClearNature.Margin = new System.Windows.Forms.Padding(4);
             this.buttonShinyClearNature.Name = "buttonShinyClearNature";
             this.buttonShinyClearNature.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonShinyClearNature.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonShinyClearNature.Size = new System.Drawing.Size(46, 22);
+            this.buttonShinyClearNature.Size = new System.Drawing.Size(58, 28);
             this.buttonShinyClearNature.TabIndex = 10;
             this.buttonShinyClearNature.TabStop = false;
-            this.buttonShinyClearNature.Text = "Any";
+            this.buttonShinyClearNature.Text = "任意";
             this.buttonShinyClearNature.Click += new System.EventHandler(this.buttonShinyClearNature_Click);
             // 
             // comboBoxShinyNature
@@ -1333,31 +1420,34 @@ namespace RNGReporter
             this.comboBoxShinyNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShinyNature.ForeColor = System.Drawing.Color.Black;
             this.comboBoxShinyNature.FormattingEnabled = true;
-            this.comboBoxShinyNature.Location = new System.Drawing.Point(700, 16);
+            this.comboBoxShinyNature.Location = new System.Drawing.Point(875, 20);
+            this.comboBoxShinyNature.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxShinyNature.MaxDropDownItems = 26;
             this.comboBoxShinyNature.Name = "comboBoxShinyNature";
             this.comboBoxShinyNature.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxShinyNature.Size = new System.Drawing.Size(76, 21);
+            this.comboBoxShinyNature.Size = new System.Drawing.Size(94, 23);
             this.comboBoxShinyNature.TabIndex = 9;
             this.comboBoxShinyNature.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FocusControl);
             // 
             // maskedTextBoxMaxTaps
             // 
             this.maskedTextBoxMaxTaps.Hex = false;
-            this.maskedTextBoxMaxTaps.Location = new System.Drawing.Point(499, 24);
+            this.maskedTextBoxMaxTaps.Location = new System.Drawing.Point(624, 30);
+            this.maskedTextBoxMaxTaps.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxMaxTaps.Mask = "000";
             this.maskedTextBoxMaxTaps.Name = "maskedTextBoxMaxTaps";
-            this.maskedTextBoxMaxTaps.Size = new System.Drawing.Size(44, 20);
+            this.maskedTextBoxMaxTaps.Size = new System.Drawing.Size(54, 24);
             this.maskedTextBoxMaxTaps.TabIndex = 7;
             this.maskedTextBoxMaxTaps.Text = "10";
             // 
             // maskedTextBoxShinySecretID
             // 
             this.maskedTextBoxShinySecretID.Hex = false;
-            this.maskedTextBoxShinySecretID.Location = new System.Drawing.Point(754, 132);
+            this.maskedTextBoxShinySecretID.Location = new System.Drawing.Point(942, 165);
+            this.maskedTextBoxShinySecretID.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxShinySecretID.Mask = "00000";
             this.maskedTextBoxShinySecretID.Name = "maskedTextBoxShinySecretID";
-            this.maskedTextBoxShinySecretID.Size = new System.Drawing.Size(48, 20);
+            this.maskedTextBoxShinySecretID.Size = new System.Drawing.Size(59, 24);
             this.maskedTextBoxShinySecretID.TabIndex = 15;
             this.maskedTextBoxShinySecretID.Tag = "id/sid";
             this.maskedTextBoxShinySecretID.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1365,10 +1455,11 @@ namespace RNGReporter
             // maskedTextBoxShinyID
             // 
             this.maskedTextBoxShinyID.Hex = false;
-            this.maskedTextBoxShinyID.Location = new System.Drawing.Point(700, 132);
+            this.maskedTextBoxShinyID.Location = new System.Drawing.Point(875, 165);
+            this.maskedTextBoxShinyID.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxShinyID.Mask = "00000";
             this.maskedTextBoxShinyID.Name = "maskedTextBoxShinyID";
-            this.maskedTextBoxShinyID.Size = new System.Drawing.Size(48, 20);
+            this.maskedTextBoxShinyID.Size = new System.Drawing.Size(59, 24);
             this.maskedTextBoxShinyID.TabIndex = 14;
             this.maskedTextBoxShinyID.Tag = "id/sid";
             this.maskedTextBoxShinyID.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1376,30 +1467,33 @@ namespace RNGReporter
             // maskedTextBoxShinyMaxDelay
             // 
             this.maskedTextBoxShinyMaxDelay.Hex = false;
-            this.maskedTextBoxShinyMaxDelay.Location = new System.Drawing.Point(142, 24);
+            this.maskedTextBoxShinyMaxDelay.Location = new System.Drawing.Point(178, 30);
+            this.maskedTextBoxShinyMaxDelay.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxShinyMaxDelay.Mask = "00000";
             this.maskedTextBoxShinyMaxDelay.Name = "maskedTextBoxShinyMaxDelay";
-            this.maskedTextBoxShinyMaxDelay.Size = new System.Drawing.Size(40, 20);
+            this.maskedTextBoxShinyMaxDelay.Size = new System.Drawing.Size(49, 24);
             this.maskedTextBoxShinyMaxDelay.TabIndex = 2;
             this.maskedTextBoxShinyMaxDelay.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTextBoxShinyMinDelay
             // 
             this.maskedTextBoxShinyMinDelay.Hex = false;
-            this.maskedTextBoxShinyMinDelay.Location = new System.Drawing.Point(96, 24);
+            this.maskedTextBoxShinyMinDelay.Location = new System.Drawing.Point(120, 30);
+            this.maskedTextBoxShinyMinDelay.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxShinyMinDelay.Mask = "00000";
             this.maskedTextBoxShinyMinDelay.Name = "maskedTextBoxShinyMinDelay";
-            this.maskedTextBoxShinyMinDelay.Size = new System.Drawing.Size(41, 20);
+            this.maskedTextBoxShinyMinDelay.Size = new System.Drawing.Size(50, 24);
             this.maskedTextBoxShinyMinDelay.TabIndex = 1;
             this.maskedTextBoxShinyMinDelay.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTextBoxShinyYear
             // 
             this.maskedTextBoxShinyYear.Hex = false;
-            this.maskedTextBoxShinyYear.Location = new System.Drawing.Point(55, 24);
+            this.maskedTextBoxShinyYear.Location = new System.Drawing.Point(69, 30);
+            this.maskedTextBoxShinyYear.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxShinyYear.Mask = "0000";
             this.maskedTextBoxShinyYear.Name = "maskedTextBoxShinyYear";
-            this.maskedTextBoxShinyYear.Size = new System.Drawing.Size(35, 20);
+            this.maskedTextBoxShinyYear.Size = new System.Drawing.Size(43, 24);
             this.maskedTextBoxShinyYear.TabIndex = 0;
             this.maskedTextBoxShinyYear.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1437,19 +1531,21 @@ namespace RNGReporter
             this.tabPageCapture.Controls.Add(this.maskedTextBoxSID);
             this.tabPageCapture.Controls.Add(this.label21);
             this.tabPageCapture.Controls.Add(this.comboBoxNature);
-            this.tabPageCapture.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCapture.Location = new System.Drawing.Point(4, 25);
+            this.tabPageCapture.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCapture.Name = "tabPageCapture";
-            this.tabPageCapture.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCapture.Size = new System.Drawing.Size(991, 498);
+            this.tabPageCapture.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageCapture.Size = new System.Drawing.Size(1241, 626);
             this.tabPageCapture.TabIndex = 1;
             this.tabPageCapture.Text = "Capture";
             this.tabPageCapture.UseVisualStyleBackColor = true;
             // 
             // ivFiltersCapture
             // 
-            this.ivFiltersCapture.Location = new System.Drawing.Point(367, 6);
+            this.ivFiltersCapture.Location = new System.Drawing.Point(459, 8);
+            this.ivFiltersCapture.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ivFiltersCapture.Name = "ivFiltersCapture";
-            this.ivFiltersCapture.Size = new System.Drawing.Size(315, 166);
+            this.ivFiltersCapture.Size = new System.Drawing.Size(394, 208);
             this.ivFiltersCapture.TabIndex = 325;
             // 
             // comboBoxCapGenderRatio
@@ -1464,11 +1560,12 @@ namespace RNGReporter
             "75% M / 25% F",
             "87.5% M / 12.5% F",
             "Fixed Gender"});
-            this.comboBoxCapGenderRatio.Location = new System.Drawing.Point(844, 90);
+            this.comboBoxCapGenderRatio.Location = new System.Drawing.Point(1055, 112);
+            this.comboBoxCapGenderRatio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCapGenderRatio.MaxDropDownItems = 3;
             this.comboBoxCapGenderRatio.Name = "comboBoxCapGenderRatio";
             this.comboBoxCapGenderRatio.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxCapGenderRatio.Size = new System.Drawing.Size(119, 21);
+            this.comboBoxCapGenderRatio.Size = new System.Drawing.Size(148, 23);
             this.comboBoxCapGenderRatio.TabIndex = 27;
             this.toolTipGenderRatio.SetToolTip(this.comboBoxCapGenderRatio, "Right-click to look up the gender\r\nratio of a certain Pokémon.\r\n\r\nUse this box to" +
         " filter out unwanted\r\nCute Charm results.\r\n");
@@ -1478,11 +1575,12 @@ namespace RNGReporter
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(811, 95);
+            this.label2.Location = new System.Drawing.Point(1014, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 324;
-            this.label2.Text = "Ratio";
+            this.label2.Text = "比例";
             // 
             // comboBoxCapGender
             // 
@@ -1490,24 +1588,26 @@ namespace RNGReporter
             this.comboBoxCapGender.ForeColor = System.Drawing.Color.Black;
             this.comboBoxCapGender.FormattingEnabled = true;
             this.comboBoxCapGender.Items.AddRange(new object[] {
-            "Any",
+            "任意",
             "Male",
             "Female"});
-            this.comboBoxCapGender.Location = new System.Drawing.Point(743, 91);
+            this.comboBoxCapGender.Location = new System.Drawing.Point(929, 114);
+            this.comboBoxCapGender.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCapGender.MaxDropDownItems = 3;
             this.comboBoxCapGender.Name = "comboBoxCapGender";
             this.comboBoxCapGender.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxCapGender.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxCapGender.Size = new System.Drawing.Size(73, 23);
             this.comboBoxCapGender.TabIndex = 26;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(698, 94);
+            this.label31.Location = new System.Drawing.Point(872, 118);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(42, 13);
+            this.label31.Size = new System.Drawing.Size(37, 15);
             this.label31.TabIndex = 321;
-            this.label31.Text = "Gender";
+            this.label31.Text = "性别";
             // 
             // dataGridViewCapValues
             // 
@@ -1518,14 +1618,14 @@ namespace RNGReporter
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCapValues.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCapValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCapValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewCapValues.ColumnHeadersHeight = 20;
             this.dataGridViewCapValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewCapValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1551,34 +1651,36 @@ namespace RNGReporter
             this.f25,
             this.f75});
             this.dataGridViewCapValues.ContextMenuStrip = this.contextMenuStripCap;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCapValues.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridViewCapValues.Location = new System.Drawing.Point(6, 189);
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCapValues.DefaultCellStyle = dataGridViewCellStyle27;
+            this.dataGridViewCapValues.Location = new System.Drawing.Point(8, 236);
+            this.dataGridViewCapValues.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewCapValues.MultiSelect = false;
             this.dataGridViewCapValues.Name = "dataGridViewCapValues";
             this.dataGridViewCapValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCapValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCapValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewCapValues.RowHeadersVisible = false;
+            this.dataGridViewCapValues.RowHeadersWidth = 51;
             this.dataGridViewCapValues.RowTemplate.Height = 20;
             this.dataGridViewCapValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCapValues.ShowCellErrors = false;
             this.dataGridViewCapValues.ShowCellToolTips = false;
             this.dataGridViewCapValues.ShowEditingIcon = false;
             this.dataGridViewCapValues.ShowRowErrors = false;
-            this.dataGridViewCapValues.Size = new System.Drawing.Size(957, 303);
+            this.dataGridViewCapValues.Size = new System.Drawing.Size(1196, 379);
             this.dataGridViewCapValues.TabIndex = 10;
             this.toolTipDataGrid.SetToolTip(this.dataGridViewCapValues, "test");
             this.dataGridViewCapValues.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCapValues_CellFormatting);
@@ -1588,184 +1690,9 @@ namespace RNGReporter
             this.dataGridViewCapValues.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewCapValues_KeyDown);
             this.dataGridViewCapValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCapValues_MouseDown);
             // 
-            // CapSeed
-            // 
-            this.CapSeed.DataPropertyName = "Seed";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Consolas", 8.75F);
-            this.CapSeed.DefaultCellStyle = dataGridViewCellStyle10;
-            this.CapSeed.FillWeight = 110F;
-            this.CapSeed.HeaderText = "Seed";
-            this.CapSeed.Name = "CapSeed";
-            this.CapSeed.ReadOnly = true;
-            this.CapSeed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.CapSeed.Width = 65;
-            // 
-            // CapOffset
-            // 
-            this.CapOffset.DataPropertyName = "Offset";
-            this.CapOffset.HeaderText = "Frame";
-            this.CapOffset.Name = "CapOffset";
-            this.CapOffset.ReadOnly = true;
-            this.CapOffset.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.CapOffset.Width = 45;
-            // 
-            // Hour
-            // 
-            this.Hour.DataPropertyName = "Hour";
-            this.Hour.HeaderText = "Hour";
-            this.Hour.Name = "Hour";
-            this.Hour.ReadOnly = true;
-            this.Hour.Width = 40;
-            // 
-            // EncounterMod
-            // 
-            this.EncounterMod.DataPropertyName = "EncounterMod";
-            this.EncounterMod.HeaderText = "Required Lead";
-            this.EncounterMod.Name = "EncounterMod";
-            this.EncounterMod.ReadOnly = true;
-            this.EncounterMod.Width = 115;
-            // 
-            // PID
-            // 
-            this.PID.DataPropertyName = "Pid";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Consolas", 8.75F);
-            this.PID.DefaultCellStyle = dataGridViewCellStyle11;
-            this.PID.HeaderText = "PID";
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            this.PID.Width = 70;
-            // 
-            // EncounterSlot
-            // 
-            this.EncounterSlot.DataPropertyName = "EncounterSlot";
-            this.EncounterSlot.FillWeight = 50F;
-            this.EncounterSlot.HeaderText = "Encounter Slot";
-            this.EncounterSlot.Name = "EncounterSlot";
-            this.EncounterSlot.ReadOnly = true;
-            this.EncounterSlot.Width = 85;
-            // 
-            // Shiny
-            // 
-            this.Shiny.DataPropertyName = "ShinyDisplay";
-            this.Shiny.HeaderText = "!!!";
-            this.Shiny.Name = "Shiny";
-            this.Shiny.ReadOnly = true;
-            this.Shiny.Width = 20;
-            // 
-            // Nature
-            // 
-            this.Nature.DataPropertyName = "Nature";
-            this.Nature.HeaderText = "Nature";
-            this.Nature.Name = "Nature";
-            this.Nature.ReadOnly = true;
-            this.Nature.Width = 65;
-            // 
-            // Ability
-            // 
-            this.Ability.DataPropertyName = "Ability";
-            this.Ability.HeaderText = "Ability";
-            this.Ability.Name = "Ability";
-            this.Ability.ReadOnly = true;
-            this.Ability.Width = 40;
-            // 
-            // CapHP
-            // 
-            this.CapHP.DataPropertyName = "Hp";
-            this.CapHP.HeaderText = "HP";
-            this.CapHP.Name = "CapHP";
-            this.CapHP.ReadOnly = true;
-            this.CapHP.Width = 30;
-            // 
-            // CapAtk
-            // 
-            this.CapAtk.DataPropertyName = "Atk";
-            this.CapAtk.HeaderText = "Atk";
-            this.CapAtk.Name = "CapAtk";
-            this.CapAtk.ReadOnly = true;
-            this.CapAtk.Width = 30;
-            // 
-            // CapDef
-            // 
-            this.CapDef.DataPropertyName = "Def";
-            this.CapDef.HeaderText = "Def";
-            this.CapDef.Name = "CapDef";
-            this.CapDef.ReadOnly = true;
-            this.CapDef.Width = 30;
-            // 
-            // CapSpA
-            // 
-            this.CapSpA.DataPropertyName = "SpA";
-            this.CapSpA.HeaderText = "SpA";
-            this.CapSpA.Name = "CapSpA";
-            this.CapSpA.ReadOnly = true;
-            this.CapSpA.Width = 30;
-            // 
-            // CapSpD
-            // 
-            this.CapSpD.DataPropertyName = "SpD";
-            this.CapSpD.HeaderText = "SpD";
-            this.CapSpD.Name = "CapSpD";
-            this.CapSpD.ReadOnly = true;
-            this.CapSpD.Width = 30;
-            // 
-            // CapSpe
-            // 
-            this.CapSpe.DataPropertyName = "Spe";
-            this.CapSpe.HeaderText = "Spe";
-            this.CapSpe.Name = "CapSpe";
-            this.CapSpe.ReadOnly = true;
-            this.CapSpe.Width = 30;
-            // 
-            // HiddenPower
-            // 
-            this.HiddenPower.DataPropertyName = "HiddenPowerType";
-            this.HiddenPower.HeaderText = "Hidden";
-            this.HiddenPower.Name = "HiddenPower";
-            this.HiddenPower.ReadOnly = true;
-            this.HiddenPower.Width = 50;
-            // 
-            // HiddenPowerPower
-            // 
-            this.HiddenPowerPower.DataPropertyName = "HiddenPowerPower";
-            this.HiddenPowerPower.HeaderText = "Power";
-            this.HiddenPowerPower.Name = "HiddenPowerPower";
-            this.HiddenPowerPower.ReadOnly = true;
-            this.HiddenPowerPower.Width = 50;
-            // 
-            // f50
-            // 
-            this.f50.DataPropertyName = "Female50";
-            this.f50.HeaderText = "50% F";
-            this.f50.Name = "f50";
-            this.f50.ReadOnly = true;
-            this.f50.Width = 50;
-            // 
-            // f125
-            // 
-            this.f125.DataPropertyName = "Female125";
-            this.f125.HeaderText = "12.5%F";
-            this.f125.Name = "f125";
-            this.f125.ReadOnly = true;
-            this.f125.Width = 50;
-            // 
-            // f25
-            // 
-            this.f25.DataPropertyName = "Female25";
-            this.f25.HeaderText = "25% F";
-            this.f25.Name = "f25";
-            this.f25.ReadOnly = true;
-            this.f25.Width = 50;
-            // 
-            // f75
-            // 
-            this.f75.DataPropertyName = "Female75";
-            this.f75.HeaderText = "75% F";
-            this.f75.Name = "f75";
-            this.f75.ReadOnly = true;
-            this.f75.Width = 50;
-            // 
             // contextMenuStripCap
             // 
+            this.contextMenuStripCap.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripCap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copySeedToClipboardToolStripMenuItem1,
             this.toolStripMenuItem6,
@@ -1773,38 +1700,38 @@ namespace RNGReporter
             this.toolStripMenuItem3,
             this.outputCapResultsToTXTToolStripMenuItem});
             this.contextMenuStripCap.Name = "contextMenuStripCap";
-            this.contextMenuStripCap.Size = new System.Drawing.Size(203, 82);
+            this.contextMenuStripCap.Size = new System.Drawing.Size(253, 88);
             this.contextMenuStripCap.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripCap_Opening);
             // 
             // copySeedToClipboardToolStripMenuItem1
             // 
             this.copySeedToClipboardToolStripMenuItem1.Name = "copySeedToClipboardToolStripMenuItem1";
-            this.copySeedToClipboardToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
-            this.copySeedToClipboardToolStripMenuItem1.Text = "Copy Seed to Clipboard";
+            this.copySeedToClipboardToolStripMenuItem1.Size = new System.Drawing.Size(252, 24);
+            this.copySeedToClipboardToolStripMenuItem1.Text = "复制Seed到剪贴板";
             this.copySeedToClipboardToolStripMenuItem1.Click += new System.EventHandler(this.copySeedToClipboardToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(199, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(249, 6);
             // 
             // generateTimesToolStripMenuItem
             // 
             this.generateTimesToolStripMenuItem.Name = "generateTimesToolStripMenuItem";
-            this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.generateTimesToolStripMenuItem.Text = "Generate More Times ...";
             this.generateTimesToolStripMenuItem.Click += new System.EventHandler(this.generateTimesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(199, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(249, 6);
             // 
             // outputCapResultsToTXTToolStripMenuItem
             // 
             this.outputCapResultsToTXTToolStripMenuItem.Name = "outputCapResultsToTXTToolStripMenuItem";
-            this.outputCapResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.outputCapResultsToTXTToolStripMenuItem.Text = "Output Results to TXT ...";
+            this.outputCapResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.outputCapResultsToTXTToolStripMenuItem.Text = "输出结果至TXT文本文件";
             this.outputCapResultsToTXTToolStripMenuItem.Click += new System.EventHandler(this.outputCapResultsToTXTToolStripMenuItem_Click);
             // 
             // buttonAnySlot
@@ -1813,35 +1740,37 @@ namespace RNGReporter
             this.buttonAnySlot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonAnySlot.ForeColor = System.Drawing.Color.Black;
             this.buttonAnySlot.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonAnySlot.Location = new System.Drawing.Point(256, 98);
+            this.buttonAnySlot.Location = new System.Drawing.Point(320, 122);
             this.buttonAnySlot.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAnySlot.Name = "buttonAnySlot";
             this.buttonAnySlot.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonAnySlot.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonAnySlot.Size = new System.Drawing.Size(41, 22);
+            this.buttonAnySlot.Size = new System.Drawing.Size(51, 28);
             this.buttonAnySlot.TabIndex = 8;
-            this.buttonAnySlot.Text = "Any";
+            this.buttonAnySlot.Text = "任意";
             this.buttonAnySlot.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonAnySlot.Click += new System.EventHandler(this.buttonAnySlot_Click);
             // 
             // maskedTextBoxCapMinOffset
             // 
             this.maskedTextBoxCapMinOffset.Hex = false;
-            this.maskedTextBoxCapMinOffset.Location = new System.Drawing.Point(188, 24);
+            this.maskedTextBoxCapMinOffset.Location = new System.Drawing.Point(235, 30);
+            this.maskedTextBoxCapMinOffset.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxCapMinOffset.Mask = "00000";
             this.maskedTextBoxCapMinOffset.Name = "maskedTextBoxCapMinOffset";
-            this.maskedTextBoxCapMinOffset.Size = new System.Drawing.Size(44, 20);
+            this.maskedTextBoxCapMinOffset.Size = new System.Drawing.Size(54, 24);
             this.maskedTextBoxCapMinOffset.TabIndex = 3;
             this.maskedTextBoxCapMinOffset.Text = "1";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(17, 104);
+            this.label54.Location = new System.Drawing.Point(35, 130);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(77, 13);
+            this.label54.Size = new System.Drawing.Size(67, 15);
             this.label54.TabIndex = 120;
-            this.label54.Text = "Encounter Slot";
+            this.label54.Text = "遭遇槽位";
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBoxEncounterType
@@ -1851,15 +1780,16 @@ namespace RNGReporter
             this.comboBoxEncounterType.FormattingEnabled = true;
             this.comboBoxEncounterType.Items.AddRange(new object[] {
             "Stationary\\Gift Pokémon"});
-            this.comboBoxEncounterType.Location = new System.Drawing.Point(97, 76);
+            this.comboBoxEncounterType.Location = new System.Drawing.Point(121, 95);
+            this.comboBoxEncounterType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEncounterType.Name = "comboBoxEncounterType";
             this.comboBoxEncounterType.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxEncounterType.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxEncounterType.Size = new System.Drawing.Size(194, 23);
             this.comboBoxEncounterType.TabIndex = 6;
             // 
             // comboBoxEncounterSlot
             // 
-            this.comboBoxEncounterSlot.BlankText = "Any";
+            this.comboBoxEncounterSlot.BlankText = "任意";
             checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxEncounterSlot.CheckBoxProperties = checkBoxProperties1;
             this.comboBoxEncounterSlot.DisplayMemberSingleItem = "";
@@ -1880,120 +1810,133 @@ namespace RNGReporter
             "9",
             "10",
             "11"});
-            this.comboBoxEncounterSlot.Location = new System.Drawing.Point(97, 99);
+            this.comboBoxEncounterSlot.Location = new System.Drawing.Point(121, 124);
+            this.comboBoxEncounterSlot.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEncounterSlot.Name = "comboBoxEncounterSlot";
-            this.comboBoxEncounterSlot.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxEncounterSlot.Size = new System.Drawing.Size(194, 23);
             this.comboBoxEncounterSlot.TabIndex = 7;
             this.comboBoxEncounterSlot.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FocusControl);
             // 
             // maskedTextBoxCapMaxDelay
             // 
             this.maskedTextBoxCapMaxDelay.Hex = false;
-            this.maskedTextBoxCapMaxDelay.Location = new System.Drawing.Point(142, 24);
+            this.maskedTextBoxCapMaxDelay.Location = new System.Drawing.Point(178, 30);
+            this.maskedTextBoxCapMaxDelay.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxCapMaxDelay.Mask = "00000";
             this.maskedTextBoxCapMaxDelay.Name = "maskedTextBoxCapMaxDelay";
-            this.maskedTextBoxCapMaxDelay.Size = new System.Drawing.Size(41, 20);
+            this.maskedTextBoxCapMaxDelay.Size = new System.Drawing.Size(50, 24);
             this.maskedTextBoxCapMaxDelay.TabIndex = 2;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(12, 81);
+            this.label52.Location = new System.Drawing.Point(35, 101);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(83, 13);
+            this.label52.Size = new System.Drawing.Size(67, 15);
             this.label52.TabIndex = 121;
-            this.label52.Text = "Encounter Type";
+            this.label52.Text = "相遇类型";
             this.label52.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // maskedTextBoxCapMinDelay
             // 
             this.maskedTextBoxCapMinDelay.Hex = false;
-            this.maskedTextBoxCapMinDelay.Location = new System.Drawing.Point(96, 24);
+            this.maskedTextBoxCapMinDelay.Location = new System.Drawing.Point(120, 30);
+            this.maskedTextBoxCapMinDelay.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxCapMinDelay.Mask = "00000";
             this.maskedTextBoxCapMinDelay.Name = "maskedTextBoxCapMinDelay";
-            this.maskedTextBoxCapMinDelay.Size = new System.Drawing.Size(41, 20);
+            this.maskedTextBoxCapMinDelay.Size = new System.Drawing.Size(50, 24);
             this.maskedTextBoxCapMinDelay.TabIndex = 1;
             this.maskedTextBoxCapMinDelay.ValidatingType = typeof(int);
             // 
             // maskedTextBoxCapYear
             // 
             this.maskedTextBoxCapYear.Hex = false;
-            this.maskedTextBoxCapYear.Location = new System.Drawing.Point(55, 24);
+            this.maskedTextBoxCapYear.Location = new System.Drawing.Point(69, 30);
+            this.maskedTextBoxCapYear.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxCapYear.Mask = "0000";
             this.maskedTextBoxCapYear.Name = "maskedTextBoxCapYear";
-            this.maskedTextBoxCapYear.Size = new System.Drawing.Size(35, 20);
+            this.maskedTextBoxCapYear.Size = new System.Drawing.Size(43, 24);
             this.maskedTextBoxCapYear.TabIndex = 0;
             this.maskedTextBoxCapYear.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // maskedTextBoxCapMaxOffset
             // 
             this.maskedTextBoxCapMaxOffset.Hex = false;
-            this.maskedTextBoxCapMaxOffset.Location = new System.Drawing.Point(238, 24);
+            this.maskedTextBoxCapMaxOffset.Location = new System.Drawing.Point(298, 30);
+            this.maskedTextBoxCapMaxOffset.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxCapMaxOffset.Mask = "00000";
             this.maskedTextBoxCapMaxOffset.Name = "maskedTextBoxCapMaxOffset";
-            this.maskedTextBoxCapMaxOffset.Size = new System.Drawing.Size(44, 20);
+            this.maskedTextBoxCapMaxOffset.Size = new System.Drawing.Size(54, 24);
             this.maskedTextBoxCapMaxOffset.TabIndex = 4;
             // 
             // labelCapMinMaxFrame
             // 
             this.labelCapMinMaxFrame.AutoSize = true;
-            this.labelCapMinMaxFrame.Location = new System.Drawing.Point(191, 9);
+            this.labelCapMinMaxFrame.Location = new System.Drawing.Point(239, 11);
+            this.labelCapMinMaxFrame.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCapMinMaxFrame.Name = "labelCapMinMaxFrame";
-            this.labelCapMinMaxFrame.Size = new System.Drawing.Size(87, 13);
+            this.labelCapMinMaxFrame.Size = new System.Drawing.Size(90, 15);
             this.labelCapMinMaxFrame.TabIndex = 107;
-            this.labelCapMinMaxFrame.Text = "Min / 最大帧";
+            this.labelCapMinMaxFrame.Text = "最小/最大帧";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(97, 9);
+            this.label22.Location = new System.Drawing.Point(121, 11);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(85, 13);
+            this.label22.Size = new System.Drawing.Size(115, 15);
             this.label22.TabIndex = 108;
-            this.label22.Text = "Min / Max Delay";
+            this.label22.Text = "最小/最大Delay";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(52, 9);
+            this.label20.Location = new System.Drawing.Point(65, 11);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 13);
+            this.label20.Size = new System.Drawing.Size(37, 15);
             this.label20.TabIndex = 106;
-            this.label20.Text = "Year";
+            this.label20.Text = "年份";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // comboBoxMethod
             // 
             this.comboBoxMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMethod.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMethod.FormattingEnabled = true;
-            this.comboBoxMethod.Location = new System.Drawing.Point(97, 53);
+            this.comboBoxMethod.Location = new System.Drawing.Point(121, 66);
+            this.comboBoxMethod.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxMethod.Name = "comboBoxMethod";
             this.comboBoxMethod.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxMethod.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxMethod.Size = new System.Drawing.Size(194, 23);
             this.comboBoxMethod.TabIndex = 5;
             this.comboBoxMethod.SelectedIndexChanged += new System.EventHandler(this.comboBoxMethod_SelectedIndexChanged);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(51, 57);
+            this.label30.Location = new System.Drawing.Point(64, 71);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(43, 13);
+            this.label30.Size = new System.Drawing.Size(45, 15);
             this.label30.TabIndex = 113;
-            this.label30.Text = "Method";
+            this.label30.Text = "算法 ";
             this.label30.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // buttonCapGenerate
             // 
             this.buttonCapGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonCapGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonCapGenerate.Location = new System.Drawing.Point(12, 157);
+            this.buttonCapGenerate.Location = new System.Drawing.Point(15, 196);
+            this.buttonCapGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCapGenerate.Name = "buttonCapGenerate";
             this.buttonCapGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonCapGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonCapGenerate.Size = new System.Drawing.Size(73, 23);
+            this.buttonCapGenerate.Size = new System.Drawing.Size(91, 29);
             this.buttonCapGenerate.TabIndex = 9;
-            this.buttonCapGenerate.Text = "Generate";
+            this.buttonCapGenerate.Text = "计算";
             this.buttonCapGenerate.Click += new System.EventHandler(this.buttonCapGenerate_Click);
             // 
             // buttonAnyNature
@@ -2002,23 +1945,24 @@ namespace RNGReporter
             this.buttonAnyNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonAnyNature.ForeColor = System.Drawing.Color.Black;
             this.buttonAnyNature.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonAnyNature.Location = new System.Drawing.Point(922, 15);
+            this.buttonAnyNature.Location = new System.Drawing.Point(1152, 19);
             this.buttonAnyNature.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAnyNature.Name = "buttonAnyNature";
             this.buttonAnyNature.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonAnyNature.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonAnyNature.Size = new System.Drawing.Size(41, 22);
+            this.buttonAnyNature.Size = new System.Drawing.Size(51, 28);
             this.buttonAnyNature.TabIndex = 24;
-            this.buttonAnyNature.Text = "Any";
+            this.buttonAnyNature.Text = "任意";
             this.buttonAnyNature.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonAnyNature.Click += new System.EventHandler(this.buttonAnyNature_Click);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(742, 117);
+            this.lblID.Location = new System.Drawing.Point(928, 146);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.Size = new System.Drawing.Size(23, 15);
             this.lblID.TabIndex = 69;
             this.lblID.Text = "ID";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2029,21 +1973,23 @@ namespace RNGReporter
             this.comboBoxAbility.ForeColor = System.Drawing.Color.Black;
             this.comboBoxAbility.FormattingEnabled = true;
             this.comboBoxAbility.Items.AddRange(new object[] {
-            "Any",
-            "Ability 0",
-            "Ability 1"});
-            this.comboBoxAbility.Location = new System.Drawing.Point(743, 43);
+            "任意",
+            "特性0",
+            "特性1"});
+            this.comboBoxAbility.Location = new System.Drawing.Point(929, 54);
+            this.comboBoxAbility.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxAbility.Name = "comboBoxAbility";
             this.comboBoxAbility.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxAbility.Size = new System.Drawing.Size(67, 21);
+            this.comboBoxAbility.Size = new System.Drawing.Size(83, 23);
             this.comboBoxAbility.TabIndex = 25;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(796, 117);
+            this.label26.Location = new System.Drawing.Point(995, 146);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(25, 13);
+            this.label26.Size = new System.Drawing.Size(31, 15);
             this.label26.TabIndex = 71;
             this.label26.Text = "SID";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2051,29 +1997,32 @@ namespace RNGReporter
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(706, 47);
+            this.label23.Location = new System.Drawing.Point(882, 59);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(34, 13);
+            this.label23.Size = new System.Drawing.Size(37, 15);
             this.label23.TabIndex = 68;
-            this.label23.Text = "Ability";
+            this.label23.Text = "特性";
             // 
             // checkBoxShinyOnly
             // 
             this.checkBoxShinyOnly.AutoSize = true;
-            this.checkBoxShinyOnly.Location = new System.Drawing.Point(743, 157);
+            this.checkBoxShinyOnly.Location = new System.Drawing.Point(929, 196);
+            this.checkBoxShinyOnly.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShinyOnly.Name = "checkBoxShinyOnly";
-            this.checkBoxShinyOnly.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxShinyOnly.Size = new System.Drawing.Size(74, 19);
             this.checkBoxShinyOnly.TabIndex = 30;
-            this.checkBoxShinyOnly.Text = "Shiny Only";
+            this.checkBoxShinyOnly.Text = "仅异色";
             this.checkBoxShinyOnly.UseVisualStyleBackColor = true;
             // 
             // maskedTextBoxID
             // 
             this.maskedTextBoxID.Hex = false;
-            this.maskedTextBoxID.Location = new System.Drawing.Point(743, 132);
+            this.maskedTextBoxID.Location = new System.Drawing.Point(929, 165);
+            this.maskedTextBoxID.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxID.Mask = "00000";
             this.maskedTextBoxID.Name = "maskedTextBoxID";
-            this.maskedTextBoxID.Size = new System.Drawing.Size(48, 20);
+            this.maskedTextBoxID.Size = new System.Drawing.Size(59, 24);
             this.maskedTextBoxID.TabIndex = 28;
             this.maskedTextBoxID.Tag = "id/sid";
             this.maskedTextBoxID.ValidatingType = typeof(int);
@@ -2081,10 +2030,11 @@ namespace RNGReporter
             // maskedTextBoxSID
             // 
             this.maskedTextBoxSID.Hex = false;
-            this.maskedTextBoxSID.Location = new System.Drawing.Point(797, 132);
+            this.maskedTextBoxSID.Location = new System.Drawing.Point(996, 165);
+            this.maskedTextBoxSID.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxSID.Mask = "00000";
             this.maskedTextBoxSID.Name = "maskedTextBoxSID";
-            this.maskedTextBoxSID.Size = new System.Drawing.Size(48, 20);
+            this.maskedTextBoxSID.Size = new System.Drawing.Size(59, 24);
             this.maskedTextBoxSID.TabIndex = 29;
             this.maskedTextBoxSID.Tag = "id/sid";
             this.maskedTextBoxSID.ValidatingType = typeof(int);
@@ -2092,25 +2042,27 @@ namespace RNGReporter
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(703, 20);
+            this.label21.Location = new System.Drawing.Point(879, 25);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(39, 13);
+            this.label21.Size = new System.Drawing.Size(37, 15);
             this.label21.TabIndex = 11;
-            this.label21.Text = "Nature";
+            this.label21.Text = "性格";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBoxNature
             // 
-            this.comboBoxNature.BlankText = "Any";
+            this.comboBoxNature.BlankText = "任意";
             checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxNature.CheckBoxProperties = checkBoxProperties2;
             this.comboBoxNature.DisplayMemberSingleItem = "";
             this.comboBoxNature.DropDownHeight = 300;
             this.comboBoxNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNature.FormattingEnabled = true;
-            this.comboBoxNature.Location = new System.Drawing.Point(743, 16);
+            this.comboBoxNature.Location = new System.Drawing.Point(929, 20);
+            this.comboBoxNature.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxNature.Name = "comboBoxNature";
-            this.comboBoxNature.Size = new System.Drawing.Size(176, 21);
+            this.comboBoxNature.Size = new System.Drawing.Size(219, 23);
             this.comboBoxNature.TabIndex = 23;
             this.comboBoxNature.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FocusControl);
             // 
@@ -2122,10 +2074,11 @@ namespace RNGReporter
             this.tabControl.Controls.Add(this.tabPageCapture);
             this.tabControl.Controls.Add(this.tabPageShinyEgg);
             this.tabControl.Controls.Add(this.tabPageEggIVs);
-            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Location = new System.Drawing.Point(15, 15);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(999, 524);
+            this.tabControl.Size = new System.Drawing.Size(1249, 655);
             this.tabControl.TabIndex = 0;
             // 
             // toolTipDataGrid
@@ -2142,14 +2095,212 @@ namespace RNGReporter
             this.toolTipGenderRatio.ReshowDelay = 100;
             this.toolTipGenderRatio.ToolTipTitle = "Gender Ratio";
             // 
+            // CapSeed
+            // 
+            this.CapSeed.DataPropertyName = "Seed";
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Consolas", 8.75F);
+            this.CapSeed.DefaultCellStyle = dataGridViewCellStyle21;
+            this.CapSeed.FillWeight = 110F;
+            this.CapSeed.HeaderText = "Seed";
+            this.CapSeed.MinimumWidth = 6;
+            this.CapSeed.Name = "CapSeed";
+            this.CapSeed.ReadOnly = true;
+            this.CapSeed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.CapSeed.Width = 65;
+            // 
+            // CapOffset
+            // 
+            this.CapOffset.DataPropertyName = "Offset";
+            this.CapOffset.HeaderText = "帧数";
+            this.CapOffset.MinimumWidth = 6;
+            this.CapOffset.Name = "CapOffset";
+            this.CapOffset.ReadOnly = true;
+            this.CapOffset.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.CapOffset.Width = 45;
+            // 
+            // Hour
+            // 
+            this.Hour.DataPropertyName = "Hour";
+            this.Hour.HeaderText = "时";
+            this.Hour.MinimumWidth = 6;
+            this.Hour.Name = "Hour";
+            this.Hour.ReadOnly = true;
+            this.Hour.Width = 40;
+            // 
+            // EncounterMod
+            // 
+            this.EncounterMod.DataPropertyName = "EncounterMod";
+            this.EncounterMod.HeaderText = "Required Lead";
+            this.EncounterMod.MinimumWidth = 6;
+            this.EncounterMod.Name = "EncounterMod";
+            this.EncounterMod.ReadOnly = true;
+            this.EncounterMod.Width = 115;
+            // 
+            // PID
+            // 
+            this.PID.DataPropertyName = "Pid";
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Consolas", 8.75F);
+            this.PID.DefaultCellStyle = dataGridViewCellStyle22;
+            this.PID.HeaderText = "PID";
+            this.PID.MinimumWidth = 6;
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            this.PID.Width = 70;
+            // 
+            // EncounterSlot
+            // 
+            this.EncounterSlot.DataPropertyName = "EncounterSlot";
+            this.EncounterSlot.FillWeight = 50F;
+            this.EncounterSlot.HeaderText = "遭遇槽位";
+            this.EncounterSlot.MinimumWidth = 6;
+            this.EncounterSlot.Name = "EncounterSlot";
+            this.EncounterSlot.ReadOnly = true;
+            this.EncounterSlot.Width = 85;
+            // 
+            // Shiny
+            // 
+            this.Shiny.DataPropertyName = "ShinyDisplay";
+            this.Shiny.HeaderText = "异色";
+            this.Shiny.MinimumWidth = 6;
+            this.Shiny.Name = "Shiny";
+            this.Shiny.ReadOnly = true;
+            this.Shiny.Width = 20;
+            // 
+            // Nature
+            // 
+            this.Nature.DataPropertyName = "Nature";
+            this.Nature.HeaderText = "性格";
+            this.Nature.MinimumWidth = 6;
+            this.Nature.Name = "Nature";
+            this.Nature.ReadOnly = true;
+            this.Nature.Width = 65;
+            // 
+            // Ability
+            // 
+            this.Ability.DataPropertyName = "Ability";
+            this.Ability.HeaderText = "特性";
+            this.Ability.MinimumWidth = 6;
+            this.Ability.Name = "Ability";
+            this.Ability.ReadOnly = true;
+            this.Ability.Width = 40;
+            // 
+            // CapHP
+            // 
+            this.CapHP.DataPropertyName = "Hp";
+            this.CapHP.HeaderText = "HP";
+            this.CapHP.MinimumWidth = 6;
+            this.CapHP.Name = "CapHP";
+            this.CapHP.ReadOnly = true;
+            this.CapHP.Width = 30;
+            // 
+            // CapAtk
+            // 
+            this.CapAtk.DataPropertyName = "Atk";
+            this.CapAtk.HeaderText = "攻击";
+            this.CapAtk.MinimumWidth = 6;
+            this.CapAtk.Name = "CapAtk";
+            this.CapAtk.ReadOnly = true;
+            this.CapAtk.Width = 30;
+            // 
+            // CapDef
+            // 
+            this.CapDef.DataPropertyName = "Def";
+            this.CapDef.HeaderText = "防御";
+            this.CapDef.MinimumWidth = 6;
+            this.CapDef.Name = "CapDef";
+            this.CapDef.ReadOnly = true;
+            this.CapDef.Width = 30;
+            // 
+            // CapSpA
+            // 
+            this.CapSpA.DataPropertyName = "SpA";
+            this.CapSpA.HeaderText = "特攻";
+            this.CapSpA.MinimumWidth = 6;
+            this.CapSpA.Name = "CapSpA";
+            this.CapSpA.ReadOnly = true;
+            this.CapSpA.Width = 30;
+            // 
+            // CapSpD
+            // 
+            this.CapSpD.DataPropertyName = "SpD";
+            this.CapSpD.HeaderText = "特防";
+            this.CapSpD.MinimumWidth = 6;
+            this.CapSpD.Name = "CapSpD";
+            this.CapSpD.ReadOnly = true;
+            this.CapSpD.Width = 30;
+            // 
+            // CapSpe
+            // 
+            this.CapSpe.DataPropertyName = "Spe";
+            this.CapSpe.HeaderText = "速度";
+            this.CapSpe.MinimumWidth = 6;
+            this.CapSpe.Name = "CapSpe";
+            this.CapSpe.ReadOnly = true;
+            this.CapSpe.Width = 30;
+            // 
+            // HiddenPower
+            // 
+            this.HiddenPower.DataPropertyName = "HiddenPowerType";
+            this.HiddenPower.HeaderText = "觉醒之力";
+            this.HiddenPower.MinimumWidth = 6;
+            this.HiddenPower.Name = "HiddenPower";
+            this.HiddenPower.ReadOnly = true;
+            this.HiddenPower.Width = 50;
+            // 
+            // HiddenPowerPower
+            // 
+            this.HiddenPowerPower.DataPropertyName = "HiddenPowerPower";
+            this.HiddenPowerPower.HeaderText = "觉醒之力威力";
+            this.HiddenPowerPower.MinimumWidth = 6;
+            this.HiddenPowerPower.Name = "HiddenPowerPower";
+            this.HiddenPowerPower.ReadOnly = true;
+            this.HiddenPowerPower.Width = 50;
+            // 
+            // f50
+            // 
+            this.f50.DataPropertyName = "Female50";
+            this.f50.HeaderText = "50% F";
+            this.f50.MinimumWidth = 6;
+            this.f50.Name = "f50";
+            this.f50.ReadOnly = true;
+            this.f50.Width = 50;
+            // 
+            // f125
+            // 
+            this.f125.DataPropertyName = "Female125";
+            this.f125.HeaderText = "12.5%F";
+            this.f125.MinimumWidth = 6;
+            this.f125.Name = "f125";
+            this.f125.ReadOnly = true;
+            this.f125.Width = 50;
+            // 
+            // f25
+            // 
+            this.f25.DataPropertyName = "Female25";
+            this.f25.HeaderText = "25% F";
+            this.f25.MinimumWidth = 6;
+            this.f25.Name = "f25";
+            this.f25.ReadOnly = true;
+            this.f25.Width = 50;
+            // 
+            // f75
+            // 
+            this.f75.DataPropertyName = "Female75";
+            this.f75.HeaderText = "75% F";
+            this.f75.MinimumWidth = 6;
+            this.f75.Name = "f75";
+            this.f75.ReadOnly = true;
+            this.f75.Width = 50;
+            // 
             // TimeFinder4th
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1024, 548);
+            this.ClientSize = new System.Drawing.Size(1280, 685);
             this.Controls.Add(this.tabControl);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TimeFinder4th";
-            this.Text = "4th Generation Time Finder";
+            this.Text = "GEN4 Time Finder";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlatinumTime_FormClosing);
             this.Load += new System.EventHandler(this.TimeFinder4th_Load);
             this.contextMenuStripEggPid.ResumeLayout(false);

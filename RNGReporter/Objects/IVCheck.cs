@@ -33,7 +33,7 @@ namespace RNGReporter.Objects
         private readonly Nature nature;
         private readonly Pokemon pokemon;
 
-        private readonly string[] statNames = new[] {"HP", "Atk", "Def", "SpA", "SpD", "Spe"};
+        private readonly string[] statNames = new[] { "HP", "攻击", "防御", "特攻", "特防", "速度" };
 
         //private bool[] valid = new bool[6] { false, false, false, false, false, false };
         //public bool[] Valid
@@ -79,16 +79,16 @@ namespace RNGReporter.Objects
             //  This is our internal storage for the IV ranges that
             //  we get with the initial set of data, before the 
             //  characteristic correction.
-            var minIvs = new uint[] {31, 31, 31, 31, 31, 31};
-            var maxIvs = new uint[] {0, 0, 0, 0, 0, 0};
+            var minIvs = new uint[] { 31, 31, 31, 31, 31, 31 };
+            var maxIvs = new uint[] { 0, 0, 0, 0, 0, 0 };
 
             //  hrm can we get rid of this?
-            var valid = new[] {false, false, false, false, false, false};
+            var valid = new[] { false, false, false, false, false, false };
 
             //  Do the iterative test on the Hit Points
             for (uint hpCnt = 0; hpCnt <= 31; hpCnt++)
             {
-                uint hp = (uint) Math.Floor(((hpCnt + 2*baseStats[0] + Math.Floor((ev/4.0)))*level/100.0)) + 10 + level;
+                uint hp = (uint)Math.Floor(((hpCnt + 2 * baseStats[0] + Math.Floor((ev / 4.0))) * level / 100.0)) + 10 + level;
 
                 if (hp == stats[0])
                 {
@@ -113,7 +113,7 @@ namespace RNGReporter.Objects
                 {
                     var stat =
                         (uint)
-                        Math.Floor((Math.Floor(((baseStats[cnt]*2.0 + statCnt + Math.Floor(ev/4.0))*level)/100.0) + 5.0)*
+                        Math.Floor((Math.Floor(((baseStats[cnt] * 2.0 + statCnt + Math.Floor(ev / 4.0)) * level) / 100.0) + 5.0) *
                                    nature.Adjustments[cnt]);
 
                     if (stat == stats[cnt])
@@ -151,9 +151,9 @@ namespace RNGReporter.Objects
                          charCnt <= maxIvs[characteristic.AffectedStat];
                          charCnt++)
                     {
-                        if ((charCnt%5) == characteristic.Mod5result)
+                        if ((charCnt % 5) == characteristic.Mod5result)
                         {
-                            Possibilities[(int) characteristic.AffectedStat].Add(charCnt);
+                            Possibilities[(int)characteristic.AffectedStat].Add(charCnt);
 
                             characteristicHigh = charCnt;
                         }
@@ -178,7 +178,7 @@ namespace RNGReporter.Objects
                         {
                             if (charCnt <= characteristicHigh)
                             {
-                                Possibilities[(int) statCnt].Add(charCnt);
+                                Possibilities[(int)statCnt].Add(charCnt);
                             }
                         }
                     }
@@ -228,7 +228,7 @@ namespace RNGReporter.Objects
 
                 if (statBlock.Count == 0)
                 {
-                    ivs += "Invalid";
+                    ivs += "无效";
                 }
                 else
                 {

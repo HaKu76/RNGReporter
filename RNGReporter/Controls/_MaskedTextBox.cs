@@ -36,7 +36,7 @@ namespace RNGReporter
             }
             else
             { SelectAll(); }
-            
+
             base.OnEnter(e);
         }
 
@@ -220,7 +220,7 @@ namespace RNGReporter
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-        
+
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x302)  //PasteEvent
@@ -300,7 +300,7 @@ namespace RNGReporter
                     int HexTest = int.Parse(e.KeyChar.ToString(), NumberStyles.HexNumber);
                     e.KeyChar = char.ToUpper(e.KeyChar);
                 }
-                catch 
+                catch
                 { e.KeyChar = (char)0; }
             }
             base.OnKeyPress(e);

@@ -74,7 +74,7 @@
             this.glassButton18.Size = new System.Drawing.Size(42, 21);
             this.glassButton18.TabIndex = 134;
             this.glassButton18.TabStop = false;
-            this.glassButton18.Text = "Clear";
+            this.glassButton18.Text = "清空";
             this.glassButton18.Click += new System.EventHandler(this.button1_3_Click);
             // 
             // _MaskedTextBox1

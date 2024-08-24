@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JirachiGeneration));
             this.label12 = new System.Windows.Forms.Label();
             this.buttonGenerate = new RNGReporter.GlassButton();
             this.dataGridViewValues = new RNGReporter.DoubleBufferedDataGridView();
@@ -37,26 +38,17 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(9, 8);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 12);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Seed (16进制)";
             // 
             // buttonGenerate
             // 
             this.buttonGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonGenerate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonGenerate.Location = new System.Drawing.Point(490, 45);
+            resources.ApplyResources(this.buttonGenerate, "buttonGenerate");
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonGenerate.Size = new System.Drawing.Size(62, 21);
-            this.buttonGenerate.TabIndex = 11;
-            this.buttonGenerate.Text = "计算";
             this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // dataGridViewValues
@@ -64,40 +56,29 @@
             this.dataGridViewValues.AllowUserToAddRows = false;
             this.dataGridViewValues.AllowUserToDeleteRows = false;
             this.dataGridViewValues.AllowUserToResizeRows = false;
-            this.dataGridViewValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewValues.ColumnHeadersHeight = 20;
+            resources.ApplyResources(this.dataGridViewValues, "dataGridViewValues");
             this.dataGridViewValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewValues.Location = new System.Drawing.Point(12, 72);
             this.dataGridViewValues.MultiSelect = false;
             this.dataGridViewValues.Name = "dataGridViewValues";
             this.dataGridViewValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewValues.RowHeadersVisible = false;
-            this.dataGridViewValues.RowHeadersWidth = 21;
             this.dataGridViewValues.RowTemplate.Height = 20;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowCellErrors = false;
             this.dataGridViewValues.ShowCellToolTips = false;
             this.dataGridViewValues.ShowEditingIcon = false;
             this.dataGridViewValues.ShowRowErrors = false;
-            this.dataGridViewValues.Size = new System.Drawing.Size(540, 68);
-            this.dataGridViewValues.TabIndex = 10;
             // 
             // textBoxSeed
             // 
             this.textBoxSeed.Hex = true;
-            this.textBoxSeed.Location = new System.Drawing.Point(12, 23);
-            this.textBoxSeed.Mask = "AAAAAAAA";
+            resources.ApplyResources(this.textBoxSeed, "textBoxSeed");
             this.textBoxSeed.Name = "textBoxSeed";
-            this.textBoxSeed.Size = new System.Drawing.Size(68, 19);
-            this.textBoxSeed.TabIndex = 8;
             // 
             // JirachiGeneration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 151);
             this.Controls.Add(this.buttonGenerate);
             this.Controls.Add(this.dataGridViewValues);
             this.Controls.Add(this.label12);
@@ -105,7 +86,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "JirachiGeneration";
-            this.Text = "基拉祈计算器";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

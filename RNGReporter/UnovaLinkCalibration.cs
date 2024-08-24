@@ -1,10 +1,10 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using RNGReporter.Properties;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 using Version = RNGReporter.Objects.Version;
 
 namespace RNGReporter
@@ -28,7 +28,7 @@ namespace RNGReporter
         private void btnU_Click(object sender, EventArgs e)
         {
             // add a space before the arrow if there's already arrows here
-            txtSpins.Text += (txtSpins.Text.Length > 0 ? " " : "") + ((Button) sender).Text;
+            txtSpins.Text += (txtSpins.Text.Length > 0 ? " " : "") + ((Button)sender).Text;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace RNGReporter
             bool minMaxGxStat = cbGxStat.Checked;
 
             dsParameters = new List<DSParameterCapture>();
-            var listBinding = new BindingSource {DataSource = dsParameters};
+            var listBinding = new BindingSource { DataSource = dsParameters };
             dgvResults.DataSource = listBinding;
 
             cpus = Settings.Default.CPUs;
@@ -102,14 +102,14 @@ namespace RNGReporter
 
             var jobs = new Thread[cpus];
 
-            var progress = new Progress {Text = "DS Parameter Progress"};
+            var progress = new Progress { Text = "DS Parameter Progress" };
             // this is wrong
-            progressTotal = (ulong) ((VCountMax - VCountMin + 1)
-                                     *(Timer0Max - Timer0Min + 1)
+            progressTotal = (ulong)((VCountMax - VCountMin + 1)
+                                     * (Timer0Max - Timer0Min + 1)
                                      // if only min max gx stat search is 2 (or 1 if they're the same) else it's max-min
-                                     *(minMaxGxStat ? (GxStatMax > GxStatMin ? 2u : 1) : (GxStatMax - GxStatMin + 1))
-                                     *(VFrameMax - VFrameMin + 1)
-                                     *(secondsMax - secondsMin + 1));
+                                     * (minMaxGxStat ? (GxStatMax > GxStatMin ? 2u : 1) : (GxStatMax - GxStatMin + 1))
+                                     * (VFrameMax - VFrameMin + 1)
+                                     * (secondsMax - secondsMin + 1));
 
             progressSearched = 0;
             progressFound = 0;
@@ -127,11 +127,11 @@ namespace RNGReporter
                 MessageBox.Show("Your MAC address is missing some digits.  Double-check your MAC address.");
             }
 
-            var version = (Version) (comboBoxVersion.SelectedIndex + 2);
-            var language = (Language) comboBoxLanguage.SelectedIndex;
-            var dstype = (DSType) comboBoxDSType.SelectedIndex;
+            var version = (Version)(comboBoxVersion.SelectedIndex + 2);
+            var language = (Language)comboBoxLanguage.SelectedIndex;
+            var dstype = (DSType)comboBoxDSType.SelectedIndex;
 
-            var interval = (uint) ((VCountMax - VCountMin)/(float) jobs.Length);
+            var interval = (uint)((VCountMax - VCountMin) / (float)jobs.Length);
             uint VCountMinLower = VCountMin;
             uint VCountMinUpper = VCountMin + interval;
 
@@ -197,7 +197,7 @@ namespace RNGReporter
                 bool alive = true;
                 while (alive)
                 {
-                    progress.ShowProgress(progressSearched/(float) progressTotal, progressSearched, progressFound);
+                    progress.ShowProgress(progressSearched / (float)progressTotal, progressSearched, progressFound);
                     if (refreshQueue)
                     {
                         listBinding.ResetBindings(false);
@@ -245,7 +245,7 @@ namespace RNGReporter
                             DSType dstype, bool memorylink, ulong macaddress, uint buttons, uint[] pattern)
         {
             var array = new uint[80];
-            array[6] = (uint) (macaddress & 0xFFFF);
+            array[6] = (uint)(macaddress & 0xFFFF);
             if (softreset)
             {
                 array[6] = array[6] ^ 0x01000000;
@@ -260,15 +260,15 @@ namespace RNGReporter
 
             array[12] = buttons;
 
-            string yearMonth = String.Format("{0:00}", date.Year%2000) + String.Format("{0:00}", date.Month);
-            string dateString = String.Format("{0:00}", (int) date.DayOfWeek);
+            string yearMonth = String.Format("{0:00}", date.Year % 2000) + String.Format("{0:00}", date.Month);
+            string dateString = String.Format("{0:00}", (int)date.DayOfWeek);
             dateString = String.Format("{0:00}", date.Day) + dateString;
             dateString = yearMonth + dateString;
             array[8] = uint.Parse(dateString, NumberStyles.HexNumber);
             array[9] = 0x0;
             //uint[] alpha = Functions.alphaSHA1(array, 8);
 
-            var upperMAC = (uint) (macaddress >> 16);
+            var upperMAC = (uint)(macaddress >> 16);
 
             for (uint vcount = vcountMin; vcount <= vcountMax; ++vcount)
             {
@@ -281,7 +281,7 @@ namespace RNGReporter
                     {
                         for (uint gxstat = gxstatMin; gxstat <= gxstatMax; ++gxstat)
                         {
-                            array[7] = (upperMAC ^ (vframe*0x1000000) ^ gxstat);
+                            array[7] = (upperMAC ^ (vframe * 0x1000000) ^ gxstat);
                             uint[] alpha = Functions.AlphaEncrypt(array);
 
                             array[16] = Functions.RotateLeft(array[13] ^ array[8] ^ array[2] ^ array[0], 1);
@@ -317,14 +317,14 @@ namespace RNGReporter
                                 if (found)
                                 {
                                     var parameter = new DSParameterCapture
-                                        {
-                                            ActualSeconds = second,
-                                            GxStat = gxstat,
-                                            Seed = seed,
-                                            Timer0 = timer0,
-                                            VCount = vcount,
-                                            VFrame = vframe
-                                        };
+                                    {
+                                        ActualSeconds = second,
+                                        GxStat = gxstat,
+                                        Seed = seed,
+                                        Timer0 = timer0,
+                                        VCount = vcount,
+                                        VFrame = vframe
+                                    };
                                     dsParameters.Add(parameter);
                                     refreshQueue = true;
                                     progressFound++;
@@ -352,7 +352,7 @@ namespace RNGReporter
         private void maskedTextBoxSecond_Validated(object sender, EventArgs e)
         {
             maskedTextBoxSecondsMin.Text = maskedTextBoxSecond.Text;
-            maskedTextBoxSecondsMax.Text = ((int.Parse(maskedTextBoxSecond.Text) + 10)%60).ToString();
+            maskedTextBoxSecondsMax.Text = ((int.Parse(maskedTextBoxSecond.Text) + 10) % 60).ToString();
         }
 
         private void btnSendProfile_Click(object sender, EventArgs e)
@@ -365,18 +365,18 @@ namespace RNGReporter
 
         private Profile GetProfile()
         {
-            var dsParameter = (DSParameterCapture) dgvResults.SelectedRows[0].DataBoundItem;
+            var dsParameter = (DSParameterCapture)dgvResults.SelectedRows[0].DataBoundItem;
             var profile = new Profile
-                {
-                    MAC_Address = MAC_address,
-                    VCount = dsParameter.VCount,
-                    Timer0Min = dsParameter.Timer0,
-                    Version = (Version) comboBoxVersion.SelectedIndex,
-                    Language = (Language) comboBoxLanguage.SelectedIndex,
-                    VFrame = dsParameter.VFrame,
-                    GxStat = dsParameter.GxStat,
-                    DSType = (DSType) comboBoxDSType.SelectedIndex
-                };
+            {
+                MAC_Address = MAC_address,
+                VCount = dsParameter.VCount,
+                Timer0Min = dsParameter.Timer0,
+                Version = (Version)comboBoxVersion.SelectedIndex,
+                Language = (Language)comboBoxLanguage.SelectedIndex,
+                VFrame = dsParameter.VFrame,
+                GxStat = dsParameter.GxStat,
+                DSType = (DSType)comboBoxDSType.SelectedIndex
+            };
             return profile;
         }
     }

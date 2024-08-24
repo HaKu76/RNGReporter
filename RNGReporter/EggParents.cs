@@ -18,10 +18,10 @@
  */
 
 
+using RNGReporter.Objects;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 
 namespace RNGReporter
 {

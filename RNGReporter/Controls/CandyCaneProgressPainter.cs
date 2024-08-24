@@ -46,7 +46,7 @@ namespace RNGReporter
             img = new Bitmap(box.Width, box.Height);
             // BuildTile() then resize it to fix the box.Height, then tile it.
             Bitmap source = BuildTile(baseColor);
-            img = new Bitmap((int) ((box.Height*(float) source.Width)/source.Height), box.Height + 1);
+            img = new Bitmap((int)((box.Height * (float)source.Width) / source.Height), box.Height + 1);
             using (Graphics g = Graphics.FromImage(img))
             {
                 g.DrawImage(source, 0, 0, img.Width, img.Height + 1);

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label20 = new System.Windows.Forms.Label();
             this.buttonGenerate = new RNGReporter.GlassButton();
             this.dataGridViewValues = new RNGReporter.DoubleBufferedDataGridView();
@@ -49,9 +49,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 8);
+            this.label20.Location = new System.Drawing.Point(16, 10);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(77, 12);
+            this.label20.Size = new System.Drawing.Size(102, 15);
             this.label20.TabIndex = 43;
             this.label20.Text = "16/32位 Seed";
             // 
@@ -59,11 +60,12 @@
             // 
             this.buttonGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonGenerate.Location = new System.Drawing.Point(319, 73);
+            this.buttonGenerate.Location = new System.Drawing.Point(425, 91);
+            this.buttonGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonGenerate.Size = new System.Drawing.Size(75, 21);
+            this.buttonGenerate.Size = new System.Drawing.Size(100, 26);
             this.buttonGenerate.TabIndex = 46;
             this.buttonGenerate.Text = "计算";
             this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
@@ -76,60 +78,65 @@
             this.dataGridViewValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Time,
             this.Seconds});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewValues.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewValues.Location = new System.Drawing.Point(12, 97);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewValues.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewValues.Location = new System.Drawing.Point(16, 121);
+            this.dataGridViewValues.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewValues.MultiSelect = false;
             this.dataGridViewValues.Name = "dataGridViewValues";
             this.dataGridViewValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewValues.RowHeadersVisible = false;
+            this.dataGridViewValues.RowHeadersWidth = 51;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowCellErrors = false;
             this.dataGridViewValues.ShowCellToolTips = false;
             this.dataGridViewValues.ShowEditingIcon = false;
             this.dataGridViewValues.ShowRowErrors = false;
-            this.dataGridViewValues.Size = new System.Drawing.Size(382, 250);
+            this.dataGridViewValues.Size = new System.Drawing.Size(509, 312);
             this.dataGridViewValues.TabIndex = 45;
             // 
             // Time
             // 
             this.Time.DataPropertyName = "Time";
-            dataGridViewCellStyle2.Format = "X";
-            this.Time.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "X";
+            this.Time.DefaultCellStyle = dataGridViewCellStyle6;
             this.Time.HeaderText = "时间";
+            this.Time.MinimumWidth = 6;
             this.Time.Name = "Time";
             this.Time.ReadOnly = true;
+            this.Time.Width = 125;
             // 
             // Seconds
             // 
             this.Seconds.DataPropertyName = "Seconds";
             this.Seconds.HeaderText = "秒数";
+            this.Seconds.MinimumWidth = 6;
             this.Seconds.Name = "Seconds";
             this.Seconds.ReadOnly = true;
             this.Seconds.Width = 95;
@@ -137,18 +144,20 @@
             // seedToTimeSeed
             // 
             this.seedToTimeSeed.Hex = true;
-            this.seedToTimeSeed.Location = new System.Drawing.Point(103, 6);
+            this.seedToTimeSeed.Location = new System.Drawing.Point(137, 8);
+            this.seedToTimeSeed.Margin = new System.Windows.Forms.Padding(4);
             this.seedToTimeSeed.Mask = "AAAAAAAA";
             this.seedToTimeSeed.Name = "seedToTimeSeed";
-            this.seedToTimeSeed.Size = new System.Drawing.Size(59, 19);
+            this.seedToTimeSeed.Size = new System.Drawing.Size(77, 23);
             this.seedToTimeSeed.TabIndex = 44;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Location = new System.Drawing.Point(16, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 12);
+            this.label1.Size = new System.Drawing.Size(255, 15);
             this.label1.TabIndex = 47;
             this.label1.Text = "此功能仅适用于有电时钟的红/蓝宝石";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -156,45 +165,50 @@
             // maskedTextBoxYear
             // 
             this.maskedTextBoxYear.Hex = true;
-            this.maskedTextBoxYear.Location = new System.Drawing.Point(103, 30);
+            this.maskedTextBoxYear.Location = new System.Drawing.Point(137, 38);
+            this.maskedTextBoxYear.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxYear.Mask = "AAAA";
             this.maskedTextBoxYear.Name = "maskedTextBoxYear";
-            this.maskedTextBoxYear.Size = new System.Drawing.Size(59, 19);
+            this.maskedTextBoxYear.Size = new System.Drawing.Size(77, 23);
             this.maskedTextBoxYear.TabIndex = 48;
             this.maskedTextBoxYear.Text = "2000";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 32);
+            this.label2.Location = new System.Drawing.Point(81, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 49;
             this.label2.Text = "年份";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 8);
+            this.label3.Location = new System.Drawing.Point(227, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 12);
+            this.label3.Size = new System.Drawing.Size(115, 15);
             this.label3.TabIndex = 50;
             this.label3.Text = "输入16位的seed";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(170, 24);
+            this.label4.Location = new System.Drawing.Point(227, 30);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 12);
+            this.label4.Size = new System.Drawing.Size(296, 15);
             this.label4.TabIndex = 51;
             this.label4.Text = "或32位seed，用于查找最接近的16位来匹配";
             // 
             // thirdGenSeedToTime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 358);
+            this.ClientSize = new System.Drawing.Size(541, 448);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -205,9 +219,10 @@
             this.Controls.Add(this.seedToTimeSeed);
             this.Controls.Add(this.label20);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "thirdGenSeedToTime";
-            this.Text = "16位 Seed to Time";
+            this.Text = "Seed to Time（有电红/蓝宝石）";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

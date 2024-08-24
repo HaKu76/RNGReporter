@@ -120,7 +120,7 @@
             this.btnClearSpD.Size = new System.Drawing.Size(42, 21);
             this.btnClearSpD.TabIndex = 280;
             this.btnClearSpD.TabStop = false;
-            this.btnClearSpD.Text = "Clear";
+            this.btnClearSpD.Text = "清空";
             this.btnClearSpD.Click += new System.EventHandler(this.btnClearSpD_Click);
             // 
             // btnClearSpA
@@ -134,17 +134,17 @@
             this.btnClearSpA.Size = new System.Drawing.Size(42, 21);
             this.btnClearSpA.TabIndex = 276;
             this.btnClearSpA.TabStop = false;
-            this.btnClearSpA.Text = "Clear";
+            this.btnClearSpA.Text = "清空";
             this.btnClearSpA.Click += new System.EventHandler(this.btnClearSpA_Click);
             // 
             // lblSpe
             // 
             this.lblSpe.AutoSize = true;
-            this.lblSpe.Location = new System.Drawing.Point(5, 141);
+            this.lblSpe.Location = new System.Drawing.Point(4, 141);
             this.lblSpe.Name = "lblSpe";
             this.lblSpe.Size = new System.Drawing.Size(26, 13);
             this.lblSpe.TabIndex = 281;
-            this.lblSpe.Text = "Spe";
+            this.lblSpe.Text = "速度";
             this.lblSpe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnClearDef
@@ -158,7 +158,7 @@
             this.btnClearDef.Size = new System.Drawing.Size(42, 21);
             this.btnClearDef.TabIndex = 272;
             this.btnClearDef.TabStop = false;
-            this.btnClearDef.Text = "Clear";
+            this.btnClearDef.Text = "清空";
             this.btnClearDef.Click += new System.EventHandler(this.btnClearDef_Click);
             // 
             // btnClearAtk
@@ -172,13 +172,13 @@
             this.btnClearAtk.Size = new System.Drawing.Size(42, 21);
             this.btnClearAtk.TabIndex = 268;
             this.btnClearAtk.TabStop = false;
-            this.btnClearAtk.Text = "Clear";
+            this.btnClearAtk.Text = "清空";
             this.btnClearAtk.Click += new System.EventHandler(this.btnClearAtk_Click);
             // 
             // lblHP
             // 
             this.lblHP.AutoSize = true;
-            this.lblHP.Location = new System.Drawing.Point(9, 6);
+            this.lblHP.Location = new System.Drawing.Point(4, 6);
             this.lblHP.Name = "lblHP";
             this.lblHP.Size = new System.Drawing.Size(22, 13);
             this.lblHP.TabIndex = 261;
@@ -210,17 +210,17 @@
             this.btnClearHP.Size = new System.Drawing.Size(42, 21);
             this.btnClearHP.TabIndex = 264;
             this.btnClearHP.TabStop = false;
-            this.btnClearHP.Text = "Clear";
+            this.btnClearHP.Text = "清空";
             this.btnClearHP.Click += new System.EventHandler(this.btnClearHP_Click);
             // 
             // lblAtk
             // 
             this.lblAtk.AutoSize = true;
-            this.lblAtk.Location = new System.Drawing.Point(8, 33);
+            this.lblAtk.Location = new System.Drawing.Point(4, 33);
             this.lblAtk.Name = "lblAtk";
             this.lblAtk.Size = new System.Drawing.Size(23, 13);
             this.lblAtk.TabIndex = 265;
-            this.lblAtk.Text = "Atk";
+            this.lblAtk.Text = "攻击";
             this.lblAtk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn30Spe
@@ -240,11 +240,11 @@
             // lblDef
             // 
             this.lblDef.AutoSize = true;
-            this.lblDef.Location = new System.Drawing.Point(7, 60);
+            this.lblDef.Location = new System.Drawing.Point(4, 60);
             this.lblDef.Name = "lblDef";
             this.lblDef.Size = new System.Drawing.Size(24, 13);
             this.lblDef.TabIndex = 269;
-            this.lblDef.Text = "Def";
+            this.lblDef.Text = "防御";
             this.lblDef.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn30SpD
@@ -268,7 +268,7 @@
             this.lblSpA.Name = "lblSpA";
             this.lblSpA.Size = new System.Drawing.Size(27, 13);
             this.lblSpA.TabIndex = 273;
-            this.lblSpA.Text = "SpA";
+            this.lblSpA.Text = "特攻";
             this.lblSpA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnClearSpe
@@ -282,17 +282,17 @@
             this.btnClearSpe.Size = new System.Drawing.Size(42, 21);
             this.btnClearSpe.TabIndex = 284;
             this.btnClearSpe.TabStop = false;
-            this.btnClearSpe.Text = "Clear";
+            this.btnClearSpe.Text = "清空";
             this.btnClearSpe.Click += new System.EventHandler(this.btnClearSpe_Click);
             // 
             // lblSpD
             // 
             this.lblSpD.AutoSize = true;
-            this.lblSpD.Location = new System.Drawing.Point(3, 114);
+            this.lblSpD.Location = new System.Drawing.Point(4, 114);
             this.lblSpD.Name = "lblSpD";
             this.lblSpD.Size = new System.Drawing.Size(28, 13);
             this.lblSpD.TabIndex = 277;
-            this.lblSpD.Text = "SpD";
+            this.lblSpD.Text = "特防";
             this.lblSpD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn30SpA

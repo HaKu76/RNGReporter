@@ -30,17 +30,17 @@ namespace RNGReporter
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonOk = new RNGReporter.GlassButton();
             this.buttonCancel = new RNGReporter.GlassButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -340,7 +340,7 @@ namespace RNGReporter
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Year";
             // 
@@ -349,16 +349,16 @@ namespace RNGReporter
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(54, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Month";
+            this.label2.Text = "月份 ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(100, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Date";
             // 
@@ -367,7 +367,7 @@ namespace RNGReporter
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(148, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Hour";
             // 
@@ -376,7 +376,7 @@ namespace RNGReporter
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(291, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Delay";
             // 
@@ -385,7 +385,7 @@ namespace RNGReporter
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(241, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Second";
             // 
@@ -394,7 +394,7 @@ namespace RNGReporter
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(197, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.Size = new System.Drawing.Size(50, 17);
             this.label7.TabIndex = 4;
             this.label7.Text = "Minute";
             // 
@@ -403,7 +403,7 @@ namespace RNGReporter
             this.label_main_seed.AutoSize = true;
             this.label_main_seed.Location = new System.Drawing.Point(165, 420);
             this.label_main_seed.Name = "label_main_seed";
-            this.label_main_seed.Size = new System.Drawing.Size(35, 13);
+            this.label_main_seed.Size = new System.Drawing.Size(45, 17);
             this.label_main_seed.TabIndex = 2;
             this.label_main_seed.Text = "Seed:";
             // 
@@ -412,7 +412,7 @@ namespace RNGReporter
             this.labelSeed.AutoSize = true;
             this.labelSeed.Location = new System.Drawing.Point(206, 420);
             this.labelSeed.Name = "labelSeed";
-            this.labelSeed.Size = new System.Drawing.Size(0, 13);
+            this.labelSeed.Size = new System.Drawing.Size(0, 17);
             this.labelSeed.TabIndex = 3;
             // 
             // buttonSimpleSeed
@@ -477,10 +477,10 @@ namespace RNGReporter
             this.tabPage1.Controls.Add(this.label_a_d);
             this.tabPage1.Controls.Add(this.maskedTextBoxDate_A);
             this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(509, 369);
+            this.tabPage1.Size = new System.Drawing.Size(509, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Find Seed by IVs";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -490,7 +490,7 @@ namespace RNGReporter
             this.radioButton_SIV_OPEN.AutoSize = true;
             this.radioButton_SIV_OPEN.Location = new System.Drawing.Point(190, 133);
             this.radioButton_SIV_OPEN.Name = "radioButton_SIV_OPEN";
-            this.radioButton_SIV_OPEN.Size = new System.Drawing.Size(51, 17);
+            this.radioButton_SIV_OPEN.Size = new System.Drawing.Size(64, 21);
             this.radioButton_SIV_OPEN.TabIndex = 68;
             this.radioButton_SIV_OPEN.Text = "Open";
             this.radioButton_SIV_OPEN.UseVisualStyleBackColor = true;
@@ -501,7 +501,7 @@ namespace RNGReporter
             this.radioButton_SIV_CUSTOM.AutoSize = true;
             this.radioButton_SIV_CUSTOM.Location = new System.Drawing.Point(124, 133);
             this.radioButton_SIV_CUSTOM.Name = "radioButton_SIV_CUSTOM";
-            this.radioButton_SIV_CUSTOM.Size = new System.Drawing.Size(60, 17);
+            this.radioButton_SIV_CUSTOM.Size = new System.Drawing.Size(76, 21);
             this.radioButton_SIV_CUSTOM.TabIndex = 67;
             this.radioButton_SIV_CUSTOM.Text = "Custom";
             this.radioButton_SIV_CUSTOM.UseVisualStyleBackColor = true;
@@ -512,7 +512,7 @@ namespace RNGReporter
             this.radioButton_SIV_HGSS.AutoSize = true;
             this.radioButton_SIV_HGSS.Location = new System.Drawing.Point(63, 133);
             this.radioButton_SIV_HGSS.Name = "radioButton_SIV_HGSS";
-            this.radioButton_SIV_HGSS.Size = new System.Drawing.Size(55, 17);
+            this.radioButton_SIV_HGSS.Size = new System.Drawing.Size(68, 21);
             this.radioButton_SIV_HGSS.TabIndex = 66;
             this.radioButton_SIV_HGSS.Text = "HGSS";
             this.radioButton_SIV_HGSS.UseVisualStyleBackColor = true;
@@ -523,7 +523,7 @@ namespace RNGReporter
             this.radioButton_SIV_DPP.Checked = true;
             this.radioButton_SIV_DPP.Location = new System.Drawing.Point(10, 133);
             this.radioButton_SIV_DPP.Name = "radioButton_SIV_DPP";
-            this.radioButton_SIV_DPP.Size = new System.Drawing.Size(47, 17);
+            this.radioButton_SIV_DPP.Size = new System.Drawing.Size(57, 21);
             this.radioButton_SIV_DPP.TabIndex = 65;
             this.radioButton_SIV_DPP.TabStop = true;
             this.radioButton_SIV_DPP.Text = "DPP";
@@ -534,7 +534,7 @@ namespace RNGReporter
             this.checkBoxLowDelay.AutoSize = true;
             this.checkBoxLowDelay.Location = new System.Drawing.Point(249, 134);
             this.checkBoxLowDelay.Name = "checkBoxLowDelay";
-            this.checkBoxLowDelay.Size = new System.Drawing.Size(118, 17);
+            this.checkBoxLowDelay.Size = new System.Drawing.Size(151, 21);
             this.checkBoxLowDelay.TabIndex = 64;
             this.checkBoxLowDelay.Text = "Delay Below 10000";
             this.checkBoxLowDelay.UseVisualStyleBackColor = true;
@@ -545,9 +545,9 @@ namespace RNGReporter
             this.label_SIV_MaxDelay.AutoSize = true;
             this.label_SIV_MaxDelay.Location = new System.Drawing.Point(442, 7);
             this.label_SIV_MaxDelay.Name = "label_SIV_MaxDelay";
-            this.label_SIV_MaxDelay.Size = new System.Drawing.Size(57, 13);
+            this.label_SIV_MaxDelay.Size = new System.Drawing.Size(72, 17);
             this.label_SIV_MaxDelay.TabIndex = 63;
-            this.label_SIV_MaxDelay.Text = "Max Delay";
+            this.label_SIV_MaxDelay.Text = "最大Delay";
             this.label_SIV_MaxDelay.Visible = false;
             // 
             // label_SIV_MinDelay
@@ -555,9 +555,9 @@ namespace RNGReporter
             this.label_SIV_MinDelay.AutoSize = true;
             this.label_SIV_MinDelay.Location = new System.Drawing.Point(385, 7);
             this.label_SIV_MinDelay.Name = "label_SIV_MinDelay";
-            this.label_SIV_MinDelay.Size = new System.Drawing.Size(54, 13);
+            this.label_SIV_MinDelay.Size = new System.Drawing.Size(72, 17);
             this.label_SIV_MinDelay.TabIndex = 62;
-            this.label_SIV_MinDelay.Text = "Min Delay";
+            this.label_SIV_MinDelay.Text = "最小Delay";
             this.label_SIV_MinDelay.Visible = false;
             // 
             // maskedTextBoxMaxDelay_A
@@ -585,9 +585,9 @@ namespace RNGReporter
             this.label_a_y.AutoSize = true;
             this.label_a_y.Location = new System.Drawing.Point(7, 7);
             this.label_a_y.Name = "label_a_y";
-            this.label_a_y.Size = new System.Drawing.Size(29, 13);
+            this.label_a_y.Size = new System.Drawing.Size(36, 17);
             this.label_a_y.TabIndex = 0;
-            this.label_a_y.Text = "Year";
+            this.label_a_y.Text = "年份";
             // 
             // dataGridViewValues
             // 
@@ -609,6 +609,7 @@ namespace RNGReporter
             this.dataGridViewValues.Name = "dataGridViewValues";
             this.dataGridViewValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewValues.RowHeadersVisible = false;
+            this.dataGridViewValues.RowHeadersWidth = 51;
             this.dataGridViewValues.RowTemplate.Height = 20;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowCellErrors = false;
@@ -623,23 +624,28 @@ namespace RNGReporter
             // 
             this.Type.DataPropertyName = "Type";
             this.Type.HeaderText = "Type";
+            this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
+            this.Type.Width = 125;
             // 
             // FullSeed
             // 
             this.FullSeed.DataPropertyName = "RngSeed";
-            dataGridViewCellStyle12.Format = "X";
-            dataGridViewCellStyle12.NullValue = null;
-            this.FullSeed.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle1.Format = "X";
+            dataGridViewCellStyle1.NullValue = null;
+            this.FullSeed.DefaultCellStyle = dataGridViewCellStyle1;
             this.FullSeed.HeaderText = "Seed";
+            this.FullSeed.MinimumWidth = 6;
             this.FullSeed.Name = "FullSeed";
             this.FullSeed.ReadOnly = true;
+            this.FullSeed.Width = 125;
             // 
             // Frame
             // 
             this.Frame.DataPropertyName = "Offset";
             this.Frame.HeaderText = "Method 1 Frame";
+            this.Frame.MinimumWidth = 6;
             this.Frame.Name = "Frame";
             this.Frame.ReadOnly = true;
             this.Frame.Width = 150;
@@ -647,7 +653,8 @@ namespace RNGReporter
             // Secs
             // 
             this.Secs.DataPropertyName = "Seconds";
-            this.Secs.HeaderText = "Seconds";
+            this.Secs.HeaderText = "秒数";
+            this.Secs.MinimumWidth = 6;
             this.Secs.Name = "Secs";
             this.Secs.ReadOnly = true;
             this.Secs.Width = 60;
@@ -656,6 +663,7 @@ namespace RNGReporter
             // 
             this.Delay.DataPropertyName = "Delay";
             this.Delay.HeaderText = "Delay";
+            this.Delay.MinimumWidth = 6;
             this.Delay.Name = "Delay";
             this.Delay.ReadOnly = true;
             this.Delay.Width = 60;
@@ -707,9 +715,9 @@ namespace RNGReporter
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 46);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.Size = new System.Drawing.Size(36, 17);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Nature";
+            this.label10.Text = "性格";
             // 
             // maskedTextBoxYear_A
             // 
@@ -736,18 +744,18 @@ namespace RNGReporter
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(325, 45);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(26, 13);
+            this.label15.Size = new System.Drawing.Size(36, 17);
             this.label15.TabIndex = 22;
-            this.label15.Text = "Spe";
+            this.label15.Text = "速度";
             // 
             // label_a_min
             // 
             this.label_a_min.AutoSize = true;
             this.label_a_min.Location = new System.Drawing.Point(246, 6);
             this.label_a_min.Name = "label_a_min";
-            this.label_a_min.Size = new System.Drawing.Size(69, 13);
+            this.label_a_min.Size = new System.Drawing.Size(61, 17);
             this.label_a_min.TabIndex = 8;
-            this.label_a_min.Text = "Minute (0-59)";
+            this.label_a_min.Text = "分(0-59)";
             // 
             // maskedTextBoxSpA_A
             // 
@@ -764,9 +772,9 @@ namespace RNGReporter
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(287, 45);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 13);
+            this.label16.Size = new System.Drawing.Size(36, 17);
             this.label16.TabIndex = 20;
-            this.label16.Text = "SpD";
+            this.label16.Text = "特防";
             // 
             // maskedTextBoxMonth_A
             // 
@@ -792,18 +800,18 @@ namespace RNGReporter
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(245, 45);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 13);
+            this.label17.Size = new System.Drawing.Size(36, 17);
             this.label17.TabIndex = 18;
-            this.label17.Text = "SpA";
+            this.label17.Text = "特攻";
             // 
             // label_a_h
             // 
             this.label_a_h.AutoSize = true;
             this.label_a_h.Location = new System.Drawing.Point(161, 6);
             this.label_a_h.Name = "label_a_h";
-            this.label_a_h.Size = new System.Drawing.Size(60, 13);
+            this.label_a_h.Size = new System.Drawing.Size(61, 17);
             this.label_a_h.TabIndex = 6;
-            this.label_a_h.Text = "Hour (0-23)";
+            this.label_a_h.Text = "时(0-23)";
             // 
             // maskedTextBoxSpe_A
             // 
@@ -820,9 +828,9 @@ namespace RNGReporter
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(203, 45);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(24, 13);
+            this.label18.Size = new System.Drawing.Size(36, 17);
             this.label18.TabIndex = 16;
-            this.label18.Text = "Def";
+            this.label18.Text = "防御";
             // 
             // maskedTextBoxHours_A
             // 
@@ -838,9 +846,9 @@ namespace RNGReporter
             this.label_a_m.AutoSize = true;
             this.label_a_m.Location = new System.Drawing.Point(54, 7);
             this.label_a_m.Name = "label_a_m";
-            this.label_a_m.Size = new System.Drawing.Size(37, 13);
+            this.label_a_m.Size = new System.Drawing.Size(36, 17);
             this.label_a_m.TabIndex = 2;
-            this.label_a_m.Text = "Month";
+            this.label_a_m.Text = "月份";
             // 
             // comboBoxNature_A
             // 
@@ -850,7 +858,7 @@ namespace RNGReporter
             this.comboBoxNature_A.Location = new System.Drawing.Point(10, 61);
             this.comboBoxNature_A.Name = "comboBoxNature_A";
             this.comboBoxNature_A.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxNature_A.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxNature_A.Size = new System.Drawing.Size(105, 25);
             this.comboBoxNature_A.TabIndex = 11;
             // 
             // label19
@@ -858,18 +866,18 @@ namespace RNGReporter
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(161, 45);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(23, 13);
+            this.label19.Size = new System.Drawing.Size(36, 17);
             this.label19.TabIndex = 14;
-            this.label19.Text = "Atk";
+            this.label19.Text = "攻击";
             // 
             // label_a_d
             // 
             this.label_a_d.AutoSize = true;
             this.label_a_d.Location = new System.Drawing.Point(101, 6);
             this.label_a_d.Name = "label_a_d";
-            this.label_a_d.Size = new System.Drawing.Size(30, 13);
+            this.label_a_d.Size = new System.Drawing.Size(36, 17);
             this.label_a_d.TabIndex = 4;
-            this.label_a_d.Text = "Date";
+            this.label_a_d.Text = "日期";
             // 
             // maskedTextBoxDate_A
             // 
@@ -885,7 +893,7 @@ namespace RNGReporter
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(120, 45);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 13);
+            this.label20.Size = new System.Drawing.Size(27, 17);
             this.label20.TabIndex = 12;
             this.label20.Text = "HP";
             // 
@@ -930,10 +938,10 @@ namespace RNGReporter
             this.tabPage3.Controls.Add(this.maskedTextBoxSpD_Stat);
             this.tabPage3.Controls.Add(this.maskedTextBoxSpA_Stat);
             this.tabPage3.Controls.Add(this.maskedTextBoxHP_Stat);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(509, 369);
+            this.tabPage3.Size = new System.Drawing.Size(509, 365);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Find Seed by Stats";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -943,7 +951,7 @@ namespace RNGReporter
             this.radioButton_SS_CUSTOM.AutoSize = true;
             this.radioButton_SS_CUSTOM.Location = new System.Drawing.Point(124, 133);
             this.radioButton_SS_CUSTOM.Name = "radioButton_SS_CUSTOM";
-            this.radioButton_SS_CUSTOM.Size = new System.Drawing.Size(60, 17);
+            this.radioButton_SS_CUSTOM.Size = new System.Drawing.Size(76, 21);
             this.radioButton_SS_CUSTOM.TabIndex = 73;
             this.radioButton_SS_CUSTOM.Text = "Custom";
             this.radioButton_SS_CUSTOM.UseVisualStyleBackColor = true;
@@ -954,9 +962,9 @@ namespace RNGReporter
             this.label_SS_MaxDelay.AutoSize = true;
             this.label_SS_MaxDelay.Location = new System.Drawing.Point(442, 7);
             this.label_SS_MaxDelay.Name = "label_SS_MaxDelay";
-            this.label_SS_MaxDelay.Size = new System.Drawing.Size(57, 13);
+            this.label_SS_MaxDelay.Size = new System.Drawing.Size(72, 17);
             this.label_SS_MaxDelay.TabIndex = 72;
-            this.label_SS_MaxDelay.Text = "Max Delay";
+            this.label_SS_MaxDelay.Text = "最大Delay";
             this.label_SS_MaxDelay.Visible = false;
             // 
             // label_SS_MinDelay
@@ -964,9 +972,9 @@ namespace RNGReporter
             this.label_SS_MinDelay.AutoSize = true;
             this.label_SS_MinDelay.Location = new System.Drawing.Point(385, 7);
             this.label_SS_MinDelay.Name = "label_SS_MinDelay";
-            this.label_SS_MinDelay.Size = new System.Drawing.Size(54, 13);
+            this.label_SS_MinDelay.Size = new System.Drawing.Size(72, 17);
             this.label_SS_MinDelay.TabIndex = 71;
-            this.label_SS_MinDelay.Text = "Min Delay";
+            this.label_SS_MinDelay.Text = "最小Delay";
             this.label_SS_MinDelay.Visible = false;
             // 
             // radioButton_SS_HGSS
@@ -974,7 +982,7 @@ namespace RNGReporter
             this.radioButton_SS_HGSS.AutoSize = true;
             this.radioButton_SS_HGSS.Location = new System.Drawing.Point(63, 133);
             this.radioButton_SS_HGSS.Name = "radioButton_SS_HGSS";
-            this.radioButton_SS_HGSS.Size = new System.Drawing.Size(55, 17);
+            this.radioButton_SS_HGSS.Size = new System.Drawing.Size(68, 21);
             this.radioButton_SS_HGSS.TabIndex = 68;
             this.radioButton_SS_HGSS.Text = "HGSS";
             this.radioButton_SS_HGSS.UseVisualStyleBackColor = true;
@@ -985,7 +993,7 @@ namespace RNGReporter
             this.radioButton_SS_DPP.Checked = true;
             this.radioButton_SS_DPP.Location = new System.Drawing.Point(10, 133);
             this.radioButton_SS_DPP.Name = "radioButton_SS_DPP";
-            this.radioButton_SS_DPP.Size = new System.Drawing.Size(47, 17);
+            this.radioButton_SS_DPP.Size = new System.Drawing.Size(57, 21);
             this.radioButton_SS_DPP.TabIndex = 67;
             this.radioButton_SS_DPP.TabStop = true;
             this.radioButton_SS_DPP.Text = "DPP";
@@ -1009,45 +1017,45 @@ namespace RNGReporter
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(7, 7);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(29, 13);
+            this.label32.Size = new System.Drawing.Size(36, 17);
             this.label32.TabIndex = 0;
-            this.label32.Text = "Year";
+            this.label32.Text = "年份";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(246, 6);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(69, 13);
+            this.label33.Size = new System.Drawing.Size(75, 17);
             this.label33.TabIndex = 8;
-            this.label33.Text = "Minute (0-59)";
+            this.label33.Text = "分钟(0-59)";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(161, 6);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(60, 13);
+            this.label34.Size = new System.Drawing.Size(75, 17);
             this.label34.TabIndex = 6;
-            this.label34.Text = "Hour (0-23)";
+            this.label34.Text = "时钟(0-23)";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(54, 7);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(37, 13);
+            this.label35.Size = new System.Drawing.Size(36, 17);
             this.label35.TabIndex = 2;
-            this.label35.Text = "Month";
+            this.label35.Text = "月份";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(101, 6);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(30, 13);
+            this.label36.Size = new System.Drawing.Size(36, 17);
             this.label36.TabIndex = 4;
-            this.label36.Text = "Date";
+            this.label36.Text = "日期";
             // 
             // dataGridViewValues_Stat
             // 
@@ -1069,6 +1077,7 @@ namespace RNGReporter
             this.dataGridViewValues_Stat.Name = "dataGridViewValues_Stat";
             this.dataGridViewValues_Stat.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewValues_Stat.RowHeadersVisible = false;
+            this.dataGridViewValues_Stat.RowHeadersWidth = 51;
             this.dataGridViewValues_Stat.RowTemplate.Height = 20;
             this.dataGridViewValues_Stat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues_Stat.ShowCellErrors = false;
@@ -1083,16 +1092,19 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Type";
             this.dataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // OffsetSeed
             // 
             this.OffsetSeed.DataPropertyName = "RngSeed";
-            dataGridViewCellStyle13.Format = "X";
-            dataGridViewCellStyle13.NullValue = null;
-            this.OffsetSeed.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle2.Format = "X";
+            dataGridViewCellStyle2.NullValue = null;
+            this.OffsetSeed.DefaultCellStyle = dataGridViewCellStyle2;
             this.OffsetSeed.HeaderText = "Seed";
+            this.OffsetSeed.MinimumWidth = 6;
             this.OffsetSeed.Name = "OffsetSeed";
             this.OffsetSeed.ReadOnly = true;
             this.OffsetSeed.Width = 150;
@@ -1101,6 +1113,7 @@ namespace RNGReporter
             // 
             this.OffsetStat.DataPropertyName = "Offset";
             this.OffsetStat.HeaderText = "Offset";
+            this.OffsetStat.MinimumWidth = 6;
             this.OffsetStat.Name = "OffsetStat";
             this.OffsetStat.ReadOnly = true;
             this.OffsetStat.Visible = false;
@@ -1109,7 +1122,8 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Seconds";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Seconds";
+            this.dataGridViewTextBoxColumn4.HeaderText = "秒数";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 60;
@@ -1118,6 +1132,7 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Delay";
             this.dataGridViewTextBoxColumn5.HeaderText = "Delay";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 60;
@@ -1127,52 +1142,52 @@ namespace RNGReporter
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(280, 86);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(26, 13);
+            this.label22.Size = new System.Drawing.Size(36, 17);
             this.label22.TabIndex = 28;
-            this.label22.Text = "Spe";
+            this.label22.Text = "速度";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(238, 86);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(28, 13);
+            this.label23.Size = new System.Drawing.Size(36, 17);
             this.label23.TabIndex = 26;
-            this.label23.Text = "SpD";
+            this.label23.Text = "特防";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(196, 86);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(27, 13);
+            this.label24.Size = new System.Drawing.Size(36, 17);
             this.label24.TabIndex = 24;
-            this.label24.Text = "SpA";
+            this.label24.Text = "特攻";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(154, 86);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(24, 13);
+            this.label25.Size = new System.Drawing.Size(36, 17);
             this.label25.TabIndex = 22;
-            this.label25.Text = "Def";
+            this.label25.Text = "防御";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(113, 86);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(23, 13);
+            this.label26.Size = new System.Drawing.Size(36, 17);
             this.label26.TabIndex = 20;
-            this.label26.Text = "Atk";
+            this.label26.Text = "攻击";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(70, 86);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(22, 13);
+            this.label27.Size = new System.Drawing.Size(27, 17);
             this.label27.TabIndex = 18;
             this.label27.Text = "HP";
             // 
@@ -1181,18 +1196,18 @@ namespace RNGReporter
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(319, 45);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(71, 13);
+            this.label28.Size = new System.Drawing.Size(36, 17);
             this.label28.TabIndex = 14;
-            this.label28.Text = "Characteristic";
+            this.label28.Text = "个性";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(184, 45);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(39, 13);
+            this.label29.Size = new System.Drawing.Size(36, 17);
             this.label29.TabIndex = 12;
-            this.label29.Text = "Nature";
+            this.label29.Text = "性格";
             // 
             // comboBoxNature_Stat
             // 
@@ -1202,7 +1217,7 @@ namespace RNGReporter
             this.comboBoxNature_Stat.Location = new System.Drawing.Point(187, 61);
             this.comboBoxNature_Stat.Name = "comboBoxNature_Stat";
             this.comboBoxNature_Stat.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxNature_Stat.Size = new System.Drawing.Size(129, 21);
+            this.comboBoxNature_Stat.Size = new System.Drawing.Size(129, 25);
             this.comboBoxNature_Stat.TabIndex = 13;
             // 
             // comboBoxCharacteristic_Stat
@@ -1213,7 +1228,7 @@ namespace RNGReporter
             this.comboBoxCharacteristic_Stat.Location = new System.Drawing.Point(322, 61);
             this.comboBoxCharacteristic_Stat.Name = "comboBoxCharacteristic_Stat";
             this.comboBoxCharacteristic_Stat.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxCharacteristic_Stat.Size = new System.Drawing.Size(179, 21);
+            this.comboBoxCharacteristic_Stat.Size = new System.Drawing.Size(179, 25);
             this.comboBoxCharacteristic_Stat.TabIndex = 15;
             // 
             // label30
@@ -1221,18 +1236,18 @@ namespace RNGReporter
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(7, 86);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(33, 13);
+            this.label30.Size = new System.Drawing.Size(36, 17);
             this.label30.TabIndex = 16;
-            this.label30.Text = "Level";
+            this.label30.Text = "等级";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(7, 45);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(52, 13);
+            this.label31.Size = new System.Drawing.Size(50, 17);
             this.label31.TabIndex = 10;
-            this.label31.Text = "Pokemon";
+            this.label31.Text = "宝可梦";
             // 
             // comboBoxPokemon_Stat
             // 
@@ -1242,7 +1257,7 @@ namespace RNGReporter
             this.comboBoxPokemon_Stat.Location = new System.Drawing.Point(10, 61);
             this.comboBoxPokemon_Stat.Name = "comboBoxPokemon_Stat";
             this.comboBoxPokemon_Stat.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxPokemon_Stat.Size = new System.Drawing.Size(171, 21);
+            this.comboBoxPokemon_Stat.Size = new System.Drawing.Size(171, 25);
             this.comboBoxPokemon_Stat.TabIndex = 11;
             // 
             // maskedTextBoxMaxDelay_Stat
@@ -1420,10 +1435,10 @@ namespace RNGReporter
             this.tabPage4.Controls.Add(this.maskedTextBoxMinSpeed);
             this.tabPage4.Controls.Add(this.maskedTextBoxHours_IVRange);
             this.tabPage4.Controls.Add(this.maskedTextBoxDate_IVRange);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(509, 369);
+            this.tabPage4.Size = new System.Drawing.Size(509, 365);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Find Seed by IV Range";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1446,7 +1461,7 @@ namespace RNGReporter
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(309, 66);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(34, 13);
+            this.label98.Size = new System.Drawing.Size(44, 17);
             this.label98.TabIndex = 59;
             this.label98.Text = "Delay";
             // 
@@ -1455,18 +1470,18 @@ namespace RNGReporter
             this.label96.AutoSize = true;
             this.label96.Location = new System.Drawing.Point(14, 111);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(27, 13);
+            this.label96.Size = new System.Drawing.Size(33, 17);
             this.label96.TabIndex = 56;
-            this.label96.Text = "Max";
+            this.label96.Text = "最大";
             // 
             // label97
             // 
             this.label97.AutoSize = true;
             this.label97.Location = new System.Drawing.Point(14, 87);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(24, 13);
+            this.label97.Size = new System.Drawing.Size(30, 17);
             this.label97.TabIndex = 55;
-            this.label97.Text = "Min";
+            this.label97.Text = "最小";
             // 
             // dataGridViewSeeds_IVRange
             // 
@@ -1488,6 +1503,7 @@ namespace RNGReporter
             this.dataGridViewSeeds_IVRange.Name = "dataGridViewSeeds_IVRange";
             this.dataGridViewSeeds_IVRange.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewSeeds_IVRange.RowHeadersVisible = false;
+            this.dataGridViewSeeds_IVRange.RowHeadersWidth = 51;
             this.dataGridViewSeeds_IVRange.RowTemplate.Height = 20;
             this.dataGridViewSeeds_IVRange.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSeeds_IVRange.ShowCellErrors = false;
@@ -1501,23 +1517,28 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Type";
             this.dataGridViewTextBoxColumn14.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 125;
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "RngSeed";
-            dataGridViewCellStyle14.Format = "X";
-            dataGridViewCellStyle14.NullValue = null;
-            this.dataGridViewTextBoxColumn15.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle3.Format = "X";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn15.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn15.HeaderText = "Seed";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 125;
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "Offset";
             this.dataGridViewTextBoxColumn16.HeaderText = "Method 1 Frame";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
             this.dataGridViewTextBoxColumn16.Width = 150;
@@ -1525,7 +1546,8 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "Seconds";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Seconds";
+            this.dataGridViewTextBoxColumn17.HeaderText = "秒数";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.Width = 60;
@@ -1534,6 +1556,7 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "Delay";
             this.dataGridViewTextBoxColumn18.HeaderText = "Delay";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.ReadOnly = true;
             this.dataGridViewTextBoxColumn18.Width = 60;
@@ -1543,7 +1566,7 @@ namespace RNGReporter
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(7, 7);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(29, 13);
+            this.label37.Size = new System.Drawing.Size(38, 17);
             this.label37.TabIndex = 24;
             this.label37.Text = "Year";
             // 
@@ -1552,25 +1575,25 @@ namespace RNGReporter
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(314, 6);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(39, 13);
+            this.label38.Size = new System.Drawing.Size(36, 17);
             this.label38.TabIndex = 34;
-            this.label38.Text = "Nature";
+            this.label38.Text = "性格";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(260, 66);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(26, 13);
+            this.label39.Size = new System.Drawing.Size(36, 17);
             this.label39.TabIndex = 46;
-            this.label39.Text = "Spe";
+            this.label39.Text = "速度";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(246, 6);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(69, 13);
+            this.label40.Size = new System.Drawing.Size(93, 17);
             this.label40.TabIndex = 32;
             this.label40.Text = "Minute (0-59)";
             // 
@@ -1579,25 +1602,25 @@ namespace RNGReporter
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(222, 66);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(28, 13);
+            this.label41.Size = new System.Drawing.Size(36, 17);
             this.label41.TabIndex = 44;
-            this.label41.Text = "SpD";
+            this.label41.Text = "特防";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Location = new System.Drawing.Point(180, 66);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(27, 13);
+            this.label42.Size = new System.Drawing.Size(36, 17);
             this.label42.TabIndex = 42;
-            this.label42.Text = "SpA";
+            this.label42.Text = "特攻";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Location = new System.Drawing.Point(161, 6);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(60, 13);
+            this.label43.Size = new System.Drawing.Size(82, 17);
             this.label43.TabIndex = 30;
             this.label43.Text = "Hour (0-23)";
             // 
@@ -1606,18 +1629,18 @@ namespace RNGReporter
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(138, 66);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(24, 13);
+            this.label44.Size = new System.Drawing.Size(36, 17);
             this.label44.TabIndex = 40;
-            this.label44.Text = "Def";
+            this.label44.Text = "防御";
             // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Location = new System.Drawing.Point(54, 7);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(37, 13);
+            this.label45.Size = new System.Drawing.Size(47, 17);
             this.label45.TabIndex = 26;
-            this.label45.Text = "Month";
+            this.label45.Text = "月份 ";
             // 
             // comboBoxNature_IVRange
             // 
@@ -1627,7 +1650,7 @@ namespace RNGReporter
             this.comboBoxNature_IVRange.Location = new System.Drawing.Point(312, 21);
             this.comboBoxNature_IVRange.Name = "comboBoxNature_IVRange";
             this.comboBoxNature_IVRange.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxNature_IVRange.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxNature_IVRange.Size = new System.Drawing.Size(105, 25);
             this.comboBoxNature_IVRange.TabIndex = 35;
             // 
             // label46
@@ -1635,16 +1658,16 @@ namespace RNGReporter
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(96, 66);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(23, 13);
+            this.label46.Size = new System.Drawing.Size(36, 17);
             this.label46.TabIndex = 38;
-            this.label46.Text = "Atk";
+            this.label46.Text = "攻击";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(101, 6);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(30, 13);
+            this.label47.Size = new System.Drawing.Size(38, 17);
             this.label47.TabIndex = 28;
             this.label47.Text = "Date";
             // 
@@ -1653,7 +1676,7 @@ namespace RNGReporter
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(55, 66);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(22, 13);
+            this.label48.Size = new System.Drawing.Size(27, 17);
             this.label48.TabIndex = 36;
             this.label48.Text = "HP";
             // 
@@ -1898,10 +1921,10 @@ namespace RNGReporter
             this.tabPage2.Controls.Add(this.maskedTextBoxDelay);
             this.tabPage2.Controls.Add(this.maskedTextBoxSeconds);
             this.tabPage2.Controls.Add(this.maskedTextBoxMinutes);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(509, 369);
+            this.tabPage2.Size = new System.Drawing.Size(509, 365);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Simple Seed Generator";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1911,7 +1934,7 @@ namespace RNGReporter
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(336, 174);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 13);
+            this.label14.Size = new System.Drawing.Size(72, 17);
             this.label14.TabIndex = 163;
             this.label14.Text = "Language";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1932,7 +1955,7 @@ namespace RNGReporter
             this.comboBoxLanguage.Location = new System.Drawing.Point(339, 190);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLanguage.Size = new System.Drawing.Size(147, 21);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(147, 25);
             this.comboBoxLanguage.TabIndex = 162;
             // 
             // label104
@@ -1940,7 +1963,7 @@ namespace RNGReporter
             this.label104.AutoSize = true;
             this.label104.Location = new System.Drawing.Point(10, 265);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(72, 13);
+            this.label104.Size = new System.Drawing.Size(94, 17);
             this.label104.TabIndex = 147;
             this.label104.Text = "Held Button 7";
             // 
@@ -1966,7 +1989,7 @@ namespace RNGReporter
             this.comboBoxButton7.Location = new System.Drawing.Point(13, 281);
             this.comboBoxButton7.Name = "comboBoxButton7";
             this.comboBoxButton7.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton7.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton7.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton7.TabIndex = 146;
             this.comboBoxButton7.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -1975,7 +1998,7 @@ namespace RNGReporter
             this.label105.AutoSize = true;
             this.label105.Location = new System.Drawing.Point(167, 221);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(72, 13);
+            this.label105.Size = new System.Drawing.Size(94, 17);
             this.label105.TabIndex = 145;
             this.label105.Text = "Held Button 6";
             // 
@@ -2001,7 +2024,7 @@ namespace RNGReporter
             this.comboBoxButton6.Location = new System.Drawing.Point(170, 237);
             this.comboBoxButton6.Name = "comboBoxButton6";
             this.comboBoxButton6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton6.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton6.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton6.TabIndex = 144;
             this.comboBoxButton6.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2010,7 +2033,7 @@ namespace RNGReporter
             this.label106.AutoSize = true;
             this.label106.Location = new System.Drawing.Point(193, 218);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(0, 13);
+            this.label106.Size = new System.Drawing.Size(0, 17);
             this.label106.TabIndex = 143;
             // 
             // label107
@@ -2018,7 +2041,7 @@ namespace RNGReporter
             this.label107.AutoSize = true;
             this.label107.Location = new System.Drawing.Point(10, 221);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(72, 13);
+            this.label107.Size = new System.Drawing.Size(94, 17);
             this.label107.TabIndex = 142;
             this.label107.Text = "Held Button 5";
             // 
@@ -2044,7 +2067,7 @@ namespace RNGReporter
             this.comboBoxButton5.Location = new System.Drawing.Point(13, 237);
             this.comboBoxButton5.Name = "comboBoxButton5";
             this.comboBoxButton5.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton5.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton5.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton5.TabIndex = 141;
             this.comboBoxButton5.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2053,7 +2076,7 @@ namespace RNGReporter
             this.label101.AutoSize = true;
             this.label101.Location = new System.Drawing.Point(336, 221);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(49, 13);
+            this.label101.Size = new System.Drawing.Size(63, 17);
             this.label101.TabIndex = 139;
             this.label101.Text = "DS Type";
             // 
@@ -2069,7 +2092,7 @@ namespace RNGReporter
             this.comboBoxDSType.Location = new System.Drawing.Point(338, 237);
             this.comboBoxDSType.Name = "comboBoxDSType";
             this.comboBoxDSType.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxDSType.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxDSType.Size = new System.Drawing.Size(148, 25);
             this.comboBoxDSType.TabIndex = 140;
             // 
             // checkBoxSoftReset
@@ -2077,7 +2100,7 @@ namespace RNGReporter
             this.checkBoxSoftReset.AutoSize = true;
             this.checkBoxSoftReset.Location = new System.Drawing.Point(338, 264);
             this.checkBoxSoftReset.Name = "checkBoxSoftReset";
-            this.checkBoxSoftReset.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxSoftReset.Size = new System.Drawing.Size(96, 21);
             this.checkBoxSoftReset.TabIndex = 6;
             this.checkBoxSoftReset.Text = "Soft Reset";
             this.checkBoxSoftReset.UseVisualStyleBackColor = true;
@@ -2087,7 +2110,7 @@ namespace RNGReporter
             this.textBoxButtonCode.Location = new System.Drawing.Point(13, 328);
             this.textBoxButtonCode.Name = "textBoxButtonCode";
             this.textBoxButtonCode.ReadOnly = true;
-            this.textBoxButtonCode.Size = new System.Drawing.Size(148, 20);
+            this.textBoxButtonCode.Size = new System.Drawing.Size(148, 23);
             this.textBoxButtonCode.TabIndex = 79;
             // 
             // label11
@@ -2095,7 +2118,7 @@ namespace RNGReporter
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(167, 174);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.Size = new System.Drawing.Size(94, 17);
             this.label11.TabIndex = 91;
             this.label11.Text = "Held Button 4";
             // 
@@ -2121,7 +2144,7 @@ namespace RNGReporter
             this.comboBoxButton4.Location = new System.Drawing.Point(170, 190);
             this.comboBoxButton4.Name = "comboBoxButton4";
             this.comboBoxButton4.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton4.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton4.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton4.TabIndex = 90;
             this.comboBoxButton4.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2130,7 +2153,7 @@ namespace RNGReporter
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(193, 171);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 13);
+            this.label12.Size = new System.Drawing.Size(0, 17);
             this.label12.TabIndex = 89;
             // 
             // label13
@@ -2138,7 +2161,7 @@ namespace RNGReporter
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(10, 174);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 13);
+            this.label13.Size = new System.Drawing.Size(94, 17);
             this.label13.TabIndex = 88;
             this.label13.Text = "Held Button 3";
             // 
@@ -2164,7 +2187,7 @@ namespace RNGReporter
             this.comboBoxButton3.Location = new System.Drawing.Point(13, 190);
             this.comboBoxButton3.Name = "comboBoxButton3";
             this.comboBoxButton3.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton3.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton3.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton3.TabIndex = 87;
             this.comboBoxButton3.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2173,7 +2196,7 @@ namespace RNGReporter
             this.label84.AutoSize = true;
             this.label84.Location = new System.Drawing.Point(167, 130);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(72, 13);
+            this.label84.Size = new System.Drawing.Size(94, 17);
             this.label84.TabIndex = 85;
             this.label84.Text = "Held Button 2";
             // 
@@ -2199,7 +2222,7 @@ namespace RNGReporter
             this.comboBoxButton2.Location = new System.Drawing.Point(170, 146);
             this.comboBoxButton2.Name = "comboBoxButton2";
             this.comboBoxButton2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton2.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton2.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton2.TabIndex = 84;
             this.comboBoxButton2.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2208,7 +2231,7 @@ namespace RNGReporter
             this.label99.AutoSize = true;
             this.label99.Location = new System.Drawing.Point(193, 127);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(0, 13);
+            this.label99.Size = new System.Drawing.Size(0, 17);
             this.label99.TabIndex = 83;
             // 
             // label100
@@ -2216,7 +2239,7 @@ namespace RNGReporter
             this.label100.AutoSize = true;
             this.label100.Location = new System.Drawing.Point(10, 130);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(72, 13);
+            this.label100.Size = new System.Drawing.Size(94, 17);
             this.label100.TabIndex = 82;
             this.label100.Text = "Held Button 1";
             // 
@@ -2242,7 +2265,7 @@ namespace RNGReporter
             this.comboBoxButton1.Location = new System.Drawing.Point(13, 146);
             this.comboBoxButton1.Name = "comboBoxButton1";
             this.comboBoxButton1.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton1.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxButton1.Size = new System.Drawing.Size(148, 25);
             this.comboBoxButton1.TabIndex = 81;
             this.comboBoxButton1.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2251,7 +2274,7 @@ namespace RNGReporter
             this.labelWarning.AutoSize = true;
             this.labelWarning.Location = new System.Drawing.Point(204, 245);
             this.labelWarning.Name = "labelWarning";
-            this.labelWarning.Size = new System.Drawing.Size(0, 13);
+            this.labelWarning.Size = new System.Drawing.Size(0, 17);
             this.labelWarning.TabIndex = 80;
             // 
             // radioButton5thGenNonCGear
@@ -2260,7 +2283,7 @@ namespace RNGReporter
             this.radioButton5thGenNonCGear.Checked = true;
             this.radioButton5thGenNonCGear.Location = new System.Drawing.Point(219, 62);
             this.radioButton5thGenNonCGear.Name = "radioButton5thGenNonCGear";
-            this.radioButton5thGenNonCGear.Size = new System.Drawing.Size(126, 17);
+            this.radioButton5thGenNonCGear.Size = new System.Drawing.Size(168, 21);
             this.radioButton5thGenNonCGear.TabIndex = 78;
             this.radioButton5thGenNonCGear.TabStop = true;
             this.radioButton5thGenNonCGear.Text = "5th Gen (non C-Gear)";
@@ -2271,7 +2294,7 @@ namespace RNGReporter
             this.radioButton5thGenCGear.AutoSize = true;
             this.radioButton5thGenCGear.Location = new System.Drawing.Point(97, 62);
             this.radioButton5thGenCGear.Name = "radioButton5thGenCGear";
-            this.radioButton5thGenCGear.Size = new System.Drawing.Size(105, 17);
+            this.radioButton5thGenCGear.Size = new System.Drawing.Size(140, 21);
             this.radioButton5thGenCGear.TabIndex = 77;
             this.radioButton5thGenCGear.Text = "5th Gen (C-Gear)";
             this.radioButton5thGenCGear.UseVisualStyleBackColor = true;
@@ -2281,7 +2304,7 @@ namespace RNGReporter
             this.radioButton4thGen.AutoSize = true;
             this.radioButton4thGen.Location = new System.Drawing.Point(13, 62);
             this.radioButton4thGen.Name = "radioButton4thGen";
-            this.radioButton4thGen.Size = new System.Drawing.Size(63, 17);
+            this.radioButton4thGen.Size = new System.Drawing.Size(80, 21);
             this.radioButton4thGen.TabIndex = 76;
             this.radioButton4thGen.Text = "4th Gen";
             this.radioButton4thGen.UseVisualStyleBackColor = true;
@@ -2299,7 +2322,7 @@ namespace RNGReporter
             this.comboBoxVersion.Location = new System.Drawing.Point(338, 146);
             this.comboBoxVersion.Name = "comboBoxVersion";
             this.comboBoxVersion.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxVersion.Size = new System.Drawing.Size(148, 21);
+            this.comboBoxVersion.Size = new System.Drawing.Size(148, 25);
             this.comboBoxVersion.TabIndex = 75;
             // 
             // label9
@@ -2307,16 +2330,16 @@ namespace RNGReporter
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(335, 131);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.Size = new System.Drawing.Size(64, 17);
             this.label9.TabIndex = 74;
-            this.label9.Text = "Version";
+            this.label9.Text = "游戏版本";
             // 
             // lblGxStat
             // 
             this.lblGxStat.AutoSize = true;
             this.lblGxStat.Location = new System.Drawing.Point(133, 90);
             this.lblGxStat.Name = "lblGxStat";
-            this.lblGxStat.Size = new System.Drawing.Size(39, 13);
+            this.lblGxStat.Size = new System.Drawing.Size(50, 17);
             this.lblGxStat.TabIndex = 62;
             this.lblGxStat.Text = "GxStat";
             // 
@@ -2325,7 +2348,7 @@ namespace RNGReporter
             this.lblTimer0.AutoSize = true;
             this.lblTimer0.Location = new System.Drawing.Point(71, 90);
             this.lblTimer0.Name = "lblTimer0";
-            this.lblTimer0.Size = new System.Drawing.Size(39, 13);
+            this.lblTimer0.Size = new System.Drawing.Size(52, 17);
             this.lblTimer0.TabIndex = 63;
             this.lblTimer0.Text = "Timer0";
             // 
@@ -2334,7 +2357,7 @@ namespace RNGReporter
             this.lblVCount.AutoSize = true;
             this.lblVCount.Location = new System.Drawing.Point(8, 90);
             this.lblVCount.Name = "lblVCount";
-            this.lblVCount.Size = new System.Drawing.Size(42, 13);
+            this.lblVCount.Size = new System.Drawing.Size(54, 17);
             this.lblVCount.TabIndex = 64;
             this.lblVCount.Text = "VCount";
             // 
@@ -2343,7 +2366,7 @@ namespace RNGReporter
             this.lblVFrame.AutoSize = true;
             this.lblVFrame.Location = new System.Drawing.Point(193, 90);
             this.lblVFrame.Name = "lblVFrame";
-            this.lblVFrame.Size = new System.Drawing.Size(43, 13);
+            this.lblVFrame.Size = new System.Drawing.Size(57, 17);
             this.lblVFrame.TabIndex = 65;
             this.lblVFrame.Text = "VFrame";
             // 
@@ -2352,7 +2375,7 @@ namespace RNGReporter
             this.textBoxVFrame.Location = new System.Drawing.Point(196, 106);
             this.textBoxVFrame.MaxLength = 4;
             this.textBoxVFrame.Name = "textBoxVFrame";
-            this.textBoxVFrame.Size = new System.Drawing.Size(58, 20);
+            this.textBoxVFrame.Size = new System.Drawing.Size(58, 23);
             this.textBoxVFrame.TabIndex = 72;
             this.textBoxVFrame.Text = "5";
             // 
@@ -2361,7 +2384,7 @@ namespace RNGReporter
             this.textBoxGxStat.Location = new System.Drawing.Point(132, 106);
             this.textBoxGxStat.MaxLength = 4;
             this.textBoxGxStat.Name = "textBoxGxStat";
-            this.textBoxGxStat.Size = new System.Drawing.Size(58, 20);
+            this.textBoxGxStat.Size = new System.Drawing.Size(58, 23);
             this.textBoxGxStat.TabIndex = 70;
             this.textBoxGxStat.Text = "6";
             // 
@@ -2370,7 +2393,7 @@ namespace RNGReporter
             this.textBoxVCount.Location = new System.Drawing.Point(11, 106);
             this.textBoxVCount.MaxLength = 4;
             this.textBoxVCount.Name = "textBoxVCount";
-            this.textBoxVCount.Size = new System.Drawing.Size(58, 20);
+            this.textBoxVCount.Size = new System.Drawing.Size(58, 23);
             this.textBoxVCount.TabIndex = 66;
             this.textBoxVCount.Text = "48";
             // 
@@ -2379,7 +2402,7 @@ namespace RNGReporter
             this.textBoxTimer0.Location = new System.Drawing.Point(72, 106);
             this.textBoxTimer0.MaxLength = 4;
             this.textBoxTimer0.Name = "textBoxTimer0";
-            this.textBoxTimer0.Size = new System.Drawing.Size(58, 20);
+            this.textBoxTimer0.Size = new System.Drawing.Size(58, 23);
             this.textBoxTimer0.TabIndex = 68;
             this.textBoxTimer0.Text = "974";
             // 
@@ -2388,7 +2411,7 @@ namespace RNGReporter
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(336, 90);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
+            this.label8.Size = new System.Drawing.Size(116, 17);
             this.label8.TabIndex = 61;
             this.label8.Text = "DS MAC Address";
             // 
@@ -2397,7 +2420,7 @@ namespace RNGReporter
             this.textBoxMACAddress.Location = new System.Drawing.Point(338, 106);
             this.textBoxMACAddress.MaxLength = 12;
             this.textBoxMACAddress.Name = "textBoxMACAddress";
-            this.textBoxMACAddress.Size = new System.Drawing.Size(148, 20);
+            this.textBoxMACAddress.Size = new System.Drawing.Size(148, 23);
             this.textBoxMACAddress.TabIndex = 60;
             this.textBoxMACAddress.Text = "0009BF123456";
             // 
@@ -2479,7 +2502,7 @@ namespace RNGReporter
             this.checkBoxShowMonster.AutoSize = true;
             this.checkBoxShowMonster.Location = new System.Drawing.Point(10, 419);
             this.checkBoxShowMonster.Name = "checkBoxShowMonster";
-            this.checkBoxShowMonster.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxShowMonster.Size = new System.Drawing.Size(119, 21);
             this.checkBoxShowMonster.TabIndex = 1;
             this.checkBoxShowMonster.Text = "Show Monster";
             this.checkBoxShowMonster.UseVisualStyleBackColor = true;
@@ -2511,14 +2534,14 @@ namespace RNGReporter
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -2526,27 +2549,28 @@ namespace RNGReporter
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Location = new System.Drawing.Point(7, 134);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 20;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowCellErrors = false;
@@ -2560,23 +2584,28 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Type";
             this.dataGridViewTextBoxColumn2.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "RngSeed";
-            dataGridViewCellStyle16.Format = "X";
-            dataGridViewCellStyle16.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle5.Format = "X";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn3.HeaderText = "Seed";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Offset";
             this.dataGridViewTextBoxColumn6.HeaderText = "Method 1 Frame";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 150;
@@ -2584,7 +2613,8 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Seconds";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Seconds";
+            this.dataGridViewTextBoxColumn7.HeaderText = "秒数";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 60;
@@ -2593,6 +2623,7 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Delay";
             this.dataGridViewTextBoxColumn8.HeaderText = "Delay";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 60;
@@ -2615,7 +2646,7 @@ namespace RNGReporter
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(39, 13);
             this.label50.TabIndex = 10;
-            this.label50.Text = "Nature";
+            this.label50.Text = "性格";
             // 
             // label51
             // 
@@ -2624,7 +2655,7 @@ namespace RNGReporter
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(26, 13);
             this.label51.TabIndex = 22;
-            this.label51.Text = "Spe";
+            this.label51.Text = "速度";
             // 
             // label52
             // 
@@ -2642,7 +2673,7 @@ namespace RNGReporter
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(28, 13);
             this.label53.TabIndex = 20;
-            this.label53.Text = "SpD";
+            this.label53.Text = "特防";
             // 
             // label54
             // 
@@ -2651,7 +2682,7 @@ namespace RNGReporter
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(27, 13);
             this.label54.TabIndex = 18;
-            this.label54.Text = "SpA";
+            this.label54.Text = "特攻";
             // 
             // label55
             // 
@@ -2669,7 +2700,7 @@ namespace RNGReporter
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(24, 13);
             this.label56.TabIndex = 16;
-            this.label56.Text = "Def";
+            this.label56.Text = "防御";
             // 
             // label57
             // 
@@ -2678,7 +2709,7 @@ namespace RNGReporter
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(37, 13);
             this.label57.TabIndex = 2;
-            this.label57.Text = "Month";
+            this.label57.Text = "月份 ";
             // 
             // comboBox2
             // 
@@ -2688,7 +2719,7 @@ namespace RNGReporter
             this.comboBox2.Location = new System.Drawing.Point(10, 61);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.Size = new System.Drawing.Size(105, 21);
+            this.comboBox2.Size = new System.Drawing.Size(105, 23);
             this.comboBox2.TabIndex = 11;
             // 
             // label58
@@ -2698,7 +2729,7 @@ namespace RNGReporter
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(23, 13);
             this.label58.TabIndex = 14;
-            this.label58.Text = "Atk";
+            this.label58.Text = "攻击";
             // 
             // label59
             // 
@@ -2764,7 +2795,7 @@ namespace RNGReporter
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(37, 13);
             this.label64.TabIndex = 2;
-            this.label64.Text = "Month";
+            this.label64.Text = "月份 ";
             // 
             // label65
             // 
@@ -2783,14 +2814,14 @@ namespace RNGReporter
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
@@ -2798,27 +2829,28 @@ namespace RNGReporter
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView2.Location = new System.Drawing.Point(7, 134);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 20;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.ShowCellErrors = false;
@@ -2832,16 +2864,19 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Type";
             this.dataGridViewTextBoxColumn9.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "RngSeed";
-            dataGridViewCellStyle20.Format = "X";
-            dataGridViewCellStyle20.NullValue = null;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle9.Format = "X";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn10.HeaderText = "Seed";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 150;
@@ -2850,6 +2885,7 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Offset";
             this.dataGridViewTextBoxColumn11.HeaderText = "Offset";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Visible = false;
@@ -2858,7 +2894,8 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Seconds";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Seconds";
+            this.dataGridViewTextBoxColumn12.HeaderText = "秒数";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 60;
@@ -2867,6 +2904,7 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Delay";
             this.dataGridViewTextBoxColumn13.HeaderText = "Delay";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Width = 60;
@@ -2878,7 +2916,7 @@ namespace RNGReporter
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(26, 13);
             this.label66.TabIndex = 28;
-            this.label66.Text = "Spe";
+            this.label66.Text = "速度";
             // 
             // label67
             // 
@@ -2887,7 +2925,7 @@ namespace RNGReporter
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(28, 13);
             this.label67.TabIndex = 26;
-            this.label67.Text = "SpD";
+            this.label67.Text = "特防";
             // 
             // label68
             // 
@@ -2896,7 +2934,7 @@ namespace RNGReporter
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(27, 13);
             this.label68.TabIndex = 24;
-            this.label68.Text = "SpA";
+            this.label68.Text = "特攻";
             // 
             // label69
             // 
@@ -2905,7 +2943,7 @@ namespace RNGReporter
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(24, 13);
             this.label69.TabIndex = 22;
-            this.label69.Text = "Def";
+            this.label69.Text = "防御";
             // 
             // label70
             // 
@@ -2914,7 +2952,7 @@ namespace RNGReporter
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(23, 13);
             this.label70.TabIndex = 20;
-            this.label70.Text = "Atk";
+            this.label70.Text = "攻击";
             // 
             // label71
             // 
@@ -2941,7 +2979,7 @@ namespace RNGReporter
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(39, 13);
             this.label73.TabIndex = 12;
-            this.label73.Text = "Nature";
+            this.label73.Text = "性格";
             // 
             // label74
             // 
@@ -2985,7 +3023,7 @@ namespace RNGReporter
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(37, 13);
             this.label78.TabIndex = 1;
-            this.label78.Text = "Month";
+            this.label78.Text = "月份 ";
             // 
             // label79
             // 
@@ -3039,7 +3077,7 @@ namespace RNGReporter
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(39, 13);
             this.label85.TabIndex = 34;
-            this.label85.Text = "Nature";
+            this.label85.Text = "性格";
             // 
             // label86
             // 
@@ -3048,7 +3086,7 @@ namespace RNGReporter
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(26, 13);
             this.label86.TabIndex = 46;
-            this.label86.Text = "Spe";
+            this.label86.Text = "速度";
             // 
             // label87
             // 
@@ -3066,7 +3104,7 @@ namespace RNGReporter
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(28, 13);
             this.label88.TabIndex = 44;
-            this.label88.Text = "SpD";
+            this.label88.Text = "特防";
             // 
             // label89
             // 
@@ -3075,7 +3113,7 @@ namespace RNGReporter
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(27, 13);
             this.label89.TabIndex = 42;
-            this.label89.Text = "SpA";
+            this.label89.Text = "特攻";
             // 
             // label90
             // 
@@ -3093,7 +3131,7 @@ namespace RNGReporter
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(24, 13);
             this.label91.TabIndex = 40;
-            this.label91.Text = "Def";
+            this.label91.Text = "防御";
             // 
             // label92
             // 
@@ -3102,7 +3140,7 @@ namespace RNGReporter
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(37, 13);
             this.label92.TabIndex = 26;
-            this.label92.Text = "Month";
+            this.label92.Text = "月份 ";
             // 
             // comboBox6
             // 
@@ -3112,7 +3150,7 @@ namespace RNGReporter
             this.comboBox6.Location = new System.Drawing.Point(10, 61);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBox6.Size = new System.Drawing.Size(105, 21);
+            this.comboBox6.Size = new System.Drawing.Size(105, 23);
             this.comboBox6.TabIndex = 35;
             // 
             // label93
@@ -3122,7 +3160,7 @@ namespace RNGReporter
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(23, 13);
             this.label93.TabIndex = 38;
-            this.label93.Text = "Atk";
+            this.label93.Text = "攻击";
             // 
             // label94
             // 
@@ -3154,7 +3192,7 @@ namespace RNGReporter
             // SeedFinder
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(541, 448);

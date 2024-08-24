@@ -248,7 +248,7 @@ namespace RNGReporter.Objects
 
         public static string EncounterString(int index)
         {
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return encounterStringJPN[index];

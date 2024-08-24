@@ -93,6 +93,7 @@
             this.dataGridViewValues.ShowRowErrors = false;
             this.dataGridViewValues.Size = new System.Drawing.Size(439, 197);
             this.dataGridViewValues.TabIndex = 11;
+            this.dataGridViewValues.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewValues_CellContentClick);
             this.dataGridViewValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewValues_MouseDown);
             // 
             // contextMenuStripGrid
@@ -102,28 +103,28 @@
             this.moveResultToMainForm,
             this.moveIVsToMainForm});
             this.contextMenuStripGrid.Name = "contextMenuStripGrid";
-            this.contextMenuStripGrid.Size = new System.Drawing.Size(242, 70);
+            this.contextMenuStripGrid.Size = new System.Drawing.Size(233, 70);
             this.contextMenuStripGrid.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripGrid_Opening);
             // 
             // copySeed
             // 
             this.copySeed.Name = "copySeed";
-            this.copySeed.Size = new System.Drawing.Size(241, 22);
-            this.copySeed.Text = "Copy Seed to Clipboard";
+            this.copySeed.Size = new System.Drawing.Size(232, 22);
+            this.copySeed.Text = "复制Seed到剪贴板";
             this.copySeed.Click += new System.EventHandler(this.copySeedToClipboard_Click);
             // 
             // moveResultToMainForm
             // 
             this.moveResultToMainForm.Name = "moveResultToMainForm";
-            this.moveResultToMainForm.Size = new System.Drawing.Size(241, 22);
-            this.moveResultToMainForm.Text = "Move result to main window";
+            this.moveResultToMainForm.Size = new System.Drawing.Size(232, 22);
+            this.moveResultToMainForm.Text = "将该计算所有结果移动到主界面";
             this.moveResultToMainForm.Click += new System.EventHandler(this.moveResultToMainForm_Click);
             // 
             // moveIVsToMainForm
             // 
             this.moveIVsToMainForm.Name = "moveIVsToMainForm";
-            this.moveIVsToMainForm.Size = new System.Drawing.Size(241, 22);
-            this.moveIVsToMainForm.Text = "Move IVs to main window";
+            this.moveIVsToMainForm.Size = new System.Drawing.Size(232, 22);
+            this.moveIVsToMainForm.Text = "仅将该个体值结果移动到主界面";
             this.moveIVsToMainForm.Click += new System.EventHandler(this.moveIVsToMainForm_Click);
             // 
             // textBoxSeed
@@ -143,7 +144,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 12);
             this.label12.TabIndex = 13;
-            this.label12.Text = "PID (16进制)";
+            this.label12.Text = "PID (Hex)";
             // 
             // buttonGenerate
             // 

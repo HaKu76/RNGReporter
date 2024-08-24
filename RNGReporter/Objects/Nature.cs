@@ -152,7 +152,7 @@ namespace RNGReporter.Objects
         public static List<Nature> NatureDropDownCollectionSynch()
         {
             List<Nature> natures = NatureDropDownCollection();
-            natures[0] = new Nature(-1, new double[] {0, 0, 0, 0, 0, 0});
+            natures[0] = new Nature(-1, new double[] { 0, 0, 0, 0, 0, 0 });
 
             return natures;
         }

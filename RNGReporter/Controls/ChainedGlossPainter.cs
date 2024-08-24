@@ -25,7 +25,7 @@ namespace RNGReporter
                         throw new ArgumentException(
                             "Gloss cannot eventually be it's own successor, an infinite loop will result");
                     }
-                    nextPainter = ((ChainedGlossPainter) nextPainter).Successor;
+                    nextPainter = ((ChainedGlossPainter)nextPainter).Successor;
                 }
 
                 successor = value;
@@ -54,9 +54,9 @@ namespace RNGReporter
                         }
                     }
                 }
-                onPropertiesChanged = (EventHandler) Delegate.Combine(onPropertiesChanged, value);
+                onPropertiesChanged = (EventHandler)Delegate.Combine(onPropertiesChanged, value);
             }
-            remove { onPropertiesChanged = (EventHandler) Delegate.Remove(onPropertiesChanged, value); }
+            remove { onPropertiesChanged = (EventHandler)Delegate.Remove(onPropertiesChanged, value); }
         }
 
         /// <summary></summary>

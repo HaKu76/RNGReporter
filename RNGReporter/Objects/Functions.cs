@@ -18,17 +18,17 @@
  */
 
 
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using RNGReporter.Properties;
 
 namespace RNGReporter.Objects
 {
     internal static class Functions
     {
-        public static readonly int[] GenderThresholds = new[] {190, 126, 63, 30};
-        public static readonly uint[] UnbiasedBuffer = new uint[] {0, 0x96, 0xC8, 0x4B, 0x32};
+        public static readonly int[] GenderThresholds = new[] { 190, 126, 63, 30 };
+        public static readonly uint[] UnbiasedBuffer = new uint[] { 0, 0x96, 0xC8, 0x4B, 0x32 };
 
         public static readonly string[] buttonStrings = new[]
             {
@@ -59,7 +59,7 @@ namespace RNGReporter.Objects
 
         public static string power(uint type)
         {
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return Translations.powerJPN[type];
@@ -92,7 +92,7 @@ namespace RNGReporter.Objects
                 return "None";
             }
 
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return Translations.NatureStringJPN[nature];
@@ -115,7 +115,7 @@ namespace RNGReporter.Objects
 
         public static int NatureNumber(String nature)
         {
-            switch(nature)
+            switch (nature)
             {
                 case "Hardy":
                     return 0;
@@ -175,7 +175,7 @@ namespace RNGReporter.Objects
             if (slot < 12 || slot > 41)
                 return slot.ToString();
 
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return Translations.encounterItemsJPN[slot - 12];
@@ -198,7 +198,7 @@ namespace RNGReporter.Objects
 
         public static string characteristicStrings(uint index)
         {
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return Translations.characteristicStringsJPN[index];
@@ -221,7 +221,7 @@ namespace RNGReporter.Objects
 
         public static string characteristicCalc(uint PID, uint[] IVarray)
         {
-            uint characteristic = (PID%6);
+            uint characteristic = (PID % 6);
 
             uint[] IVs = IVarray;
 
@@ -232,7 +232,7 @@ namespace RNGReporter.Objects
 
             for (uint i = characteristic; i < characteristic + 6; i++)
             {
-                uint index = i%6;
+                uint index = i % 6;
 
                 if (IVs[index] >= max)
                 {
@@ -246,7 +246,7 @@ namespace RNGReporter.Objects
                 innerCount++;
             }
 
-            return characteristicStrings((realIndex*5) + (max%5));
+            return characteristicStrings((realIndex * 5) + (max % 5));
         }
 
         // take an iv array and move the order from:
@@ -255,7 +255,7 @@ namespace RNGReporter.Objects
         public static uint[] moveSpeFromBack(uint[] IVarray)
         {
             // we make a copy to prevent changing the original array
-            var ivs = (uint[]) IVarray.Clone();
+            var ivs = (uint[])IVarray.Clone();
             ivs[5] = IVarray[4];
             ivs[4] = IVarray[3];
             ivs[3] = IVarray[5];
@@ -269,7 +269,7 @@ namespace RNGReporter.Objects
             {
                 case Version.Black2:
                 case Version.White2:
-                    var profile = new Profile {Version = version, MemoryLink = memorylink};
+                    var profile = new Profile { Version = version, MemoryLink = memorylink };
                     return initialPIDRNGBW2(seed, profile);
                 default:
                     return initialPIDRNGBW(seed);
@@ -504,20 +504,20 @@ namespace RNGReporter.Objects
         public static int Ability(uint PID)
         {
             //0 for first ability, 1 for second
-            return (int) (PID & 0x1);
+            return (int)(PID & 0x1);
         }
 
         public static int Ability5thGen(uint PID)
         {
             //0 for first ability, 1 for second
-            return (int) ((PID >> 16) & 0x1);
+            return (int)((PID >> 16) & 0x1);
         }
 
         //----------------------------------------------------------------------------------------------------------------------
 
         public static uint Nature(uint PID)
         {
-            return (PID%25);
+            return (PID % 25);
         }
 
         //----------------------------------------------------------------------------------------------------------------------
@@ -568,45 +568,45 @@ namespace RNGReporter.Objects
 
             switch (genderRatio)
             {
-                    // Female, 50% F ratio
+                // Female, 50% F ratio
                 case -1:
-                    genderAdjustment = (uint) (((127)*(ulong) rngResult) >> 32) + 1;
+                    genderAdjustment = (uint)(((127) * (ulong)rngResult) >> 32) + 1;
                     break;
-                    // Female, 75% F ratio
+                // Female, 75% F ratio
                 case -2:
-                    genderAdjustment = (uint) (((191)*(ulong) rngResult) >> 32) + 1;
+                    genderAdjustment = (uint)(((191) * (ulong)rngResult) >> 32) + 1;
                     break;
-                    // Female, 25% F ratio
+                // Female, 25% F ratio
                 case -3:
-                    genderAdjustment = (uint) (((63)*(ulong) rngResult) >> 32) + 1;
+                    genderAdjustment = (uint)(((63) * (ulong)rngResult) >> 32) + 1;
                     break;
-                    // Female, 12.5% F ratio
+                // Female, 12.5% F ratio
                 case -4:
-                    genderAdjustment = (uint) (((31)*(ulong) rngResult) >> 32) + 1;
+                    genderAdjustment = (uint)(((31) * (ulong)rngResult) >> 32) + 1;
                     break;
-                    // Female, 100% F ratio
+                // Female, 100% F ratio
                 case -5:
-                    genderAdjustment = (uint) ((0x8*(ulong) rngResult) >> 32) + 1;
+                    genderAdjustment = (uint)((0x8 * (ulong)rngResult) >> 32) + 1;
                     break;
-                    // Male, 50% M ratio
+                // Male, 50% M ratio
                 case 1:
-                    genderAdjustment = (uint) (((254 - 127)*(ulong) rngResult) >> 32) + 127;
+                    genderAdjustment = (uint)(((254 - 127) * (ulong)rngResult) >> 32) + 127;
                     break;
-                    // Male, 75% M ratio
+                // Male, 75% M ratio
                 case 2:
-                    genderAdjustment = (uint) (((254 - 63)*(ulong) rngResult) >> 32) + 63;
+                    genderAdjustment = (uint)(((254 - 63) * (ulong)rngResult) >> 32) + 63;
                     break;
-                    // Male, 25% M ratio
+                // Male, 25% M ratio
                 case 3:
-                    genderAdjustment = (uint) (((254 - 191)*(ulong) rngResult) >> 32) + 191;
+                    genderAdjustment = (uint)(((254 - 191) * (ulong)rngResult) >> 32) + 191;
                     break;
-                    // Male, 87.5% M ratio
+                // Male, 87.5% M ratio
                 case 4:
-                    genderAdjustment = (uint) (((254 - 31)*(ulong) rngResult) >> 32) + 31;
+                    genderAdjustment = (uint)(((254 - 31) * (ulong)rngResult) >> 32) + 31;
                     break;
-                    // Male, 100% M ratio
+                // Male, 100% M ratio
                 case 5:
-                    genderAdjustment = (uint) ((0xF6*(ulong) rngResult) >> 32) + 8;
+                    genderAdjustment = (uint)((0xF6 * (ulong)rngResult) >> 32) + 8;
                     break;
                 default:
                     genderAdjustment = 0;
@@ -651,7 +651,7 @@ namespace RNGReporter.Objects
 
                 if (maxButtons == 1)
                 {
-                    var keyCombo = new List<ButtonComboType> {(ButtonComboType) buttons[0]};
+                    var keyCombo = new List<ButtonComboType> { (ButtonComboType)buttons[0] };
                     keyPresses.Add(keyCombo);
                 }
 
@@ -840,7 +840,7 @@ namespace RNGReporter.Objects
                 }
             }
             if (maxButtons == 0)
-                keyPresses.Add(new List<ButtonComboType> {ButtonComboType.None});
+                keyPresses.Add(new List<ButtonComboType> { ButtonComboType.None });
 
             return keyPresses;
         }
@@ -901,7 +901,7 @@ namespace RNGReporter.Objects
             uint buttonCode = 0xFF2F0000;
             foreach (int button in buttons)
             {
-                switch ((ButtonComboType) button)
+                switch ((ButtonComboType)button)
                 {
                     case ButtonComboType.None:
                         break;
@@ -948,7 +948,7 @@ namespace RNGReporter.Objects
 
         public static uint buttonMashed(int button)
         {
-            switch ((ButtonComboType) button)
+            switch ((ButtonComboType)button)
             {
                 case ButtonComboType.None:
                     return 0xFF2F0000;
@@ -996,12 +996,12 @@ namespace RNGReporter.Objects
 
         public static uint seedSecond(int second)
         {
-            return (uint) (second/10*16 | second%10) << 8;
+            return (uint)(second / 10 * 16 | second % 10) << 8;
         }
 
         public static uint seedMinute(int minute)
         {
-            return (uint) (minute/10*16 | minute%10) << 16;
+            return (uint)(minute / 10 * 16 | minute % 10) << 16;
         }
 
         public static uint seedHour(int hour, DSType dstype)
@@ -1041,7 +1041,7 @@ namespace RNGReporter.Objects
                     case 23:
                         return 0x23000000;
                     default:
-                        return (uint) hour << 24;
+                        return (uint)hour << 24;
                 }
             }
             switch (hour)
@@ -1075,23 +1075,23 @@ namespace RNGReporter.Objects
                 case 23:
                     return 0x63000000;
                 default:
-                    return (uint) hour << 24;
+                    return (uint)hour << 24;
             }
         }
 
         public static uint seedDay(int day)
         {
-            return (uint) ((day/10*16) | day%10) << 8;
+            return (uint)((day / 10 * 16) | day % 10) << 8;
         }
 
         public static uint seedMonth(int month)
         {
-            return (uint) ((month/10*16) | month%10) << 16;
+            return (uint)((month / 10 * 16) | month % 10) << 16;
         }
 
         public static uint seedYear(int year)
         {
-            return (uint) ((year/10*16) | year%10) << 24;
+            return (uint)((year / 10 * 16) | year % 10) << 24;
         }
 
         public static uint seedTime(DateTime dateTime, DSType dstype)
@@ -1101,8 +1101,8 @@ namespace RNGReporter.Objects
 
         public static uint seedDate(DateTime dateTime)
         {
-            return seedYear(dateTime.Year%100) | seedMonth(dateTime.Month) | seedDay(dateTime.Day) |
-                   (uint) dateTime.DayOfWeek;
+            return seedYear(dateTime.Year % 100) | seedMonth(dateTime.Month) | seedDay(dateTime.Day) |
+                   (uint)dateTime.DayOfWeek;
         }
 
         const uint K0 = 0x5A827999;
@@ -1128,10 +1128,10 @@ namespace RNGReporter.Objects
             var message = new uint[80];
 
             message[5] = Reorder((VCount << 16) | Timer0);
-            message[6] = (uint) (MACaddress & 0xFFFF);
+            message[6] = (uint)(MACaddress & 0xFFFF);
             if (softReset)
                 message[6] = message[6] ^ 0x01000000;
-            message[7] = (uint) ((MACaddress >> 16) ^ (VFrame << 24) ^ GxStat);
+            message[7] = (uint)((MACaddress >> 16) ^ (VFrame << 24) ^ GxStat);
             message[8] = seedDate(dateTime);
             message[9] = seedTime(dateTime, dstype);
             message[12] = buttonMashed;
@@ -1488,11 +1488,11 @@ namespace RNGReporter.Objects
         {
             DateTime start = new DateTime(1999, 12, 31);
             TimeSpan span = time - start;
-            var d = (uint) span.TotalDays;
-            var h = (uint) time.Hour;
-            var m = (uint) time.Minute;
+            var d = (uint)span.TotalDays;
+            var h = (uint)time.Hour;
+            var m = (uint)time.Minute;
 
-            uint v = 1440*d + 960*(h/10) + 60*(h%10) + 16*(m/10) + m%10;
+            uint v = 1440 * d + 960 * (h / 10) + 60 * (h % 10) + 16 * (m / 10) + m % 10;
             uint x = v >> 16;
             uint y = v & 0xFFFF;
 
@@ -1501,7 +1501,7 @@ namespace RNGReporter.Objects
 
         public static uint RNGRange(ulong result, uint max)
         {
-            return (uint) ((result*max) >> 32);
+            return (uint)((result * max) >> 32);
         }
 
         internal static ulong EncryptSeed(DateTime seedTime, Profile profile, uint timer0, uint buttonMashed)

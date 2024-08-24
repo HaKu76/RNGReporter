@@ -5,7 +5,7 @@ namespace RNGReporter.Objects.Generators
 {
     internal class HiddenGrottoGenerator
     {
-        private static readonly uint[] slots = {0x1, 0x4, 0xF, 0x1, 0x4, 0xA, 0x19, 0x1, 0x4, 0xA};
+        private static readonly uint[] slots = { 0x1, 0x4, 0xF, 0x1, 0x4, 0xA, 0x19, 0x1, 0x4, 0xA };
         public uint MaxAdvances { get; set; }
         public ushort OpenHollows { get; set; }
         public List<ushort> Hollows { get; set; }
@@ -68,7 +68,7 @@ namespace RNGReporter.Objects.Generators
                 rng.GetNext64BitNumber();
             }
             // max of 4 calls per hollow
-            var rngArray = new uint[MaxAdvances + OpenHollows*4];
+            var rngArray = new uint[MaxAdvances + OpenHollows * 4];
             for (int i = 0; i < rngArray.Length; ++i)
             {
                 rngArray[i] = rng.GetNext32BitNumber();
@@ -78,7 +78,7 @@ namespace RNGReporter.Objects.Generators
 
         public Hollow GenerateHollow(uint[] rngArray, uint rngStart)
         {
-            var hollow = new Hollow {SubSlot = (ushort) Functions.RNGRange(rngArray[rngStart++], 4)};
+            var hollow = new Hollow { SubSlot = (ushort)Functions.RNGRange(rngArray[rngStart++], 4) };
             uint rslot = Functions.RNGRange(rngArray[rngStart++], 100) + 1;
             ushort slot = 0;
             for (uint sum = 0; slot < 10; ++slot)
@@ -140,7 +140,7 @@ namespace RNGReporter.Objects.Generators
                 foreach (ButtonComboType button in Keypresses)
                 {
                     if (i > 0) keyString += "-";
-                    keyString = keyString + Functions.buttonStrings[(int) button];
+                    keyString = keyString + Functions.buttonStrings[(int)button];
                     i++;
                 }
 

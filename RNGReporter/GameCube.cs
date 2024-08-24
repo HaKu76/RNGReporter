@@ -1,12 +1,12 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using System.Linq;
-using System.ComponentModel;
-using System.IO;
-using System.Globalization;
 using static RNGReporter.Objects.NatureLock;
 
 namespace RNGReporter
@@ -102,7 +102,7 @@ namespace RNGReporter
             {
                 for (int x = 0; x < searchThread.Length; x++)
                     searchThread[x].Abort();
-                status.Text = "Cancelled. - Awaiting Command";
+                status.Text = "取消了 -等待操作...";
             }
             Hide();
         }
@@ -113,7 +113,7 @@ namespace RNGReporter
         {
             if (isSearching)
             {
-                status.Text = "Previous search is still running";
+                status.Text = "上一个计算仍在运行";
                 return;
             }
 
@@ -135,12 +135,12 @@ namespace RNGReporter
             else
             {
                 natureList = null;
-                if (comboBoxNature.Text != "Any" && comboBoxNature.CheckBoxItems.Count > 0)
+                if (comboBoxNature.Text != "任意" && comboBoxNature.CheckBoxItems.Count > 0)
                     natureList = (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).ToList();
 
                 hiddenPowerList = null;
                 List<uint> temp = new List<uint>();
-                if (comboBoxHiddenPower.Text != "Any" && comboBoxHiddenPower.CheckBoxItems.Count > 0)
+                if (comboBoxHiddenPower.Text != "任意" && comboBoxHiddenPower.CheckBoxItems.Count > 0)
                     for (int x = 1; x <= 16; x++)
                         if (comboBoxHiddenPower.CheckBoxItems[x].Checked)
                             temp.Add((uint)(x - 1));
@@ -153,7 +153,7 @@ namespace RNGReporter
 
                 displayList.Clear();
                 binding.ResetBindings(false);
-                status.Text = "Searching";
+                status.Text = "计算中";
                 isSearching = true;
                 try
                 {
@@ -719,7 +719,7 @@ namespace RNGReporter
                             for (uint e = ivsLower[4]; e <= ivsUpper[4]; e++)
                                 for (uint f = ivsLower[5]; f <= ivsUpper[5]; f++)
                                     checkSeed(a, b, c, d, e, f);
-            
+
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
             status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
@@ -914,7 +914,7 @@ namespace RNGReporter
                             for (uint e = ivsLower[4]; e <= ivsUpper[4]; e++)
                                 for (uint f = ivsLower[5]; f <= ivsUpper[5]; f++)
                                     checkSeedChannel(a, b, c, d, e, f);
-            
+
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
             status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
@@ -1007,7 +1007,7 @@ namespace RNGReporter
 
                         if (natureList == null || natureList.Contains(nature))
                         {
-                            
+
                             ivs = createIVsChannel(new uint[] { seedShort[j >= 6 ? j - 6 : j + 7] >> 11,
                                                             seedShort[j >= 5 ? j - 5 : j + 8] >> 11,
                                                             seedShort[j >= 4 ? j - 4 : j + 9] >> 11,
@@ -1133,7 +1133,7 @@ namespace RNGReporter
                             for (uint e = ivsLower[4]; e <= ivsUpper[4]; e++)
                                 for (uint f = ivsLower[5]; f <= ivsUpper[5]; f++)
                                     checkSeedR(a, b, c, d, e, f);
-            
+
             isSearching = false;
             Invoke(new Action(() => { binding.ResetBindings(false); }));
             status.Invoke((MethodInvoker)(() => status.Text = "完成了 -等待操作..."));
@@ -1251,17 +1251,17 @@ namespace RNGReporter
             {
                 if (isSearching)
                 {
-                    status.Text = "Previous search is still running";
+                    status.Text = "上一个计算仍在运行";
                     return;
                 }
 
                 natureList = null;
-                if (checkBoxNatureShadow.Text != "Any" && checkBoxNatureShadow.CheckBoxItems.Count > 0)
+                if (checkBoxNatureShadow.Text != "任意" && checkBoxNatureShadow.CheckBoxItems.Count > 0)
                     natureList = (from t in checkBoxNatureShadow.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).ToList();
 
                 hiddenPowerList = null;
                 List<uint> temp = new List<uint>();
-                if (checkBoxHPShadow.Text != "Any" && checkBoxHPShadow.CheckBoxItems.Count > 0)
+                if (checkBoxHPShadow.Text != "任意" && checkBoxHPShadow.CheckBoxItems.Count > 0)
                     for (int x = 1; x <= 16; x++)
                         if (checkBoxHPShadow.CheckBoxItems[x].Checked)
                             temp.Add((uint)(x - 1));
@@ -1284,7 +1284,7 @@ namespace RNGReporter
                 shadowDisplay.Clear();
                 bindingShadow.ResetBindings(false);
                 isSearching = true;
-                status.Text = "Searching";
+                status.Text = "计算中";
 
                 searchThread = new Thread[1];
                 searchThread[0] = new Thread(() => shadowSearch(initialFrame, maxFrame, seed, shadowMethod));
@@ -1300,7 +1300,7 @@ namespace RNGReporter
             uint pid, iv1, iv2, nature;
             uint[] ivs;
 
-            switch(shadow)
+            switch (shadow)
             {
                 case ShadowType.NoLock:
 
@@ -1349,7 +1349,7 @@ namespace RNGReporter
                     break;
                 case ShadowType.Salamence:
                 case ShadowType.SecondShadow:
-                    switch(secondMethod)
+                    switch (secondMethod)
                     {
                         //Set
                         case 0:
@@ -1795,7 +1795,7 @@ namespace RNGReporter
             if (isSearching)
             {
                 isSearching = false;
-                status.Text = "Cancelled. - Awaiting Command";
+                status.Text = "取消了 -等待操作...";
                 for (int x = 0; x < searchThread.Length; x++)
                     searchThread[x].Abort();
                 natureLock.rand.Clear();
@@ -1993,16 +1993,16 @@ namespace RNGReporter
         {
             return new String[]
             {
-                "Fighting",
-                "Flying",
-                "Poison",
-                "Ground",
-                "Rock",
-                "Bug",
-                "Ghost",
-                "Steel",
-                "Fire",
-                "Water",
+                "格斗",
+                "飞行",
+                "毒",
+                "地面",
+                "岩石",
+                "虫",
+                "幽灵",
+                "钢",
+                "火",
+                "水",
                 "Grass",
                 "Electric",
                 "Psychic",
@@ -2137,6 +2137,56 @@ namespace RNGReporter
             };
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spdValue_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void hpValue_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void setComboBox()
         {
             comboBoxNature.CheckBoxItems[0].Checked = true;
@@ -2269,7 +2319,7 @@ namespace RNGReporter
         private void outputResultsToTXTToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter file = new System.IO.StreamWriter("rngreporter.txt");
-            String result = "Seed\t\t" + "PID\t\t" + "Shiny\t" + "Nature\t" + "Ability\t" + "HP\t" + "Atk\t" + "Def\t" + "SpA\t" + "SpD\t" + "Spe\t" + "Hidden\t\t" + "Power\t" + "12.5%F\t" + "25%F\t" + "50%\t" + "75%\t" + "Reason\t\n";
+            String result = "Seed\t\t" + "PID\t\t" + "异色\t" + "性格\t" + "特性\t" + "HP\t" + "攻击\t" + "防御\t" + "通过\t" + "特防\t" + "速度\t" + "Hidden\t\t" + "Power\t" + "12.5%F\t" + "25%F\t" + "50%\t" + "75%\t" + "Reason\t\n";
             file.WriteLine(result);
             for (int x = 0; x < displayList.Count; x++)
             {
@@ -2286,7 +2336,7 @@ namespace RNGReporter
                 file.WriteLine(temp);
             }
             file.Close();
-            MessageBox.Show("Results exported to folder with RNGReporter.exe");
+            MessageBox.Show("计算结果导出到带有RNGReporter.exe的文件夹");
         }
 
         private void dataGridViewResult_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

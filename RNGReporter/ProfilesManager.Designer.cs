@@ -80,12 +80,13 @@ namespace RNGReporter
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(762, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1016, 28);
             this.menuStrip1.TabIndex = 151;
             this.menuStrip1.Text = "menuStrip";
             // 
@@ -96,27 +97,27 @@ namespace RNGReporter
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -131,11 +132,12 @@ namespace RNGReporter
             // 
             this.buttonDuplicate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonDuplicate.ForeColor = System.Drawing.Color.Black;
-            this.buttonDuplicate.Location = new System.Drawing.Point(399, 27);
+            this.buttonDuplicate.Location = new System.Drawing.Point(532, 31);
+            this.buttonDuplicate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDuplicate.Name = "buttonDuplicate";
             this.buttonDuplicate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonDuplicate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonDuplicate.Size = new System.Drawing.Size(123, 23);
+            this.buttonDuplicate.Size = new System.Drawing.Size(164, 27);
             this.buttonDuplicate.TabIndex = 6;
             this.buttonDuplicate.Text = "Duplicate";
             this.buttonDuplicate.Click += new System.EventHandler(this.buttonDuplicate_Click);
@@ -144,39 +146,42 @@ namespace RNGReporter
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonEdit.ForeColor = System.Drawing.Color.Black;
-            this.buttonEdit.Location = new System.Drawing.Point(141, 27);
+            this.buttonEdit.Location = new System.Drawing.Point(188, 31);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonEdit.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonEdit.Size = new System.Drawing.Size(123, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(164, 27);
             this.buttonEdit.TabIndex = 4;
-            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.Text = "编辑";
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonDelete.ForeColor = System.Drawing.Color.Black;
-            this.buttonDelete.Location = new System.Drawing.Point(270, 27);
+            this.buttonDelete.Location = new System.Drawing.Point(360, 31);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonDelete.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonDelete.Size = new System.Drawing.Size(123, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(164, 27);
             this.buttonDelete.TabIndex = 5;
-            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.Text = "删除";
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonNew
             // 
             this.buttonNew.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonNew.ForeColor = System.Drawing.Color.Black;
-            this.buttonNew.Location = new System.Drawing.Point(12, 27);
+            this.buttonNew.Location = new System.Drawing.Point(16, 31);
+            this.buttonNew.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonNew.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonNew.Size = new System.Drawing.Size(123, 23);
+            this.buttonNew.Size = new System.Drawing.Size(164, 27);
             this.buttonNew.TabIndex = 3;
-            this.buttonNew.Text = "New";
+            this.buttonNew.Text = "新建";
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // dataGridViewValues
@@ -221,7 +226,8 @@ namespace RNGReporter
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewValues.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewValues.Location = new System.Drawing.Point(13, 56);
+            this.dataGridViewValues.Location = new System.Drawing.Point(17, 65);
+            this.dataGridViewValues.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewValues.MultiSelect = false;
             this.dataGridViewValues.Name = "dataGridViewValues";
             this.dataGridViewValues.ReadOnly = true;
@@ -234,10 +240,11 @@ namespace RNGReporter
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewValues.RowHeadersVisible = false;
+            this.dataGridViewValues.RowHeadersWidth = 51;
             this.dataGridViewValues.RowTemplate.Height = 20;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowEditingIcon = false;
-            this.dataGridViewValues.Size = new System.Drawing.Size(737, 449);
+            this.dataGridViewValues.Size = new System.Drawing.Size(983, 518);
             this.dataGridViewValues.TabIndex = 33;
             this.dataGridViewValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewValues_MouseDown);
             // 
@@ -245,6 +252,7 @@ namespace RNGReporter
             // 
             this.profileName.DataPropertyName = "Name";
             this.profileName.HeaderText = "Name";
+            this.profileName.MinimumWidth = 6;
             this.profileName.Name = "profileName";
             this.profileName.ReadOnly = true;
             this.profileName.Width = 120;
@@ -253,6 +261,7 @@ namespace RNGReporter
             // 
             this.profileID.DataPropertyName = "ID";
             this.profileID.HeaderText = "ID";
+            this.profileID.MinimumWidth = 6;
             this.profileID.Name = "profileID";
             this.profileID.ReadOnly = true;
             this.profileID.Width = 55;
@@ -261,6 +270,7 @@ namespace RNGReporter
             // 
             this.profileSID.DataPropertyName = "SID";
             this.profileSID.HeaderText = "SID";
+            this.profileSID.MinimumWidth = 6;
             this.profileSID.Name = "profileSID";
             this.profileSID.ReadOnly = true;
             this.profileSID.Width = 60;
@@ -272,6 +282,7 @@ namespace RNGReporter
             dataGridViewCellStyle2.NullValue = null;
             this.profileMAC.DefaultCellStyle = dataGridViewCellStyle2;
             this.profileMAC.HeaderText = "MAC Address";
+            this.profileMAC.MinimumWidth = 6;
             this.profileMAC.Name = "profileMAC";
             this.profileMAC.ReadOnly = true;
             this.profileMAC.Width = 120;
@@ -279,7 +290,8 @@ namespace RNGReporter
             // profileVersion
             // 
             this.profileVersion.DataPropertyName = "VersionStr";
-            this.profileVersion.HeaderText = "Version";
+            this.profileVersion.HeaderText = "游戏版本";
+            this.profileVersion.MinimumWidth = 6;
             this.profileVersion.Name = "profileVersion";
             this.profileVersion.ReadOnly = true;
             this.profileVersion.Width = 120;
@@ -287,9 +299,11 @@ namespace RNGReporter
             // DSType
             // 
             this.DSType.DataPropertyName = "DSType";
-            this.DSType.HeaderText = "DSType";
+            this.DSType.HeaderText = "DS机型";
+            this.DSType.MinimumWidth = 6;
             this.DSType.Name = "DSType";
             this.DSType.ReadOnly = true;
+            this.DSType.Width = 125;
             // 
             // profileVCount
             // 
@@ -297,6 +311,7 @@ namespace RNGReporter
             dataGridViewCellStyle3.Format = "X";
             this.profileVCount.DefaultCellStyle = dataGridViewCellStyle3;
             this.profileVCount.HeaderText = "VCount";
+            this.profileVCount.MinimumWidth = 6;
             this.profileVCount.Name = "profileVCount";
             this.profileVCount.ReadOnly = true;
             this.profileVCount.Width = 60;
@@ -307,6 +322,7 @@ namespace RNGReporter
             dataGridViewCellStyle4.Format = "X";
             this.profileTimer0Min.DefaultCellStyle = dataGridViewCellStyle4;
             this.profileTimer0Min.HeaderText = "Timer0 Min";
+            this.profileTimer0Min.MinimumWidth = 6;
             this.profileTimer0Min.Name = "profileTimer0Min";
             this.profileTimer0Min.ReadOnly = true;
             this.profileTimer0Min.Width = 70;
@@ -317,6 +333,7 @@ namespace RNGReporter
             dataGridViewCellStyle5.Format = "X";
             this.profileTimer0Max.DefaultCellStyle = dataGridViewCellStyle5;
             this.profileTimer0Max.HeaderText = "Timer0 Max";
+            this.profileTimer0Max.MinimumWidth = 6;
             this.profileTimer0Max.Name = "profileTimer0Max";
             this.profileTimer0Max.ReadOnly = true;
             this.profileTimer0Max.Width = 60;
@@ -327,6 +344,7 @@ namespace RNGReporter
             dataGridViewCellStyle6.Format = "X";
             this.profileGxStat.DefaultCellStyle = dataGridViewCellStyle6;
             this.profileGxStat.HeaderText = "GxStat";
+            this.profileGxStat.MinimumWidth = 6;
             this.profileGxStat.Name = "profileGxStat";
             this.profileGxStat.ReadOnly = true;
             this.profileGxStat.Width = 55;
@@ -337,6 +355,7 @@ namespace RNGReporter
             dataGridViewCellStyle7.Format = "X";
             this.profileVFrame.DefaultCellStyle = dataGridViewCellStyle7;
             this.profileVFrame.HeaderText = "VFrame";
+            this.profileVFrame.MinimumWidth = 6;
             this.profileVFrame.Name = "profileVFrame";
             this.profileVFrame.ReadOnly = true;
             this.profileVFrame.Width = 70;
@@ -345,22 +364,28 @@ namespace RNGReporter
             // 
             this.profileKeypresses.DataPropertyName = "KeyString";
             this.profileKeypresses.HeaderText = "Keypresses";
+            this.profileKeypresses.MinimumWidth = 6;
             this.profileKeypresses.Name = "profileKeypresses";
             this.profileKeypresses.ReadOnly = true;
+            this.profileKeypresses.Width = 125;
             // 
             // SkipLR
             // 
             this.SkipLR.DataPropertyName = "SkipLR";
             this.SkipLR.HeaderText = "Skip L\\R";
+            this.SkipLR.MinimumWidth = 6;
             this.SkipLR.Name = "SkipLR";
             this.SkipLR.ReadOnly = true;
+            this.SkipLR.Width = 125;
             // 
             // profileSoftReset
             // 
             this.profileSoftReset.DataPropertyName = "SoftReset";
             this.profileSoftReset.HeaderText = "Soft-Reset";
+            this.profileSoftReset.MinimumWidth = 6;
             this.profileSoftReset.Name = "profileSoftReset";
             this.profileSoftReset.ReadOnly = true;
+            this.profileSoftReset.Width = 125;
             // 
             // profilesBindingSource
             // 
@@ -368,9 +393,9 @@ namespace RNGReporter
             // 
             // ProfileManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 528);
+            this.ClientSize = new System.Drawing.Size(1016, 609);
             this.Controls.Add(this.buttonDuplicate);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.buttonEdit);
@@ -378,7 +403,8 @@ namespace RNGReporter
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.dataGridViewValues);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(642, 524);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MinimumSize = new System.Drawing.Size(850, 597);
             this.Name = "ProfileManager";
             this.Text = "RNG Profiles";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProfilesProfileManager_FormClosing);

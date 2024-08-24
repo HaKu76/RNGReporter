@@ -18,8 +18,8 @@
  */
 
 
-using System.Collections.Generic;
 using RNGReporter.Properties;
+using System.Collections.Generic;
 
 namespace RNGReporter.Objects
 {
@@ -761,7 +761,7 @@ namespace RNGReporter.Objects
 
         public static string pokemonName(uint index)
         {
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return Translations.pokemonNamesJPN[index];
@@ -780,7 +780,7 @@ namespace RNGReporter.Objects
 
         public static string abilityName(uint ability)
         {
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     return Translations.abilityNameJPN[ability];
@@ -794,6 +794,8 @@ namespace RNGReporter.Objects
                     return Translations.abilityNameFRA[ability];
                 case (Language.Korean):
                     return Translations.abilityNameKOR[ability];
+                case (Language.SimplifiedChinese):
+                    return Translations.abilityNameCHS[ability];
                 default:
                     return Translations.abilityNameENG[ability];
             }

@@ -66,9 +66,9 @@ namespace RNGReporter.Objects.Searchers
             progressFound = 0;
 
             UpdateGridDelegate gridUpdater = UpdateGrid;
-            var updateParams = new object[] {bindingSource};
+            var updateParams = new object[] { bindingSource };
             ResortGridDelegate gridSorter = ResortGrid;
-            var sortParams = new object[] {bindingSource, grid, frameType};
+            var sortParams = new object[] { bindingSource, grid, frameType };
             SetButtonDelegate setButton = SetGenerateButton;
 
             try
@@ -76,7 +76,7 @@ namespace RNGReporter.Objects.Searchers
                 bool alive = true;
                 while (alive)
                 {
-                    progress.ShowProgress(progressSearched/(float) progressTotal, progressSearched, progressFound);
+                    progress.ShowProgress(progressSearched / (float)progressTotal, progressSearched, progressFound);
                     if (refreshQueue)
                     {
                         caller.Invoke(gridUpdater, updateParams);

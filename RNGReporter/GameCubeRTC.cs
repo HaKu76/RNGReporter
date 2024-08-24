@@ -39,7 +39,7 @@ namespace RNGReporter
             bool testPRNG = uint.TryParse(initialSeed.Text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out initial);
             if (!testPRNG)
             {
-                MessageBox.Show("Please enter your seed in proper hex format.");
+                MessageBox.Show("请用正确的16进制输入您的seed");
                 return;
             }
 
@@ -47,13 +47,13 @@ namespace RNGReporter
             testPRNG = uint.TryParse(targetSeed.Text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out target);
             if (!testPRNG)
             {
-                MessageBox.Show("Please enter your seed in proper hex format.");
+                MessageBox.Show("请用正确的16进制输入您的seed");
                 return;
             }
 
             if (initial == target)
             {
-                MessageBox.Show("Initial and target seed are the same. Please change one of them.");
+                MessageBox.Show("初始seed和目标seed相同，请更改其中一个");
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace RNGReporter
             var back = new XdRngR(targetSeed);
             back.GetNext32BitNumber(minFrame);
             targetSeed = back.Seed;
-            
+
             var rng = new XdRng(initialSeed);
 
             int seconds = 0;
@@ -83,7 +83,7 @@ namespace RNGReporter
 
             while (!targetHit)
             {
-                searchText.Invoke((MethodInvoker)(() => searchText.Text = "Minutes added to RTC: " + minutes.ToString()));
+                searchText.Invoke((MethodInvoker)(() => searchText.Text = "添加到RTC时钟的分钟数: " + minutes.ToString()));
                 rng.Seed = initialSeed;
 
                 for (int x = 0; x < maxFrame; x++)
@@ -91,10 +91,10 @@ namespace RNGReporter
                     if (rng.GetNext32BitNumber() == targetSeed)
                     {
                         DateTime finalTime = date + new TimeSpan(0, 0, 0, seconds);
-                        seedTime.Add(new RTCTime { Time = finalTime.ToString(), Frame = x + 2 + minFrame, Seed = initialSeed.ToString("X8")});
+                        seedTime.Add(new RTCTime { Time = finalTime.ToString(), Frame = x + 2 + minFrame, Seed = initialSeed.ToString("X8") });
                         isSearching = false;
 
-                        searchText.Invoke((MethodInvoker)(() => searchText.Text = "Finish. Awaiting command"));
+                        searchText.Invoke((MethodInvoker)(() => searchText.Text = "完成了 -等待操作..."));
                         dataGridViewValues.Invoke((MethodInvoker)(() => dataGridViewValues.DataSource = seedTime));
                         dataGridViewValues.Invoke((MethodInvoker)(() => dataGridViewValues.AutoResizeColumns()));
                         return;
@@ -119,7 +119,7 @@ namespace RNGReporter
             {
                 searchThread.Abort();
                 isSearching = false;
-                searchText.Text = "Search cancelled";
+                searchText.Text = "已取消计算";
             }
         }
 

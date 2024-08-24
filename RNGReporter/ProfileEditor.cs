@@ -1,7 +1,7 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 using Version = RNGReporter.Objects.Version;
 
 namespace RNGReporter
@@ -57,24 +57,24 @@ namespace RNGReporter
                 !FormsFunctions.ParseInputH(textBoxGxStat, out gxstat))
                 return null;
             var profile = new Profile
-                {
-                    Name = textBoxName.Text,
-                    ID = id,
-                    SID = sid,
-                    MAC_Address = mac,
-                    Version = (Version) comboBoxVersion.SelectedIndex,
-                    Language = (Language) comboBoxLanguage.SelectedIndex,
-                    DSType = (DSType) comboBoxDSType.SelectedIndex,
-                    VCount = vcount,
-                    VFrame = vframe,
-                    Timer0Min = timer0min,
-                    Timer0Max = timer0max,
-                    GxStat = gxstat,
-                    Keypresses = GetKeypresses(),
-                    SoftReset = checkBoxSoftReset.Checked,
-                    SkipLR = checkBoxSkipLR.Checked,
-                    MemoryLink = checkBoxMemoryLink.Checked
-                };
+            {
+                Name = textBoxName.Text,
+                ID = id,
+                SID = sid,
+                MAC_Address = mac,
+                Version = (Version)comboBoxVersion.SelectedIndex,
+                Language = (Language)comboBoxLanguage.SelectedIndex,
+                DSType = (DSType)comboBoxDSType.SelectedIndex,
+                VCount = vcount,
+                VFrame = vframe,
+                Timer0Min = timer0min,
+                Timer0Max = timer0max,
+                GxStat = gxstat,
+                Keypresses = GetKeypresses(),
+                SoftReset = checkBoxSoftReset.Checked,
+                SkipLR = checkBoxSkipLR.Checked,
+                MemoryLink = checkBoxMemoryLink.Checked
+            };
             if (Nazos.Nazo(profile) == null)
             {
                 MessageBox.Show("Warning: this version of the game is currently unsupported.",
@@ -91,9 +91,9 @@ namespace RNGReporter
             maskedTextBoxID.Text = profile.ID.ToString();
             maskedTextBoxSID.Text = profile.SID.ToString();
             textBoxMAC.Text = profile.MAC_Address.ToString("X");
-            comboBoxVersion.SelectedIndex = (int) profile.Version;
-            comboBoxLanguage.SelectedIndex = (int) profile.Language;
-            comboBoxDSType.SelectedIndex = (int) profile.DSType;
+            comboBoxVersion.SelectedIndex = (int)profile.Version;
+            comboBoxLanguage.SelectedIndex = (int)profile.Language;
+            comboBoxDSType.SelectedIndex = (int)profile.DSType;
             textBoxVCount.Text = profile.VCount.ToString("X");
             textBoxVFrame.Text = profile.VFrame.ToString("X");
             textBoxTimer0Min.Text = profile.Timer0Min.ToString("X");
@@ -134,12 +134,12 @@ namespace RNGReporter
                 keypresses += comboBoxKeypresses.CheckBoxItems[i].Checked ? b : 0;
                 b <<= 1;
             }
-            return (byte) keypresses;
+            return (byte)keypresses;
         }
 
         private void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
 
         private void btnParameters_Click(object sender, EventArgs e)

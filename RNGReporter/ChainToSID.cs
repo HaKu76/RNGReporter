@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 
 namespace RNGReporter
 {
@@ -91,7 +91,7 @@ namespace RNGReporter
                 spe = uint.Parse(maskedTextBoxSpe.Text);
 
             //  Get Nature
-            var nature = (Nature) comboBoxNature.SelectedValue;
+            var nature = (Nature)comboBoxNature.SelectedValue;
 
             //  Get Gender -- Need to look for a better way to do this, would
             //  like to actually be able to directly store and get a reference
@@ -109,7 +109,7 @@ namespace RNGReporter
             //  something special in that case.
             if (calculate.CandidateSids.Count == 1)
             {
-                labelInfo.Text = "SID Found - " + calculate.CandidateSids[0];
+                labelInfo.Text = "计算出SID：" + calculate.CandidateSids[0];
 
                 labelSid.Text = calculate.CandidateSids[0].ToString();
                 returnSid = calculate.CandidateSids[0];

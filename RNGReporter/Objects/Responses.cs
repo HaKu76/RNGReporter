@@ -52,7 +52,7 @@ namespace RNGReporter.Objects
                 {
                     if (skips != 0 && skips == n + 1)
                     {
-                        responses += " skipped)   ";
+                        responses += " 跳过这两个电话序列)   ";
                     }
                     else
                     {
@@ -66,7 +66,7 @@ namespace RNGReporter.Objects
 
         public static string ElmResponse(uint rngResult)
         {
-            uint response = rngResult%3;
+            uint response = rngResult % 3;
 
             string responses = "";
 
@@ -82,7 +82,7 @@ namespace RNGReporter.Objects
 
         public static string ChatotResponse(uint rngResult)
         {
-            uint result = ((rngResult & 0x1FFF)*100) >> 13;
+            uint result = ((rngResult & 0x1FFF) * 100) >> 13;
             if (result < 20)
                 return "Low (" + result.ToString() + ")";
             if (result < 40)
@@ -96,7 +96,7 @@ namespace RNGReporter.Objects
 
         public static string ChatotResponse64(uint rngResult)
         {
-            uint result = (uint) (((ulong) rngResult*0x1FFF) >> 32)/82;
+            uint result = (uint)(((ulong)rngResult * 0x1FFF) >> 32) / 82;
             if (result < 20)
                 return "Low (" + result.ToString() + ")";
             if (result < 40)
@@ -110,7 +110,7 @@ namespace RNGReporter.Objects
 
         public static string ChatotResponse64Short(uint rngResult)
         {
-            uint result = (uint) (((ulong) rngResult*0x1FFF) >> 32)/82;
+            uint result = (uint)(((ulong)rngResult * 0x1FFF) >> 32) / 82;
             if (result < 20)
                 return "L (" + result.ToString() + ")";
             if (result < 40)

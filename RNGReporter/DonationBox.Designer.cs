@@ -41,9 +41,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label1.Location = new System.Drawing.Point(24, 20);
+            this.label1.Location = new System.Drawing.Point(32, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(958, 224);
+            this.label1.Size = new System.Drawing.Size(898, 306);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -51,9 +52,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RNGReporter.Properties.Resources.btn_donate_SM;
-            this.pictureBox1.Location = new System.Drawing.Point(623, 255);
+            this.pictureBox1.Location = new System.Drawing.Point(831, 319);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 25);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -62,22 +64,24 @@
             // 
             this.buttonOk.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonOk.ForeColor = System.Drawing.Color.Black;
-            this.buttonOk.Location = new System.Drawing.Point(538, 253);
+            this.buttonOk.Location = new System.Drawing.Point(717, 316);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonOk.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonOk.Size = new System.Drawing.Size(77, 23);
+            this.buttonOk.Size = new System.Drawing.Size(103, 29);
             this.buttonOk.TabIndex = 71;
-            this.buttonOk.Text = "Okay!";
+            this.buttonOk.Text = "好的！";
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(24, 62);
+            this.linkLabel1.Location = new System.Drawing.Point(32, 42);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(115, 14);
+            this.linkLabel1.Size = new System.Drawing.Size(143, 18);
             this.linkLabel1.TabIndex = 72;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "请考虑赞助给原作者";
@@ -87,27 +91,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(638, 275);
+            this.label2.Location = new System.Drawing.Point(851, 344);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 12);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 73;
             this.label2.Text = "via PayPal";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.textBox1.Location = new System.Drawing.Point(27, 289);
+            this.textBox1.Location = new System.Drawing.Point(36, 361);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(665, 182);
+            this.textBox1.Size = new System.Drawing.Size(885, 226);
             this.textBox1.TabIndex = 74;
             // 
             // DonationBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 482);
+            this.ClientSize = new System.Drawing.Size(961, 602);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
@@ -115,10 +121,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DonationBox";
-            this.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.Padding = new System.Windows.Forms.Padding(12, 10, 12, 10);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -18,12 +18,12 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -66,7 +66,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             Font font;
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     font = new Font("Meiryo", 7.25F);
@@ -101,7 +101,7 @@ namespace RNGReporter
 
         private void comboBoxPokemon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            genderRatio = ((Pokemon) (comboBoxPokemon.SelectedItem)).GenderRatio;
+            genderRatio = ((Pokemon)(comboBoxPokemon.SelectedItem)).GenderRatio;
 
             switch (genderRatio)
             {

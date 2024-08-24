@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>The listed frames for Safari Zone or Bug-Catching Contest frames are
- known to be incorrect for spreads which IVs sum is lower than 90.
-
- It is recommended that you search for spreads which IVs sum is bigger than 90
- or for spreads affected by Cute Charm, as they are known to be correct.
-
- All frames known to be correct will be listed in               </value>
-  </data>
 </root>

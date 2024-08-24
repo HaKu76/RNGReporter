@@ -1,9 +1,9 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using RNGReporter.Objects;
 using System.ComponentModel;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace RNGReporter
 {
@@ -119,9 +119,9 @@ namespace RNGReporter
         private void addSeed(uint seed, uint iv1)
         {
             String MonsterSeed = seed.ToString("X");
-            results.Add(new PIDIVS { Seed = MonsterSeed, Method = "Method 1", IVs = calcIVs1(iv1) });
-            results.Add(new PIDIVS { Seed = MonsterSeed, Method = "Method 2", IVs = calcIVs2(forward(iv1)) });
-            results.Add(new PIDIVS { Seed = MonsterSeed, Method = "Method 4", IVs = calcIVs4(iv1) });
+            results.Add(new PIDIVS { Seed = MonsterSeed, 算法 = "Method 1", 个体值 = calcIVs1(iv1) });
+            results.Add(new PIDIVS { Seed = MonsterSeed, 算法 = "Method 2", 个体值 = calcIVs2(forward(iv1)) });
+            results.Add(new PIDIVS { Seed = MonsterSeed, 算法 = "Method 4", 个体值 = calcIVs4(iv1) });
         }
 
         private void addSeedGC(uint seed, uint iv1, uint iv2, int method)
@@ -133,7 +133,7 @@ namespace RNGReporter
             else
                 IVs = calcIVsChannel(iv1);
 
-            results.Add(new PIDIVS { Seed = seed.ToString("X"), Method = Method[method], IVs = IVs });
+            results.Add(new PIDIVS { Seed = seed.ToString("X"), 算法 = Method[method], 个体值 = IVs });
         }
 
         private String calcIVs1(uint iv1)
@@ -258,7 +258,7 @@ namespace RNGReporter
             uint iv5 = forwardXD(iv4);
             uint iv6 = forwardXD(iv5);
             uint[] ivContainer = { iv1, iv2, iv3, iv5, iv6, iv4 };
-            for (int x = 0; x < 6; x ++)
+            for (int x = 0; x < 6; x++)
             {
                 uint iv = ivContainer[x] >> 27;
                 ivs += iv.ToString();
@@ -289,8 +289,8 @@ namespace RNGReporter
             {
                 var frame = (PIDIVS)dataGridViewValues.SelectedRows[0].DataBoundItem;
                 String seed = frame.Seed;
-                String type = frame.Method;
-                String[] ivs = frame.IVs.Split('.');
+                String type = frame.算法;
+                String[] ivs = frame.个体值.Split('.');
                 mainForm.changeSeed(seed);
                 mainForm.changeIVs(ivs);
                 mainForm.changeType(getType(type));
@@ -302,7 +302,7 @@ namespace RNGReporter
             if (dataGridViewValues.SelectedRows[0] != null)
             {
                 var frame = (PIDIVS)dataGridViewValues.SelectedRows[0].DataBoundItem;
-                String[] ivs = frame.IVs.Split('.');
+                String[] ivs = frame.个体值.Split('.');
                 mainForm.changeIVs(ivs);
             }
         }
@@ -318,7 +318,7 @@ namespace RNGReporter
 
         private int getType(String type)
         {
-            switch(type)
+            switch (type)
             {
                 case "Method 1":
                     return 0;
@@ -349,6 +349,11 @@ namespace RNGReporter
                     }
                 }
             }
+        }
+
+        private void dataGridViewValues_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

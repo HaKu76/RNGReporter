@@ -32,7 +32,7 @@ namespace RNGReporter.Objects.Generators
 
             // Build the MTRNG
             // todo: use fast MTRNG when available
-            var ivrng = new MersenneTwister((uint) (seed >> 32));
+            var ivrng = new MersenneTwister((uint)(seed >> 32));
             // advance 8 frames for BW2
             for (uint i = 0; i < 10; ++i) ivrng.Next();
 
@@ -69,7 +69,7 @@ namespace RNGReporter.Objects.Generators
         private void Advance(BWRng pidrng, MersenneTwister ivrng, List<DreamRadarFrame.Spin> spins)
         {
             // first PIDRNG advance = spin
-            spins.Add((DreamRadarFrame.Spin) pidrng.GetNext32BitNumber(8));
+            spins.Add((DreamRadarFrame.Spin)pidrng.GetNext32BitNumber(8));
             pidrng.GetNext64BitNumber();
             ivrng.Next();
             ivrng.Next();
@@ -105,11 +105,11 @@ namespace RNGReporter.Objects.Generators
             pid &= 0xFFFFFF00;
             switch (GenderThreashold)
             {
-                    // all male
+                // all male
                 case 0:
                     pid += rng.GetNext32BitNumber(0xF6) + 8;
                     break;
-                    // all female
+                // all female
                 case 254:
                     pid += rng.GetNext32BitNumber(0x8) + 1;
                     break;
@@ -162,7 +162,7 @@ namespace RNGReporter.Objects.Generators
         }
 
         // need to abstract the spins
-        private readonly char[] spins = {'↑', '↗', '→', '↘', '↓', '↙', '←', '↖'};
+        private readonly char[] spins = { '↑', '↗', '→', '↘', '↓', '↙', '←', '↖' };
 
         public Spin[] Spins { get; set; }
 

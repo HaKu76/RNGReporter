@@ -1,8 +1,8 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using RNGReporter.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -24,7 +24,7 @@ namespace RNGReporter
         private void SearchNature_Load(object sender, EventArgs e)
         {
             Font font;
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     font = new Font("Meiryo", 7.25F);
@@ -68,9 +68,9 @@ namespace RNGReporter
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            returnArray[0] = ((Nature) comboBoxNature1.SelectedItem).Number;
-            returnArray[1] = ((Nature) comboBoxNature2.SelectedItem).Number;
-            returnArray[2] = ((Nature) comboBoxNature3.SelectedItem).Number;
+            returnArray[0] = ((Nature)comboBoxNature1.SelectedItem).Number;
+            returnArray[1] = ((Nature)comboBoxNature2.SelectedItem).Number;
+            returnArray[2] = ((Nature)comboBoxNature3.SelectedItem).Number;
         }
     }
 }

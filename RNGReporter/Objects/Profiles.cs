@@ -18,13 +18,13 @@
  */
 
 
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using RNGReporter.Properties;
 
 namespace RNGReporter.Objects
 {
@@ -42,11 +42,11 @@ namespace RNGReporter.Objects
 
         public static void LoadProfiles(string fileName)
         {
-            var deserializer = new XmlSerializer(typeof (List<Profile>));
+            var deserializer = new XmlSerializer(typeof(List<Profile>));
             TextReader textReader = new StreamReader(fileName);
             try
             {
-                List = (List<Profile>) deserializer.Deserialize(textReader);
+                List = (List<Profile>)deserializer.Deserialize(textReader);
                 textReader.Close();
             }
             catch (Exception)
@@ -64,7 +64,7 @@ namespace RNGReporter.Objects
 
         public static void SaveProfiles(string fileName)
         {
-            var serializer = new XmlSerializer(typeof (List<Profile>));
+            var serializer = new XmlSerializer(typeof(List<Profile>));
             try
             {
                 TextWriter textWriter = new StreamWriter(fileName);

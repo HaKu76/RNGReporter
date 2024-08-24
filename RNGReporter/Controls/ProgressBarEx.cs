@@ -47,7 +47,7 @@ namespace RNGReporter
                 progresspainter = value;
                 if (progresspainter is AbstractProgressPainter)
                 {
-                    ((AbstractProgressPainter) progresspainter).padding = base.ProgressPadding;
+                    ((AbstractProgressPainter)progresspainter).padding = base.ProgressPadding;
                 }
                 progresspainter.PropertiesChanged += component_PropertiesChanged;
                 Invalidate();
@@ -109,7 +109,7 @@ namespace RNGReporter
             {
                 val++;
             }
-            int progWidth = maximum > 0 ? (backbox.Width*val/maximum) : 1;
+            int progWidth = maximum > 0 ? (backbox.Width * val / maximum) : 1;
             if (value >= maximum && maximum > 0)
             {
                 progWidth = backbox.Width;
@@ -117,7 +117,7 @@ namespace RNGReporter
 				progWidth++;
 			}*/
             newprog.Inflate(-base.ProgressPadding, -base.ProgressPadding);
-            newprog.Width = progWidth - (base.ProgressPadding*2);
+            newprog.Width = progWidth - (base.ProgressPadding * 2);
             //newprog.Offset(base.ProgressPadding, base.ProgressPadding);
             //newprog = new Rectangle(backbox.X + base.ProgressPadding, backbox.Y + base.ProgressPadding, progWidth - (base.ProgressPadding * 2), backbox.Height - (base.ProgressPadding * 2));
             base.progressbox = newprog;
@@ -185,10 +185,10 @@ namespace RNGReporter
             Brush b = new SolidBrush(ForeColor);
             SizeF sf = g.MeasureString(Text, Font, Convert.ToInt32(Width), StringFormat.GenericDefault);
             float m = sf.Width;
-            float x = (Width/2) - (m/2);
-            float w = (Width/2) + (m/2);
-            float h = borderbox.Height - (2f*borderpainter.BorderWidth);
-            float y = borderpainter.BorderWidth + ((h - sf.Height)/2f);
+            float x = (Width / 2) - (m / 2);
+            float w = (Width / 2) + (m / 2);
+            float h = borderbox.Height - (2f * borderpainter.BorderWidth);
+            float y = borderpainter.BorderWidth + ((h - sf.Height) / 2f);
             g.DrawString(Text, Font, b, RectangleF.FromLTRB(x, y, w, Height - 1), StringFormat.GenericDefault);
         }
 
@@ -302,7 +302,7 @@ namespace RNGReporter
             newprog.Size = new Size(newprog.Size.Width - borderpainter.BorderWidth,
                                     newprog.Size.Height - borderpainter.BorderWidth);
 
-            var progWidth = (int) ((marqueePercentage*(float) backbox.Width)/100f);
+            var progWidth = (int)((marqueePercentage * (float)backbox.Width) / 100f);
 
             marqueeX += marqueeStep;
             if (marqueeX > backbox.Width)
@@ -311,7 +311,7 @@ namespace RNGReporter
             }
 
             newprog.Inflate(-base.ProgressPadding, -base.ProgressPadding);
-            newprog.Width = progWidth - (base.ProgressPadding*2);
+            newprog.Width = progWidth - (base.ProgressPadding * 2);
             newprog.X += marqueeX;
 
             int leftBoundry = backbox.X + borderpainter.BorderWidth + base.ProgressPadding;
@@ -339,7 +339,7 @@ namespace RNGReporter
             newprog.Size = new Size(newprog.Size.Width - borderpainter.BorderWidth,
                                     newprog.Size.Height - borderpainter.BorderWidth);
 
-            var progWidth = (int) ((marqueePercentage*(float) backbox.Width)/100f);
+            var progWidth = (int)((marqueePercentage * (float)backbox.Width) / 100f);
 
             if (marqueeForward)
             {
@@ -351,7 +351,7 @@ namespace RNGReporter
             }
 
             newprog.Inflate(-base.ProgressPadding, -base.ProgressPadding);
-            newprog.Width = progWidth - (base.ProgressPadding*2);
+            newprog.Width = progWidth - (base.ProgressPadding * 2);
             newprog.X += marqueeX;
 
             int leftBoundry = backbox.X + borderpainter.BorderWidth + base.ProgressPadding;
@@ -378,7 +378,7 @@ namespace RNGReporter
             newprog.Size = new Size(newprog.Size.Width - borderpainter.BorderWidth,
                                     newprog.Size.Height - borderpainter.BorderWidth);
 
-            var progWidth = (int) ((marqueePercentage*(float) backbox.Width)/100f);
+            var progWidth = (int)((marqueePercentage * (float)backbox.Width) / 100f);
 
             if (marqueeForward)
             {
@@ -398,7 +398,7 @@ namespace RNGReporter
             }
 
             newprog.Inflate(-base.ProgressPadding, -base.ProgressPadding);
-            newprog.Width = progWidth - (base.ProgressPadding*2);
+            newprog.Width = progWidth - (base.ProgressPadding * 2);
             newprog.X += marqueeX;
 
             int leftBoundry = backbox.X + borderpainter.BorderWidth + base.ProgressPadding;

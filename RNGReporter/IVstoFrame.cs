@@ -28,7 +28,7 @@ namespace RNGReporter
                 || setIVs3._MaskedTextBox1.Text == "" || setIVs4._MaskedTextBox1.Text == "" || setIVs5._MaskedTextBox1.Text == ""
                 || _MaskedTextBox1.Text == "")
             {
-                MessageBox.Show("Please fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("请填写所有的参数", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -173,7 +173,7 @@ namespace RNGReporter
             }
             else
             {
-                MessageBox.Show("Please select the frame", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("请选择一个帧数", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

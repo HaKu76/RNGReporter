@@ -18,12 +18,12 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -73,7 +73,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             Font font;
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     font = new Font("Meiryo", 7.25F);
@@ -112,14 +112,14 @@ namespace RNGReporter
             pokemonList.ResetBindings(false);
             characteristicList.ResetBindings(false);
 
-            var pokemon = (Pokemon) comboBoxPokemon.SelectedValue;
+            var pokemon = (Pokemon)comboBoxPokemon.SelectedValue;
             labelAbility0.Text = pokemon.Ability0;
             labelAbility1.Text = pokemon.Ability1;
         }
 
         private void comboBoxPokemon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var pokemon = (Pokemon) comboBoxPokemon.SelectedValue;
+            var pokemon = (Pokemon)comboBoxPokemon.SelectedValue;
 
             labelBaseHP.Text = pokemon.BaseHp.ToString();
             labelBaseAtk.Text = pokemon.BaseAtk.ToString();
@@ -143,8 +143,8 @@ namespace RNGReporter
 
             uint level = 1;
 
-            var pokemon = (Pokemon) comboBoxPokemon.SelectedValue;
-            var nature = (Nature) comboBoxNature.SelectedValue;
+            var pokemon = (Pokemon)comboBoxPokemon.SelectedValue;
+            var nature = (Nature)comboBoxNature.SelectedValue;
 
             if (maskedTextBoxHP.Text != "")
                 hp = uint.Parse(maskedTextBoxHP.Text);
@@ -167,13 +167,13 @@ namespace RNGReporter
             if (maskedTextBoxLevel.Text != "")
                 level = uint.Parse(maskedTextBoxLevel.Text);
 
-            var stats = new[] {hp, atk, def, spa, spd, spe};
+            var stats = new[] { hp, atk, def, spa, spd, spe };
 
             Characteristic characteristic = null;
 
             if (comboBoxCharacteristic.SelectedItem.ToString() != "NONE")
             {
-                characteristic = (Characteristic) comboBoxCharacteristic.SelectedItem;
+                characteristic = (Characteristic)comboBoxCharacteristic.SelectedItem;
             }
 
             var ivCheck = new IVCheck(pokemon, level, nature, characteristic, stats);

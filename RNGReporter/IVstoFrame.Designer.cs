@@ -90,7 +90,7 @@
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Text = "复制";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // groupBox2
@@ -267,7 +267,7 @@
             this.maskedTextBox3.Size = new System.Drawing.Size(182, 21);
             this.maskedTextBox3.TabIndex = 4;
             this.maskedTextBox3.Tag = "frame";
-            this.maskedTextBox3.Text = "1";
+            this.maskedTextBox3.Text = "0";
             // 
             // maskedTextBox2
             // 

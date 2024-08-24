@@ -36,7 +36,6 @@ namespace RNGReporter
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IVtoPID_SID_SEED));
             this.buttonGenerate = new RNGReporter.GlassButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -85,13 +84,13 @@ namespace RNGReporter
             // 
             this.buttonGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonGenerate.Location = new System.Drawing.Point(436, 21);
+            this.buttonGenerate.Location = new System.Drawing.Point(664, 21);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonGenerate.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonGenerate.Size = new System.Drawing.Size(75, 23);
             this.buttonGenerate.TabIndex = 39;
-            this.buttonGenerate.Text = "Find";
+            this.buttonGenerate.Text = "计算";
             this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // label10
@@ -99,45 +98,45 @@ namespace RNGReporter
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(9, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.Size = new System.Drawing.Size(37, 15);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Nature";
+            this.label10.Text = "性格";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(322, 8);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(26, 13);
+            this.label15.Size = new System.Drawing.Size(37, 15);
             this.label15.TabIndex = 37;
-            this.label15.Text = "Spe";
+            this.label15.Text = "速度";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(284, 8);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 13);
+            this.label16.Size = new System.Drawing.Size(37, 15);
             this.label16.TabIndex = 35;
-            this.label16.Text = "SpD";
+            this.label16.Text = "特防";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(242, 8);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 13);
+            this.label17.Size = new System.Drawing.Size(37, 15);
             this.label17.TabIndex = 33;
-            this.label17.Text = "SpA";
+            this.label17.Text = "特攻";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(200, 8);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(24, 13);
+            this.label18.Size = new System.Drawing.Size(37, 15);
             this.label18.TabIndex = 31;
-            this.label18.Text = "Def";
+            this.label18.Text = "防御";
             // 
             // comboBoxNature
             // 
@@ -145,7 +144,7 @@ namespace RNGReporter
             this.comboBoxNature.FormattingEnabled = true;
             this.comboBoxNature.Location = new System.Drawing.Point(7, 24);
             this.comboBoxNature.Name = "comboBoxNature";
-            this.comboBoxNature.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxNature.Size = new System.Drawing.Size(105, 23);
             this.comboBoxNature.TabIndex = 26;
             // 
             // label19
@@ -153,16 +152,16 @@ namespace RNGReporter
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(158, 8);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(23, 13);
+            this.label19.Size = new System.Drawing.Size(37, 15);
             this.label19.TabIndex = 29;
-            this.label19.Text = "Atk";
+            this.label19.Text = "攻击";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(117, 8);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 13);
+            this.label20.Size = new System.Drawing.Size(23, 15);
             this.label20.TabIndex = 27;
             this.label20.Text = "HP";
             // 
@@ -215,13 +214,15 @@ namespace RNGReporter
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewValues.RowHeadersVisible = false;
+            this.dataGridViewValues.RowHeadersWidth = 40;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowCellErrors = false;
             this.dataGridViewValues.ShowCellToolTips = false;
             this.dataGridViewValues.ShowEditingIcon = false;
             this.dataGridViewValues.ShowRowErrors = false;
-            this.dataGridViewValues.Size = new System.Drawing.Size(509, 158);
+            this.dataGridViewValues.Size = new System.Drawing.Size(733, 161);
             this.dataGridViewValues.TabIndex = 40;
+            this.dataGridViewValues.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewValues_CellContentClick);
             this.dataGridViewValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewValues_MouseDown);
             // 
             // MonsterSeed
@@ -230,6 +231,7 @@ namespace RNGReporter
             dataGridViewCellStyle2.Format = "X";
             this.MonsterSeed.DefaultCellStyle = dataGridViewCellStyle2;
             this.MonsterSeed.HeaderText = "Seed";
+            this.MonsterSeed.MinimumWidth = 6;
             this.MonsterSeed.Name = "MonsterSeed";
             this.MonsterSeed.ReadOnly = true;
             this.MonsterSeed.Width = 70;
@@ -242,6 +244,7 @@ namespace RNGReporter
             dataGridViewCellStyle3.NullValue = null;
             this.Pid.DefaultCellStyle = dataGridViewCellStyle3;
             this.Pid.HeaderText = "PID";
+            this.Pid.MinimumWidth = 6;
             this.Pid.Name = "Pid";
             this.Pid.ReadOnly = true;
             this.Pid.Width = 70;
@@ -249,123 +252,131 @@ namespace RNGReporter
             // Method
             // 
             this.Method.DataPropertyName = "Method";
-            this.Method.HeaderText = "Method";
+            this.Method.HeaderText = "算法";
+            this.Method.MinimumWidth = 6;
             this.Method.Name = "Method";
             this.Method.ReadOnly = true;
-            this.Method.Width = 105;
+            this.Method.Width = 80;
             // 
             // Ability
             // 
             this.Ability.DataPropertyName = "Ability";
-            this.Ability.HeaderText = "Ability";
+            this.Ability.HeaderText = "特性";
+            this.Ability.MinimumWidth = 6;
             this.Ability.Name = "Ability";
             this.Ability.ReadOnly = true;
-            this.Ability.Width = 40;
+            this.Ability.Width = 70;
             // 
             // F50
             // 
             this.F50.DataPropertyName = "Female50";
-            this.F50.HeaderText = "50%";
+            this.F50.HeaderText = "♂1：♀1";
+            this.F50.MinimumWidth = 6;
             this.F50.Name = "F50";
             this.F50.ReadOnly = true;
-            this.F50.Width = 40;
+            this.F50.Width = 95;
             // 
             // F125
             // 
             this.F125.DataPropertyName = "Female125";
-            this.F125.HeaderText = "12.5%";
+            this.F125.HeaderText = "♂7：♀1";
+            this.F125.MinimumWidth = 6;
             this.F125.Name = "F125";
             this.F125.ReadOnly = true;
-            this.F125.Width = 40;
+            this.F125.Width = 95;
             // 
             // F25
             // 
             this.F25.DataPropertyName = "Female25";
-            this.F25.HeaderText = "25%";
+            this.F25.HeaderText = "♂3：♀1";
+            this.F25.MinimumWidth = 6;
             this.F25.Name = "F25";
             this.F25.ReadOnly = true;
-            this.F25.Width = 40;
+            this.F25.Width = 95;
             // 
             // F75
             // 
             this.F75.DataPropertyName = "Female75";
-            this.F75.HeaderText = "75%";
+            this.F75.HeaderText = "♂1：♀7";
+            this.F75.MinimumWidth = 6;
             this.F75.Name = "F75";
             this.F75.ReadOnly = true;
-            this.F75.Width = 40;
+            this.F75.Width = 95;
             // 
             // SidColumn
             // 
             this.SidColumn.DataPropertyName = "Sid";
             this.SidColumn.HeaderText = "SID";
+            this.SidColumn.MinimumWidth = 6;
             this.SidColumn.Name = "SidColumn";
             this.SidColumn.ReadOnly = true;
             this.SidColumn.Width = 60;
             // 
             // contextMenuStrip
             // 
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setSeedToolStripMenuItem,
             this.setSIDToolStripMenuItem,
             this.copyPIDToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            this.contextMenuStrip.Size = new System.Drawing.Size(124, 70);
+            this.contextMenuStrip.Size = new System.Drawing.Size(221, 76);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // setSeedToolStripMenuItem
             // 
             this.setSeedToolStripMenuItem.Name = "setSeedToolStripMenuItem";
-            this.setSeedToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.setSeedToolStripMenuItem.Text = "Set Seed";
+            this.setSeedToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.setSeedToolStripMenuItem.Text = "设置Seed到下方显示";
             this.setSeedToolStripMenuItem.Click += new System.EventHandler(this.setSeedToolStripMenuItem_Click);
             // 
             // setSIDToolStripMenuItem
             // 
             this.setSIDToolStripMenuItem.Name = "setSIDToolStripMenuItem";
-            this.setSIDToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.setSIDToolStripMenuItem.Text = "Set SID";
+            this.setSIDToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.setSIDToolStripMenuItem.Text = "设置SID到下方显示";
             this.setSIDToolStripMenuItem.Click += new System.EventHandler(this.setSIDToolStripMenuItem_Click);
             // 
             // copyPIDToolStripMenuItem
             // 
             this.copyPIDToolStripMenuItem.Name = "copyPIDToolStripMenuItem";
-            this.copyPIDToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.copyPIDToolStripMenuItem.Text = "Copy PID";
+            this.copyPIDToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.copyPIDToolStripMenuItem.Text = "复制PID";
             this.copyPIDToolStripMenuItem.Click += new System.EventHandler(this.copyPIDToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(7, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 68);
+            this.label1.Size = new System.Drawing.Size(400, 68);
             this.label1.TabIndex = 41;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.Text = "GEN3所有定点神兽和GEN4所有野生宝可梦都是通过算法Method 1生成的。GEN3所有野生宝可梦（非定点神兽）都通过算法Method1,2,3,4生成。竞技" +
+    "场和XD旋风中的宝可梦仅通过它们自己专属的算法生成。基拉祈则通过算法Reverse Method 1生成";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(7, 102);
+            this.label2.Location = new System.Drawing.Point(7, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(396, 46);
+            this.label2.Size = new System.Drawing.Size(400, 46);
             this.label2.TabIndex = 42;
-            this.label2.Text = "This screen also shows a compatible Secret ID that will make the listed Pokemon S" +
-    "hiny based on the Trainer ID entered in the main screen.  This calculation is do" +
-    "ne with the Trainer ID shown below.";
+            this.label2.Text = "此窗口还显示了一个兼容的SID，该SID将根据输入的TID，使列出的宝可梦变成闪光宝可梦。此计算是基于下方显示的TID进行的。";
             // 
             // labelSeed
             // 
             this.labelSeed.AutoSize = true;
-            this.labelSeed.Location = new System.Drawing.Point(129, 367);
+            this.labelSeed.Location = new System.Drawing.Point(119, 370);
             this.labelSeed.Name = "labelSeed";
-            this.labelSeed.Size = new System.Drawing.Size(0, 13);
+            this.labelSeed.Size = new System.Drawing.Size(0, 15);
             this.labelSeed.TabIndex = 44;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(87, 367);
+            this.label9.Location = new System.Drawing.Point(79, 370);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(47, 15);
             this.label9.TabIndex = 43;
             this.label9.Text = "Seed:";
             // 
@@ -375,13 +386,13 @@ namespace RNGReporter
             this.buttonCancel.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.ForeColor = System.Drawing.Color.Black;
-            this.buttonCancel.Location = new System.Drawing.Point(443, 362);
+            this.buttonCancel.Location = new System.Drawing.Point(666, 365);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonCancel.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 46;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "关闭";
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOk
@@ -390,7 +401,7 @@ namespace RNGReporter
             this.buttonOk.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOk.ForeColor = System.Drawing.Color.Black;
-            this.buttonOk.Location = new System.Drawing.Point(362, 362);
+            this.buttonOk.Location = new System.Drawing.Point(585, 365);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonOk.ShineColor = System.Drawing.SystemColors.Window;
@@ -404,7 +415,7 @@ namespace RNGReporter
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(263, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 13);
+            this.label3.Size = new System.Drawing.Size(23, 15);
             this.label3.TabIndex = 52;
             this.label3.Text = "ID";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -412,28 +423,28 @@ namespace RNGReporter
             // labelSid
             // 
             this.labelSid.AutoSize = true;
-            this.labelSid.Location = new System.Drawing.Point(259, 367);
+            this.labelSid.Location = new System.Drawing.Point(239, 370);
             this.labelSid.Name = "labelSid";
-            this.labelSid.Size = new System.Drawing.Size(0, 13);
+            this.labelSid.Size = new System.Drawing.Size(0, 15);
             this.labelSid.TabIndex = 56;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(217, 367);
+            this.label5.Location = new System.Drawing.Point(199, 370);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
+            this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 55;
             this.label5.Text = "SID:";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(5, 143);
+            this.label4.Location = new System.Drawing.Point(5, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(430, 25);
+            this.label4.Size = new System.Drawing.Size(225, 25);
             this.label4.TabIndex = 57;
-            this.label4.Text = "This tool cannot be used for 5th Generation 宝可梦.";
+            this.label4.Text = "此工具不能用于GEN5宝可梦";
             // 
             // maskedTextBoxID
             // 
@@ -511,7 +522,7 @@ namespace RNGReporter
             this.AcceptButton = this.buttonOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(523, 390);
+            this.ClientSize = new System.Drawing.Size(747, 393);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelSid);
@@ -544,7 +555,7 @@ namespace RNGReporter
             this.Name = "IVtoPID_SID_SEED";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "IVs to PID / SEED";
+            this.Text = "根据个体值计算PID/SEED";
             this.Load += new System.EventHandler(this.IVtoPID_SID_SEED_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);

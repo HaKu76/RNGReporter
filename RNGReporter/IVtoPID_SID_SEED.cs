@@ -18,13 +18,13 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -93,8 +93,8 @@ namespace RNGReporter
             if (maskedTextBoxSpe.Text != "")
                 spe = uint.Parse(maskedTextBoxSpe.Text);
 
-            int test = ((Nature) comboBoxNature.SelectedItem).Number;
-            var nature = (uint) test;
+            int test = ((Nature)comboBoxNature.SelectedItem).Number;
+            var nature = (uint)test;
 
             if (maskedTextBoxID.Text != "")
                 tid = uint.Parse(maskedTextBoxID.Text);
@@ -118,7 +118,7 @@ namespace RNGReporter
             //  Get currently selected item
             if (dataGridViewValues.SelectedRows.Count > 0)
             {
-                var seed = (Seed) dataGridViewValues.SelectedRows[0].DataBoundItem;
+                var seed = (Seed)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
                 ReturnSeed = seed.MonsterSeed;
                 SeedSet = true;
@@ -133,7 +133,7 @@ namespace RNGReporter
             //  Get currently selected item
             if (dataGridViewValues.SelectedRows.Count > 0)
             {
-                var seed = (Seed) dataGridViewValues.SelectedRows[0].DataBoundItem;
+                var seed = (Seed)dataGridViewValues.SelectedRows[0].DataBoundItem;
 
                 ReturnSid = seed.Sid;
                 sidSet = true;
@@ -194,7 +194,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             var CellStyle = new DataGridViewCellStyle();
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     CellStyle.Font = new Font("Meiryo", 7.25F);
@@ -223,6 +223,16 @@ namespace RNGReporter
                     break;
             }
             comboBoxNature.Font = CellStyle.Font;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewValues_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

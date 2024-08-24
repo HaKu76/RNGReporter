@@ -28,11 +28,11 @@ namespace RNGReporter
         private void genListOut(uint seed)
         {
             String genlistout = calcProbable(seed);
-            
+
             String result = genlistout.Replace("|", " | ");
             generation.Add(new ProbableGeneration
             {
-                Probable = result
+                ø…ƒ‹÷µProbable = result
             });
         }
 

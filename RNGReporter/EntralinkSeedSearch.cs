@@ -18,6 +18,8 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +28,6 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -77,7 +77,7 @@ namespace RNGReporter
         {
             if (Profiles.List != null && Profiles.List.Count > 0)
             {
-                profilesSource = new BindingSource {DataSource = Profiles.List};
+                profilesSource = new BindingSource { DataSource = Profiles.List };
                 comboBoxProfiles.DataSource = profilesSource;
                 comboBoxProfiles.SelectedIndex = _profile;
             }
@@ -117,7 +117,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             var CellStyle = new DataGridViewCellStyle();
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     CellStyle.Font = new Font("Meiryo", 7.25F);
@@ -216,7 +216,7 @@ namespace RNGReporter
         private List<List<ButtonComboType>> GetKeypresses()
         {
             var keypresses = new List<List<ButtonComboType>>();
-            var profile = (Profile) comboBoxProfiles.SelectedItem;
+            var profile = (Profile)comboBoxProfiles.SelectedItem;
             byte b = 0x1;
             //have to start at 1 because a phantom element is added, not sure why
             for (int i = 0; i < 4; ++i)
@@ -235,17 +235,17 @@ namespace RNGReporter
 
             #region Initialize
 
-            if (comboBoxNature.Text == "Any")
+            if (comboBoxNature.Text == "任意")
             {
                 MessageBox.Show("Please select a specific list of natures.");
                 return;
             }
             List<uint> natures =
-                (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint) ((Nature) t.ComboBoxItem).Number).
+                (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).
                     ToList();
 
-            var profile = (Profile) comboBoxProfiles.SelectedItem;
-            uint mac_partial = (uint) profile.MAC_Address & 0xFFFFFF;
+            var profile = (Profile)comboBoxProfiles.SelectedItem;
+            uint mac_partial = (uint)profile.MAC_Address & 0xFFFFFF;
 
             uint minFrame = uint.Parse(maskedTextBoxCapMinOffset.Text);
             uint maxFrame = uint.Parse(maskedTextBoxCapMaxOffset.Text);
@@ -269,7 +269,7 @@ namespace RNGReporter
             uint efgh = seedCGear - mac_partial & 0x0000FFFF;
 
             //  Get Delay
-            uint delay = efgh + (uint) (2000 - generateYear);
+            uint delay = efgh + (uint)(2000 - generateYear);
 
             //  Get Calibration
             uint calibration = uint.Parse(maskedTextBoxDelayCalibration.Text);
@@ -277,18 +277,18 @@ namespace RNGReporter
             //  Store the Calibrated Delay and offset
             uint calibratedDelay = delay + calibration;
 
-            long offset = -calibratedDelay/60;
+            long offset = -calibratedDelay / 60;
 
             //  Get Hour
-            var hour = (int) cd;
+            var hour = (int)cd;
 
             //  We need to check here, as a user could have entered a seed
             //  that is not possible (invalid hour) to lets warn and exit
             //  on it.
             if (hour > 23)
             {
-                MessageBox.Show("This seed is invalid, please verify that you have entered it correctly and try again.",
-                                "Invalid Seed", MessageBoxButtons.OK);
+                MessageBox.Show("这个Seed无效，请确认您是否正确输入，并再试一次",
+                                "无效Seed", MessageBoxButtons.OK);
 
                 return;
             }
@@ -299,12 +299,12 @@ namespace RNGReporter
 
             iframes = new List<IFrameCapture>();
             var generator = new FrameGenerator
-                {
-                    InitialSeed = seedCGear,
-                    FrameType = FrameType.Method5CGear,
-                    InitialFrame = frameCGear,
-                    MaxResults = 1
-                };
+            {
+                InitialSeed = seedCGear,
+                FrameType = FrameType.Method5CGear,
+                InitialFrame = frameCGear,
+                MaxResults = 1
+            };
 
             GenderFilter genderFilter = checkBoxGenderless.Checked
                                             ? new GenderFilter("Genderless", 0xFF, GenderCriteria.DontCareGenderless)
@@ -325,7 +325,7 @@ namespace RNGReporter
                         //  Loop through all seconds
                         for (int second = 0; second <= 59; second++)
                         {
-                            if (ab != ((month*day + minute + second)&0xFF)) continue;
+                            if (ab != ((month * day + minute + second) & 0xFF)) continue;
                             var dateTime = new DateTime(generateYear, month, day, hour, minute, second);
 
                             // Standard seed time will be the C-Gear seed time, minus the delay
@@ -414,12 +414,12 @@ namespace RNGReporter
 
             jobs = new Thread[cpus];
             //divide the possible times into even groups
-            int split = possibleDates.Count/cpus;
+            int split = possibleDates.Count / cpus;
             for (int i = 0; i < cpus; ++i)
             {
                 List<DateTime> dates = i < cpus - 1
-                                           ? possibleDates.GetRange(i*split, split)
-                                           : possibleDates.GetRange(i*split, split + possibleDates.Count%cpus);
+                                           ? possibleDates.GetRange(i * split, split)
+                                           : possibleDates.GetRange(i * split, split + possibleDates.Count % cpus);
                 //if the last i make sure we add the remainder as well
                 // technically supposed to copy profile and send in a copy because now the threads are
                 // using a reference to the same profile but that's fine because the profile isn't getting
@@ -432,14 +432,14 @@ namespace RNGReporter
                 jobs[i].Start();
             }
 
-            listBindingCap = new BindingSource {DataSource = iframes};
+            listBindingCap = new BindingSource { DataSource = iframes };
             dataGridViewCapValues.DataSource = listBindingCap;
 
 
             progressTotal =
                 (ulong)
-                (maxFrame - minFrame + 1)*(profile.Timer0Max - profile.Timer0Min + 1)*(ulong) keypresses.Count*
-                (ulong) possibleDates.Count;
+                (maxFrame - minFrame + 1) * (profile.Timer0Max - profile.Timer0Min + 1) * (ulong)keypresses.Count *
+                (ulong)possibleDates.Count;
             var progressJob =
                 new Thread(() => ManageProgress(listBindingCap, dataGridViewCapValues, generator.FrameType, 0));
             progressJob.Start();
@@ -505,15 +505,15 @@ namespace RNGReporter
                         foreach (Frame frame in frames)
                         {
                             var iframe = new IFrameCapture
-                                {
-                                    Offset = frame.Number,
-                                    Seed = seed,
-                                    Frame = frame,
-                                    TimeDate = seedTime,
-                                    Timer0 = timer0,
-                                    Delay = calibratedDelay,
-                                    KeyPresses = combo
-                                };
+                            {
+                                Offset = frame.Number,
+                                Seed = seed,
+                                Frame = frame,
+                                TimeDate = seedTime,
+                                Timer0 = timer0,
+                                Delay = calibratedDelay,
+                                KeyPresses = combo
+                            };
 
                             //  Calibrated delay instead of the real delay for correct CGear Times
 
@@ -546,7 +546,7 @@ namespace RNGReporter
                             }
                             previous = iframe;
                         }
-                        progressSearched += (uint) frames.Count;
+                        progressSearched += (uint)frames.Count;
 
                         if (frameGroup.Count >= groupSize)
                         {
@@ -575,9 +575,9 @@ namespace RNGReporter
             progressFound = 0;
 
             UpdateGridDelegate gridUpdater = UpdateGrid;
-            var updateParams = new object[] {bindingSource};
+            var updateParams = new object[] { bindingSource };
             ResortGridDelegate gridSorter = ResortGrid;
-            var sortParams = new object[] {bindingSource, grid, frameType};
+            var sortParams = new object[] { bindingSource, grid, frameType };
             ThreadDelegate enableGenerateButton = EnableSeedGenerate;
 
             try
@@ -585,7 +585,7 @@ namespace RNGReporter
                 bool alive = true;
                 while (alive)
                 {
-                    progress.ShowProgress(progressSearched/(float) progressTotal, progressSearched, progressFound);
+                    progress.ShowProgress(progressSearched / (float)progressTotal, progressSearched, progressFound);
                     if (refreshQueue)
                     {
                         Invoke(gridUpdater, updateParams);
@@ -644,7 +644,7 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (e.ColumnIndex == CapNatureIndex)
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
                 if (nature == Functions.NatureStrings(18) ||
                     nature == Functions.NatureStrings(6) ||
@@ -657,13 +657,13 @@ namespace RNGReporter
                     e.CellStyle.ForeColor = Color.Gray;
                 }
 
-                if ((bool) dataGridViewCapValues.Rows[e.RowIndex].Cells["Grey"].Value)
+                if ((bool)dataGridViewCapValues.Rows[e.RowIndex].Cells["Grey"].Value)
                     dataGridViewCapValues.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGray;
             }
 
             if (e.ColumnIndex >= CapHPIndex && e.ColumnIndex <= CapSpeedIndex)
             {
-                var number = (uint) e.Value;
+                var number = (uint)e.Value;
 
                 if (number >= 30)
                 {
@@ -724,7 +724,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 Clipboard.SetText(frame.Seed.ToString("X8"));
             }
@@ -739,7 +739,7 @@ namespace RNGReporter
                 DataGridViewColumn selectedColumn = dataGridViewCapValues.Columns[e.ColumnIndex];
 
                 var iframeCaptureComparer = new IFrameCaptureComparer
-                    {CompareType = selectedColumn.DataPropertyName};
+                { CompareType = selectedColumn.DataPropertyName };
 
                 if (selectedColumn.HeaderCell.SortGlyphDirection == SortOrder.Ascending)
                     iframeCaptureComparer.sortOrder = SortOrder.Descending;
@@ -759,7 +759,7 @@ namespace RNGReporter
                 DataObject clipboardContent = dataGridViewCapValues.GetClipboardContent();
                 if (clipboardContent != null)
                 {
-                    var test = (string) clipboardContent.GetData(DataFormats.UnicodeText);
+                    var test = (string)clipboardContent.GetData(DataFormats.UnicodeText);
                     //  replace tab with space
                     test = test.Replace('\t', ' ');
                     Clipboard.SetText(test);
@@ -771,10 +771,10 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows.Count > 0)
             {
-                var profile = (Profile) comboBoxProfiles.SelectedItem;
+                var profile = (Profile)comboBoxProfiles.SelectedItem;
                 textBoxChatot.Text =
                     Responses.ChatotResponses64(
-                        ((IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem).Seed, profile);
+                        ((IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem).Seed, profile);
             }
         }
 
@@ -785,23 +785,23 @@ namespace RNGReporter
 
         private void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
 
         private void comboBoxProfiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformation();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformation();
         }
 
         private void buttonEditProfile_Click(object sender, EventArgs e)
         {
-            var editor = new ProfileEditor {Profile = (Profile) comboBoxProfiles.SelectedItem};
+            var editor = new ProfileEditor { Profile = (Profile)comboBoxProfiles.SelectedItem };
             if (editor.ShowDialog() != DialogResult.OK) return;
             Profiles.List[comboBoxProfiles.SelectedIndex] = editor.Profile;
 
             profilesSource.DataSource = Profiles.List;
             profilesSource.ResetBindings(false);
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformation();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformation();
         }
 
         #region Nested type: ResortGridDelegate

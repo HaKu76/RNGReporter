@@ -122,7 +122,7 @@ namespace RNGReporter
             {
                 try
                 {
-                    progressBar.MasterValue = (int) (percent*100.0);
+                    progressBar.MasterValue = (int)(percent * 100.0);
                 }
                 catch
                 {
@@ -177,6 +177,11 @@ namespace RNGReporter
             Hide();
             Application.RemoveMessageFilter(this);
             Dispose();
+        }
+
+        private void Progress_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void buttonPause_Click(object sender, EventArgs e)

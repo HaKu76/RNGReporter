@@ -1,10 +1,10 @@
-﻿using System;
+﻿using RNGReporter.Controls;
+using RNGReporter.Objects.Generators;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Controls;
-using RNGReporter.Objects.Generators;
 
 namespace RNGReporter.Objects.Searchers
 {
@@ -32,7 +32,7 @@ namespace RNGReporter.Objects.Searchers
             waitHandle = new EventWaitHandle(true, EventResetMode.ManualReset);
 
             drFrames = new List<DreamRadarFrame>();
-            frameBinding = new BindingSource {DataSource = drFrames};
+            frameBinding = new BindingSource { DataSource = drFrames };
             searchParams.DataGridView.DataSource = frameBinding;
             btnGenerate = searchParams.GenerateButton;
         }
@@ -93,15 +93,15 @@ namespace RNGReporter.Objects.Searchers
             const int threadIndex = 0;
             // todo: move this outside the search and only do it once
             var array = new uint[80];
-            array[6] = (uint) (searchParams.Profile.MAC_Address & 0xFFFF);
+            array[6] = (uint)(searchParams.Profile.MAC_Address & 0xFFFF);
 
             if (searchParams.Profile.SoftReset)
             {
                 array[6] = array[6] ^ 0x01000000;
             }
 
-            var upperMAC = (uint) (searchParams.Profile.MAC_Address >> 16);
-            array[7] = (upperMAC ^ (searchParams.Profile.VFrame*0x1000000) ^ searchParams.Profile.GxStat);
+            var upperMAC = (uint)(searchParams.Profile.MAC_Address >> 16);
+            array[7] = (upperMAC ^ (searchParams.Profile.VFrame * 0x1000000) ^ searchParams.Profile.GxStat);
 
             // Get the version-unique part of the message
             Array.Copy(
@@ -126,12 +126,12 @@ namespace RNGReporter.Objects.Searchers
 
             foreach (int month in months)
             {
-                float interval = ((float) DateTime.DaysInMonth(year, month)/numThreads + (float) 0.05);
+                float interval = ((float)DateTime.DaysInMonth(year, month) / numThreads + (float)0.05);
 
-                var dayMin = (int) (interval*threadIndex + 1);
-                var dayMax = (int) (interval*(threadIndex + 1));
+                var dayMin = (int)(interval * threadIndex + 1);
+                var dayMax = (int)(interval * (threadIndex + 1));
 
-                string yearMonth = String.Format("{0:00}", year%2000) + String.Format("{0:00}", month);
+                string yearMonth = String.Format("{0:00}", year % 2000) + String.Format("{0:00}", month);
                 for (int buttonCount = 0; buttonCount < keypressList.Count; buttonCount++)
                 {
                     array[12] = buttonMashValue[buttonCount];
@@ -146,7 +146,7 @@ namespace RNGReporter.Objects.Searchers
                         {
                             var searchTime = new DateTime(year, month, day);
 
-                            string dateString = String.Format("{0:00}", (int) searchTime.DayOfWeek);
+                            string dateString = String.Format("{0:00}", (int)searchTime.DayOfWeek);
                             dateString = String.Format("{0:00}", searchTime.Day) + dateString;
                             dateString = yearMonth + dateString;
                             array[8] = uint.Parse(dateString, NumberStyles.HexNumber);

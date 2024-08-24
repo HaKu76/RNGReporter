@@ -54,17 +54,17 @@ namespace RNGReporter.Objects
             var genderGenderRatioCollection =
                 new List<GenderGenderRatio>
                     {
-                        new GenderGenderRatio("Genderless", "Genderless", 0, 255),
-                        new GenderGenderRatio("Male (50% Male / 50% Female)", "M 50% F", 127, 255),
-                        new GenderGenderRatio("Female  (50% Male / 50% Female)", "F 50^ F", 0, 126),
-                        new GenderGenderRatio("Male (25% Male / 75% Female)", "M 75% F", 191, 255),
-                        new GenderGenderRatio("Female (25% Male / 75% Female)", "F 75% F", 0, 190),
-                        new GenderGenderRatio("Male (75% Male / 25% Female)", "M 25% F", 64, 255),
-                        new GenderGenderRatio("Female  (75% Male / 25% Female)", "F 25% F", 0, 63),
-                        new GenderGenderRatio("Male (87.5% Male / 12.5% Female)", "M 12.5 F", 31, 255),
-                        new GenderGenderRatio("Female (87.5% Male / 12.5% Female)", "F 12.5 F", 0, 30),
-                        new GenderGenderRatio("Male (100% Male)", "M 100% M", 0, 255),
-                        new GenderGenderRatio("Female (100% Female)", "F 100% F", 0, 255)
+                        new GenderGenderRatio("无性别", "无性别", 0, 255),
+                        new GenderGenderRatio("♂(♂1：♀1)", "♂", 127, 255),
+                        new GenderGenderRatio("♀(♂1：♀1)", "♀", 0, 126),
+                        new GenderGenderRatio("♂(♂1：♀3)", "♂", 191, 255),
+                        new GenderGenderRatio("♀(♂1：♀3)", "♀", 0, 190),
+                        new GenderGenderRatio("♂(♂3：♀1)", "♂", 64, 255),
+                        new GenderGenderRatio("♀(♂3：♀1)", "♀", 0, 63),
+                        new GenderGenderRatio("♂(♂7：♀1)", "♂", 31, 255),
+                        new GenderGenderRatio("♀(♂7：♀1)", "♀", 0, 30),
+                        new GenderGenderRatio("♂(只有♂)", "♂", 0, 255),
+                        new GenderGenderRatio("♀(只有♀)", "♀", 0, 255)
                     };
 
             return genderGenderRatioCollection;
@@ -76,17 +76,17 @@ namespace RNGReporter.Objects
             var genderRatioCollection =
                 new List<GenderGenderRatio>
                     {
-                        new GenderGenderRatio("Genderless", "Genderless", 0, 255),
-                        new GenderGenderRatio("Male (50% Male / 50% Female)", "M 50% F", 127, 255),
-                        new GenderGenderRatio("Female  (50% Male / 50% Female)", "F 50% F", 0, 126),
-                        new GenderGenderRatio("Male (25% Male / 75% Female)", "M 75% F", 191, 255),
-                        new GenderGenderRatio("Female (25% Male / 75% Female)", "F 75% F", 0, 190),
-                        new GenderGenderRatio("Male (75% Male / 25% Female)", "M 25% F", 63, 255),
-                        new GenderGenderRatio("Female  (75% Male / 25% Female)", "F 25% F", 0, 62),
-                        new GenderGenderRatio("Male (87.5% Male / 12.5% Female)", "M 12.5% F", 31, 255),
-                        new GenderGenderRatio("Female (87.5% Male / 12.5% Female)", "F 12.5% F", 0, 30),
-                        new GenderGenderRatio("Male (100% Male)", "M 100% M", 0, 0),
-                        new GenderGenderRatio("Female (100% Female)", "F 100% F", 255, 255)
+                        new GenderGenderRatio("无性别", "无性别", 0, 255),
+                        new GenderGenderRatio("♂(♂1：♀1)", "♂", 127, 255),
+                        new GenderGenderRatio("♀(♂1：♀1)", "♀", 0, 126),
+                        new GenderGenderRatio("♂(♂1：♀3)", "♂", 191, 255),
+                        new GenderGenderRatio("♀(♂1：♀3)", "♀", 0, 190),
+                        new GenderGenderRatio("♂(♂3：♀1)", "♂", 63, 255),
+                        new GenderGenderRatio("♀(♂3：♀1)", "♀", 0, 62),
+                        new GenderGenderRatio("♂(♂7：♀1)", "♂", 31, 255),
+                        new GenderGenderRatio("♀(♂7：♀1)", "♀", 0, 30),
+                        new GenderGenderRatio("♂(只有♂)", "♂", 0, 0),
+                        new GenderGenderRatio("♀(只有♀)", "♀", 255, 255)
                     };
 
             return genderRatioCollection;
@@ -172,15 +172,15 @@ namespace RNGReporter.Objects
             var GenderFilterCollection =
                 new List<GenderFilter>
                     {
-                        new NoGenderFilter("Don't Care / Genderless / Fixed Gender"),
-                        new GenderFilter("Male (50% Male / 50% Female)", 127, GenderCriteria.Male),
-                        new GenderFilter("Female (50% Male / 50% Female)", 127, GenderCriteria.Female),
-                        new GenderFilter("Male (25% Male / 75% Female)", 191, GenderCriteria.Male),
-                        new GenderFilter("Female (25% Male / 75% Female)", 191, GenderCriteria.Female),
-                        new GenderFilter("Male (75% Male / 25% Female)", 63, GenderCriteria.Male),
-                        new GenderFilter("Female (75% Male / 25% Female)", 63, GenderCriteria.Female),
-                        new GenderFilter("Male (87.5% Male / 12.5% Female)", 31, GenderCriteria.Male),
-                        new GenderFilter("Female (87.5% Male / 12.5% Female)", 31, GenderCriteria.Female)
+                        new NoGenderFilter("不考虑/无性别/固定性别"),
+                        new GenderFilter("♂(♂1：♀1)", 127, GenderCriteria.Male),
+                        new GenderFilter("♀(♂1：♀1)", 127, GenderCriteria.Female),
+                        new GenderFilter("♂(♂1：♀3)", 191, GenderCriteria.Male),
+                        new GenderFilter("♀(♂1：♀3)", 191, GenderCriteria.Female),
+                        new GenderFilter("♂(♂3：♀1)", 63, GenderCriteria.Male),
+                        new GenderFilter("♀(♂3：♀1)", 63, GenderCriteria.Female),
+                        new GenderFilter("♂(♂7：♀1)", 31, GenderCriteria.Male),
+                        new GenderFilter("♀(♂7：♀1)", 31, GenderCriteria.Female)
                     };
 
             return GenderFilterCollection;
@@ -194,17 +194,17 @@ namespace RNGReporter.Objects
             var GenderFilterCollection =
                 new List<GenderFilter>
                     {
-                        new GenderFilter("Don't Care / Genderless", 255, GenderCriteria.DontCareGenderless),
-                        new GenderFilter("Male (50% Male / 50% Female)", 127, GenderCriteria.Male),
-                        new GenderFilter("Female (50% Male / 50% Female)", 127, GenderCriteria.Female),
-                        new GenderFilter("Male (25% Male / 75% Female)", 191, GenderCriteria.Male),
-                        new GenderFilter("Female (25% Male / 75% Female)", 191, GenderCriteria.Female),
-                        new GenderFilter("Male (75% Male / 25% Female)", 63, GenderCriteria.Male),
-                        new GenderFilter("Female (75% Male / 25% Female)", 63, GenderCriteria.Female),
-                        new GenderFilter("Male (87.5% Male / 12.5% Female)", 31, GenderCriteria.Male),
-                        new GenderFilter("Female (87.5% Male / 12.5% Female)", 31, GenderCriteria.Female),
-                        new GenderFilter("Male (100% Male)", 0, GenderCriteria.DontCareGenderless),
-                        new GenderFilter("Female (100% Female)", 254, GenderCriteria.DontCareGenderless)
+                        new GenderFilter("不考虑/无性别", 255, GenderCriteria.DontCareGenderless),
+                        new GenderFilter("♂(♂1：♀1)", 127, GenderCriteria.Male),
+                        new GenderFilter("♀(♂1：♀1)", 127, GenderCriteria.Female),
+                        new GenderFilter("♂(♂1：♀3)", 191, GenderCriteria.Male),
+                        new GenderFilter("♀(♂1：♀3)", 191, GenderCriteria.Female),
+                        new GenderFilter("♂(♂3：♀1)", 63, GenderCriteria.Male),
+                        new GenderFilter("♀(♂3：♀1)", 63, GenderCriteria.Female),
+                        new GenderFilter("♂(♂7：♀1)", 31, GenderCriteria.Male),
+                        new GenderFilter("♀(♂7：♀1)", 31, GenderCriteria.Female),
+                        new GenderFilter("♂(只有♂)", 0, GenderCriteria.DontCareGenderless),
+                        new GenderFilter("♀(只有♀)", 254, GenderCriteria.DontCareGenderless)
                     };
 
             return GenderFilterCollection;

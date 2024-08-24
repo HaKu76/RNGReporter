@@ -17,6 +17,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using Microsoft.Win32;
+using RNGReporter.Objects;
+using RNGReporter.Objects.Generators;
+using RNGReporter.Objects.Searchers;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,11 +33,6 @@ using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using RNGReporter.Objects;
-using RNGReporter.Objects.Generators;
-using RNGReporter.Objects.Searchers;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -103,9 +103,9 @@ namespace RNGReporter
 
             var ability = new[]
                 {
-                    new ComboBoxItem("Any", -1),
-                    new ComboBoxItem("Ability 0", 0),
-                    new ComboBoxItem("Ability 1", 1)
+                    new ComboBoxItem("任意", -1),
+                    new ComboBoxItem("特性0", 0),
+                    new ComboBoxItem("特性1", 1)
                 };
 
 
@@ -134,15 +134,15 @@ namespace RNGReporter
                                      EncounterType.AllEncounterShiny)
                 });
 
-            var shinyNatureList = new BindingSource {DataSource = Objects.Nature.NatureDropDownCollection()};
+            var shinyNatureList = new BindingSource { DataSource = Objects.Nature.NatureDropDownCollection() };
             comboBoxShinyNature.DataSource = shinyNatureList;
 
             var shinyEverstoneList = new BindingSource
-                {DataSource = Objects.Nature.NatureDropDownCollectionSynch()};
+            { DataSource = Objects.Nature.NatureDropDownCollectionSynch() };
             comboBoxShinyEverstoneNature.DataSource = shinyEverstoneList;
             comboBoxNature.Items.AddRange(Objects.Nature.NatureDropDownCollectionSearchNatures());
 
-            profilesSource = new BindingSource {DataSource = Profiles.List};
+            profilesSource = new BindingSource { DataSource = Profiles.List };
             comboBoxProfiles.DataSource = profilesSource;
 
             Settings.Default.PropertyChanged += ChangeLanguage;
@@ -214,21 +214,21 @@ namespace RNGReporter
                 if (Settings.Default.LastVersion < MainForm.VersionNumber && registryRngReporter != null)
                 {
                     maskedTextBoxCapYear.Text =
-                        (string) registryRngReporter.GetValue("pt_cap_year", DateTime.Now.Year.ToString());
+                        (string)registryRngReporter.GetValue("pt_cap_year", DateTime.Now.Year.ToString());
                     comboBoxCapMonth.CheckBoxItems[DateTime.Now.Month].Checked = true;
-                    maskedTextBoxCapMaxOffset.Text = (string) registryRngReporter.GetValue("pt_cap_offset", "1000");
+                    maskedTextBoxCapMaxOffset.Text = (string)registryRngReporter.GetValue("pt_cap_offset", "1000");
 
                     if (maskedTextBoxCapMaxOffset.Text == "0")
                         maskedTextBoxCapMaxOffset.Text = "1";
 
-                    maskedTextBoxCapMinDelay.Text = (string) registryRngReporter.GetValue("pt_cap_delaymin", "600");
-                    maskedTextBoxCapMaxDelay.Text = (string) registryRngReporter.GetValue("pt_cap_delaymax", "610");
+                    maskedTextBoxCapMinDelay.Text = (string)registryRngReporter.GetValue("pt_cap_delaymin", "600");
+                    maskedTextBoxCapMaxDelay.Text = (string)registryRngReporter.GetValue("pt_cap_delaymax", "610");
 
                     maskedTextBoxShinyYear.Text =
-                        (string) registryRngReporter.GetValue("pt_shiny_year", DateTime.Now.Year.ToString());
+                        (string)registryRngReporter.GetValue("pt_shiny_year", DateTime.Now.Year.ToString());
                     comboBoxShinyMonth.CheckBoxItems[DateTime.Now.Month].Checked = true;
                 }
-                    //load from settings
+                //load from settings
                 else
                 {
                     if (Settings.Default.CapYear < 2000) Settings.Default.CapYear = DateTime.Now.Year;
@@ -283,7 +283,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             var CellStyle = new DataGridViewCellStyle();
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     CellStyle.Font = new Font("Meiryo", 7.25F);
@@ -335,8 +335,8 @@ namespace RNGReporter
             comboBoxNature.CheckBoxItems[0].Checked = true;
             comboBoxNature.CheckBoxItems[0].Checked = false;
 
-            ((BindingSource) comboBoxShinyNature.DataSource).ResetBindings(false);
-            ((BindingSource) comboBoxShinyEverstoneNature.DataSource).ResetBindings(false);
+            ((BindingSource)comboBoxShinyNature.DataSource).ResetBindings(false);
+            ((BindingSource)comboBoxShinyEverstoneNature.DataSource).ResetBindings(false);
 
             dataGridViewCapValues.Refresh();
             dataGridViewShinyResults.Refresh();
@@ -352,7 +352,7 @@ namespace RNGReporter
             //initialize the profiles
             if (Profiles.List == null || Profiles.List.Count == 0)
             {
-                MessageBox.Show("No profiles were detected. Please setup a profile first.");
+                MessageBox.Show("没有检测到GEN5的存档信息，请先新增一个存档信息。");
                 Profiles.ProfileManager.Visible = false;
                 Profiles.ProfileManager.ShowDialog();
             }
@@ -426,9 +426,9 @@ namespace RNGReporter
 
         private void buttonCapGenerate_Click(object sender, EventArgs e)
         {
-            var profile = (Profile) comboBoxProfiles.SelectedItem;
+            var profile = (Profile)comboBoxProfiles.SelectedItem;
             iframes = new List<IFrameCapture>();
-            listBindingCap = new BindingSource {DataSource = iframes};
+            listBindingCap = new BindingSource { DataSource = iframes };
             dataGridViewCapValues.DataSource = listBindingCap;
 
             jobs = new Thread[cpus];
@@ -436,7 +436,7 @@ namespace RNGReporter
             shinygenerators = new FrameGenerator[cpus];
             waitHandle = new EventWaitHandle(true, EventResetMode.ManualReset);
 
-            var year = (uint) DateTime.Now.Year;
+            var year = (uint)DateTime.Now.Year;
             if (maskedTextBoxCapYear.Text != "")
             {
                 year = uint.Parse(maskedTextBoxCapYear.Text);
@@ -444,7 +444,7 @@ namespace RNGReporter
                 //  Need to validate the year here
                 if (year < 2000)
                 {
-                    MessageBox.Show("You must enter a year greater than 1999.", "Please Enter a Valid Year",
+                    MessageBox.Show("You must enter a year greater than 1999.", "请输入一个有效年份",
                                     MessageBoxButtons.OK);
                     return;
                 }
@@ -470,16 +470,16 @@ namespace RNGReporter
             }
 
             generator = new FrameGenerator
-                {
-                    // Now that each combo box item is a custom object containing the FrameType reference
-                    // We can simply retrieve the FrameType from the selected item
-                    FrameType = (FrameType) ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference,
-                    EncounterType =
-                        (EncounterType) ((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference,
-                    EncounterMod = Objects.EncounterMod.Search,
-                    InitialFrame = minOffset,
-                    MaxResults = maxOffset - minOffset + 1
-                };
+            {
+                // Now that each combo box item is a custom object containing the FrameType reference
+                // We can simply retrieve the FrameType from the selected item
+                FrameType = (FrameType)((ComboBoxItem)comboBoxMethod.SelectedItem).Reference,
+                EncounterType =
+                        (EncounterType)((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference,
+                EncounterMod = Objects.EncounterMod.Search,
+                InitialFrame = minOffset,
+                MaxResults = maxOffset - minOffset + 1
+            };
             if (generator.FrameType == FrameType.BWBred && profile.IsBW2()) generator.FrameType = FrameType.BW2Bred;
             if (generator.FrameType == FrameType.BWBredInternational && profile.IsBW2())
                 generator.FrameType = FrameType.BW2BredInternational;
@@ -499,7 +499,7 @@ namespace RNGReporter
             //  that is blank is considered a zero.
 
             List<int> encounterSlots = null;
-            if (comboBoxEncounterSlot.Text != "Any" && comboBoxEncounterSlot.CheckBoxItems.Count > 0)
+            if (comboBoxEncounterSlot.Text != "任意" && comboBoxEncounterSlot.CheckBoxItems.Count > 0)
             {
                 encounterSlots = new List<int>();
                 for (int i = 0; i < comboBoxEncounterSlot.CheckBoxItems.Count; i++)
@@ -511,7 +511,7 @@ namespace RNGReporter
             }
 
             List<uint> natures = null;
-            if (comboBoxNature.Text != "Any" && comboBoxNature.CheckBoxItems.Count > 0)
+            if (comboBoxNature.Text != "任意" && comboBoxNature.CheckBoxItems.Count > 0)
                 natures = (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).ToList();
 
             uint shinyOffset = 0;
@@ -551,21 +551,21 @@ namespace RNGReporter
                     if (shinyOffset > 0)
                     {
                         shinygenerator = new FrameGenerator
-                            {
-                                FrameType = FrameType.Method5Natures,
-                                EncounterType =
+                        {
+                            FrameType = FrameType.Method5Natures,
+                            EncounterType =
                                     (EncounterType)
-                                    ((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference,
-                                EncounterMod = Objects.EncounterMod.Search,
-                                InitialFrame = 1,
-                                MaxResults = shinyOffset,
-                                //ShinyCharm = cbCapShinyCharm.Checked
-                            };
+                                    ((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference,
+                            EncounterMod = Objects.EncounterMod.Search,
+                            InitialFrame = 1,
+                            MaxResults = shinyOffset,
+                            //ShinyCharm = cbCapShinyCharm.Checked
+                        };
 
                         subFrameCompare = new FrameCompare(
                             ivFiltersCapture.IVFilter,
                             natures,
-                            (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                            (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                             true,
                             checkBoxSynchOnly.Checked,
                             false,
@@ -697,7 +697,7 @@ namespace RNGReporter
                 frameCompare = new FrameCompare(
                     ivFiltersCapture.IVFilter,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     checkBoxSynchOnly.Checked,
                     false,
@@ -715,17 +715,17 @@ namespace RNGReporter
                     if (generator.EncounterType == EncounterType.Roamer)
                     {
                         file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame1D-Roamer.txt");
-                        list[0] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                        list[0] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                         file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame2D-Roamer.txt");
-                        list[1] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                        list[1] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                         file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame3D-Roamer.txt");
-                        list[2] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                        list[2] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                         file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame4D-Roamer.txt");
-                        list[3] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                        list[3] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                         file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame5D-Roamer.txt");
-                        list[4] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                        list[4] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                         file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame6D-Roamer.txt");
-                        list[5] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                        list[5] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
 
                         foreach (var partialList in list)
                         {
@@ -743,58 +743,58 @@ namespace RNGReporter
                                 file =
                                     thisExe.GetManifestResourceStream(
                                         "RNGReporter.Resources.MTRNG-Frame25-Entralink.txt");
-                                list[0] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[0] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file =
                                     thisExe.GetManifestResourceStream(
                                         "RNGReporter.Resources.MTRNG-Frame26-Entralink.txt");
-                                list[1] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[1] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file =
                                     thisExe.GetManifestResourceStream(
                                         "RNGReporter.Resources.MTRNG-Frame27-Entralink.txt");
-                                list[2] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[2] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file =
                                     thisExe.GetManifestResourceStream(
                                         "RNGReporter.Resources.MTRNG-Frame28-Entralink.txt");
-                                list[3] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[3] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file =
                                     thisExe.GetManifestResourceStream(
                                         "RNGReporter.Resources.MTRNG-Frame29-Entralink.txt");
-                                list[4] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[4] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file =
                                     thisExe.GetManifestResourceStream(
                                         "RNGReporter.Resources.MTRNG-Frame30-Entralink.txt");
-                                list[5] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[5] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             }
                             else
                             {
                                 file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame3D.txt");
-                                list[0] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[0] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame4D.txt");
-                                list[1] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[1] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame5D.txt");
-                                list[2] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[2] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame6D.txt");
-                                list[3] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[3] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame7D.txt");
-                                list[4] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[4] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                                 file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame8D.txt");
-                                list[5] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                                list[5] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             }
                         }
                         else
                         {
                             file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame1D.txt");
-                            list[0] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                            list[0] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame2D.txt");
-                            list[1] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                            list[1] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame3D.txt");
-                            list[2] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                            list[2] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame4D.txt");
-                            list[3] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                            list[3] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame5D.txt");
-                            list[4] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                            list[4] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                             file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame6D.txt");
-                            list[5] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                            list[5] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                         }
 
 
@@ -831,10 +831,10 @@ namespace RNGReporter
                 progressSearched = 0;
                 progressFound = 0;
 
-                int dayTotal = months.Sum(month => DateTime.DaysInMonth((int) year, month));
+                int dayTotal = months.Sum(month => DateTime.DaysInMonth((int)year, month));
                 progressTotal =
                     (ulong)
-                    (dayTotal*86400*(maxOffset - minOffset + 1)*keypresses.Count*
+                    (dayTotal * 86400 * (maxOffset - minOffset + 1) * keypresses.Count *
                      (profile.Timer0Max - profile.Timer0Min + 1));
 
                 for (int i = 0; i < jobs.Length; i++)
@@ -900,17 +900,17 @@ namespace RNGReporter
                     Assembly thisExe = Assembly.GetExecutingAssembly();
 
                     Stream file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame21-Entralink.txt");
-                    list[0] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                    list[0] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                     file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame22-Entralink.txt");
-                    list[1] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                    list[1] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                     file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame23-Entralink.txt");
-                    list[2] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                    list[2] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                     file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame24-Entralink.txt");
-                    list[3] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                    list[3] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                     file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame25-Entralink.txt");
-                    list[4] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                    list[4] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
                     file = thisExe.GetManifestResourceStream("RNGReporter.Resources.MTRNG-Frame26-Entralink.txt");
-                    list[5] = (Dictionary<uint, uint>) new BinaryFormatter().Deserialize(file);
+                    list[5] = (Dictionary<uint, uint>)new BinaryFormatter().Deserialize(file);
 
                     foreach (var partialList in list)
                     {
@@ -933,7 +933,7 @@ namespace RNGReporter
                         GenerateCGearCapJob(profile.MAC_Address, minEfgh, maxEfgh, fastSearch, profile.ID, profile.SID));
                 jobs[0].Start();
 
-                progressTotal = (255*24*(maxEfgh - minEfgh + 1)*generator.MaxResults);
+                progressTotal = (255 * 24 * (maxEfgh - minEfgh + 1) * generator.MaxResults);
                 var progressJob =
                     new Thread(() => ManageProgress(listBindingCap, dataGridViewCapValues, generator.FrameType, 0));
                 progressJob.Start();
@@ -948,20 +948,20 @@ namespace RNGReporter
         private void btnHHGenerate_Click(object sender, EventArgs e)
         {
             var searchParams = new HiddenGrottoSearchParams
-                {
-                    GenerateButton = btnHHGenerate,
-                    DataGridView = dgvHiddenGrottos,
-                    MaxAdvances = txtHHAdvances,
-                    Year = txtHHYear,
-                    OpenHollows = txtHHOpenHollows,
-                    Months = cbHHMonth,
-                    Profile = (Profile) comboBoxProfiles.SelectedItem,
-                    Slots = cbHHSlot,
-                    SubSlots = cbHHSubSlot,
-                    Hollows = cbHHHollowNumber,
-                    Gender = cbHHGender,
-                    GenderRatio = cbHHGenderRatio
-                };
+            {
+                GenerateButton = btnHHGenerate,
+                DataGridView = dgvHiddenGrottos,
+                MaxAdvances = txtHHAdvances,
+                Year = txtHHYear,
+                OpenHollows = txtHHOpenHollows,
+                Months = cbHHMonth,
+                Profile = (Profile)comboBoxProfiles.SelectedItem,
+                Slots = cbHHSlot,
+                SubSlots = cbHHSubSlot,
+                Hollows = cbHHHollowNumber,
+                Gender = cbHHGender,
+                GenderRatio = cbHHGenderRatio
+            };
             Searcher searcher = new HiddenGrottoSearcher(searchParams, threadLock, this);
             if (!searcher.ParseInput()) return;
             searcher.RunSearch();
@@ -985,7 +985,7 @@ namespace RNGReporter
 
             foreach (int month in months)
             {
-                int dayMax = DateTime.DaysInMonth((int) year, month);
+                int dayMax = DateTime.DaysInMonth((int)year, month);
                 for (int buttonCount = 0; buttonCount < buttons.Length; buttonCount++)
                 {
                     for (int day = 1; day <= dayMax; day++)
@@ -999,7 +999,7 @@ namespace RNGReporter
                                 {
                                     for (int second = 0; second <= 59; second++)
                                     {
-                                        var searchTime = new DateTime((int) year, month, day, hour, minute, second);
+                                        var searchTime = new DateTime((int)year, month, day, hour, minute, second);
 
                                         ulong seed = Functions.EncryptSeed(searchTime, profile.MAC_Address,
                                                                            profile.Version, profile.Language,
@@ -1047,14 +1047,14 @@ namespace RNGReporter
                                             {
                                                 frame.DisplayPrep();
                                                 var iframeEgg = new IFrameCapture
-                                                    {
-                                                        Frame = frame,
-                                                        Seed = seed,
-                                                        Offset = frame.Number,
-                                                        TimeDate = searchTime,
-                                                        KeyPresses = buttons[buttonCount],
-                                                        Timer0 = Timer0
-                                                    };
+                                                {
+                                                    Frame = frame,
+                                                    Seed = seed,
+                                                    Offset = frame.Number,
+                                                    TimeDate = searchTime,
+                                                    KeyPresses = buttons[buttonCount],
+                                                    Timer0 = Timer0
+                                                };
 
                                                 lock (threadLock)
                                                 {
@@ -1062,7 +1062,7 @@ namespace RNGReporter
                                                 }
                                             }
                                             refreshQueue = true;
-                                            progressFound = (ulong) iframesEgg.Count;
+                                            progressFound = (ulong)iframesEgg.Count;
                                         }
                                         progressSearched += shinygenerators[listIndex].MaxResults;
                                     }
@@ -1084,15 +1084,15 @@ namespace RNGReporter
                 minAdvances = generators[listIndex].InitialFrame;
 
             var array = new uint[80];
-            array[6] = (uint) (profile.MAC_Address & 0xFFFF);
+            array[6] = (uint)(profile.MAC_Address & 0xFFFF);
 
             if (profile.SoftReset)
             {
                 array[6] = array[6] ^ 0x01000000;
             }
 
-            var upperMAC = (uint) (profile.MAC_Address >> 16);
-            array[7] = (upperMAC ^ (profile.VFrame*0x1000000) ^ profile.GxStat);
+            var upperMAC = (uint)(profile.MAC_Address >> 16);
+            array[7] = (upperMAC ^ (profile.VFrame * 0x1000000) ^ profile.GxStat);
 
             // Get the version-unique part of the message
             Array.Copy(Nazos.Nazo(profile.Version, profile.Language, profile.DSType), array, 5);
@@ -1135,12 +1135,12 @@ namespace RNGReporter
 
             foreach (int month in months)
             {
-                float interval = ((float) DateTime.DaysInMonth((int) year, month)/cpus + (float) 0.05);
+                float interval = ((float)DateTime.DaysInMonth((int)year, month) / cpus + (float)0.05);
 
-                var dayMin = (int) (interval*listIndex + 1);
-                var dayMax = (int) (interval*(listIndex + 1));
+                var dayMin = (int)(interval * listIndex + 1);
+                var dayMax = (int)(interval * (listIndex + 1));
 
-                string yearMonth = String.Format("{0:00}", year%2000) + String.Format("{0:00}", month);
+                string yearMonth = String.Format("{0:00}", year % 2000) + String.Format("{0:00}", month);
                 for (int buttonCount = 0; buttonCount < keypressList.Count; buttonCount++)
                 {
                     array[12] = buttonMashValue[buttonCount];
@@ -1151,9 +1151,9 @@ namespace RNGReporter
 
                         for (int day = dayMin; day <= dayMax; day++)
                         {
-                            var searchTime = new DateTime((int) year, month, day);
+                            var searchTime = new DateTime((int)year, month, day);
 
-                            string dateString = String.Format("{0:00}", (int) searchTime.DayOfWeek);
+                            string dateString = String.Format("{0:00}", (int)searchTime.DayOfWeek);
                             dateString = String.Format("{0:00}", searchTime.Day) + dateString;
                             dateString = yearMonth + dateString;
                             array[8] = uint.Parse(dateString, NumberStyles.HexNumber);
@@ -1197,7 +1197,7 @@ namespace RNGReporter
 
                                             if (fastSearch)
                                             {
-                                                var testSeed = (uint) generators[listIndex].InitialSeed;
+                                                var testSeed = (uint)generators[listIndex].InitialSeed;
                                                 frames = new List<Frame>();
 
                                                 for (uint i = 0; i < 6; i++)
@@ -1256,7 +1256,7 @@ namespace RNGReporter
                                                             Frame testFrame = Frame.Clone(frame);
 
                                                             var iframe = new IFrameCapture
-                                                                {NearestShiny = shinyFrame.Number};
+                                                            { NearestShiny = shinyFrame.Number };
 
                                                             testFrame.Pid = shinyFrame.Pid;
                                                             testFrame.Ability = shinyFrame.Ability;
@@ -1305,7 +1305,7 @@ namespace RNGReporter
                                                 }
                                             }
 
-                                            progressFound = (ulong) iframes.Count;
+                                            progressFound = (ulong)iframes.Count;
                                             if (frames.Count > 0)
                                             {
                                                 refreshQueue = true;
@@ -1329,7 +1329,7 @@ namespace RNGReporter
                                                                                     profile.SID);
 
                                             progressSearched += searchRange;
-                                            progressFound += (ulong) frames.Count;
+                                            progressFound += (ulong)frames.Count;
 
                                             //  Now we need to iterate through each result here
                                             //  and create a collection of the information that
@@ -1338,11 +1338,11 @@ namespace RNGReporter
                                             {
                                                 frame.DisplayPrep();
                                                 var iframe = new IFrameCapture
-                                                    {
-                                                        Offset = frame.Number,
-                                                        Seed = seed,
-                                                        Frame = frame
-                                                    };
+                                                {
+                                                    Offset = frame.Number,
+                                                    Seed = seed,
+                                                    Frame = frame
+                                                };
                                                 iframe.Advances = iframe.Offset -
                                                                   (generators[listIndex].InitialFrame - minAdvances);
 
@@ -1377,15 +1377,15 @@ namespace RNGReporter
             uint minAdvances = generators[listIndex].InitialFrame;
 
             var array = new uint[80];
-            array[6] = (uint) (profile.MAC_Address & 0xFFFF);
+            array[6] = (uint)(profile.MAC_Address & 0xFFFF);
 
             if (profile.SoftReset)
             {
                 array[6] = array[6] ^ 0x01000000;
             }
 
-            var upperMAC = (uint) (profile.MAC_Address >> 16);
-            array[7] = (upperMAC ^ (profile.VFrame*0x1000000) ^ profile.GxStat);
+            var upperMAC = (uint)(profile.MAC_Address >> 16);
+            array[7] = (upperMAC ^ (profile.VFrame * 0x1000000) ^ profile.GxStat);
 
             // Get the version-unique part of the message
             Array.Copy(Nazos.Nazo(profile.Version, profile.Language, profile.DSType), array, 5);
@@ -1423,12 +1423,12 @@ namespace RNGReporter
 
             foreach (int month in months)
             {
-                float interval = ((float) DateTime.DaysInMonth((int) year, month)/cpus + (float) 0.05);
+                float interval = ((float)DateTime.DaysInMonth((int)year, month) / cpus + (float)0.05);
 
-                var dayMin = (int) (interval*listIndex + 1);
-                var dayMax = (int) (interval*(listIndex + 1));
+                var dayMin = (int)(interval * listIndex + 1);
+                var dayMax = (int)(interval * (listIndex + 1));
 
-                string yearMonth = String.Format("{0:00}", year%2000) + String.Format("{0:00}", month);
+                string yearMonth = String.Format("{0:00}", year % 2000) + String.Format("{0:00}", month);
                 for (int buttonCount = 0; buttonCount < keypressList.Count; buttonCount++)
                 {
                     array[12] = buttonMashValue[buttonCount];
@@ -1439,9 +1439,9 @@ namespace RNGReporter
 
                         for (int day = dayMin; day <= dayMax; day++)
                         {
-                            var searchTime = new DateTime((int) year, month, day);
+                            var searchTime = new DateTime((int)year, month, day);
 
-                            string dateString = String.Format("{0:00}", (int) searchTime.DayOfWeek);
+                            string dateString = String.Format("{0:00}", (int)searchTime.DayOfWeek);
                             dateString = String.Format("{0:00}", searchTime.Day) + dateString;
                             dateString = yearMonth + dateString;
                             array[8] = uint.Parse(dateString, NumberStyles.HexNumber);
@@ -1493,7 +1493,7 @@ namespace RNGReporter
                                                                                                       profile.SID, shiny);
 
                                         progressSearched += searchRange;
-                                        progressFound += (ulong) frames.Count;
+                                        progressFound += (ulong)frames.Count;
 
                                         //  Now we need to iterate through each result here
                                         //  and create a collection of the information that
@@ -1568,7 +1568,7 @@ namespace RNGReporter
                             //  based on all of our information.  This should be
                             //  fairly easy since we are not using dates ;)
                             seed = (ab << 24) + (cd << 16) + efgh;
-                            seed = (uint) (seed + (mac_address & 0xFFFFFF));
+                            seed = (uint)(seed + (mac_address & 0xFFFFFF));
 
                             progressSearched += searchRange;
 
@@ -1581,7 +1581,7 @@ namespace RNGReporter
                                         uint ivHash = list[i][seed];
                                         frames = generator.Generate(frameCompare, seed, ivHash, i + 21);
 
-                                        progressFound += (uint) frames.Count;
+                                        progressFound += (uint)frames.Count;
 
                                         foreach (Frame frame in frames)
                                         {
@@ -1591,7 +1591,7 @@ namespace RNGReporter
                                             iframe.Offset = frame.Number;
                                             iframe.Seed = frame.Seed;
                                             iframe.Frame = frame;
-                                            iframe.MACAddress = (uint) mac_address;
+                                            iframe.MACAddress = (uint)mac_address;
 
                                             lock (threadLock)
                                             {
@@ -1622,7 +1622,7 @@ namespace RNGReporter
                             //  based on all of our information.  This should be
                             //  fairly easy since we are not using dates ;)
                             seed = (ab << 24) + (cd << 16) + efgh;
-                            seed = (uint) (seed + (mac_address & 0xFFFFFF));
+                            seed = (uint)(seed + (mac_address & 0xFFFFFF));
 
                             //  Set this to our seed here
                             generator.InitialSeed = seed;
@@ -1636,7 +1636,7 @@ namespace RNGReporter
                             frames = generator.Generate(frameCompare, id, sid);
 
                             progressSearched += searchRange;
-                            progressFound += (uint) frames.Count;
+                            progressFound += (uint)frames.Count;
 
                             //  Now we need to iterate through each result here
                             //  and create a collection of the information that
@@ -1649,7 +1649,7 @@ namespace RNGReporter
                                 iframe.Offset = frame.Number;
                                 iframe.Seed = seed;
                                 iframe.Frame = frame;
-                                iframe.MACAddress = (uint) mac_address;
+                                iframe.MACAddress = (uint)mac_address;
 
                                 lock (threadLock)
                                 {
@@ -1673,9 +1673,9 @@ namespace RNGReporter
             progressFound = 0;
 
             UpdateGridDelegate gridUpdater = UpdateGrid;
-            var updateParams = new object[] {bindingSource};
+            var updateParams = new object[] { bindingSource };
             ResortGridDelegate gridSorter = ResortGrid;
-            var sortParams = new object[] {bindingSource, grid, frameType};
+            var sortParams = new object[] { bindingSource, grid, frameType };
             ThreadDelegate enableGenerateButton = EnableCapGenerate;
 
             try
@@ -1683,7 +1683,7 @@ namespace RNGReporter
                 bool alive = true;
                 while (alive)
                 {
-                    progress.ShowProgress(progressSearched/(float) progressTotal, progressSearched, progressFound);
+                    progress.ShowProgress(progressSearched / (float)progressTotal, progressSearched, progressFound);
                     if (refreshQueue)
                     {
                         Invoke(gridUpdater, updateParams);
@@ -1752,14 +1752,14 @@ namespace RNGReporter
                 case FrameType.Method5Natures:
                 case FrameType.Wondercard5thGen:
                 case FrameType.Wondercard5thGenFixed:
-                    var iframeCaptureComparer = new IFrameCaptureComparer {CompareType = "TimeDate"};
-                    ((List<IFrameCapture>) bindingSource.DataSource).Sort(iframeCaptureComparer);
+                    var iframeCaptureComparer = new IFrameCaptureComparer { CompareType = "TimeDate" };
+                    ((List<IFrameCapture>)bindingSource.DataSource).Sort(iframeCaptureComparer);
                     CapDateTime.HeaderCell.SortGlyphDirection = SortOrder.Ascending;
                     break;
                 case FrameType.BWBred:
                 case FrameType.BWBredInternational:
-                    iframeCaptureComparer = new IFrameCaptureComparer {CompareType = "TimeDate"};
-                    ((List<IFrameCapture>) bindingSource.DataSource).Sort(iframeCaptureComparer);
+                    iframeCaptureComparer = new IFrameCaptureComparer { CompareType = "TimeDate" };
+                    ((List<IFrameCapture>)bindingSource.DataSource).Sort(iframeCaptureComparer);
                     ColumnEggDate.HeaderCell.SortGlyphDirection = SortOrder.Ascending;
                     break;
             }
@@ -1776,8 +1776,8 @@ namespace RNGReporter
 
         private void comboBoxMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Natures) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
             {
                 checkBoxShinyOnly.Enabled = true;
                 comboBoxNature.Enabled = true;
@@ -1787,7 +1787,7 @@ namespace RNGReporter
                 comboBoxCapGenderRatio.Enabled = true;
 
                 comboBoxCapMonth.Visible = true;
-                labelCapMonthDelay.Text = "Month";
+                labelCapMonthDelay.Text = "月份 ";
                 maskedTextBoxCapMinDelay.Visible = false;
                 maskedTextBoxCapMaxDelay.Visible = false;
 
@@ -1795,7 +1795,7 @@ namespace RNGReporter
                 comboBoxShiny.Visible = false;
                 //cbCapShinyCharm.Visible = true;
 
-                if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
+                if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
                 {
                     labelCapMinMaxFrame.Text = "Min / 最大帧";
                     labelCapMinMaxFrame.Location = oldLocation;
@@ -1810,7 +1810,7 @@ namespace RNGReporter
                 }
                 else
                 {
-                    labelCapMinMaxFrame.Text = "Min / Max Advances";
+                    labelCapMinMaxFrame.Text = "Min / 最大帧";
                     labelCapMinMaxFrame.Location = labelShinyMinMaxFrame.Location;
 
                     if (maskedTextBoxCapMinOffset.Text == "1")
@@ -1822,7 +1822,7 @@ namespace RNGReporter
                     label9.Visible = false;
                 }
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
             {
                 checkBoxShinyOnly.Enabled = false;
                 comboBoxNature.Enabled = false;
@@ -1853,8 +1853,8 @@ namespace RNGReporter
                 labelWCShiny.Visible = false;
                 comboBoxShiny.Visible = false;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGen) ||
-                     ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGenFixed))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGen) ||
+                     ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Wondercard5thGenFixed))
             {
                 checkBoxShinyOnly.Enabled = true;
                 comboBoxNature.Enabled = true;
@@ -1865,11 +1865,11 @@ namespace RNGReporter
                 //cbCapShinyCharm.Visible = false;
 
                 comboBoxCapMonth.Visible = true;
-                labelCapMonthDelay.Text = "Month";
+                labelCapMonthDelay.Text = "月份 ";
                 maskedTextBoxCapMinDelay.Visible = false;
                 maskedTextBoxCapMaxDelay.Visible = false;
 
-                labelCapMinMaxFrame.Text = "Min / Max Advances";
+                labelCapMinMaxFrame.Text = "最小 / 最大帧";
                 labelCapMinMaxFrame.Location = labelShinyMinMaxFrame.Location;
 
                 if (maskedTextBoxCapMinOffset.Text == "1")
@@ -1884,9 +1884,9 @@ namespace RNGReporter
             }
 
             checkBoxShinyOnly.Text =
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard)
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard)
                     ? "Search for Nearby Shiny Frames"
-                    : "Shiny Only";
+                    : "仅异色";
 
             controlsShowHide();
 
@@ -1903,13 +1903,13 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (e.ColumnIndex == CapNatureIndex)
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
-                if ((bool) dataGridViewCapValues.Rows[e.RowIndex].Cells["Synchable"].Value)
+                if ((bool)dataGridViewCapValues.Rows[e.RowIndex].Cells["Synchable"].Value)
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
 
-                    if (((IFrameCapture) dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod ==
+                    if (((IFrameCapture)dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod ==
                         Objects.EncounterMod.Synchronize)
                     {
                         e.Value = "Synch";
@@ -1929,7 +1929,7 @@ namespace RNGReporter
 
             if (e.ColumnIndex >= CapHPIndex && e.ColumnIndex <= CapSpeedIndex)
             {
-                var number = (uint) e.Value;
+                var number = (uint)e.Value;
 
                 if (number >= 30)
                 {
@@ -1947,7 +1947,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 // This is a bit of a strange hack, because this window
                 //  needs to be hidden before we load the seed to time
@@ -1965,11 +1965,11 @@ namespace RNGReporter
 
                 seedToTime.AutoGenerate = true;
                 seedToTime.ShowMap = showMap;
-                seedToTime.Seed = (uint) frame.Seed;
-                seedToTime.MAC_Address = ((Profile) comboBoxProfiles.SelectedItem).MAC_Address;
+                seedToTime.Seed = (uint)frame.Seed;
+                seedToTime.MAC_Address = ((Profile)comboBoxProfiles.SelectedItem).MAC_Address;
 
                 //  Grab this from what the user had searched on
-                seedToTime.Year = (uint) DateTime.Now.Year;
+                seedToTime.Year = (uint)DateTime.Now.Year;
                 if (maskedTextBoxCapYear.Text != "")
                     seedToTime.Year = uint.Parse(maskedTextBoxCapYear.Text);
 
@@ -2028,9 +2028,9 @@ namespace RNGReporter
         //--------------------------------------------------------------------------------------------------
 
         private void validateShinyInput()
-            //get rid of any junk characters in the shiny text boxes
-            //and restrict the inputs to their appropriate levels
-            //prevents the program confusing the user by throwing nasty exceptions
+        //get rid of any junk characters in the shiny text boxes
+        //and restrict the inputs to their appropriate levels
+        //prevents the program confusing the user by throwing nasty exceptions
         {
             //check the date is valid
             maskedTextBoxShinyYear.Text = Functions.NumericFilter(maskedTextBoxShinyYear.Text);
@@ -2078,7 +2078,7 @@ namespace RNGReporter
 
             List<uint> nature = null;
             if (comboBoxShinyNature.SelectedIndex != 0)
-                nature = new List<uint> {(uint) ((Nature) comboBoxShinyNature.SelectedItem).Number};
+                nature = new List<uint> { (uint)((Nature)comboBoxShinyNature.SelectedItem).Number };
 
             // Don't proceed without all DS Parameters
             if (!DSParametersInputCheck())
@@ -2128,21 +2128,21 @@ namespace RNGReporter
                 return;
             }
 
-            generator = new FrameGenerator {FrameType = FrameType.Method5Standard, InitialFrame = 8, MaxResults = 1};
+            generator = new FrameGenerator { FrameType = FrameType.Method5Standard, InitialFrame = 8, MaxResults = 1 };
 
             shinygenerator = new FrameGenerator
-                {
-                    FrameType =
+            {
+                FrameType =
                         !checkBoxIntlParents.Checked ? FrameType.BWBred : FrameType.BWBredInternational,
-                    ParentA = parentA,
-                    ParentB = parentB,
-                    SynchNature = ((Nature) comboBoxShinyEverstoneNature.SelectedItem).Number,
-                    InitialFrame = minFrame,
-                    MaxResults = maxFrame - minFrame + 1,
-                    DittoUsed = checkBoxShinyDittoParent.Checked,
-                    MaleOnlySpecies = cbNidoBeat.Checked,
-                    ShinyCharm = cbShinyCharm.Visible && cbShinyCharm.Checked
-                };
+                ParentA = parentA,
+                ParentB = parentB,
+                SynchNature = ((Nature)comboBoxShinyEverstoneNature.SelectedItem).Number,
+                InitialFrame = minFrame,
+                MaxResults = maxFrame - minFrame + 1,
+                DittoUsed = checkBoxShinyDittoParent.Checked,
+                MaleOnlySpecies = cbNidoBeat.Checked,
+                ShinyCharm = cbShinyCharm.Visible && cbShinyCharm.Checked
+            };
 
 
             frameCompare = new FrameCompare(
@@ -2158,12 +2158,12 @@ namespace RNGReporter
             subFrameCompare = new FrameCompare(
                 ivFiltersEggs.IVFilter,
                 nature,
-                (int) ((ComboBoxItem) comboBoxShinyAbility.SelectedItem).Reference,
+                (int)((ComboBoxItem)comboBoxShinyAbility.SelectedItem).Reference,
                 checkBoxShinyShinyOnly.Checked,
                 false,
                 checkBoxShinyDreamWorld.Checked,
                 null,
-                (GenderFilter) (comboBoxShinyGender.SelectedItem));
+                (GenderFilter)(comboBoxShinyGender.SelectedItem));
 
             // Here we check the parent IVs
             // To make sure they even have a chance of producing the desired spread
@@ -2185,10 +2185,10 @@ namespace RNGReporter
             }
 
             iframesEgg = new List<IFrameCapture>();
-            listBindingEgg = new BindingSource {DataSource = iframesEgg};
+            listBindingEgg = new BindingSource { DataSource = iframesEgg };
             dataGridViewShinyResults.DataSource = listBindingEgg;
 
-            var profile = (Profile) comboBoxProfiles.SelectedItem;
+            var profile = (Profile)comboBoxProfiles.SelectedItem;
 
             List<List<ButtonComboType>> keypresses = profile.GetKeypresses();
 
@@ -2198,9 +2198,9 @@ namespace RNGReporter
 
             progressTotal =
                 (ulong)
-                (dayTotal*86400*keypresses.Count*(profile.Timer0Max - profile.Timer0Min + 1)*(maxFrame - minFrame + 1));
+                (dayTotal * 86400 * keypresses.Count * (profile.Timer0Max - profile.Timer0Min + 1) * (maxFrame - minFrame + 1));
 
-            float interval = ((float) 24/cpus + (float) 0.05);
+            float interval = ((float)24 / cpus + (float)0.05);
 
             var hourMin = new int[cpus];
             var hourMax = new int[cpus];
@@ -2212,8 +2212,8 @@ namespace RNGReporter
 
             for (int i = 0; i < jobs.Length; i++)
             {
-                hourMin[i] = (int) (interval*i);
-                hourMax[i] = (int) (interval*(i + 1) - 1);
+                hourMin[i] = (int)(interval * i);
+                hourMax[i] = (int)(interval * (i + 1) - 1);
 
                 if (hourMax[i] > 23)
                 {
@@ -2235,7 +2235,7 @@ namespace RNGReporter
                 jobs[i] =
                     new Thread(
                         () =>
-                        GenerateShinyJob((uint) year, months, hourMin[i1], hourMax[i1], profile, keypresses, fastSearch,
+                        GenerateShinyJob((uint)year, months, hourMin[i1], hourMax[i1], profile, keypresses, fastSearch,
                                          i1));
                 jobs[i].Start();
                 // for some reason not making the thread sleep causes issues with updating dayMin\Max
@@ -2294,7 +2294,7 @@ namespace RNGReporter
                 var writer = new TXTWriter(dataGridViewShinyResults);
                 try
                 {
-                    var frames = (List<IFrameEggPID>) listBindingEgg.DataSource;
+                    var frames = (List<IFrameEggPID>)listBindingEgg.DataSource;
 
                     if (frames.Count > 0)
                     {
@@ -2307,7 +2307,7 @@ namespace RNGReporter
                 }
                 catch
                 {
-                    var frames = (List<IFrameCapture>) listBindingEgg.DataSource;
+                    var frames = (List<IFrameCapture>)listBindingEgg.DataSource;
 
                     if (frames.Count > 0)
                     {
@@ -2325,7 +2325,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 Clipboard.SetText(frame.Seed.ToString("X8"));
             }
@@ -2337,12 +2337,12 @@ namespace RNGReporter
             {
                 try
                 {
-                    var frame = (IFrameEggPID) dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
+                    var frame = (IFrameEggPID)dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
                     Clipboard.SetText(frame.Seed.ToString("X8"));
                 }
                 catch
                 {
-                    var frame = (IFrameCapture) dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
+                    var frame = (IFrameCapture)dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
                     Clipboard.SetText(frame.Seed.ToString("X16"));
                 }
             }
@@ -2351,7 +2351,7 @@ namespace RNGReporter
         private void controlsShowHide()
         {
             if (checkBoxShinyOnly.Checked &&
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
             {
                 labelMaxShiny.Visible = true;
                 maskedTextBoxMaxShiny.Visible = true;
@@ -2365,7 +2365,7 @@ namespace RNGReporter
 
         private void comboBoxEncounterType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.AllEncounterShiny) &&
+            if (((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.AllEncounterShiny) &&
                 comboBoxEncounterType.Enabled)
             {
                 checkBoxShinyOnly.Checked = true;
@@ -2378,7 +2378,7 @@ namespace RNGReporter
         {
             controlsShowHide();
 
-            if (((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.AllEncounterShiny) &&
+            if (((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.AllEncounterShiny) &&
                 comboBoxEncounterType.Enabled)
             {
                 checkBoxShinyOnly.Checked = true;
@@ -2390,7 +2390,7 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (dataGridViewShinyResults.Columns[e.ColumnIndex].Name == "ShinyNature")
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
                 if (nature == Functions.NatureStrings(18) ||
                     nature == Functions.NatureStrings(6) ||
@@ -2411,17 +2411,17 @@ namespace RNGReporter
                 dataGridViewShinyResults.Columns[e.ColumnIndex].Name == "ShinySpD" ||
                 dataGridViewShinyResults.Columns[e.ColumnIndex].Name == "ShinySpe")
             {
-                if ((string) e.Value == "30" || (string) e.Value == "31")
+                if ((string)e.Value == "30" || (string)e.Value == "31")
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
                 }
 
-                if ((string) e.Value == "0")
+                if ((string)e.Value == "0")
                 {
                     e.CellStyle.ForeColor = Color.Red;
                 }
 
-                if ((string) e.Value == "Ma" || (string) e.Value == "Fe")
+                if ((string)e.Value == "Ma" || (string)e.Value == "Fe")
                 {
                     e.CellStyle.ForeColor = Color.Blue;
                 }
@@ -2459,7 +2459,7 @@ namespace RNGReporter
                 DataGridViewColumn selectedColumn = dataGridViewCapValues.Columns[e.ColumnIndex];
 
                 var iframeCaptureComparer = new IFrameCaptureComparer
-                    {CompareType = selectedColumn.DataPropertyName};
+                { CompareType = selectedColumn.DataPropertyName };
 
                 if (selectedColumn.HeaderCell.SortGlyphDirection == SortOrder.Ascending)
                     iframeCaptureComparer.sortOrder = SortOrder.Descending;
@@ -2483,7 +2483,7 @@ namespace RNGReporter
                 DataObject clipboardContent = dataGridViewCapValues.GetClipboardContent();
                 if (clipboardContent != null)
                 {
-                    var test = (string) clipboardContent.GetData(DataFormats.UnicodeText);
+                    var test = (string)clipboardContent.GetData(DataFormats.UnicodeText);
                     test = test.Replace('\t', ' ');
                     Clipboard.SetText(test);
                 }
@@ -2495,12 +2495,12 @@ namespace RNGReporter
             if (!longSeed && isLong)
             {
                 longSeed = true;
-                return CapSeed.Width*2;
+                return CapSeed.Width * 2;
             }
             if (longSeed && !isLong)
             {
                 longSeed = false;
-                return CapSeed.Width/2;
+                return CapSeed.Width / 2;
             }
             return CapSeed.Width;
         }
@@ -2533,7 +2533,7 @@ namespace RNGReporter
                     // no roamers have Trick Room spreads
                     if (((filter.speValue <= 1) &&
                          (filter.speCompare == CompareType.Equal || filter.speCompare == CompareType.LtEqual)) &&
-                        !((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer))
+                        !((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer))
                         return true;
                 }
 
@@ -2549,7 +2549,7 @@ namespace RNGReporter
 
                     if (((filter.speValue == 30) &&
                          (filter.speCompare == CompareType.Equal || filter.speCompare == CompareType.GtEqual)) ||
-                        (!((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer) &&
+                        (!((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer) &&
                          (((filter.speValue == 2) && (filter.speCompare == CompareType.Equal)) ||
                           ((filter.speValue == 3) && (filter.speCompare == CompareType.Equal)))))
                     {
@@ -2557,15 +2557,15 @@ namespace RNGReporter
                             (filter.atkCompare == CompareType.Equal || filter.atkCompare == CompareType.GtEqual)) ||
                             (filter.atkCompare == CompareType.Hidden || filter.atkCompare == CompareType.HiddenEven ||
                             filter.atkCompare == CompareType.HiddenOdd))
-                            {
-                                return true;
-                            }
+                        {
+                            return true;
+                        }
                     }
 
                     // no roamers have Trick Room spreads
                     if ((filter.speValue <= 1) &&
                         (filter.speCompare == CompareType.Equal || filter.speCompare == CompareType.LtEqual) &&
-                        !((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer))
+                        !((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer))
                         return true;
                 }
             }
@@ -2581,16 +2581,16 @@ namespace RNGReporter
             uint.TryParse(maskedTextBoxCapMinOffset.Text, out minFrame);
             uint.TryParse(maskedTextBoxCapMaxOffset.Text, out maxFrame);
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
             {
                 // no roamers appear in the Entralink
-                if (((ComboBoxItem) comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer))
+                if (((ComboBoxItem)comboBoxEncounterType.SelectedItem).Reference.Equals(EncounterType.Roamer))
                     return false;
 
                 return (minFrame > 20 && minFrame <= 26) && (maxFrame > 20 && maxFrame <= 26);
             }
             // BW2 Entralink
-            if (((Profile) comboBoxProfiles.SelectedItem).IsBW2())
+            if (((Profile)comboBoxProfiles.SelectedItem).IsBW2())
             {
                 if (minFrame > 24 && minFrame < 31 && maxFrame > 24 && maxFrame < 31) return true;
             }
@@ -2616,7 +2616,7 @@ namespace RNGReporter
                 label9.Text = "IV filters are set for fast searching.";
             else if (FastCapFilters())
             {
-                if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
+                if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
                     label9.Text = "IV filters are set for Entralink fast searching, but\r\n" +
                                   "Min and 最大帧s need to be between\r\n" +
                                   "21 and 26.  (Setting both to 21 is recommended.)";
@@ -2625,7 +2625,7 @@ namespace RNGReporter
                     label9.Text = "IV filters are set for fast searching, but\r\n" +
                                   "Min and 最大帧s need to be between\r\n" +
                                   "1 and 6.  (Setting both to 1 is recommended.)";
-                    if (((Profile) comboBoxProfiles.SelectedItem).IsBW2())
+                    if (((Profile)comboBoxProfiles.SelectedItem).IsBW2())
                     {
                         label9.Text += "\r\nOr 25 and 30 for Entralink abuse";
                     }
@@ -2638,7 +2638,7 @@ namespace RNGReporter
 
         private GenderFilter constructGenderFilter()
         {
-            var criteria = (GenderCriteria) comboBoxCapGender.SelectedIndex;
+            var criteria = (GenderCriteria)comboBoxCapGender.SelectedIndex;
             uint ratio = 0;
 
             switch (comboBoxCapGenderRatio.SelectedIndex)
@@ -2763,7 +2763,7 @@ namespace RNGReporter
                     if (e.RowIndex >= 0)
                     {
                         switch (
-                            ((IFrameCapture) dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod)
+                            ((IFrameCapture)dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod)
                         {
                             case Objects.EncounterMod.Synchronize:
                                 toolTipDataGrid.ToolTipTitle = "Synchronize";
@@ -2870,7 +2870,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var iframe = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var iframe = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 uint advances = 0;
 
@@ -2898,7 +2898,7 @@ namespace RNGReporter
         {
             if (dataGridViewShinyResults.SelectedRows[0] != null)
             {
-                var iframe = (IFrameCapture) dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
+                var iframe = (IFrameCapture)dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
 
                 const uint advances = 0;
                 int profile = comboBoxProfiles.SelectedIndex;
@@ -2914,9 +2914,9 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var iframe = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var iframe = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
-                var seedEntree = new EntralinkSeedSearch((uint) iframe.Seed, iframe.Offset,
+                var seedEntree = new EntralinkSeedSearch((uint)iframe.Seed, iframe.Offset,
                                                          comboBoxProfiles.SelectedIndex);
                 seedEntree.Show();
             }
@@ -2924,27 +2924,27 @@ namespace RNGReporter
 
         private void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
 
         private void buttonEditProfile_Click(object sender, EventArgs e)
         {
-            var editor = new ProfileEditor {Profile = (Profile) comboBoxProfiles.SelectedItem};
+            var editor = new ProfileEditor { Profile = (Profile)comboBoxProfiles.SelectedItem };
             if (editor.ShowDialog() != DialogResult.OK) return;
             Profiles.List[comboBoxProfiles.SelectedIndex] = editor.Profile;
 
             profilesSource.DataSource = Profiles.List;
             profilesSource.ResetBindings(false);
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformation();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformation();
         }
 
         private void comboBoxProfiles_SelectedIndexChanged(object sender, EventArgs e)
         {
             labelProfileInformation.Text = Profiles.List.Count > 0
-                                               ? ((Profile) comboBoxProfiles.SelectedItem).ProfileInformation()
+                                               ? ((Profile)comboBoxProfiles.SelectedItem).ProfileInformation()
                                                : "No profiles found.";
-            Settings.Default.ID = ((Profile) comboBoxProfiles.SelectedItem).ID.ToString();
-            Settings.Default.SID = ((Profile) comboBoxProfiles.SelectedItem).SID.ToString();
+            Settings.Default.ID = ((Profile)comboBoxProfiles.SelectedItem).ID.ToString();
+            Settings.Default.SID = ((Profile)comboBoxProfiles.SelectedItem).SID.ToString();
             Settings.Default.Save();
             if (txtCallerID != null)
             {
@@ -2975,7 +2975,7 @@ namespace RNGReporter
                 // catch is only to prevent crashes in stupid cases
                 try
                 {
-                    var frame = (Hollow) dgvHiddenGrottos.SelectedRows[0].DataBoundItem;
+                    var frame = (Hollow)dgvHiddenGrottos.SelectedRows[0].DataBoundItem;
                     Clipboard.SetText(frame.Seed.ToString("X16"));
                 }
                 catch
@@ -2988,7 +2988,7 @@ namespace RNGReporter
         {
             if (dgvHiddenGrottos.SelectedRows[0] != null)
             {
-                var iframe = (Hollow) dgvHiddenGrottos.SelectedRows[0].DataBoundItem;
+                var iframe = (Hollow)dgvHiddenGrottos.SelectedRows[0].DataBoundItem;
 
                 const uint advances = 0;
                 int profile = comboBoxProfiles.SelectedIndex;
@@ -3022,7 +3022,7 @@ namespace RNGReporter
                 var writer = new TXTWriter(dgvHiddenGrottos);
                 try
                 {
-                    var frames = (List<Hollow>) ((BindingSource) dgvHiddenGrottos.DataSource).DataSource;
+                    var frames = (List<Hollow>)((BindingSource)dgvHiddenGrottos.DataSource).DataSource;
 
                     if (frames.Count > 0)
                     {
@@ -3035,7 +3035,7 @@ namespace RNGReporter
                 }
                 catch
                 {
-                    var frames = (List<Hollow>) ((BindingSource) dgvHiddenGrottos.DataSource).DataSource;
+                    var frames = (List<Hollow>)((BindingSource)dgvHiddenGrottos.DataSource).DataSource;
 
                     if (frames.Count > 0)
                     {
@@ -3052,21 +3052,21 @@ namespace RNGReporter
         private void btnDRGenerate_Click(object sender, EventArgs e)
         {
             var searchParams = new DreamRadarSearchParams
-                {
-                    Year = txtDRYear,
-                    Months = cbDRMonth,
-                    MinFrame = txtDRMinFrame,
-                    MaxFrame = txtDRMaxFrame,
-                    IVFilters = ivDR,
-                    Natures = cbDRNature,
-                    Gender = cbDRGender,
-                    GenderRatio = cbDRRatio,
-                    IsShiny = cbDRShiny,
-                    Shininess = cbDRShinyness,
-                    DataGridView = gvDreamRadar,
-                    GenerateButton = btnDRGenerate,
-                    Profile = (Profile)comboBoxProfiles.SelectedItem
-                };
+            {
+                Year = txtDRYear,
+                Months = cbDRMonth,
+                MinFrame = txtDRMinFrame,
+                MaxFrame = txtDRMaxFrame,
+                IVFilters = ivDR,
+                Natures = cbDRNature,
+                Gender = cbDRGender,
+                GenderRatio = cbDRRatio,
+                IsShiny = cbDRShiny,
+                Shininess = cbDRShinyness,
+                DataGridView = gvDreamRadar,
+                GenerateButton = btnDRGenerate,
+                Profile = (Profile)comboBoxProfiles.SelectedItem
+            };
             Searcher searcher = new DreamRadarSearcher(searchParams, new object(), this);
             if (!searcher.ParseInput()) return;
             searcher.RunSearch();

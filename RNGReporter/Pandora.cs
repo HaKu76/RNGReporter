@@ -18,6 +18,7 @@
  */
 
 
+using RNGReporter.Objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,6 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 using Version = RNGReporter.Objects.Version;
 
 namespace RNGReporter
@@ -115,7 +115,7 @@ namespace RNGReporter
             {
                 if (Profiles.List == null || Profiles.List.Count == 0)
                 {
-                    MessageBox.Show("No profiles were detected. Please setup a profile first.");
+                    MessageBox.Show("没有检测到GEN5的存档信息，请先新增一个存档信息。");
                     Profiles.ProfileManager.Visible = false;
                     Profiles.ProfileManager.ShowDialog();
                 }
@@ -124,7 +124,7 @@ namespace RNGReporter
                     Close();
                 }
 
-                profilesSource = new BindingSource {DataSource = Profiles.List};
+                profilesSource = new BindingSource { DataSource = Profiles.List };
                 comboBoxProfiles.DataSource = profilesSource;
             }
         }
@@ -188,7 +188,7 @@ namespace RNGReporter
                 Year = uint.Parse(textBoxShinyYear.Text);
                 if (Year < 2000 || Year > 2099)
                 {
-                    MessageBox.Show("Year must be between 2000 and 2099, inclusive.");
+                    MessageBox.Show("年份必须在2000年到2099年之间");
                     textBoxShinyYear.Focus();
                     return;
                 }
@@ -280,7 +280,7 @@ namespace RNGReporter
             Year = uint.Parse(textBoxIDYear.Text);
             if (Year < 2000 || Year > 2099)
             {
-                MessageBox.Show("Year must be between 2000 and 2099, inclusive.");
+                MessageBox.Show("年份必须在2000年到2099年之间");
                 textBoxIDYear.Focus();
                 return;
             }
@@ -396,7 +396,7 @@ namespace RNGReporter
                              || (((Month == 2)
                                   && (Day > 29))
                                  || ((Month == 2)
-                                     && (((Year&3)
+                                     && (((Year & 3)
                                           != 0)
                                          && (Day > 28))))))))
                 {
@@ -471,10 +471,10 @@ namespace RNGReporter
                     for (SeedCCCC = CCCCMin; (SeedCCCC <= CCCCMax); SeedCCCC++)
                     {
                         // Establish seed
-                        SeedAA = (((Month*Day)
-                                   + (Minute + Second)) &0xFF);
+                        SeedAA = (((Month * Day)
+                                   + (Minute + Second)) & 0xFF);
                         Seed = (SeedCCCC
-                                + ((65536*SeedBB) + (16777216*SeedAA)));
+                                + ((65536 * SeedBB) + (16777216 * SeedAA)));
                         // Initialize Mersenne Twister (or IRNG) with new seed
                         a = new MersenneTwister(Seed);
 
@@ -505,7 +505,7 @@ namespace RNGReporter
 
         private void bgwShiny_DoWork(object sender, DoWorkEventArgs e)
         {
-            var bwShiny = ((BackgroundWorker) (sender));
+            var bwShiny = ((BackgroundWorker)(sender));
             e.Result = ShinySearch(bwShiny, e);
             if (bwShiny.CancellationPending)
             {
@@ -534,7 +534,7 @@ namespace RNGReporter
                        + MaxDelay);
             TotalSeeds = ((1
                            + (CCCCMax - CCCCMin))
-                          *6144);
+                          * 6144);
             for (SeedCCCC = CCCCMin; (SeedCCCC <= CCCCMax); SeedCCCC++)
             {
                 for (SeedAA = 0; (SeedAA <= 255); SeedAA++)
@@ -542,7 +542,7 @@ namespace RNGReporter
                     for (SeedBB = 0; (SeedBB <= 23); SeedBB++)
                     {
                         // Establish seed
-                        Seed = (SeedCCCC + ((65536*SeedBB) + (16777216*SeedAA)));
+                        Seed = (SeedCCCC + ((65536 * SeedBB) + (16777216 * SeedAA)));
                         // Initialize Mersenne Twister (or IRNG) with new seed
                         a = new MersenneTwister(Seed);
                         // Call MT twice
@@ -555,7 +555,7 @@ namespace RNGReporter
                         FinalXor = PIDXor ^ TrainerXor;
                         SeedsSearched = (SeedsSearched + 1);
 
-                        Percent = 100*SeedsSearched/TotalSeeds;
+                        Percent = 100 * SeedsSearched / TotalSeeds;
 
                         if ((Percent > MaxPercent))
                         {
@@ -634,7 +634,7 @@ namespace RNGReporter
 
         private void bgwID_DoWork(object sender, DoWorkEventArgs e)
         {
-            var bwID = ((BackgroundWorker) (sender));
+            var bwID = ((BackgroundWorker)(sender));
             e.Result = IDSearch(bwID, e);
             if (bwID.CancellationPending)
             {
@@ -658,7 +658,7 @@ namespace RNGReporter
                        + MaxDelay);
             TotalSeeds = ((1
                            + (CCCCMax - CCCCMin))
-                          *6144);
+                          * 6144);
             for (SeedCCCC = CCCCMin; (SeedCCCC <= CCCCMax); SeedCCCC++)
             {
                 for (SeedAA = 0; (SeedAA <= 255); SeedAA++)
@@ -675,7 +675,7 @@ namespace RNGReporter
                         TrainerID = (y & 0xFFFF);
                         SecretID = y >> 16;
                         SeedsSearched = (SeedsSearched + 1);
-                        Percent = 100*SeedsSearched/TotalSeeds;
+                        Percent = 100 * SeedsSearched / TotalSeeds;
                         if ((Percent > MaxPercent))
                         {
                             lblAction.Text = ("Searching for Desired ID Seeds ("
@@ -769,7 +769,7 @@ namespace RNGReporter
 
         private void bgwIDInf_DoWork(object sender, DoWorkEventArgs e)
         {
-            var bwIDInf = ((BackgroundWorker) (sender));
+            var bwIDInf = ((BackgroundWorker)(sender));
             e.Result = IDInfSearch(bwIDInf, e);
             if (bwIDInf.CancellationPending)
             {
@@ -791,11 +791,11 @@ namespace RNGReporter
             // [AA] includes Month/Day/Minute/Seconds, [BB] includes Hours, and [CCCC] includes Year/Delay
             if ((MinDelay < 65536))
             {
-                TotalSeeds = 3892314112 + (65536 - MinDelay)*6144;
+                TotalSeeds = 3892314112 + (65536 - MinDelay) * 6144;
             }
             else
             {
-                TotalSeeds = 3892314112 + (65536 - MinDelay)*256;
+                TotalSeeds = 3892314112 + (65536 - MinDelay) * 256;
             }
             if ((MinDelay < 65536))
             {
@@ -816,7 +816,7 @@ namespace RNGReporter
                             SecretID = y >> 16;
                             SeedsSearched = (SeedsSearched + 1);
 
-                            MaxPercent = 100*SeedsSearched/TotalSeeds;
+                            MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
                             lblAction.Text = ("Searching for Desired ID Seeds (Through "
                                               + (SeedCCCC + (" Delay, "
@@ -881,7 +881,7 @@ namespace RNGReporter
                         SecretID = y >> 16;
                         SeedsSearched = (SeedsSearched + 1);
 
-                        MaxPercent = 100*SeedsSearched/TotalSeeds;
+                        MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
                         lblAction.Text = ("Searching for Desired ID Seeds (Through "
                                           + (SeedCCCC + (" Delay, "
@@ -1034,7 +1034,7 @@ namespace RNGReporter
 
         private void bgwShinyInf_DoWork(object sender, DoWorkEventArgs e)
         {
-            var bwShinyInf = ((BackgroundWorker) (sender));
+            var bwShinyInf = ((BackgroundWorker)(sender));
             e.Result = ShinyInfSearch(bwShinyInf, e);
             if (bwShinyInf.CancellationPending)
             {
@@ -1060,11 +1060,11 @@ namespace RNGReporter
             // and [CCCC] includes Year/Delay
             if ((MinDelay < 65536))
             {
-                TotalSeeds = 3892314112 + (65536 - MinDelay)*6144;
+                TotalSeeds = 3892314112 + (65536 - MinDelay) * 6144;
             }
             else
             {
-                TotalSeeds = 3892314112 + (65536 - MinDelay)*256;
+                TotalSeeds = 3892314112 + (65536 - MinDelay) * 256;
             }
 
             if ((MinDelay < 65536))
@@ -1088,7 +1088,7 @@ namespace RNGReporter
                             FinalXor = PIDXor ^ TrainerXor;
                             SeedsSearched = (SeedsSearched + 1);
 
-                            MaxPercent = 100*SeedsSearched/TotalSeeds;
+                            MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
                             lblAction.Text = ("Searching for Shiny Seeds (Through "
                                               + (SeedCCCC + (" Delay, "
@@ -1152,7 +1152,7 @@ namespace RNGReporter
                         FinalXor = PIDXor ^ TrainerXor;
                         SeedsSearched = (SeedsSearched + 1);
 
-                        MaxPercent = 100*SeedsSearched/TotalSeeds;
+                        MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
                         lblAction.Text = ("Searching for Shiny Seeds (Through "
                                           + (SeedCCCC + (" Delay, "
@@ -1288,10 +1288,10 @@ namespace RNGReporter
 
                 lblAction.Text = "Searching..";
                 resultsListBW = new List<IDListBW>();
-                binding = new BindingSource {DataSource = resultsListBW};
+                binding = new BindingSource { DataSource = resultsListBW };
                 dgvResults.DataSource = binding;
 
-                var profile = (Profile) comboBoxProfiles.SelectedItem;
+                var profile = (Profile)comboBoxProfiles.SelectedItem;
                 searchThread =
                     new Thread(
                         () =>
@@ -1325,7 +1325,7 @@ namespace RNGReporter
             bool xOR2 = false, starter = false;
             var rng = new BWRng(0);
             resultsCount = 0;
-            int[] buttons = {0};
+            int[] buttons = { 0 };
 
             isSearching = true;
 
@@ -1337,7 +1337,7 @@ namespace RNGReporter
                     rng.Next();
                 }
 
-                shinyUpper = (uint) (rng.Seed >> 32);
+                shinyUpper = (uint)(rng.Seed >> 32);
 
                 xOR2 = Convert.ToBoolean((shinyUpper >> 31) ^ (shinyUpper & 1));
             }
@@ -1350,7 +1350,7 @@ namespace RNGReporter
             else
                 dayMin = dayMax = date.Day;
 
-            long total = 86400*(dayMax - dayMin + 1);
+            long total = 86400 * (dayMax - dayMin + 1);
 
             for (int day = dayMin; day <= dayMax; day++)
             {
@@ -1375,7 +1375,7 @@ namespace RNGReporter
 
                                 if (calcMinFrame)
                                 {
-                                    minFrame = (int) Functions.initialPIDRNG_ID(seed, existingFile, version);
+                                    minFrame = (int)Functions.initialPIDRNG_ID(seed, existingFile, version);
                                 }
 
                                 for (int frame = 0; frame < minFrame; frame++)
@@ -1388,7 +1388,7 @@ namespace RNGReporter
                                     rng.Next();
                                     seed = rng.Seed;
 
-                                    var upper = (uint) (((seed >> 32)*0xFFFFFFFF) >> 32);
+                                    var upper = (uint)(((seed >> 32) * 0xFFFFFFFF) >> 32);
                                     uint tid = (upper & 0xFFFF);
                                     uint tsid = (upper >> 16);
 
@@ -1415,17 +1415,17 @@ namespace RNGReporter
                                         if (useSeed && (tid ^ tsid ^ pid) >= 8) continue;
                                         if (usePID && !Functions.Shiny(pid, tid, tsid)) continue;
                                         var iDSeed = new IDListBW
-                                            {
-                                                Seed = oSeed,
-                                                Date = dTime.ToShortDateString(),
-                                                Time = dTime.ToString("HH:mm:ss"),
-                                                InitialFrame = minFrame,
-                                                Frame = frame,
-                                                ID = tid,
-                                                SID = tsid,
-                                                Starter = starter.ToString(),
-                                                Button = Functions.buttonStrings[button]
-                                            };
+                                        {
+                                            Seed = oSeed,
+                                            Date = dTime.ToShortDateString(),
+                                            Time = dTime.ToString("HH:mm:ss"),
+                                            InitialFrame = minFrame,
+                                            Frame = frame,
+                                            ID = tid,
+                                            SID = tsid,
+                                            Starter = starter.ToString(),
+                                            Button = Functions.buttonStrings[button]
+                                        };
 
                                         resultsListBW.Add(iDSeed);
                                         refresh = true;
@@ -1443,12 +1443,12 @@ namespace RNGReporter
                             }
                         }
                     }
-                    lblAction.Text = ((((day - dayMin)*24 + hour + 1)*3600)/(float) total*100) + "%";
+                    lblAction.Text = ((((day - dayMin) * 24 + hour + 1) * 3600) / (float)total * 100) + "%";
                 }
             }
             isSearching = false;
 
-            lblAction.Text = "Done. - Awaiting Command";
+            lblAction.Text = "完成了 -等待操作...";
         }
 
         private void buttonVFindSeedHit_Click(object sender, EventArgs e)
@@ -1506,12 +1506,12 @@ namespace RNGReporter
 
                 lblAction.Text = "Searching..";
                 resultsListBW = new List<IDListBW>();
-                binding = new BindingSource {DataSource = resultsListBW};
+                binding = new BindingSource { DataSource = resultsListBW };
                 dgvResults.DataSource = binding;
 
                 var dateTime = new DateTime(dateTimeSeedSearch.Value.Year, dateTimeSeedSearch.Value.Month,
                                             dateTimeSeedSearch.Value.Day);
-                var profile = (Profile) comboBoxProfiles.SelectedItem;
+                var profile = (Profile)comboBoxProfiles.SelectedItem;
                 searchThread =
                     new Thread(
                         () =>
@@ -1536,7 +1536,7 @@ namespace RNGReporter
                                    uint vCount, uint timer0, uint gxStat, uint vFrame)
         {
             var rng = new BWRng(0);
-            int[] buttons = {0};
+            int[] buttons = { 0 };
 
             isSearching = true;
 
@@ -1565,24 +1565,24 @@ namespace RNGReporter
                         rng.Next();
                         seed = rng.Seed;
 
-                        var upper = (uint) (((seed >> 32)*0xFFFFFFFF) >> 32);
+                        var upper = (uint)(((seed >> 32) * 0xFFFFFFFF) >> 32);
                         uint tid = (upper & 0xFFFF);
                         uint sid = (upper >> 16);
 
                         if (tid == id)
                         {
                             var iDSeed = new IDListBW
-                                {
-                                    Seed = oSeed,
-                                    Date = dTime.ToShortDateString(),
-                                    Time = dTime.ToString("HH:mm:ss"),
-                                    Frame = frame,
-                                    InitialFrame = (int) Functions.initialPIDRNG_ID(oSeed, false, version),
-                                    ID = tid,
-                                    SID = sid,
-                                    Starter = "N/A",
-                                    Button = Functions.buttonStrings[button]
-                                };
+                            {
+                                Seed = oSeed,
+                                Date = dTime.ToShortDateString(),
+                                Time = dTime.ToString("HH:mm:ss"),
+                                Frame = frame,
+                                InitialFrame = (int)Functions.initialPIDRNG_ID(oSeed, false, version),
+                                ID = tid,
+                                SID = sid,
+                                Starter = "N/A",
+                                Button = Functions.buttonStrings[button]
+                            };
 
                             resultsListBW.Add(iDSeed);
 
@@ -1593,7 +1593,7 @@ namespace RNGReporter
             }
             isSearching = false;
 
-            lblAction.Text = "Done. - Awaiting Command";
+            lblAction.Text = "完成了 -等待操作...";
         }
 
         private void buttonVCancel_Click(object sender, EventArgs e)
@@ -1601,7 +1601,7 @@ namespace RNGReporter
             if (isSearching)
             {
                 isSearching = false;
-                lblAction.Text = "Cancelled. - Awaiting Command";
+                lblAction.Text = "取消了 -等待操作...";
                 searchThread.Abort();
             }
         }
@@ -1759,18 +1759,18 @@ namespace RNGReporter
 
         private void comboBoxProfiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformationShort();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformationShort();
         }
 
         private void buttonEditProfile_Click(object sender, EventArgs e)
         {
-            var editor = new ProfileEditor {Profile = (Profile) comboBoxProfiles.SelectedItem};
+            var editor = new ProfileEditor { Profile = (Profile)comboBoxProfiles.SelectedItem };
             if (editor.ShowDialog() != DialogResult.OK) return;
             Profiles.List[comboBoxProfiles.SelectedIndex] = editor.Profile;
 
             profilesSource.DataSource = Profiles.List;
             profilesSource.ResetBindings(false);
-            labelProfileInformation.Text = ((Profile) comboBoxProfiles.SelectedItem).ProfileInformationShort();
+            labelProfileInformation.Text = ((Profile)comboBoxProfiles.SelectedItem).ProfileInformationShort();
         }
 
         private void buttonIIIFindFrames_Click(object sender, EventArgs e)
@@ -1796,7 +1796,7 @@ namespace RNGReporter
 
             lblAction.Text = "Searching..";
             resultsListIII = new List<IDListIII>();
-            binding = new BindingSource {DataSource = resultsListIII};
+            binding = new BindingSource { DataSource = resultsListIII };
             dgvResults.DataSource = binding;
 
             searchThread = new Thread(() => searchGenIII(seedTime, checkIIIPID.Checked, pid, checkIIITID.Checked, id, checkIIISID.Checked, sid));
@@ -1892,17 +1892,17 @@ namespace RNGReporter
                 if ((!usePID || Functions.Shiny(pid, id, sid)) && (!useID || searchID == id) &&
                     (!useSID || searchSID == sid))
                 {
-                    resultsListIII.Add(new IDListIII {Frame = frame, ID = id, SID = sid});
+                    resultsListIII.Add(new IDListIII { Frame = frame, ID = id, SID = sid });
                     ++resultsCount;
                 }
             }
 
             isSearching = false;
 
-            lblAction.Text = "Done. - Awaiting Command";
+            lblAction.Text = "完成了 -等待操作...";
         }
 
-        private void searchGenFRLGE(uint id,uint pid)
+        private void searchGenFRLGE(uint id, uint pid)
         {
             //FireRed,LeafGreen,Emerald all use the TID as the base seed when determining SID
             uint seed = id;
@@ -1921,7 +1921,7 @@ namespace RNGReporter
 
             for (int frame = minFrame; frame <= maxFrame; ++frame)
             {
-                
+
                 sid = rng.GetNext16BitNumber();
 
                 //check criteria
@@ -1934,7 +1934,7 @@ namespace RNGReporter
 
             isSearching = false;
 
-            lblAction.Text = "Done. - Awaiting Command";
+            lblAction.Text = "完成了 -等待操作...";
         }
 
         private void buttonIIICancel_Click(object sender, EventArgs e)
@@ -1942,7 +1942,7 @@ namespace RNGReporter
             if (isSearching)
             {
                 isSearching = false;
-                lblAction.Text = "Cancelled. - Awaiting Command";
+                lblAction.Text = "取消了 -等待操作...";
                 searchThread.Abort();
             }
         }
@@ -2000,7 +2000,7 @@ namespace RNGReporter
             {
                 if (Profiles.List == null || Profiles.List.Count == 0)
                 {
-                    MessageBox.Show("No profiles were detected. Please setup a profile first.");
+                    MessageBox.Show("没有检测到GEN5的存档信息，请先新增一个存档信息。");
                     Profiles.ProfileManager.Visible = false;
                     Profiles.ProfileManager.ShowDialog();
                 }
@@ -2019,7 +2019,7 @@ namespace RNGReporter
             if (isSearching)
             {
                 isSearching = false;
-                lblAction.Text = "Cancelled. - Awaiting Command";
+                lblAction.Text = "取消了 -等待操作...";
                 searchThread.Abort();
             }
         }
@@ -2032,7 +2032,7 @@ namespace RNGReporter
             uint id;
             uint.TryParse(genFRLGETID.Text, out id);
             uint pid;
-            uint.TryParse(genFRLGEPID.Text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out pid);            
+            uint.TryParse(genFRLGEPID.Text, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out pid);
 
             if (isSearching)
             {
@@ -2048,7 +2048,7 @@ namespace RNGReporter
             searchThread =
                 new Thread(
                     () =>
-                    searchGenFRLGE(id,pid));
+                    searchGenFRLGE(id, pid));
             searchThread.Start();
 
             var update = new Thread(updateGUI);
@@ -2096,7 +2096,7 @@ namespace RNGReporter
             int maxFrame = int.Parse(XDColoMaxFrame.Text);
 
             //get to the proper starting frame and throw out the first call at that frame (generation takes 3 calls)
-            for (int i = 0; i < minFrame+1; ++i) rng.GetNext32BitNumber();
+            for (int i = 0; i < minFrame + 1; ++i) rng.GetNext32BitNumber();
             //prepare for the first sid call by setting the is now
             uint sid = rng.GetNext16BitNumber();
 
@@ -2116,7 +2116,7 @@ namespace RNGReporter
 
             isSearching = false;
 
-            lblAction.Text = "Done. - Awaiting Command";
+            lblAction.Text = "完成了 -等待操作...";
         }
 
         private void genCancelXDColo_Click(object sender, EventArgs e)
@@ -2124,7 +2124,7 @@ namespace RNGReporter
             if (isSearching)
             {
                 isSearching = false;
-                lblAction.Text = "Cancelled. - Awaiting Command";
+                lblAction.Text = "取消了 -等待操作...";
                 searchThread.Abort();
             }
         }
@@ -2185,6 +2185,11 @@ namespace RNGReporter
                 textIIIMinute.ReadOnly = false;
                 maskedTextBox21.ReadOnly = true;
             }
+        }
+
+        private void lblIDYr_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

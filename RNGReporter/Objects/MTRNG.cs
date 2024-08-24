@@ -100,7 +100,7 @@ namespace RNGReporter.Objects
         /* Tempering parameters */
         private const uint TemperingMaskB = 0x9d2c5680;
         private const uint TemperingMaskC = 0xefc60000;
-        private static readonly uint[] _mag01 = {0x0, MatrixA};
+        private static readonly uint[] _mag01 = { 0x0, MatrixA };
         private readonly uint[] _mt = new uint[N]; /* the array for the state vector  */
         private Int16 _mti;
         //private uint p;
@@ -226,7 +226,7 @@ namespace RNGReporter.Objects
             MTarray[0] = seed;
             for (int i = 1; i <= 623; i++)
             {
-                MTarray[i] = (uint) (0x6c078965*(MTarray[i - 1] ^ (MTarray[i - 1] >> 30)) + i) & 0xFFFFFFFF;
+                MTarray[i] = (uint)(0x6c078965 * (MTarray[i - 1] ^ (MTarray[i - 1] >> 30)) + i) & 0xFFFFFFFF;
             }
             return MTarray;
         }
@@ -237,7 +237,7 @@ namespace RNGReporter.Objects
 
             for (_mti = 1; _mti < N; _mti++)
             {
-                _mt[_mti] = (uint) (1812433253U*(_mt[_mti - 1] ^ (_mt[_mti - 1] >> 30)) + _mti);
+                _mt[_mti] = (uint)(1812433253U * (_mt[_mti - 1] ^ (_mt[_mti - 1] >> 30)) + _mti);
                 // See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. 
                 // In the previous versions, MSBs of the seed affect   
                 // only MSBs of the array _mt[].                        
@@ -262,7 +262,7 @@ namespace RNGReporter.Objects
         private const uint TemperingMaskB = 0x9d2c5680;
         private const uint TemperingMaskC = 0xefc60000;
         private const uint TemperingMaskC2 = 0xef000000;
-        private static readonly uint[] _mag01 = {0x0, MatrixA};
+        private static readonly uint[] _mag01 = { 0x0, MatrixA };
         private readonly uint[] _mt = new uint[N]; /* the array for the state vector  */
         private Int16 _mti;
         private int maxCalls;
@@ -377,7 +377,7 @@ namespace RNGReporter.Objects
             MTarray[0] = seed;
             for (int i = 1; i <= 397 + maxCalls; i++)
             {
-                MTarray[i] = (uint) (0x6c078965*(MTarray[i - 1] ^ (MTarray[i - 1] >> 30)) + i) & 0xFFFFFFFF;
+                MTarray[i] = (uint)(0x6c078965 * (MTarray[i - 1] ^ (MTarray[i - 1] >> 30)) + i) & 0xFFFFFFFF;
             }
             return MTarray;
         }
@@ -395,7 +395,7 @@ namespace RNGReporter.Objects
             int max = M + maxCalls;
             for (_mti = 1; _mti < max; ++_mti)
             {
-                _mt[_mti] = (uint) (1812433253U*(_mt[_mti - 1] ^ (_mt[_mti - 1] >> 30)) + _mti);
+                _mt[_mti] = (uint)(1812433253U * (_mt[_mti - 1] ^ (_mt[_mti - 1] >> 30)) + _mti);
                 // See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. 
                 // In the previous versions, MSBs of the seed affect   
                 // only MSBs of the array _mt[].                        
@@ -428,7 +428,7 @@ namespace RNGReporter.Objects
         /* Tempering parameters */
         private const uint TemperingMaskB = 0x9d2c5680;
         private const uint TemperingMaskC = 0xefc60000;
-        private static readonly uint[] _mag01 = {0x0, MatrixA};
+        private static readonly uint[] _mag01 = { 0x0, MatrixA };
         private readonly uint[] _mt = new uint[N]; /* the array for the state vector  */
         private Int16 _mti;
 
@@ -438,7 +438,7 @@ namespace RNGReporter.Objects
         /// <param name="seed">A value to use as a seed.</param>
         public MersenneTwisterUntempered(Int32 seed)
         {
-            init((uint) seed);
+            init((uint)seed);
         }
 
         #region IRNG Members
@@ -531,7 +531,7 @@ namespace RNGReporter.Objects
 
             for (_mti = 1; _mti < N; _mti++)
             {
-                _mt[_mti] = (uint) (1812433253U*(_mt[_mti - 1] ^ (_mt[_mti - 1] >> 30)) + _mti);
+                _mt[_mti] = (uint)(1812433253U * (_mt[_mti - 1] ^ (_mt[_mti - 1] >> 30)) + _mti);
                 // See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. 
                 // In the previous versions, MSBs of the seed affect   
                 // only MSBs of the array _mt[].                        

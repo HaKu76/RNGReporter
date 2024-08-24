@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -6,7 +7,6 @@ using System.Security.Permissions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using RNGReporter.Objects;
 
 /*
 <li>Base class for custom tooltips.</li>
@@ -183,7 +183,7 @@ namespace RNGReporter.Controls
                     Dispose(true);
                 };
             content.RegionChanged += delegate { UpdateRegion(); };
-            content.Paint += delegate(object sender, PaintEventArgs e) { PaintSizeGrip(e); };
+            content.Paint += delegate (object sender, PaintEventArgs e) { PaintSizeGrip(e); };
             UpdateRegion();
         }
 
@@ -193,7 +193,7 @@ namespace RNGReporter.Controls
 
         private const int frames = 1;
         private const int totalduration = 0; // ML : 2007-11-05 : was 100 but caused a flicker.
-        private const int frameduration = totalduration/frames;
+        private const int frameduration = totalduration / frames;
         public DateTime LastClosedTimeStamp = DateTime.Now;
         private bool resizableRight;
         private bool resizableTop;
@@ -311,7 +311,7 @@ namespace RNGReporter.Controls
                 {
                     Thread.Sleep(frameduration);
                 }
-                Opacity = opacity*i/frames;
+                Opacity = opacity * i / frames;
             }
             Opacity = opacity;
         }
@@ -462,7 +462,7 @@ namespace RNGReporter.Controls
         [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.UnmanagedCode)]
         private bool OnGetMinMaxInfo(ref Message m)
         {
-            var minmax = (NativeMethods.MINMAXINFO) Marshal.PtrToStructure(m.LParam, typeof (NativeMethods.MINMAXINFO));
+            var minmax = (NativeMethods.MINMAXINFO)Marshal.PtrToStructure(m.LParam, typeof(NativeMethods.MINMAXINFO));
             minmax.maxTrackSize = MaximumSize;
             minmax.minTrackSize = MinimumSize;
             Marshal.StructureToPtr(minmax, m.LParam, false);
@@ -482,17 +482,17 @@ namespace RNGReporter.Controls
             {
                 if (resizableRight && gripBouns.TopLeft.Contains(clientLocation))
                 {
-                    m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTTOPLEFT;
+                    m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTTOPLEFT;
                     return true;
                 }
                 if (!resizableRight && gripBouns.TopRight.Contains(clientLocation))
                 {
-                    m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTTOPRIGHT;
+                    m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTTOPRIGHT;
                     return true;
                 }
                 if (gripBouns.Top.Contains(clientLocation))
                 {
-                    m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTTOP;
+                    m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTTOP;
                     return true;
                 }
             }
@@ -500,28 +500,28 @@ namespace RNGReporter.Controls
             {
                 if (resizableRight && gripBouns.BottomLeft.Contains(clientLocation))
                 {
-                    m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTBOTTOMLEFT;
+                    m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTBOTTOMLEFT;
                     return true;
                 }
                 if (!resizableRight && gripBouns.BottomRight.Contains(clientLocation))
                 {
-                    m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTBOTTOMRIGHT;
+                    m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTBOTTOMRIGHT;
                     return true;
                 }
                 if (gripBouns.Bottom.Contains(clientLocation))
                 {
-                    m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTBOTTOM;
+                    m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTBOTTOM;
                     return true;
                 }
             }
             if (resizableRight && gripBouns.Left.Contains(clientLocation))
             {
-                m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTLEFT;
+                m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTLEFT;
                 return true;
             }
             if (!resizableRight && gripBouns.Right.Contains(clientLocation))
             {
-                m.Result = contentControl ? transparent : (IntPtr) NativeMethods.HTRIGHT;
+                m.Result = contentControl ? transparent : (IntPtr)NativeMethods.HTRIGHT;
                 return true;
             }
             return false;

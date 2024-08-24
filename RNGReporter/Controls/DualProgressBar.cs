@@ -85,7 +85,7 @@ namespace RNGReporter
                 masterpainter = value;
                 if (masterpainter is AbstractProgressPainter)
                 {
-                    ((AbstractProgressPainter) masterpainter).padding = base.ProgressPadding;
+                    ((AbstractProgressPainter)masterpainter).padding = base.ProgressPadding;
                 }
                 masterpainter.PropertiesChanged += component_PropertiesChanged;
                 Invalidate();
@@ -121,9 +121,9 @@ namespace RNGReporter
                         }
                     }
                 }
-                OnMasterValueChanged = (EventHandler) Delegate.Combine(OnMasterValueChanged, value);
+                OnMasterValueChanged = (EventHandler)Delegate.Combine(OnMasterValueChanged, value);
             }
-            remove { OnMasterValueChanged = (EventHandler) Delegate.Remove(OnMasterValueChanged, value); }
+            remove { OnMasterValueChanged = (EventHandler)Delegate.Remove(OnMasterValueChanged, value); }
         }
 
         protected override void OnResize(EventArgs e)
@@ -166,7 +166,7 @@ namespace RNGReporter
             {
                 val++;
             }
-            int progWidth = mastermax > 0 ? (backbox.Width*val/mastermax) : 1;
+            int progWidth = mastermax > 0 ? (backbox.Width * val / mastermax) : 1;
             if (value >= mastermax && mastermax > 0)
             {
                 progWidth = backbox.Width;
@@ -175,8 +175,8 @@ namespace RNGReporter
 			}*/
             //newprog = new Rectangle(backbox.X + base.ProgressPadding, backbox.Y + base.ProgressPadding, progWidth - (base.ProgressPadding * 2), backbox.Height - (base.ProgressPadding * 2));
             //newprog = new Rectangle(backbox.X, backbox.Y, progWidth, backbox.Height);
-            newprog = new Rectangle(backbox.X + padding, backbox.Y + padding, progWidth - (padding*2),
-                                    backbox.Height - (padding*2));
+            newprog = new Rectangle(backbox.X + padding, backbox.Y + padding, progWidth - (padding * 2),
+                                    backbox.Height - (padding * 2));
             masterbox = newprog;
         }
 

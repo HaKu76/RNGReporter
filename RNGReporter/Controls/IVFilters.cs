@@ -18,9 +18,9 @@
  */
 
 
+using RNGReporter.Objects;
 using System;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 
 namespace RNGReporter.Controls
 {
@@ -277,37 +277,37 @@ namespace RNGReporter.Controls
 
         private void cbHP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IVFilter.hpCompare = (CompareType) cbHP.SelectedIndex;
+            IVFilter.hpCompare = (CompareType)cbHP.SelectedIndex;
             OnFiltersChanged(e);
         }
 
         private void cbAtk_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IVFilter.atkCompare = (CompareType) cbAtk.SelectedIndex;
+            IVFilter.atkCompare = (CompareType)cbAtk.SelectedIndex;
             OnFiltersChanged(e);
         }
 
         private void cbDef_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IVFilter.defCompare = (CompareType) cbDef.SelectedIndex;
+            IVFilter.defCompare = (CompareType)cbDef.SelectedIndex;
             OnFiltersChanged(e);
         }
 
         private void cbSpA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IVFilter.spaCompare = (CompareType) cbSpA.SelectedIndex;
+            IVFilter.spaCompare = (CompareType)cbSpA.SelectedIndex;
             OnFiltersChanged(e);
         }
 
         private void cbSpD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IVFilter.spdCompare = (CompareType) cbSpD.SelectedIndex;
+            IVFilter.spdCompare = (CompareType)cbSpD.SelectedIndex;
             OnFiltersChanged(e);
         }
 
         private void cbSpe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IVFilter.speCompare = (CompareType) cbSpe.SelectedIndex;
+            IVFilter.speCompare = (CompareType)cbSpe.SelectedIndex;
             OnFiltersChanged(e);
         }
 

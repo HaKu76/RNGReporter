@@ -18,13 +18,13 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 using Version = RNGReporter.Objects.Version;
 
 namespace RNGReporter
@@ -60,7 +60,7 @@ namespace RNGReporter
                 maskedTextBoxSecondsMin.Text = maskedTextBoxSecond.Text;
                 try
                 {
-                    maskedTextBoxSecondsMax.Text = ((int.Parse(maskedTextBoxSecond.Text) + 10)%60).ToString();
+                    maskedTextBoxSecondsMax.Text = ((int.Parse(maskedTextBoxSecond.Text) + 10) % 60).ToString();
                 }
                 catch
                 {
@@ -81,7 +81,7 @@ namespace RNGReporter
                         textBoxTimer0Min.Text = "C60";
                         textBoxTimer0Max.Text = "CA0";
                     }
-                        // BW2 DS
+                    // BW2 DS
                     else
                     {
                         textBoxVCountMin.Text = "70";
@@ -104,7 +104,7 @@ namespace RNGReporter
                         textBoxTimer0Min.Text = "1140";
                         textBoxTimer0Max.Text = "12D0";
                     }
-                        // BW2 DSi
+                    // BW2 DSi
                     else
                     {
                         textBoxVCountMin.Text = "A0";
@@ -337,7 +337,7 @@ namespace RNGReporter
             bool minMaxGxStat = cbGxStat.Checked;
 
             dsParameters = new List<DSParameterCapture>();
-            var listBinding = new BindingSource {DataSource = dsParameters};
+            var listBinding = new BindingSource { DataSource = dsParameters };
             dataGridView1.DataSource = listBinding;
 
             cpus = Settings.Default.CPUs;
@@ -348,13 +348,13 @@ namespace RNGReporter
 
             var jobs = new Thread[cpus];
 
-            var progress = new Progress {Text = "DS Parameter Progress"};
-            progressTotal = (ulong) ((VCountMax - VCountMin + 1)
-                                     *(Timer0Max - Timer0Min + 1)
+            var progress = new Progress { Text = "DS Parameter Progress" };
+            progressTotal = (ulong)((VCountMax - VCountMin + 1)
+                                     * (Timer0Max - Timer0Min + 1)
                                      // if only min max gx stat search is 2 (or 1 if they're the same) else it's max-min
-                                     *(minMaxGxStat ? (GxStatMax > GxStatMin ? 2u : 1) : (GxStatMax - GxStatMin + 1))
-                                     *(VFrameMax - VFrameMin + 1)
-                                     *(secondsMax - secondsMin + 1));
+                                     * (minMaxGxStat ? (GxStatMax > GxStatMin ? 2u : 1) : (GxStatMax - GxStatMin + 1))
+                                     * (VFrameMax - VFrameMin + 1)
+                                     * (secondsMax - secondsMin + 1));
 
             progressSearched = 0;
             progressFound = 0;
@@ -409,17 +409,17 @@ namespace RNGReporter
                 if (combinations > 200)
                 {
                     MessageBox.Show(
-                        "There were too many combinations of IV possibilities to accurately find your intitial seed (" +
-                        combinations + ") please try with a higher level Pokemon,", "Too many IV Combinations");
+                        "存在太多的个体值可能性组合，因此无法准确地找到您的初始seed。 (" +
+                        combinations + ") 请尝试使用更高等级的宝可梦,", "太多个体值组合啦");
                     return;
                 }
             }
 
-            var version = (Version) comboBoxVersion.SelectedIndex;
-            var language = (Language) comboBoxLanguage.SelectedIndex;
-            var dstype = (DSType) comboBoxDSType.SelectedIndex;
+            var version = (Version)comboBoxVersion.SelectedIndex;
+            var language = (Language)comboBoxLanguage.SelectedIndex;
+            var dstype = (DSType)comboBoxDSType.SelectedIndex;
 
-            var interval = (uint) ((VCountMax - VCountMin)/(float) jobs.Length);
+            var interval = (uint)((VCountMax - VCountMin) / (float)jobs.Length);
             uint VCountMinLower = VCountMin;
             uint VCountMinUpper = VCountMin + interval;
 
@@ -464,7 +464,7 @@ namespace RNGReporter
                 bool alive = true;
                 while (alive)
                 {
-                    progress.ShowProgress(progressSearched/(float) progressTotal, progressSearched, progressFound);
+                    progress.ShowProgress(progressSearched / (float)progressTotal, progressSearched, progressFound);
                     if (refreshQueue)
                     {
                         listBinding.ResetBindings(false);
@@ -523,14 +523,14 @@ namespace RNGReporter
             uint buttonMashed = Functions.buttonMashed(button);
 
             var array = new uint[80];
-            uint[] h = {0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0};
+            uint[] h = { 0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0 };
 
-            array[6] = (uint) (MAC_address & 0xFFFF);
+            array[6] = (uint)(MAC_address & 0xFFFF);
             if (softReset)
             {
                 array[6] = array[6] ^ 0x01000000;
             }
-            var upperMAC = (uint) (MAC_address >> 16);
+            var upperMAC = (uint)(MAC_address >> 16);
 
             // Get the version-unique part of the message
             Array.Copy(Nazos.Nazo(version, language, dstype), array, 5);
@@ -544,7 +544,7 @@ namespace RNGReporter
 
 
             array[8] = Functions.seedDate(testTime);
-            var GxStatList = new List<uint> {GxStatMin};
+            var GxStatList = new List<uint> { GxStatMin };
 
             // build the GxStat ranges
             if (GxStatMin != GxStatMax)
@@ -562,7 +562,7 @@ namespace RNGReporter
                 {
                     for (uint cntTimer0 = Timer0Min; cntTimer0 <= Timer0Max; cntTimer0++)
                     {
-                        array[5] = cntVCount*0x10000 + cntTimer0;
+                        array[5] = cntVCount * 0x10000 + cntTimer0;
                         array[5] = Functions.Reorder(array[5]);
                         foreach (uint GxStat in GxStatList)
                         {
@@ -576,7 +576,7 @@ namespace RNGReporter
                                 uint f = 0;
                                 uint k = 0;
 
-                                array[7] = (upperMAC ^ (cntVFrame*0x1000000) ^ GxStat);
+                                array[7] = (upperMAC ^ (cntVFrame * 0x1000000) ^ GxStat);
 
                                 for (int i = 0; i < 80; i++)
                                 {
@@ -619,13 +619,13 @@ namespace RNGReporter
                                 uint part1 = Functions.Reorder(h[0] + a);
                                 uint part2 = Functions.Reorder(h[1] + b);
 
-                                ulong seed2 = (ulong) part1*0x6C078965;
-                                uint seed1 = part2*0x6C078965 + (uint) (seed2 >> 32);
-                                seed1 = seed1 + (part1*0x5D588B65);
-                                seed2 = (uint) (seed2 & 0xFFFFFFFF) + 0x269EC3;
+                                ulong seed2 = (ulong)part1 * 0x6C078965;
+                                uint seed1 = part2 * 0x6C078965 + (uint)(seed2 >> 32);
+                                seed1 = seed1 + (part1 * 0x5D588B65);
+                                seed2 = (uint)(seed2 & 0xFFFFFFFF) + 0x269EC3;
 
-                                ulong seed = (ulong) (seed1*0x100000000) + seed2;
-                                var tempSeed = (uint) (seed >> 32);
+                                ulong seed = (ulong)(seed1 * 0x100000000) + seed2;
+                                var tempSeed = (uint)(seed >> 32);
 
                                 progressSearched++;
                                 if (!findDirectSeed)
@@ -636,12 +636,12 @@ namespace RNGReporter
                                     {
                                         mt = new MersenneTwisterFast(tempSeed, 7);
                                         mt.Nextuint();
-                                        IVArray[0] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[1] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[2] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[4] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[5] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[3] = (int) (mt.Nextuint() >> 27);
+                                        IVArray[0] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[1] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[2] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[4] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[5] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[3] = (int)(mt.Nextuint() >> 27);
                                     }
                                     else
                                     {
@@ -649,12 +649,12 @@ namespace RNGReporter
                                         mt = new MersenneTwisterFast(tempSeed, 6 + offset);
                                         for (int i = 0; i < offset; ++i) mt.Nextuint();
 
-                                        IVArray[0] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[1] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[2] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[3] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[4] = (int) (mt.Nextuint() >> 27);
-                                        IVArray[5] = (int) (mt.Nextuint() >> 27);
+                                        IVArray[0] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[1] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[2] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[3] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[4] = (int)(mt.Nextuint() >> 27);
+                                        IVArray[5] = (int)(mt.Nextuint() >> 27);
                                     }
                                     if ((IVArray[0] >= minIVs[0] && IVArray[0] <= maxIVs[0]) &&
                                         (IVArray[1] >= minIVs[1] && IVArray[1] <= maxIVs[1]) &&
@@ -665,14 +665,14 @@ namespace RNGReporter
                                     {
                                         var dsParameterFound =
                                             new DSParameterCapture
-                                                {
-                                                    ActualSeconds = testTime.Second,
-                                                    VCount = cntVCount,
-                                                    Timer0 = cntTimer0,
-                                                    GxStat = GxStat,
-                                                    VFrame = cntVFrame,
-                                                    Seed = seed
-                                                };
+                                            {
+                                                ActualSeconds = testTime.Second,
+                                                VCount = cntVCount,
+                                                Timer0 = cntTimer0,
+                                                GxStat = GxStat,
+                                                VFrame = cntVFrame,
+                                                Seed = seed
+                                            };
                                         dsParameters.Add(dsParameterFound);
                                         refreshQueue = true;
                                         progressFound++;
@@ -682,18 +682,18 @@ namespace RNGReporter
                                 {
                                     if (checkBoxHalfSeed.Checked)
                                     {
-                                        if (tempSeed == (int) directSeed)
+                                        if (tempSeed == (int)directSeed)
                                         {
                                             var dsParameterFound =
                                                 new DSParameterCapture
-                                                    {
-                                                        ActualSeconds = testTime.Second,
-                                                        VCount = cntVCount,
-                                                        Timer0 = cntTimer0,
-                                                        GxStat = GxStat,
-                                                        VFrame = cntVFrame,
-                                                        Seed = seed
-                                                    };
+                                                {
+                                                    ActualSeconds = testTime.Second,
+                                                    VCount = cntVCount,
+                                                    Timer0 = cntTimer0,
+                                                    GxStat = GxStat,
+                                                    VFrame = cntVFrame,
+                                                    Seed = seed
+                                                };
                                             dsParameters.Add(dsParameterFound);
                                             refreshQueue = true;
                                             progressFound++;
@@ -705,14 +705,14 @@ namespace RNGReporter
                                         {
                                             var dsParameterFound =
                                                 new DSParameterCapture
-                                                    {
-                                                        ActualSeconds = testTime.Second,
-                                                        VCount = cntVCount,
-                                                        Timer0 = cntTimer0,
-                                                        GxStat = GxStat,
-                                                        VFrame = cntVFrame,
-                                                        Seed = seed
-                                                    };
+                                                {
+                                                    ActualSeconds = testTime.Second,
+                                                    VCount = cntVCount,
+                                                    Timer0 = cntTimer0,
+                                                    GxStat = GxStat,
+                                                    VFrame = cntVFrame,
+                                                    Seed = seed
+                                                };
                                             dsParameters.Add(dsParameterFound);
                                             refreshQueue = true;
                                             progressFound++;
@@ -756,18 +756,18 @@ namespace RNGReporter
 
         private Profile GetProfile()
         {
-            var dsParameter = (DSParameterCapture) dataGridView1.SelectedRows[0].DataBoundItem;
+            var dsParameter = (DSParameterCapture)dataGridView1.SelectedRows[0].DataBoundItem;
             var profile = new Profile
-                {
-                    MAC_Address = MAC_address,
-                    VCount = dsParameter.VCount,
-                    Timer0Min = dsParameter.Timer0,
-                    Version = (Version) comboBoxVersion.SelectedIndex,
-                    Language = (Language) comboBoxLanguage.SelectedIndex,
-                    VFrame = dsParameter.VFrame,
-                    GxStat = dsParameter.GxStat,
-                    DSType = (DSType) comboBoxDSType.SelectedIndex
-                };
+            {
+                MAC_Address = MAC_address,
+                VCount = dsParameter.VCount,
+                Timer0Min = dsParameter.Timer0,
+                Version = (Version)comboBoxVersion.SelectedIndex,
+                Language = (Language)comboBoxLanguage.SelectedIndex,
+                VFrame = dsParameter.VFrame,
+                GxStat = dsParameter.GxStat,
+                DSType = (DSType)comboBoxDSType.SelectedIndex
+            };
             return profile;
         }
 
@@ -845,6 +845,11 @@ namespace RNGReporter
                 maskedTextBoxSpDefMax.Text = ivCheck.MaxStats[4].ToString();
                 maskedTextBoxSpeedMax.Text = ivCheck.MaxStats[5].ToString();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

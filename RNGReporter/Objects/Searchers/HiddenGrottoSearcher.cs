@@ -1,11 +1,11 @@
-﻿using System;
+﻿using RNGReporter.Controls;
+using RNGReporter.Objects.Generators;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Controls;
-using RNGReporter.Objects.Generators;
 
 namespace RNGReporter.Objects.Searchers
 {
@@ -30,7 +30,7 @@ namespace RNGReporter.Objects.Searchers
             waitHandle = new EventWaitHandle(true, EventResetMode.ManualReset);
 
             hollowFrames = new List<Hollow>();
-            frameBinding = new BindingSource {DataSource = hollowFrames};
+            frameBinding = new BindingSource { DataSource = hollowFrames };
             searchParams.DataGridView.DataSource = frameBinding;
             btnGenerate = searchParams.GenerateButton;
         }
@@ -44,7 +44,7 @@ namespace RNGReporter.Objects.Searchers
                   FormsFunctions.ParseInputD(searchParams.MaxAdvances, out maxAdvances) &&
                   FormsFunctions.ParseInputD(searchParams.OpenHollows, out openHollows) && openHollows > 0 &&
                   openHollows < 21)) return false;
-            generator = new HiddenGrottoGenerator {OpenHollows = openHollows, MaxAdvances = maxAdvances};
+            generator = new HiddenGrottoGenerator { OpenHollows = openHollows, MaxAdvances = maxAdvances };
             months = new List<int>();
             // todo: move this to forms functions
             for (int month = 1; month <= 12; month++)
@@ -65,20 +65,20 @@ namespace RNGReporter.Objects.Searchers
 
             progressTotal =
                 (ulong)
-                (dayTotal*86400*keypresses.Count*(searchParams.Profile.Timer0Max - searchParams.Profile.Timer0Min + 1)*
+                (dayTotal * 86400 * keypresses.Count * (searchParams.Profile.Timer0Max - searchParams.Profile.Timer0Min + 1) *
                  (maxAdvances + 1));
 
             var slots = new List<ushort>();
             for (ushort i = 1; i < searchParams.Slots.CheckBoxItems.Count; ++i)
             {
-                if (searchParams.Slots.CheckBoxItems[i].Checked) slots.Add((ushort) (i - 1));
+                if (searchParams.Slots.CheckBoxItems[i].Checked) slots.Add((ushort)(i - 1));
             }
             generator.Slots = slots.Count > 0 ? slots : null;
 
             var subslots = new List<ushort>();
             for (ushort i = 1; i < searchParams.SubSlots.CheckBoxItems.Count; ++i)
             {
-                if (searchParams.SubSlots.CheckBoxItems[i].Checked) subslots.Add((ushort) (i - 1));
+                if (searchParams.SubSlots.CheckBoxItems[i].Checked) subslots.Add((ushort)(i - 1));
             }
             generator.SubSlots = subslots.Count > 0 ? subslots : null;
 
@@ -87,13 +87,13 @@ namespace RNGReporter.Objects.Searchers
             {
                 if (searchParams.Hollows.CheckBoxItems[i].Checked)
                 {
-                    var hollow = (ushort) (i - 1);
+                    var hollow = (ushort)(i - 1);
                     // check to make sure it's possible to hit this hollow
                     if (hollow >= openHollows)
                     {
                         MessageBox.Show(
                             string.Format("It's impossible to hit hollow number {0} with {1} open hollows!", hollow,
-                                          openHollows), "Error",
+                                          openHollows), "错误",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
@@ -159,15 +159,15 @@ namespace RNGReporter.Objects.Searchers
             const int threadIndex = 0;
             // todo: move this outside the search and only do it once
             var array = new uint[80];
-            array[6] = (uint) (searchParams.Profile.MAC_Address & 0xFFFF);
+            array[6] = (uint)(searchParams.Profile.MAC_Address & 0xFFFF);
 
             if (searchParams.Profile.SoftReset)
             {
                 array[6] = array[6] ^ 0x01000000;
             }
 
-            var upperMAC = (uint) (searchParams.Profile.MAC_Address >> 16);
-            array[7] = (upperMAC ^ (searchParams.Profile.VFrame*0x1000000) ^ searchParams.Profile.GxStat);
+            var upperMAC = (uint)(searchParams.Profile.MAC_Address >> 16);
+            array[7] = (upperMAC ^ (searchParams.Profile.VFrame * 0x1000000) ^ searchParams.Profile.GxStat);
 
             // Get the version-unique part of the message
             Array.Copy(
@@ -192,12 +192,12 @@ namespace RNGReporter.Objects.Searchers
 
             foreach (int month in months)
             {
-                float interval = ((float) DateTime.DaysInMonth(year, month)/numThreads + (float) 0.05);
+                float interval = ((float)DateTime.DaysInMonth(year, month) / numThreads + (float)0.05);
 
-                var dayMin = (int) (interval*threadIndex + 1);
-                var dayMax = (int) (interval*(threadIndex + 1));
+                var dayMin = (int)(interval * threadIndex + 1);
+                var dayMax = (int)(interval * (threadIndex + 1));
 
-                string yearMonth = String.Format("{0:00}", year%2000) + String.Format("{0:00}", month);
+                string yearMonth = String.Format("{0:00}", year % 2000) + String.Format("{0:00}", month);
                 for (int buttonCount = 0; buttonCount < keypressList.Count; buttonCount++)
                 {
                     array[12] = buttonMashValue[buttonCount];
@@ -212,7 +212,7 @@ namespace RNGReporter.Objects.Searchers
                         {
                             var searchTime = new DateTime(year, month, day);
 
-                            string dateString = String.Format("{0:00}", (int) searchTime.DayOfWeek);
+                            string dateString = String.Format("{0:00}", (int)searchTime.DayOfWeek);
                             dateString = String.Format("{0:00}", searchTime.Day) + dateString;
                             dateString = yearMonth + dateString;
                             array[8] = uint.Parse(dateString, NumberStyles.HexNumber);
@@ -259,9 +259,9 @@ namespace RNGReporter.Objects.Searchers
                                         {
                                             hollowFrames.AddRange(hollows);
                                         }
-                                        progressSearched += generator.OpenHollows*generator.MaxAdvances;
-                                        progressFound += (ulong) hollows.Count;
-                                        progressTotal += (ulong) hollows.Count*generator.OpenHollows*
+                                        progressSearched += generator.OpenHollows * generator.MaxAdvances;
+                                        progressFound += (ulong)hollows.Count;
+                                        progressTotal += (ulong)hollows.Count * generator.OpenHollows *
                                                          generator.MaxAdvances;
                                         refreshQueue = true;
                                     }

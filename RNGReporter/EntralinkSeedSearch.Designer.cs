@@ -69,6 +69,13 @@ namespace RNGReporter
             this.maskedTextBoxYear = new RNGReporter.Controls.MaskedTextBox2();
             this.textBoxSeed = new RNGReporter.Controls.MaskedTextBox2();
             this.dataGridViewCapValues = new RNGReporter.DoubleBufferedDataGridView();
+            this.buttonSeedGenerate = new RNGReporter.GlassButton();
+            this.maskedTextBoxCapMinOffset = new RNGReporter.Controls.MaskedTextBox2();
+            this.maskedTextBoxCapMaxOffset = new RNGReporter.Controls.MaskedTextBox2();
+            this.groupBoxConfiguration = new System.Windows.Forms.GroupBox();
+            this.labelProfileInformation = new System.Windows.Forms.Label();
+            this.comboBoxProfiles = new RNGReporter.GlassComboBox();
+            this.buttonEditProfile = new RNGReporter.GlassButton();
             this.CapSeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Timer0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeedTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,15 +88,7 @@ namespace RNGReporter
             this.CapSpA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CapSpD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CapSpe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Keypresses = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonSeedGenerate = new RNGReporter.GlassButton();
-            this.maskedTextBoxCapMinOffset = new RNGReporter.Controls.MaskedTextBox2();
-            this.maskedTextBoxCapMaxOffset = new RNGReporter.Controls.MaskedTextBox2();
-            this.groupBoxConfiguration = new System.Windows.Forms.GroupBox();
-            this.labelProfileInformation = new System.Windows.Forms.Label();
-            this.comboBoxProfiles = new RNGReporter.GlassComboBox();
-            this.buttonEditProfile = new RNGReporter.GlassButton();
             this.contextMenuStripCap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCapValues)).BeginInit();
             this.groupBoxConfiguration.SuspendLayout();
@@ -97,6 +96,7 @@ namespace RNGReporter
             // 
             // contextMenuStripCap
             // 
+            this.contextMenuStripCap.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripCap.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copySeedToClipboardToolStripMenuItem1,
             this.toolStripMenuItem6,
@@ -106,79 +106,82 @@ namespace RNGReporter
             this.toolStripMenuItem3,
             this.outputCapResultsToTXTToolStripMenuItem});
             this.contextMenuStripCap.Name = "contextMenuStripCap";
-            this.contextMenuStripCap.Size = new System.Drawing.Size(292, 126);
+            this.contextMenuStripCap.Size = new System.Drawing.Size(381, 136);
             this.contextMenuStripCap.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripCap_Opening);
             // 
             // copySeedToClipboardToolStripMenuItem1
             // 
             this.copySeedToClipboardToolStripMenuItem1.Name = "copySeedToClipboardToolStripMenuItem1";
-            this.copySeedToClipboardToolStripMenuItem1.Size = new System.Drawing.Size(291, 22);
-            this.copySeedToClipboardToolStripMenuItem1.Text = "Copy Seed to Clipboard";
+            this.copySeedToClipboardToolStripMenuItem1.Size = new System.Drawing.Size(380, 24);
+            this.copySeedToClipboardToolStripMenuItem1.Text = "复制Seed到剪贴板";
             this.copySeedToClipboardToolStripMenuItem1.Click += new System.EventHandler(this.copySeedToClipboardToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(288, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(377, 6);
             // 
             // generateTimesToolStripMenuItem
             // 
             this.generateTimesToolStripMenuItem.Name = "generateTimesToolStripMenuItem";
-            this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
+            this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
             this.generateTimesToolStripMenuItem.Text = "Generate More Times ...";
             // 
             // generateAdjacentSeedsFrame1ToolStripMenuItem
             // 
             this.generateAdjacentSeedsFrame1ToolStripMenuItem.Name = "generateAdjacentSeedsFrame1ToolStripMenuItem";
-            this.generateAdjacentSeedsFrame1ToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
+            this.generateAdjacentSeedsFrame1ToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
             this.generateAdjacentSeedsFrame1ToolStripMenuItem.Text = "Generate Adjacent Seeds (Frame 1)";
             this.generateAdjacentSeedsFrame1ToolStripMenuItem.Visible = false;
             // 
             // generateAdjacentSeedsToolStripMenuItem
             // 
             this.generateAdjacentSeedsToolStripMenuItem.Name = "generateAdjacentSeedsToolStripMenuItem";
-            this.generateAdjacentSeedsToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
+            this.generateAdjacentSeedsToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
             this.generateAdjacentSeedsToolStripMenuItem.Text = "Generate Adjacent Seeds (Current Frame)";
             this.generateAdjacentSeedsToolStripMenuItem.Visible = false;
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(288, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(377, 6);
             // 
             // outputCapResultsToTXTToolStripMenuItem
             // 
             this.outputCapResultsToTXTToolStripMenuItem.Name = "outputCapResultsToTXTToolStripMenuItem";
-            this.outputCapResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
-            this.outputCapResultsToTXTToolStripMenuItem.Text = "Output Results to TXT ...";
+            this.outputCapResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
+            this.outputCapResultsToTXTToolStripMenuItem.Text = "输出结果至TXT文本文件";
             this.outputCapResultsToTXTToolStripMenuItem.Click += new System.EventHandler(this.outputCapResultsToTXTToolStripMenuItem_Click);
             // 
             // labelMaxFrame
             // 
-            this.labelMaxFrame.Location = new System.Drawing.Point(431, 94);
+            this.labelMaxFrame.Location = new System.Drawing.Point(619, 105);
+            this.labelMaxFrame.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMaxFrame.Name = "labelMaxFrame";
-            this.labelMaxFrame.Size = new System.Drawing.Size(78, 13);
+            this.labelMaxFrame.Size = new System.Drawing.Size(61, 20);
             this.labelMaxFrame.TabIndex = 107;
-            this.labelMaxFrame.Text = "Max Advances";
+            this.labelMaxFrame.Text = "最大帧";
             this.labelMaxFrame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelMinFrame
             // 
-            this.labelMinFrame.Location = new System.Drawing.Point(431, 68);
+            this.labelMinFrame.Location = new System.Drawing.Point(619, 76);
+            this.labelMinFrame.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMinFrame.Name = "labelMinFrame";
-            this.labelMinFrame.Size = new System.Drawing.Size(78, 13);
+            this.labelMinFrame.Size = new System.Drawing.Size(61, 21);
             this.labelMinFrame.TabIndex = 125;
-            this.labelMinFrame.Text = "Min Advances";
+            this.labelMinFrame.Text = "最小帧";
             this.labelMinFrame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxChatot
             // 
             this.textBoxChatot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxChatot.Location = new System.Drawing.Point(96, 451);
+            this.textBoxChatot.Location = new System.Drawing.Point(128, 520);
+            this.textBoxChatot.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxChatot.Name = "textBoxChatot";
             this.textBoxChatot.ReadOnly = true;
-            this.textBoxChatot.Size = new System.Drawing.Size(702, 20);
+            this.textBoxChatot.Size = new System.Drawing.Size(935, 25);
             this.textBoxChatot.TabIndex = 13;
             this.toolTip1.SetToolTip(this.textBoxChatot, resources.GetString("textBoxChatot.ToolTip"));
             // 
@@ -187,32 +190,36 @@ namespace RNGReporter
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 454);
+            this.label3.Location = new System.Drawing.Point(16, 524);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(82, 15);
             this.label3.TabIndex = 171;
-            this.label3.Text = "Chatot Pitches";
+            this.label3.Text = "聒噪鸟音高";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(335, 92);
+            this.label20.Location = new System.Drawing.Point(447, 107);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 13);
+            this.label20.Size = new System.Drawing.Size(37, 15);
             this.label20.TabIndex = 333;
-            this.label20.Text = "Year";
+            this.label20.Text = "年份";
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(12, 104);
+            this.textBoxDescription.Location = new System.Drawing.Point(16, 120);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
-            this.textBoxDescription.Size = new System.Drawing.Size(256, 75);
+            this.textBoxDescription.Size = new System.Drawing.Size(340, 86);
             this.textBoxDescription.TabIndex = 175;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
+            this.textBoxDescription.Text = "这个工具搜索C装置seed的所有可能日期，以找到与之对应的普通seed，该普通seed在多个连续帧上具有所需的性格，这将使得在连入之森捕获的宝可梦更容易获得目标性" +
+    "格。";
             // 
             // toolTip1
             // 
@@ -223,10 +230,11 @@ namespace RNGReporter
             // maskedTextBoxDelayCalibration
             // 
             this.maskedTextBoxDelayCalibration.Hex = false;
-            this.maskedTextBoxDelayCalibration.Location = new System.Drawing.Point(665, 89);
+            this.maskedTextBoxDelayCalibration.Location = new System.Drawing.Point(887, 104);
+            this.maskedTextBoxDelayCalibration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxDelayCalibration.Mask = "00000";
             this.maskedTextBoxDelayCalibration.Name = "maskedTextBoxDelayCalibration";
-            this.maskedTextBoxDelayCalibration.Size = new System.Drawing.Size(39, 21);
+            this.maskedTextBoxDelayCalibration.Size = new System.Drawing.Size(51, 24);
             this.maskedTextBoxDelayCalibration.TabIndex = 10;
             this.maskedTextBoxDelayCalibration.Text = "0";
             this.toolTip1.SetToolTip(this.maskedTextBoxDelayCalibration, "This is the amount to offset the time difference between the Standard Seed and th" +
@@ -235,88 +243,97 @@ namespace RNGReporter
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 63);
+            this.label12.Location = new System.Drawing.Point(16, 73);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 13);
+            this.label12.Size = new System.Drawing.Size(147, 15);
             this.label12.TabIndex = 176;
-            this.label12.Text = "C-Gear Seed (Hex)";
+            this.label12.Text = "C装置Seed (16进制)";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(283, 107);
+            this.label13.Location = new System.Drawing.Point(377, 123);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
+            this.label13.Size = new System.Drawing.Size(37, 15);
             this.label13.TabIndex = 329;
-            this.label13.Text = "Nature";
+            this.label13.Text = "性格";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 62);
+            this.label1.Location = new System.Drawing.Point(233, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 332;
             this.label1.Text = "Delay";
             // 
             // checkBoxGenderless
             // 
             this.checkBoxGenderless.AutoSize = true;
-            this.checkBoxGenderless.Location = new System.Drawing.Point(283, 150);
+            this.checkBoxGenderless.Location = new System.Drawing.Point(377, 173);
+            this.checkBoxGenderless.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxGenderless.Name = "checkBoxGenderless";
-            this.checkBoxGenderless.Size = new System.Drawing.Size(113, 17);
+            this.checkBoxGenderless.Size = new System.Drawing.Size(149, 19);
             this.checkBoxGenderless.TabIndex = 4;
-            this.checkBoxGenderless.Text = "Genderless Target";
+            this.checkBoxGenderless.Text = "目标宝可梦无性别";
             this.checkBoxGenderless.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 68);
+            this.label2.Location = new System.Drawing.Point(377, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.Size = new System.Drawing.Size(107, 15);
             this.label2.TabIndex = 336;
-            this.label2.Text = "C-Gear Seed Frame";
+            this.label2.Text = "C装置Seed帧数";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(580, 68);
+            this.label4.Location = new System.Drawing.Point(781, 79);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(97, 15);
             this.label4.TabIndex = 338;
-            this.label4.Text = "Min Cluster Size";
+            this.label4.Text = "最小集群大小";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(580, 92);
+            this.label5.Location = new System.Drawing.Point(801, 108);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 339;
-            this.label5.Text = "Delay Calibration";
+            this.label5.Text = "校准Delay";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // maskedTextBoxGroupSize
             // 
             this.maskedTextBoxGroupSize.Hex = false;
-            this.maskedTextBoxGroupSize.Location = new System.Drawing.Point(665, 65);
+            this.maskedTextBoxGroupSize.Location = new System.Drawing.Point(887, 75);
+            this.maskedTextBoxGroupSize.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxGroupSize.Mask = "00000";
             this.maskedTextBoxGroupSize.Name = "maskedTextBoxGroupSize";
-            this.maskedTextBoxGroupSize.Size = new System.Drawing.Size(39, 21);
+            this.maskedTextBoxGroupSize.Size = new System.Drawing.Size(51, 24);
             this.maskedTextBoxGroupSize.TabIndex = 9;
             this.maskedTextBoxGroupSize.Text = "3";
             // 
             // maskedTextBoxCGearFrame
             // 
             this.maskedTextBoxCGearFrame.Hex = false;
-            this.maskedTextBoxCGearFrame.Location = new System.Drawing.Point(368, 65);
+            this.maskedTextBoxCGearFrame.Location = new System.Drawing.Point(491, 75);
+            this.maskedTextBoxCGearFrame.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxCGearFrame.Mask = "00000";
             this.maskedTextBoxCGearFrame.Name = "maskedTextBoxCGearFrame";
-            this.maskedTextBoxCGearFrame.Size = new System.Drawing.Size(41, 21);
+            this.maskedTextBoxCGearFrame.Size = new System.Drawing.Size(53, 24);
             this.maskedTextBoxCGearFrame.TabIndex = 5;
             this.maskedTextBoxCGearFrame.Text = "1";
             // 
@@ -324,24 +341,26 @@ namespace RNGReporter
             // 
             this.maskedTextBoxDelay.Enabled = false;
             this.maskedTextBoxDelay.Hex = false;
-            this.maskedTextBoxDelay.Location = new System.Drawing.Point(174, 78);
+            this.maskedTextBoxDelay.Location = new System.Drawing.Point(232, 90);
+            this.maskedTextBoxDelay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxDelay.Mask = "00000";
             this.maskedTextBoxDelay.Name = "maskedTextBoxDelay";
-            this.maskedTextBoxDelay.Size = new System.Drawing.Size(42, 20);
+            this.maskedTextBoxDelay.Size = new System.Drawing.Size(55, 22);
             this.maskedTextBoxDelay.TabIndex = 1;
             // 
             // comboBoxNature
             // 
-            this.comboBoxNature.BlankText = "Any";
+            this.comboBoxNature.BlankText = "任意";
             checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxNature.CheckBoxProperties = checkBoxProperties1;
             this.comboBoxNature.DisplayMemberSingleItem = "";
             this.comboBoxNature.DropDownHeight = 300;
             this.comboBoxNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNature.FormattingEnabled = true;
-            this.comboBoxNature.Location = new System.Drawing.Point(288, 123);
+            this.comboBoxNature.Location = new System.Drawing.Point(384, 142);
+            this.comboBoxNature.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxNature.Name = "comboBoxNature";
-            this.comboBoxNature.Size = new System.Drawing.Size(146, 21);
+            this.comboBoxNature.Size = new System.Drawing.Size(193, 23);
             this.comboBoxNature.TabIndex = 2;
             this.comboBoxNature.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FocusControl);
             // 
@@ -351,33 +370,35 @@ namespace RNGReporter
             this.buttonAnyNature.ForeColor = System.Drawing.Color.Black;
             this.buttonAnyNature.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonAnyNature.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAnyNature.Location = new System.Drawing.Point(444, 122);
+            this.buttonAnyNature.Location = new System.Drawing.Point(592, 141);
             this.buttonAnyNature.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAnyNature.Name = "buttonAnyNature";
             this.buttonAnyNature.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonAnyNature.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonAnyNature.Size = new System.Drawing.Size(43, 23);
+            this.buttonAnyNature.Size = new System.Drawing.Size(57, 27);
             this.buttonAnyNature.TabIndex = 3;
-            this.buttonAnyNature.Text = "Any";
+            this.buttonAnyNature.Text = "任意";
             this.buttonAnyNature.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonAnyNature.Click += new System.EventHandler(this.buttonAnyNature_Click);
             // 
             // maskedTextBoxYear
             // 
             this.maskedTextBoxYear.Hex = false;
-            this.maskedTextBoxYear.Location = new System.Drawing.Point(368, 90);
+            this.maskedTextBoxYear.Location = new System.Drawing.Point(491, 104);
+            this.maskedTextBoxYear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxYear.Mask = "2\\000";
             this.maskedTextBoxYear.Name = "maskedTextBoxYear";
-            this.maskedTextBoxYear.Size = new System.Drawing.Size(41, 20);
+            this.maskedTextBoxYear.Size = new System.Drawing.Size(53, 22);
             this.maskedTextBoxYear.TabIndex = 6;
             // 
             // textBoxSeed
             // 
             this.textBoxSeed.Hex = false;
-            this.textBoxSeed.Location = new System.Drawing.Point(17, 78);
+            this.textBoxSeed.Location = new System.Drawing.Point(23, 90);
+            this.textBoxSeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSeed.Mask = "AAAAAAAA";
             this.textBoxSeed.Name = "textBoxSeed";
-            this.textBoxSeed.Size = new System.Drawing.Size(146, 20);
+            this.textBoxSeed.Size = new System.Drawing.Size(193, 22);
             this.textBoxSeed.TabIndex = 0;
             // 
             // dataGridViewCapValues
@@ -397,7 +418,7 @@ namespace RNGReporter
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCapValues.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCapValues.ColumnHeadersHeight = 20;
+            this.dataGridViewCapValues.ColumnHeadersHeight = 25;
             this.dataGridViewCapValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CapSeed,
             this.Timer0,
@@ -411,7 +432,6 @@ namespace RNGReporter
             this.CapSpA,
             this.CapSpD,
             this.CapSpe,
-            this.Grey,
             this.Keypresses});
             this.dataGridViewCapValues.ContextMenuStrip = this.contextMenuStripCap;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -422,18 +442,20 @@ namespace RNGReporter
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCapValues.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewCapValues.Location = new System.Drawing.Point(12, 185);
+            this.dataGridViewCapValues.Location = new System.Drawing.Point(16, 213);
+            this.dataGridViewCapValues.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewCapValues.MultiSelect = false;
             this.dataGridViewCapValues.Name = "dataGridViewCapValues";
             this.dataGridViewCapValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewCapValues.RowHeadersVisible = false;
+            this.dataGridViewCapValues.RowHeadersWidth = 51;
             this.dataGridViewCapValues.RowTemplate.Height = 20;
             this.dataGridViewCapValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCapValues.ShowCellErrors = false;
             this.dataGridViewCapValues.ShowCellToolTips = false;
             this.dataGridViewCapValues.ShowEditingIcon = false;
             this.dataGridViewCapValues.ShowRowErrors = false;
-            this.dataGridViewCapValues.Size = new System.Drawing.Size(786, 260);
+            this.dataGridViewCapValues.Size = new System.Drawing.Size(1048, 300);
             this.dataGridViewCapValues.TabIndex = 12;
             this.dataGridViewCapValues.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCapValues_CellFormatting);
             this.dataGridViewCapValues.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewCapValues_ColumnHeaderMouseClick);
@@ -441,149 +463,39 @@ namespace RNGReporter
             this.dataGridViewCapValues.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewCapValues_KeyDown);
             this.dataGridViewCapValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCapValues_MouseDown);
             // 
-            // CapSeed
-            // 
-            this.CapSeed.DataPropertyName = "Seed";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 8.75F);
-            this.CapSeed.DefaultCellStyle = dataGridViewCellStyle2;
-            this.CapSeed.FillWeight = 110F;
-            this.CapSeed.HeaderText = "Seed";
-            this.CapSeed.Name = "CapSeed";
-            this.CapSeed.ReadOnly = true;
-            this.CapSeed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.CapSeed.Width = 120;
-            // 
-            // Timer0
-            // 
-            this.Timer0.DataPropertyName = "Timer0";
-            this.Timer0.HeaderText = "Timer0";
-            this.Timer0.Name = "Timer0";
-            this.Timer0.ReadOnly = true;
-            this.Timer0.Width = 50;
-            // 
-            // SeedTime
-            // 
-            this.SeedTime.DataPropertyName = "TimeDate";
-            this.SeedTime.HeaderText = "Date\\Time";
-            this.SeedTime.Name = "SeedTime";
-            this.SeedTime.ReadOnly = true;
-            // 
-            // CSeedTime
-            // 
-            this.CSeedTime.DataPropertyName = "CSeedTime";
-            this.CSeedTime.HeaderText = "C-Gear Date\\Time";
-            this.CSeedTime.Name = "CSeedTime";
-            // 
-            // CapOffset
-            // 
-            this.CapOffset.DataPropertyName = "Offset";
-            this.CapOffset.HeaderText = "Frame";
-            this.CapOffset.Name = "CapOffset";
-            this.CapOffset.ReadOnly = true;
-            this.CapOffset.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.CapOffset.Width = 45;
-            // 
-            // Nature
-            // 
-            this.Nature.DataPropertyName = "Nature";
-            this.Nature.HeaderText = "Nature";
-            this.Nature.Name = "Nature";
-            this.Nature.ReadOnly = true;
-            this.Nature.Width = 65;
-            // 
-            // CapHP
-            // 
-            this.CapHP.DataPropertyName = "Hp";
-            this.CapHP.HeaderText = "HP";
-            this.CapHP.Name = "CapHP";
-            this.CapHP.ReadOnly = true;
-            this.CapHP.Width = 30;
-            // 
-            // CapAtk
-            // 
-            this.CapAtk.DataPropertyName = "Atk";
-            this.CapAtk.HeaderText = "Atk";
-            this.CapAtk.Name = "CapAtk";
-            this.CapAtk.ReadOnly = true;
-            this.CapAtk.Width = 30;
-            // 
-            // CapDef
-            // 
-            this.CapDef.DataPropertyName = "Def";
-            this.CapDef.HeaderText = "Def";
-            this.CapDef.Name = "CapDef";
-            this.CapDef.ReadOnly = true;
-            this.CapDef.Width = 30;
-            // 
-            // CapSpA
-            // 
-            this.CapSpA.DataPropertyName = "SpA";
-            this.CapSpA.HeaderText = "SpA";
-            this.CapSpA.Name = "CapSpA";
-            this.CapSpA.ReadOnly = true;
-            this.CapSpA.Width = 30;
-            // 
-            // CapSpD
-            // 
-            this.CapSpD.DataPropertyName = "SpD";
-            this.CapSpD.HeaderText = "SpD";
-            this.CapSpD.Name = "CapSpD";
-            this.CapSpD.ReadOnly = true;
-            this.CapSpD.Width = 30;
-            // 
-            // CapSpe
-            // 
-            this.CapSpe.DataPropertyName = "Spe";
-            this.CapSpe.HeaderText = "Spe";
-            this.CapSpe.Name = "CapSpe";
-            this.CapSpe.ReadOnly = true;
-            this.CapSpe.Width = 30;
-            // 
-            // Grey
-            // 
-            this.Grey.DataPropertyName = "Synchable";
-            this.Grey.HeaderText = "Grey";
-            this.Grey.Name = "Grey";
-            this.Grey.ReadOnly = true;
-            this.Grey.Visible = false;
-            // 
-            // Keypresses
-            // 
-            this.Keypresses.DataPropertyName = "Keypress";
-            this.Keypresses.HeaderText = "Keypresses";
-            this.Keypresses.Name = "Keypresses";
-            this.Keypresses.Width = 120;
-            // 
             // buttonSeedGenerate
             // 
             this.buttonSeedGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonSeedGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonSeedGenerate.Location = new System.Drawing.Point(716, 144);
+            this.buttonSeedGenerate.Location = new System.Drawing.Point(955, 166);
+            this.buttonSeedGenerate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSeedGenerate.Name = "buttonSeedGenerate";
             this.buttonSeedGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonSeedGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonSeedGenerate.Size = new System.Drawing.Size(76, 23);
+            this.buttonSeedGenerate.Size = new System.Drawing.Size(101, 27);
             this.buttonSeedGenerate.TabIndex = 11;
-            this.buttonSeedGenerate.Text = "Search";
+            this.buttonSeedGenerate.Text = "计算";
             this.buttonSeedGenerate.Click += new System.EventHandler(this.buttonSeedGenerate_Click);
             // 
             // maskedTextBoxCapMinOffset
             // 
             this.maskedTextBoxCapMinOffset.Hex = false;
-            this.maskedTextBoxCapMinOffset.Location = new System.Drawing.Point(515, 65);
+            this.maskedTextBoxCapMinOffset.Location = new System.Drawing.Point(687, 75);
+            this.maskedTextBoxCapMinOffset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxCapMinOffset.Mask = "00000";
             this.maskedTextBoxCapMinOffset.Name = "maskedTextBoxCapMinOffset";
-            this.maskedTextBoxCapMinOffset.Size = new System.Drawing.Size(39, 21);
+            this.maskedTextBoxCapMinOffset.Size = new System.Drawing.Size(51, 24);
             this.maskedTextBoxCapMinOffset.TabIndex = 7;
             this.maskedTextBoxCapMinOffset.Text = "40";
             // 
             // maskedTextBoxCapMaxOffset
             // 
             this.maskedTextBoxCapMaxOffset.Hex = false;
-            this.maskedTextBoxCapMaxOffset.Location = new System.Drawing.Point(515, 90);
+            this.maskedTextBoxCapMaxOffset.Location = new System.Drawing.Point(687, 104);
+            this.maskedTextBoxCapMaxOffset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxCapMaxOffset.Mask = "00000";
             this.maskedTextBoxCapMaxOffset.Name = "maskedTextBoxCapMaxOffset";
-            this.maskedTextBoxCapMaxOffset.Size = new System.Drawing.Size(39, 21);
+            this.maskedTextBoxCapMaxOffset.Size = new System.Drawing.Size(51, 24);
             this.maskedTextBoxCapMaxOffset.TabIndex = 8;
             this.maskedTextBoxCapMaxOffset.Text = "100";
             // 
@@ -594,19 +506,22 @@ namespace RNGReporter
             this.groupBoxConfiguration.Controls.Add(this.labelProfileInformation);
             this.groupBoxConfiguration.Controls.Add(this.comboBoxProfiles);
             this.groupBoxConfiguration.Controls.Add(this.buttonEditProfile);
-            this.groupBoxConfiguration.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxConfiguration.Location = new System.Drawing.Point(16, 14);
+            this.groupBoxConfiguration.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBoxConfiguration.Name = "groupBoxConfiguration";
-            this.groupBoxConfiguration.Size = new System.Drawing.Size(786, 48);
+            this.groupBoxConfiguration.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBoxConfiguration.Size = new System.Drawing.Size(1048, 55);
             this.groupBoxConfiguration.TabIndex = 340;
             this.groupBoxConfiguration.TabStop = false;
-            this.groupBoxConfiguration.Text = "Configuration";
+            this.groupBoxConfiguration.Text = "基本配置";
             // 
             // labelProfileInformation
             // 
             this.labelProfileInformation.AutoSize = true;
-            this.labelProfileInformation.Location = new System.Drawing.Point(131, 22);
+            this.labelProfileInformation.Location = new System.Drawing.Point(175, 25);
+            this.labelProfileInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProfileInformation.Name = "labelProfileInformation";
-            this.labelProfileInformation.Size = new System.Drawing.Size(0, 13);
+            this.labelProfileInformation.Size = new System.Drawing.Size(0, 15);
             this.labelProfileInformation.TabIndex = 320;
             // 
             // comboBoxProfiles
@@ -614,11 +529,12 @@ namespace RNGReporter
             this.comboBoxProfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProfiles.ForeColor = System.Drawing.Color.Black;
             this.comboBoxProfiles.FormattingEnabled = true;
-            this.comboBoxProfiles.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxProfiles.Location = new System.Drawing.Point(8, 22);
+            this.comboBoxProfiles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxProfiles.MaxDropDownItems = 3;
             this.comboBoxProfiles.Name = "comboBoxProfiles";
             this.comboBoxProfiles.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxProfiles.Size = new System.Drawing.Size(119, 21);
+            this.comboBoxProfiles.Size = new System.Drawing.Size(157, 23);
             this.comboBoxProfiles.TabIndex = 33;
             this.comboBoxProfiles.SelectedIndexChanged += new System.EventHandler(this.comboBoxProfiles_SelectedIndexChanged);
             // 
@@ -627,20 +543,141 @@ namespace RNGReporter
             this.buttonEditProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEditProfile.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonEditProfile.ForeColor = System.Drawing.Color.Black;
-            this.buttonEditProfile.Location = new System.Drawing.Point(741, 17);
+            this.buttonEditProfile.Location = new System.Drawing.Point(988, 20);
+            this.buttonEditProfile.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonEditProfile.Name = "buttonEditProfile";
             this.buttonEditProfile.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonEditProfile.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonEditProfile.Size = new System.Drawing.Size(39, 23);
+            this.buttonEditProfile.Size = new System.Drawing.Size(52, 27);
             this.buttonEditProfile.TabIndex = 11;
-            this.buttonEditProfile.Text = "Edit";
+            this.buttonEditProfile.Text = "编辑";
             this.buttonEditProfile.Click += new System.EventHandler(this.buttonEditProfile_Click);
+            // 
+            // CapSeed
+            // 
+            this.CapSeed.DataPropertyName = "Seed";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 8.75F);
+            this.CapSeed.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CapSeed.FillWeight = 110F;
+            this.CapSeed.HeaderText = "Seed";
+            this.CapSeed.MinimumWidth = 6;
+            this.CapSeed.Name = "CapSeed";
+            this.CapSeed.ReadOnly = true;
+            this.CapSeed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.CapSeed.Width = 120;
+            // 
+            // Timer0
+            // 
+            this.Timer0.DataPropertyName = "Timer0";
+            this.Timer0.HeaderText = "Timer0";
+            this.Timer0.MinimumWidth = 6;
+            this.Timer0.Name = "Timer0";
+            this.Timer0.ReadOnly = true;
+            this.Timer0.Width = 50;
+            // 
+            // SeedTime
+            // 
+            this.SeedTime.DataPropertyName = "TimeDate";
+            this.SeedTime.HeaderText = "日期\\时间";
+            this.SeedTime.MinimumWidth = 6;
+            this.SeedTime.Name = "SeedTime";
+            this.SeedTime.ReadOnly = true;
+            this.SeedTime.Width = 125;
+            // 
+            // CSeedTime
+            // 
+            this.CSeedTime.DataPropertyName = "CSeedTime";
+            this.CSeedTime.HeaderText = "C装置日期\\时间";
+            this.CSeedTime.MinimumWidth = 6;
+            this.CSeedTime.Name = "CSeedTime";
+            this.CSeedTime.Width = 125;
+            // 
+            // CapOffset
+            // 
+            this.CapOffset.DataPropertyName = "Offset";
+            this.CapOffset.HeaderText = "帧";
+            this.CapOffset.MinimumWidth = 6;
+            this.CapOffset.Name = "CapOffset";
+            this.CapOffset.ReadOnly = true;
+            this.CapOffset.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.CapOffset.Width = 45;
+            // 
+            // Nature
+            // 
+            this.Nature.DataPropertyName = "Nature";
+            this.Nature.HeaderText = "性格";
+            this.Nature.MinimumWidth = 6;
+            this.Nature.Name = "Nature";
+            this.Nature.ReadOnly = true;
+            this.Nature.Width = 65;
+            // 
+            // CapHP
+            // 
+            this.CapHP.DataPropertyName = "Hp";
+            this.CapHP.HeaderText = "HP";
+            this.CapHP.MinimumWidth = 6;
+            this.CapHP.Name = "CapHP";
+            this.CapHP.ReadOnly = true;
+            this.CapHP.Width = 30;
+            // 
+            // CapAtk
+            // 
+            this.CapAtk.DataPropertyName = "Atk";
+            this.CapAtk.HeaderText = "攻击";
+            this.CapAtk.MinimumWidth = 6;
+            this.CapAtk.Name = "CapAtk";
+            this.CapAtk.ReadOnly = true;
+            this.CapAtk.Width = 60;
+            // 
+            // CapDef
+            // 
+            this.CapDef.DataPropertyName = "Def";
+            this.CapDef.HeaderText = "防御";
+            this.CapDef.MinimumWidth = 6;
+            this.CapDef.Name = "CapDef";
+            this.CapDef.ReadOnly = true;
+            this.CapDef.Width = 60;
+            // 
+            // CapSpA
+            // 
+            this.CapSpA.DataPropertyName = "SpA";
+            this.CapSpA.HeaderText = "特攻";
+            this.CapSpA.MinimumWidth = 6;
+            this.CapSpA.Name = "CapSpA";
+            this.CapSpA.ReadOnly = true;
+            this.CapSpA.Width = 60;
+            // 
+            // CapSpD
+            // 
+            this.CapSpD.DataPropertyName = "SpD";
+            this.CapSpD.HeaderText = "特防";
+            this.CapSpD.MinimumWidth = 6;
+            this.CapSpD.Name = "CapSpD";
+            this.CapSpD.ReadOnly = true;
+            this.CapSpD.Width = 60;
+            // 
+            // CapSpe
+            // 
+            this.CapSpe.DataPropertyName = "Spe";
+            this.CapSpe.HeaderText = "速度";
+            this.CapSpe.MinimumWidth = 6;
+            this.CapSpe.Name = "CapSpe";
+            this.CapSpe.ReadOnly = true;
+            this.CapSpe.Width = 60;
+            // 
+            // Keypresses
+            // 
+            this.Keypresses.DataPropertyName = "Keypress";
+            this.Keypresses.HeaderText = "按键";
+            this.Keypresses.MinimumWidth = 6;
+            this.Keypresses.Name = "Keypresses";
+            this.Keypresses.Width = 120;
             // 
             // EntralinkSeedSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 479);
+            this.ClientSize = new System.Drawing.Size(1085, 553);
             this.Controls.Add(this.groupBoxConfiguration);
             this.Controls.Add(this.maskedTextBoxDelayCalibration);
             this.Controls.Add(this.label3);
@@ -667,11 +704,12 @@ namespace RNGReporter
             this.Controls.Add(this.label12);
             this.Controls.Add(this.labelMaxFrame);
             this.Controls.Add(this.labelMinFrame);
-            this.MinimumSize = new System.Drawing.Size(677, 378);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MinimumSize = new System.Drawing.Size(897, 429);
             this.Name = "EntralinkSeedSearch";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Entralink Seed Search";
+            this.Text = "连入之森Seed计算（GEN5）";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlatinumTime_FormClosing);
             this.Load += new System.EventHandler(this.PlatinumTime_Load);
             this.contextMenuStripCap.ResumeLayout(false);
@@ -716,6 +754,14 @@ namespace RNGReporter
         private System.Windows.Forms.CheckBox checkBoxGenderless;
         private System.Windows.Forms.Label label2;
         private MaskedTextBox2 maskedTextBoxCGearFrame;
+        private MaskedTextBox2 maskedTextBoxGroupSize;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private MaskedTextBox2 maskedTextBoxDelayCalibration;
+        private System.Windows.Forms.GroupBox groupBoxConfiguration;
+        private System.Windows.Forms.Label labelProfileInformation;
+        private GlassComboBox comboBoxProfiles;
+        private GlassButton buttonEditProfile;
         private System.Windows.Forms.DataGridViewTextBoxColumn CapSeed;
         private System.Windows.Forms.DataGridViewTextBoxColumn Timer0;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeedTime;
@@ -728,15 +774,6 @@ namespace RNGReporter
         private System.Windows.Forms.DataGridViewTextBoxColumn CapSpA;
         private System.Windows.Forms.DataGridViewTextBoxColumn CapSpD;
         private System.Windows.Forms.DataGridViewTextBoxColumn CapSpe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grey;
         private System.Windows.Forms.DataGridViewTextBoxColumn Keypresses;
-        private MaskedTextBox2 maskedTextBoxGroupSize;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private MaskedTextBox2 maskedTextBoxDelayCalibration;
-        private System.Windows.Forms.GroupBox groupBoxConfiguration;
-        private System.Windows.Forms.Label labelProfileInformation;
-        private GlassComboBox comboBoxProfiles;
-        private GlassButton buttonEditProfile;
     }
 }

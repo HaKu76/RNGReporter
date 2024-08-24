@@ -34,7 +34,7 @@ namespace RNGReporter.Objects
 
         public uint Hour
         {
-            get { return ((uint) (Seed & 0x00FF0000) - (MACAddress & 0x00FF0000)) >> 16; }
+            get { return ((uint)(Seed & 0x00FF0000) - (MACAddress & 0x00FF0000)) >> 16; }
         }
 
         public uint MACAddress { get; set; }
@@ -55,7 +55,7 @@ namespace RNGReporter.Objects
                 int i = 0;
                 foreach (ButtonComboType button in KeyPresses)
                 {
-                    keyString = keyString + Functions.buttonStrings[(int) button];
+                    keyString = keyString + Functions.buttonStrings[(int)button];
                     i++;
                     if (i < KeyPresses.Count)
                         keyString = keyString + "-";
@@ -85,7 +85,7 @@ namespace RNGReporter.Objects
 
         public DateTime CSeedTime
         {
-            get { return TimeDate.AddSeconds(Delay/60); }
+            get { return TimeDate.AddSeconds(Delay / 60); }
         }
 
         public uint Pid
@@ -95,7 +95,7 @@ namespace RNGReporter.Objects
 
         public string Nature
         {
-            get { return Functions.NatureStrings((int) Frame.Nature); }
+            get { return Functions.NatureStrings((int)Frame.Nature); }
         }
 
         public uint NatureNumber
@@ -271,61 +271,61 @@ namespace RNGReporter.Objects
                     ulong seedX = x.Seed;
                     ulong seedY = y.Seed;
 
-                    result = direction*seedX.CompareTo(seedY);
+                    result = direction * seedX.CompareTo(seedY);
                     if (result == 0)
                     {
-                        result = direction*x.Offset.CompareTo(y.Offset);
+                        result = direction * x.Offset.CompareTo(y.Offset);
                     }
                     return result;
                 case "Hour":
                     uint hourX = x.Hour;
                     uint hourY = y.Hour;
 
-                    result = direction*hourX.CompareTo(hourY);
+                    result = direction * hourX.CompareTo(hourY);
                     if (result == 0)
                     {
-                        result = direction*x.Offset.CompareTo(y.Offset);
+                        result = direction * x.Offset.CompareTo(y.Offset);
                     }
                     return result;
                 case "Offset":
-                    return direction*x.Offset.CompareTo(y.Offset);
+                    return direction * x.Offset.CompareTo(y.Offset);
                 case "NearestShiny":
-                    return direction*x.NearestShiny.CompareTo(y.NearestShiny);
+                    return direction * x.NearestShiny.CompareTo(y.NearestShiny);
                 case "Pid":
-                    return direction*x.Pid.CompareTo(y.Pid);
+                    return direction * x.Pid.CompareTo(y.Pid);
                 case "Ability":
-                    return direction*x.Ability.CompareTo(y.Ability);
+                    return direction * x.Ability.CompareTo(y.Ability);
                 case "Nature":
-                    return direction*x.NatureNumber.CompareTo(y.NatureNumber);
+                    return direction * x.NatureNumber.CompareTo(y.NatureNumber);
                 case "HiddenPowerPower":
-                    return direction*x.HiddenPowerPower.CompareTo(y.HiddenPowerPower);
+                    return direction * x.HiddenPowerPower.CompareTo(y.HiddenPowerPower);
                 case "TimeDate":
-                    result = direction*x.TimeDate.CompareTo(y.TimeDate);
+                    result = direction * x.TimeDate.CompareTo(y.TimeDate);
                     if (result == 0)
                     {
-                        result = direction*x.Offset.CompareTo(y.Offset);
+                        result = direction * x.Offset.CompareTo(y.Offset);
                     }
 
                     return result;
                 case "EncounterSlot":
-                    return direction*x.Frame.EncounterSlot.CompareTo(y.Frame.EncounterSlot);
+                    return direction * x.Frame.EncounterSlot.CompareTo(y.Frame.EncounterSlot);
                 case "Hp":
-                    result = direction*x.Hp.CompareTo(y.Hp);
+                    result = direction * x.Hp.CompareTo(y.Hp);
                     if (result == 0)
                     {
-                        result = direction*x.Atk.CompareTo(y.Atk);
+                        result = direction * x.Atk.CompareTo(y.Atk);
                         if (result == 0)
                         {
-                            result = direction*x.Def.CompareTo(y.Def);
+                            result = direction * x.Def.CompareTo(y.Def);
                             if (result == 0)
                             {
-                                result = direction*x.SpA.CompareTo(y.SpA);
+                                result = direction * x.SpA.CompareTo(y.SpA);
                                 if (result == 0)
                                 {
-                                    result = direction*x.SpD.CompareTo(y.SpD);
+                                    result = direction * x.SpD.CompareTo(y.SpD);
                                     if (result == 0)
                                     {
-                                        result = direction*x.Spe.CompareTo(y.Spe);
+                                        result = direction * x.Spe.CompareTo(y.Spe);
                                     }
                                 }
                             }
@@ -333,22 +333,22 @@ namespace RNGReporter.Objects
                     }
                     return result;
                 case "Atk":
-                    result = direction*x.Atk.CompareTo(y.Atk);
+                    result = direction * x.Atk.CompareTo(y.Atk);
                     if (result == 0)
                     {
-                        result = direction*x.Hp.CompareTo(y.Hp);
+                        result = direction * x.Hp.CompareTo(y.Hp);
                         if (result == 0)
                         {
-                            result = direction*x.Def.CompareTo(y.Def);
+                            result = direction * x.Def.CompareTo(y.Def);
                             if (result == 0)
                             {
-                                result = direction*x.SpA.CompareTo(y.SpA);
+                                result = direction * x.SpA.CompareTo(y.SpA);
                                 if (result == 0)
                                 {
-                                    result = direction*x.SpD.CompareTo(y.SpD);
+                                    result = direction * x.SpD.CompareTo(y.SpD);
                                     if (result == 0)
                                     {
-                                        result = direction*x.Spe.CompareTo(y.Spe);
+                                        result = direction * x.Spe.CompareTo(y.Spe);
                                     }
                                 }
                             }
@@ -356,22 +356,22 @@ namespace RNGReporter.Objects
                     }
                     return result;
                 case "Def":
-                    result = direction*x.Def.CompareTo(y.Def);
+                    result = direction * x.Def.CompareTo(y.Def);
                     if (result == 0)
                     {
-                        result = direction*x.Hp.CompareTo(y.Hp);
+                        result = direction * x.Hp.CompareTo(y.Hp);
                         if (result == 0)
                         {
-                            result = direction*x.Atk.CompareTo(y.Atk);
+                            result = direction * x.Atk.CompareTo(y.Atk);
                             if (result == 0)
                             {
-                                result = direction*x.SpA.CompareTo(y.SpA);
+                                result = direction * x.SpA.CompareTo(y.SpA);
                                 if (result == 0)
                                 {
-                                    result = direction*x.SpD.CompareTo(y.SpD);
+                                    result = direction * x.SpD.CompareTo(y.SpD);
                                     if (result == 0)
                                     {
-                                        result = direction*x.Spe.CompareTo(y.Spe);
+                                        result = direction * x.Spe.CompareTo(y.Spe);
                                     }
                                 }
                             }
@@ -379,22 +379,22 @@ namespace RNGReporter.Objects
                     }
                     return result;
                 case "SpA":
-                    result = direction*x.SpA.CompareTo(y.SpA);
+                    result = direction * x.SpA.CompareTo(y.SpA);
                     if (result == 0)
                     {
-                        result = direction*x.Hp.CompareTo(y.Hp);
+                        result = direction * x.Hp.CompareTo(y.Hp);
                         if (result == 0)
                         {
-                            result = direction*x.Atk.CompareTo(y.Atk);
+                            result = direction * x.Atk.CompareTo(y.Atk);
                             if (result == 0)
                             {
-                                result = direction*x.Def.CompareTo(y.Def);
+                                result = direction * x.Def.CompareTo(y.Def);
                                 if (result == 0)
                                 {
-                                    result = direction*x.SpD.CompareTo(y.SpD);
+                                    result = direction * x.SpD.CompareTo(y.SpD);
                                     if (result == 0)
                                     {
-                                        result = direction*x.Spe.CompareTo(y.Spe);
+                                        result = direction * x.Spe.CompareTo(y.Spe);
                                     }
                                 }
                             }
@@ -402,22 +402,22 @@ namespace RNGReporter.Objects
                     }
                     return result;
                 case "SpD":
-                    result = direction*x.SpD.CompareTo(y.SpD);
+                    result = direction * x.SpD.CompareTo(y.SpD);
                     if (result == 0)
                     {
-                        result = direction*x.Hp.CompareTo(y.Hp);
+                        result = direction * x.Hp.CompareTo(y.Hp);
                         if (result == 0)
                         {
-                            result = direction*x.Atk.CompareTo(y.Atk);
+                            result = direction * x.Atk.CompareTo(y.Atk);
                             if (result == 0)
                             {
-                                result = direction*x.Def.CompareTo(y.Def);
+                                result = direction * x.Def.CompareTo(y.Def);
                                 if (result == 0)
                                 {
-                                    result = direction*x.SpA.CompareTo(y.SpA);
+                                    result = direction * x.SpA.CompareTo(y.SpA);
                                     if (result == 0)
                                     {
-                                        result = direction*x.Spe.CompareTo(y.Spe);
+                                        result = direction * x.Spe.CompareTo(y.Spe);
                                     }
                                 }
                             }
@@ -425,22 +425,22 @@ namespace RNGReporter.Objects
                     }
                     return result;
                 case "Spe":
-                    result = direction*x.Spe.CompareTo(y.Spe);
+                    result = direction * x.Spe.CompareTo(y.Spe);
                     if (result == 0)
                     {
-                        result = direction*x.Hp.CompareTo(y.Hp);
+                        result = direction * x.Hp.CompareTo(y.Hp);
                         if (result == 0)
                         {
-                            result = direction*x.Atk.CompareTo(y.Atk);
+                            result = direction * x.Atk.CompareTo(y.Atk);
                             if (result == 0)
                             {
-                                result = direction*x.Def.CompareTo(y.Def);
+                                result = direction * x.Def.CompareTo(y.Def);
                                 if (result == 0)
                                 {
-                                    result = direction*x.SpA.CompareTo(y.SpA);
+                                    result = direction * x.SpA.CompareTo(y.SpA);
                                     if (result == 0)
                                     {
-                                        result = direction*x.SpD.CompareTo(y.SpD);
+                                        result = direction * x.SpD.CompareTo(y.SpD);
                                     }
                                 }
                             }
@@ -449,7 +449,7 @@ namespace RNGReporter.Objects
                     return result;
                 default:
                     //use ordinal due to better efficiency and because it uses the current culture
-                    result = direction*
+                    result = direction *
                              String.CompareOrdinal(x.GetType().GetProperty(CompareType).GetValue(x, null).ToString(),
                                                    y.GetType().GetProperty(CompareType).GetValue(y, null).ToString());
 

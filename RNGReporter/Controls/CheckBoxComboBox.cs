@@ -256,7 +256,7 @@ namespace RNGReporter.Controls
             // part of the "textbox" should match a single item.
             if (DropDownStyle != ComboBoxStyle.DropDownList)
                 Text = ListText;
-                // This refreshes the Text of the first item (which is not visible)
+            // This refreshes the Text of the first item (which is not visible)
             else if (DataSource == null)
             {
                 Items[0] = ListText;
@@ -472,7 +472,7 @@ namespace RNGReporter.Controls
                 && !DesignMode;
 
             var NewList = new CheckBoxComboBoxItemList(_CheckBoxComboBox);
-            for (int Index0 = 0; Index0 <= _CheckBoxComboBox.Items.Count - 1; Index0 ++)
+            for (int Index0 = 0; Index0 <= _CheckBoxComboBox.Items.Count - 1; Index0++)
             {
                 object Object = _CheckBoxComboBox.Items[Index0];
                 CheckBoxComboBoxItem Item = null;
@@ -616,7 +616,7 @@ namespace RNGReporter.Controls
             // Helps to maintain the Checked status of this
             // checkbox before the control is visible
             if (_ComboBoxItem is INotifyPropertyChanged)
-                ((INotifyPropertyChanged) _ComboBoxItem).PropertyChanged +=
+                ((INotifyPropertyChanged)_ComboBoxItem).PropertyChanged +=
                     CheckBoxComboBoxItem_PropertyChanged;
         }
 
@@ -681,7 +681,7 @@ namespace RNGReporter.Controls
         {
             if (e.PropertyName == _CheckBoxComboBox.ValueMember)
                 Checked =
-                    (bool) _ComboBoxItem
+                    (bool)_ComboBoxItem
                                .GetType()
                                .GetProperty(_CheckBoxComboBox.ValueMember)
                                .GetValue(_ComboBoxItem, null);
@@ -782,7 +782,7 @@ namespace RNGReporter.Controls
                         ? 1
                         // Ubiklou : 2008-04-28 : Ignore first item. (http://www.codeproject.com/KB/combobox/extending_combobox.aspx?fid=476622&df=90&mpp=25&noise=3&sort=Position&view=Quick&select=2526813&fr=1#xx2526813xx)
                         : 0;
-                for (int Index = StartIndex; Index <= Count - 1; Index ++)
+                for (int Index = StartIndex; Index <= Count - 1; Index++)
                 {
                     CheckBoxComboBoxItem Item = this[Index];
 
@@ -797,7 +797,7 @@ namespace RNGReporter.Controls
                         PropertyInfo PropertyInfo
                             = Item.ComboBoxItem.GetType().GetProperty(
                                 Item.DataBindings["Text"].BindingMemberInfo.BindingMember);
-                        Text = (string) PropertyInfo.GetValue(Item.ComboBoxItem, null);
+                        Text = (string)PropertyInfo.GetValue(Item.ComboBoxItem, null);
                     }
                     else
                         Text = Item.Text;
@@ -812,7 +812,7 @@ namespace RNGReporter.Controls
         #endregion
     }
 
-    [TypeConverter(typeof (ExpandableObjectConverter))]
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class CheckBoxProperties
     {
         #region PRIVATE PROPERTIES
@@ -892,7 +892,7 @@ namespace RNGReporter.Controls
             }
         }
 
-        [DefaultValue(typeof (Color), "")]
+        [DefaultValue(typeof(Color), "")]
         public Color FlatAppearanceBorderColor
         {
             get { return _FlatAppearanceBorderColor; }
@@ -914,7 +914,7 @@ namespace RNGReporter.Controls
             }
         }
 
-        [DefaultValue(typeof (Color), "")]
+        [DefaultValue(typeof(Color), "")]
         public Color FlatAppearanceCheckedBackColor
         {
             get { return _FlatAppearanceCheckedBackColor; }
@@ -925,7 +925,7 @@ namespace RNGReporter.Controls
             }
         }
 
-        [DefaultValue(typeof (Color), "")]
+        [DefaultValue(typeof(Color), "")]
         public Color FlatAppearanceMouseDownBackColor
         {
             get { return _FlatAppearanceMouseDownBackColor; }
@@ -936,7 +936,7 @@ namespace RNGReporter.Controls
             }
         }
 
-        [DefaultValue(typeof (Color), "")]
+        [DefaultValue(typeof(Color), "")]
         public Color FlatAppearanceMouseOverBackColor
         {
             get { return _FlatAppearanceMouseOverBackColor; }
@@ -958,7 +958,7 @@ namespace RNGReporter.Controls
             }
         }
 
-        [DefaultValue(typeof (SystemColors), "ControlText")]
+        [DefaultValue(typeof(SystemColors), "ControlText")]
         public Color ForeColor
         {
             get { return _ForeColor; }

@@ -18,12 +18,12 @@
  */
 
 
+using RNGReporter.Objects.Generators;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using RNGReporter.Objects.Generators;
 
 namespace RNGReporter.Objects
 {

@@ -1,9 +1,8 @@
-﻿using System;
+﻿using RNGReporter.Objects;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Objects;
 
 //Author: Admiral_Fish
 
@@ -94,6 +93,11 @@ namespace RNGReporter
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

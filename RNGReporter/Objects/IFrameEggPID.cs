@@ -32,17 +32,17 @@ namespace RNGReporter.Objects
 
         public string Taps
         {
-            get { return (((Offset - 11)/12) - 1).ToString(); }
+            get { return (((Offset - 11) / 12) - 1).ToString(); }
         }
 
         public string Flips
         {
-            get { return ((Offset - 11)%12).ToString(); }
+            get { return ((Offset - 11) % 12).ToString(); }
         }
 
         public string Nature
         {
-            get { return Functions.NatureStrings((int) Functions.Nature(Pid)); }
+            get { return Functions.NatureStrings((int)Functions.Nature(Pid)); }
         }
 
         public string Ability

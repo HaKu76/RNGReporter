@@ -65,7 +65,7 @@ namespace RNGReporter.Objects
 
         public virtual uint GetNext32BitNumber()
         {
-            Seed = Seed*mult + add;
+            Seed = Seed * mult + add;
 
             return Seed;
         }
@@ -134,7 +134,7 @@ namespace RNGReporter.Objects
 
         public override uint GetNext32BitNumber()
         {
-            Seed = (Seed*mult + add) & 0x7fffffff;
+            Seed = (Seed * mult + add) & 0x7fffffff;
 
             return Seed;
         }
@@ -149,7 +149,7 @@ namespace RNGReporter.Objects
 
         public override uint GetNext32BitNumber()
         {
-            Seed = (Seed*mult + add) & 0x7fffffff;
+            Seed = (Seed * mult + add) & 0x7fffffff;
 
             return Seed;
         }
@@ -180,8 +180,8 @@ namespace RNGReporter.Objects
 
         public override uint GetNext32BitNumber()
         {
-            Seed = (Seed ^ (Seed >> 30))*mult + add;
-            add = (add + 1)%624;
+            Seed = (Seed ^ (Seed >> 30)) * mult + add;
+            add = (add + 1) % 624;
 
             return Seed;
         }

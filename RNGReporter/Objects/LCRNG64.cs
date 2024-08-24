@@ -53,17 +53,17 @@ namespace RNGReporter.Objects
 
         public uint GetNext32BitNumber()
         {
-            return (uint) (GetNext64BitNumber() >> 32);
+            return (uint)(GetNext64BitNumber() >> 32);
         }
 
         public uint GetNext32BitNumber(uint max)
         {
-            return (uint) (((GetNext64BitNumber() >> 32)*max) >> 32);
+            return (uint)(((GetNext64BitNumber() >> 32) * max) >> 32);
         }
 
         public ulong GetNext64BitNumber()
         {
-            seed = seed*mult + add;
+            seed = seed * mult + add;
             return seed;
         }
 

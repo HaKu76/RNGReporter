@@ -18,15 +18,15 @@
  */
 
 
+using Microsoft.Win32;
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -72,21 +72,21 @@ namespace RNGReporter
 
             if (Math.Abs(Settings.Default.DPI - 96) > float.Epsilon)
             {
-                float ratio = Settings.Default.DPI/96;
+                float ratio = Settings.Default.DPI / 96;
 
                 foreach (DataGridViewColumn column in dataGridViewCapValues.Columns)
                 {
-                    column.Width = (int) (column.Width*ratio + 1);
+                    column.Width = (int)(column.Width * ratio + 1);
                 }
 
                 foreach (DataGridViewColumn column in dataGridViewShinyResults.Columns)
                 {
-                    column.Width = (int) (column.Width*ratio + 1);
+                    column.Width = (int)(column.Width * ratio + 1);
                 }
 
                 foreach (DataGridViewColumn column in dataGridViewEggIVValues.Columns)
                 {
-                    column.Width = (int) (column.Width*ratio + 1);
+                    column.Width = (int)(column.Width * ratio + 1);
                 }
             }
         }
@@ -115,12 +115,12 @@ namespace RNGReporter
 
             var ability = new[]
                 {
-                    new ComboBoxItem("Any", -1),
-                    new ComboBoxItem("Ability 0", 0),
-                    new ComboBoxItem("Ability 1", 1)
+                    new ComboBoxItem("任意", -1),
+                    new ComboBoxItem("特性0", 0),
+                    new ComboBoxItem("特性1", 1)
                 };
 
-            var shinyNatureList = new BindingSource {DataSource = Objects.Nature.NatureDropDownCollection()};
+            var shinyNatureList = new BindingSource { DataSource = Objects.Nature.NatureDropDownCollection() };
             comboBoxShinyNature.DataSource = shinyNatureList;
 
             comboBoxNature.Items.AddRange(Objects.Nature.NatureDropDownCollectionSearchNatures());
@@ -194,25 +194,25 @@ namespace RNGReporter
                 if (Settings.Default.LastVersion < MainForm.VersionNumber && registryRngReporter != null)
                 {
                     maskedTextBoxYear.Text =
-                        (string) registryRngReporter.GetValue("4th_year", DateTime.Now.Year.ToString());
-                    maskedTextBoxMinOffset.Text = (string) registryRngReporter.GetValue("4th_min_offset", "5");
-                    maskedTextBoxMaxOffset.Text = (string) registryRngReporter.GetValue("4th_max_offset", "5");
-                    maskedTextBoxMinDelay.Text = (string) registryRngReporter.GetValue("4th_delaymin", "600");
-                    maskedTextBoxMaxDelay.Text = (string) registryRngReporter.GetValue("4th_delaymax", "610");
+                        (string)registryRngReporter.GetValue("4th_year", DateTime.Now.Year.ToString());
+                    maskedTextBoxMinOffset.Text = (string)registryRngReporter.GetValue("4th_min_offset", "5");
+                    maskedTextBoxMaxOffset.Text = (string)registryRngReporter.GetValue("4th_max_offset", "5");
+                    maskedTextBoxMinDelay.Text = (string)registryRngReporter.GetValue("4th_delaymin", "600");
+                    maskedTextBoxMaxDelay.Text = (string)registryRngReporter.GetValue("4th_delaymax", "610");
 
                     maskedTextBoxCapYear.Text =
-                        (string) registryRngReporter.GetValue("4th_cap_year", DateTime.Now.Year.ToString());
-                    maskedTextBoxCapMaxOffset.Text = (string) registryRngReporter.GetValue("4th_cap_offset", "1000");
-                    maskedTextBoxCapMinDelay.Text = (string) registryRngReporter.GetValue("4th_cap_delaymin", "600");
-                    maskedTextBoxCapMaxDelay.Text = (string) registryRngReporter.GetValue("4th_cap_delaymax", "610");
+                        (string)registryRngReporter.GetValue("4th_cap_year", DateTime.Now.Year.ToString());
+                    maskedTextBoxCapMaxOffset.Text = (string)registryRngReporter.GetValue("4th_cap_offset", "1000");
+                    maskedTextBoxCapMinDelay.Text = (string)registryRngReporter.GetValue("4th_cap_delaymin", "600");
+                    maskedTextBoxCapMaxDelay.Text = (string)registryRngReporter.GetValue("4th_cap_delaymax", "610");
 
                     maskedTextBoxShinyYear.Text =
-                        (string) registryRngReporter.GetValue("4th_shiny_year", DateTime.Now.Year.ToString());
-                    maskedTextBoxShinyMinDelay.Text = (string) registryRngReporter.GetValue("4th_shiny_delaymin", "600");
-                    maskedTextBoxShinyMaxDelay.Text = (string) registryRngReporter.GetValue("4th_shiny_delaymax", "610");
+                        (string)registryRngReporter.GetValue("4th_shiny_year", DateTime.Now.Year.ToString());
+                    maskedTextBoxShinyMinDelay.Text = (string)registryRngReporter.GetValue("4th_shiny_delaymin", "600");
+                    maskedTextBoxShinyMaxDelay.Text = (string)registryRngReporter.GetValue("4th_shiny_delaymax", "610");
 
                     cpus =
-                        Int16.Parse((string) registryRngReporter.GetValue("cpus", Environment.ProcessorCount.ToString()));
+                        Int16.Parse((string)registryRngReporter.GetValue("cpus", Environment.ProcessorCount.ToString()));
                     if (cpus < 1)
                     {
                         cpus = 1;
@@ -220,14 +220,14 @@ namespace RNGReporter
 
                     if (id == 0 && sid == 0)
                     {
-                        maskedTextBoxSID.Text = (string) registryRngReporter.GetValue("sid", "0");
-                        maskedTextBoxID.Text = (string) registryRngReporter.GetValue("id", "0");
+                        maskedTextBoxSID.Text = (string)registryRngReporter.GetValue("sid", "0");
+                        maskedTextBoxID.Text = (string)registryRngReporter.GetValue("id", "0");
 
-                        maskedTextBoxShinySecretID.Text = (string) registryRngReporter.GetValue("sid", "0");
-                        maskedTextBoxShinyID.Text = (string) registryRngReporter.GetValue("id", "0");
+                        maskedTextBoxShinySecretID.Text = (string)registryRngReporter.GetValue("sid", "0");
+                        maskedTextBoxShinyID.Text = (string)registryRngReporter.GetValue("id", "0");
                     }
                 }
-                    //load from settings
+                //load from settings
                 else
                 {
                     maskedTextBoxYear.Text = Settings.Default.fYear;
@@ -265,7 +265,7 @@ namespace RNGReporter
         public void SetLanguage()
         {
             var CellStyle = new DataGridViewCellStyle();
-            switch ((Language) Settings.Default.Language)
+            switch ((Language)Settings.Default.Language)
             {
                 case (Language.Japanese):
                     CellStyle.Font = new Font("Meiryo", 7.25F);
@@ -313,7 +313,7 @@ namespace RNGReporter
             comboBoxNature.CheckBoxItems[0].Checked = true;
             comboBoxNature.CheckBoxItems[0].Checked = false;
 
-            ((BindingSource) comboBoxShinyNature.DataSource).ResetBindings(false);
+            ((BindingSource)comboBoxShinyNature.DataSource).ResetBindings(false);
 
             dataGridViewCapValues.Refresh();
             dataGridViewShinyResults.Refresh();
@@ -366,7 +366,7 @@ namespace RNGReporter
                 //  Need to validate the year here
                 if (year < 2000)
                 {
-                    MessageBox.Show("You must enter a year greater than 1999.", "Please Enter a Valid Year",
+                    MessageBox.Show("你必须输入一个大于1999的年份", "请输入一个有效年份",
                                     MessageBoxButtons.OK);
                     return;
                 }
@@ -512,7 +512,7 @@ namespace RNGReporter
             generator.MaxResults = ((maxOffset - minOffset) + 1U);
 
             iframesEggIVs = new List<IFrameBreeding>();
-            listBindingEgg = new BindingSource {DataSource = iframesEggIVs};
+            listBindingEgg = new BindingSource { DataSource = iframesEggIVs };
             dataGridViewEggIVValues.DataSource = listBindingEgg;
 
             progressSearched = 0;
@@ -522,7 +522,7 @@ namespace RNGReporter
             waitHandle = new EventWaitHandle(true, EventResetMode.ManualReset);
 
             jobs = new Thread[1];
-            jobs[0] = new Thread(() => Generate4thGenEggIVsJob(lowdelay, highdelay, (uint) year));
+            jobs[0] = new Thread(() => Generate4thGenEggIVsJob(lowdelay, highdelay, (uint)year));
             jobs[0].Start();
 
             Thread.Sleep(200);
@@ -548,17 +548,17 @@ namespace RNGReporter
                 dataGridViewEggIVValues.Columns[e.ColumnIndex].Name == "SpD" ||
                 dataGridViewEggIVValues.Columns[e.ColumnIndex].Name == "Spe")
             {
-                if ((string) e.Value == "30" || (string) e.Value == "31")
+                if ((string)e.Value == "30" || (string)e.Value == "31")
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
                 }
 
-                if ((string) e.Value == "0")
+                if ((string)e.Value == "0")
                 {
                     e.CellStyle.ForeColor = Color.Red;
                 }
 
-                if ((string) e.Value == "A" || (string) e.Value == "B")
+                if ((string)e.Value == "A" || (string)e.Value == "B")
                 {
                     e.CellStyle.ForeColor = Color.Blue;
                 }
@@ -567,7 +567,7 @@ namespace RNGReporter
 
         private void generateAdjacentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var initialiframe = (IFrameBreeding) dataGridViewEggIVValues.SelectedRows[0].DataBoundItem;
+            var initialiframe = (IFrameBreeding)dataGridViewEggIVValues.SelectedRows[0].DataBoundItem;
 
             //  We need to display a dialog that is going to let the user
             //  decide which adjacent spreads that we want to show here.
@@ -629,12 +629,12 @@ namespace RNGReporter
                         //  Get the information (year, month, date from the frame) and build
                         //  our initial seed to feed to the Frame Generator so that we can 
                         uint seed =
-                            ((((uint) adjacentTime.Month*
-                               (uint) adjacentTime.Day +
-                               (uint) adjacentTime.Minute +
-                               (uint) adjacentTime.Second)&0xFF) << 24) +
-                            ((uint) adjacentTime.Hour << 16) +
-                            ((uint) adjacentTime.Year - 2000 + rdelay);
+                            ((((uint)adjacentTime.Month *
+                               (uint)adjacentTime.Day +
+                               (uint)adjacentTime.Minute +
+                               (uint)adjacentTime.Second) & 0xFF) << 24) +
+                            ((uint)adjacentTime.Hour << 16) +
+                            ((uint)adjacentTime.Year - 2000 + rdelay);
 
                         //  Call a generator with a dummy compare object and go
                         //  up to the max delay and after this iterate through
@@ -653,25 +653,25 @@ namespace RNGReporter
                             //  master collection that we are going to display to
                             //  the user.
                             var iframe = new IFrameBreeding
-                                {
-                                    Seed = seed,
-                                    Offset = frame.Number,
-                                    Delay = rdelay,
-                                    Hp = frame.DisplayHpAlt,
-                                    Atk = frame.DisplayAtkAlt,
-                                    Def = frame.DisplayDefAlt,
-                                    Spa = frame.DisplaySpaAlt,
-                                    Spd = frame.DisplaySpdAlt,
-                                    Spe = frame.DisplaySpeAlt,
-                                    DisplayHpInh = frame.DisplayHp,
-                                    DisplayAtkInh = frame.DisplayAtk,
-                                    DisplayDefInh = frame.DisplayDef,
-                                    DisplaySpaInh = frame.DisplaySpa,
-                                    DisplaySpdInh = frame.DisplaySpd,
-                                    DisplaySpeInh = frame.DisplaySpe,
-                                    SeedTime = adjacentTime,
-                                    FrameType = adjacentGenerator.FrameType
-                                };
+                            {
+                                Seed = seed,
+                                Offset = frame.Number,
+                                Delay = rdelay,
+                                Hp = frame.DisplayHpAlt,
+                                Atk = frame.DisplayAtkAlt,
+                                Def = frame.DisplayDefAlt,
+                                Spa = frame.DisplaySpaAlt,
+                                Spd = frame.DisplaySpdAlt,
+                                Spe = frame.DisplaySpeAlt,
+                                DisplayHpInh = frame.DisplayHp,
+                                DisplayAtkInh = frame.DisplayAtk,
+                                DisplayDefInh = frame.DisplayDef,
+                                DisplaySpaInh = frame.DisplaySpa,
+                                DisplaySpdInh = frame.DisplaySpd,
+                                DisplaySpeInh = frame.DisplaySpe,
+                                SeedTime = adjacentTime,
+                                FrameType = adjacentGenerator.FrameType
+                            };
 
                             if (initialiframe.Seed == iframe.Seed)
                             {
@@ -797,7 +797,7 @@ namespace RNGReporter
                 sid = 0;
 
             iframes = new List<IFrameCapture>();
-            listBindingCap = new BindingSource {DataSource = iframes};
+            listBindingCap = new BindingSource { DataSource = iframes };
             dataGridViewCapValues.DataSource = listBindingCap;
             waitHandle = new EventWaitHandle(true, EventResetMode.ManualReset);
 
@@ -813,7 +813,7 @@ namespace RNGReporter
             if (maskedTextBoxCapMinDelay.Text != "")
                 minDelay = uint.Parse(maskedTextBoxCapMinDelay.Text);
 
-            var year = (uint) DateTime.Now.Year;
+            var year = (uint)DateTime.Now.Year;
             if (maskedTextBoxCapYear.Text != "")
             {
                 year = uint.Parse(maskedTextBoxCapYear.Text);
@@ -821,7 +821,7 @@ namespace RNGReporter
                 //  Need to validate the year here
                 if (year < 2000)
                 {
-                    MessageBox.Show("You must enter a year greater than 1999.", "Please Enter a Valid Year",
+                    MessageBox.Show("必须输入大于1999的年份", "请输入一个有效年份",
                                     MessageBoxButtons.OK);
                     return;
                 }
@@ -874,7 +874,7 @@ namespace RNGReporter
             IVFilter ivfilter = ivFiltersCapture.IVFilter;
 
             List<int> encounterSlots = null;
-            if (comboBoxEncounterSlot.Text != "Any" && comboBoxEncounterSlot.CheckBoxItems.Count > 0)
+            if (comboBoxEncounterSlot.Text != "任意" && comboBoxEncounterSlot.CheckBoxItems.Count > 0)
             {
                 encounterSlots = new List<int>();
                 for (int i = 0; i < comboBoxEncounterSlot.CheckBoxItems.Count; i++)
@@ -886,18 +886,18 @@ namespace RNGReporter
             }
 
             List<uint> natures = null;
-            if (comboBoxNature.Text != "Any" && comboBoxNature.CheckBoxItems.Count > 0)
+            if (comboBoxNature.Text != "任意" && comboBoxNature.CheckBoxItems.Count > 0)
             {
                 natures = new List<uint>();
                 for (int i = 0; i < comboBoxNature.CheckBoxItems.Count; i++)
                 {
                     if (comboBoxNature.CheckBoxItems[i].Checked)
-                        natures.Add((uint) (((Nature) comboBoxNature.CheckBoxItems[i].ComboBoxItem).Number));
+                        natures.Add((uint)(((Nature)comboBoxNature.CheckBoxItems[i].ComboBoxItem).Number));
                 }
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method1) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.ChainedShiny))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method1) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.ChainedShiny))
             {
                 Hour.Visible = true;
                 EncounterMod.Visible = false;
@@ -922,7 +922,7 @@ namespace RNGReporter
                 frameCompare = new FrameCompare(
                     ivfilter,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     false,
                     false,
@@ -930,8 +930,8 @@ namespace RNGReporter
                     constructGenderFilter(comboBoxCapGender));
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
-                ((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ) ||
+                ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK))
             {
                 Hour.Visible = true;
                 EncounterMod.Visible = true;
@@ -957,7 +957,7 @@ namespace RNGReporter
                 frameCompare = new FrameCompare(
                     ivFiltersCapture.IVFilter,
                     natures,
-                    (int) ((ComboBoxItem) comboBoxAbility.SelectedItem).Reference,
+                    (int)((ComboBoxItem)comboBoxAbility.SelectedItem).Reference,
                     checkBoxShinyOnly.Checked,
                     false,
                     false,
@@ -965,7 +965,7 @@ namespace RNGReporter
                     constructGenderFilter(comboBoxCapGender));
             }
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
             {
                 Hour.Visible = true;
                 EncounterMod.Visible = false;
@@ -1056,7 +1056,7 @@ namespace RNGReporter
 
             uint incrementFound = 1;
             if (natures != null)
-                incrementFound = incrementFound*(uint) natures.Count;
+                incrementFound = incrementFound * (uint)natures.Count;
 
             for (uint i = 0; i < 256; i++)
             {
@@ -1096,11 +1096,11 @@ namespace RNGReporter
                                         frame.DisplayPrep();
 
                                         var iframe = new IFrameCapture
-                                            {
-                                                Frame = frame,
-                                                Seed = frame.Seed,
-                                                Offset = frame.Number
-                                            };
+                                        {
+                                            Frame = frame,
+                                            Seed = frame.Seed,
+                                            Offset = frame.Number
+                                        };
 
                                         lock (threadLock)
                                         {
@@ -1111,7 +1111,7 @@ namespace RNGReporter
                                     }
 
                                     progressSearched += incrementFound;
-                                    progressFound += (uint) frames.Count;
+                                    progressFound += (uint)frames.Count;
                                 }
                             }
                         }
@@ -1151,7 +1151,7 @@ namespace RNGReporter
                         List<Frame> frames = generator.Generate(frameCompare, id, sid);
 
                         progressSearched += searchRange;
-                        progressFound += (uint) frames.Count;
+                        progressFound += (uint)frames.Count;
 
                         //  Now we need to iterate through each result here
                         //  and create a collection of the information that
@@ -1208,7 +1208,7 @@ namespace RNGReporter
                         List<Frame> frames = generator.Generate(frameCompare, id, sid);
 
                         progressSearched += searchRange;
-                        progressFound += (uint) frames.Count;
+                        progressFound += (uint)frames.Count;
 
                         //  Now we need to iterate through each result here
                         //  and create a collection of the information that
@@ -1216,24 +1216,24 @@ namespace RNGReporter
                         foreach (Frame frame in frames)
                         {
                             var iframeEgg = new IFrameBreeding
-                                {
-                                    Offset = frame.Number,
-                                    Seed = seed,
-                                    FrameType = generator.FrameType,
-                                    Delay = delay,
-                                    Hp = frame.DisplayHpAlt,
-                                    Atk = frame.DisplayAtkAlt,
-                                    Def = frame.DisplayDefAlt,
-                                    Spa = frame.DisplaySpaAlt,
-                                    Spd = frame.DisplaySpdAlt,
-                                    Spe = frame.DisplaySpeAlt,
-                                    DisplayHpInh = frame.DisplayHp,
-                                    DisplayAtkInh = frame.DisplayAtk,
-                                    DisplayDefInh = frame.DisplayDef,
-                                    DisplaySpaInh = frame.DisplaySpa,
-                                    DisplaySpdInh = frame.DisplaySpd,
-                                    DisplaySpeInh = frame.DisplaySpe
-                                };
+                            {
+                                Offset = frame.Number,
+                                Seed = seed,
+                                FrameType = generator.FrameType,
+                                Delay = delay,
+                                Hp = frame.DisplayHpAlt,
+                                Atk = frame.DisplayAtkAlt,
+                                Def = frame.DisplayDefAlt,
+                                Spa = frame.DisplaySpaAlt,
+                                Spd = frame.DisplaySpdAlt,
+                                Spe = frame.DisplaySpeAlt,
+                                DisplayHpInh = frame.DisplayHp,
+                                DisplayAtkInh = frame.DisplayAtk,
+                                DisplayDefInh = frame.DisplayDef,
+                                DisplaySpaInh = frame.DisplaySpa,
+                                DisplaySpdInh = frame.DisplaySpd,
+                                DisplaySpeInh = frame.DisplaySpe
+                            };
 
 
                             lock (threadLock)
@@ -1257,9 +1257,9 @@ namespace RNGReporter
             progressFound = 0;
 
             UpdateGridDelegate gridUpdater = UpdateGrid;
-            var updateParams = new object[] {bindingSource};
+            var updateParams = new object[] { bindingSource };
             ResortGridDelegate gridSorter = ResortGrid;
-            var sortParams = new object[] {bindingSource, grid, frameType};
+            var sortParams = new object[] { bindingSource, grid, frameType };
             ThreadDelegate enableGenerateButton = EnableCapGenerate;
 
             try
@@ -1267,7 +1267,7 @@ namespace RNGReporter
                 bool alive = true;
                 while (alive)
                 {
-                    progress.ShowProgress(progressSearched/(float) progressTotal, progressSearched, progressFound);
+                    progress.ShowProgress(progressSearched / (float)progressTotal, progressSearched, progressFound);
                     if (refreshQueue)
                     {
                         Invoke(gridUpdater, updateParams);
@@ -1334,8 +1334,8 @@ namespace RNGReporter
             {
                 case FrameType.MethodJ:
                 case FrameType.MethodK:
-                    var iframeCaptureComparer = new IFrameCaptureComparer {CompareType = "Seed"};
-                    ((List<IFrameCapture>) bindingSource.DataSource).Sort(iframeCaptureComparer);
+                    var iframeCaptureComparer = new IFrameCaptureComparer { CompareType = "Seed" };
+                    ((List<IFrameCapture>)bindingSource.DataSource).Sort(iframeCaptureComparer);
                     CapSeed.HeaderCell.SortGlyphDirection = SortOrder.Ascending;
                     break;
             }
@@ -1358,7 +1358,7 @@ namespace RNGReporter
             if (comboBoxEncounterType.SelectedItem != null)
                 previousEncounter = comboBoxEncounterType.SelectedItem.ToString();
 
-            if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK))
+            if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodK))
             {
                 encounterMenu = new[]
                     {
@@ -1377,7 +1377,7 @@ namespace RNGReporter
                 comboBoxAbility.Enabled = true;
                 comboBoxNature.Enabled = true;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.MethodJ))
             {
                 encounterMenu = new[]
                     {
@@ -1393,7 +1393,7 @@ namespace RNGReporter
                 comboBoxAbility.Enabled = true;
                 comboBoxNature.Enabled = true;
             }
-            else if (((ComboBoxItem) comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
+            else if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.WondercardIVs))
             {
                 encounterMenu = new[]
                     {
@@ -1439,7 +1439,7 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (e.ColumnIndex == CapNatureIndex)
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
                 if (nature == Functions.NatureStrings(18) ||
                     nature == Functions.NatureStrings(6) ||
@@ -1455,7 +1455,7 @@ namespace RNGReporter
 
             if (e.ColumnIndex >= CapHPIndex && e.ColumnIndex <= CapSpeedIndex)
             {
-                var number = (uint) e.Value;
+                var number = (uint)e.Value;
 
                 if (number >= 30)
                 {
@@ -1473,7 +1473,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 // This is a bit of a strange hack, because this window
                 //  needs to be hidden before we load the seed to time
@@ -1495,10 +1495,10 @@ namespace RNGReporter
 
                 seedToTime.AutoGenerate = true;
                 seedToTime.ShowMap = showMap;
-                seedToTime.Seed = (uint) frame.Seed;
+                seedToTime.Seed = (uint)frame.Seed;
 
                 //  Grab this from what the user had searched on
-                seedToTime.Year = (uint) DateTime.Now.Year;
+                seedToTime.Year = (uint)DateTime.Now.Year;
                 if (maskedTextBoxCapYear.Text != "")
                     seedToTime.Year = uint.Parse(maskedTextBoxCapYear.Text);
 
@@ -1598,9 +1598,9 @@ namespace RNGReporter
 
         //todo:make a more through validation
         private void validateShinyInput()
-            //get rid of any junk characters in the shiny text boxes
-            //and restrict the inputs to their appropriate levels
-            //prevents the program confusing the user by throwing nasty exceptions
+        //get rid of any junk characters in the shiny text boxes
+        //and restrict the inputs to their appropriate levels
+        //prevents the program confusing the user by throwing nasty exceptions
         {
             //check the date is valid
             maskedTextBoxShinyYear.Text = Functions.NumericFilter(maskedTextBoxShinyYear.Text);
@@ -1650,8 +1650,8 @@ namespace RNGReporter
             uint minDelay = Convert.ToUInt32(maskedTextBoxShinyMinDelay.Text);
             uint maxDelay = Convert.ToUInt32(maskedTextBoxShinyMaxDelay.Text);
 
-            var minEfgh = (uint) (minDelay + year - 2000);
-            var maxEfgh = (uint) (maxDelay + year - 2000);
+            var minEfgh = (uint)(minDelay + year - 2000);
+            var maxEfgh = (uint)(maxDelay + year - 2000);
 
             if (!uint.TryParse(maskedTextBoxShinyID.Text, out id))
                 id = 0;
@@ -1661,7 +1661,7 @@ namespace RNGReporter
 
             List<uint> nature = null;
             if (comboBoxShinyNature.SelectedIndex != 0)
-                nature = new List<uint> {(uint) ((Nature) comboBoxShinyNature.SelectedItem).Number};
+                nature = new List<uint> { (uint)((Nature)comboBoxShinyNature.SelectedItem).Number };
 
             //List<IFrameEggPID> iframesEgg = new List<IFrameEggPID>();
 
@@ -1674,15 +1674,15 @@ namespace RNGReporter
                                             0, CompareType.None,
                                             0, CompareType.None,
                                             nature,
-                                            (int) ((ComboBoxItem) comboBoxShinyAbility.SelectedItem).Reference,
+                                            (int)((ComboBoxItem)comboBoxShinyAbility.SelectedItem).Reference,
                                             checkBoxShinyShinyOnly.Checked,
                                             false,
                                             false,
                                             null,
-                                            (GenderFilter) (comboBoxShinyGender.SelectedItem));
+                                            (GenderFilter)(comboBoxShinyGender.SelectedItem));
 
 
-            listBindingShiny = new BindingSource {DataSource = iframesEggShiny};
+            listBindingShiny = new BindingSource { DataSource = iframesEggShiny };
             dataGridViewShinyResults.DataSource = listBindingShiny;
 
             uint maxTaps = Convert.ToUInt32(maskedTextBoxMaxTaps.Text);
@@ -1698,7 +1698,7 @@ namespace RNGReporter
                 else
                 {
                     generator.InitialFrame = 23;
-                    generator.MaxResults = 11 + maxTaps*12;
+                    generator.MaxResults = 11 + maxTaps * 12;
                 }
             }
             else if (radioButtonDPPt.Checked && checkBoxIntlParents.Checked)
@@ -1712,7 +1712,7 @@ namespace RNGReporter
                 else
                 {
                     generator.InitialFrame = 23;
-                    generator.MaxResults = 11 + maxTaps*12;
+                    generator.MaxResults = 11 + maxTaps * 12;
                 }
             }
             else if (radioButtonHGSS.Checked && !checkBoxIntlParents.Checked)
@@ -1793,7 +1793,7 @@ namespace RNGReporter
         {
             if (dataGridViewShinyResults.SelectedRows[0] != null)
             {
-                var frame = (IFrameEggPID) dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameEggPID)dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
 
                 // This is a bit of a strange hack, because this window
                 //  needs to be hidden before we load the seed to time
@@ -1841,7 +1841,7 @@ namespace RNGReporter
                 var writer = new TXTWriter(dataGridViewShinyResults);
                 try
                 {
-                    var frames = (List<IFrameEggPID>) listBindingShiny.DataSource;
+                    var frames = (List<IFrameEggPID>)listBindingShiny.DataSource;
 
                     if (frames.Count > 0)
                     {
@@ -1850,7 +1850,7 @@ namespace RNGReporter
                 }
                 catch
                 {
-                    var frames = (List<IFrameCapture>) listBindingShiny.DataSource;
+                    var frames = (List<IFrameCapture>)listBindingShiny.DataSource;
 
                     if (frames.Count > 0)
                     {
@@ -1864,7 +1864,7 @@ namespace RNGReporter
         {
             if (dataGridViewEggIVValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameBreeding) dataGridViewEggIVValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameBreeding)dataGridViewEggIVValues.SelectedRows[0].DataBoundItem;
 
                 Clipboard.SetText(frame.Seed.ToString("X8"));
             }
@@ -1874,7 +1874,7 @@ namespace RNGReporter
         {
             if (dataGridViewCapValues.SelectedRows[0] != null)
             {
-                var frame = (IFrameCapture) dataGridViewCapValues.SelectedRows[0].DataBoundItem;
+                var frame = (IFrameCapture)dataGridViewCapValues.SelectedRows[0].DataBoundItem;
 
                 Clipboard.SetText(frame.Seed.ToString("X8"));
             }
@@ -1886,12 +1886,12 @@ namespace RNGReporter
             {
                 try
                 {
-                    var frame = (IFrameEggPID) dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
+                    var frame = (IFrameEggPID)dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
                     Clipboard.SetText(frame.Seed.ToString("X8"));
                 }
                 catch
                 {
-                    var frame = (IFrameCapture) dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
+                    var frame = (IFrameCapture)dataGridViewShinyResults.SelectedRows[0].DataBoundItem;
                     Clipboard.SetText(frame.Seed.ToString("X16"));
                 }
             }
@@ -1923,7 +1923,7 @@ namespace RNGReporter
             //  Make all of the junk natures show up in a lighter color
             if (dataGridViewShinyResults.Columns[e.ColumnIndex].Name == "ShinyNature")
             {
-                var nature = (string) e.Value;
+                var nature = (string)e.Value;
 
                 if (nature == Functions.NatureStrings(18) ||
                     nature == Functions.NatureStrings(6) ||
@@ -1944,17 +1944,17 @@ namespace RNGReporter
                 dataGridViewShinyResults.Columns[e.ColumnIndex].Name == "ShinySpD" ||
                 dataGridViewShinyResults.Columns[e.ColumnIndex].Name == "ShinySpe")
             {
-                if ((string) e.Value == "30" || (string) e.Value == "31")
+                if ((string)e.Value == "30" || (string)e.Value == "31")
                 {
                     e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
                 }
 
-                if ((string) e.Value == "0")
+                if ((string)e.Value == "0")
                 {
                     e.CellStyle.ForeColor = Color.Red;
                 }
 
-                if ((string) e.Value == "A" || (string) e.Value == "B")
+                if ((string)e.Value == "A" || (string)e.Value == "B")
                 {
                     e.CellStyle.ForeColor = Color.Blue;
                 }
@@ -1970,7 +1970,7 @@ namespace RNGReporter
                 DataGridViewColumn selectedColumn = dataGridViewCapValues.Columns[e.ColumnIndex];
 
                 var iframeCaptureComparer = new IFrameCaptureComparer
-                    {CompareType = selectedColumn.DataPropertyName};
+                { CompareType = selectedColumn.DataPropertyName };
 
                 if (selectedColumn.HeaderCell.SortGlyphDirection == SortOrder.Ascending)
                     iframeCaptureComparer.sortOrder = SortOrder.Descending;
@@ -1994,7 +1994,7 @@ namespace RNGReporter
                 DataObject clipboardContent = dataGridViewCapValues.GetClipboardContent();
                 if (clipboardContent != null)
                 {
-                    var test = (string) clipboardContent.GetData(DataFormats.UnicodeText);
+                    var test = (string)clipboardContent.GetData(DataFormats.UnicodeText);
                     test = test.Replace('\t', ' ');
                     Clipboard.SetText(test);
                 }
@@ -2045,7 +2045,7 @@ namespace RNGReporter
 
         private GenderFilter constructGenderFilter(ComboBox genderComboBox)
         {
-            var criteria = (GenderCriteria) genderComboBox.SelectedIndex;
+            var criteria = (GenderCriteria)genderComboBox.SelectedIndex;
             uint ratio = 0;
 
             switch (comboBoxCapGenderRatio.SelectedIndex)
@@ -2116,50 +2116,50 @@ namespace RNGReporter
             }
         }
 
-/*
-        private void DisplayGenderColumns()
-        {
-            switch (comboBoxCapGenderRatio.SelectedIndex)
-            {
-                case 0:
-                    f25.Visible = true;
-                    f50.Visible = true;
-                    f75.Visible = true;
-                    f125.Visible = true;
-                    break;
-                case 1:
-                    f25.Visible = false;
-                    f50.Visible = true;
-                    f75.Visible = false;
-                    f125.Visible = false;
-                    break;
-                case 2:
-                    f25.Visible = false;
-                    f50.Visible = false;
-                    f75.Visible = true;
-                    f125.Visible = false;
-                    break;
-                case 3:
-                    f25.Visible = true;
-                    f50.Visible = false;
-                    f75.Visible = false;
-                    f125.Visible = false;
-                    break;
-                case 4:
-                    f25.Visible = false;
-                    f50.Visible = false;
-                    f75.Visible = false;
-                    f125.Visible = true;
-                    break;
-                case 5:
-                    f25.Visible = false;
-                    f50.Visible = false;
-                    f75.Visible = false;
-                    f125.Visible = false;
-                    break;
-            }
-        }
-*/
+        /*
+                private void DisplayGenderColumns()
+                {
+                    switch (comboBoxCapGenderRatio.SelectedIndex)
+                    {
+                        case 0:
+                            f25.Visible = true;
+                            f50.Visible = true;
+                            f75.Visible = true;
+                            f125.Visible = true;
+                            break;
+                        case 1:
+                            f25.Visible = false;
+                            f50.Visible = true;
+                            f75.Visible = false;
+                            f125.Visible = false;
+                            break;
+                        case 2:
+                            f25.Visible = false;
+                            f50.Visible = false;
+                            f75.Visible = true;
+                            f125.Visible = false;
+                            break;
+                        case 3:
+                            f25.Visible = true;
+                            f50.Visible = false;
+                            f75.Visible = false;
+                            f125.Visible = false;
+                            break;
+                        case 4:
+                            f25.Visible = false;
+                            f50.Visible = false;
+                            f75.Visible = false;
+                            f125.Visible = true;
+                            break;
+                        case 5:
+                            f25.Visible = false;
+                            f50.Visible = false;
+                            f75.Visible = false;
+                            f125.Visible = false;
+                            break;
+                    }
+                }
+        */
 
         private void dataGridViewCapValues_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -2172,7 +2172,7 @@ namespace RNGReporter
                     if (e.RowIndex >= 0)
                     {
                         switch (
-                            ((IFrameCapture) dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod)
+                            ((IFrameCapture)dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod)
                         {
                             case Objects.EncounterMod.Synchronize:
                                 toolTipDataGrid.ToolTipTitle = "Synchronize";
@@ -2275,7 +2275,7 @@ namespace RNGReporter
 
         private void FocusControl(object sender, MouseEventArgs e)
         {
-            ((Control) sender).Focus();
+            ((Control)sender).Focus();
         }
 
         #region Nested type: ResortGridDelegate
@@ -2296,5 +2296,10 @@ namespace RNGReporter
         private delegate void UpdateGridDelegate(BindingSource bindingSource);
 
         #endregion
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

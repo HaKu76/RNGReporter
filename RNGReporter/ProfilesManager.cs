@@ -18,11 +18,11 @@
  */
 
 
+using RNGReporter.Objects;
+using RNGReporter.Properties;
 using System;
 using System.IO;
 using System.Windows.Forms;
-using RNGReporter.Objects;
-using RNGReporter.Properties;
 
 namespace RNGReporter
 {
@@ -109,7 +109,7 @@ namespace RNGReporter
         {
             if (dataGridViewValues.SelectedRows.Count <= 0) return;
             int currentProfile = dataGridViewValues.SelectedRows[0].Index;
-            var editor = new ProfileEditor {Profile = Profiles.List[currentProfile]};
+            var editor = new ProfileEditor { Profile = Profiles.List[currentProfile] };
             if (editor.ShowDialog() != DialogResult.OK) return;
 
             Profile profile = editor.Profile;
@@ -145,7 +145,7 @@ namespace RNGReporter
         // todo: clean this up, change how it's done
         public void AddProfile(Profile profile)
         {
-            var editor = new ProfileEditor {Profile = profile};
+            var editor = new ProfileEditor { Profile = profile };
             if (editor.ShowDialog() != DialogResult.OK) return;
             Profile editorProfile = editor.Profile;
             if (editorProfile == null) return;

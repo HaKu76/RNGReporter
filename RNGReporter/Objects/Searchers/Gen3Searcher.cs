@@ -17,12 +17,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+using RNGReporter.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using RNGReporter.Controls;
 
 namespace RNGReporter.Objects.Searchers
 {
@@ -56,7 +56,7 @@ namespace RNGReporter.Objects.Searchers
             waitHandle = new EventWaitHandle(true, EventResetMode.ManualReset);
 
             captureFrames = new List<Gen3CapFrame>();
-            frameBinding = new BindingSource {DataSource = captureFrames};
+            frameBinding = new BindingSource { DataSource = captureFrames };
             searchParams.dataGridView.DataSource = frameBinding;
             btnGenerate = searchParams.capButton;
         }
@@ -86,7 +86,7 @@ namespace RNGReporter.Objects.Searchers
             IVFilter ivfilter = searchParams.ivfilters.IVFilter;
 
             List<int> encounterSlots = null;
-            if (searchParams.encounterSlot.Text != "Any" && searchParams.encounterSlot.CheckBoxItems.Count > 0)
+            if (searchParams.encounterSlot.Text != "任意" && searchParams.encounterSlot.CheckBoxItems.Count > 0)
             {
                 encounterSlots = new List<int>();
                 for (int i = 0; i < searchParams.encounterSlot.CheckBoxItems.Count; i++)
@@ -98,32 +98,32 @@ namespace RNGReporter.Objects.Searchers
             }
 
             List<uint> natures = null;
-            if (searchParams.nature.Text != "Any" && searchParams.nature.CheckBoxItems.Count > 0)
+            if (searchParams.nature.Text != "任意" && searchParams.nature.CheckBoxItems.Count > 0)
             {
                 natures =
                     (from t in searchParams.nature.CheckBoxItems
                      where t.Checked
-                     select (uint) ((Nature) t.ComboBoxItem).Number).ToList();
+                     select (uint)((Nature)t.ComboBoxItem).Number).ToList();
             }
 
             frameCompare = new FrameCompare(ivfilter, natures,
-                                            (int) ((ComboBoxItem) searchParams.ability.SelectedItem).Reference, shiny,
+                                            (int)((ComboBoxItem)searchParams.ability.SelectedItem).Reference, shiny,
                                             synch, false, encounterSlots,
-                                            (GenderFilter) (searchParams.gender.SelectedItem));
+                                            (GenderFilter)(searchParams.gender.SelectedItem));
 
             EncounterMod currentMod = synch ? EncounterMod.Synchronize : EncounterMod.None;
             generator = new FrameGenerator
-                {
-                    FrameType =
-                        (FrameType) ((ComboBoxItem) searchParams.frameType.SelectedItem).Reference,
-                    EncounterMod = currentMod
-                };
+            {
+                FrameType =
+                        (FrameType)((ComboBoxItem)searchParams.frameType.SelectedItem).Reference,
+                EncounterMod = currentMod
+            };
             if (currentMod == EncounterMod.Synchronize && natures == null)
             {
                 generator.EncounterMod = EncounterMod.None;
             }
 
-            generator.SynchNature = ((Nature) searchParams.synchNature.SelectedItem).Number;
+            generator.SynchNature = ((Nature)searchParams.synchNature.SelectedItem).Number;
 
             generator.EncounterType = EncounterTypeCalc.EncounterString(searchParams.encounterType.Text);
 
@@ -137,7 +137,7 @@ namespace RNGReporter.Objects.Searchers
 
         protected override Thread ProgressThread()
         {
-            var frameType = (FrameType) ((ComboBoxItem) searchParams.frameType.SelectedItem).Reference;
+            var frameType = (FrameType)((ComboBoxItem)searchParams.frameType.SelectedItem).Reference;
             return new Thread(
                 () => ManageProgress(frameBinding, searchParams.dataGridView, frameType, 0));
         }
@@ -182,8 +182,8 @@ namespace RNGReporter.Objects.Searchers
 
                     List<Frame> frames = generator.Generate(frameCompare, id, sid);
                     progressSearched += maxFrame;
-                    progressFound += (ulong) frames.Count;
-                    progressTotal += (ulong) frames.Count*maxFrame;
+                    progressFound += (ulong)frames.Count;
+                    progressTotal += (ulong)frames.Count * maxFrame;
                     lock (threadLock)
                     {
                         foreach (Frame frame in frames)

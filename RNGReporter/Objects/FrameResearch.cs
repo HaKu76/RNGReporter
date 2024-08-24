@@ -45,12 +45,12 @@ namespace RNGReporter.Objects
 
         public uint High32
         {
-            get { return (uint) (Full64 >> 32); }
+            get { return (uint)(Full64 >> 32); }
         }
 
         public uint Low32
         {
-            get { return (uint) (Full64 & 0xFFFFFFFF); }
+            get { return (uint)(Full64 & 0xFFFFFFFF); }
         }
 
         public uint High16
@@ -85,22 +85,22 @@ namespace RNGReporter.Objects
 
         public uint Mod25
         {
-            get { return RNG64bit ? High32%25 : High16%25; }
+            get { return RNG64bit ? High32 % 25 : High16 % 25; }
         }
 
         public uint Mod100
         {
-            get { return RNG64bit ? High32%100 : High16%100; }
+            get { return RNG64bit ? High32 % 100 : High16 % 100; }
         }
 
         public uint Mod3
         {
-            get { return RNG64bit ? High32%3 : High16%3; }
+            get { return RNG64bit ? High32 % 3 : High16 % 3; }
         }
 
         public uint Div656
         {
-            get { return High16/656; }
+            get { return High16 / 656; }
         }
 
         public uint HighBit

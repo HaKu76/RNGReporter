@@ -116,7 +116,7 @@ namespace RNGReporter.Objects
                 case FrameType.Method5Standard:
                     if ((maxResults + InitialFrame) < 221)
                     {
-                        mt = new MersenneTwisterFast(0, (int) (maxResults + InitialFrame + 5));
+                        mt = new MersenneTwisterFast(0, (int)(maxResults + InitialFrame + 5));
                     }
                     else
                         mt = new MersenneTwister(0);
@@ -126,7 +126,7 @@ namespace RNGReporter.Objects
                 case FrameType.Method5CGear:
                     if ((maxResults + InitialFrame) < 219)
                     {
-                        mt = new MersenneTwisterFast(0, (int) (maxResults + InitialFrame + 9));
+                        mt = new MersenneTwisterFast(0, (int)(maxResults + InitialFrame + 9));
                     }
                     else
                         mt = new MersenneTwister(0);
@@ -142,20 +142,20 @@ namespace RNGReporter.Objects
         public FrameGenerator Clone()
         {
             var clone = new FrameGenerator
-                {
-                    frameType = frameType,
-                    EncounterType = EncounterType,
-                    EncounterMod = EncounterMod,
-                    SynchNature = SynchNature,
-                    InitialSeed = InitialSeed,
-                    InitialFrame = InitialFrame,
-                    maxResults = maxResults,
-                    DittoUsed = DittoUsed,
-                    MaleOnlySpecies = MaleOnlySpecies,
-                    ParentA = ParentA,
-                    ParentB = ParentB,
-                    RNGIVs = RNGIVs
-                };
+            {
+                frameType = frameType,
+                EncounterType = EncounterType,
+                EncounterMod = EncounterMod,
+                SynchNature = SynchNature,
+                InitialSeed = InitialSeed,
+                InitialFrame = InitialFrame,
+                maxResults = maxResults,
+                DittoUsed = DittoUsed,
+                MaleOnlySpecies = MaleOnlySpecies,
+                ParentA = ParentA,
+                ParentB = ParentB,
+                RNGIVs = RNGIVs
+            };
 
             clone.SelectRNG();
 
@@ -220,9 +220,9 @@ namespace RNGReporter.Objects
                 // just flip the upper seed bits instead.
                 for (int upperBit = 0; upperBit < 2; upperBit++)
                 {
-                    rng2 = (ushort) (rng2 ^ 0x8000);
-                    rng3 = (ushort) (rng3 ^ 0x8000);
-                    rng4 = (ushort) (rng4 ^ 0x8000);
+                    rng2 = (ushort)(rng2 ^ 0x8000);
+                    rng3 = (ushort)(rng3 ^ 0x8000);
+                    rng4 = (ushort)(rng4 ^ 0x8000);
                     method1Seed = method1Seed ^ 0x80000000;
                     rng.Seed = rng.Seed ^ 0x80000000;
 
@@ -335,32 +335,32 @@ namespace RNGReporter.Objects
                                     // Check to see if this is a valid non-Synch calling frame
                                     // If it is, we won't bother checking it with Synch because it works either way
 
-                                    if (nextRng/0xA3E == nature)
+                                    if (nextRng / 0xA3E == nature)
                                     {
                                         uint testSeed = testRng.Seed;
                                         var encounterMod = EncounterMod.None;
 
                                         if (EncounterType != EncounterType.Stationary)
                                         {
-                                            testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                            testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             slot = nextRng2;
                                             if (EncounterType == EncounterType.WildSurfing)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             }
                                             else if (EncounterType == EncounterType.WildOldRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)/656;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble <= 48)
                                                 {
                                                     if (nibble > 24)
                                                     {
                                                         encounterMod = EncounterMod.SuctionCups;
                                                     }
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                                 else
                                                     skipFrame = true;
@@ -368,15 +368,15 @@ namespace RNGReporter.Objects
                                             else if (EncounterType == EncounterType.WildGoodRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)/656;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble <= 98)
                                                 {
                                                     if (nibble > 49)
                                                     {
                                                         encounterMod = EncounterMod.SuctionCups;
                                                     }
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                                 else
                                                     skipFrame = true;
@@ -384,15 +384,15 @@ namespace RNGReporter.Objects
                                             else if (EncounterType == EncounterType.WildSuperRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)/656;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble <= 99)
                                                 {
                                                     if (nibble > 74)
                                                     {
                                                         encounterMod = EncounterMod.SuctionCups;
                                                     }
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                                 else
                                                     skipFrame = true;
@@ -421,7 +421,7 @@ namespace RNGReporter.Objects
                                         {
                                             if (EncounterType == EncounterType.WildOldRod)
                                             {
-                                                uint nibble = (testSeed >> 16)/656;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble > 24)
                                                 {
                                                     skipFrame = true;
@@ -429,7 +429,7 @@ namespace RNGReporter.Objects
                                             }
                                             else if (EncounterType == EncounterType.WildGoodRod)
                                             {
-                                                uint nibble = (testSeed >> 16)/656;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble > 49)
                                                 {
                                                     skipFrame = true;
@@ -437,15 +437,15 @@ namespace RNGReporter.Objects
                                             }
                                             else if (EncounterType == EncounterType.WildSuperRod)
                                             {
-                                                uint nibble = (testSeed >> 16)/656;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble > 74)
                                                 {
                                                     skipFrame = true;
                                                 }
                                             }
 
-                                            slot = slot*0xeeb9eb65 + 0xa3561a1;
-                                            testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                            slot = slot * 0xeeb9eb65 + 0xa3561a1;
+                                            testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
 
                                             if (!skipFrame)
                                             {
@@ -466,39 +466,39 @@ namespace RNGReporter.Objects
                                             }
                                         }
                                     }
-                                        // Check to see if the spread is hittable with Synchronize
+                                    // Check to see if the spread is hittable with Synchronize
                                     else if (nextRng >> 15 == 0)
                                     {
                                         uint testSeed = testRng.Seed;
 
                                         if (EncounterType != EncounterType.Stationary)
                                         {
-                                            testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                            testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             slot = nextRng2;
                                             if (EncounterType == EncounterType.WildSurfing)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             }
                                             else if (EncounterType == EncounterType.WildOldRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)/656;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble > 24)
                                                 {
                                                     skipFrame = true;
                                                 }
                                                 else
                                                 {
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                             }
                                             else if (EncounterType == EncounterType.WildGoodRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)/656;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) / 656;
 
                                                 if (nibble > 49)
                                                 {
@@ -506,22 +506,22 @@ namespace RNGReporter.Objects
                                                 }
                                                 else
                                                 {
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                             }
                                             else if (EncounterType == EncounterType.WildSuperRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
 
-                                                uint nibble = (testSeed >> 16)/656;
+                                                uint nibble = (testSeed >> 16) / 656;
                                                 if (nibble > 74)
                                                 {
                                                     skipFrame = true;
                                                 }
                                                 else
                                                 {
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                             }
                                         }
@@ -549,7 +549,7 @@ namespace RNGReporter.Objects
 
                                     nextRng = testRng.GetNext16BitNumber();
                                     nextRng2 = testRng.GetNext32BitNumber();
-                                } while (testPid%25 != nature);
+                                } while (testPid % 25 != nature);
                             }
 
 
@@ -557,7 +557,7 @@ namespace RNGReporter.Objects
                             //  [CC Check] [PID] [IVs] [IVs]
                             //  [rng3] [rng2] [rng1] [START]
 
-                            if (rng3/0x5556 != 0)
+                            if (rng3 / 0x5556 != 0)
                             {
                                 uint CCSeed;
                                 uint slot = 0;
@@ -567,49 +567,49 @@ namespace RNGReporter.Objects
                                     CCSeed = method1Seed;
                                 else
                                 {
-                                    CCSeed = method1Seed*0xeeb9eb65 + 0xa3561a1;
+                                    CCSeed = method1Seed * 0xeeb9eb65 + 0xa3561a1;
                                     slot = method1Seed;
                                     if (EncounterType == EncounterType.WildSurfing)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                     else if (EncounterType == EncounterType.WildOldRod)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
 
-                                        if ((CCSeed >> 16)/656 > 24)
+                                        if ((CCSeed >> 16) / 656 > 24)
                                             skipFrame = true;
                                         else
-                                            CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
+                                            CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                     else if (EncounterType == EncounterType.WildGoodRod)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
 
-                                        if ((CCSeed >> 16)/656 > 49)
+                                        if ((CCSeed >> 16) / 656 > 49)
                                             skipFrame = true;
                                         else
-                                            CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
+                                            CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                     else if (EncounterType == EncounterType.WildSuperRod)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
 
-                                        if ((CCSeed >> 16)/656 > 74)
+                                        if ((CCSeed >> 16) / 656 > 74)
                                             skipFrame = true;
                                         else
-                                            CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
+                                            CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                 }
 
                                 // Each gender ratio has a different
                                 // unbiased (non-nature-affective) number that is
                                 // added to the PID
-                                var choppedPID = (ushort) (rng2/0xA3E);
+                                var choppedPID = (ushort)(rng2 / 0xA3E);
                                 if (!skipFrame && choppedPID % 25 == nature)
                                 {
                                     foreach (uint buffer in Functions.UnbiasedBuffer)
@@ -671,34 +671,34 @@ namespace RNGReporter.Objects
                                     // Check to see if this is a valid non-Synch calling frame
                                     // If it is, we won't bother checking it with Synch because it works either way
 
-                                    if (nextRng%25 == nature)
+                                    if (nextRng % 25 == nature)
                                     {
                                         uint testSeed = testRng.Seed;
                                         var encounterMod = EncounterMod.None;
 
                                         if (EncounterType != EncounterType.Stationary)
                                         {
-                                            testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                            testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             slot = nextRng2;
                                             if (EncounterType == EncounterType.WildSurfing ||
-                                                EncounterType == EncounterType.BugCatchingContest  ||
+                                                EncounterType == EncounterType.BugCatchingContest ||
                                                 EncounterType == EncounterType.Headbutt)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             }
                                             else if (EncounterType == EncounterType.WildOldRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)%100;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble <= 48)
                                                 {
                                                     if (nibble > 24)
                                                     {
                                                         encounterMod = EncounterMod.SuctionCups;
                                                     }
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                                 else
                                                     skipFrame = true;
@@ -706,15 +706,15 @@ namespace RNGReporter.Objects
                                             else if (EncounterType == EncounterType.WildGoodRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)%100;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble <= 98)
                                                 {
                                                     if (nibble > 49)
                                                     {
                                                         encounterMod = EncounterMod.SuctionCups;
                                                     }
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                                 else
                                                     skipFrame = true;
@@ -722,15 +722,15 @@ namespace RNGReporter.Objects
                                             else if (EncounterType == EncounterType.WildSuperRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)%100;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble <= 99)
                                                 {
                                                     if (nibble > 74)
                                                     {
                                                         encounterMod = EncounterMod.SuctionCups;
                                                     }
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                                 else
                                                     skipFrame = true;
@@ -759,7 +759,7 @@ namespace RNGReporter.Objects
                                         {
                                             if (EncounterType == EncounterType.WildOldRod)
                                             {
-                                                uint nibble = (testSeed >> 16)%100;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble > 24)
                                                 {
                                                     skipFrame = true;
@@ -767,7 +767,7 @@ namespace RNGReporter.Objects
                                             }
                                             else if (EncounterType == EncounterType.WildGoodRod)
                                             {
-                                                uint nibble = (testSeed >> 16)%100;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble > 49)
                                                 {
                                                     skipFrame = true;
@@ -775,15 +775,15 @@ namespace RNGReporter.Objects
                                             }
                                             else if (EncounterType == EncounterType.WildSuperRod)
                                             {
-                                                uint nibble = (testSeed >> 16)%100;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble > 74)
                                                 {
                                                     skipFrame = true;
                                                 }
                                             }
 
-                                            slot = slot*0xeeb9eb65 + 0xa3561a1;
-                                            testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                            slot = slot * 0xeeb9eb65 + 0xa3561a1;
+                                            testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
 
                                             if (!skipFrame)
                                             {
@@ -804,41 +804,41 @@ namespace RNGReporter.Objects
                                             }
                                         }
                                     }
-                                        // Check to see if the spread is hittable with Synchronize
+                                    // Check to see if the spread is hittable with Synchronize
                                     else if ((nextRng & 1) == 0)
                                     {
                                         uint testSeed = testRng.Seed;
 
                                         if (EncounterType != EncounterType.Stationary)
                                         {
-                                            testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                            testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             slot = nextRng2;
                                             if (EncounterType == EncounterType.WildSurfing ||
-                                                EncounterType == EncounterType.BugCatchingContest  ||
+                                                EncounterType == EncounterType.BugCatchingContest ||
                                                 EncounterType == EncounterType.Headbutt)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                             }
                                             else if (EncounterType == EncounterType.WildOldRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)%100;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble > 24)
                                                 {
                                                     skipFrame = true;
                                                 }
                                                 else
                                                 {
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                             }
                                             else if (EncounterType == EncounterType.WildGoodRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
-                                                uint nibble = (testSeed >> 16)%100;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
+                                                uint nibble = (testSeed >> 16) % 100;
 
                                                 if (nibble > 49)
                                                 {
@@ -846,22 +846,22 @@ namespace RNGReporter.Objects
                                                 }
                                                 else
                                                 {
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                             }
                                             else if (EncounterType == EncounterType.WildSuperRod)
                                             {
                                                 slot = testSeed;
-                                                testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
 
-                                                uint nibble = (testSeed >> 16)%100;
+                                                uint nibble = (testSeed >> 16) % 100;
                                                 if (nibble > 74)
                                                 {
                                                     skipFrame = true;
                                                 }
                                                 else
                                                 {
-                                                    testSeed = testSeed*0xeeb9eb65 + 0xa3561a1;
+                                                    testSeed = testSeed * 0xeeb9eb65 + 0xa3561a1;
                                                 }
                                             }
                                         }
@@ -888,10 +888,10 @@ namespace RNGReporter.Objects
 
                                     nextRng = testRng.GetNext16BitNumber();
                                     nextRng2 = testRng.GetNext32BitNumber();
-                                } while (testPid%25 != nature);
+                                } while (testPid % 25 != nature);
                             }
 
-                            if (rng3%3 != 0)
+                            if (rng3 % 3 != 0)
                             {
                                 uint CCSeed;
                                 uint slot = 0;
@@ -901,43 +901,43 @@ namespace RNGReporter.Objects
                                     CCSeed = method1Seed;
                                 else
                                 {
-                                    CCSeed = method1Seed*0xeeb9eb65 + 0xa3561a1;
+                                    CCSeed = method1Seed * 0xeeb9eb65 + 0xa3561a1;
                                     slot = method1Seed;
                                     if (EncounterType == EncounterType.WildSurfing ||
                                         EncounterType == EncounterType.BugCatchingContest)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                     else if (EncounterType == EncounterType.WildOldRod)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
 
-                                        if ((CCSeed >> 16)%100 > 24)
+                                        if ((CCSeed >> 16) % 100 > 24)
                                             skipFrame = true;
                                         else
-                                            CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
+                                            CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                     else if (EncounterType == EncounterType.WildGoodRod)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
 
-                                        if ((CCSeed >> 16)%100 > 49)
+                                        if ((CCSeed >> 16) % 100 > 49)
                                             skipFrame = true;
                                         else
-                                            CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
+                                            CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                     else if (EncounterType == EncounterType.WildSuperRod)
                                     {
-                                        CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
-                                        slot = slot*0xeeb9eb65 + 0xa3561a1;
+                                        CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
+                                        slot = slot * 0xeeb9eb65 + 0xa3561a1;
 
-                                        if ((CCSeed >> 16)%100 > 74)
+                                        if ((CCSeed >> 16) % 100 > 74)
                                             skipFrame = true;
                                         else
-                                            CCSeed = CCSeed*0xeeb9eb65 + 0xa3561a1;
+                                            CCSeed = CCSeed * 0xeeb9eb65 + 0xa3561a1;
                                     }
                                 }
 
@@ -948,7 +948,7 @@ namespace RNGReporter.Objects
                                 // Each gender ratio has a different
                                 // unbiased (non-nature-affective) number that is
                                 // added to the PID
-                                var choppedPID = (ushort) (rng2%25);
+                                var choppedPID = (ushort)(rng2 % 25);
                                 if (!skipFrame && choppedPID == nature)
                                 {
                                     foreach (uint buffer in Functions.UnbiasedBuffer)
@@ -1104,7 +1104,7 @@ namespace RNGReporter.Objects
                                         uint rng3XD = rng.GetNext16BitNumber();
                                         uint rng4XD = rng.GetNext16BitNumber();
 
-                                        uint XDColoSeed = seed*0xB9B33155 + 0xA170F641;
+                                        uint XDColoSeed = seed * 0xB9B33155 + 0xA170F641;
 
                                         //  Check Colosseum\XD
                                         // [IVs] [IVs] [xxx] [PID] [PID]
@@ -1180,7 +1180,7 @@ namespace RNGReporter.Objects
             if (frameType == FrameType.Gen4Normal ||
                 frameType == FrameType.Gen4International)
             {
-                mt.Reseed((uint) InitialSeed);
+                mt.Reseed((uint)InitialSeed);
                 frame = null;
 
                 for (uint cnt = 1; cnt < InitialFrame + maxResults; cnt++)
@@ -1228,7 +1228,7 @@ namespace RNGReporter.Objects
                                 }
 
                                 // ARNG
-                                pid = pid*0x6c078965 + 1;
+                                pid = pid * 0x6c078965 + 1;
                             }
 
                             frame =
@@ -1251,7 +1251,7 @@ namespace RNGReporter.Objects
             }
             else if (frameType == FrameType.Method5Standard)
             {
-                mt.Reseed((uint) InitialSeed);
+                mt.Reseed((uint)InitialSeed);
 
                 for (uint cnt = 1; cnt < InitialFrame; cnt++)
                     mt.Nextuint();
@@ -1281,7 +1281,7 @@ namespace RNGReporter.Objects
                             Frame.GenerateFrame(
                                 FrameType.Method5Standard,
                                 cnt + InitialFrame,
-                                (uint) InitialSeed,
+                                (uint)InitialSeed,
                                 rngList[1],
                                 rngList[2],
                                 rngList[3],
@@ -1308,7 +1308,7 @@ namespace RNGReporter.Objects
                             Frame.GenerateFrame(
                                 FrameType.Method5Standard,
                                 cnt + InitialFrame,
-                                (uint) InitialSeed,
+                                (uint)InitialSeed,
                                 rngList[0],
                                 rngList[1],
                                 rngList[2],
@@ -1322,7 +1322,7 @@ namespace RNGReporter.Objects
             }
             else if (frameType == FrameType.Method5CGear)
             {
-                mt.Reseed((uint) InitialSeed);
+                mt.Reseed((uint)InitialSeed);
 
                 // first two frames are skipped
                 mt.Nextuint();
@@ -1357,7 +1357,7 @@ namespace RNGReporter.Objects
                             Frame.GenerateFrame(
                                 FrameType.Method5CGear,
                                 cnt + InitialFrame,
-                                (uint) InitialSeed,
+                                (uint)InitialSeed,
                                 rngList[1],
                                 rngList[2],
                                 rngList[3],
@@ -1384,7 +1384,7 @@ namespace RNGReporter.Objects
                             Frame.GenerateFrame(
                                 FrameType.Method5CGear,
                                 cnt + InitialFrame,
-                                (uint) InitialSeed,
+                                (uint)InitialSeed,
                                 rngList[0],
                                 rngList[1],
                                 rngList[2],
@@ -1420,7 +1420,7 @@ namespace RNGReporter.Objects
                     bool synchable;
                     if (EncounterType == EncounterType.Gift || EncounterType == EncounterType.Roamer)
                     {
-                        nature = (uint) (((ulong) rngList[1]*25) >> 32);
+                        nature = (uint)(((ulong)rngList[1] * 25) >> 32);
                         synchable = false;
 
                         pid = rngList[0];
@@ -1440,9 +1440,9 @@ namespace RNGReporter.Objects
                             {
                                 synchable = (rngList[0] >> 31) == 1;
                                 if (synchable)
-                                    nature = (uint) SynchNature;
+                                    nature = (uint)SynchNature;
                                 else
-                                    nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                 pid = rngList[3];
                                 pid = pid ^ 0x10000;
@@ -1453,18 +1453,18 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                 // failed CC check
                                 if (!synchable)
                                 {
                                     // leave it as-is
-                                    nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[4] * 25) >> 32);
                                 }
                                 else
                                 {
                                     pid = Functions.GenderModPID(pid, rngList[4], SynchNature);
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
                                 }
 
                                 synchable = false;
@@ -1475,7 +1475,7 @@ namespace RNGReporter.Objects
                                 synchable = false;
                                 encounterSlot = EncounterSlotCalc.encounterSlot(rngList[0], frameType,
                                                                                 EncounterType);
-                                nature = (uint) (((ulong) rngList[3]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[3] * 25) >> 32);
 
                                 pid = rngList[2];
                                 pid = pid ^ 0x10000;
@@ -1486,13 +1486,13 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                 // passed CC check
                                 if (synchable)
                                 {
                                     // Add all the Cute Charm possibilities
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                     for (int i = -4; i < 5; i++)
                                     {
@@ -1554,7 +1554,7 @@ namespace RNGReporter.Objects
                                 }
 
                                 synchable = (rngList[0] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                 if (synchable && !frameCompare.CompareNature(nature))
                                     mod = EncounterMod.Synchronize;
@@ -1567,7 +1567,7 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 synchable = (rngList[0] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
                             }
 
                             idTest = (idLower ^ (pid & 1) ^ (pid >> 31));
@@ -1576,30 +1576,30 @@ namespace RNGReporter.Objects
                         }
                         else if (EncounterType == EncounterType.WildCaveSpot)
                         {
-                            if (((ulong) rngList[0]*1000 >> 32) < 400)
+                            if (((ulong)rngList[0] * 1000 >> 32) < 400)
                             {
                                 encounterSlot = EncounterSlotCalc.encounterSlot(rngList[2], frameType,
                                                                                 EncounterType);
                             }
                             else
                             {
-                                uint calc = ((ulong) rngList[1]*1000 >> 32) < 100 ? 1000u : 1700u;
+                                uint calc = ((ulong)rngList[1] * 1000 >> 32) < 100 ? 1000u : 1700u;
 
-                                uint result = (uint) ((ulong) rngList[2]*calc >> 32)/100;
+                                uint result = (uint)((ulong)rngList[2] * calc >> 32) / 100;
 
                                 if (calc == 1000)
-                                    encounterSlot = (int) result + 13;
+                                    encounterSlot = (int)result + 13;
                                 else
-                                    encounterSlot = (int) result + 23;
+                                    encounterSlot = (int)result + 23;
                             }
 
                             if (EncounterMod == EncounterMod.Synchronize)
                             {
                                 synchable = (rngList[1] >> 31) == 1;
                                 if (synchable)
-                                    nature = (uint) SynchNature;
+                                    nature = (uint)SynchNature;
                                 else
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                 pid = rngList[4];
                                 pid = pid ^ 0x10000;
@@ -1610,18 +1610,18 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[1]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[1] * 0xFFFF) >> 32) / 656) < 67;
 
                                 // failed CC check
                                 if (!synchable)
                                 {
                                     // leave it as-is
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
                                 }
                                 else
                                 {
                                     pid = Functions.GenderModPID(pid, rngList[5], SynchNature);
-                                    nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[6] * 25) >> 32);
                                 }
 
                                 synchable = false;
@@ -1632,7 +1632,7 @@ namespace RNGReporter.Objects
                                 synchable = false;
                                 encounterSlot = EncounterSlotCalc.encounterSlot(rngList[1], frameType,
                                                                                 EncounterType);
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                 pid = rngList[3];
                                 pid = pid ^ 0x10000;
@@ -1640,7 +1640,7 @@ namespace RNGReporter.Objects
                             else if (EncounterMod == EncounterMod.Search)
                             {
                                 // Check for item or battle
-                                if (((ulong) rngList[0]*1000 >> 32) < 400)
+                                if (((ulong)rngList[0] * 1000 >> 32) < 400)
                                 {
                                     encounterSlot = EncounterSlotCalc.encounterSlot(rngList[1], frameType,
                                                                                     EncounterType);
@@ -1653,7 +1653,7 @@ namespace RNGReporter.Objects
                                 pid = rngList[3];
                                 pid = pid ^ 0x10000;
 
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                 frame = Frame.GenerateFrame(
                                     FrameType.Method5Natures,
@@ -1680,13 +1680,13 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[1]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[1] * 0xFFFF) >> 32) / 656) < 67;
 
                                 // passed CC check
                                 if (synchable)
                                 {
                                     // Add all the Cute Charm possibilities
-                                    nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[6] * 25) >> 32);
 
                                     for (int i = -4; i < 5; i++)
                                     {
@@ -1752,7 +1752,7 @@ namespace RNGReporter.Objects
                                     pid = (pid ^ 0x80000000);
 
                                 synchable = (rngList[1] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                 if (synchable && !frameCompare.CompareNature(nature))
                                     mod = EncounterMod.Synchronize;
@@ -1765,7 +1765,7 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 synchable = (rngList[1] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[5] * 25) >> 32);
                             }
 
                             idTest = (idLower ^ (pid & 1) ^ (pid >> 31));
@@ -1774,7 +1774,7 @@ namespace RNGReporter.Objects
                         }
                         else if (EncounterType == EncounterType.WildSwarm)
                         {
-                            bool swarm = (((ulong) rngList[1]*0xFFFF/0x290) >> 32) < 40;
+                            bool swarm = (((ulong)rngList[1] * 0xFFFF / 0x290) >> 32) < 40;
                             if (swarm)
                                 // we'll use non-existent slot 12 to denote a swarm
                                 encounterSlot = 12;
@@ -1786,9 +1786,9 @@ namespace RNGReporter.Objects
                             {
                                 synchable = (rngList[0] >> 31) == 1;
                                 if (synchable)
-                                    nature = (uint) SynchNature;
+                                    nature = (uint)SynchNature;
                                 else
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                 pid = rngList[4];
                                 pid = pid ^ 0x10000;
@@ -1796,7 +1796,7 @@ namespace RNGReporter.Objects
                             else if (EncounterMod == EncounterMod.CuteCharm)
                             {
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                 pid = rngList[4];
                                 pid = pid ^ 0x10000;
@@ -1805,19 +1805,19 @@ namespace RNGReporter.Objects
                                 if (!synchable)
                                 {
                                     // leave it as-is
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
                                 }
                                 else
                                 {
                                     pid = Functions.GenderModPID(pid, rngList[5], SynchNature);
-                                    nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[6] * 25) >> 32);
                                 }
 
                                 synchable = false;
                             }
                             else if (EncounterMod == EncounterMod.Compoundeyes)
                             {
-                                swarm = (((ulong) rngList[0]*0xFFFF/0x290) >> 32) < 40;
+                                swarm = (((ulong)rngList[0] * 0xFFFF / 0x290) >> 32) < 40;
                                 if (swarm)
                                     // we'll use non-existent slot 12 to denote a swarm
                                     encounterSlot = 12;
@@ -1826,7 +1826,7 @@ namespace RNGReporter.Objects
                                                                                     EncounterType);
 
                                 synchable = false;
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                 pid = rngList[3];
                                 pid = pid ^ 0x10000;
@@ -1838,10 +1838,10 @@ namespace RNGReporter.Objects
 
                                 // not a synch, but the CC check -- need to relabel (unfinished)
                                 // also never used
-                                synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                 // Add all the Cute Charm possibilities
-                                nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[6] * 25) >> 32);
 
                                 for (int i = -4; i < 5; i++)
                                 {
@@ -1906,7 +1906,7 @@ namespace RNGReporter.Objects
                                     pid = (pid ^ 0x80000000);
 
                                 synchable = (rngList[0] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                 if (synchable && !frameCompare.CompareNature(nature))
                                     mod = EncounterMod.Synchronize;
@@ -1916,7 +1916,7 @@ namespace RNGReporter.Objects
                             else
                             {
                                 synchable = (rngList[0] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                 pid = rngList[4];
                                 pid = pid ^ 0x10000;
@@ -1932,9 +1932,9 @@ namespace RNGReporter.Objects
                             {
                                 synchable = (rngList[0] >> 31) == 1;
                                 if (synchable)
-                                    nature = (uint) SynchNature;
+                                    nature = (uint)SynchNature;
                                 else
-                                    nature = (uint) (((ulong) rngList[2]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[2] * 25) >> 32);
 
                                 pid = rngList[1];
                                 pid = pid ^ 0x10000;
@@ -1942,7 +1942,7 @@ namespace RNGReporter.Objects
                             else if (EncounterMod == EncounterMod.CuteCharm)
                             {
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                 pid = rngList[1];
                                 pid = pid ^ 0x10000;
@@ -1951,12 +1951,12 @@ namespace RNGReporter.Objects
                                 if (!synchable)
                                 {
                                     // leave it as-is
-                                    nature = (uint) (((ulong) rngList[2]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[2] * 25) >> 32);
                                 }
                                 else
                                 {
                                     pid = Functions.GenderModPID(pid, rngList[2], SynchNature);
-                                    nature = (uint) (((ulong) rngList[3]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[3] * 25) >> 32);
                                 }
 
                                 synchable = false;
@@ -1964,7 +1964,7 @@ namespace RNGReporter.Objects
                             else if (EncounterMod == EncounterMod.Compoundeyes)
                             {
                                 synchable = false;
-                                nature = (uint) (((ulong) rngList[1]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[1] * 25) >> 32);
 
                                 pid = rngList[0];
                                 pid = pid ^ 0x10000;
@@ -1975,14 +1975,14 @@ namespace RNGReporter.Objects
                                 pid = pid ^ 0x10000;
 
                                 // not a synch, but the CC check -- need to relabel (unfinished)
-                                synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                 // CC check
                                 if (synchable)
                                 {
                                     // Add only 50% Cute Charm possibilities because the only applicable
                                     // stationaries have a 50\50 male-female ratio.
-                                    nature = (uint) (((ulong) rngList[3]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[3] * 25) >> 32);
 
                                     for (int i = -1; i < 2; i++)
                                     {
@@ -2026,7 +2026,7 @@ namespace RNGReporter.Objects
                                 }
 
                                 synchable = (rngList[0] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[2]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[2] * 25) >> 32);
 
                                 if (synchable && !frameCompare.CompareNature(nature))
                                     mod = EncounterMod.Synchronize;
@@ -2036,7 +2036,7 @@ namespace RNGReporter.Objects
                             else
                             {
                                 synchable = (rngList[0] >> 31) == 1;
-                                nature = (uint) (((ulong) rngList[2]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[2] * 25) >> 32);
 
                                 pid = rngList[1];
                                 pid = pid ^ 0x10000;
@@ -2053,7 +2053,7 @@ namespace RNGReporter.Objects
                             pid = rngList[3];
                             pid = pid ^ 0x10000;
 
-                            nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                            nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                             synchable = ((rngList[0] >> 31) == 1) && ((rngList[2] >> 31) == 1);
 
@@ -2067,7 +2067,7 @@ namespace RNGReporter.Objects
                         else if (EncounterType == EncounterType.LarvestaEgg)
                         {
                             pid = rngList[0];
-                            nature = (uint) (((ulong) rngList[2]*25) >> 32);
+                            nature = (uint)(((ulong)rngList[2] * 25) >> 32);
                             synchable = false;
                         }
                         else if (EncounterType == EncounterType.Entralink)
@@ -2080,21 +2080,21 @@ namespace RNGReporter.Objects
                             if (frameCompare.GenderFilter.GenderValue == 0xFF)
                             {
                                 // leave it as-is
-                                nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[5] * 25) >> 32);
                             }
-                                // always female
+                            // always female
                             else if (frameCompare.GenderFilter.GenderValue == 0xFE)
                             {
-                                var genderAdjustment = (uint) ((0x8*(ulong) rngList[2]) >> 32);
+                                var genderAdjustment = (uint)((0x8 * (ulong)rngList[2]) >> 32);
                                 pid = (pid & 0xFFFFFF00) | (genderAdjustment + 1);
-                                nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[6] * 25) >> 32);
                             }
-                                // always male
+                            // always male
                             else if (frameCompare.GenderFilter.GenderValue == 0x0)
                             {
-                                var genderAdjustment = (uint) ((0xF6*(ulong) rngList[2]) >> 32);
+                                var genderAdjustment = (uint)((0xF6 * (ulong)rngList[2]) >> 32);
                                 pid = (pid & 0xFFFFFF00) | (genderAdjustment + 8);
-                                nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[6] * 25) >> 32);
                             }
                             else
                             {
@@ -2102,7 +2102,7 @@ namespace RNGReporter.Objects
                                 {
                                     var genderAdjustment =
                                         (uint)
-                                        (((0xFE - frameCompare.GenderFilter.GenderValue)*(ulong) rngList[2]) >>
+                                        (((0xFE - frameCompare.GenderFilter.GenderValue) * (ulong)rngList[2]) >>
                                          32);
                                     pid = (pid & 0xFFFFFF00) |
                                           (genderAdjustment + frameCompare.GenderFilter.GenderValue);
@@ -2111,10 +2111,10 @@ namespace RNGReporter.Objects
                                 {
                                     var genderAdjustment =
                                         (uint)
-                                        (((frameCompare.GenderFilter.GenderValue - 1)*(ulong) rngList[2]) >> 32);
+                                        (((frameCompare.GenderFilter.GenderValue - 1) * (ulong)rngList[2]) >> 32);
                                     pid = (pid & 0xFFFFFF00) | (genderAdjustment + 1);
                                 }
-                                nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[6] * 25) >> 32);
                             }
                             if ((pid & 0x10000) == 0x10000)
                                 pid = pid ^ 0x10000;
@@ -2129,21 +2129,21 @@ namespace RNGReporter.Objects
                             if (frameCompare.GenderFilter.GenderValue == 0xFF)
                             {
                                 // leave it as-is
-                                nature = (uint) (((ulong) rngList[3]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[3] * 25) >> 32);
                             }
-                                // always female
+                            // always female
                             else if (frameCompare.GenderFilter.GenderValue == 0xFE)
                             {
-                                var genderAdjustment = (uint) ((0x8*(ulong) rngList[3]) >> 32);
+                                var genderAdjustment = (uint)((0x8 * (ulong)rngList[3]) >> 32);
                                 pid = (pid & 0xFFFFFF00) | (genderAdjustment + 1);
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
                             }
-                                // always male
+                            // always male
                             else if (frameCompare.GenderFilter.GenderValue == 0x0)
                             {
-                                var genderAdjustment = (uint) ((0xF6*(ulong) rngList[3]) >> 32);
+                                var genderAdjustment = (uint)((0xF6 * (ulong)rngList[3]) >> 32);
                                 pid = (pid & 0xFFFFFF00) | (genderAdjustment + 8);
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
                             }
                             else
                             {
@@ -2151,7 +2151,7 @@ namespace RNGReporter.Objects
                                 {
                                     var genderAdjustment =
                                         (uint)
-                                        (((0xFE - frameCompare.GenderFilter.GenderValue)*(ulong) rngList[3]) >>
+                                        (((0xFE - frameCompare.GenderFilter.GenderValue) * (ulong)rngList[3]) >>
                                          32);
                                     pid = (pid & 0xFFFFFF00) |
                                           (genderAdjustment + frameCompare.GenderFilter.GenderValue);
@@ -2160,13 +2160,13 @@ namespace RNGReporter.Objects
                                 {
                                     var genderAdjustment =
                                         (uint)
-                                        (((frameCompare.GenderFilter.GenderValue - 1)*(ulong) rngList[3]) >> 32);
+                                        (((frameCompare.GenderFilter.GenderValue - 1) * (ulong)rngList[3]) >> 32);
                                     pid = (pid & 0xFFFFFF00) | (genderAdjustment + 1);
                                 }
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
                             }
                             if (synchable && EncounterMod == EncounterMod.Synchronize)
-                                nature = (uint) SynchNature;
+                                nature = (uint)SynchNature;
                             pid = pid ^ 0x10000;
                         }
                         else
@@ -2180,14 +2180,14 @@ namespace RNGReporter.Objects
                                                                                 EncounterType);
 
                                 synchable = false;
-                                nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                 pid = rngList[3];
                                 pid = pid ^ 0x10000;
                             }
                             else
                             {
-                                if (EncounterType == EncounterType.WildSuperRod && (rngList[1] >> 16)/656 >= 50)
+                                if (EncounterType == EncounterType.WildSuperRod && (rngList[1] >> 16) / 656 >= 50)
                                     continue;
 
                                 encounterSlot = EncounterSlotCalc.encounterSlot(rngList[2], frameType,
@@ -2197,9 +2197,9 @@ namespace RNGReporter.Objects
                                 {
                                     synchable = (rngList[0] >> 31) == 1;
                                     if (synchable)
-                                        nature = (uint) SynchNature;
+                                        nature = (uint)SynchNature;
                                     else
-                                        nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                        nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                     pid = rngList[4];
                                     pid = pid ^ 0x10000;
@@ -2207,7 +2207,7 @@ namespace RNGReporter.Objects
                                 else if (EncounterMod == EncounterMod.CuteCharm)
                                 {
                                     // not a synch, but the CC check -- need to relabel (unfinished)
-                                    synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                    synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                     pid = rngList[4];
                                     pid = pid ^ 0x10000;
@@ -2216,12 +2216,12 @@ namespace RNGReporter.Objects
                                     if (!synchable)
                                     {
                                         // leave it as-is
-                                        nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                        nature = (uint)(((ulong)rngList[5] * 25) >> 32);
                                     }
                                     else
                                     {
                                         pid = Functions.GenderModPID(pid, rngList[5], SynchNature);
-                                        nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                        nature = (uint)(((ulong)rngList[6] * 25) >> 32);
                                     }
 
                                     synchable = false;
@@ -2229,13 +2229,13 @@ namespace RNGReporter.Objects
                                 else if (EncounterMod == EncounterMod.Compoundeyes)
                                 {
                                     if (EncounterType == EncounterType.WildSuperRod &&
-                                        (rngList[0] >> 16)/656 >= 50)
+                                        (rngList[0] >> 16) / 656 >= 50)
                                         continue;
 
                                     synchable = false;
                                     encounterSlot = EncounterSlotCalc.encounterSlot(rngList[1], frameType,
                                                                                     EncounterType);
-                                    nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                     pid = rngList[3];
                                     pid = pid ^ 0x10000;
@@ -2245,7 +2245,7 @@ namespace RNGReporter.Objects
                                     synchable = false;
                                     encounterSlot = EncounterSlotCalc.encounterSlot(rngList[1], frameType,
                                                                                     EncounterType);
-                                    nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                     pid = rngList[3];
                                     pid = pid ^ 0x10000;
@@ -2257,7 +2257,7 @@ namespace RNGReporter.Objects
                                         // Do the Suction Cups check for fishing frames
                                         encounterSlot = EncounterSlotCalc.encounterSlot(rngList[1], frameType,
                                                                                         EncounterType);
-                                        nature = (uint) (((ulong) rngList[4]*25) >> 32);
+                                        nature = (uint)(((ulong)rngList[4] * 25) >> 32);
 
                                         pid = rngList[3];
                                         pid = pid ^ 0x10000;
@@ -2290,13 +2290,13 @@ namespace RNGReporter.Objects
                                     pid = pid ^ 0x10000;
 
                                     // not a synch, but the CC check -- need to relabel (unfinished)
-                                    synchable = ((((ulong) rngList[0]*0xFFFF) >> 32)/656) < 67;
+                                    synchable = ((((ulong)rngList[0] * 0xFFFF) >> 32) / 656) < 67;
 
                                     // passed CC check
                                     if (synchable)
                                     {
                                         // Add all the Cute Charm possibilities
-                                        nature = (uint) (((ulong) rngList[6]*25) >> 32);
+                                        nature = (uint)(((ulong)rngList[6] * 25) >> 32);
 
                                         for (int i = -4; i < 5; i++)
                                         {
@@ -2361,7 +2361,7 @@ namespace RNGReporter.Objects
                                     pid = pid ^ 0x10000;
 
                                     synchable = (rngList[0] >> 31) == 1;
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                     if (synchable && !frameCompare.CompareNature(nature))
                                         mod = EncounterMod.Synchronize;
@@ -2371,7 +2371,7 @@ namespace RNGReporter.Objects
                                 else
                                 {
                                     synchable = (rngList[0] >> 31) == 1;
-                                    nature = (uint) (((ulong) rngList[5]*25) >> 32);
+                                    nature = (uint)(((ulong)rngList[5] * 25) >> 32);
 
                                     pid = rngList[4];
                                     pid = pid ^ 0x10000;
@@ -2387,7 +2387,7 @@ namespace RNGReporter.Objects
                     }
 
                     // worthless calculation
-                    int ability = (int) (pid >> 16) & 1;
+                    int ability = (int)(pid >> 16) & 1;
 
                     if (RNGIVs != null)
                     {
@@ -2456,17 +2456,17 @@ namespace RNGReporter.Objects
                     // for Nidoran\Volbeat\Illumise determination
                     // if 0, get Nidoran-F\Volbeat
                     // if 1, get Nidoran-M\Illumise
-                    var speciesSpecial = (int) (rngList[index] >> 31);
+                    var speciesSpecial = (int)(rngList[index] >> 31);
                     // Everstone activation calc
                     //int off = MaleOnlySpecies ? 1 : 0;
                     if (MaleOnlySpecies) index++;
                     //index = 1
-                    nature = (uint) ((ulong) (rngList[index++])*25 >> 32);
+                    nature = (uint)((ulong)(rngList[index++]) * 25 >> 32);
                     if (SynchNature > -1)
                     {
                         if ((rngList[index++] >> 31) == 1)
                         {
-                            nature = (uint) SynchNature;
+                            nature = (uint)SynchNature;
                             everstone = true;
                         }
                     }
@@ -2616,27 +2616,27 @@ namespace RNGReporter.Objects
                     // for Nidoran\Volbeat\Illumise determination
                     // if 0, get Nidoran-F\Volbeat
                     // if 1, get Nidoran-M\Illumise
-                    var speciesSpecial = (int) (rngList[index] >> 31);
+                    var speciesSpecial = (int)(rngList[index] >> 31);
                     // Everstone activation calc
                     //int off = MaleOnlySpecies ? 1 : 0;
                     if (MaleOnlySpecies) index++;
                     //index = 1
                     if (SynchNature > -1)
                     {
-                        nature = (uint) ((ulong) (rngList[index++])*25 >> 32);
+                        nature = (uint)((ulong)(rngList[index++]) * 25 >> 32);
                         if ((rngList[index++] >> 31) == 1)
                         {
-                            nature = (uint) SynchNature;
+                            nature = (uint)SynchNature;
                             everstone = true;
                         }
                         // Dream World ability calc
-                        dream = !DittoUsed && (uint) ((ulong) (rngList[index++])*5 >> 32) > 1;
+                        dream = !DittoUsed && (uint)((ulong)(rngList[index++]) * 5 >> 32) > 1;
                     }
                     else
                     {
-                        nature = (uint) ((ulong) (rngList[index++])*25 >> 32);
+                        nature = (uint)((ulong)(rngList[index++]) * 25 >> 32);
                         // Dream World ability calc
-                        dream = !DittoUsed && (uint) ((ulong) (rngList[index++])*5 >> 32) > 1;
+                        dream = !DittoUsed && (uint)((ulong)(rngList[index++]) * 5 >> 32) > 1;
                     }
                     if (DittoUsed) index = index + 2;
 
@@ -2790,27 +2790,27 @@ namespace RNGReporter.Objects
                     // for Nidoran\Volbeat\Illumise determination
                     // if 0, get Nidoran-F\Volbeat
                     // if 1, get Nidoran-M\Illumise
-                    var speciesSpecial = (int) (rngList[index] >> 31);
+                    var speciesSpecial = (int)(rngList[index] >> 31);
                     // Everstone activation calc
                     //int off = MaleOnlySpecies ? 1 : 0;
                     if (MaleOnlySpecies) index++;
                     //index = 1
                     if (SynchNature > -1)
                     {
-                        nature = (uint) ((ulong) (rngList[index++])*25 >> 32);
+                        nature = (uint)((ulong)(rngList[index++]) * 25 >> 32);
                         if ((rngList[index++] >> 31) == 1)
                         {
-                            nature = (uint) SynchNature;
+                            nature = (uint)SynchNature;
                             everstone = true;
                         }
                         // Dream World ability calc
-                        dream = !DittoUsed && (uint) ((ulong) (rngList[index++])*5 >> 32) > 1;
+                        dream = !DittoUsed && (uint)((ulong)(rngList[index++]) * 5 >> 32) > 1;
                     }
                     else
                     {
-                        nature = (uint) ((ulong) (rngList[index++])*25 >> 32);
+                        nature = (uint)((ulong)(rngList[index++]) * 25 >> 32);
                         // Dream World ability calc
-                        dream = !DittoUsed && (uint) ((ulong) (rngList[index++])*5 >> 32) > 1;
+                        dream = !DittoUsed && (uint)((ulong)(rngList[index++]) * 5 >> 32) > 1;
                     }
 
                     // IV Inheritance calc
@@ -2836,7 +2836,7 @@ namespace RNGReporter.Objects
                             {
                                 rngResult = rng64.GetNext32BitNumber();
                                 rngList.Add(rngResult);
-                                inhArray.Add((rngResult)*6 >> 32);
+                                inhArray.Add((rngResult) * 6 >> 32);
                             }
                         }
                     }
@@ -3065,7 +3065,7 @@ namespace RNGReporter.Objects
                 var huntRng = new PokeRng(0);
 
                 //  Instantiate our regular RNG
-                var rng1 = new PokeRng((uint) InitialSeed);
+                var rng1 = new PokeRng((uint)InitialSeed);
                 var rng2 = new PokeRng(0);
 
                 for (uint cnt = 1; cnt < InitialFrame; cnt++)
@@ -3101,7 +3101,7 @@ namespace RNGReporter.Objects
                     {
                         //  Dont want to synch at all, just use the 
                         //  RNG call to get our hunt nature,
-                        nature = firstRng%25;
+                        nature = firstRng % 25;
                     }
                     else if (EncounterMod == EncounterMod.Synchronize)
                     {
@@ -3109,21 +3109,21 @@ namespace RNGReporter.Objects
                         if ((firstRng & 1) == 0)
                         {
                             //  Set the hunt to the nature of our syncher
-                            nature = (uint) SynchNature;
+                            nature = (uint)SynchNature;
                         }
                         else
                         {
                             //  Ok, we wanted to synch, but missed it so lets
                             //  get the next RNG call and then go ahead and
                             //  use that for the nature.
-                            nature = rng2.GetNext16BitNumber()%25;
+                            nature = rng2.GetNext16BitNumber() % 25;
                             offset++;
                         }
                     }
                     else if (EncounterMod == EncounterMod.CuteCharm)
                     {
                         //  Check for even/odd on the high order bit.
-                        if ((firstRng%3) > 0)
+                        if ((firstRng % 3) > 0)
                         {
                             switch (SynchNature)
                             {
@@ -3157,7 +3157,7 @@ namespace RNGReporter.Objects
                             }
                         }
                         // either way, eat up a frame for the Cute Charm check and determine nature
-                        nature = rng2.GetNext16BitNumber()%25;
+                        nature = rng2.GetNext16BitNumber() % 25;
                         offset++;
                     }
 
@@ -3177,7 +3177,7 @@ namespace RNGReporter.Objects
 
                         uint pid = (pid2 << 16) + pid1;
 
-                        if (pid%25 == nature && CuteCheck(pid))
+                        if (pid % 25 == nature && CuteCheck(pid))
                         {
                             // Wild Pokémon IVs are generally generated by Methods 2 and 4
                             uint iv1;
@@ -3208,13 +3208,13 @@ namespace RNGReporter.Objects
                                     seed,
                                     frameType,
                                     EncounterType,
-                                    (uint) cnt,
+                                    (uint)cnt,
                                     firstRng,
                                     pid1,
                                     pid2,
                                     iv1,
                                     iv2,
-                                    id, sid, (uint) offset,
+                                    id, sid, (uint)offset,
                                     encounterSlot);
 
 
@@ -3236,7 +3236,7 @@ namespace RNGReporter.Objects
                 var huntRng = new PokeRng(0);
 
                 //  Instantiate our regular RNG
-                var rng1 = new PokeRng((uint) InitialSeed);
+                var rng1 = new PokeRng((uint)InitialSeed);
                 var rng2 = new PokeRng(0);
 
                 for (uint cnt = 1; cnt < InitialFrame; cnt++)
@@ -3290,7 +3290,7 @@ namespace RNGReporter.Objects
                         }
 
                         // Skip this call if it an encounter cannot be made
-                        if (firstRng/656 > threshold)
+                        if (firstRng / 656 > threshold)
                             continue;
 
                         encounterSlot = EncounterSlotCalc.encounterSlot(rng2.GetNext32BitNumber(), frameType,
@@ -3310,14 +3310,14 @@ namespace RNGReporter.Objects
                         if (firstRng >> 15 == 0)
                         {
                             //  Set the hunt to the nature our our syncher
-                            nature = (uint) SynchNature;
+                            nature = (uint)SynchNature;
                         }
                         else
                         {
                             //  Ok, we wanted to synch, but missed it so lets
                             //  get the next RNG call and then go ahead and
                             //  use that for the nature.
-                            nature = rng2.GetNext16BitNumber()/0xA3E;
+                            nature = rng2.GetNext16BitNumber() / 0xA3E;
                             offset++;
                         }
                     }
@@ -3329,10 +3329,10 @@ namespace RNGReporter.Objects
                     {
                         //  Dont want to synch at all, just use the 
                         //  RNG call to get our hunt nature,
-                        nature = firstRng/0xA3E;
+                        nature = firstRng / 0xA3E;
                     }
 
-                    if (EncounterMod == EncounterMod.CuteCharm && firstRng/0x5556 != 0)
+                    if (EncounterMod == EncounterMod.CuteCharm && firstRng / 0x5556 != 0)
                     {
                         uint buffer = 0;
                         if (SynchNature > -1)
@@ -3394,7 +3394,7 @@ namespace RNGReporter.Objects
 
                             uint pid = (pid2 << 16) | pid1;
 
-                            if (pid%25 == nature)
+                            if (pid % 25 == nature)
                             {
                                 //  We found a match, we need to buid the frame 
                                 //  as usual now based on the next few RNG calls
@@ -3431,7 +3431,7 @@ namespace RNGReporter.Objects
                 var huntRng = new PokeRng(0);
 
                 //  Instantiate our regular RNG
-                var rng1 = new PokeRng((uint) InitialSeed);
+                var rng1 = new PokeRng((uint)InitialSeed);
                 var rng2 = new PokeRng(0);
 
                 for (uint cnt = 1; cnt < InitialFrame; cnt++)
@@ -3489,7 +3489,7 @@ namespace RNGReporter.Objects
                         }
 
                         // Skip this call if it an encounter cannot be made
-                        if (firstRng%100 > threshold)
+                        if (firstRng % 100 > threshold)
                             continue;
 
                         encounterSlot = EncounterSlotCalc.encounterSlot(rng2.GetNext32BitNumber(), frameType,
@@ -3509,7 +3509,7 @@ namespace RNGReporter.Objects
                         if ((firstRng & 1) == 0)
                         {
                             //  Set the hunt to the nature our our syncher
-                            nature = (uint) SynchNature;
+                            nature = (uint)SynchNature;
                         }
                         else
                         {
@@ -3528,10 +3528,10 @@ namespace RNGReporter.Objects
                     {
                         //  Dont want to synch at all, just use the 
                         //  RNG call to get our hunt nature,
-                        nature = firstRng%25;
+                        nature = firstRng % 25;
                     }
 
-                    if (EncounterMod == EncounterMod.CuteCharm && firstRng%3 != 0)
+                    if (EncounterMod == EncounterMod.CuteCharm && firstRng % 3 != 0)
                     {
                         uint buffer = 0;
                         if (SynchNature > -1)
@@ -3597,7 +3597,7 @@ namespace RNGReporter.Objects
 
                             uint pid = (pid2 << 16) | pid1;
 
-                            if (pid%25 == nature)
+                            if (pid % 25 == nature)
                             {
                                 //  We found a match, we need to buid the frame 
                                 //  as usual now based on the next few RNG calls
@@ -3629,7 +3629,7 @@ namespace RNGReporter.Objects
             }
             else if (frameType == FrameType.ColoXD)
             {
-                rng = new XdRng((uint) InitialSeed);
+                rng = new XdRng((uint)InitialSeed);
                 rngList = new List<uint>();
 
                 for (uint cnt = 1; cnt < InitialFrame; cnt++)
@@ -3658,7 +3658,7 @@ namespace RNGReporter.Objects
                     }
                 }
             }
-            else if(frameType == FrameType.Channel)
+            else if (frameType == FrameType.Channel)
             {
                 rng = new XdRng((uint)InitialSeed);
                 rngList = new List<uint>();
@@ -3698,7 +3698,7 @@ namespace RNGReporter.Objects
                 //  We are going to grab our initial set of rngs here and
                 //  then start our loop so that we can iterate as many 
                 //  times as we have to.
-                rng = new PokeRng((uint) InitialSeed);
+                rng = new PokeRng((uint)InitialSeed);
                 rngList = new List<uint>();
 
                 for (uint cnt = 1; cnt < InitialFrame; cnt++)
@@ -3707,7 +3707,7 @@ namespace RNGReporter.Objects
                 for (uint cnt = 0; cnt < 20; cnt++)
                     rngList.Add(rng.GetNext16BitNumber());
 
-                
+
 
                 for (uint cnt = 0; cnt < maxResults; cnt++, rngList.RemoveAt(0), rngList.Add(rng.GetNext16BitNumber()))
                 {
@@ -4044,7 +4044,7 @@ namespace RNGReporter.Objects
                                     uint testPID = pid1 | (pid2 << 16);
 
                                     // Call the ARNG to change the PID
-                                    testPID = testPID*0x6c078965 + 1;
+                                    testPID = testPID * 0x6c078965 + 1;
 
                                     pid1 = testPID & 0xFFFF;
                                     pid2 = testPID >> 16;
@@ -4116,7 +4116,7 @@ namespace RNGReporter.Objects
             int i = 0;
             uint pid;
             // check for compatibility
-            if ((rngList[i++]*100)/0xFFFF >= Compatibility) return 0;
+            if ((rngList[i++] * 100) / 0xFFFF >= Compatibility) return 0;
 
             //check the everstone
             bool useEverstone = Everstone ? (rngList[i++] >> 15) == 0 : false;
@@ -4358,11 +4358,11 @@ namespace RNGReporter.Objects
                     return currentTime;
                 case State.Long:
                     timerState = State.Short;
-                    currentTime = currentTime + (uint) (((ulong) rngResult*152) >> 32) + 60;
+                    currentTime = currentTime + (uint)(((ulong)rngResult * 152) >> 32) + 60;
                     return currentTime;
                 case State.Short:
                     timerState = State.Skip;
-                    currentTime = currentTime + (uint) (((ulong) rngResult*40) >> 32) + 60;
+                    currentTime = currentTime + (uint)(((ulong)rngResult * 40) >> 32) + 60;
                     return currentTime;
                 case State.Skip:
                     timerState = State.Long;

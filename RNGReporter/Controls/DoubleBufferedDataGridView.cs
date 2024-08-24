@@ -11,16 +11,16 @@ namespace RNGReporter
             RowTemplate.Height = 20;
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
-                float ratio = g.DpiX/96;
+                float ratio = g.DpiX / 96;
 
                 foreach (DataGridViewColumn column in Columns)
                 {
-                    column.Width = (int) (column.Width*ratio + 1);
+                    column.Width = (int)(column.Width * ratio + 1);
                 }
 
                 //this.ColumnHeadersHeight = 100;
 
-                ColumnHeadersHeight = (int) (ColumnHeadersHeight*ratio);
+                ColumnHeadersHeight = (int)(ColumnHeadersHeight * ratio);
             }
 
 

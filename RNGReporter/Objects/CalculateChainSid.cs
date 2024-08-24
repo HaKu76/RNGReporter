@@ -93,7 +93,7 @@ namespace RNGReporter.Objects
                 //  of the information we were provided 
                 //  is a match.
 
-                uint seed = (iv2_test << 16) + (cnt%0xFFFF);
+                uint seed = (iv2_test << 16) + (cnt % 0xFFFF);
 
                 var rng = new PokeRngR(seed);
 
@@ -107,7 +107,7 @@ namespace RNGReporter.Objects
 
                     for (int adjustCnt = 0; adjustCnt < 13; adjustCnt++)
                     {
-                        uint adjustRng = rng.GetNext16BitNumber()&1U;
+                        uint adjustRng = rng.GetNext16BitNumber() & 1U;
                         adjust |= (adjustRng << (15 - adjustCnt));
                     }
 
@@ -121,14 +121,14 @@ namespace RNGReporter.Objects
                     uint genderNumber = adjustedLow & 0xFF;
 
                     // lol make this not suck
-                    if ((ability == "Single Ability" ||
+                    if ((ability == "只有一个特性" ||
                          (
-                             (abilityNumber == 0 && ability == "Ability 0") ||
-                             (abilityNumber == 1 && ability == "Ability 1")
+                             (abilityNumber == 0 && ability == "0") ||
+                             (abilityNumber == 1 && ability == "1")
                          )) &&
                         gender.Matches(genderNumber))
                     {
-                        var candidatePid = new CandidatePid {AdjustedLow = adjustedLow, NaturalHigh = pid2};
+                        var candidatePid = new CandidatePid { AdjustedLow = adjustedLow, NaturalHigh = pid2 };
                         candidatePids.Add(candidatePid);
                     }
                 }
@@ -156,7 +156,7 @@ namespace RNGReporter.Objects
                     //  If any of them work, we will add this to 
                     //  the new candidateSids list and break to 
                     //  go to the next seed.  Check the nature.
-                    uint pidNature = pid%25;
+                    uint pidNature = pid % 25;
 
                     if (nature.Number == pidNature)
                     {

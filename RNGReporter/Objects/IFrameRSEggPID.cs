@@ -40,9 +40,9 @@ namespace RNGReporter.Objects
         {
             get
             {
-                uint minutes = frameLowerPID/3600;
-                uint seconds = (frameLowerPID - (3600*minutes))/60;
-                uint milli = ((frameLowerPID%60)*100)/60;
+                uint minutes = frameLowerPID / 3600;
+                uint seconds = (frameLowerPID - (3600 * minutes)) / 60;
+                uint milli = ((frameLowerPID % 60) * 100) / 60;
 
                 return minutes.ToString() + ":" + seconds.ToString("D2") + "." + milli.ToString("D2");
             }
@@ -58,9 +58,9 @@ namespace RNGReporter.Objects
         {
             get
             {
-                uint minutes = frameUpperPID/3600;
-                uint seconds = (frameUpperPID - (3600*minutes))/60;
-                uint milli = ((frameUpperPID%60)*100)/60;
+                uint minutes = frameUpperPID / 3600;
+                uint seconds = (frameUpperPID - (3600 * minutes)) / 60;
+                uint milli = ((frameUpperPID % 60) * 100) / 60;
 
                 return minutes.ToString() + ":" + seconds.ToString("D2") + "." + milli.ToString("D2");
             }
@@ -85,7 +85,7 @@ namespace RNGReporter.Objects
 
         public string Nature
         {
-            get { return Functions.NatureStrings((int) Functions.Nature(pid)); }
+            get { return Functions.NatureStrings((int)Functions.Nature(pid)); }
         }
 
         public string Ability
@@ -167,15 +167,15 @@ namespace RNGReporter.Objects
             switch (CompareType)
             {
                 case "Frame":
-                    result = direction*x.FrameLowerPID.CompareTo(y.FrameLowerPID);
+                    result = direction * x.FrameLowerPID.CompareTo(y.FrameLowerPID);
                     if (result == 0)
                     {
-                        result = direction*x.Redraws.CompareTo(y.Redraws);
+                        result = direction * x.Redraws.CompareTo(y.Redraws);
                     }
                     return result;
                 default:
                     //use ordinal due to better efficiency and because it uses the current culture
-                    result = direction*
+                    result = direction *
                              String.CompareOrdinal(x.GetType().GetProperty(CompareType).GetValue(x, null).ToString(),
                                                    y.GetType().GetProperty(CompareType).GetValue(y, null).ToString());
 
