@@ -52,7 +52,7 @@ namespace RNGReporter.Objects
                 {
                     if (skips != 0 && skips == n + 1)
                     {
-                        responses += " 跳过这两个电话序列)   ";
+                        responses += " 跳过这几个电话序列)   ";
                     }
                     else
                     {

@@ -71,49 +71,49 @@ namespace RNGReporter
                 {
                     new ComboBoxItem("Method 1", FrameType.Method1),
                     new ComboBoxItem("Method 1 Reverse PID", FrameType.Method1Reverse),
-                    new ComboBoxItem("Method 2 (Gen 3)", FrameType.Method2),
-                    new ComboBoxItem("Method 4 (Gen 3)", FrameType.Method4),
-                    new ComboBoxItem("Method H-1 (Gen 3)", FrameType.MethodH1),
-                    new ComboBoxItem("Method H-2 (Gen 3)", FrameType.MethodH2),
-                    new ComboBoxItem("Method H-4 (Gen 3)", FrameType.MethodH4),
-                    new ComboBoxItem("Method J (DPPt)", FrameType.MethodJ),
-                    new ComboBoxItem("Method K (HGSS)", FrameType.MethodK),
-                    new ComboBoxItem("Gen 5 IVs (Standard Seed)",
+                    new ComboBoxItem("Method 2（GEN3）", FrameType.Method2),
+                    new ComboBoxItem("Method 4（GEN3）", FrameType.Method4),
+                    new ComboBoxItem("Method H-1（GEN3）", FrameType.MethodH1),
+                    new ComboBoxItem("Method H-2（GEN3）", FrameType.MethodH2),
+                    new ComboBoxItem("Method H-4（GEN3）", FrameType.MethodH4),
+                    new ComboBoxItem("Method J（钻石珍珠白金）", FrameType.MethodJ),
+                    new ComboBoxItem("Method K（心金魂银）", FrameType.MethodK),
+                    new ComboBoxItem("GEN5个体值（普通的Seed）",
                                      FrameType.Method5Standard),
-                    new ComboBoxItem("Gen 5 IVs (C-Gear Seed)", FrameType.Method5CGear),
-                    new ComboBoxItem("Gen 5 PIDRNG", FrameType.Method5Natures),
-                    new ComboBoxItem("Chained Shiny", FrameType.ChainedShiny),
-                    new ComboBoxItem("Gen 4 Egg PID (Normal)", FrameType.Gen4Normal),
-                    new ComboBoxItem("Gen 4 Egg PID (International)",
+                    new ComboBoxItem("GEN5个体值（C装置Seed）", FrameType.Method5CGear),
+                    new ComboBoxItem("GEN5 PIDRNG", FrameType.Method5Natures),
+                    new ComboBoxItem("连锁异色", FrameType.ChainedShiny),
+                    new ComboBoxItem("GEN4蛋PID（普通的）", FrameType.Gen4Normal),
+                    new ComboBoxItem("GEN4蛋PID（异国）",
                                      FrameType.Gen4International),
-                    new ComboBoxItem("Breeding (Emerald No Splits)", FrameType.Bred),
-                    new ComboBoxItem("Breeding (Emerald Splits)", FrameType.BredSplit),
-                    new ComboBoxItem("Breeding (Emerald Alternate)",
+                    new ComboBoxItem("孵蛋（绿宝石 No Splits）", FrameType.Bred),
+                    new ComboBoxItem("孵蛋（绿宝石 Splits）", FrameType.BredSplit),
+                    new ComboBoxItem("孵蛋（绿宝石 Alternate）",
                                      FrameType.BredAlternate),
-                    new ComboBoxItem("Breeding (RSUpper)", FrameType.RSBredUpper),
-                    new ComboBoxItem("Breeding (DPPt)", FrameType.DPPtBred),
-                    new ComboBoxItem("Breeding (HGSS)", FrameType.HGSSBred),
-                    new ComboBoxItem("Breeding (BW)", FrameType.BWBred),
-                    new ComboBoxItem("Breeding (BW, International)",
+                    new ComboBoxItem("孵蛋（红蓝宝石）", FrameType.RSBredUpper),
+                    new ComboBoxItem("孵蛋（钻石珍珠白金）", FrameType.DPPtBred),
+                    new ComboBoxItem("孵蛋（心金魂银）", FrameType.HGSSBred),
+                    new ComboBoxItem("孵蛋（黑白）", FrameType.BWBred),
+                    new ComboBoxItem("孵蛋（黑白，异国）",
                                      FrameType.BWBredInternational),
-                    new ComboBoxItem("Wondercard IVs (4th Gen)", FrameType.WondercardIVs),
-                    new ComboBoxItem("Wondercard (5th Gen)", FrameType.Wondercard5thGen),
-                    new ComboBoxItem("GLAN Wondercard (5th Gen)",
+                    new ComboBoxItem("神秘卡片个体值（GEN4）", FrameType.WondercardIVs),
+                    new ComboBoxItem("神秘卡片（GEN5）", FrameType.Wondercard5thGen),
+                    new ComboBoxItem("GLAN 神秘卡片（GEN5）",
                                      FrameType.Wondercard5thGenFixed),
-                    new ComboBoxItem("Colosseum\\XD", FrameType.ColoXD),
-                    new ComboBoxItem("Channel", FrameType.Channel)
+                    new ComboBoxItem("圆形竞技场\\XD暗之旋风", FrameType.ColoXD),
+                    new ComboBoxItem("宝可梦频道", FrameType.Channel)
                 });
 
             cuteCharm = new[]
                 {
-                    new ComboBoxItem("Male Lead (50% F Target)", -1),
-                    new ComboBoxItem("Male Lead (75% F Target)", -2),
-                    new ComboBoxItem("Male Lead (25% F Target)", -3),
-                    new ComboBoxItem("Male Lead (12.5% F Target)", -4),
-                    new ComboBoxItem("Female Lead (50% M Target)", 1),
-                    new ComboBoxItem("Female Lead (75% M Target)", 2),
-                    new ComboBoxItem("Female Lead (25% M Target)", 3),
-                    new ComboBoxItem("Female Lead (87.5% M Target)", 4)
+                    new ComboBoxItem("首发♂（目标50%♀)", -1),
+                    new ComboBoxItem("首发♂（目标75%♀)", -2),
+                    new ComboBoxItem("首发♂（目标25%♀)", -3),
+                    new ComboBoxItem("首发♂（目标12.5%♀)", -4),
+                    new ComboBoxItem("首发♀（目标50%♂)", 1),
+                    new ComboBoxItem("首发♀（目标75%♂)", 2),
+                    new ComboBoxItem("首发♀（目标25%♂)", 3),
+                    new ComboBoxItem("首发♀（目标87.5%♂)", 4)
                 };
 
             var ability = new[]
@@ -138,7 +138,7 @@ namespace RNGReporter
                 Settings.Default.Reload();
 
                 MessageBox.Show(
-                    "RNG Reporter has detected a corrupt configuration file, which has been deleted.  RNG Reporter must be restarted.");
+                    "RNG Reporter检测到一个损坏的配置文件，该文件已被删除。RNG Reporter必须重启。");
 
                 Process.GetCurrentProcess().Kill();
             }
@@ -610,7 +610,7 @@ namespace RNGReporter
                      generator.FrameType == FrameType.Method5Natures) &&
                     textBoxSeed.Text.Length == 8)
                 {
-                    MessageBox.Show("This method requires you to copy the Full Seed from the Time Finder window.");
+                    MessageBox.Show("此算法要求您从“seed时间查找”窗口复制完整seed。");
                     seed = ulong.Parse(textBoxSeed.Text, NumberStyles.HexNumber);
                 }
                 else if (generator.FrameType == FrameType.Method5Standard && textBoxSeed.Text.Length > 8)
@@ -1110,11 +1110,11 @@ namespace RNGReporter
                 {
                     CaveSpot.Visible = true;
                     if (generator.EncounterType == EncounterType.WildCaveSpot)
-                        CaveSpot.HeaderText = "Cave Spot";
+                        CaveSpot.HeaderText = "卷尘地面";
                     else if (generator.EncounterType == EncounterType.WildWaterSpot)
-                        CaveSpot.HeaderText = "Bubble Spot";
+                        CaveSpot.HeaderText = "水纹水面";
                     else
-                        CaveSpot.HeaderText = "Shaking Grass";
+                        CaveSpot.HeaderText = "摇动草丛";
                 }
                 else
                 {
@@ -1566,13 +1566,13 @@ namespace RNGReporter
 
                 if (generator.FrameType == FrameType.Method5Natures)
                 {
-                    displayParentsInSearchToolStripMenuItem.Text = "Display Characteristics in Search...";
-                    resetParentsToolStripMenuItem.Text = "Reset Characteristics";
+                    displayParentsInSearchToolStripMenuItem.Text = "在计算结果中显示个性";
+                    resetParentsToolStripMenuItem.Text = "重置个性";
                 }
                 else
                 {
-                    displayParentsInSearchToolStripMenuItem.Text = "Display Parents in Search...";
-                    resetParentsToolStripMenuItem.Text = "Reset Parents";
+                    displayParentsInSearchToolStripMenuItem.Text = "在计算结果中显示父母";
+                    resetParentsToolStripMenuItem.Text = "重置父母";
                 }
             }
             else
@@ -1854,7 +1854,7 @@ namespace RNGReporter
                 }
                 else
                 {
-                    MessageBox.Show("No matches found for the sequence of responses entered.", "No Match Found",
+                    MessageBox.Show("输入的响应序列未找到匹配项。", "未找到匹配项",
                                     MessageBoxButtons.OK);
                 }
             }
@@ -1915,7 +1915,7 @@ namespace RNGReporter
                 }
                 else
                 {
-                    MessageBox.Show("No matches found for the sequence of responses entered.", "No Match Found",
+                    MessageBox.Show("输入的响应序列未找到匹配项。", "未找到匹配项",
                                     MessageBoxButtons.OK);
                 }
             }
@@ -1976,7 +1976,7 @@ namespace RNGReporter
                 }
                 else
                 {
-                    MessageBox.Show("No matches found for the sequence of responses entered.", "No Match Found",
+                    MessageBox.Show("输入的响应序列未找到匹配项。", "未找到匹配项",
                                     MessageBoxButtons.OK);
                 }
             }
@@ -2079,7 +2079,7 @@ namespace RNGReporter
         private void comboBoxMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] encounterMenu;
-            string previousEncounter = "Wild Pokémon";
+            string previousEncounter = "野生宝可梦";
             if (comboBoxEncounterType.SelectedItem != null)
                 previousEncounter = comboBoxEncounterType.SelectedItem.ToString();
 
@@ -2087,15 +2087,15 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon",
-                        "Wild Pokémon (Surfing)",
-                        "Wild Pokémon (Old Rod)",
-                        "Wild Pokémon (Good Rod)",
-                        "Wild Pokémon (Super Rod)",
-                        "Stationary Pokémon",
-                        "Bug-Catching Contest",
-                        "Safari Zone",
-                        "Headbutt"
+                        "野生宝可梦",
+                        "野生宝可梦（冲浪）",
+                        "野生宝可梦（破旧钓竿）",
+                        "野生宝可梦（好钓竿）",
+                        "野生宝可梦（厉害钓竿）",
+                        "定点宝可梦",
+                        "捕虫大赛",
+                        "狩猎地带",
+                        "头锤树"
                     };
 
                 comboBoxEncounterType.DataSource = encounterMenu;
@@ -2107,13 +2107,13 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon",
-                        "Wild Pokémon (Surfing)",
-                        "Wild Pokémon (Old Rod)",
-                        "Wild Pokémon (Good Rod)",
-                        "Wild Pokémon (Super Rod)",
-                        "Stationary Pokémon",
-                        "Safari Zone"
+                        "野生宝可梦",
+                        "野生宝可梦（冲浪）",
+                        "野生宝可梦（破旧钓竿）",
+                        "野生宝可梦（好钓竿）",
+                        "野生宝可梦（厉害钓竿）",
+                        "定点宝可梦",
+                        "狩猎地带"
                     };
 
                 comboBoxEncounterType.DataSource = encounterMenu;
@@ -2122,19 +2122,19 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon",
-                        "Wild Pokémon (Swarm)",
-                        "Wild Pokémon (Surfing)",
-                        "Wild Pokémon (Fishing)",
-                        "Wild Pokémon (Shaking Grass)",
-                        "Wild Pokémon (Bubble Spot)",
-                        "Wild Pokémon (Cave Spot)",
-                        "Stationary Pokémon",
-                        "Roaming Pokémon",
-                        "Gift Pokémon",
-                        "Entralink Pokémon",
-                        "Larvesta Egg",
-                        "Hidden Grotto"
+                        "野生宝可梦",
+                        "野生宝可梦（虫之预感）",
+                        "野生宝可梦（冲浪）",
+                        "野生宝可梦（钓鱼）",
+                        "野生宝可梦（摇动草丛）",
+                        "野生宝可梦（水纹水面）",
+                        "野生宝可梦（卷尘地面）",
+                        "定点宝可梦",
+                        "游走宝可梦",
+                        "礼物宝可梦",
+                        "连入之森宝可梦",
+                        "燃烧虫的蛋",
+                        "隐藏洞穴"
                     };
 
                 comboBoxEncounterType.DataSource = encounterMenu;
@@ -2144,10 +2144,10 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon",
-                        "Stationary Pokémon",
-                        "Roaming Pokémon",
-                        "Gift Pokémon"
+                        "野生宝可梦",
+                        "定点宝可梦",
+                        "游走宝可梦",
+                        "礼物宝可梦"
                     };
 
                 comboBoxEncounterType.DataSource = encounterMenu;
@@ -2156,8 +2156,8 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Normal Wondercard",
-                        "Manaphy Egg"
+                        "普通神秘卡片",
+                        "玛纳霏的蛋"
                     };
 
                 comboBoxEncounterType.DataSource = encounterMenu;
@@ -2166,7 +2166,7 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon"
+                        "野生宝可梦"
                     };
             }
 
@@ -2808,24 +2808,24 @@ namespace RNGReporter
                     한국어ToolStripMenuItem.Checked = true;
                     break;
                 case (Language.SimplifiedChinese):
-                    // 尝试设置字体为微软雅黑  
+                    // 尝试设置字体为Microsoft Sans Serif
                     try
                     {
-                        CellStyle.Font = new Font("微软雅黑", 7.75F);
+                        CellStyle.Font = new Font("Microsoft Sans Serif", 8.25F);
                     }
                     catch (ArgumentException) // 如果字体不存在，将抛出 ArgumentException  
                     {
-                        // 如果微软雅黑不可用，则尝试黑体  
-                        CellStyle.Font = new Font("SimHei", 7.75F); // 注意：这里使用 SimHei 作为黑体的常见名称  
+                        // 如果Microsoft Sans Serif不可用，则尝试宋体
+                        CellStyle.Font = new Font("宋体", 8.25F);
 
-                        if (CellStyle.Font.Name != "SimHei") // 如果黑体也不可用（理论上不应该发生，但为了安全起见）  
+                        if (CellStyle.Font.Name != "宋体")
                         {
-                            // 如果黑体不可用，则尝试宋体  
-                            CellStyle.Font = new Font("宋体", 7.75F);
+                            // 如果宋体不可用，则尝试微软雅黑
+                            CellStyle.Font = new Font("微软雅黑", 8.25F);
 
-                            if (CellStyle.Font.Name != "宋体") // 如果宋体也不可用（理论上更不可能）  
+                            if (CellStyle.Font.Name != "微软雅黑")
                             {
-                                // 如果宋体也不可用，则显示警告  
+                                // 如果黑体也不可用，则显示警告  
                                 MessageBox.Show("如果没有中文支持的字体，则无法显示中文。",
                                                 "不受支持的语言", MessageBoxButtons.OK, MessageBoxIcon.Warning,
                                                 MessageBoxDefaultButton.Button1);
@@ -2961,7 +2961,7 @@ namespace RNGReporter
                 }
                 else if (dataGridViewValues.Columns[e.ColumnIndex].Name == "Nature")
                 {
-                    toolTipDataGrid.ToolTipTitle = "性格";
+                    toolTipDataGrid.ToolTipTitle = "性格（没搞懂这个什么意思，凑合着看吧）";
 
                     toolTipDataGrid.Show("加粗黑色的性格说明可以通过同步特性的宝可梦使其同步性格\r\n\r\n" +
                                          "灰色的性格则说明该性格的无同步的默认性格",
@@ -2984,7 +2984,7 @@ namespace RNGReporter
                 {
                     toolTipDataGrid.ToolTipTitle = "Occidentary";
 
-                    toolTipDataGrid.Show("The frame of the RNG after a battle is equal to the occidentary + 6.",
+                    toolTipDataGrid.Show("战斗后RNG的帧数等于偶然值+6",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2994,45 +2994,41 @@ namespace RNGReporter
                 {
                     toolTipDataGrid.ToolTipTitle = "遭遇槽位";
 
-                    toolTipDataGrid.Show("Encounter slots are used to determine what Pokémon appears for\r\n" +
-                                         "a wild battle.  Use the encounter tables under the menus to look up\r\n" +
-                                         "which Pokémon appears for each slot in each area.\r\n",
+                    toolTipDataGrid.Show("遭遇槽位是用来确定野生战斗中会出现哪种宝可梦。\r\n" +
+                                         "请使用菜单下的遭遇表来查找每个区域每个槽位会出现哪种宝可梦",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
                                          5000);
                 }
-                else if (dataGridViewValues.Columns[e.ColumnIndex].HeaderText == "Cave Spot")
+                else if (dataGridViewValues.Columns[e.ColumnIndex].HeaderText == "卷尘地面")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Possible Cave Spot";
+                    toolTipDataGrid.ToolTipTitle = "可能的卷尘地面";
 
-                    toolTipDataGrid.Show("Every 20 steps, the game checks if the current frame will produce a\r\n" +
-                                         "swirling dust spot if in a cave.\r\n\r\n" +
-                                         "This step counter returns to its last saved state upon loading the game.",
+                    toolTipDataGrid.Show("每走20步，游戏就会检查当前帧是否会在洞穴中生成一个卷尘地面。\r\n" +
+                                         "加载游戏时，此步数计数器将返回到其最后保存的状态",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
                                          5000);
                 }
-                else if (dataGridViewValues.Columns[e.ColumnIndex].HeaderText == "Bubble Spot")
+                else if (dataGridViewValues.Columns[e.ColumnIndex].HeaderText == "水纹水面")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Possible Bubble Spot";
+                    toolTipDataGrid.ToolTipTitle = "可能的水纹水面";
 
-                    toolTipDataGrid.Show("Every 20 steps, the game checks if the current frame will produce a\r\n" +
-                                         "bubble in nearby water.\r\n\r\n" +
-                                         "This step counter returns to its last saved state upon loading the game.",
+                    toolTipDataGrid.Show("每走20步，游戏就会检查当前帧是否会在附近的水中产生气泡。\r\n" +
+                                         "加载游戏时，此步数计数器将返回到其最后保存的状态",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
                                          5000);
                 }
-                else if (dataGridViewValues.Columns[e.ColumnIndex].HeaderText == "Shaking Grass")
+                else if (dataGridViewValues.Columns[e.ColumnIndex].HeaderText == "摇动草丛")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Possible Shaking Grass";
+                    toolTipDataGrid.ToolTipTitle = "可能的摇动草丛";
 
-                    toolTipDataGrid.Show("Every 20 steps, the game checks if the current frame will produce a\r\n" +
-                                         "swirling dust spot.\r\n\r\n" +
-                                         "This step counter returns to its last saved state upon loading the game.",
+                    toolTipDataGrid.Show("每走20步，游戏会检查当前帧是否会生成一个摇动草丛。\r\n" +
+                                         "加载游戏时，此步数计数器将返回到其最后保存的状态",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -3043,15 +3039,12 @@ namespace RNGReporter
                     toolTipDataGrid.ToolTipTitle = "连入之森时间";
 
                     toolTipDataGrid.Show(
-                        "Turning on the C-Gear advances the PIDRNG over time.  This column lists the minimum\r\n" +
-                        "time neceesary to aim for a specific nature on an Entralink Pokémon, starting.\r\n" +
-                        "from the moment the C-Gear is turned on.\r\n\r\n" +
-                        "Pokémon that move at random in the Entralink will affect the accuracy of this list,\r\n" +
-                        "so all other Pokémon must be moved to the Deep Clearing in order to minimize\r\n" +
-                        "their effects.  This list will also be inaccurate if the C-Gear is turned on at\r\n" +
-                        "the Continue screen, instead of within the game.\r\n\r\n" +
-                        "Frames labeled \"skip\" will be skipped if no other advancements (such as those\r\n" +
-                        "from Chatots or randomly moving Pokémon) occur.",
+                        "开启C-Gear会随着时间的推移推进PIDRNG。此列列出了从开启C装置的那一刻起，针对连\r\n" +
+                        "装置的那一刻起，针对连入之森宝可梦，为了达到特定性格所需的最短时间。\r\n\r\n" +
+                        "在连入之森中随机移动的宝可梦会影响此列表的准确性，因此必须将所有其他宝可梦移\r\n" +
+                        "至Deep Clearing以最大限度地减少它们的影响。如果C装置是在继续屏幕上开启的，而不\r\n" +
+                        "是在游戏内，那么这个列表也将不准确。\r\n\r\n" +
+                        "如果没有其他进展（如来自聒噪鸟或随机移动的宝可梦的进展），则标记为“跳过”的帧将被跳过。",
                         this,
                         dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                         dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,

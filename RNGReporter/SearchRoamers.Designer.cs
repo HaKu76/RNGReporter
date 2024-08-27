@@ -68,7 +68,7 @@ namespace RNGReporter
             this.buttonOk.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonOk.Size = new System.Drawing.Size(75, 21);
             this.buttonOk.TabIndex = 27;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "确认";
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // label3

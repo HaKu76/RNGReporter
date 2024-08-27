@@ -289,6 +289,17 @@ namespace RNGReporter
                         }
                     }
                     break;
+                case (Language.SimplifiedChinese):
+                    CellStyle.Font = new Font("宋体", 9F);
+                    if (CellStyle.Font.Name != "宋体")
+                    {
+                        CellStyle.Font = new Font("Microsoft Sans Serif", 9F);
+                        if (CellStyle.Font.Name != "Microsoft Sans Serif")
+                        {
+                            CellStyle.Font = new Font("微软雅黑", 9F);
+                        }
+                    }
+                    break;
                 default:
                     CellStyle.Font = DefaultFont;
                     break;
@@ -1354,7 +1365,7 @@ namespace RNGReporter
         private void comboBoxMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] encounterMenu;
-            string previousEncounter = "Wild Pokémon";
+            string previousEncounter = "野生宝可梦";
             if (comboBoxEncounterType.SelectedItem != null)
                 previousEncounter = comboBoxEncounterType.SelectedItem.ToString();
 
@@ -1362,14 +1373,14 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon",
-                        "Wild Pokémon (Surfing)",
-                        "Wild Pokémon (Old Rod)",
-                        "Wild Pokémon (Good Rod)",
-                        "Wild Pokémon (Super Rod)",
-                        "Stationary Pokémon",
-                        "Bug-Catching Contest",
-                        "Safari Zone",
+                        "野生宝可梦",
+                        "野生宝可梦（冲浪）",
+                        "野生宝可梦（破旧钓竿）",
+                        "野生宝可梦（好钓竿）",
+                        "野生宝可梦（厉害钓竿）",
+                        "定点宝可梦",
+                        "捕虫大赛",
+                        "狩猎地带",
                         "Headbutt"
                     };
 
@@ -1381,12 +1392,12 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Wild Pokémon",
-                        "Wild Pokémon (Surfing)",
-                        "Wild Pokémon (Old Rod)",
-                        "Wild Pokémon (Good Rod)",
-                        "Wild Pokémon (Super Rod)",
-                        "Stationary Pokémon"
+                        "野生宝可梦",
+                        "野生宝可梦（冲浪）",
+                        "野生宝可梦（破旧钓竿）",
+                        "野生宝可梦（好钓竿）",
+                        "野生宝可梦（厉害钓竿）",
+                        "定点宝可梦"
                     };
 
                 comboBoxEncounterType.Enabled = true;

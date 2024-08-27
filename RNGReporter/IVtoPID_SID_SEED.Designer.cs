@@ -378,7 +378,7 @@ namespace RNGReporter
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 15);
             this.label9.TabIndex = 43;
-            this.label9.Text = "Seed:";
+            this.label9.Text = "Seed：";
             // 
             // buttonCancel
             // 
@@ -436,7 +436,7 @@ namespace RNGReporter
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 55;
-            this.label5.Text = "SID:";
+            this.label5.Text = "SID：";
             // 
             // label4
             // 

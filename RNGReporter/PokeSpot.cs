@@ -8,7 +8,7 @@ namespace RNGReporter.Objects
 {
     public partial class PokeSpot : Form
     {
-        private readonly String[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
+        private readonly String[] Natures = { "勤奋", "怕寂寞", "勇敢", "固执", "顽皮", "大胆", "坦率", "悠闲", "淘气", "乐天", "胆小", "急躁", "认真", "爽朗", "天真", "内敛", "慢吞吞", "冷静", "害羞", "马虎", "温和", "温顺", "自大", "慎重", "浮躁" };
         private List<PokeSpotDisplay> displayList;
         private List<uint> natureList;
         private List<String> spotList;
@@ -208,10 +208,10 @@ namespace RNGReporter.Objects
                     Type = spotType,
                     Nature = Natures[nature],
                     Ability = (int)ability,
-                    Eighth = gender < 31 ? 'F' : 'M',
-                    Quarter = gender < 64 ? 'F' : 'M',
-                    Half = gender < 126 ? 'F' : 'M',
-                    Three_Fourths = gender < 191 ? 'F' : 'M'
+                    Eighth = gender < 31 ? '♀' : '♂',
+                    Quarter = gender < 64 ? '♀' : '♂',
+                    Half = gender < 126 ? '♀' : '♂',
+                    Three_Fourths = gender < 191 ? '♀' : '♂'
                 });
             }
         }

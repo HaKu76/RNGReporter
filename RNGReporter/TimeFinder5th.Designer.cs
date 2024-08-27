@@ -2121,7 +2121,7 @@ namespace RNGReporter
             this.tabPageHiddenGrotto.Padding = new System.Windows.Forms.Padding(4);
             this.tabPageHiddenGrotto.Size = new System.Drawing.Size(1187, 559);
             this.tabPageHiddenGrotto.TabIndex = 3;
-            this.tabPageHiddenGrotto.Text = "Hidden Grotto";
+            this.tabPageHiddenGrotto.Text = "隐藏洞穴";
             this.tabPageHiddenGrotto.UseVisualStyleBackColor = true;
             // 
             // cbHHGenderRatio

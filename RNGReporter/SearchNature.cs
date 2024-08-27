@@ -48,6 +48,17 @@ namespace RNGReporter
                         }
                     }
                     break;
+                case (Language.SimplifiedChinese):
+                    font = new Font("宋体", 9F);
+                    if (font.Name != "宋体")
+                    {
+                        font = new Font("Microsoft Sans Serif", 9F);
+                        if (font.Name != "Microsoft Sans Serif")
+                        {
+                            font = new Font("微软雅黑", 9F);
+                        }
+                    }
+                    break;
                 default:
                     font = DefaultFont;
                     break;

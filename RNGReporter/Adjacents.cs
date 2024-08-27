@@ -104,31 +104,31 @@ namespace RNGReporter
 
             comboBoxEncounterType.Items.AddRange(new object[]
                 {
-                    new ComboBoxItem("Wild Pokémon", EncounterType.Wild),
-                    new ComboBoxItem("Wild Pokémon (Swarm)",
+                    new ComboBoxItem("野生宝可梦", EncounterType.Wild),
+                    new ComboBoxItem("野生宝可梦（虫之预感）",
                                      EncounterType.WildSwarm),
-                    new ComboBoxItem("Wild Pokémon (Surfing)",
+                    new ComboBoxItem("野生宝可梦（冲浪）",
                                      EncounterType.WildSurfing),
-                    new ComboBoxItem("Wild Pokémon (Fishing)",
+                    new ComboBoxItem("野生宝可梦（钓鱼）",
                                      EncounterType.WildSuperRod),
-                    new ComboBoxItem("Wild Pokémon (Shaking Grass)",
+                    new ComboBoxItem("野生宝可梦（摇动草丛）",
                                      EncounterType.WildShakerGrass),
-                    new ComboBoxItem("Wild Pokémon (Bubble Spot)",
+                    new ComboBoxItem("野生宝可梦（水纹水面）",
                                      EncounterType.WildWaterSpot),
-                    new ComboBoxItem("Wild Pokémon (Cave Spot)",
+                    new ComboBoxItem("野生宝可梦（卷尘地面）",
                                      EncounterType.WildCaveSpot),
-                    new ComboBoxItem("Stationary Pokémon", EncounterType.Stationary)
+                    new ComboBoxItem("定点宝可梦", EncounterType.Stationary)
                     ,
-                    new ComboBoxItem("Roaming Pokémon", EncounterType.Roamer),
-                    new ComboBoxItem("Gift Pokémon", EncounterType.Gift),
-                    new ComboBoxItem("Larvesta Egg", EncounterType.LarvestaEgg)
+                    new ComboBoxItem("游走宝可梦", EncounterType.Roamer),
+                    new ComboBoxItem("礼物宝可梦", EncounterType.Gift),
+                    new ComboBoxItem("燃烧虫的蛋", EncounterType.LarvestaEgg)
                 });
 
             comboBoxLead.Items.AddRange(new object[]
                 {
                     new ComboBoxItem("None", EncounterMod.None),
-                    new ComboBoxItem("Synchronize", EncounterMod.Synchronize),
-                    new ComboBoxItem("Cute Charm", EncounterMod.CuteCharm),
+                    new ComboBoxItem("同步", EncounterMod.Synchronize),
+                    new ComboBoxItem("迷人之躯", EncounterMod.CuteCharm),
                     new ComboBoxItem("Suction Cups", EncounterMod.SuctionCups)
                 });
 
@@ -279,6 +279,17 @@ namespace RNGReporter
                         if (CellStyle.Font.Name != "Gulim")
                         {
                             CellStyle.Font = new Font("Arial Unicode MS", 8.25F);
+                        }
+                    }
+                    break;
+                case (Language.SimplifiedChinese):
+                    CellStyle.Font = new Font("宋体", 9F);
+                    if (CellStyle.Font.Name != "宋体")
+                    {
+                        CellStyle.Font = new Font("Microsoft Sans Serif", 9F);
+                        if (CellStyle.Font.Name != "Microsoft Sans Serif")
+                        {
+                            CellStyle.Font = new Font("微软雅黑", 9F);
                         }
                     }
                     break;
@@ -726,7 +737,7 @@ namespace RNGReporter
 
                     textBoxDescription.Text =
                         "大多数神秘礼物都使用这种算法。神秘礼物宝可梦可以是任何性格，但仅限于单一性别。" +
-                        "必须使用GLAN (Gender Locked, Any Nature) Wondercard method.";
+                        "必须使用GLAN（锁性别，任意性格）神秘卡片算法";
                     break;
                 case FrameType.Wondercard5thGenFixed:
                     comboBoxEncounterType.Enabled = false;
@@ -744,7 +755,7 @@ namespace RNGReporter
 
                     textBoxDescription.Text =
                         "神秘礼物宝可梦可以是任何性格，但仅限于单一性别 " +
-                        "必须使用GLAN (Gender Locked, Any Nature) Wondercard method.";
+                        "必须使用GLAN（锁性别，任意性格）神秘卡片算法";
                     break;
             }
 

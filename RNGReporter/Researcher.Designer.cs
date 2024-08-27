@@ -127,7 +127,6 @@ namespace RNGReporter
             this.textBoxMult = new RNGReporter.TextBox2();
             this.textBoxAdd = new RNGReporter.TextBox2();
             this.dataGridViewValues = new RNGReporter.DoubleBufferedDataGridView();
-            this.buttonGenerate = new RNGReporter.GlassButton();
             this.ColumnFrame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column64Bit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column32Bit = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -151,6 +150,7 @@ namespace RNGReporter
             this.Div656 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mod2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HighBit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonGenerate = new RNGReporter.GlassButton();
             this.contextMenuStripGrid.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).BeginInit();
@@ -160,10 +160,10 @@ namespace RNGReporter
             // 
             this.radioButtonCommon.AutoSize = true;
             this.radioButtonCommon.Checked = true;
-            this.radioButtonCommon.Location = new System.Drawing.Point(13, 31);
-            this.radioButtonCommon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.radioButtonCommon.Location = new System.Drawing.Point(10, 25);
+            this.radioButtonCommon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonCommon.Name = "radioButtonCommon";
-            this.radioButtonCommon.Size = new System.Drawing.Size(113, 19);
+            this.radioButtonCommon.Size = new System.Drawing.Size(89, 16);
             this.radioButtonCommon.TabIndex = 0;
             this.radioButtonCommon.TabStop = true;
             this.radioButtonCommon.Text = "常见的 RNGs";
@@ -181,71 +181,70 @@ namespace RNGReporter
             this.outputResultsToTXTToolStripMenuItem,
             this.outputSelectedColumnsToTXTToolStripMenuItem});
             this.contextMenuStripGrid.Name = "contextMenuStripGrid";
-            this.contextMenuStripGrid.Size = new System.Drawing.Size(330, 136);
+            this.contextMenuStripGrid.Size = new System.Drawing.Size(275, 126);
             this.contextMenuStripGrid.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripGrid_Opening);
             // 
             // copyItemToolStripMenuItem
             // 
             this.copyItemToolStripMenuItem.Name = "copyItemToolStripMenuItem";
-            this.copyItemToolStripMenuItem.Size = new System.Drawing.Size(329, 24);
+            this.copyItemToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.copyItemToolStripMenuItem.Text = "Copy Item";
             this.copyItemToolStripMenuItem.Click += new System.EventHandler(this.copyItemToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(326, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
             // copySelectedColumnsToolStripMenuItem
             // 
             this.copySelectedColumnsToolStripMenuItem.Name = "copySelectedColumnsToolStripMenuItem";
-            this.copySelectedColumnsToolStripMenuItem.Size = new System.Drawing.Size(329, 24);
+            this.copySelectedColumnsToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.copySelectedColumnsToolStripMenuItem.Text = "Copy Selected Columns";
             this.copySelectedColumnsToolStripMenuItem.Click += new System.EventHandler(this.copySelectedColumnsToolStripMenuItem_Click);
             // 
             // copyColumnToolStripMenuItem
             // 
             this.copyColumnToolStripMenuItem.Name = "copyColumnToolStripMenuItem";
-            this.copyColumnToolStripMenuItem.Size = new System.Drawing.Size(329, 24);
+            this.copyColumnToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.copyColumnToolStripMenuItem.Text = "Copy Row from Selected Columns";
             this.copyColumnToolStripMenuItem.Click += new System.EventHandler(this.copyColumnToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(326, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(271, 6);
             // 
             // outputResultsToTXTToolStripMenuItem
             // 
             this.outputResultsToTXTToolStripMenuItem.Name = "outputResultsToTXTToolStripMenuItem";
-            this.outputResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(329, 24);
+            this.outputResultsToTXTToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.outputResultsToTXTToolStripMenuItem.Text = "输出结果至TXT文本文件";
             this.outputResultsToTXTToolStripMenuItem.Click += new System.EventHandler(this.outputResultsToTXTToolStripMenuItem_Click);
             // 
             // outputSelectedColumnsToTXTToolStripMenuItem
             // 
             this.outputSelectedColumnsToTXTToolStripMenuItem.Name = "outputSelectedColumnsToTXTToolStripMenuItem";
-            this.outputSelectedColumnsToTXTToolStripMenuItem.Size = new System.Drawing.Size(329, 24);
+            this.outputSelectedColumnsToTXTToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.outputSelectedColumnsToTXTToolStripMenuItem.Text = "Output Selected Columns to TXT...";
             this.outputSelectedColumnsToTXTToolStripMenuItem.Click += new System.EventHandler(this.outputSelectedColumnsToTXTToolStripMenuItem_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 222);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(10, 178);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 15);
+            this.label12.Size = new System.Drawing.Size(65, 12);
             this.label12.TabIndex = 11;
             this.label12.Text = "Seed (Hex)";
             // 
             // radioButtonCustom
             // 
             this.radioButtonCustom.AutoSize = true;
-            this.radioButtonCustom.Location = new System.Drawing.Point(13, 75);
-            this.radioButtonCustom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.radioButtonCustom.Location = new System.Drawing.Point(10, 60);
+            this.radioButtonCustom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonCustom.Name = "radioButtonCustom";
-            this.radioButtonCustom.Size = new System.Drawing.Size(76, 19);
+            this.radioButtonCustom.Size = new System.Drawing.Size(59, 16);
             this.radioButtonCustom.TabIndex = 4;
             this.radioButtonCustom.Text = "Custom";
             this.radioButtonCustom.UseVisualStyleBackColor = true;
@@ -253,80 +252,73 @@ namespace RNGReporter
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 77);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(99, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 15);
+            this.label1.Size = new System.Drawing.Size(11, 12);
             this.label1.TabIndex = 7;
             this.label1.Text = "X";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(100, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 15);
+            this.label2.Size = new System.Drawing.Size(11, 12);
             this.label2.TabIndex = 8;
             this.label2.Text = "+";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(523, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(392, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 15);
+            this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 13;
             this.label3.Text = "Custom 1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(523, 62);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(392, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 15);
+            this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 18;
             this.label4.Text = "Custom 2";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(523, 93);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(392, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 15);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 23;
             this.label5.Text = "Custom 3";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(523, 125);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(392, 100);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 15);
+            this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 28;
             this.label6.Text = "Custom 4";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 192);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(10, 154);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 15);
+            this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 9;
             this.label10.Text = "最大帧";
             // 
             // checkBoxCustom1Hex
             // 
             this.checkBoxCustom1Hex.AutoSize = true;
-            this.checkBoxCustom1Hex.Location = new System.Drawing.Point(875, 32);
-            this.checkBoxCustom1Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom1Hex.Location = new System.Drawing.Point(656, 26);
+            this.checkBoxCustom1Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom1Hex.Name = "checkBoxCustom1Hex";
-            this.checkBoxCustom1Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom1Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom1Hex.TabIndex = 17;
             this.checkBoxCustom1Hex.Text = "Hex";
             this.checkBoxCustom1Hex.UseVisualStyleBackColor = true;
@@ -334,10 +326,10 @@ namespace RNGReporter
             // checkBoxCustom2Hex
             // 
             this.checkBoxCustom2Hex.AutoSize = true;
-            this.checkBoxCustom2Hex.Location = new System.Drawing.Point(875, 63);
-            this.checkBoxCustom2Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom2Hex.Location = new System.Drawing.Point(656, 50);
+            this.checkBoxCustom2Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom2Hex.Name = "checkBoxCustom2Hex";
-            this.checkBoxCustom2Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom2Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom2Hex.TabIndex = 22;
             this.checkBoxCustom2Hex.Text = "Hex";
             this.checkBoxCustom2Hex.UseVisualStyleBackColor = true;
@@ -345,10 +337,10 @@ namespace RNGReporter
             // checkBoxCustom3Hex
             // 
             this.checkBoxCustom3Hex.AutoSize = true;
-            this.checkBoxCustom3Hex.Location = new System.Drawing.Point(875, 95);
-            this.checkBoxCustom3Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom3Hex.Location = new System.Drawing.Point(656, 76);
+            this.checkBoxCustom3Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom3Hex.Name = "checkBoxCustom3Hex";
-            this.checkBoxCustom3Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom3Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom3Hex.TabIndex = 27;
             this.checkBoxCustom3Hex.Text = "Hex";
             this.checkBoxCustom3Hex.UseVisualStyleBackColor = true;
@@ -356,10 +348,10 @@ namespace RNGReporter
             // checkBoxCustom4Hex
             // 
             this.checkBoxCustom4Hex.AutoSize = true;
-            this.checkBoxCustom4Hex.Location = new System.Drawing.Point(875, 126);
-            this.checkBoxCustom4Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom4Hex.Location = new System.Drawing.Point(656, 101);
+            this.checkBoxCustom4Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom4Hex.Name = "checkBoxCustom4Hex";
-            this.checkBoxCustom4Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom4Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom4Hex.TabIndex = 32;
             this.checkBoxCustom4Hex.Text = "Hex";
             this.checkBoxCustom4Hex.UseVisualStyleBackColor = true;
@@ -367,10 +359,10 @@ namespace RNGReporter
             // checkBox64bit
             // 
             this.checkBox64bit.AutoSize = true;
-            this.checkBox64bit.Location = new System.Drawing.Point(156, 136);
-            this.checkBox64bit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBox64bit.Location = new System.Drawing.Point(117, 109);
+            this.checkBox64bit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox64bit.Name = "checkBox64bit";
-            this.checkBox64bit.Size = new System.Drawing.Size(109, 19);
+            this.checkBox64bit.Size = new System.Drawing.Size(84, 16);
             this.checkBox64bit.TabIndex = 39;
             this.checkBox64bit.Text = "64-bit RNG";
             this.checkBox64bit.UseVisualStyleBackColor = true;
@@ -379,10 +371,10 @@ namespace RNGReporter
             // checkBoxCustom5Hex
             // 
             this.checkBoxCustom5Hex.AutoSize = true;
-            this.checkBoxCustom5Hex.Location = new System.Drawing.Point(875, 157);
-            this.checkBoxCustom5Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom5Hex.Location = new System.Drawing.Point(656, 126);
+            this.checkBoxCustom5Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom5Hex.Name = "checkBoxCustom5Hex";
-            this.checkBoxCustom5Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom5Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom5Hex.TabIndex = 45;
             this.checkBoxCustom5Hex.Text = "Hex";
             this.checkBoxCustom5Hex.UseVisualStyleBackColor = true;
@@ -390,20 +382,19 @@ namespace RNGReporter
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(523, 156);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(392, 125);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 15);
+            this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 41;
             this.label7.Text = "Custom 5";
             // 
             // checkBoxCustom6Hex
             // 
             this.checkBoxCustom6Hex.AutoSize = true;
-            this.checkBoxCustom6Hex.Location = new System.Drawing.Point(875, 188);
-            this.checkBoxCustom6Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom6Hex.Location = new System.Drawing.Point(656, 150);
+            this.checkBoxCustom6Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom6Hex.Name = "checkBoxCustom6Hex";
-            this.checkBoxCustom6Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom6Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom6Hex.TabIndex = 50;
             this.checkBoxCustom6Hex.Text = "Hex";
             this.checkBoxCustom6Hex.UseVisualStyleBackColor = true;
@@ -411,20 +402,19 @@ namespace RNGReporter
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(523, 187);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(392, 150);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 15);
+            this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 46;
             this.label8.Text = "Custom 6";
             // 
             // checkBoxCustom7Hex
             // 
             this.checkBoxCustom7Hex.AutoSize = true;
-            this.checkBoxCustom7Hex.Location = new System.Drawing.Point(875, 220);
-            this.checkBoxCustom7Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom7Hex.Location = new System.Drawing.Point(656, 176);
+            this.checkBoxCustom7Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom7Hex.Name = "checkBoxCustom7Hex";
-            this.checkBoxCustom7Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom7Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom7Hex.TabIndex = 55;
             this.checkBoxCustom7Hex.Text = "Hex";
             this.checkBoxCustom7Hex.UseVisualStyleBackColor = true;
@@ -432,10 +422,9 @@ namespace RNGReporter
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(523, 219);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(392, 175);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 15);
+            this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 51;
             this.label9.Text = "Custom 7";
             // 
@@ -446,8 +435,9 @@ namespace RNGReporter
             this.fileToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip.Size = new System.Drawing.Size(1068, 30);
+            this.menuStrip.Size = new System.Drawing.Size(801, 25);
             this.menuStrip.TabIndex = 71;
             // 
             // fileToolStripMenuItem
@@ -457,27 +447,27 @@ namespace RNGReporter
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -493,10 +483,10 @@ namespace RNGReporter
             // checkBoxCustom8Hex
             // 
             this.checkBoxCustom8Hex.AutoSize = true;
-            this.checkBoxCustom8Hex.Location = new System.Drawing.Point(875, 253);
-            this.checkBoxCustom8Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom8Hex.Location = new System.Drawing.Point(656, 202);
+            this.checkBoxCustom8Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom8Hex.Name = "checkBoxCustom8Hex";
-            this.checkBoxCustom8Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom8Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom8Hex.TabIndex = 75;
             this.checkBoxCustom8Hex.Text = "Hex";
             this.checkBoxCustom8Hex.UseVisualStyleBackColor = true;
@@ -504,20 +494,19 @@ namespace RNGReporter
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(523, 252);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(392, 202);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 15);
+            this.label11.Size = new System.Drawing.Size(53, 12);
             this.label11.TabIndex = 72;
             this.label11.Text = "Custom 8";
             // 
             // checkBoxCustom9Hex
             // 
             this.checkBoxCustom9Hex.AutoSize = true;
-            this.checkBoxCustom9Hex.Location = new System.Drawing.Point(875, 284);
-            this.checkBoxCustom9Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom9Hex.Location = new System.Drawing.Point(656, 227);
+            this.checkBoxCustom9Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom9Hex.Name = "checkBoxCustom9Hex";
-            this.checkBoxCustom9Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom9Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom9Hex.TabIndex = 81;
             this.checkBoxCustom9Hex.Text = "Hex";
             this.checkBoxCustom9Hex.UseVisualStyleBackColor = true;
@@ -525,20 +514,19 @@ namespace RNGReporter
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(523, 283);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(392, 226);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 15);
+            this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 78;
             this.label13.Text = "Custom 9";
             // 
             // checkBoxCustom10Hex
             // 
             this.checkBoxCustom10Hex.AutoSize = true;
-            this.checkBoxCustom10Hex.Location = new System.Drawing.Point(875, 316);
-            this.checkBoxCustom10Hex.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxCustom10Hex.Location = new System.Drawing.Point(656, 253);
+            this.checkBoxCustom10Hex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxCustom10Hex.Name = "checkBoxCustom10Hex";
-            this.checkBoxCustom10Hex.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxCustom10Hex.Size = new System.Drawing.Size(42, 16);
             this.checkBoxCustom10Hex.TabIndex = 87;
             this.checkBoxCustom10Hex.Text = "Hex";
             this.checkBoxCustom10Hex.UseVisualStyleBackColor = true;
@@ -546,20 +534,18 @@ namespace RNGReporter
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(523, 315);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(392, 252);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 15);
+            this.label14.Size = new System.Drawing.Size(59, 12);
             this.label14.TabIndex = 84;
             this.label14.Text = "Custom 10";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 287);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(10, 230);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 15);
+            this.label15.Size = new System.Drawing.Size(89, 12);
             this.label15.TabIndex = 95;
             this.label15.Text = "计算Seed (Hex)";
             // 
@@ -567,14 +553,14 @@ namespace RNGReporter
             // 
             this.buttonNext.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonNext.ForeColor = System.Drawing.Color.Black;
-            this.buttonNext.Location = new System.Drawing.Point(221, 316);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonNext.Location = new System.Drawing.Point(166, 253);
+            this.buttonNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonNext.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonNext.Size = new System.Drawing.Size(193, 27);
+            this.buttonNext.Size = new System.Drawing.Size(145, 22);
             this.buttonNext.TabIndex = 94;
-            this.buttonNext.Text = "Next";
+            this.buttonNext.Text = "下一个";
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // glassComboBox1
@@ -587,34 +573,35 @@ namespace RNGReporter
             "16BitHigh",
             "16BitLow",
             "Frame"});
-            this.glassComboBox1.Location = new System.Drawing.Point(289, 283);
-            this.glassComboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.glassComboBox1.Location = new System.Drawing.Point(217, 226);
+            this.glassComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.glassComboBox1.Name = "glassComboBox1";
             this.glassComboBox1.ShineColor = System.Drawing.SystemColors.Window;
-            this.glassComboBox1.Size = new System.Drawing.Size(124, 23);
+            this.glassComboBox1.Size = new System.Drawing.Size(94, 20);
             this.glassComboBox1.TabIndex = 93;
+            this.glassComboBox1.SelectedIndexChanged += new System.EventHandler(this.glassComboBox1_SelectedIndexChanged);
             // 
             // buttonSearch
             // 
             this.buttonSearch.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonSearch.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearch.Location = new System.Drawing.Point(17, 316);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonSearch.Location = new System.Drawing.Point(13, 253);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.OuterBorderColor = System.Drawing.Color.Transparent;
             this.buttonSearch.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonSearch.Size = new System.Drawing.Size(193, 27);
+            this.buttonSearch.Size = new System.Drawing.Size(145, 22);
             this.buttonSearch.TabIndex = 92;
             this.buttonSearch.Text = "计算";
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(148, 283);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxSearch.Location = new System.Drawing.Point(111, 226);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearch.MaxLength = 16;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(132, 25);
+            this.textBoxSearch.Size = new System.Drawing.Size(100, 21);
             this.textBoxSearch.TabIndex = 90;
             this.textBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -650,20 +637,20 @@ namespace RNGReporter
             "Previous 7",
             "Previous 8",
             "Previous 9"});
-            this.comboBoxRValue10.Location = new System.Drawing.Point(945, 312);
-            this.comboBoxRValue10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue10.Location = new System.Drawing.Point(709, 250);
+            this.comboBoxRValue10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue10.Name = "comboBoxRValue10";
             this.comboBoxRValue10.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue10.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue10.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue10.TabIndex = 89;
             // 
             // textBoxRValue10
             // 
-            this.textBoxRValue10.Location = new System.Drawing.Point(789, 312);
-            this.textBoxRValue10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue10.Location = new System.Drawing.Point(592, 250);
+            this.textBoxRValue10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue10.MaxLength = 16;
             this.textBoxRValue10.Name = "textBoxRValue10";
-            this.textBoxRValue10.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue10.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue10.TabIndex = 88;
             this.textBoxRValue10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -698,11 +685,11 @@ namespace RNGReporter
             "Previous 7",
             "Previous 8",
             "Previous 9"});
-            this.comboBoxLValue10.Location = new System.Drawing.Point(599, 312);
-            this.comboBoxLValue10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue10.Location = new System.Drawing.Point(449, 250);
+            this.comboBoxLValue10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue10.Name = "comboBoxLValue10";
             this.comboBoxLValue10.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue10.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue10.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue10.TabIndex = 85;
             // 
             // comboBoxOperator10
@@ -721,11 +708,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator10.Location = new System.Drawing.Point(713, 312);
-            this.comboBoxOperator10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator10.Location = new System.Drawing.Point(535, 250);
+            this.comboBoxOperator10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator10.Name = "comboBoxOperator10";
             this.comboBoxOperator10.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator10.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator10.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator10.TabIndex = 86;
             // 
             // comboBoxRValue9
@@ -757,20 +744,20 @@ namespace RNGReporter
             "Previous 6",
             "Previous 7",
             "Previous 8"});
-            this.comboBoxRValue9.Location = new System.Drawing.Point(945, 279);
-            this.comboBoxRValue9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue9.Location = new System.Drawing.Point(709, 223);
+            this.comboBoxRValue9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue9.Name = "comboBoxRValue9";
             this.comboBoxRValue9.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue9.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue9.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue9.TabIndex = 83;
             // 
             // textBoxRValue9
             // 
-            this.textBoxRValue9.Location = new System.Drawing.Point(789, 279);
-            this.textBoxRValue9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue9.Location = new System.Drawing.Point(592, 223);
+            this.textBoxRValue9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue9.MaxLength = 16;
             this.textBoxRValue9.Name = "textBoxRValue9";
-            this.textBoxRValue9.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue9.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue9.TabIndex = 82;
             this.textBoxRValue9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -803,11 +790,11 @@ namespace RNGReporter
             "Previous 6",
             "Previous 7",
             "Previous 8"});
-            this.comboBoxLValue9.Location = new System.Drawing.Point(599, 279);
-            this.comboBoxLValue9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue9.Location = new System.Drawing.Point(449, 223);
+            this.comboBoxLValue9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue9.Name = "comboBoxLValue9";
             this.comboBoxLValue9.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue9.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue9.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue9.TabIndex = 79;
             // 
             // comboBoxOperator9
@@ -826,11 +813,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator9.Location = new System.Drawing.Point(713, 279);
-            this.comboBoxOperator9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator9.Location = new System.Drawing.Point(535, 223);
+            this.comboBoxOperator9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator9.Name = "comboBoxOperator9";
             this.comboBoxOperator9.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator9.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator9.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator9.TabIndex = 80;
             // 
             // comboBoxRValue8
@@ -860,20 +847,20 @@ namespace RNGReporter
             "Previous 5",
             "Previous 6",
             "Previous 7"});
-            this.comboBoxRValue8.Location = new System.Drawing.Point(945, 248);
-            this.comboBoxRValue8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue8.Location = new System.Drawing.Point(709, 198);
+            this.comboBoxRValue8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue8.Name = "comboBoxRValue8";
             this.comboBoxRValue8.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue8.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue8.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue8.TabIndex = 77;
             // 
             // textBoxRValue8
             // 
-            this.textBoxRValue8.Location = new System.Drawing.Point(789, 248);
-            this.textBoxRValue8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue8.Location = new System.Drawing.Point(592, 198);
+            this.textBoxRValue8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue8.MaxLength = 16;
             this.textBoxRValue8.Name = "textBoxRValue8";
-            this.textBoxRValue8.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue8.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue8.TabIndex = 76;
             this.textBoxRValue8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -904,11 +891,11 @@ namespace RNGReporter
             "Previous 5",
             "Previous 6",
             "Previous 7"});
-            this.comboBoxLValue8.Location = new System.Drawing.Point(599, 248);
-            this.comboBoxLValue8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue8.Location = new System.Drawing.Point(449, 198);
+            this.comboBoxLValue8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue8.Name = "comboBoxLValue8";
             this.comboBoxLValue8.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue8.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue8.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue8.TabIndex = 73;
             // 
             // comboBoxOperator8
@@ -927,11 +914,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator8.Location = new System.Drawing.Point(713, 248);
-            this.comboBoxOperator8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator8.Location = new System.Drawing.Point(535, 198);
+            this.comboBoxOperator8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator8.Name = "comboBoxOperator8";
             this.comboBoxOperator8.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator8.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator8.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator8.TabIndex = 74;
             // 
             // comboBoxRNG
@@ -956,11 +943,11 @@ namespace RNGReporter
             "M. Twister (Untempered)",
             "M. Twister (Fast)",
             "M. Twister (Initial Table)"});
-            this.comboBoxRNG.Location = new System.Drawing.Point(155, 29);
-            this.comboBoxRNG.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRNG.Location = new System.Drawing.Point(116, 23);
+            this.comboBoxRNG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRNG.Name = "comboBoxRNG";
             this.comboBoxRNG.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRNG.Size = new System.Drawing.Size(225, 23);
+            this.comboBoxRNG.Size = new System.Drawing.Size(170, 20);
             this.comboBoxRNG.TabIndex = 70;
             this.comboBoxRNG.SelectedIndexChanged += new System.EventHandler(this.comboBoxRNG_SelectedIndexChanged);
             // 
@@ -989,11 +976,11 @@ namespace RNGReporter
             "Previous 4",
             "Previous 5",
             "Previous 6"});
-            this.comboBoxRValue7.Location = new System.Drawing.Point(945, 216);
-            this.comboBoxRValue7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue7.Location = new System.Drawing.Point(709, 173);
+            this.comboBoxRValue7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue7.Name = "comboBoxRValue7";
             this.comboBoxRValue7.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue7.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue7.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue7.TabIndex = 68;
             // 
             // comboBoxRValue6
@@ -1019,11 +1006,11 @@ namespace RNGReporter
             "Previous 3",
             "Previous 4",
             "Previous 5"});
-            this.comboBoxRValue6.Location = new System.Drawing.Point(945, 183);
-            this.comboBoxRValue6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue6.Location = new System.Drawing.Point(709, 146);
+            this.comboBoxRValue6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue6.Name = "comboBoxRValue6";
             this.comboBoxRValue6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue6.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue6.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue6.TabIndex = 67;
             // 
             // comboBoxOperator5
@@ -1042,11 +1029,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator5.Location = new System.Drawing.Point(713, 152);
-            this.comboBoxOperator5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator5.Location = new System.Drawing.Point(535, 122);
+            this.comboBoxOperator5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator5.Name = "comboBoxOperator5";
             this.comboBoxOperator5.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator5.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator5.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator5.TabIndex = 43;
             // 
             // comboBoxRValue5
@@ -1070,11 +1057,11 @@ namespace RNGReporter
             "Previous 2",
             "Previous 3",
             "Previous 4"});
-            this.comboBoxRValue5.Location = new System.Drawing.Point(945, 152);
-            this.comboBoxRValue5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue5.Location = new System.Drawing.Point(709, 122);
+            this.comboBoxRValue5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue5.Name = "comboBoxRValue5";
             this.comboBoxRValue5.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue5.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue5.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue5.TabIndex = 66;
             // 
             // comboBoxRValue4
@@ -1096,11 +1083,11 @@ namespace RNGReporter
             "Previous 1",
             "Previous 2",
             "Previous 3"});
-            this.comboBoxRValue4.Location = new System.Drawing.Point(945, 121);
-            this.comboBoxRValue4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue4.Location = new System.Drawing.Point(709, 97);
+            this.comboBoxRValue4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue4.Name = "comboBoxRValue4";
             this.comboBoxRValue4.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue4.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue4.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue4.TabIndex = 65;
             // 
             // comboBoxRValue3
@@ -1120,11 +1107,11 @@ namespace RNGReporter
             "Custom 2",
             "Previous 1",
             "Previous 2"});
-            this.comboBoxRValue3.Location = new System.Drawing.Point(945, 90);
-            this.comboBoxRValue3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue3.Location = new System.Drawing.Point(709, 72);
+            this.comboBoxRValue3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue3.Name = "comboBoxRValue3";
             this.comboBoxRValue3.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue3.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue3.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue3.TabIndex = 64;
             // 
             // comboBoxRValue2
@@ -1142,86 +1129,86 @@ namespace RNGReporter
             "16Bit Low",
             "Custom 1",
             "Previous 1"});
-            this.comboBoxRValue2.Location = new System.Drawing.Point(945, 59);
-            this.comboBoxRValue2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxRValue2.Location = new System.Drawing.Point(709, 47);
+            this.comboBoxRValue2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRValue2.Name = "comboBoxRValue2";
             this.comboBoxRValue2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxRValue2.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxRValue2.Size = new System.Drawing.Size(80, 20);
             this.comboBoxRValue2.TabIndex = 63;
             // 
             // textBoxRValue7
             // 
-            this.textBoxRValue7.Location = new System.Drawing.Point(789, 216);
-            this.textBoxRValue7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue7.Location = new System.Drawing.Point(592, 173);
+            this.textBoxRValue7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue7.MaxLength = 16;
             this.textBoxRValue7.Name = "textBoxRValue7";
-            this.textBoxRValue7.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue7.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue7.TabIndex = 62;
             this.textBoxRValue7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxRValue6
             // 
-            this.textBoxRValue6.Location = new System.Drawing.Point(789, 183);
-            this.textBoxRValue6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue6.Location = new System.Drawing.Point(592, 146);
+            this.textBoxRValue6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue6.MaxLength = 16;
             this.textBoxRValue6.Name = "textBoxRValue6";
-            this.textBoxRValue6.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue6.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue6.TabIndex = 61;
             this.textBoxRValue6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxRValue5
             // 
-            this.textBoxRValue5.Location = new System.Drawing.Point(789, 152);
-            this.textBoxRValue5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue5.Location = new System.Drawing.Point(592, 122);
+            this.textBoxRValue5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue5.MaxLength = 16;
             this.textBoxRValue5.Name = "textBoxRValue5";
-            this.textBoxRValue5.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue5.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue5.TabIndex = 60;
             this.textBoxRValue5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxRValue4
             // 
-            this.textBoxRValue4.Location = new System.Drawing.Point(789, 121);
-            this.textBoxRValue4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue4.Location = new System.Drawing.Point(592, 97);
+            this.textBoxRValue4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue4.MaxLength = 16;
             this.textBoxRValue4.Name = "textBoxRValue4";
-            this.textBoxRValue4.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue4.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue4.TabIndex = 59;
             this.textBoxRValue4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxRValue3
             // 
-            this.textBoxRValue3.Location = new System.Drawing.Point(789, 90);
-            this.textBoxRValue3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue3.Location = new System.Drawing.Point(592, 72);
+            this.textBoxRValue3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue3.MaxLength = 16;
             this.textBoxRValue3.Name = "textBoxRValue3";
-            this.textBoxRValue3.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue3.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue3.TabIndex = 58;
             this.textBoxRValue3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxRValue2
             // 
-            this.textBoxRValue2.Location = new System.Drawing.Point(789, 58);
-            this.textBoxRValue2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue2.Location = new System.Drawing.Point(592, 46);
+            this.textBoxRValue2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue2.MaxLength = 16;
             this.textBoxRValue2.Name = "textBoxRValue2";
-            this.textBoxRValue2.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue2.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue2.TabIndex = 57;
             this.textBoxRValue2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxRValue1
             // 
-            this.textBoxRValue1.Location = new System.Drawing.Point(789, 28);
-            this.textBoxRValue1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRValue1.Location = new System.Drawing.Point(592, 22);
+            this.textBoxRValue1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRValue1.MaxLength = 16;
             this.textBoxRValue1.Name = "textBoxRValue1";
-            this.textBoxRValue1.Size = new System.Drawing.Size(76, 25);
+            this.textBoxRValue1.Size = new System.Drawing.Size(58, 21);
             this.textBoxRValue1.TabIndex = 56;
             this.textBoxRValue1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxRValue1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -1250,11 +1237,11 @@ namespace RNGReporter
             "Previous 4",
             "Previous 5",
             "Previous 6"});
-            this.comboBoxLValue7.Location = new System.Drawing.Point(599, 216);
-            this.comboBoxLValue7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue7.Location = new System.Drawing.Point(449, 173);
+            this.comboBoxLValue7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue7.Name = "comboBoxLValue7";
             this.comboBoxLValue7.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue7.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue7.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue7.TabIndex = 52;
             // 
             // comboBoxOperator7
@@ -1273,11 +1260,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator7.Location = new System.Drawing.Point(713, 216);
-            this.comboBoxOperator7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator7.Location = new System.Drawing.Point(535, 173);
+            this.comboBoxOperator7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator7.Name = "comboBoxOperator7";
             this.comboBoxOperator7.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator7.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator7.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator7.TabIndex = 53;
             // 
             // comboBoxLValue6
@@ -1302,11 +1289,11 @@ namespace RNGReporter
             "Previous 3",
             "Previous 4",
             "Previous 5"});
-            this.comboBoxLValue6.Location = new System.Drawing.Point(599, 183);
-            this.comboBoxLValue6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue6.Location = new System.Drawing.Point(449, 146);
+            this.comboBoxLValue6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue6.Name = "comboBoxLValue6";
             this.comboBoxLValue6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue6.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue6.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue6.TabIndex = 47;
             // 
             // comboBoxOperator6
@@ -1325,11 +1312,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator6.Location = new System.Drawing.Point(713, 183);
-            this.comboBoxOperator6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator6.Location = new System.Drawing.Point(535, 146);
+            this.comboBoxOperator6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator6.Name = "comboBoxOperator6";
             this.comboBoxOperator6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator6.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator6.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator6.TabIndex = 48;
             // 
             // comboBoxLValue5
@@ -1352,21 +1339,21 @@ namespace RNGReporter
             "Previous 2",
             "Previous 3",
             "Previous 4"});
-            this.comboBoxLValue5.Location = new System.Drawing.Point(599, 152);
-            this.comboBoxLValue5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue5.Location = new System.Drawing.Point(449, 122);
+            this.comboBoxLValue5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue5.Name = "comboBoxLValue5";
             this.comboBoxLValue5.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue5.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue5.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue5.TabIndex = 42;
             // 
             // maskedTextBoxMaxFrames
             // 
             this.maskedTextBoxMaxFrames.Hex = false;
-            this.maskedTextBoxMaxFrames.Location = new System.Drawing.Point(101, 188);
-            this.maskedTextBoxMaxFrames.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.maskedTextBoxMaxFrames.Location = new System.Drawing.Point(76, 150);
+            this.maskedTextBoxMaxFrames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBoxMaxFrames.Mask = "0000000000";
             this.maskedTextBoxMaxFrames.Name = "maskedTextBoxMaxFrames";
-            this.maskedTextBoxMaxFrames.Size = new System.Drawing.Size(112, 22);
+            this.maskedTextBoxMaxFrames.Size = new System.Drawing.Size(85, 18);
             this.maskedTextBoxMaxFrames.TabIndex = 10;
             this.maskedTextBoxMaxFrames.Text = "1000";
             // 
@@ -1388,11 +1375,11 @@ namespace RNGReporter
             "Previous 1",
             "Previous 2",
             "Previous 3"});
-            this.comboBoxLValue4.Location = new System.Drawing.Point(599, 121);
-            this.comboBoxLValue4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue4.Location = new System.Drawing.Point(449, 97);
+            this.comboBoxLValue4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue4.Name = "comboBoxLValue4";
             this.comboBoxLValue4.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue4.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue4.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue4.TabIndex = 29;
             // 
             // comboBoxLValue3
@@ -1411,11 +1398,11 @@ namespace RNGReporter
             "Custom 2",
             "Previous 1",
             "Previous 2"});
-            this.comboBoxLValue3.Location = new System.Drawing.Point(599, 90);
-            this.comboBoxLValue3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue3.Location = new System.Drawing.Point(449, 72);
+            this.comboBoxLValue3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue3.Name = "comboBoxLValue3";
             this.comboBoxLValue3.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue3.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue3.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue3.TabIndex = 24;
             // 
             // comboBoxLValue2
@@ -1432,11 +1419,11 @@ namespace RNGReporter
             "16Bit Low",
             "Custom 1",
             "Previous 1"});
-            this.comboBoxLValue2.Location = new System.Drawing.Point(599, 59);
-            this.comboBoxLValue2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue2.Location = new System.Drawing.Point(449, 47);
+            this.comboBoxLValue2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue2.Name = "comboBoxLValue2";
             this.comboBoxLValue2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue2.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue2.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue2.TabIndex = 19;
             // 
             // comboBoxLValue1
@@ -1451,20 +1438,20 @@ namespace RNGReporter
             "32Bit Low",
             "16Bit High",
             "16Bit Low"});
-            this.comboBoxLValue1.Location = new System.Drawing.Point(599, 28);
-            this.comboBoxLValue1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLValue1.Location = new System.Drawing.Point(449, 22);
+            this.comboBoxLValue1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLValue1.Name = "comboBoxLValue1";
             this.comboBoxLValue1.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLValue1.Size = new System.Drawing.Size(105, 23);
+            this.comboBoxLValue1.Size = new System.Drawing.Size(80, 20);
             this.comboBoxLValue1.TabIndex = 14;
             // 
             // textBoxSeed
             // 
-            this.textBoxSeed.Location = new System.Drawing.Point(101, 218);
-            this.textBoxSeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxSeed.Location = new System.Drawing.Point(76, 174);
+            this.textBoxSeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSeed.MaxLength = 16;
             this.textBoxSeed.Name = "textBoxSeed";
-            this.textBoxSeed.Size = new System.Drawing.Size(191, 25);
+            this.textBoxSeed.Size = new System.Drawing.Size(144, 21);
             this.textBoxSeed.TabIndex = 12;
             this.textBoxSeed.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxSeed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -1485,11 +1472,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator4.Location = new System.Drawing.Point(713, 121);
-            this.comboBoxOperator4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator4.Location = new System.Drawing.Point(535, 97);
+            this.comboBoxOperator4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator4.Name = "comboBoxOperator4";
             this.comboBoxOperator4.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator4.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator4.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator4.TabIndex = 30;
             // 
             // comboBoxOperator3
@@ -1508,11 +1495,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator3.Location = new System.Drawing.Point(713, 90);
-            this.comboBoxOperator3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator3.Location = new System.Drawing.Point(535, 72);
+            this.comboBoxOperator3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator3.Name = "comboBoxOperator3";
             this.comboBoxOperator3.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator3.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator3.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator3.TabIndex = 25;
             // 
             // comboBoxOperator2
@@ -1531,11 +1518,11 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator2.Location = new System.Drawing.Point(713, 59);
-            this.comboBoxOperator2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator2.Location = new System.Drawing.Point(535, 47);
+            this.comboBoxOperator2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator2.Name = "comboBoxOperator2";
             this.comboBoxOperator2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator2.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator2.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator2.TabIndex = 20;
             // 
             // comboBoxOperator1
@@ -1554,31 +1541,31 @@ namespace RNGReporter
             "+",
             "-",
             "*"});
-            this.comboBoxOperator1.Location = new System.Drawing.Point(713, 28);
-            this.comboBoxOperator1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxOperator1.Location = new System.Drawing.Point(535, 22);
+            this.comboBoxOperator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOperator1.Name = "comboBoxOperator1";
             this.comboBoxOperator1.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxOperator1.Size = new System.Drawing.Size(67, 23);
+            this.comboBoxOperator1.Size = new System.Drawing.Size(51, 20);
             this.comboBoxOperator1.TabIndex = 15;
             // 
             // textBoxMult
             // 
-            this.textBoxMult.Location = new System.Drawing.Point(155, 73);
-            this.textBoxMult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxMult.Location = new System.Drawing.Point(116, 58);
+            this.textBoxMult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMult.MaxLength = 8;
             this.textBoxMult.Name = "textBoxMult";
-            this.textBoxMult.Size = new System.Drawing.Size(225, 25);
+            this.textBoxMult.Size = new System.Drawing.Size(170, 21);
             this.textBoxMult.TabIndex = 5;
             this.textBoxMult.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxMult.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
             // 
             // textBoxAdd
             // 
-            this.textBoxAdd.Location = new System.Drawing.Point(155, 105);
-            this.textBoxAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxAdd.Location = new System.Drawing.Point(116, 84);
+            this.textBoxAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAdd.MaxLength = 8;
             this.textBoxAdd.Name = "textBoxAdd";
-            this.textBoxAdd.Size = new System.Drawing.Size(225, 25);
+            this.textBoxAdd.Size = new System.Drawing.Size(170, 21);
             this.textBoxAdd.TabIndex = 6;
             this.textBoxAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearch_KeyDown);
             this.textBoxAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHex_KeyPress);
@@ -1633,8 +1620,8 @@ namespace RNGReporter
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewValues.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewValues.Location = new System.Drawing.Point(17, 357);
-            this.dataGridViewValues.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridViewValues.Location = new System.Drawing.Point(13, 286);
+            this.dataGridViewValues.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewValues.MultiSelect = false;
             this.dataGridViewValues.Name = "dataGridViewValues";
             this.dataGridViewValues.ReadOnly = true;
@@ -1651,23 +1638,9 @@ namespace RNGReporter
             this.dataGridViewValues.RowTemplate.Height = 20;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowEditingIcon = false;
-            this.dataGridViewValues.Size = new System.Drawing.Size(1035, 392);
+            this.dataGridViewValues.Size = new System.Drawing.Size(776, 314);
             this.dataGridViewValues.TabIndex = 33;
             this.dataGridViewValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewValues_MouseDown);
-            // 
-            // buttonGenerate
-            // 
-            this.buttonGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.buttonGenerate.ForeColor = System.Drawing.Color.Black;
-            this.buttonGenerate.Location = new System.Drawing.Point(301, 216);
-            this.buttonGenerate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
-            this.buttonGenerate.ShineColor = System.Drawing.SystemColors.Window;
-            this.buttonGenerate.Size = new System.Drawing.Size(113, 27);
-            this.buttonGenerate.TabIndex = 34;
-            this.buttonGenerate.Text = "计算";
-            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // ColumnFrame
             // 
@@ -1876,11 +1849,25 @@ namespace RNGReporter
             this.HighBit.ReadOnly = true;
             this.HighBit.Width = 35;
             // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonGenerate.ForeColor = System.Drawing.Color.Black;
+            this.buttonGenerate.Location = new System.Drawing.Point(226, 173);
+            this.buttonGenerate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonGenerate.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonGenerate.Size = new System.Drawing.Size(85, 22);
+            this.buttonGenerate.TabIndex = 34;
+            this.buttonGenerate.Text = "计算";
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            // 
             // Researcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 755);
+            this.ClientSize = new System.Drawing.Size(801, 604);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.glassComboBox1);
@@ -1961,10 +1948,10 @@ namespace RNGReporter
             this.Controls.Add(this.radioButtonCommon);
             this.Controls.Add(this.buttonGenerate);
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MinimumSize = new System.Drawing.Size(850, 597);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(642, 485);
             this.Name = "Researcher";
-            this.Text = "Researcher";
+            this.Text = "算法研究计算器";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Researcher_FormClosing);
             this.Load += new System.EventHandler(this.Researcher_Load);
             this.contextMenuStripGrid.ResumeLayout(false);

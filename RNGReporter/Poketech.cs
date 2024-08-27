@@ -37,7 +37,7 @@ namespace RNGReporter
             {
                 coin = offset - 1;
 
-                labelNote.Text = "DO NOT SWITCH TO THE HAPPINESS APPLICATION AT ALL";
+                labelNote.Text = "请勿切换到亲密度检测器";
             }
             else
             {
@@ -48,12 +48,17 @@ namespace RNGReporter
 
                 if (happy == 0)
                 {
-                    labelNote.Text = "SWITCH TO THE HAPPINESS APPLICATION ONCE BUT DO NOT CLICK";
+                    labelNote.Text = "切换到亲密度检测器，但不要点击";
                 }
             }
 
             labelHappy.Text = happy.ToString();
             labelCoin.Text = coin.ToString();
+        }
+
+        private void label2_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

@@ -319,7 +319,7 @@ namespace RNGReporter
             this.buttonOk.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 4;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "确认";
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonCancel
@@ -333,23 +333,23 @@ namespace RNGReporter
             this.buttonCancel.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "关闭";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Year";
+            this.label1.Text = "年份";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(54, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "月份 ";
             // 
@@ -358,25 +358,26 @@ namespace RNGReporter
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(100, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 17);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Date";
+            this.label3.Text = "日期";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(148, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
+            this.label4.Size = new System.Drawing.Size(19, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Hour";
+            this.label4.Text = "时";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(291, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Delay";
             // 
@@ -385,25 +386,25 @@ namespace RNGReporter
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(241, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 17);
+            this.label6.Size = new System.Drawing.Size(19, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Second";
+            this.label6.Text = "秒";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(197, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 17);
+            this.label7.Size = new System.Drawing.Size(19, 13);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Minute";
+            this.label7.Text = "分";
             // 
             // label_main_seed
             // 
             this.label_main_seed.AutoSize = true;
             this.label_main_seed.Location = new System.Drawing.Point(165, 420);
             this.label_main_seed.Name = "label_main_seed";
-            this.label_main_seed.Size = new System.Drawing.Size(45, 17);
+            this.label_main_seed.Size = new System.Drawing.Size(35, 13);
             this.label_main_seed.TabIndex = 2;
             this.label_main_seed.Text = "Seed:";
             // 
@@ -412,7 +413,7 @@ namespace RNGReporter
             this.labelSeed.AutoSize = true;
             this.labelSeed.Location = new System.Drawing.Point(206, 420);
             this.labelSeed.Name = "labelSeed";
-            this.labelSeed.Size = new System.Drawing.Size(0, 17);
+            this.labelSeed.Size = new System.Drawing.Size(0, 13);
             this.labelSeed.TabIndex = 3;
             // 
             // buttonSimpleSeed
@@ -425,7 +426,7 @@ namespace RNGReporter
             this.buttonSimpleSeed.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonSimpleSeed.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpleSeed.TabIndex = 14;
-            this.buttonSimpleSeed.Text = "Create";
+            this.buttonSimpleSeed.Text = "创建";
             this.buttonSimpleSeed.Click += new System.EventHandler(this.buttonSimpleSeed_Click);
             // 
             // tabControl1
@@ -477,12 +478,12 @@ namespace RNGReporter
             this.tabPage1.Controls.Add(this.label_a_d);
             this.tabPage1.Controls.Add(this.maskedTextBoxDate_A);
             this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(509, 365);
+            this.tabPage1.Size = new System.Drawing.Size(509, 369);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Find Seed by IVs";
+            this.tabPage1.Text = "根据个体计算seed";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // radioButton_SIV_OPEN
@@ -490,9 +491,9 @@ namespace RNGReporter
             this.radioButton_SIV_OPEN.AutoSize = true;
             this.radioButton_SIV_OPEN.Location = new System.Drawing.Point(190, 133);
             this.radioButton_SIV_OPEN.Name = "radioButton_SIV_OPEN";
-            this.radioButton_SIV_OPEN.Size = new System.Drawing.Size(64, 21);
+            this.radioButton_SIV_OPEN.Size = new System.Drawing.Size(49, 17);
             this.radioButton_SIV_OPEN.TabIndex = 68;
-            this.radioButton_SIV_OPEN.Text = "Open";
+            this.radioButton_SIV_OPEN.Text = "打开";
             this.radioButton_SIV_OPEN.UseVisualStyleBackColor = true;
             this.radioButton_SIV_OPEN.CheckedChanged += new System.EventHandler(this.radioButton_SIV_OPEN_CheckedChanged);
             // 
@@ -501,9 +502,9 @@ namespace RNGReporter
             this.radioButton_SIV_CUSTOM.AutoSize = true;
             this.radioButton_SIV_CUSTOM.Location = new System.Drawing.Point(124, 133);
             this.radioButton_SIV_CUSTOM.Name = "radioButton_SIV_CUSTOM";
-            this.radioButton_SIV_CUSTOM.Size = new System.Drawing.Size(76, 21);
+            this.radioButton_SIV_CUSTOM.Size = new System.Drawing.Size(61, 17);
             this.radioButton_SIV_CUSTOM.TabIndex = 67;
-            this.radioButton_SIV_CUSTOM.Text = "Custom";
+            this.radioButton_SIV_CUSTOM.Text = "自定义";
             this.radioButton_SIV_CUSTOM.UseVisualStyleBackColor = true;
             this.radioButton_SIV_CUSTOM.CheckedChanged += new System.EventHandler(this.radioButton_SIV_CUSTOM_CheckedChanged);
             // 
@@ -512,7 +513,7 @@ namespace RNGReporter
             this.radioButton_SIV_HGSS.AutoSize = true;
             this.radioButton_SIV_HGSS.Location = new System.Drawing.Point(63, 133);
             this.radioButton_SIV_HGSS.Name = "radioButton_SIV_HGSS";
-            this.radioButton_SIV_HGSS.Size = new System.Drawing.Size(68, 21);
+            this.radioButton_SIV_HGSS.Size = new System.Drawing.Size(55, 17);
             this.radioButton_SIV_HGSS.TabIndex = 66;
             this.radioButton_SIV_HGSS.Text = "HGSS";
             this.radioButton_SIV_HGSS.UseVisualStyleBackColor = true;
@@ -523,10 +524,10 @@ namespace RNGReporter
             this.radioButton_SIV_DPP.Checked = true;
             this.radioButton_SIV_DPP.Location = new System.Drawing.Point(10, 133);
             this.radioButton_SIV_DPP.Name = "radioButton_SIV_DPP";
-            this.radioButton_SIV_DPP.Size = new System.Drawing.Size(57, 21);
+            this.radioButton_SIV_DPP.Size = new System.Drawing.Size(50, 17);
             this.radioButton_SIV_DPP.TabIndex = 65;
             this.radioButton_SIV_DPP.TabStop = true;
-            this.radioButton_SIV_DPP.Text = "DPP";
+            this.radioButton_SIV_DPP.Text = "DPPt";
             this.radioButton_SIV_DPP.UseVisualStyleBackColor = true;
             // 
             // checkBoxLowDelay
@@ -534,9 +535,9 @@ namespace RNGReporter
             this.checkBoxLowDelay.AutoSize = true;
             this.checkBoxLowDelay.Location = new System.Drawing.Point(249, 134);
             this.checkBoxLowDelay.Name = "checkBoxLowDelay";
-            this.checkBoxLowDelay.Size = new System.Drawing.Size(151, 21);
+            this.checkBoxLowDelay.Size = new System.Drawing.Size(107, 17);
             this.checkBoxLowDelay.TabIndex = 64;
-            this.checkBoxLowDelay.Text = "Delay Below 10000";
+            this.checkBoxLowDelay.Text = "Delay低于10000";
             this.checkBoxLowDelay.UseVisualStyleBackColor = true;
             this.checkBoxLowDelay.Visible = false;
             // 
@@ -545,7 +546,7 @@ namespace RNGReporter
             this.label_SIV_MaxDelay.AutoSize = true;
             this.label_SIV_MaxDelay.Location = new System.Drawing.Point(442, 7);
             this.label_SIV_MaxDelay.Name = "label_SIV_MaxDelay";
-            this.label_SIV_MaxDelay.Size = new System.Drawing.Size(72, 17);
+            this.label_SIV_MaxDelay.Size = new System.Drawing.Size(58, 13);
             this.label_SIV_MaxDelay.TabIndex = 63;
             this.label_SIV_MaxDelay.Text = "最大Delay";
             this.label_SIV_MaxDelay.Visible = false;
@@ -555,7 +556,7 @@ namespace RNGReporter
             this.label_SIV_MinDelay.AutoSize = true;
             this.label_SIV_MinDelay.Location = new System.Drawing.Point(385, 7);
             this.label_SIV_MinDelay.Name = "label_SIV_MinDelay";
-            this.label_SIV_MinDelay.Size = new System.Drawing.Size(72, 17);
+            this.label_SIV_MinDelay.Size = new System.Drawing.Size(58, 13);
             this.label_SIV_MinDelay.TabIndex = 62;
             this.label_SIV_MinDelay.Text = "最小Delay";
             this.label_SIV_MinDelay.Visible = false;
@@ -585,7 +586,7 @@ namespace RNGReporter
             this.label_a_y.AutoSize = true;
             this.label_a_y.Location = new System.Drawing.Point(7, 7);
             this.label_a_y.Name = "label_a_y";
-            this.label_a_y.Size = new System.Drawing.Size(36, 17);
+            this.label_a_y.Size = new System.Drawing.Size(31, 13);
             this.label_a_y.TabIndex = 0;
             this.label_a_y.Text = "年份";
             // 
@@ -623,7 +624,7 @@ namespace RNGReporter
             // Type
             // 
             this.Type.DataPropertyName = "Type";
-            this.Type.HeaderText = "Type";
+            this.Type.HeaderText = "类型";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
@@ -644,7 +645,7 @@ namespace RNGReporter
             // Frame
             // 
             this.Frame.DataPropertyName = "Offset";
-            this.Frame.HeaderText = "Method 1 Frame";
+            this.Frame.HeaderText = "Method 1 帧数";
             this.Frame.MinimumWidth = 6;
             this.Frame.Name = "Frame";
             this.Frame.ReadOnly = true;
@@ -688,7 +689,7 @@ namespace RNGReporter
             this.buttonFind_A.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonFind_A.Size = new System.Drawing.Size(75, 23);
             this.buttonFind_A.TabIndex = 24;
-            this.buttonFind_A.Text = "Find";
+            this.buttonFind_A.Text = "计算";
             this.buttonFind_A.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // maskedTextBoxMinutes_A
@@ -715,7 +716,7 @@ namespace RNGReporter
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 46);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 17);
+            this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "性格";
             // 
@@ -744,18 +745,18 @@ namespace RNGReporter
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(325, 45);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 17);
+            this.label15.Size = new System.Drawing.Size(31, 13);
             this.label15.TabIndex = 22;
             this.label15.Text = "速度";
             // 
             // label_a_min
             // 
             this.label_a_min.AutoSize = true;
-            this.label_a_min.Location = new System.Drawing.Point(246, 6);
+            this.label_a_min.Location = new System.Drawing.Point(237, 6);
             this.label_a_min.Name = "label_a_min";
-            this.label_a_min.Size = new System.Drawing.Size(61, 17);
+            this.label_a_min.Size = new System.Drawing.Size(64, 13);
             this.label_a_min.TabIndex = 8;
-            this.label_a_min.Text = "分(0-59)";
+            this.label_a_min.Text = "分（0-59）";
             // 
             // maskedTextBoxSpA_A
             // 
@@ -772,7 +773,7 @@ namespace RNGReporter
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(287, 45);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 17);
+            this.label16.Size = new System.Drawing.Size(31, 13);
             this.label16.TabIndex = 20;
             this.label16.Text = "特防";
             // 
@@ -800,18 +801,18 @@ namespace RNGReporter
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(245, 45);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(36, 17);
+            this.label17.Size = new System.Drawing.Size(31, 13);
             this.label17.TabIndex = 18;
             this.label17.Text = "特攻";
             // 
             // label_a_h
             // 
             this.label_a_h.AutoSize = true;
-            this.label_a_h.Location = new System.Drawing.Point(161, 6);
+            this.label_a_h.Location = new System.Drawing.Point(154, 6);
             this.label_a_h.Name = "label_a_h";
-            this.label_a_h.Size = new System.Drawing.Size(61, 17);
+            this.label_a_h.Size = new System.Drawing.Size(64, 13);
             this.label_a_h.TabIndex = 6;
-            this.label_a_h.Text = "时(0-23)";
+            this.label_a_h.Text = "时（0-23）";
             // 
             // maskedTextBoxSpe_A
             // 
@@ -828,7 +829,7 @@ namespace RNGReporter
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(203, 45);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(36, 17);
+            this.label18.Size = new System.Drawing.Size(31, 13);
             this.label18.TabIndex = 16;
             this.label18.Text = "防御";
             // 
@@ -846,7 +847,7 @@ namespace RNGReporter
             this.label_a_m.AutoSize = true;
             this.label_a_m.Location = new System.Drawing.Point(54, 7);
             this.label_a_m.Name = "label_a_m";
-            this.label_a_m.Size = new System.Drawing.Size(36, 17);
+            this.label_a_m.Size = new System.Drawing.Size(31, 13);
             this.label_a_m.TabIndex = 2;
             this.label_a_m.Text = "月份";
             // 
@@ -858,7 +859,7 @@ namespace RNGReporter
             this.comboBoxNature_A.Location = new System.Drawing.Point(10, 61);
             this.comboBoxNature_A.Name = "comboBoxNature_A";
             this.comboBoxNature_A.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxNature_A.Size = new System.Drawing.Size(105, 25);
+            this.comboBoxNature_A.Size = new System.Drawing.Size(105, 21);
             this.comboBoxNature_A.TabIndex = 11;
             // 
             // label19
@@ -866,7 +867,7 @@ namespace RNGReporter
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(161, 45);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(36, 17);
+            this.label19.Size = new System.Drawing.Size(31, 13);
             this.label19.TabIndex = 14;
             this.label19.Text = "攻击";
             // 
@@ -875,7 +876,7 @@ namespace RNGReporter
             this.label_a_d.AutoSize = true;
             this.label_a_d.Location = new System.Drawing.Point(101, 6);
             this.label_a_d.Name = "label_a_d";
-            this.label_a_d.Size = new System.Drawing.Size(36, 17);
+            this.label_a_d.Size = new System.Drawing.Size(31, 13);
             this.label_a_d.TabIndex = 4;
             this.label_a_d.Text = "日期";
             // 
@@ -893,7 +894,7 @@ namespace RNGReporter
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(120, 45);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 17);
+            this.label20.Size = new System.Drawing.Size(22, 13);
             this.label20.TabIndex = 12;
             this.label20.Text = "HP";
             // 
@@ -938,12 +939,12 @@ namespace RNGReporter
             this.tabPage3.Controls.Add(this.maskedTextBoxSpD_Stat);
             this.tabPage3.Controls.Add(this.maskedTextBoxSpA_Stat);
             this.tabPage3.Controls.Add(this.maskedTextBoxHP_Stat);
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(509, 365);
+            this.tabPage3.Size = new System.Drawing.Size(509, 369);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Find Seed by Stats";
+            this.tabPage3.Text = "根据能力值计算seed";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // radioButton_SS_CUSTOM
@@ -951,7 +952,7 @@ namespace RNGReporter
             this.radioButton_SS_CUSTOM.AutoSize = true;
             this.radioButton_SS_CUSTOM.Location = new System.Drawing.Point(124, 133);
             this.radioButton_SS_CUSTOM.Name = "radioButton_SS_CUSTOM";
-            this.radioButton_SS_CUSTOM.Size = new System.Drawing.Size(76, 21);
+            this.radioButton_SS_CUSTOM.Size = new System.Drawing.Size(60, 17);
             this.radioButton_SS_CUSTOM.TabIndex = 73;
             this.radioButton_SS_CUSTOM.Text = "Custom";
             this.radioButton_SS_CUSTOM.UseVisualStyleBackColor = true;
@@ -962,7 +963,7 @@ namespace RNGReporter
             this.label_SS_MaxDelay.AutoSize = true;
             this.label_SS_MaxDelay.Location = new System.Drawing.Point(442, 7);
             this.label_SS_MaxDelay.Name = "label_SS_MaxDelay";
-            this.label_SS_MaxDelay.Size = new System.Drawing.Size(72, 17);
+            this.label_SS_MaxDelay.Size = new System.Drawing.Size(58, 13);
             this.label_SS_MaxDelay.TabIndex = 72;
             this.label_SS_MaxDelay.Text = "最大Delay";
             this.label_SS_MaxDelay.Visible = false;
@@ -972,7 +973,7 @@ namespace RNGReporter
             this.label_SS_MinDelay.AutoSize = true;
             this.label_SS_MinDelay.Location = new System.Drawing.Point(385, 7);
             this.label_SS_MinDelay.Name = "label_SS_MinDelay";
-            this.label_SS_MinDelay.Size = new System.Drawing.Size(72, 17);
+            this.label_SS_MinDelay.Size = new System.Drawing.Size(58, 13);
             this.label_SS_MinDelay.TabIndex = 71;
             this.label_SS_MinDelay.Text = "最小Delay";
             this.label_SS_MinDelay.Visible = false;
@@ -982,7 +983,7 @@ namespace RNGReporter
             this.radioButton_SS_HGSS.AutoSize = true;
             this.radioButton_SS_HGSS.Location = new System.Drawing.Point(63, 133);
             this.radioButton_SS_HGSS.Name = "radioButton_SS_HGSS";
-            this.radioButton_SS_HGSS.Size = new System.Drawing.Size(68, 21);
+            this.radioButton_SS_HGSS.Size = new System.Drawing.Size(55, 17);
             this.radioButton_SS_HGSS.TabIndex = 68;
             this.radioButton_SS_HGSS.Text = "HGSS";
             this.radioButton_SS_HGSS.UseVisualStyleBackColor = true;
@@ -993,10 +994,10 @@ namespace RNGReporter
             this.radioButton_SS_DPP.Checked = true;
             this.radioButton_SS_DPP.Location = new System.Drawing.Point(10, 133);
             this.radioButton_SS_DPP.Name = "radioButton_SS_DPP";
-            this.radioButton_SS_DPP.Size = new System.Drawing.Size(57, 21);
+            this.radioButton_SS_DPP.Size = new System.Drawing.Size(50, 17);
             this.radioButton_SS_DPP.TabIndex = 67;
             this.radioButton_SS_DPP.TabStop = true;
-            this.radioButton_SS_DPP.Text = "DPP";
+            this.radioButton_SS_DPP.Text = "DPPt";
             this.radioButton_SS_DPP.UseVisualStyleBackColor = true;
             // 
             // buttonFind_Stat
@@ -1009,7 +1010,7 @@ namespace RNGReporter
             this.buttonFind_Stat.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonFind_Stat.Size = new System.Drawing.Size(75, 23);
             this.buttonFind_Stat.TabIndex = 30;
-            this.buttonFind_Stat.Text = "Find";
+            this.buttonFind_Stat.Text = "计算";
             this.buttonFind_Stat.Click += new System.EventHandler(this.buttonFind_Stat_Click);
             // 
             // label32
@@ -1017,34 +1018,34 @@ namespace RNGReporter
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(7, 7);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(36, 17);
+            this.label32.Size = new System.Drawing.Size(31, 13);
             this.label32.TabIndex = 0;
             this.label32.Text = "年份";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(246, 6);
+            this.label33.Location = new System.Drawing.Point(237, 6);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(75, 17);
+            this.label33.Size = new System.Drawing.Size(64, 13);
             this.label33.TabIndex = 8;
-            this.label33.Text = "分钟(0-59)";
+            this.label33.Text = "分（0-59）";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(161, 6);
+            this.label34.Location = new System.Drawing.Point(154, 6);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(75, 17);
+            this.label34.Size = new System.Drawing.Size(64, 13);
             this.label34.TabIndex = 6;
-            this.label34.Text = "时钟(0-23)";
+            this.label34.Text = "时（0-23）";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(54, 7);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(36, 17);
+            this.label35.Size = new System.Drawing.Size(31, 13);
             this.label35.TabIndex = 2;
             this.label35.Text = "月份";
             // 
@@ -1053,7 +1054,7 @@ namespace RNGReporter
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(101, 6);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(36, 17);
+            this.label36.Size = new System.Drawing.Size(31, 13);
             this.label36.TabIndex = 4;
             this.label36.Text = "日期";
             // 
@@ -1091,7 +1092,7 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn1.HeaderText = "类型";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -1112,7 +1113,7 @@ namespace RNGReporter
             // OffsetStat
             // 
             this.OffsetStat.DataPropertyName = "Offset";
-            this.OffsetStat.HeaderText = "Offset";
+            this.OffsetStat.HeaderText = "偏差";
             this.OffsetStat.MinimumWidth = 6;
             this.OffsetStat.Name = "OffsetStat";
             this.OffsetStat.ReadOnly = true;
@@ -1142,7 +1143,7 @@ namespace RNGReporter
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(280, 86);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 17);
+            this.label22.Size = new System.Drawing.Size(31, 13);
             this.label22.TabIndex = 28;
             this.label22.Text = "速度";
             // 
@@ -1151,7 +1152,7 @@ namespace RNGReporter
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(238, 86);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(36, 17);
+            this.label23.Size = new System.Drawing.Size(31, 13);
             this.label23.TabIndex = 26;
             this.label23.Text = "特防";
             // 
@@ -1160,7 +1161,7 @@ namespace RNGReporter
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(196, 86);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(36, 17);
+            this.label24.Size = new System.Drawing.Size(31, 13);
             this.label24.TabIndex = 24;
             this.label24.Text = "特攻";
             // 
@@ -1169,7 +1170,7 @@ namespace RNGReporter
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(154, 86);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(36, 17);
+            this.label25.Size = new System.Drawing.Size(31, 13);
             this.label25.TabIndex = 22;
             this.label25.Text = "防御";
             // 
@@ -1178,7 +1179,7 @@ namespace RNGReporter
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(113, 86);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(36, 17);
+            this.label26.Size = new System.Drawing.Size(31, 13);
             this.label26.TabIndex = 20;
             this.label26.Text = "攻击";
             // 
@@ -1187,7 +1188,7 @@ namespace RNGReporter
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(70, 86);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(27, 17);
+            this.label27.Size = new System.Drawing.Size(22, 13);
             this.label27.TabIndex = 18;
             this.label27.Text = "HP";
             // 
@@ -1196,7 +1197,7 @@ namespace RNGReporter
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(319, 45);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(36, 17);
+            this.label28.Size = new System.Drawing.Size(31, 13);
             this.label28.TabIndex = 14;
             this.label28.Text = "个性";
             // 
@@ -1205,7 +1206,7 @@ namespace RNGReporter
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(184, 45);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(36, 17);
+            this.label29.Size = new System.Drawing.Size(31, 13);
             this.label29.TabIndex = 12;
             this.label29.Text = "性格";
             // 
@@ -1217,7 +1218,7 @@ namespace RNGReporter
             this.comboBoxNature_Stat.Location = new System.Drawing.Point(187, 61);
             this.comboBoxNature_Stat.Name = "comboBoxNature_Stat";
             this.comboBoxNature_Stat.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxNature_Stat.Size = new System.Drawing.Size(129, 25);
+            this.comboBoxNature_Stat.Size = new System.Drawing.Size(129, 21);
             this.comboBoxNature_Stat.TabIndex = 13;
             // 
             // comboBoxCharacteristic_Stat
@@ -1228,7 +1229,7 @@ namespace RNGReporter
             this.comboBoxCharacteristic_Stat.Location = new System.Drawing.Point(322, 61);
             this.comboBoxCharacteristic_Stat.Name = "comboBoxCharacteristic_Stat";
             this.comboBoxCharacteristic_Stat.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxCharacteristic_Stat.Size = new System.Drawing.Size(179, 25);
+            this.comboBoxCharacteristic_Stat.Size = new System.Drawing.Size(179, 21);
             this.comboBoxCharacteristic_Stat.TabIndex = 15;
             // 
             // label30
@@ -1236,7 +1237,7 @@ namespace RNGReporter
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(7, 86);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(36, 17);
+            this.label30.Size = new System.Drawing.Size(31, 13);
             this.label30.TabIndex = 16;
             this.label30.Text = "等级";
             // 
@@ -1245,7 +1246,7 @@ namespace RNGReporter
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(7, 45);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(50, 17);
+            this.label31.Size = new System.Drawing.Size(43, 13);
             this.label31.TabIndex = 10;
             this.label31.Text = "宝可梦";
             // 
@@ -1257,7 +1258,7 @@ namespace RNGReporter
             this.comboBoxPokemon_Stat.Location = new System.Drawing.Point(10, 61);
             this.comboBoxPokemon_Stat.Name = "comboBoxPokemon_Stat";
             this.comboBoxPokemon_Stat.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxPokemon_Stat.Size = new System.Drawing.Size(171, 25);
+            this.comboBoxPokemon_Stat.Size = new System.Drawing.Size(171, 21);
             this.comboBoxPokemon_Stat.TabIndex = 11;
             // 
             // maskedTextBoxMaxDelay_Stat
@@ -1435,12 +1436,12 @@ namespace RNGReporter
             this.tabPage4.Controls.Add(this.maskedTextBoxMinSpeed);
             this.tabPage4.Controls.Add(this.maskedTextBoxHours_IVRange);
             this.tabPage4.Controls.Add(this.maskedTextBoxDate_IVRange);
-            this.tabPage4.Location = new System.Drawing.Point(4, 26);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(509, 365);
+            this.tabPage4.Size = new System.Drawing.Size(509, 369);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Find Seed by IV Range";
+            this.tabPage4.Text = "根据个体范围计算seed";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // buttonFind_ByIVRange
@@ -1453,7 +1454,7 @@ namespace RNGReporter
             this.buttonFind_ByIVRange.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonFind_ByIVRange.Size = new System.Drawing.Size(75, 23);
             this.buttonFind_ByIVRange.TabIndex = 60;
-            this.buttonFind_ByIVRange.Text = "Find";
+            this.buttonFind_ByIVRange.Text = "计算";
             this.buttonFind_ByIVRange.Click += new System.EventHandler(this.buttonFind_ByIVRange_Click);
             // 
             // label98
@@ -1461,7 +1462,7 @@ namespace RNGReporter
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(309, 66);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(44, 17);
+            this.label98.Size = new System.Drawing.Size(34, 13);
             this.label98.TabIndex = 59;
             this.label98.Text = "Delay";
             // 
@@ -1470,7 +1471,7 @@ namespace RNGReporter
             this.label96.AutoSize = true;
             this.label96.Location = new System.Drawing.Point(14, 111);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(33, 17);
+            this.label96.Size = new System.Drawing.Size(31, 13);
             this.label96.TabIndex = 56;
             this.label96.Text = "最大";
             // 
@@ -1479,7 +1480,7 @@ namespace RNGReporter
             this.label97.AutoSize = true;
             this.label97.Location = new System.Drawing.Point(14, 87);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(30, 17);
+            this.label97.Size = new System.Drawing.Size(31, 13);
             this.label97.TabIndex = 55;
             this.label97.Text = "最小";
             // 
@@ -1516,7 +1517,7 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn14.HeaderText = "类型";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
@@ -1537,7 +1538,7 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "Offset";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Method 1 Frame";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Method 1 帧数";
             this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
@@ -1566,16 +1567,16 @@ namespace RNGReporter
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(7, 7);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(38, 17);
+            this.label37.Size = new System.Drawing.Size(31, 13);
             this.label37.TabIndex = 24;
-            this.label37.Text = "Year";
+            this.label37.Text = "年份";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(314, 6);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(36, 17);
+            this.label38.Size = new System.Drawing.Size(31, 13);
             this.label38.TabIndex = 34;
             this.label38.Text = "性格";
             // 
@@ -1584,25 +1585,25 @@ namespace RNGReporter
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(260, 66);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(36, 17);
+            this.label39.Size = new System.Drawing.Size(31, 13);
             this.label39.TabIndex = 46;
             this.label39.Text = "速度";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(246, 6);
+            this.label40.Location = new System.Drawing.Point(237, 6);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(93, 17);
+            this.label40.Size = new System.Drawing.Size(64, 13);
             this.label40.TabIndex = 32;
-            this.label40.Text = "Minute (0-59)";
+            this.label40.Text = "分（0-59）";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(222, 66);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(36, 17);
+            this.label41.Size = new System.Drawing.Size(31, 13);
             this.label41.TabIndex = 44;
             this.label41.Text = "特防";
             // 
@@ -1611,25 +1612,25 @@ namespace RNGReporter
             this.label42.AutoSize = true;
             this.label42.Location = new System.Drawing.Point(180, 66);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(36, 17);
+            this.label42.Size = new System.Drawing.Size(31, 13);
             this.label42.TabIndex = 42;
             this.label42.Text = "特攻";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(161, 6);
+            this.label43.Location = new System.Drawing.Point(154, 6);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(82, 17);
+            this.label43.Size = new System.Drawing.Size(64, 13);
             this.label43.TabIndex = 30;
-            this.label43.Text = "Hour (0-23)";
+            this.label43.Text = "时（0-23）";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(138, 66);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(36, 17);
+            this.label44.Size = new System.Drawing.Size(31, 13);
             this.label44.TabIndex = 40;
             this.label44.Text = "防御";
             // 
@@ -1638,7 +1639,7 @@ namespace RNGReporter
             this.label45.AutoSize = true;
             this.label45.Location = new System.Drawing.Point(54, 7);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(47, 17);
+            this.label45.Size = new System.Drawing.Size(34, 13);
             this.label45.TabIndex = 26;
             this.label45.Text = "月份 ";
             // 
@@ -1650,7 +1651,7 @@ namespace RNGReporter
             this.comboBoxNature_IVRange.Location = new System.Drawing.Point(312, 21);
             this.comboBoxNature_IVRange.Name = "comboBoxNature_IVRange";
             this.comboBoxNature_IVRange.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxNature_IVRange.Size = new System.Drawing.Size(105, 25);
+            this.comboBoxNature_IVRange.Size = new System.Drawing.Size(105, 21);
             this.comboBoxNature_IVRange.TabIndex = 35;
             // 
             // label46
@@ -1658,7 +1659,7 @@ namespace RNGReporter
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(96, 66);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(36, 17);
+            this.label46.Size = new System.Drawing.Size(31, 13);
             this.label46.TabIndex = 38;
             this.label46.Text = "攻击";
             // 
@@ -1667,16 +1668,16 @@ namespace RNGReporter
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(101, 6);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(38, 17);
+            this.label47.Size = new System.Drawing.Size(31, 13);
             this.label47.TabIndex = 28;
-            this.label47.Text = "Date";
+            this.label47.Text = "日期";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(55, 66);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(27, 17);
+            this.label48.Size = new System.Drawing.Size(22, 13);
             this.label48.TabIndex = 36;
             this.label48.Text = "HP";
             // 
@@ -1921,12 +1922,12 @@ namespace RNGReporter
             this.tabPage2.Controls.Add(this.maskedTextBoxDelay);
             this.tabPage2.Controls.Add(this.maskedTextBoxSeconds);
             this.tabPage2.Controls.Add(this.maskedTextBoxMinutes);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(509, 365);
+            this.tabPage2.Size = new System.Drawing.Size(509, 369);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Simple Seed Generator";
+            this.tabPage2.Text = "简易版seed计算器";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label14
@@ -1934,9 +1935,9 @@ namespace RNGReporter
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(336, 174);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 17);
+            this.label14.Size = new System.Drawing.Size(55, 13);
             this.label14.TabIndex = 163;
-            this.label14.Text = "Language";
+            this.label14.Text = "游戏语言";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBoxLanguage
@@ -1955,7 +1956,7 @@ namespace RNGReporter
             this.comboBoxLanguage.Location = new System.Drawing.Point(339, 190);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxLanguage.Size = new System.Drawing.Size(147, 25);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(147, 21);
             this.comboBoxLanguage.TabIndex = 162;
             // 
             // label104
@@ -1963,9 +1964,9 @@ namespace RNGReporter
             this.label104.AutoSize = true;
             this.label104.Location = new System.Drawing.Point(10, 265);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(94, 17);
+            this.label104.Size = new System.Drawing.Size(76, 13);
             this.label104.TabIndex = 147;
-            this.label104.Text = "Held Button 7";
+            this.label104.Text = "按住的按键 7";
             // 
             // comboBoxButton7
             // 
@@ -1989,7 +1990,7 @@ namespace RNGReporter
             this.comboBoxButton7.Location = new System.Drawing.Point(13, 281);
             this.comboBoxButton7.Name = "comboBoxButton7";
             this.comboBoxButton7.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton7.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton7.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton7.TabIndex = 146;
             this.comboBoxButton7.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -1998,9 +1999,9 @@ namespace RNGReporter
             this.label105.AutoSize = true;
             this.label105.Location = new System.Drawing.Point(167, 221);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(94, 17);
+            this.label105.Size = new System.Drawing.Size(76, 13);
             this.label105.TabIndex = 145;
-            this.label105.Text = "Held Button 6";
+            this.label105.Text = "按住的按键 6";
             // 
             // comboBoxButton6
             // 
@@ -2024,7 +2025,7 @@ namespace RNGReporter
             this.comboBoxButton6.Location = new System.Drawing.Point(170, 237);
             this.comboBoxButton6.Name = "comboBoxButton6";
             this.comboBoxButton6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton6.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton6.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton6.TabIndex = 144;
             this.comboBoxButton6.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2033,7 +2034,7 @@ namespace RNGReporter
             this.label106.AutoSize = true;
             this.label106.Location = new System.Drawing.Point(193, 218);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(0, 17);
+            this.label106.Size = new System.Drawing.Size(0, 13);
             this.label106.TabIndex = 143;
             // 
             // label107
@@ -2041,9 +2042,9 @@ namespace RNGReporter
             this.label107.AutoSize = true;
             this.label107.Location = new System.Drawing.Point(10, 221);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(94, 17);
+            this.label107.Size = new System.Drawing.Size(76, 13);
             this.label107.TabIndex = 142;
-            this.label107.Text = "Held Button 5";
+            this.label107.Text = "按住的按键 5";
             // 
             // comboBoxButton5
             // 
@@ -2067,7 +2068,7 @@ namespace RNGReporter
             this.comboBoxButton5.Location = new System.Drawing.Point(13, 237);
             this.comboBoxButton5.Name = "comboBoxButton5";
             this.comboBoxButton5.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton5.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton5.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton5.TabIndex = 141;
             this.comboBoxButton5.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2076,9 +2077,9 @@ namespace RNGReporter
             this.label101.AutoSize = true;
             this.label101.Location = new System.Drawing.Point(336, 221);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(63, 17);
+            this.label101.Size = new System.Drawing.Size(46, 13);
             this.label101.TabIndex = 139;
-            this.label101.Text = "DS Type";
+            this.label101.Text = "DS机型";
             // 
             // comboBoxDSType
             // 
@@ -2092,7 +2093,7 @@ namespace RNGReporter
             this.comboBoxDSType.Location = new System.Drawing.Point(338, 237);
             this.comboBoxDSType.Name = "comboBoxDSType";
             this.comboBoxDSType.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxDSType.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxDSType.Size = new System.Drawing.Size(148, 21);
             this.comboBoxDSType.TabIndex = 140;
             // 
             // checkBoxSoftReset
@@ -2100,9 +2101,9 @@ namespace RNGReporter
             this.checkBoxSoftReset.AutoSize = true;
             this.checkBoxSoftReset.Location = new System.Drawing.Point(338, 264);
             this.checkBoxSoftReset.Name = "checkBoxSoftReset";
-            this.checkBoxSoftReset.Size = new System.Drawing.Size(96, 21);
+            this.checkBoxSoftReset.Size = new System.Drawing.Size(62, 17);
             this.checkBoxSoftReset.TabIndex = 6;
-            this.checkBoxSoftReset.Text = "Soft Reset";
+            this.checkBoxSoftReset.Text = "软复位";
             this.checkBoxSoftReset.UseVisualStyleBackColor = true;
             // 
             // textBoxButtonCode
@@ -2110,7 +2111,7 @@ namespace RNGReporter
             this.textBoxButtonCode.Location = new System.Drawing.Point(13, 328);
             this.textBoxButtonCode.Name = "textBoxButtonCode";
             this.textBoxButtonCode.ReadOnly = true;
-            this.textBoxButtonCode.Size = new System.Drawing.Size(148, 23);
+            this.textBoxButtonCode.Size = new System.Drawing.Size(148, 20);
             this.textBoxButtonCode.TabIndex = 79;
             // 
             // label11
@@ -2118,9 +2119,9 @@ namespace RNGReporter
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(167, 174);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 17);
+            this.label11.Size = new System.Drawing.Size(76, 13);
             this.label11.TabIndex = 91;
-            this.label11.Text = "Held Button 4";
+            this.label11.Text = "按住的按键 4";
             // 
             // comboBoxButton4
             // 
@@ -2144,7 +2145,7 @@ namespace RNGReporter
             this.comboBoxButton4.Location = new System.Drawing.Point(170, 190);
             this.comboBoxButton4.Name = "comboBoxButton4";
             this.comboBoxButton4.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton4.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton4.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton4.TabIndex = 90;
             this.comboBoxButton4.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2153,7 +2154,7 @@ namespace RNGReporter
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(193, 171);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 17);
+            this.label12.Size = new System.Drawing.Size(0, 13);
             this.label12.TabIndex = 89;
             // 
             // label13
@@ -2161,9 +2162,9 @@ namespace RNGReporter
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(10, 174);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 17);
+            this.label13.Size = new System.Drawing.Size(76, 13);
             this.label13.TabIndex = 88;
-            this.label13.Text = "Held Button 3";
+            this.label13.Text = "按住的按键 3";
             // 
             // comboBoxButton3
             // 
@@ -2187,7 +2188,7 @@ namespace RNGReporter
             this.comboBoxButton3.Location = new System.Drawing.Point(13, 190);
             this.comboBoxButton3.Name = "comboBoxButton3";
             this.comboBoxButton3.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton3.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton3.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton3.TabIndex = 87;
             this.comboBoxButton3.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2196,9 +2197,9 @@ namespace RNGReporter
             this.label84.AutoSize = true;
             this.label84.Location = new System.Drawing.Point(167, 130);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(94, 17);
+            this.label84.Size = new System.Drawing.Size(76, 13);
             this.label84.TabIndex = 85;
-            this.label84.Text = "Held Button 2";
+            this.label84.Text = "按住的按键 2";
             // 
             // comboBoxButton2
             // 
@@ -2222,7 +2223,7 @@ namespace RNGReporter
             this.comboBoxButton2.Location = new System.Drawing.Point(170, 146);
             this.comboBoxButton2.Name = "comboBoxButton2";
             this.comboBoxButton2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton2.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton2.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton2.TabIndex = 84;
             this.comboBoxButton2.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2231,7 +2232,7 @@ namespace RNGReporter
             this.label99.AutoSize = true;
             this.label99.Location = new System.Drawing.Point(193, 127);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(0, 17);
+            this.label99.Size = new System.Drawing.Size(0, 13);
             this.label99.TabIndex = 83;
             // 
             // label100
@@ -2239,9 +2240,9 @@ namespace RNGReporter
             this.label100.AutoSize = true;
             this.label100.Location = new System.Drawing.Point(10, 130);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(94, 17);
+            this.label100.Size = new System.Drawing.Size(76, 13);
             this.label100.TabIndex = 82;
-            this.label100.Text = "Held Button 1";
+            this.label100.Text = "按住的按键 1";
             // 
             // comboBoxButton1
             // 
@@ -2265,7 +2266,7 @@ namespace RNGReporter
             this.comboBoxButton1.Location = new System.Drawing.Point(13, 146);
             this.comboBoxButton1.Name = "comboBoxButton1";
             this.comboBoxButton1.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxButton1.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxButton1.Size = new System.Drawing.Size(148, 21);
             this.comboBoxButton1.TabIndex = 81;
             this.comboBoxButton1.SelectedIndexChanged += new System.EventHandler(this.comboBoxButtonHeld_SelectedIndexChanged);
             // 
@@ -2274,7 +2275,7 @@ namespace RNGReporter
             this.labelWarning.AutoSize = true;
             this.labelWarning.Location = new System.Drawing.Point(204, 245);
             this.labelWarning.Name = "labelWarning";
-            this.labelWarning.Size = new System.Drawing.Size(0, 17);
+            this.labelWarning.Size = new System.Drawing.Size(0, 13);
             this.labelWarning.TabIndex = 80;
             // 
             // radioButton5thGenNonCGear
@@ -2283,10 +2284,10 @@ namespace RNGReporter
             this.radioButton5thGenNonCGear.Checked = true;
             this.radioButton5thGenNonCGear.Location = new System.Drawing.Point(219, 62);
             this.radioButton5thGenNonCGear.Name = "radioButton5thGenNonCGear";
-            this.radioButton5thGenNonCGear.Size = new System.Drawing.Size(168, 21);
+            this.radioButton5thGenNonCGear.Size = new System.Drawing.Size(121, 17);
             this.radioButton5thGenNonCGear.TabIndex = 78;
             this.radioButton5thGenNonCGear.TabStop = true;
-            this.radioButton5thGenNonCGear.Text = "5th Gen (non C-Gear)";
+            this.radioButton5thGenNonCGear.Text = "GEN5（非C装置）";
             this.radioButton5thGenNonCGear.UseVisualStyleBackColor = true;
             // 
             // radioButton5thGenCGear
@@ -2294,9 +2295,9 @@ namespace RNGReporter
             this.radioButton5thGenCGear.AutoSize = true;
             this.radioButton5thGenCGear.Location = new System.Drawing.Point(97, 62);
             this.radioButton5thGenCGear.Name = "radioButton5thGenCGear";
-            this.radioButton5thGenCGear.Size = new System.Drawing.Size(140, 21);
+            this.radioButton5thGenCGear.Size = new System.Drawing.Size(109, 17);
             this.radioButton5thGenCGear.TabIndex = 77;
-            this.radioButton5thGenCGear.Text = "5th Gen (C-Gear)";
+            this.radioButton5thGenCGear.Text = "GEN5（C装置）";
             this.radioButton5thGenCGear.UseVisualStyleBackColor = true;
             // 
             // radioButton4thGen
@@ -2304,9 +2305,9 @@ namespace RNGReporter
             this.radioButton4thGen.AutoSize = true;
             this.radioButton4thGen.Location = new System.Drawing.Point(13, 62);
             this.radioButton4thGen.Name = "radioButton4thGen";
-            this.radioButton4thGen.Size = new System.Drawing.Size(80, 21);
+            this.radioButton4thGen.Size = new System.Drawing.Size(54, 17);
             this.radioButton4thGen.TabIndex = 76;
-            this.radioButton4thGen.Text = "4th Gen";
+            this.radioButton4thGen.Text = "GEN4";
             this.radioButton4thGen.UseVisualStyleBackColor = true;
             // 
             // comboBoxVersion
@@ -2322,7 +2323,7 @@ namespace RNGReporter
             this.comboBoxVersion.Location = new System.Drawing.Point(338, 146);
             this.comboBoxVersion.Name = "comboBoxVersion";
             this.comboBoxVersion.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBoxVersion.Size = new System.Drawing.Size(148, 25);
+            this.comboBoxVersion.Size = new System.Drawing.Size(148, 21);
             this.comboBoxVersion.TabIndex = 75;
             // 
             // label9
@@ -2330,7 +2331,7 @@ namespace RNGReporter
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(335, 131);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 17);
+            this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 74;
             this.label9.Text = "游戏版本";
             // 
@@ -2339,7 +2340,7 @@ namespace RNGReporter
             this.lblGxStat.AutoSize = true;
             this.lblGxStat.Location = new System.Drawing.Point(133, 90);
             this.lblGxStat.Name = "lblGxStat";
-            this.lblGxStat.Size = new System.Drawing.Size(50, 17);
+            this.lblGxStat.Size = new System.Drawing.Size(39, 13);
             this.lblGxStat.TabIndex = 62;
             this.lblGxStat.Text = "GxStat";
             // 
@@ -2348,7 +2349,7 @@ namespace RNGReporter
             this.lblTimer0.AutoSize = true;
             this.lblTimer0.Location = new System.Drawing.Point(71, 90);
             this.lblTimer0.Name = "lblTimer0";
-            this.lblTimer0.Size = new System.Drawing.Size(52, 17);
+            this.lblTimer0.Size = new System.Drawing.Size(39, 13);
             this.lblTimer0.TabIndex = 63;
             this.lblTimer0.Text = "Timer0";
             // 
@@ -2357,7 +2358,7 @@ namespace RNGReporter
             this.lblVCount.AutoSize = true;
             this.lblVCount.Location = new System.Drawing.Point(8, 90);
             this.lblVCount.Name = "lblVCount";
-            this.lblVCount.Size = new System.Drawing.Size(54, 17);
+            this.lblVCount.Size = new System.Drawing.Size(42, 13);
             this.lblVCount.TabIndex = 64;
             this.lblVCount.Text = "VCount";
             // 
@@ -2366,7 +2367,7 @@ namespace RNGReporter
             this.lblVFrame.AutoSize = true;
             this.lblVFrame.Location = new System.Drawing.Point(193, 90);
             this.lblVFrame.Name = "lblVFrame";
-            this.lblVFrame.Size = new System.Drawing.Size(57, 17);
+            this.lblVFrame.Size = new System.Drawing.Size(43, 13);
             this.lblVFrame.TabIndex = 65;
             this.lblVFrame.Text = "VFrame";
             // 
@@ -2375,7 +2376,7 @@ namespace RNGReporter
             this.textBoxVFrame.Location = new System.Drawing.Point(196, 106);
             this.textBoxVFrame.MaxLength = 4;
             this.textBoxVFrame.Name = "textBoxVFrame";
-            this.textBoxVFrame.Size = new System.Drawing.Size(58, 23);
+            this.textBoxVFrame.Size = new System.Drawing.Size(58, 20);
             this.textBoxVFrame.TabIndex = 72;
             this.textBoxVFrame.Text = "5";
             // 
@@ -2384,7 +2385,7 @@ namespace RNGReporter
             this.textBoxGxStat.Location = new System.Drawing.Point(132, 106);
             this.textBoxGxStat.MaxLength = 4;
             this.textBoxGxStat.Name = "textBoxGxStat";
-            this.textBoxGxStat.Size = new System.Drawing.Size(58, 23);
+            this.textBoxGxStat.Size = new System.Drawing.Size(58, 20);
             this.textBoxGxStat.TabIndex = 70;
             this.textBoxGxStat.Text = "6";
             // 
@@ -2393,7 +2394,7 @@ namespace RNGReporter
             this.textBoxVCount.Location = new System.Drawing.Point(11, 106);
             this.textBoxVCount.MaxLength = 4;
             this.textBoxVCount.Name = "textBoxVCount";
-            this.textBoxVCount.Size = new System.Drawing.Size(58, 23);
+            this.textBoxVCount.Size = new System.Drawing.Size(58, 20);
             this.textBoxVCount.TabIndex = 66;
             this.textBoxVCount.Text = "48";
             // 
@@ -2402,7 +2403,7 @@ namespace RNGReporter
             this.textBoxTimer0.Location = new System.Drawing.Point(72, 106);
             this.textBoxTimer0.MaxLength = 4;
             this.textBoxTimer0.Name = "textBoxTimer0";
-            this.textBoxTimer0.Size = new System.Drawing.Size(58, 23);
+            this.textBoxTimer0.Size = new System.Drawing.Size(58, 20);
             this.textBoxTimer0.TabIndex = 68;
             this.textBoxTimer0.Text = "974";
             // 
@@ -2411,16 +2412,16 @@ namespace RNGReporter
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(336, 90);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 17);
+            this.label8.Size = new System.Drawing.Size(72, 13);
             this.label8.TabIndex = 61;
-            this.label8.Text = "DS MAC Address";
+            this.label8.Text = "DS MAC地址";
             // 
             // textBoxMACAddress
             // 
             this.textBoxMACAddress.Location = new System.Drawing.Point(338, 106);
             this.textBoxMACAddress.MaxLength = 12;
             this.textBoxMACAddress.Name = "textBoxMACAddress";
-            this.textBoxMACAddress.Size = new System.Drawing.Size(148, 23);
+            this.textBoxMACAddress.Size = new System.Drawing.Size(148, 20);
             this.textBoxMACAddress.TabIndex = 60;
             this.textBoxMACAddress.Text = "0009BF123456";
             // 
@@ -2430,7 +2431,7 @@ namespace RNGReporter
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(346, 23);
             this.label21.TabIndex = 15;
-            this.label21.Text = "If you are looking for your initial seed you may ignore this tab completely. ";
+            this.label21.Text = "如果你正在寻找你的初始seed，你可以完全忽略这个标签。";
             // 
             // maskedTextBoxDate
             // 
@@ -2502,9 +2503,9 @@ namespace RNGReporter
             this.checkBoxShowMonster.AutoSize = true;
             this.checkBoxShowMonster.Location = new System.Drawing.Point(10, 419);
             this.checkBoxShowMonster.Name = "checkBoxShowMonster";
-            this.checkBoxShowMonster.Size = new System.Drawing.Size(119, 21);
+            this.checkBoxShowMonster.Size = new System.Drawing.Size(86, 17);
             this.checkBoxShowMonster.TabIndex = 1;
-            this.checkBoxShowMonster.Text = "Show Monster";
+            this.checkBoxShowMonster.Text = "显示宝可梦";
             this.checkBoxShowMonster.UseVisualStyleBackColor = true;
             // 
             // checkBox1
@@ -2514,7 +2515,7 @@ namespace RNGReporter
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(89, 17);
             this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Open Search";
+            this.checkBox1.Text = "打开搜索";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label49
@@ -2524,7 +2525,7 @@ namespace RNGReporter
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(29, 13);
             this.label49.TabIndex = 0;
-            this.label49.Text = "Year";
+            this.label49.Text = "年份";
             // 
             // dataGridView1
             // 
@@ -2664,7 +2665,7 @@ namespace RNGReporter
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(69, 13);
             this.label52.TabIndex = 8;
-            this.label52.Text = "Minute (0-59)";
+            this.label52.Text = "分（0-59）";
             // 
             // label53
             // 
@@ -2691,7 +2692,7 @@ namespace RNGReporter
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(60, 13);
             this.label55.TabIndex = 6;
-            this.label55.Text = "Hour (0-23)";
+            this.label55.Text = "时（0-23）";
             // 
             // label56
             // 
@@ -2719,7 +2720,7 @@ namespace RNGReporter
             this.comboBox2.Location = new System.Drawing.Point(10, 61);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.Size = new System.Drawing.Size(105, 23);
+            this.comboBox2.Size = new System.Drawing.Size(105, 20);
             this.comboBox2.TabIndex = 11;
             // 
             // label58
@@ -2738,7 +2739,7 @@ namespace RNGReporter
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(30, 13);
             this.label59.TabIndex = 4;
-            this.label59.Text = "Date";
+            this.label59.Text = "日期";
             // 
             // label60
             // 
@@ -2759,7 +2760,7 @@ namespace RNGReporter
             this.button2.ShineColor = System.Drawing.SystemColors.Window;
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 30;
-            this.button2.Text = "Find";
+            this.button2.Text = "计算";
             // 
             // label61
             // 
@@ -2768,7 +2769,7 @@ namespace RNGReporter
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(29, 13);
             this.label61.TabIndex = 0;
-            this.label61.Text = "Year";
+            this.label61.Text = "年份";
             // 
             // label62
             // 
@@ -2777,7 +2778,7 @@ namespace RNGReporter
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(69, 13);
             this.label62.TabIndex = 8;
-            this.label62.Text = "Minute (0-59)";
+            this.label62.Text = "分（0-59）";
             // 
             // label63
             // 
@@ -2786,7 +2787,7 @@ namespace RNGReporter
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(60, 13);
             this.label63.TabIndex = 6;
-            this.label63.Text = "Hour (0-23)";
+            this.label63.Text = "时（0-23）";
             // 
             // label64
             // 
@@ -2804,7 +2805,7 @@ namespace RNGReporter
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(30, 13);
             this.label65.TabIndex = 4;
-            this.label65.Text = "Date";
+            this.label65.Text = "日期";
             // 
             // dataGridView2
             // 
@@ -2970,7 +2971,7 @@ namespace RNGReporter
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(71, 13);
             this.label72.TabIndex = 14;
-            this.label72.Text = "Characteristic";
+            this.label72.Text = "个性";
             // 
             // label73
             // 
@@ -2988,7 +2989,7 @@ namespace RNGReporter
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(33, 13);
             this.label74.TabIndex = 16;
-            this.label74.Text = "Level";
+            this.label74.Text = "等级";
             // 
             // label75
             // 
@@ -2997,7 +2998,7 @@ namespace RNGReporter
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(52, 13);
             this.label75.TabIndex = 10;
-            this.label75.Text = "Pokemon";
+            this.label75.Text = "宝可梦";
             // 
             // label76
             // 
@@ -3005,7 +3006,7 @@ namespace RNGReporter
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(346, 23);
             this.label76.TabIndex = 15;
-            this.label76.Text = "If you are looking for your initial seed you may ignore this tab completely. ";
+            this.label76.Text = "如果你正在寻找你的初始seed，你可以完全忽略这个标签。";
             // 
             // label77
             // 
@@ -3014,7 +3015,7 @@ namespace RNGReporter
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(29, 13);
             this.label77.TabIndex = 0;
-            this.label77.Text = "Year";
+            this.label77.Text = "年份";
             // 
             // label78
             // 
@@ -3032,7 +3033,7 @@ namespace RNGReporter
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(39, 13);
             this.label79.TabIndex = 4;
-            this.label79.Text = "Minute";
+            this.label79.Text = "分";
             // 
             // label80
             // 
@@ -3041,7 +3042,7 @@ namespace RNGReporter
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(30, 13);
             this.label80.TabIndex = 2;
-            this.label80.Text = "Date";
+            this.label80.Text = "日期";
             // 
             // label81
             // 
@@ -3050,7 +3051,7 @@ namespace RNGReporter
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(44, 13);
             this.label81.TabIndex = 5;
-            this.label81.Text = "Second";
+            this.label81.Text = "秒数";
             // 
             // label82
             // 
@@ -3059,7 +3060,7 @@ namespace RNGReporter
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(30, 13);
             this.label82.TabIndex = 3;
-            this.label82.Text = "Hour";
+            this.label82.Text = "时";
             // 
             // label83
             // 
@@ -3095,7 +3096,7 @@ namespace RNGReporter
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(69, 13);
             this.label87.TabIndex = 32;
-            this.label87.Text = "Minute (0-59)";
+            this.label87.Text = "分（0-59）";
             // 
             // label88
             // 
@@ -3122,7 +3123,7 @@ namespace RNGReporter
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(60, 13);
             this.label90.TabIndex = 30;
-            this.label90.Text = "Hour (0-23)";
+            this.label90.Text = "时（0-23）";
             // 
             // label91
             // 
@@ -3150,7 +3151,7 @@ namespace RNGReporter
             this.comboBox6.Location = new System.Drawing.Point(10, 61);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.ShineColor = System.Drawing.SystemColors.Window;
-            this.comboBox6.Size = new System.Drawing.Size(105, 23);
+            this.comboBox6.Size = new System.Drawing.Size(105, 20);
             this.comboBox6.TabIndex = 35;
             // 
             // label93
@@ -3169,7 +3170,7 @@ namespace RNGReporter
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(30, 13);
             this.label94.TabIndex = 28;
-            this.label94.Text = "Date";
+            this.label94.Text = "日期";
             // 
             // label95
             // 
@@ -3192,7 +3193,7 @@ namespace RNGReporter
             // SeedFinder
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(541, 448);
@@ -3208,7 +3209,7 @@ namespace RNGReporter
             this.Name = "SeedFinder";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "4th Gen Seed Finder / Generator";
+            this.Text = "GEN4 Seed查找/计算";
             this.Load += new System.EventHandler(this.PlatinumSeed_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -3314,16 +3315,6 @@ namespace RNGReporter
         private System.Windows.Forms.Label label36;
         private MaskedTextBox2 maskedTextBoxDate_Stat;
         private RNGReporter.GlassButton buttonFind_Stat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OffsetSeed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OffsetStat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullSeed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Secs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Delay;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label37;
         private MaskedTextBox2 maskedTextBoxMinHP;
@@ -3429,11 +3420,6 @@ namespace RNGReporter
         private MaskedTextBox2 maskedTextBoxMaxSpDef;
         private MaskedTextBox2 maskedTextBoxMaxSpeed;
         private RNGReporter.DoubleBufferedDataGridView dataGridViewSeeds_IVRange;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private RNGReporter.GlassButton buttonFind_ByIVRange;
         private System.Windows.Forms.Label label_SIV_MinDelay;
         private MaskedTextBox2 maskedTextBoxMaxDelay_A;
@@ -3490,5 +3476,20 @@ namespace RNGReporter
         private RNGReporter.GlassComboBox comboBoxButton5;
         private System.Windows.Forms.Label label14;
         private GlassComboBox comboBoxLanguage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullSeed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Secs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Delay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OffsetSeed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OffsetStat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
     }
 }

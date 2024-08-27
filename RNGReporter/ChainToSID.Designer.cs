@@ -236,7 +236,7 @@ namespace RNGReporter
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 20;
-            this.label3.Text = "异色概率:";
+            this.label3.Text = "异色概率：";
             // 
             // buttonOk
             // 
@@ -396,7 +396,7 @@ namespace RNGReporter
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 25;
-            this.label5.Text = "SID:";
+            this.label5.Text = "SID：";
             // 
             // maskedTextBoxID
             // 

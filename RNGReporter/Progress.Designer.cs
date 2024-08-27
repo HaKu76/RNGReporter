@@ -53,17 +53,17 @@
             this.label1.Location = new System.Drawing.Point(28, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 15);
+            this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 2;
             this.label1.Text = "找到目标的数量";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 15);
+            this.label2.Location = new System.Drawing.Point(64, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 3;
             this.label2.Text = "计算数量";
             // 
@@ -73,7 +73,7 @@
             this.labelSearched.Location = new System.Drawing.Point(140, 15);
             this.labelSearched.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSearched.Name = "labelSearched";
-            this.labelSearched.Size = new System.Drawing.Size(0, 15);
+            this.labelSearched.Size = new System.Drawing.Size(0, 12);
             this.labelSearched.TabIndex = 4;
             // 
             // labelFound
@@ -82,7 +82,7 @@
             this.labelFound.Location = new System.Drawing.Point(140, 38);
             this.labelFound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFound.Name = "labelFound";
-            this.labelFound.Size = new System.Drawing.Size(0, 15);
+            this.labelFound.Size = new System.Drawing.Size(0, 12);
             this.labelFound.TabIndex = 5;
             // 
             // timer1

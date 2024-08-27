@@ -81,7 +81,7 @@ namespace RNGReporter
         {
             if (_adjacents == null || _adjacents.Count == 0) return;
             Possible = _adjacents.FindAll(HasElms);
-            labelResults.Text = "Possible Results: " + Possible.Count;
+            labelResults.Text = "可能的结果数量：" + Possible.Count;
         }
 
         private bool HasElms(Adjacent adjacent)
@@ -134,6 +134,11 @@ namespace RNGReporter
             labelKIrwin.Visible = radioButtonIrwin.Checked;
             labelEIrwin.Visible = radioButtonIrwin.Checked;
             labelPIrwin.Visible = radioButtonIrwin.Checked;
+        }
+
+        private void labelKIrwin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -177,7 +177,7 @@ namespace RNGReporter
 
             if (txtShinyMinDelay.Text == "")
             {
-                MessageBox.Show("A recommended minimum delay value is 5000.");
+                MessageBox.Show("推荐的最小Delay为5000");
                 txtShinyMinDelay.Focus();
                 return;
             }
@@ -205,7 +205,7 @@ namespace RNGReporter
             {
                 if (!uint.TryParse(textBoxShinyTID.Text, out DesiredID) || DesiredID > 65535)
                 {
-                    MessageBox.Show("Trainer ID must be a value betwwen 0 and 65535, inclusive.");
+                    MessageBox.Show("TID必须是一个介于0到65535之间（包括0和65535）的值");
                     textBoxShinyTID.Focus();
                     return;
                 }
@@ -247,7 +247,7 @@ namespace RNGReporter
 
             if ((DesiredID > 65535) || (DesiredID < 0))
             {
-                MessageBox.Show("Trainer ID must be between 0 and 65535.");
+                MessageBox.Show("TID必须是一个介于0到65535之间（包括0和65535）的值");
                 textBoxDesiredTID.Focus();
                 return;
             }
@@ -263,7 +263,7 @@ namespace RNGReporter
 
                 if ((DesiredSID > 65535) || (DesiredSID < 0))
                 {
-                    MessageBox.Show("Secret ID must be between 0 and 65535.");
+                    MessageBox.Show("SID必须是一个介于0到65535之间（包括0和65535）的值。");
                     textBoxDesiredSID.Focus();
                     return;
                 }
@@ -271,7 +271,7 @@ namespace RNGReporter
 
             if (textBoxIDMinDelay.Text == "")
             {
-                MessageBox.Show("A recommended minimum delay value is 5000.");
+                MessageBox.Show("推荐的最小Delay为5000");
                 textBoxIDMinDelay.Focus();
                 return;
             }
@@ -297,7 +297,7 @@ namespace RNGReporter
 
                 if (MaxDelay < MinDelay)
                 {
-                    MessageBox.Show("Max delay must be greater than or equal to min delay.");
+                    MessageBox.Show("最大Delay必须大于或等于最小Delay。");
                     textBoxIDMaxDelay.Focus();
                     return;
                 }
@@ -349,7 +349,7 @@ namespace RNGReporter
                                      || ((!IsNumeric(txtHour.Text))
                                          || (!IsNumeric(txtMinute.Text))))))))))
             {
-                ErrorMsg = "At least one of the required fields does not contain a number";
+                ErrorMsg = "至少有一个必填字段不包含数字";
                 ErrorNo = (ErrorNo + 1);
             }
             else
@@ -359,7 +359,7 @@ namespace RNGReporter
                 if (((Year < 2000)
                      || (Year > 2099)))
                 {
-                    ErrorMsg = "Invalid Year (2000 <= Year <= 2099)";
+                    ErrorMsg = "请输入正确输入年份（2000<=年份<=2099）";
                     ErrorNo = (ErrorNo + 1);
                 }
 
@@ -371,7 +371,7 @@ namespace RNGReporter
                     {
                         ErrorMsg = (ErrorMsg + '\r');
                     }
-                    ErrorMsg = (ErrorMsg + "Invalid Trainer ID (0 <= ID <= 65535)");
+                    ErrorMsg = (ErrorMsg + "请正确输入TID（0<=TID<=65535）");
                     ErrorNo = (ErrorNo + 1);
                 }
                 Month = uint.Parse(txtMonth.Text);
@@ -382,7 +382,7 @@ namespace RNGReporter
                     {
                         ErrorMsg = (ErrorMsg + '\r');
                     }
-                    ErrorMsg = (ErrorMsg + "Invalid Month (1 <= Month <= 12)");
+                    ErrorMsg = (ErrorMsg + "请正确输入月份（1<=月份<=12）");
                     ErrorNo = (ErrorNo + 1);
                 }
                 Day = uint.Parse(txtDay.Text);
@@ -404,7 +404,7 @@ namespace RNGReporter
                     {
                         ErrorMsg = (ErrorMsg + '\r');
                     }
-                    ErrorMsg = (ErrorMsg + "Invalid Day");
+                    ErrorMsg = (ErrorMsg + "请正确输入日期");
                     ErrorNo = (ErrorNo + 1);
                 }
                 Hour = uint.Parse(txtHour.Text);
@@ -415,7 +415,7 @@ namespace RNGReporter
                     {
                         ErrorMsg = (ErrorMsg + '\r');
                     }
-                    ErrorMsg = (ErrorMsg + "Invalid Hour (0 <= Hour <= 23)");
+                    ErrorMsg = (ErrorMsg + "请正确输入小时（0<=时<=23）");
                     ErrorNo = (ErrorNo + 1);
                 }
                 Minute = uint.Parse(txtMinute.Text);
@@ -426,13 +426,13 @@ namespace RNGReporter
                     {
                         ErrorMsg = (ErrorMsg + '\r');
                     }
-                    ErrorMsg = (ErrorMsg + "Invalid Minute (0 <= Minute <= 59)");
+                    ErrorMsg = (ErrorMsg + "请正确输入分钟（0<=分钟<=59）");
                     ErrorNo = (ErrorNo + 1);
                 }
             }
             if ((ErrorNo > 0))
             {
-                MessageBox.Show(ErrorMsg, "Error(s) Occurred");
+                MessageBox.Show(ErrorMsg, "发生错误");
             }
             else
             {
@@ -449,7 +449,7 @@ namespace RNGReporter
                     MinDelay = uint.Parse(txtSeedMaxDelay.Text);
                 }
                 SeedsFound = 0;
-                lblAction.Text = ("Searching for Obtained ID Seeds... Seeds Found: " + SeedsFound);
+                lblAction.Text = ("搜索已获得的ID seeds...已找到数量：" + SeedsFound);
 
                 // Set up DataTable for this operation                
                 binding = new BindingSource();
@@ -488,11 +488,11 @@ namespace RNGReporter
                             Delay = (SeedCCCC + (2000 - Year));
                             SeedsFound = (SeedsFound + 1);
                             resultsList.Add(new IDList(Seed, Delay, TrainerID, SecretID, Second));
-                            lblAction.Text = ("Searching for Obtained ID Seeds... Seeds Found: " + SeedsFound);
+                            lblAction.Text = ("搜索已获得的ID seeds...已找到数量：" + SeedsFound);
                         }
                     }
                 }
-                lblAction.Text = ("Desired Obtained Seed Search Completed! Seeds Found: " + SeedsFound);
+                lblAction.Text = ("想要的已获取的seed搜索已完成！已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
             }
             btnShinyGo.Enabled = true;
@@ -520,7 +520,7 @@ namespace RNGReporter
             Percent = 0;
             MaxPercent = 0;
 
-            lblAction.Text = ("Searching for Shiny Seeds (0% Complete)... Seeds Found: " + SeedsFound);
+            lblAction.Text = ("搜索异色seed（已完成0%）...已找到数量：" + SeedsFound);
             // Determine Upper PID Xor Lower PID for comparison with Trainer ID combos generated
             UpperPID = PID >> 16;
             LowerPID = (PID & 0xFFFF);
@@ -559,8 +559,8 @@ namespace RNGReporter
 
                         if ((Percent > MaxPercent))
                         {
-                            lblAction.Text = ("Searching for Shiny Seeds ("
-                                              + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)));
+                            lblAction.Text = ("搜索异色seed（已完成"
+                                              + (MaxPercent + ("%）...已找到数量：" + SeedsFound)));
                             MaxPercent = Percent;
                         }
 
@@ -573,8 +573,8 @@ namespace RNGReporter
                             //dt.Rows.Add(Hex(Seed), Delay, TrainerID, SecretID, "");
                             resultsList.Add(new IDList(Seed, Delay, TrainerID, SecretID, 0));
                             Invoke(gridUpdate);
-                            lblAction.Text = ("Searching for Shiny Seeds ("
-                                              + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)));
+                            lblAction.Text = ("搜索异色seed（已完成"
+                                              + (MaxPercent + ("%）...已找到数量：" + SeedsFound)));
                         }
                         if (worker.CancellationPending)
                         {
@@ -602,17 +602,17 @@ namespace RNGReporter
         {
             if (e.Error != null)
             {
-                lblAction.Text = "An error occurred.";
+                lblAction.Text = "发生错误";
             }
             else if (e.Cancelled)
             {
-                lblAction.Text = ("Shiny Seed Search Canceled. Seeds Found: " + SeedsFound);
+                lblAction.Text = ("异色seed搜索已取消，已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
             else
             {
-                lblAction.Text = ("Shiny Seed Search Completed! Seeds Found: " + SeedsFound);
+                lblAction.Text = ("异色seed搜索已完成！已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
@@ -648,7 +648,7 @@ namespace RNGReporter
             SeedsFound = 0;
             Percent = 0;
             MaxPercent = 0;
-            lblAction.Text = ("Searching for Desired ID Seeds (0% Complete)... Seeds Found: " + SeedsFound);
+            lblAction.Text = ("搜索想要的ID seed（已完成0%）...已找到数量：" + SeedsFound);
             // Loop through viable seeds [AABBCCCC] for min and max delays
             // [AA] includes Month/Day/Minute/Seconds, [BB] includes Hours, and [CCCC] includes Year/Delay
             // First establish bounds of [CCCC] based on user input
@@ -678,8 +678,8 @@ namespace RNGReporter
                         Percent = 100 * SeedsSearched / TotalSeeds;
                         if ((Percent > MaxPercent))
                         {
-                            lblAction.Text = ("Searching for Desired ID Seeds ("
-                                              + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)));
+                            lblAction.Text = ("搜索想要的ID seed（已完成"
+                                              + (MaxPercent + ("%）...已找到数量：" + SeedsFound)));
                             MaxPercent = Percent;
                         }
                         if (((TrainerID == DesiredID)
@@ -690,8 +690,8 @@ namespace RNGReporter
                             SeedsFound = (SeedsFound + 1);
                             resultsList.Add(new IDList(Seed, Delay, TrainerID, SecretID, 0));
                             Invoke(gridUpdate);
-                            lblAction.Text = ("Searching for Desired ID Seeds ("
-                                              + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)));
+                            lblAction.Text = ("搜索想要的ID seed（已完成"
+                                              + (MaxPercent + ("%）...已找到数量：" + SeedsFound)));
                         }
                         if (worker.CancellationPending)
                         {
@@ -719,17 +719,17 @@ namespace RNGReporter
         {
             if (e.Error != null)
             {
-                lblAction.Text = "An error occurred.";
+                lblAction.Text = "发生错误";
             }
             else if (e.Cancelled)
             {
-                lblAction.Text = ("Desired ID Seed Search Canceled. Seeds Found: " + SeedsFound);
+                lblAction.Text = ("想要的ID seed搜索已取消，已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
             else
             {
-                lblAction.Text = ("Desired ID Seed Search Completed! Seeds Found: " + SeedsFound);
+                lblAction.Text = ("想要的ID seed搜索已完成！已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
@@ -784,7 +784,7 @@ namespace RNGReporter
             Percent = 0;
             MaxPercent = 0;
 
-            lblAction.Text = ("Searching for Desired ID Seeds (Through 0 Delay, 0% Complete)... Seeds Found: " +
+            lblAction.Text = ("搜索想要的ID seed（已经过0Delay，0%）...已找到数量：" +
                               SeedsFound);
 
             // Loop through viable seeds [AABBCCCC] for min and max delays
@@ -818,10 +818,10 @@ namespace RNGReporter
 
                             MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
-                            lblAction.Text = ("Searching for Desired ID Seeds (Through "
-                                              + (SeedCCCC + (" Delay, "
+                            lblAction.Text = ("搜索想要的ID seed（已经过"
+                                              + (SeedCCCC + ("Delay，已完成"
                                                              +
-                                                             (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)))));
+                                                             (MaxPercent + ("%）...已找到数量：" + SeedsFound)))));
                             // If Percent > MaxPercent Then
                             //   lblAction.Text = "Searching for Desired ID Seeds (Through " & SeedCCCC & " Delay, " & MaxPercent & "% Complete)... Seeds Found: " & SeedsFound
                             //    MaxPercent = Percent
@@ -834,11 +834,11 @@ namespace RNGReporter
                                 //dt.Rows.Add(Hex(Seed), SeedCCCC, TrainerID, SecretID, "");
                                 resultsList.Add(new IDList(Seed, SeedCCCC, TrainerID, SecretID, 0));
                                 Invoke(gridUpdate);
-                                lblAction.Text = ("Searching for Desired ID Seeds (Through"
-                                                  + (SeedCCCC + (" Delay, "
+                                lblAction.Text = ("搜索想要的ID seed（已经过"
+                                                  + (SeedCCCC + (" Delay，已完成"
                                                                  +
                                                                  (MaxPercent +
-                                                                  ("% Complete)... Seeds Found: " + SeedsFound)))));
+                                                                  ("%）...已找到数量：" + SeedsFound)))));
                             }
                             if (worker.CancellationPending)
                             {
@@ -883,9 +883,9 @@ namespace RNGReporter
 
                         MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
-                        lblAction.Text = ("Searching for Desired ID Seeds (Through "
-                                          + (SeedCCCC + (" Delay, "
-                                                         + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)))));
+                        lblAction.Text = ("搜索想要的ID seed（已经过"
+                                          + (SeedCCCC + (" Delay，已完成"
+                                                         + (MaxPercent + ("%）...已找到数量：" + SeedsFound)))));
                         // If Percent > MaxPercent Then
                         // lblAction.Text = "Searching for Desired ID Seeds (Through " & SeedCCCC & " Delay, " & MaxPercent & "% Complete)... Seeds Found: " & SeedsFound
                         // MaxPercent = Percent
@@ -898,10 +898,10 @@ namespace RNGReporter
                             //dt.Rows.Add(Hex(Seed), SeedCCCC, TrainerID, SecretID, "");
                             resultsList.Add(new IDList(Seed, SeedCCCC, TrainerID, SecretID, 0));
                             Invoke(gridUpdate);
-                            lblAction.Text = ("Searching for Desired ID Seeds (Through"
-                                              + (SeedCCCC + (" Delay, "
+                            lblAction.Text = ("搜索想要的ID seed（已经过"
+                                              + (SeedCCCC + (" Delay，已完成"
                                                              +
-                                                             (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)))));
+                                                             (MaxPercent + ("%）...已找到数量：" + SeedsFound)))));
                         }
                         if (worker.CancellationPending)
                         {
@@ -924,23 +924,23 @@ namespace RNGReporter
         {
             if (e.Error != null)
             {
-                lblAction.Text = ("An error occurred. Seeds Searched: "
-                                  + (SeedsSearched + (" ("
-                                                      + (SeedCCCC + (" Delay), Seeds Found: " + SeedsFound)))));
+                lblAction.Text = ("发生错误，已搜索seed："
+                                  + (SeedsSearched + ("（"
+                                                      + (SeedCCCC + (" Delay），已找到数量：" + SeedsFound)))));
             }
             else if (e.Cancelled)
             {
-                lblAction.Text = ("Desired ID Seed Search Canceled. Seeds Searched: "
-                                  + (SeedsSearched + (" ("
-                                                      + (SeedCCCC + (" Delay), Seeds Found: " + SeedsFound)))));
+                lblAction.Text = ("想要的ID seed搜索已取消，已搜索seed："
+                                  + (SeedsSearched + ("（"
+                                                      + (SeedCCCC + (" Delay），已找到数量：" + SeedsFound)))));
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
             else
             {
-                lblAction.Text = ("Desired ID Seed Search Completed! Seeds Searched: "
-                                  + (SeedsSearched + (" ("
-                                                      + (SeedCCCC + (" Delay), Seeds Found: " + SeedsFound)))));
+                lblAction.Text = ("想要的ID seed搜索已完成！已搜索seed："
+                                  + (SeedsSearched + ("（"
+                                                      + (SeedCCCC + (" Delay），已找到数量：" + SeedsFound)))));
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
@@ -966,12 +966,12 @@ namespace RNGReporter
             ErrorMsg = "";
             if ((textBoxSeed.Text == ""))
             {
-                ErrorMsg = "The seed field was left blank.";
+                ErrorMsg = "请输入seed！";
                 ErrorNo = (ErrorNo + 1);
             }
             if ((ErrorNo > 0))
             {
-                MessageBox.Show(ErrorMsg, "Error(s) Occurred");
+                MessageBox.Show(ErrorMsg, "发生错误");
             }
             else
             {
@@ -991,7 +991,7 @@ namespace RNGReporter
                 //dt.Rows.Add(Hex(Seed), SeedCCCC, TrainerID, SecretID, "");
                 resultsList.Add(new IDList(Seed, SeedCCCC, TrainerID, SecretID, 0));
                 Invoke(gridUpdate);
-                lblAction.Text = "Simple Seed to ID/SID conversion complete!";
+                lblAction.Text = "简单的seed到ID/SID转换已完成！";
             }
             btnShinyGo.Enabled = true;
             btnIDGo.Enabled = true;
@@ -1049,7 +1049,7 @@ namespace RNGReporter
             Percent = 0;
             MaxPercent = 0;
 
-            lblAction.Text = ("Searching for Shiny Seeds (Through 0 Delay, 0% Complete)... Seeds Found: " + SeedsFound);
+            lblAction.Text = ("正在搜索异色seed（已经过0Delay，已完成0%）...已找到数量：" + SeedsFound);
             // Determine Upper PID Xor Lower PID for comparison with Trainer ID combos generated
             UpperPID = PID >> 16;
             LowerPID = PID & 0xFFFF;
@@ -1090,10 +1090,10 @@ namespace RNGReporter
 
                             MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
-                            lblAction.Text = ("Searching for Shiny Seeds (Through "
-                                              + (SeedCCCC + (" Delay, "
+                            lblAction.Text = ("正在搜索异色seed（已经过"
+                                              + (SeedCCCC + ("Delay，已完成"
                                                              +
-                                                             (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)))));
+                                                             (MaxPercent + ("%）...已找到数量：" + SeedsFound)))));
 
                             if (((FinalXor < 8)
                                  && !(cbxSearchID.Checked
@@ -1102,8 +1102,8 @@ namespace RNGReporter
                                 SeedsFound = (SeedsFound + 1);
                                 resultsList.Add(new IDList(Seed, SeedCCCC, TrainerID, SecretID, 0));
                                 Invoke(gridUpdate);
-                                lblAction.Text = ("Searching for Shiny Seeds ("
-                                                  + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)));
+                                lblAction.Text = ("正在搜索异色seed（"
+                                                  + (MaxPercent + ("%）...已找到数量：" + SeedsFound)));
                             }
                             if (worker.CancellationPending)
                             {
@@ -1154,9 +1154,9 @@ namespace RNGReporter
 
                         MaxPercent = 100 * SeedsSearched / TotalSeeds;
 
-                        lblAction.Text = ("Searching for Shiny Seeds (Through "
-                                          + (SeedCCCC + (" Delay, "
-                                                         + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)))));
+                        lblAction.Text = ("正在搜索异色seed（已经过"
+                                          + (SeedCCCC + ("Delay，已完成"
+                                                         + (MaxPercent + ("%）...已找到数量：" + SeedsFound)))));
 
                         if (((FinalXor < 8)
                              && !(cbxSearchID.Checked
@@ -1166,8 +1166,8 @@ namespace RNGReporter
                             resultsList.Add(new IDList(Seed, SeedCCCC, TrainerID, SecretID, 0));
                             //dt.Rows.Add(Hex(Seed), SeedCCCC, TrainerID, SecretID, "");
                             Invoke(gridUpdate);
-                            lblAction.Text = ("Searching for Shiny Seeds ("
-                                              + (MaxPercent + ("% Complete)... Seeds Found: " + SeedsFound)));
+                            lblAction.Text = ("正在搜索异色seed（已完成"
+                                              + (MaxPercent + ("%）...已找到数量：" + SeedsFound)));
                         }
                         if (worker.CancellationPending)
                         {
@@ -1190,17 +1190,17 @@ namespace RNGReporter
         {
             if (e.Error != null)
             {
-                lblAction.Text = "An error occurred.";
+                lblAction.Text = "发生错误";
             }
             else if (e.Cancelled)
             {
-                lblAction.Text = ("Shiny Seed Search Canceled. Seeds Found: " + SeedsFound);
+                lblAction.Text = ("异色seed搜索已取消，已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
             else
             {
-                lblAction.Text = ("Shiny Seed Search Completed! Seeds Found: " + SeedsFound);
+                lblAction.Text = ("异色seed搜索已完成！已找到数量：" + SeedsFound);
                 Invoke(gridUpdate);
                 //dgvResults.DataSource = dt;
             }
@@ -1251,7 +1251,7 @@ namespace RNGReporter
 
             if (isSearching)
             {
-                MessageBox.Show("The previous search is still running.");
+                MessageBox.Show("之前的搜索还在继续");
                 return;
             }
 
@@ -1284,9 +1284,9 @@ namespace RNGReporter
                     return;
                 }
                 if (tid > 65535)
-                    MessageBox.Show("IDs can only be between 0 and 65535");
+                    MessageBox.Show("ID只能在0到65535之间");
 
-                lblAction.Text = "Searching..";
+                lblAction.Text = "搜索中...";
                 resultsListBW = new List<IDListBW>();
                 binding = new BindingSource { DataSource = resultsListBW };
                 dgvResults.DataSource = binding;
@@ -1308,7 +1308,7 @@ namespace RNGReporter
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("出错了");
                 throw;
             }
         }
@@ -1433,7 +1433,7 @@ namespace RNGReporter
                                         if (resultsCount++ >= MAX_RESULTS)
                                         {
                                             lblAction.Text =
-                                                "Search stopped - results max reached. Narrow your search for better results.";
+                                                "搜索已停止 - 结果已达上限，缩小搜索范围以获得更好的结果";
 
                                             isSearching = false;
                                             return;
@@ -1457,7 +1457,7 @@ namespace RNGReporter
 
             if (isSearching)
             {
-                MessageBox.Show("The previous search is still running.");
+                MessageBox.Show("之前的搜索仍在运行");
                 return;
             }
 
@@ -1500,11 +1500,11 @@ namespace RNGReporter
                     return;
                 }
                 if (idcheck > 65535)
-                    MessageBox.Show("IDs can only be between 0 and 65535");
+                    MessageBox.Show("ID输入范围只能在0到65535之间");
 
                 dgvResults.DataSource = null;
 
-                lblAction.Text = "Searching..";
+                lblAction.Text = "搜索中...";
                 resultsListBW = new List<IDListBW>();
                 binding = new BindingSource { DataSource = resultsListBW };
                 dgvResults.DataSource = binding;
@@ -1526,7 +1526,7 @@ namespace RNGReporter
             }
             catch
             {
-                MessageBox.Show("Something went wrong.\rMake sure all inputs necessary inputs contain a value.");
+                MessageBox.Show("出错了\r请确保所有输入框都已经填入输入值");
             }
         }
 
@@ -1783,7 +1783,7 @@ namespace RNGReporter
 
             if (isSearching)
             {
-                MessageBox.Show("The previous search is still running.");
+                MessageBox.Show("之前的搜索仍在运行");
                 return;
             }
 
@@ -1794,7 +1794,7 @@ namespace RNGReporter
             seedTime = seedTime.AddHours(hour);
             seedTime = seedTime.AddMinutes(minute);
 
-            lblAction.Text = "Searching..";
+            lblAction.Text = "搜索中...";
             resultsListIII = new List<IDListIII>();
             binding = new BindingSource { DataSource = resultsListIII };
             dgvResults.DataSource = binding;
@@ -2036,11 +2036,11 @@ namespace RNGReporter
 
             if (isSearching)
             {
-                MessageBox.Show("The previous search is still running.");
+                MessageBox.Show("之前的搜索仍在运行");
                 return;
             }
 
-            lblAction.Text = "Searching..";
+            lblAction.Text = "搜索中...";
             resultsListIII = new List<IDListIII>();
             binding = new BindingSource { DataSource = resultsListIII };
             dgvResults.DataSource = binding;
@@ -2066,11 +2066,11 @@ namespace RNGReporter
 
             if (isSearching)
             {
-                MessageBox.Show("The previous search is still running.");
+                MessageBox.Show("之前的搜索仍在运行");
                 return;
             }
 
-            lblAction.Text = "Searching..";
+            lblAction.Text = "搜索中...";
             resultsListIII = new List<IDListIII>();
             binding = new BindingSource { DataSource = resultsListIII };
             dgvResults.DataSource = binding;

@@ -90,6 +90,17 @@ namespace RNGReporter
                         }
                     }
                     break;
+                case (Language.SimplifiedChinese):
+                    font = new Font("宋体", 9F);
+                    if (font.Name != "宋体")
+                    {
+                        font = new Font("Microsoft Sans Serif", 9F);
+                        if (font.Name != "Microsoft Sans Serif")
+                        {
+                            font = new Font("微软雅黑", 9F);
+                        }
+                    }
+                    break;
                 default:
                     font = DefaultFont;
                     break;
@@ -106,25 +117,25 @@ namespace RNGReporter
             switch (genderRatio)
             {
                 case 127:
-                    labelRatio.Text = "50% M \\ 50% F";
+                    labelRatio.Text = "♂1：♀1";
                     break;
                 case 191:
-                    labelRatio.Text = "25% M \\ 75% F";
+                    labelRatio.Text = "♂1：♀3";
                     break;
                 case 63:
-                    labelRatio.Text = "75% M \\ 25% F";
+                    labelRatio.Text = "♂3：♀1";
                     break;
                 case 31:
-                    labelRatio.Text = "87.5% M \\ 12.5% F";
+                    labelRatio.Text = "♂7：♀1";
                     break;
                 case 0:
-                    labelRatio.Text = "100% M";
+                    labelRatio.Text = "只有♂";
                     break;
                 case 254:
-                    labelRatio.Text = "100% F";
+                    labelRatio.Text = "只有♀";
                     break;
                 case 255:
-                    labelRatio.Text = "Genderless";
+                    labelRatio.Text = "无性别";
                     break;
             }
         }

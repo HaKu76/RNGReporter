@@ -78,141 +78,165 @@
             // 
             // buttonPos1E
             // 
-            this.buttonPos1E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos1E.Location = new System.Drawing.Point(12, 41);
+            this.buttonPos1E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos1E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos1E.Location = new System.Drawing.Point(12, 38);
             this.buttonPos1E.Name = "buttonPos1E";
-            this.buttonPos1E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos1E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos1E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos1E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos1E.TabIndex = 35;
             this.buttonPos1E.Text = "E";
-            this.buttonPos1E.UseVisualStyleBackColor = true;
             this.buttonPos1E.Click += new System.EventHandler(this.buttonPos1E_Click);
             // 
             // buttonPos1K
             // 
-            this.buttonPos1K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos1K.Location = new System.Drawing.Point(12, 12);
+            this.buttonPos1K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos1K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos1K.Location = new System.Drawing.Point(12, 11);
             this.buttonPos1K.Name = "buttonPos1K";
-            this.buttonPos1K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos1K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos1K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos1K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos1K.TabIndex = 28;
             this.buttonPos1K.Text = "K";
-            this.buttonPos1K.UseVisualStyleBackColor = true;
             this.buttonPos1K.Click += new System.EventHandler(this.buttonPos1K_Click);
             // 
             // buttonPos2K
             // 
-            this.buttonPos2K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos2K.Location = new System.Drawing.Point(63, 12);
+            this.buttonPos2K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos2K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos2K.Location = new System.Drawing.Point(63, 11);
             this.buttonPos2K.Name = "buttonPos2K";
-            this.buttonPos2K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos2K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos2K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos2K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos2K.TabIndex = 29;
             this.buttonPos2K.Text = "K";
-            this.buttonPos2K.UseVisualStyleBackColor = true;
             this.buttonPos2K.Click += new System.EventHandler(this.buttonPos2K_Click);
             // 
             // buttonPos3K
             // 
-            this.buttonPos3K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos3K.Location = new System.Drawing.Point(114, 12);
+            this.buttonPos3K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos3K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos3K.Location = new System.Drawing.Point(114, 11);
             this.buttonPos3K.Name = "buttonPos3K";
-            this.buttonPos3K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos3K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos3K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos3K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos3K.TabIndex = 30;
             this.buttonPos3K.Text = "K";
-            this.buttonPos3K.UseVisualStyleBackColor = true;
             this.buttonPos3K.Click += new System.EventHandler(this.buttonPos3K_Click);
             // 
             // buttonPos4K
             // 
-            this.buttonPos4K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos4K.Location = new System.Drawing.Point(165, 12);
+            this.buttonPos4K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos4K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos4K.Location = new System.Drawing.Point(165, 11);
             this.buttonPos4K.Name = "buttonPos4K";
-            this.buttonPos4K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos4K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos4K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos4K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos4K.TabIndex = 31;
             this.buttonPos4K.Text = "K";
-            this.buttonPos4K.UseVisualStyleBackColor = true;
             this.buttonPos4K.Click += new System.EventHandler(this.buttonPos4K_Click);
             // 
             // buttonPos5K
             // 
-            this.buttonPos5K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos5K.Location = new System.Drawing.Point(216, 12);
+            this.buttonPos5K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos5K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos5K.Location = new System.Drawing.Point(216, 11);
             this.buttonPos5K.Name = "buttonPos5K";
-            this.buttonPos5K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos5K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos5K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos5K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos5K.TabIndex = 32;
             this.buttonPos5K.Text = "K";
-            this.buttonPos5K.UseVisualStyleBackColor = true;
             this.buttonPos5K.Click += new System.EventHandler(this.buttonPos5K_Click);
             // 
             // buttonPos6K
             // 
-            this.buttonPos6K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos6K.Location = new System.Drawing.Point(267, 12);
+            this.buttonPos6K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos6K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos6K.Location = new System.Drawing.Point(267, 11);
             this.buttonPos6K.Name = "buttonPos6K";
-            this.buttonPos6K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos6K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos6K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos6K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos6K.TabIndex = 33;
             this.buttonPos6K.Text = "K";
-            this.buttonPos6K.UseVisualStyleBackColor = true;
             this.buttonPos6K.Click += new System.EventHandler(this.buttonPos6K_Click);
             // 
             // buttonPos7K
             // 
-            this.buttonPos7K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos7K.Location = new System.Drawing.Point(318, 12);
+            this.buttonPos7K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos7K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos7K.Location = new System.Drawing.Point(318, 11);
             this.buttonPos7K.Name = "buttonPos7K";
-            this.buttonPos7K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos7K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos7K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos7K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos7K.TabIndex = 34;
             this.buttonPos7K.Text = "K";
-            this.buttonPos7K.UseVisualStyleBackColor = true;
             this.buttonPos7K.Click += new System.EventHandler(this.buttonPos7K_Click);
             // 
             // buttonPos2E
             // 
-            this.buttonPos2E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos2E.Location = new System.Drawing.Point(63, 41);
+            this.buttonPos2E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos2E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos2E.Location = new System.Drawing.Point(63, 38);
             this.buttonPos2E.Name = "buttonPos2E";
-            this.buttonPos2E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos2E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos2E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos2E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos2E.TabIndex = 36;
             this.buttonPos2E.Text = "E";
-            this.buttonPos2E.UseVisualStyleBackColor = true;
             this.buttonPos2E.Click += new System.EventHandler(this.buttonPos2E_Click);
             // 
             // buttonPos3E
             // 
-            this.buttonPos3E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos3E.Location = new System.Drawing.Point(114, 41);
+            this.buttonPos3E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos3E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos3E.Location = new System.Drawing.Point(114, 38);
             this.buttonPos3E.Name = "buttonPos3E";
-            this.buttonPos3E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos3E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos3E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos3E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos3E.TabIndex = 37;
             this.buttonPos3E.Text = "E";
-            this.buttonPos3E.UseVisualStyleBackColor = true;
             this.buttonPos3E.Click += new System.EventHandler(this.buttonPos3E_Click);
             // 
             // buttonPos4E
             // 
-            this.buttonPos4E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos4E.Location = new System.Drawing.Point(165, 41);
+            this.buttonPos4E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos4E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos4E.Location = new System.Drawing.Point(165, 38);
             this.buttonPos4E.Name = "buttonPos4E";
-            this.buttonPos4E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos4E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos4E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos4E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos4E.TabIndex = 38;
             this.buttonPos4E.Text = "E";
-            this.buttonPos4E.UseVisualStyleBackColor = true;
             this.buttonPos4E.Click += new System.EventHandler(this.buttonPos4E_Click);
             // 
             // buttonPos5E
             // 
-            this.buttonPos5E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos5E.Location = new System.Drawing.Point(216, 41);
+            this.buttonPos5E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos5E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos5E.Location = new System.Drawing.Point(216, 38);
             this.buttonPos5E.Name = "buttonPos5E";
-            this.buttonPos5E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos5E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos5E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos5E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos5E.TabIndex = 39;
             this.buttonPos5E.Text = "E";
-            this.buttonPos5E.UseVisualStyleBackColor = true;
             this.buttonPos5E.Click += new System.EventHandler(this.buttonPos5E_Click);
             // 
             // labelPos7
             // 
             this.labelPos7.AutoSize = true;
             this.labelPos7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos7.Location = new System.Drawing.Point(330, 96);
+            this.labelPos7.Location = new System.Drawing.Point(330, 89);
             this.labelPos7.Name = "labelPos7";
             this.labelPos7.Size = new System.Drawing.Size(22, 24);
             this.labelPos7.TabIndex = 55;
@@ -220,20 +244,22 @@
             // 
             // buttonPos6E
             // 
-            this.buttonPos6E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos6E.Location = new System.Drawing.Point(267, 41);
+            this.buttonPos6E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos6E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos6E.Location = new System.Drawing.Point(267, 38);
             this.buttonPos6E.Name = "buttonPos6E";
-            this.buttonPos6E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos6E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos6E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos6E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos6E.TabIndex = 40;
             this.buttonPos6E.Text = "E";
-            this.buttonPos6E.UseVisualStyleBackColor = true;
             this.buttonPos6E.Click += new System.EventHandler(this.buttonPos6E_Click);
             // 
             // labelPos6
             // 
             this.labelPos6.AutoSize = true;
             this.labelPos6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos6.Location = new System.Drawing.Point(279, 96);
+            this.labelPos6.Location = new System.Drawing.Point(279, 89);
             this.labelPos6.Name = "labelPos6";
             this.labelPos6.Size = new System.Drawing.Size(22, 24);
             this.labelPos6.TabIndex = 54;
@@ -241,20 +267,22 @@
             // 
             // buttonPos7E
             // 
-            this.buttonPos7E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos7E.Location = new System.Drawing.Point(318, 41);
+            this.buttonPos7E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos7E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos7E.Location = new System.Drawing.Point(318, 38);
             this.buttonPos7E.Name = "buttonPos7E";
-            this.buttonPos7E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos7E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos7E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos7E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos7E.TabIndex = 41;
             this.buttonPos7E.Text = "E";
-            this.buttonPos7E.UseVisualStyleBackColor = true;
             this.buttonPos7E.Click += new System.EventHandler(this.buttonPos7E_Click);
             // 
             // labelPos5
             // 
             this.labelPos5.AutoSize = true;
             this.labelPos5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos5.Location = new System.Drawing.Point(228, 96);
+            this.labelPos5.Location = new System.Drawing.Point(228, 89);
             this.labelPos5.Name = "labelPos5";
             this.labelPos5.Size = new System.Drawing.Size(22, 24);
             this.labelPos5.TabIndex = 53;
@@ -262,20 +290,22 @@
             // 
             // buttonPos1P
             // 
-            this.buttonPos1P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos1P.Location = new System.Drawing.Point(12, 70);
+            this.buttonPos1P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos1P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos1P.Location = new System.Drawing.Point(12, 65);
             this.buttonPos1P.Name = "buttonPos1P";
-            this.buttonPos1P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos1P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos1P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos1P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos1P.TabIndex = 42;
             this.buttonPos1P.Text = "P";
-            this.buttonPos1P.UseVisualStyleBackColor = true;
             this.buttonPos1P.Click += new System.EventHandler(this.buttonPos1P_Click);
             // 
             // labelPos4
             // 
             this.labelPos4.AutoSize = true;
             this.labelPos4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos4.Location = new System.Drawing.Point(177, 96);
+            this.labelPos4.Location = new System.Drawing.Point(177, 89);
             this.labelPos4.Name = "labelPos4";
             this.labelPos4.Size = new System.Drawing.Size(22, 24);
             this.labelPos4.TabIndex = 52;
@@ -283,20 +313,22 @@
             // 
             // buttonPos2P
             // 
-            this.buttonPos2P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos2P.Location = new System.Drawing.Point(63, 70);
+            this.buttonPos2P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos2P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos2P.Location = new System.Drawing.Point(63, 65);
             this.buttonPos2P.Name = "buttonPos2P";
-            this.buttonPos2P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos2P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos2P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos2P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos2P.TabIndex = 43;
             this.buttonPos2P.Text = "P";
-            this.buttonPos2P.UseVisualStyleBackColor = true;
             this.buttonPos2P.Click += new System.EventHandler(this.buttonPos2P_Click);
             // 
             // labelPos3
             // 
             this.labelPos3.AutoSize = true;
             this.labelPos3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos3.Location = new System.Drawing.Point(126, 96);
+            this.labelPos3.Location = new System.Drawing.Point(126, 89);
             this.labelPos3.Name = "labelPos3";
             this.labelPos3.Size = new System.Drawing.Size(22, 24);
             this.labelPos3.TabIndex = 51;
@@ -304,20 +336,22 @@
             // 
             // buttonPos3P
             // 
-            this.buttonPos3P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos3P.Location = new System.Drawing.Point(114, 70);
+            this.buttonPos3P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos3P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos3P.Location = new System.Drawing.Point(114, 65);
             this.buttonPos3P.Name = "buttonPos3P";
-            this.buttonPos3P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos3P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos3P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos3P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos3P.TabIndex = 44;
             this.buttonPos3P.Text = "P";
-            this.buttonPos3P.UseVisualStyleBackColor = true;
             this.buttonPos3P.Click += new System.EventHandler(this.buttonPos3P_Click);
             // 
             // labelPos2
             // 
             this.labelPos2.AutoSize = true;
             this.labelPos2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos2.Location = new System.Drawing.Point(75, 96);
+            this.labelPos2.Location = new System.Drawing.Point(75, 89);
             this.labelPos2.Name = "labelPos2";
             this.labelPos2.Size = new System.Drawing.Size(22, 24);
             this.labelPos2.TabIndex = 50;
@@ -325,20 +359,22 @@
             // 
             // buttonPos4P
             // 
-            this.buttonPos4P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos4P.Location = new System.Drawing.Point(165, 70);
+            this.buttonPos4P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos4P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos4P.Location = new System.Drawing.Point(165, 65);
             this.buttonPos4P.Name = "buttonPos4P";
-            this.buttonPos4P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos4P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos4P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos4P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos4P.TabIndex = 45;
             this.buttonPos4P.Text = "P";
-            this.buttonPos4P.UseVisualStyleBackColor = true;
             this.buttonPos4P.Click += new System.EventHandler(this.buttonPos4P_Click);
             // 
             // labelPos1
             // 
             this.labelPos1.AutoSize = true;
             this.labelPos1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos1.Location = new System.Drawing.Point(24, 96);
+            this.labelPos1.Location = new System.Drawing.Point(24, 89);
             this.labelPos1.Name = "labelPos1";
             this.labelPos1.Size = new System.Drawing.Size(22, 24);
             this.labelPos1.TabIndex = 49;
@@ -346,86 +382,100 @@
             // 
             // buttonPos5P
             // 
-            this.buttonPos5P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos5P.Location = new System.Drawing.Point(216, 70);
+            this.buttonPos5P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos5P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos5P.Location = new System.Drawing.Point(216, 65);
             this.buttonPos5P.Name = "buttonPos5P";
-            this.buttonPos5P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos5P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos5P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos5P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos5P.TabIndex = 46;
             this.buttonPos5P.Text = "P";
-            this.buttonPos5P.UseVisualStyleBackColor = true;
             this.buttonPos5P.Click += new System.EventHandler(this.buttonPos5P_Click);
             // 
             // buttonPos7P
             // 
-            this.buttonPos7P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos7P.Location = new System.Drawing.Point(318, 70);
+            this.buttonPos7P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos7P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos7P.Location = new System.Drawing.Point(318, 65);
             this.buttonPos7P.Name = "buttonPos7P";
-            this.buttonPos7P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos7P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos7P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos7P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos7P.TabIndex = 48;
             this.buttonPos7P.Text = "P";
-            this.buttonPos7P.UseVisualStyleBackColor = true;
             this.buttonPos7P.Click += new System.EventHandler(this.buttonPos7P_Click);
             // 
             // buttonPos6P
             // 
-            this.buttonPos6P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos6P.Location = new System.Drawing.Point(267, 70);
+            this.buttonPos6P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos6P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos6P.Location = new System.Drawing.Point(267, 65);
             this.buttonPos6P.Name = "buttonPos6P";
-            this.buttonPos6P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos6P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos6P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos6P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos6P.TabIndex = 47;
             this.buttonPos6P.Text = "P";
-            this.buttonPos6P.UseVisualStyleBackColor = true;
             this.buttonPos6P.Click += new System.EventHandler(this.buttonPos6P_Click);
             // 
             // buttonPos8K
             // 
-            this.buttonPos8K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos8K.Location = new System.Drawing.Point(369, 12);
+            this.buttonPos8K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos8K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos8K.Location = new System.Drawing.Point(369, 11);
             this.buttonPos8K.Name = "buttonPos8K";
-            this.buttonPos8K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos8K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos8K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos8K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos8K.TabIndex = 56;
             this.buttonPos8K.Text = "K";
-            this.buttonPos8K.UseVisualStyleBackColor = true;
             this.buttonPos8K.Click += new System.EventHandler(this.buttonPos8K_Click);
             // 
             // buttonPos9K
             // 
-            this.buttonPos9K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos9K.Location = new System.Drawing.Point(420, 12);
+            this.buttonPos9K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos9K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos9K.Location = new System.Drawing.Point(420, 11);
             this.buttonPos9K.Name = "buttonPos9K";
-            this.buttonPos9K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos9K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos9K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos9K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos9K.TabIndex = 57;
             this.buttonPos9K.Text = "K";
-            this.buttonPos9K.UseVisualStyleBackColor = true;
             this.buttonPos9K.Click += new System.EventHandler(this.buttonPos9K_Click);
             // 
             // buttonPos10K
             // 
-            this.buttonPos10K.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos10K.Location = new System.Drawing.Point(471, 12);
+            this.buttonPos10K.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos10K.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos10K.Location = new System.Drawing.Point(471, 11);
             this.buttonPos10K.Name = "buttonPos10K";
-            this.buttonPos10K.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos10K.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos10K.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos10K.Size = new System.Drawing.Size(45, 21);
             this.buttonPos10K.TabIndex = 58;
             this.buttonPos10K.Text = "K";
-            this.buttonPos10K.UseVisualStyleBackColor = true;
             this.buttonPos10K.Click += new System.EventHandler(this.buttonPos10K_Click);
             // 
             // buttonPos8E
             // 
-            this.buttonPos8E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos8E.Location = new System.Drawing.Point(369, 41);
+            this.buttonPos8E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos8E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos8E.Location = new System.Drawing.Point(369, 38);
             this.buttonPos8E.Name = "buttonPos8E";
-            this.buttonPos8E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos8E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos8E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos8E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos8E.TabIndex = 59;
             this.buttonPos8E.Text = "E";
-            this.buttonPos8E.UseVisualStyleBackColor = true;
             this.buttonPos8E.Click += new System.EventHandler(this.buttonPos8E_Click);
             // 
             // labelPos10
             // 
             this.labelPos10.AutoSize = true;
             this.labelPos10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos10.Location = new System.Drawing.Point(483, 96);
+            this.labelPos10.Location = new System.Drawing.Point(483, 89);
             this.labelPos10.Name = "labelPos10";
             this.labelPos10.Size = new System.Drawing.Size(22, 24);
             this.labelPos10.TabIndex = 67;
@@ -433,20 +483,22 @@
             // 
             // buttonPos9E
             // 
-            this.buttonPos9E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos9E.Location = new System.Drawing.Point(420, 41);
+            this.buttonPos9E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos9E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos9E.Location = new System.Drawing.Point(420, 38);
             this.buttonPos9E.Name = "buttonPos9E";
-            this.buttonPos9E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos9E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos9E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos9E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos9E.TabIndex = 60;
             this.buttonPos9E.Text = "E";
-            this.buttonPos9E.UseVisualStyleBackColor = true;
             this.buttonPos9E.Click += new System.EventHandler(this.buttonPos9E_Click);
             // 
             // labelPos9
             // 
             this.labelPos9.AutoSize = true;
             this.labelPos9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos9.Location = new System.Drawing.Point(432, 96);
+            this.labelPos9.Location = new System.Drawing.Point(432, 89);
             this.labelPos9.Name = "labelPos9";
             this.labelPos9.Size = new System.Drawing.Size(22, 24);
             this.labelPos9.TabIndex = 66;
@@ -454,20 +506,22 @@
             // 
             // buttonPos10E
             // 
-            this.buttonPos10E.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos10E.Location = new System.Drawing.Point(471, 41);
+            this.buttonPos10E.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos10E.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos10E.Location = new System.Drawing.Point(471, 38);
             this.buttonPos10E.Name = "buttonPos10E";
-            this.buttonPos10E.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos10E.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos10E.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos10E.Size = new System.Drawing.Size(45, 21);
             this.buttonPos10E.TabIndex = 61;
             this.buttonPos10E.Text = "E";
-            this.buttonPos10E.UseVisualStyleBackColor = true;
             this.buttonPos10E.Click += new System.EventHandler(this.buttonPos10E_Click);
             // 
             // labelPos8
             // 
             this.labelPos8.AutoSize = true;
             this.labelPos8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPos8.Location = new System.Drawing.Point(381, 96);
+            this.labelPos8.Location = new System.Drawing.Point(381, 89);
             this.labelPos8.Name = "labelPos8";
             this.labelPos8.Size = new System.Drawing.Size(22, 24);
             this.labelPos8.TabIndex = 65;
@@ -475,101 +529,111 @@
             // 
             // buttonPos8P
             // 
-            this.buttonPos8P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos8P.Location = new System.Drawing.Point(369, 70);
+            this.buttonPos8P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos8P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos8P.Location = new System.Drawing.Point(369, 65);
             this.buttonPos8P.Name = "buttonPos8P";
-            this.buttonPos8P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos8P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos8P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos8P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos8P.TabIndex = 62;
             this.buttonPos8P.Text = "P";
-            this.buttonPos8P.UseVisualStyleBackColor = true;
             this.buttonPos8P.Click += new System.EventHandler(this.buttonPos8P_Click);
             // 
             // buttonPos10P
             // 
-            this.buttonPos10P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos10P.Location = new System.Drawing.Point(471, 70);
+            this.buttonPos10P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos10P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos10P.Location = new System.Drawing.Point(471, 65);
             this.buttonPos10P.Name = "buttonPos10P";
-            this.buttonPos10P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos10P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos10P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos10P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos10P.TabIndex = 64;
             this.buttonPos10P.Text = "P";
-            this.buttonPos10P.UseVisualStyleBackColor = true;
             this.buttonPos10P.Click += new System.EventHandler(this.buttonPos10P_Click);
             // 
             // buttonPos9P
             // 
-            this.buttonPos9P.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPos9P.Location = new System.Drawing.Point(420, 70);
+            this.buttonPos9P.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.buttonPos9P.ForeColor = System.Drawing.Color.Black;
+            this.buttonPos9P.Location = new System.Drawing.Point(420, 65);
             this.buttonPos9P.Name = "buttonPos9P";
-            this.buttonPos9P.Size = new System.Drawing.Size(45, 23);
+            this.buttonPos9P.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonPos9P.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonPos9P.Size = new System.Drawing.Size(45, 21);
             this.buttonPos9P.TabIndex = 63;
             this.buttonPos9P.Text = "P";
-            this.buttonPos9P.UseVisualStyleBackColor = true;
             this.buttonPos9P.Click += new System.EventHandler(this.buttonPos9P_Click);
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonCancel.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Location = new System.Drawing.Point(441, 252);
+            this.buttonCancel.ForeColor = System.Drawing.Color.Black;
+            this.buttonCancel.Location = new System.Drawing.Point(441, 233);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCancel.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonCancel.Size = new System.Drawing.Size(75, 21);
             this.buttonCancel.TabIndex = 69;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Text = "关闭";
             // 
             // buttonOk
             // 
             this.buttonOk.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonOk.BackColor = System.Drawing.Color.AntiqueWhite;
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOk.Location = new System.Drawing.Point(360, 252);
+            this.buttonOk.ForeColor = System.Drawing.Color.Black;
+            this.buttonOk.Location = new System.Drawing.Point(360, 233);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.OuterBorderColor = System.Drawing.Color.Transparent;
+            this.buttonOk.ShineColor = System.Drawing.SystemColors.Window;
+            this.buttonOk.Size = new System.Drawing.Size(75, 21);
             this.buttonOk.TabIndex = 68;
-            this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Text = "确认";
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.Location = new System.Drawing.Point(9, 213);
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.Location = new System.Drawing.Point(9, 197);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(507, 34);
+            this.label10.Size = new System.Drawing.Size(507, 31);
             this.label10.TabIndex = 72;
-            this.label10.Text = "P - It seems that 宝可梦 that have been infected with Pokérus level up better. W" +
-                "e\'re not quite sure why...";
+            this.label10.Text = "P - It seems that Pokémon that have been infected with Pokérus level up better. W" +
+    "e\'re not quite sure why...";
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Location = new System.Drawing.Point(9, 173);
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Location = new System.Drawing.Point(9, 164);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(507, 30);
+            this.label9.Size = new System.Drawing.Size(507, 28);
             this.label9.TabIndex = 71;
-            this.label9.Text = "E - There are so many different ways that 宝可梦 evolve, aren\'t there?! Some Pok" +
-                "émon don\'t even evolve until they meet certain conditions first!";
+            this.label9.Text = "E - There are so many different ways that Pokémon evolve, aren\'t there?! Some Pok" +
+    "émon don\'t even evolve until they meet certain conditions first!";
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Location = new System.Drawing.Point(11, 133);
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.Location = new System.Drawing.Point(11, 123);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(505, 41);
+            this.label8.Size = new System.Drawing.Size(505, 38);
             this.label8.TabIndex = 70;
             this.label8.Text = resources.GetString("label8.Text");
             // 
             // SearchElmV
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(528, 287);
+            this.ClientSize = new System.Drawing.Size(528, 265);
             this.ControlBox = false;
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -620,7 +684,7 @@
             this.Name = "SearchElmV";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Search Elm Responses";
+            this.Text = "多次打电话反查";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,9 +33,9 @@ namespace RNGReporter
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            RNGReporter.Controls.CheckBoxProperties checkBoxProperties3 = new RNGReporter.Controls.CheckBoxProperties();
             RNGReporter.Controls.CheckBoxProperties checkBoxProperties1 = new RNGReporter.Controls.CheckBoxProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            RNGReporter.Controls.CheckBoxProperties checkBoxProperties2 = new RNGReporter.Controls.CheckBoxProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -154,10 +154,10 @@ namespace RNGReporter
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.label41 = new System.Windows.Forms.Label();
             this.contextMenuStripTimeFinder = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.FifthGenerationTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FourthGenerationTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThirdGenerationTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GameCubeTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThirdGenerationTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FourthGenerationTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FifthGenerationTimeFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTipDataGrid = new System.Windows.Forms.ToolTip(this.components);
             this.buttonLead = new System.Windows.Forms.Button();
             this.checkBoxBW2 = new System.Windows.Forms.CheckBox();
@@ -437,7 +437,7 @@ namespace RNGReporter
             // 
             this.label10.AutoSize = true;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(31, 144);
+            this.label10.Location = new System.Drawing.Point(45, 144);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 17);
@@ -448,7 +448,7 @@ namespace RNGReporter
             // 
             this.label11.AutoSize = true;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(31, 176);
+            this.label11.Location = new System.Drawing.Point(59, 176);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 17);
@@ -460,18 +460,18 @@ namespace RNGReporter
             // 
             this.label12.AutoSize = true;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(19, 210);
+            this.label12.Location = new System.Drawing.Point(25, 210);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 17);
+            this.label12.Size = new System.Drawing.Size(93, 17);
             this.label12.TabIndex = 8;
-            this.label12.Text = "Seed (16进制)";
+            this.label12.Text = "Seed（Hex）";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(754, 49);
+            this.label13.Location = new System.Drawing.Point(782, 49);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(36, 17);
@@ -489,7 +489,7 @@ namespace RNGReporter
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 72;
-            this.label14.Text = "目标帧:";
+            this.label14.Text = "目标帧：";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelTargetFrame
@@ -508,7 +508,7 @@ namespace RNGReporter
             // 
             this.label16.AutoSize = true;
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(754, 82);
+            this.label16.Location = new System.Drawing.Point(782, 82);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(36, 17);
@@ -525,7 +525,7 @@ namespace RNGReporter
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(115, 17);
             this.label17.TabIndex = 74;
-            this.label17.Text = "投硬币获取Seed:";
+            this.label17.Text = "投硬币获取Seed：";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelFlipsForSeed
@@ -562,7 +562,7 @@ namespace RNGReporter
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(180, 17);
             this.label19.TabIndex = 76;
-            this.label19.Text = "Elm打电话的结果获取Seed:";
+            this.label19.Text = "Elm打电话的结果获取Seed：";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // checkBoxRPresent
@@ -614,7 +614,7 @@ namespace RNGReporter
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(110, 17);
             this.label18.TabIndex = 85;
-            this.label18.Text = "游走宝可梦位置:";
+            this.label18.Text = "游走宝可梦位置：";
             // 
             // labelRoamerRoutes
             // 
@@ -669,7 +669,7 @@ namespace RNGReporter
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(1265, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1265, 30);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "菜单栏1";
@@ -677,7 +677,7 @@ namespace RNGReporter
             // pokedexIVCheckerToolStripMenuItem
             // 
             this.pokedexIVCheckerToolStripMenuItem.Name = "pokedexIVCheckerToolStripMenuItem";
-            this.pokedexIVCheckerToolStripMenuItem.Size = new System.Drawing.Size(164, 25);
+            this.pokedexIVCheckerToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.pokedexIVCheckerToolStripMenuItem.Text = "个体计算器/迷你图鉴";
             this.pokedexIVCheckerToolStripMenuItem.Click += new System.EventHandler(this.pokedexIVCheckerToolStripMenuItem_Click);
             // 
@@ -698,7 +698,7 @@ namespace RNGReporter
             this.fireRedEncounterTableToolStripMenuItem,
             this.leafGreenEncounterTableToolStripMenuItem});
             this.rdGenToolsToolStripMenuItem.Name = "rdGenToolsToolStripMenuItem";
-            this.rdGenToolsToolStripMenuItem.Size = new System.Drawing.Size(108, 25);
+            this.rdGenToolsToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
             this.rdGenToolsToolStripMenuItem.Text = "GEN3工具集";
             // 
             // tIDSIDManipulationPandorasBoxToolStripMenuItem2
@@ -711,82 +711,82 @@ namespace RNGReporter
             // bitSeedToTimeToolStripMenuItem
             // 
             this.bitSeedToTimeToolStripMenuItem.Name = "bitSeedToTimeToolStripMenuItem";
-            this.bitSeedToTimeToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.bitSeedToTimeToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.bitSeedToTimeToolStripMenuItem.Text = "Seed to Time（有电红/蓝宝石）";
             this.bitSeedToTimeToolStripMenuItem.Click += new System.EventHandler(this.bitSeedToTimeToolStripMenuItem_Click);
             // 
             // jirachiGenerationToolStripMenuItem
             // 
             this.jirachiGenerationToolStripMenuItem.Name = "jirachiGenerationToolStripMenuItem";
-            this.jirachiGenerationToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.jirachiGenerationToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.jirachiGenerationToolStripMenuItem.Text = "基拉祈计算器";
             this.jirachiGenerationToolStripMenuItem.Click += new System.EventHandler(this.jirachiGenerationToolStripMenuItem_Click);
             // 
             // pIDToIVsToolStripMenuItem
             // 
             this.pIDToIVsToolStripMenuItem.Name = "pIDToIVsToolStripMenuItem";
-            this.pIDToIVsToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.pIDToIVsToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.pIDToIVsToolStripMenuItem.Text = "根据PID计算个体值";
             this.pIDToIVsToolStripMenuItem.Click += new System.EventHandler(this.pIDToIVsToolStripMenuItem_Click);
             // 
             // iVsToFrameToolStripMenuItem
             // 
             this.iVsToFrameToolStripMenuItem.Name = "iVsToFrameToolStripMenuItem";
-            this.iVsToFrameToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.iVsToFrameToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.iVsToFrameToolStripMenuItem.Text = "根据个体值计算帧数";
             this.iVsToFrameToolStripMenuItem.Click += new System.EventHandler(this.iVsToFrameToolStripMenuItem_Click);
             // 
             // gameCubeRTCToolStripMenuItem
             // 
             this.gameCubeRTCToolStripMenuItem.Name = "gameCubeRTCToolStripMenuItem";
-            this.gameCubeRTCToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.gameCubeRTCToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.gameCubeRTCToolStripMenuItem.Text = "NGC RTC计算器";
             this.gameCubeRTCToolStripMenuItem.Click += new System.EventHandler(this.gameCubeRTCToolStripMenuItem_Click);
             // 
             // pokespotToolStripMenuItem
             // 
             this.pokespotToolStripMenuItem.Name = "pokespotToolStripMenuItem";
-            this.pokespotToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.pokespotToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.pokespotToolStripMenuItem.Text = "Pokespot(XD)计算器";
             this.pokespotToolStripMenuItem.Click += new System.EventHandler(this.pokespotToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(312, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(315, 6);
             // 
             // rubyEncounterTableToolStripMenuItem
             // 
             this.rubyEncounterTableToolStripMenuItem.Name = "rubyEncounterTableToolStripMenuItem";
-            this.rubyEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.rubyEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.rubyEncounterTableToolStripMenuItem.Text = "红宝石野生宝可梦遭遇表";
             this.rubyEncounterTableToolStripMenuItem.Click += new System.EventHandler(this.rubyEncounterTableToolStripMenuItem_Click);
             // 
             // sapphireEncounterTableToolStripMenuItem
             // 
             this.sapphireEncounterTableToolStripMenuItem.Name = "sapphireEncounterTableToolStripMenuItem";
-            this.sapphireEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.sapphireEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.sapphireEncounterTableToolStripMenuItem.Text = "蓝宝石野生宝可梦遭遇表";
             this.sapphireEncounterTableToolStripMenuItem.Click += new System.EventHandler(this.sapphireEncounterTableToolStripMenuItem_Click);
             // 
             // emeraldEncounterTableToolStripMenuItem
             // 
             this.emeraldEncounterTableToolStripMenuItem.Name = "emeraldEncounterTableToolStripMenuItem";
-            this.emeraldEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.emeraldEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.emeraldEncounterTableToolStripMenuItem.Text = "绿宝石野生宝可梦遭遇表";
             this.emeraldEncounterTableToolStripMenuItem.Click += new System.EventHandler(this.emeraldEncounterTableToolStripMenuItem_Click);
             // 
             // fireRedEncounterTableToolStripMenuItem
             // 
             this.fireRedEncounterTableToolStripMenuItem.Name = "fireRedEncounterTableToolStripMenuItem";
-            this.fireRedEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.fireRedEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.fireRedEncounterTableToolStripMenuItem.Text = "火红野生宝可梦遭遇表";
             this.fireRedEncounterTableToolStripMenuItem.Click += new System.EventHandler(this.fireRedEncounterTableToolStripMenuItem_Click);
             // 
             // leafGreenEncounterTableToolStripMenuItem
             // 
             this.leafGreenEncounterTableToolStripMenuItem.Name = "leafGreenEncounterTableToolStripMenuItem";
-            this.leafGreenEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(315, 26);
+            this.leafGreenEncounterTableToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.leafGreenEncounterTableToolStripMenuItem.Text = "叶绿野生宝可梦遭遇表";
             this.leafGreenEncounterTableToolStripMenuItem.Click += new System.EventHandler(this.leafGreenEncounterTableToolStripMenuItem_Click);
             // 
@@ -809,7 +809,7 @@ namespace RNGReporter
             this.heartGoldEncounterTableToolStripMenuItem,
             this.soulSilverEncounterTableToolStripMenuItem});
             this.thGenToolsToolStripMenuItem.Name = "thGenToolsToolStripMenuItem";
-            this.thGenToolsToolStripMenuItem.Size = new System.Drawing.Size(108, 25);
+            this.thGenToolsToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
             this.thGenToolsToolStripMenuItem.Text = "GEN4工具集";
             // 
             // iVsToPIDToolStripMenuItem
@@ -930,7 +930,7 @@ namespace RNGReporter
             this.white2EncounterTableToolStripMenuItem,
             this.hiddenGrottoEncounterTablesToolStripMenuItem});
             this.thGenToolsToolStripMenuItem1.Name = "thGenToolsToolStripMenuItem1";
-            this.thGenToolsToolStripMenuItem1.Size = new System.Drawing.Size(108, 25);
+            this.thGenToolsToolStripMenuItem1.Size = new System.Drawing.Size(108, 26);
             this.thGenToolsToolStripMenuItem1.Text = "GEN5工具集";
             // 
             // findDSParametersToolStripMenuItem
@@ -1030,7 +1030,7 @@ namespace RNGReporter
             this.donationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.donationToolStripMenuItem.Name = "donationToolStripMenuItem";
             this.donationToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.donationToolStripMenuItem.Size = new System.Drawing.Size(78, 25);
+            this.donationToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.donationToolStripMenuItem.Click += new System.EventHandler(this.donationToolStripMenuItem_Click);
             // 
             // performanceOptionsToolStripMenuItem
@@ -1043,7 +1043,7 @@ namespace RNGReporter
             this.showToolTipsToolStripMenuItem});
             this.performanceOptionsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.performanceOptionsToolStripMenuItem.Name = "performanceOptionsToolStripMenuItem";
-            this.performanceOptionsToolStripMenuItem.Size = new System.Drawing.Size(53, 25);
+            this.performanceOptionsToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.performanceOptionsToolStripMenuItem.Text = "设置";
             // 
             // numberOfCPUCoresToolStripMenuItem
@@ -1098,7 +1098,7 @@ namespace RNGReporter
             // 
             this.researcherToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.researcherToolStripMenuItem.Name = "researcherToolStripMenuItem";
-            this.researcherToolStripMenuItem.Size = new System.Drawing.Size(128, 25);
+            this.researcherToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.researcherToolStripMenuItem.Text = "算法研究计算器";
             this.researcherToolStripMenuItem.Click += new System.EventHandler(this.researcherToolStripMenuItem_Click);
             // 
@@ -1115,7 +1115,7 @@ namespace RNGReporter
             this.한국어ToolStripMenuItem,
             this.简体中文ToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(53, 25);
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.languageToolStripMenuItem.Text = "语言";
             // 
             // englishToolStripMenuItem
@@ -1192,7 +1192,7 @@ namespace RNGReporter
             this.profilesToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.profilesToolStripMenuItem.Name = "profilesToolStripMenuItem";
             this.profilesToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.profilesToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
+            this.profilesToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.profilesToolStripMenuItem.Text = "存档信息管理";
             this.profilesToolStripMenuItem.Click += new System.EventHandler(this.profilesToolStripMenuItem_Click);
             // 
@@ -1224,7 +1224,7 @@ namespace RNGReporter
             // 
             this.label52.AutoSize = true;
             this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label52.Location = new System.Drawing.Point(31, 80);
+            this.label52.Location = new System.Drawing.Point(45, 80);
             this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(64, 17);
@@ -1235,12 +1235,12 @@ namespace RNGReporter
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label21.Location = new System.Drawing.Point(828, 299);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(103, 15);
+            this.label21.Size = new System.Drawing.Size(123, 17);
             this.label21.TabIndex = 108;
             this.label21.Text = "黑白普通seed所需";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1248,12 +1248,12 @@ namespace RNGReporter
             // labelCalcWarning
             // 
             this.labelCalcWarning.AutoSize = true;
-            this.labelCalcWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
+            this.labelCalcWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
             this.labelCalcWarning.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelCalcWarning.Location = new System.Drawing.Point(829, 232);
             this.labelCalcWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCalcWarning.Name = "labelCalcWarning";
-            this.labelCalcWarning.Size = new System.Drawing.Size(246, 15);
+            this.labelCalcWarning.Size = new System.Drawing.Size(302, 16);
             this.labelCalcWarning.TabIndex = 110;
             this.labelCalcWarning.Text = "注意:如果区域内有npc，帧预测将不会不准确";
             this.labelCalcWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1295,8 +1295,7 @@ namespace RNGReporter
             this.GameCubeTimeFinderToolStripMenuItem,
             this.ThirdGenerationTimeFinderToolStripMenuItem,
             this.FourthGenerationTimeFinderToolStripMenuItem,
-            this.FifthGenerationTimeFinderToolStripMenuItem
-            });
+            this.FifthGenerationTimeFinderToolStripMenuItem});
             this.contextMenuStripTimeFinder.Name = "contextMenuStripTimeFinder";
             this.contextMenuStripTimeFinder.Size = new System.Drawing.Size(209, 100);
             // 
@@ -1557,9 +1556,9 @@ namespace RNGReporter
             "野生宝可梦",
             "野生宝可梦 (冲浪)",
             "野生宝可梦 (钓鱼)",
-            "野生宝可梦 (Bubble Spot)",
-            "野生宝可梦 (Shaking Grass)",
-            "野生宝可梦 (Cave Spot)",
+            "野生宝可梦（水纹水面）",
+            "野生宝可梦（摇动草丛）",
+            "野生宝可梦（卷尘地面）",
             "定点宝可梦",
             "游走宝可梦 ",
             "礼物宝可梦 (非神秘礼物)",
@@ -1589,8 +1588,8 @@ namespace RNGReporter
             // comboBoxEncounterSlot
             // 
             this.comboBoxEncounterSlot.BlankText = "任意";
-            checkBoxProperties3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.comboBoxEncounterSlot.CheckBoxProperties = checkBoxProperties3;
+            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.comboBoxEncounterSlot.CheckBoxProperties = checkBoxProperties1;
             this.comboBoxEncounterSlot.DisplayMemberSingleItem = "";
             this.comboBoxEncounterSlot.DropDownHeight = 300;
             this.comboBoxEncounterSlot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1661,8 +1660,8 @@ namespace RNGReporter
             // comboBoxNature
             // 
             this.comboBoxNature.BlankText = "任意";
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.comboBoxNature.CheckBoxProperties = checkBoxProperties1;
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.comboBoxNature.CheckBoxProperties = checkBoxProperties2;
             this.comboBoxNature.DisplayMemberSingleItem = "";
             this.comboBoxNature.DropDownHeight = 300;
             this.comboBoxNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1714,7 +1713,7 @@ namespace RNGReporter
             this.dataGridViewValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewValues.ColumnHeadersHeight = 25;
+            this.dataGridViewValues.ColumnHeadersHeight = 22;
             this.dataGridViewValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Frame,
@@ -1836,8 +1835,8 @@ namespace RNGReporter
             // PID
             // 
             this.PID.DataPropertyName = "Pid";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 8.75F);
-            this.PID.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 8.75F);
+            this.PID.DefaultCellStyle = dataGridViewCellStyle1;
             this.PID.HeaderText = "PID";
             this.PID.MinimumWidth = 6;
             this.PID.Name = "PID";
@@ -1847,7 +1846,7 @@ namespace RNGReporter
             // CaveSpot
             // 
             this.CaveSpot.DataPropertyName = "CaveSpotting";
-            this.CaveSpot.HeaderText = "Cave Spot";
+            this.CaveSpot.HeaderText = "卷尘地面";
             this.CaveSpot.MinimumWidth = 6;
             this.CaveSpot.Name = "CaveSpot";
             this.CaveSpot.ReadOnly = true;
@@ -1994,7 +1993,7 @@ namespace RNGReporter
             // f50
             // 
             this.f50.DataPropertyName = "Female50";
-            this.f50.HeaderText = "50% ♀";
+            this.f50.HeaderText = "50%♀";
             this.f50.MinimumWidth = 6;
             this.f50.Name = "f50";
             this.f50.ReadOnly = true;
@@ -2012,7 +2011,7 @@ namespace RNGReporter
             // f25
             // 
             this.f25.DataPropertyName = "Female25";
-            this.f25.HeaderText = "25% ♀";
+            this.f25.HeaderText = "25%♀";
             this.f25.MinimumWidth = 6;
             this.f25.Name = "f25";
             this.f25.ReadOnly = true;
@@ -2021,7 +2020,7 @@ namespace RNGReporter
             // f75
             // 
             this.f75.DataPropertyName = "Female75";
-            this.f75.HeaderText = "75% ♀";
+            this.f75.HeaderText = "75%♀";
             this.f75.MinimumWidth = 6;
             this.f75.Name = "f75";
             this.f75.ReadOnly = true;

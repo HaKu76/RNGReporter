@@ -160,47 +160,47 @@ namespace RNGReporter.Objects
         {
             switch (encounterType)
             {
-                case "Wild Pokémon":
+                case "野生宝可梦":
                     return EncounterType.Wild;
-                case "Wild Pokémon (Surfing)":
+                case "野生宝可梦（冲浪）":
                     return EncounterType.WildSurfing;
-                case "Wild Pokémon (Fishing)":
+                case "野生宝可梦（钓鱼）":
                     return EncounterType.WildSuperRod;
-                case "Wild Pokémon (Old Rod)":
+                case "野生宝可梦（破旧钓竿）":
                     return EncounterType.WildOldRod;
-                case "Wild Pokémon (Good Rod)":
+                case "野生宝可梦（好钓竿）":
                     return EncounterType.WildGoodRod;
-                case "Wild Pokémon (Super Rod)":
+                case "野生宝可梦（厉害钓竿）":
                     return EncounterType.WildSuperRod;
-                case "Wild Pokémon (Swarm)":
+                case "野生宝可梦（虫之预感）":
                     return EncounterType.WildSwarm;
-                case "Wild Pokémon (Shaking Grass)":
+                case "野生宝可梦（摇动草丛）":
                     return EncounterType.WildShakerGrass;
-                case "Wild Pokémon (Bubble Spot)":
+                case "野生宝可梦（水纹水面）":
                     return EncounterType.WildWaterSpot;
-                case "Wild Pokémon (Cave Spot)":
+                case "野生宝可梦（卷尘地面）":
                     return EncounterType.WildCaveSpot;
-                case "Stationary Pokémon":
+                case "定点宝可梦":
                     return EncounterType.Stationary;
-                case "Roaming Pokémon":
+                case "游走宝可梦":
                     return EncounterType.Roamer;
-                case "Gift Pokémon":
+                case "礼物宝可梦":
                     return EncounterType.Gift;
-                case "Entralink Pokémon":
+                case "连入之森宝可梦":
                     return EncounterType.Entralink;
-                case "Larvesta Egg":
+                case "燃烧虫的蛋":
                     return EncounterType.LarvestaEgg;
-                case "Hidden Grotto":
+                case "隐藏洞穴":
                     return EncounterType.HiddenGrotto;
-                case "All Encounters Shiny":
+                case "所有遭遇异色":
                     return EncounterType.AllEncounterShiny;
-                case "Bug-Catching Contest":
+                case "捕虫大赛":
                     return EncounterType.BugCatchingContest;
-                case "Safari Zone":
+                case "狩猎地带":
                     return EncounterType.SafariZone;
-                case "Manaphy Egg":
+                case "玛纳霏的蛋":
                     return EncounterType.Manaphy;
-                case "Headbutt":
+                case "头锤树":
                     return EncounterType.Headbutt;
                 default:
                     return EncounterType.Wild;

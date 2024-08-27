@@ -147,7 +147,7 @@ namespace RNGReporter
             {
                 Application.RemoveMessageFilter(this);
                 Hide();
-                throw new Exception("Operation Cancelled");
+                throw new Exception("操作被取消");
             }
             if (allowPause)
             {
@@ -186,15 +186,15 @@ namespace RNGReporter
 
         private void buttonPause_Click(object sender, EventArgs e)
         {
-            if (buttonPause.Text == "Pause")
+            if (buttonPause.Text == "暂停")
             {
                 pleasePause = true;
-                buttonPause.Text = "Resume";
+                buttonPause.Text = "重新开始";
             }
             else
             {
                 pleaseUnpause = true;
-                buttonPause.Text = "Pause";
+                buttonPause.Text = "暂停";
             }
         }
     }

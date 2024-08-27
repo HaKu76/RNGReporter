@@ -70,8 +70,8 @@ namespace RNGReporter
         private List<uint> rlist = new List<uint>();
         private uint shinyval, genderFilter, abilityFilter;
         private static List<uint> hiddenPowerList;
-        private readonly String[] Natures = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty", "Bold", "Docile", "Relaxed", "Impish", "Lax", "Timid", "Hasty", "Serious", "Jolly", "Naive", "Modest", "Mild", "Quiet", "Bashful", "Rash", "Calm", "Gentle", "Sassy", "Careful", "Quirky" };
-        private readonly String[] hiddenPowers = { "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon", "Dark" };
+        private readonly String[] Natures = { "勤奋", "怕寂寞", "勇敢", "固执", "顽皮", "大胆", "坦率", "悠闲", "淘气", "乐天", "胆小", "急躁", "认真", "爽朗", "天真", "内敛", "慢吞吞", "冷静", "害羞", "马虎", "温和", "温顺", "自大", "慎重", "浮躁" };
+        private readonly String[] hiddenPowers = { "格斗", "飞行", "毒", "地面", "岩石", "虫", "幽灵", "钢", "火", "水", "草", "电", "超能", "冰", "龙", "恶" };
 
         public TimeFinder3rd(ushort id, ushort sid)
         {
@@ -109,7 +109,7 @@ namespace RNGReporter
                     new ComboBoxItem("任意", -1),
                     new ComboBoxItem("特性0", 0),
                     new ComboBoxItem("特性1", 1)
-                };
+               };
 
             cbMethod.Items.AddRange(new object[]
                 {
@@ -123,14 +123,14 @@ namespace RNGReporter
 
             cbEncounterType.Items.AddRange(new object[]
                 {
-                    new ComboBoxItem("Wild Pokémon", EncounterType.Wild),
-                    new ComboBoxItem("Wild Pokémon (Surfing)",
+                    new ComboBoxItem("野生宝可梦", EncounterType.Wild),
+                    new ComboBoxItem("野生宝可梦（冲浪）",
                                      EncounterType.WildSurfing),
-                    new ComboBoxItem("Wild Pokémon (Old Rod)",
+                    new ComboBoxItem("野生宝可梦（破旧钓竿）",
                                      EncounterType.WildOldRod),
-                    new ComboBoxItem("Wild Pokémon (Good Rod)",
+                    new ComboBoxItem("野生宝可梦（好钓竿）",
                                      EncounterType.WildGoodRod),
-                    new ComboBoxItem("Wild Pokémon (Super Rod)",
+                    new ComboBoxItem("野生宝可梦 (Super Rod)",
                                      EncounterType.WildSuperRod),
                     new ComboBoxItem("Stationary Pokémon", EncounterType.Stationary),
                     new ComboBoxItem("Safari Zone", EncounterType.SafariZone)
@@ -138,14 +138,14 @@ namespace RNGReporter
 
             comboBoxType.Items.AddRange(new object[]
                 {
-                    new ComboBoxItem("Wild Pokémon", EncounterType.Wild),
-                    new ComboBoxItem("Wild Pokémon (Surfing)",
+                    new ComboBoxItem("野生宝可梦", EncounterType.Wild),
+                    new ComboBoxItem("野生宝可梦（冲浪）",
                                      EncounterType.WildSurfing),
-                    new ComboBoxItem("Wild Pokémon (Old Rod)",
+                    new ComboBoxItem("野生宝可梦 (Old Rod)",
                                      EncounterType.WildOldRod),
-                    new ComboBoxItem("Wild Pokémon (Good Rod)",
+                    new ComboBoxItem("野生宝可梦 (Good Rod)",
                                      EncounterType.WildGoodRod),
-                    new ComboBoxItem("Wild Pokémon (Super Rod)",
+                    new ComboBoxItem("野生宝可梦 (Super Rod)",
                                      EncounterType.WildSuperRod)
                 });
 
@@ -2980,36 +2980,6 @@ namespace RNGReporter
                 minMinute.Enabled = maxMinute.Enabled = minHour.Enabled = maxHour.Enabled = true;
                 radioButton1.Enabled = radioButton2.Enabled = maskedTextBox21.Enabled = dateTimePicker1.Enabled = true;
             }
-        }
-
-        private void ivFiltersRSEgg_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPageShinyRSEgg_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

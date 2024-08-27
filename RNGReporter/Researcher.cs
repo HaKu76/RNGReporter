@@ -1057,7 +1057,7 @@ namespace RNGReporter
                     }
                     catch
                     {
-                        MessageBox.Show("The Frame research accepts only decimal numbers.", "错误");
+                        MessageBox.Show("请输入10进制的帧数", "错误");
                         return;
                     }
                 }
@@ -1176,6 +1176,11 @@ namespace RNGReporter
                 else
                 { Clipboard.Clear(); }
             }
+        }
+
+        private void glassComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

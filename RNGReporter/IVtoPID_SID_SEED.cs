@@ -218,6 +218,17 @@ namespace RNGReporter
                         }
                     }
                     break;
+                case (Language.SimplifiedChinese):
+                    CellStyle.Font = new Font("宋体", 9F);
+                    if (CellStyle.Font.Name != "宋体")
+                    {
+                        CellStyle.Font = new Font("Microsoft Sans Serif", 9F);
+                        if (CellStyle.Font.Name != "Microsoft Sans Serif")
+                        {
+                            CellStyle.Font = new Font("微软雅黑", 9F);
+                        }
+                    }
+                    break;
                 default:
                     CellStyle.Font = DefaultFont;
                     break;
