@@ -324,7 +324,7 @@ namespace RNGReporter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("You must check off the Hex box in order to calculate using hex values.", ex.Message);
+                MessageBox.Show("您必须勾选16进制框才能使用16进制值进行计算", ex.Message);
                 return;
             }
 
@@ -644,7 +644,7 @@ namespace RNGReporter
 
             if (columnHover != null)
             {
-                copyItemToolStripMenuItem.Text = "Copy " + dataGridViewValues.Columns[columnHover].HeaderText;
+                copyItemToolStripMenuItem.Text = "复制" + dataGridViewValues.Columns[columnHover].HeaderText;
             }
 
             if (columns.Count == 0)
@@ -855,7 +855,7 @@ namespace RNGReporter
         {
             if (profile.Custom.Length != 10)
             {
-                MessageBox.Show("Corrupt profile detected");
+                MessageBox.Show("检测到损坏的配置文件");
                 return;
             }
 

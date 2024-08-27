@@ -426,7 +426,7 @@ namespace RNGReporter
             this.buttonSimpleSeed.ShineColor = System.Drawing.SystemColors.Window;
             this.buttonSimpleSeed.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpleSeed.TabIndex = 14;
-            this.buttonSimpleSeed.Text = "创建";
+            this.buttonSimpleSeed.Text = "计算";
             this.buttonSimpleSeed.Click += new System.EventHandler(this.buttonSimpleSeed_Click);
             // 
             // tabControl1

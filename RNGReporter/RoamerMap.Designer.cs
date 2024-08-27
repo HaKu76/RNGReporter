@@ -90,6 +90,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::RNGReporter.Properties.Resources.map;
             this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -146,7 +147,7 @@
             this.Name = "RoamerMap";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "游走神兽地图（HGSS）";
+            this.Text = "游走神兽Map（HGSS）";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RoamerMap_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

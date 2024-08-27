@@ -277,7 +277,7 @@ namespace RNGReporter
             this.labelResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelResults.AutoSize = true;
-            this.labelResults.Location = new System.Drawing.Point(6, 91);
+            this.labelResults.Location = new System.Drawing.Point(6, 92);
             this.labelResults.Name = "labelResults";
             this.labelResults.Size = new System.Drawing.Size(101, 12);
             this.labelResults.TabIndex = 55;
@@ -368,7 +368,7 @@ namespace RNGReporter
             this.Name = "SearchElm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "打电话反查";
+            this.Text = "打电话反查（HGSS）";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

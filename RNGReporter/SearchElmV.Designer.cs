@@ -684,7 +684,7 @@
             this.Name = "SearchElmV";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "多次打电话反查";
+            this.Text = "多次打电话反查（HGSS）";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -112,7 +112,7 @@
             this.Name = "Poketech";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "点击宝可表";
+            this.Text = "点击宝可表（DPPt）";
             this.ResumeLayout(false);
             this.PerformLayout();
 

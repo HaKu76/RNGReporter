@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            RNGReporter.Controls.CheckBoxProperties checkBoxProperties1 = new RNGReporter.Controls.CheckBoxProperties();
+            RNGReporter.Controls.CheckBoxProperties checkBoxProperties2 = new RNGReporter.Controls.CheckBoxProperties();
             this.checkBoxSkipLR = new System.Windows.Forms.CheckBox();
             this.btnParameters = new RNGReporter.GlassButton();
             this.comboBoxKeypresses = new RNGReporter.Controls.CheckBoxComboBox();
@@ -89,8 +89,8 @@
             // comboBoxKeypresses
             // 
             this.comboBoxKeypresses.BlankText = "任意";
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.comboBoxKeypresses.CheckBoxProperties = checkBoxProperties1;
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.comboBoxKeypresses.CheckBoxProperties = checkBoxProperties2;
             this.comboBoxKeypresses.DisplayMemberSingleItem = "";
             this.comboBoxKeypresses.DropDownHeight = 300;
             this.comboBoxKeypresses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -109,7 +109,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(364, 80);
+            this.label71.Location = new System.Drawing.Point(364, 84);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(41, 12);
             this.label71.TabIndex = 151;
@@ -117,7 +117,7 @@
             // 
             // textBoxTimer0Max
             // 
-            this.textBoxTimer0Max.Location = new System.Drawing.Point(431, 55);
+            this.textBoxTimer0Max.Location = new System.Drawing.Point(431, 59);
             this.textBoxTimer0Max.MaxLength = 6;
             this.textBoxTimer0Max.Name = "textBoxTimer0Max";
             this.textBoxTimer0Max.Size = new System.Drawing.Size(40, 21);
@@ -132,7 +132,7 @@
             "DS Original\\Lite",
             "DSi\\DSi XL",
             "3DS"});
-            this.comboBoxDSType.Location = new System.Drawing.Point(366, 94);
+            this.comboBoxDSType.Location = new System.Drawing.Point(366, 98);
             this.comboBoxDSType.Name = "comboBoxDSType";
             this.comboBoxDSType.ShineColor = System.Drawing.SystemColors.Window;
             this.comboBoxDSType.Size = new System.Drawing.Size(124, 20);
@@ -141,7 +141,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(363, 41);
+            this.label49.Location = new System.Drawing.Point(363, 45);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(65, 12);
             this.label49.TabIndex = 138;
@@ -150,7 +150,7 @@
             // 
             // textBoxTimer0Min
             // 
-            this.textBoxTimer0Min.Location = new System.Drawing.Point(366, 55);
+            this.textBoxTimer0Min.Location = new System.Drawing.Point(366, 59);
             this.textBoxTimer0Min.MaxLength = 6;
             this.textBoxTimer0Min.Name = "textBoxTimer0Min";
             this.textBoxTimer0Min.Size = new System.Drawing.Size(38, 21);
@@ -159,7 +159,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(428, 41);
+            this.label53.Location = new System.Drawing.Point(428, 45);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(65, 12);
             this.label53.TabIndex = 144;
@@ -444,7 +444,7 @@
             this.Controls.Add(this.textBoxGxStat);
             this.Controls.Add(this.label48);
             this.Name = "ProfileEditor";
-            this.Text = "存档信息编辑";
+            this.Text = "存档信息编辑（GEN5）";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -52,7 +52,6 @@ namespace RNGReporter
             this.buttonDelete = new RNGReporter.GlassButton();
             this.buttonNew = new RNGReporter.GlassButton();
             this.dataGridViewValues = new RNGReporter.DoubleBufferedDataGridView();
-            this.profilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profileSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +66,7 @@ namespace RNGReporter
             this.profileKeypresses = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SkipLR = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.profileSoftReset = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.profilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilesBindingSource)).BeginInit();
@@ -76,7 +76,7 @@ namespace RNGReporter
             // 
             this.saveFileDialogXml.DefaultExt = "xml";
             this.saveFileDialogXml.FileName = "profiles";
-            this.saveFileDialogXml.Title = "Save Profiles...";
+            this.saveFileDialogXml.Title = "保存存档信息...";
             // 
             // menuStrip1
             // 
@@ -89,7 +89,7 @@ namespace RNGReporter
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(762, 25);
             this.menuStrip1.TabIndex = 151;
-            this.menuStrip1.Text = "menuStrip";
+            this.menuStrip1.Text = "菜单栏";
             // 
             // fileToolStripMenuItem
             // 
@@ -98,28 +98,28 @@ namespace RNGReporter
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
-            this.fileToolStripMenuItem.Text = "&File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.fileToolStripMenuItem.Text = "文件";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.newToolStripMenuItem.Text = "新建";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.openToolStripMenuItem.Text = "打开";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.saveToolStripMenuItem.Text = "保存";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // openFileDialogXml
@@ -127,7 +127,7 @@ namespace RNGReporter
             this.openFileDialogXml.DefaultExt = "xml";
             this.openFileDialogXml.FileName = "profiles";
             this.openFileDialogXml.Filter = "XML Profiles|*.xml|All files|*.*";
-            this.openFileDialogXml.Title = "Open Profiles...";
+            this.openFileDialogXml.Title = "打开存档信息...";
             // 
             // buttonDuplicate
             // 
@@ -248,10 +248,6 @@ namespace RNGReporter
             this.dataGridViewValues.Size = new System.Drawing.Size(737, 414);
             this.dataGridViewValues.TabIndex = 33;
             this.dataGridViewValues.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewValues_MouseDown);
-            // 
-            // profilesBindingSource
-            // 
-            this.profilesBindingSource.DataSource = typeof(RNGReporter.Objects.Profiles);
             // 
             // profileName
             // 
@@ -392,6 +388,10 @@ namespace RNGReporter
             this.profileSoftReset.ReadOnly = true;
             this.profileSoftReset.Width = 125;
             // 
+            // profilesBindingSource
+            // 
+            this.profilesBindingSource.DataSource = typeof(RNGReporter.Objects.Profiles);
+            // 
             // ProfileManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -407,7 +407,7 @@ namespace RNGReporter
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(642, 485);
             this.Name = "ProfileManager";
-            this.Text = "存档信息管理";
+            this.Text = "存档信息管理（GEN5）";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProfilesProfileManager_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

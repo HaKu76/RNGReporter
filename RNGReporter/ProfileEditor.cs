@@ -27,8 +27,8 @@ namespace RNGReporter
             if (GetProfile() == null)
             {
                 if (MessageBox.Show(
-                    "The inputed profile data in invalid. The profile can not be saved.\r\nWould you like to continue editing this profile?",
-                    "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes) return;
+                    "输入的配置文件数据无效，无法保存配置文件。\r\n您要继续编辑此配置文件吗？",
+                    "警告", MessageBoxButtons.YesNo) == DialogResult.Yes) return;
             }
             CheckNazos();
             DialogResult = DialogResult.OK;
@@ -77,8 +77,8 @@ namespace RNGReporter
             };
             if (Nazos.Nazo(profile) == null)
             {
-                MessageBox.Show("Warning: this version of the game is currently unsupported.",
-                                "Unsupported game: " + profile.Version + " " + profile.Language + " " + profile.DSType,
+                MessageBox.Show("警告：目前不支持此版本的游戏",
+                                "不支持的游戏：" + profile.Version + " " + profile.Language + " " + profile.DSType,
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             return profile;
@@ -169,8 +169,8 @@ namespace RNGReporter
             if (p != null && Nazos.Nazo(p) == null)
             {
                 if (MessageBox.Show(
-                    "We currently do not have information to be able to support this version of the game. Would you like to help out with adding support?",
-                    "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    "我们目前没有能够支持这个版本的游戏的信息。你愿意帮忙增加支持吗?",
+                    "警告", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Process.Start("http://www.smogon.com/forums/showpost.php?p=4432994&postcount=977");
                 }

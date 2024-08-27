@@ -169,7 +169,7 @@ namespace RNGReporter
             this.Name = "SearchRoamers";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "通过游走神兽来反查搜索";
+            this.Text = "通过游走神兽来反查搜索（HGSS）";
             this.ResumeLayout(false);
             this.PerformLayout();
 

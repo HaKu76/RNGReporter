@@ -188,7 +188,7 @@ namespace RNGReporter
             // 
             this.copyItemToolStripMenuItem.Name = "copyItemToolStripMenuItem";
             this.copyItemToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
-            this.copyItemToolStripMenuItem.Text = "Copy Item";
+            this.copyItemToolStripMenuItem.Text = "复制Item";
             this.copyItemToolStripMenuItem.Click += new System.EventHandler(this.copyItemToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -200,14 +200,14 @@ namespace RNGReporter
             // 
             this.copySelectedColumnsToolStripMenuItem.Name = "copySelectedColumnsToolStripMenuItem";
             this.copySelectedColumnsToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
-            this.copySelectedColumnsToolStripMenuItem.Text = "Copy Selected Columns";
+            this.copySelectedColumnsToolStripMenuItem.Text = "复制选中的列";
             this.copySelectedColumnsToolStripMenuItem.Click += new System.EventHandler(this.copySelectedColumnsToolStripMenuItem_Click);
             // 
             // copyColumnToolStripMenuItem
             // 
             this.copyColumnToolStripMenuItem.Name = "copyColumnToolStripMenuItem";
             this.copyColumnToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
-            this.copyColumnToolStripMenuItem.Text = "Copy Row from Selected Columns";
+            this.copyColumnToolStripMenuItem.Text = "从选定列复制行";
             this.copyColumnToolStripMenuItem.Click += new System.EventHandler(this.copyColumnToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
@@ -226,7 +226,7 @@ namespace RNGReporter
             // 
             this.outputSelectedColumnsToTXTToolStripMenuItem.Name = "outputSelectedColumnsToTXTToolStripMenuItem";
             this.outputSelectedColumnsToTXTToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
-            this.outputSelectedColumnsToTXTToolStripMenuItem.Text = "Output Selected Columns to TXT...";
+            this.outputSelectedColumnsToTXTToolStripMenuItem.Text = "将选定列输出到TXT文本文件...";
             this.outputSelectedColumnsToTXTToolStripMenuItem.Click += new System.EventHandler(this.outputSelectedColumnsToTXTToolStripMenuItem_Click);
             // 
             // label12
@@ -448,27 +448,27 @@ namespace RNGReporter
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Text = "文件";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.Text = "新建";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Text = "打开";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Text = "保存";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // openFileDialog1
@@ -478,7 +478,7 @@ namespace RNGReporter
             // saveFileDialog1
             // 
             this.saveFileDialog1.DefaultExt = "xml";
-            this.saveFileDialog1.Title = "Save Researcher Profile";
+            this.saveFileDialog1.Title = "保存研究文件";
             // 
             // checkBoxCustom8Hex
             // 

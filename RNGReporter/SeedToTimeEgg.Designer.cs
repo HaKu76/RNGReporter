@@ -44,6 +44,11 @@ namespace RNGReporter
             this.label2 = new System.Windows.Forms.Label();
             this.buttonGenerateAdjacents = new RNGReporter.GlassButton();
             this.dataGridViewAdjacents = new RNGReporter.DoubleBufferedDataGridView();
+            this.AdjacentSeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFlipSequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCancel = new RNGReporter.GlassButton();
             this.buttonOk = new RNGReporter.GlassButton();
             this.maskedTextBoxPSecond = new RNGReporter.Controls.MaskedTextBox2();
@@ -58,11 +63,6 @@ namespace RNGReporter
             this.labelTaps = new System.Windows.Forms.Label();
             this.labelFlips = new System.Windows.Forms.Label();
             this.labelSeed = new System.Windows.Forms.Label();
-            this.AdjacentSeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFlipSequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdjacents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,6 +218,51 @@ namespace RNGReporter
             this.dataGridViewAdjacents.Size = new System.Drawing.Size(470, 133);
             this.dataGridViewAdjacents.TabIndex = 39;
             // 
+            // AdjacentSeed
+            // 
+            this.AdjacentSeed.DataPropertyName = "Seed";
+            this.AdjacentSeed.HeaderText = "Seed";
+            this.AdjacentSeed.MinimumWidth = 6;
+            this.AdjacentSeed.Name = "AdjacentSeed";
+            this.AdjacentSeed.ReadOnly = true;
+            this.AdjacentSeed.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "DisplayDate";
+            this.dataGridViewTextBoxColumn1.HeaderText = "日期";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DisplayTime";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Delay";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Delay";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 60;
+            // 
+            // ColumnFlipSequence
+            // 
+            this.ColumnFlipSequence.DataPropertyName = "Flips";
+            this.ColumnFlipSequence.HeaderText = "硬币序列";
+            this.ColumnFlipSequence.MinimumWidth = 6;
+            this.ColumnFlipSequence.Name = "ColumnFlipSequence";
+            this.ColumnFlipSequence.ReadOnly = true;
+            this.ColumnFlipSequence.Width = 165;
+            // 
             // buttonCancel
             // 
             this.buttonCancel.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -361,51 +406,6 @@ namespace RNGReporter
             this.labelSeed.TabIndex = 50;
             this.labelSeed.Text = "000";
             // 
-            // AdjacentSeed
-            // 
-            this.AdjacentSeed.DataPropertyName = "Seed";
-            this.AdjacentSeed.HeaderText = "Seed";
-            this.AdjacentSeed.MinimumWidth = 6;
-            this.AdjacentSeed.Name = "AdjacentSeed";
-            this.AdjacentSeed.ReadOnly = true;
-            this.AdjacentSeed.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "DisplayDate";
-            this.dataGridViewTextBoxColumn1.HeaderText = "日期";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DisplayTime";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Delay";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Delay";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 60;
-            // 
-            // ColumnFlipSequence
-            // 
-            this.ColumnFlipSequence.DataPropertyName = "Flips";
-            this.ColumnFlipSequence.HeaderText = "硬币序列";
-            this.ColumnFlipSequence.MinimumWidth = 6;
-            this.ColumnFlipSequence.Name = "ColumnFlipSequence";
-            this.ColumnFlipSequence.ReadOnly = true;
-            this.ColumnFlipSequence.Width = 165;
-            // 
             // SeedToTimeEgg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -442,7 +442,7 @@ namespace RNGReporter
             this.Name = "SeedToTimeEgg";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Seed to Time";
+            this.Text = "Seed to Time（蛋）";
             this.Load += new System.EventHandler(this.SeedToTimeEgg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdjacents)).EndInit();
             this.ResumeLayout(false);
