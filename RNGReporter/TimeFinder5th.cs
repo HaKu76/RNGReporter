@@ -2859,7 +2859,7 @@ namespace RNGReporter
                 }
                 else if (dataGridViewCapValues.Columns[e.ColumnIndex].Name == "EncounterSlot")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Encounter Slot";
+                    toolTipDataGrid.ToolTipTitle = "遭遇槽位";
 
                     toolTipDataGrid.Show("Encounter slots are used to determine what Pokémon appears for\r\n" +
                                          "a wild battle.  Use the encounter tables under the main menus to look up\r\n" +

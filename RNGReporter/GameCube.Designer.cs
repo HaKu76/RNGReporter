@@ -238,7 +238,7 @@
             this.L_ball.Name = "L_ball";
             this.L_ball.Size = new System.Drawing.Size(88, 22);
             this.L_ball.TabIndex = 252;
-            this.L_ball.Text = "觉醒之力";
+            this.L_ball.Text = "觉醒力量";
             this.L_ball.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // genderType
@@ -916,7 +916,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 22);
             this.label13.TabIndex = 384;
-            this.label13.Text = "觉醒之力";
+            this.label13.Text = "觉醒力量";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
@@ -1248,7 +1248,7 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Hidden";
-            this.dataGridViewTextBoxColumn11.HeaderText = "觉醒之力";
+            this.dataGridViewTextBoxColumn11.HeaderText = "觉醒力量";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
@@ -1257,7 +1257,7 @@
             // HiddenPowerPower
             // 
             this.HiddenPowerPower.DataPropertyName = "Power";
-            this.HiddenPowerPower.HeaderText = "觉醒之力威力";
+            this.HiddenPowerPower.HeaderText = "觉醒力量威力";
             this.HiddenPowerPower.MinimumWidth = 6;
             this.HiddenPowerPower.Name = "HiddenPowerPower";
             this.HiddenPowerPower.ReadOnly = true;
@@ -1996,7 +1996,7 @@
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "Hidden";
-            this.dataGridViewTextBoxColumn23.HeaderText = "觉醒之力";
+            this.dataGridViewTextBoxColumn23.HeaderText = "觉醒力量";
             this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             this.dataGridViewTextBoxColumn23.ReadOnly = true;
@@ -2005,7 +2005,7 @@
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "Power";
-            this.dataGridViewTextBoxColumn24.HeaderText = "觉醒之力威力";
+            this.dataGridViewTextBoxColumn24.HeaderText = "觉醒力量威力";
             this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             this.dataGridViewTextBoxColumn24.ReadOnly = true;

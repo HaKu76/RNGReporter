@@ -599,7 +599,7 @@ namespace RNGReporter
             this.checkBoxShowInheritance.Name = "checkBoxShowInheritance";
             this.checkBoxShowInheritance.Size = new System.Drawing.Size(157, 19);
             this.checkBoxShowInheritance.TabIndex = 19;
-            this.checkBoxShowInheritance.Text = "Show Inheritance";
+            this.checkBoxShowInheritance.Text = "显示遗传来源";
             this.checkBoxShowInheritance.UseVisualStyleBackColor = true;
             this.checkBoxShowInheritance.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -770,7 +770,7 @@ namespace RNGReporter
             // ShinyOffset
             // 
             this.ShinyOffset.DataPropertyName = "Offset";
-            this.ShinyOffset.HeaderText = "Frame";
+            this.ShinyOffset.HeaderText = "帧数";
             this.ShinyOffset.MinimumWidth = 6;
             this.ShinyOffset.Name = "ShinyOffset";
             this.ShinyOffset.ReadOnly = true;
@@ -955,15 +955,15 @@ namespace RNGReporter
             this.comboBoxShinyGender.ForeColor = System.Drawing.Color.Black;
             this.comboBoxShinyGender.FormattingEnabled = true;
             this.comboBoxShinyGender.Items.AddRange(new object[] {
-            "Don\'t Care/Fixed Gender/Genderless",
-            "Female (50% Male, 50% Female)",
-            "Male (50% Male, 50% Female)",
-            "Female (25% Male, 75% Female)",
-            "Male (25% Male, 75% Female)",
-            "Female (75% Male, 25% Female)",
-            "Male (75% Male, 25% Female)",
-            "Female (87.5% Male, 12.5% Female)",
-            "Male (87.5% Male, 12.5% Female)"});
+            "不考虑/固定性别/无性别",
+            "♀(♂1：♀1)",
+            "♂(♂1：♀1)",
+            "♀(♂1：♀3)",
+            "♂(♂1：♀3)",
+            "♀(♂3：♀1)",
+            "♂(♂3：♀1)",
+            "♀(♂7：♀1)",
+            "♂(♂7：♀1)"});
             this.comboBoxShinyGender.Location = new System.Drawing.Point(875, 114);
             this.comboBoxShinyGender.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxShinyGender.MaxDropDownItems = 3;
@@ -1820,7 +1820,7 @@ namespace RNGReporter
             // 
             this.CapOffset.DataPropertyName = "Offset";
             this.CapOffset.FillWeight = 80F;
-            this.CapOffset.HeaderText = "Frame";
+            this.CapOffset.HeaderText = "帧数";
             this.CapOffset.MinimumWidth = 6;
             this.CapOffset.Name = "CapOffset";
             this.CapOffset.ReadOnly = true;
@@ -1861,7 +1861,7 @@ namespace RNGReporter
             // 
             this.EncounterSlot.DataPropertyName = "EncounterSlot";
             this.EncounterSlot.FillWeight = 120F;
-            this.EncounterSlot.HeaderText = "Encounter Slot";
+            this.EncounterSlot.HeaderText = "遭遇槽位";
             this.EncounterSlot.MinimumWidth = 6;
             this.EncounterSlot.Name = "EncounterSlot";
             this.EncounterSlot.ReadOnly = true;
@@ -2496,7 +2496,7 @@ namespace RNGReporter
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Frame";
             this.dataGridViewTextBoxColumn3.FillWeight = 150F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Frame";
+            this.dataGridViewTextBoxColumn3.HeaderText = "帧数";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -2982,7 +2982,7 @@ namespace RNGReporter
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Offset";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Frame";
+            this.dataGridViewTextBoxColumn10.HeaderText = "帧数";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;

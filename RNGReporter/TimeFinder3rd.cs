@@ -130,10 +130,10 @@ namespace RNGReporter
                                      EncounterType.WildOldRod),
                     new ComboBoxItem("野生宝可梦（好钓竿）",
                                      EncounterType.WildGoodRod),
-                    new ComboBoxItem("野生宝可梦 (Super Rod)",
+                    new ComboBoxItem("野生宝可梦（厉害钓竿）",
                                      EncounterType.WildSuperRod),
-                    new ComboBoxItem("Stationary Pokémon", EncounterType.Stationary),
-                    new ComboBoxItem("Safari Zone", EncounterType.SafariZone)
+                    new ComboBoxItem("定点宝可梦", EncounterType.Stationary),
+                    new ComboBoxItem("狩猎地带", EncounterType.SafariZone)
                 });
 
             comboBoxType.Items.AddRange(new object[]
@@ -141,11 +141,11 @@ namespace RNGReporter
                     new ComboBoxItem("野生宝可梦", EncounterType.Wild),
                     new ComboBoxItem("野生宝可梦（冲浪）",
                                      EncounterType.WildSurfing),
-                    new ComboBoxItem("野生宝可梦 (Old Rod)",
+                    new ComboBoxItem("野生宝可梦（破旧钓竿）",
                                      EncounterType.WildOldRod),
-                    new ComboBoxItem("野生宝可梦 (Good Rod)",
+                    new ComboBoxItem("野生宝可梦（好钓竿）",
                                      EncounterType.WildGoodRod),
-                    new ComboBoxItem("野生宝可梦 (Super Rod)",
+                    new ComboBoxItem("野生宝可梦（厉害钓竿）",
                                      EncounterType.WildSuperRod)
                 });
 
@@ -274,6 +274,17 @@ namespace RNGReporter
                         if (CellStyle.Font.Name != "Gulim")
                         {
                             CellStyle.Font = new Font("Arial Unicode MS", 8.25F);
+                        }
+                    }
+                    break;
+                case (Language.SimplifiedChinese):
+                    CellStyle.Font = new Font("宋体", 9F);
+                    if (CellStyle.Font.Name != "宋体")
+                    {
+                        CellStyle.Font = new Font("Microsoft Sans Serif", 9F);
+                        if (CellStyle.Font.Name != "Microsoft Sans Serif")
+                        {
+                            CellStyle.Font = new Font("微软雅黑", 9F);
                         }
                     }
                     break;
@@ -2523,10 +2534,10 @@ namespace RNGReporter
                 Spe = spe,
                 Hidden = hiddenPowers[hP],
                 Power = calcHPPower(hp, atk, def, spa, spd, spe),
-                Eighth = gender < 31 ? 'F' : 'M',
-                Quarter = gender < 64 ? 'F' : 'M',
-                Half = gender < 126 ? 'F' : 'M',
-                Three_Fourths = gender < 191 ? 'F' : 'M'
+                Eighth = gender < 31 ? '♀' : '♂',
+                Quarter = gender < 64 ? '♀' : '♂',
+                Half = gender < 126 ? '♀' : '♂',
+                Three_Fourths = gender < 191 ? '♀' : '♂'
             });
         }
 
@@ -2752,37 +2763,37 @@ namespace RNGReporter
 
         private void hpClear_Click(object sender, EventArgs e)
         {
-            hpValue.Text = "0";
+            hpValue.Text = "";
             hpLogic.SelectedIndex = 1;
         }
 
         private void atkClear_Click(object sender, EventArgs e)
         {
-            atkValue.Text = "0";
+            atkValue.Text = "";
             atkLogic.SelectedIndex = 1;
         }
 
         private void defClear_Click(object sender, EventArgs e)
         {
-            defValue.Text = "0";
+            defValue.Text = "";
             defLogic.SelectedIndex = 1;
         }
 
         private void spaClear_Click(object sender, EventArgs e)
         {
-            spaValue.Text = "0";
+            spaValue.Text = "";
             spaLogic.SelectedIndex = 1;
         }
 
         private void spdClear_Click(object sender, EventArgs e)
         {
-            spdValue.Text = "0";
+            spdValue.Text = "";
             spdLogic.SelectedIndex = 1;
         }
 
         private void speClear_Click(object sender, EventArgs e)
         {
-            speValue.Text = "0";
+            speValue.Text = "";
             speLogic.SelectedIndex = 1;
         }
 
@@ -2790,22 +2801,22 @@ namespace RNGReporter
         {
             String[] temp = new String[]
                 {
-                    "Fighting",
-                    "Flying",
-                    "Poison",
-                    "Ground",
-                    "Rock",
-                    "Bug",
-                    "Ghost",
-                    "Steel",
-                    "Fire",
-                    "Water",
-                    "Grass",
-                    "Electric",
-                    "Psychic",
-                    "Ice",
-                    "Dragon",
-                    "Dark"
+                    "格斗",
+                    "飞行", 
+                    "毒", 
+                    "地面", 
+                    "岩石",
+                    "虫",
+                    "幽灵", 
+                    "钢",
+                    "火", 
+                    "水",
+                    "草", 
+                    "电",
+                    "超能",
+                    "冰",
+                    "龙",
+                    "恶"
                 };
             return temp;
         }
@@ -2980,6 +2991,16 @@ namespace RNGReporter
                 minMinute.Enabled = maxMinute.Enabled = minHour.Enabled = maxHour.Enabled = true;
                 radioButton1.Enabled = radioButton2.Enabled = maskedTextBox21.Enabled = dateTimePicker1.Enabled = true;
             }
+        }
+
+        private void hpValue_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void status_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

@@ -2982,9 +2982,9 @@ namespace RNGReporter
                 }
                 else if (dataGridViewValues.Columns[e.ColumnIndex].Name == "Offset")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Occidentary";
+                    toolTipDataGrid.ToolTipTitle = "偶然值Occidentary";
 
-                    toolTipDataGrid.Show("战斗后RNG的帧数等于偶然值+6",
+                    toolTipDataGrid.Show("该值是对战结束后的帧数，宝可梦对战后的帧数等于偶然值+6，该值一般作用于大湿地等场景",
                                          this,
                                          dataGridViewValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewValues.Location.Y + cellRect.Y + cellRect.Size.Height,

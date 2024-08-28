@@ -44,22 +44,22 @@ namespace RNGReporter.Objects
         //  gender number
         public string Female50
         {
-            get { return ((Pid & 0xFF) > 126) ? "M" : "F"; }
+            get { return ((Pid & 0xFF) > 126) ? "♂" : "♀"; }
         }
 
         public string Female125
         {
-            get { return ((Pid & 0xFF) > 30) ? "M" : "F"; }
+            get { return ((Pid & 0xFF) > 30) ? "♂" : "♀"; }
         }
 
         public string Female25
         {
-            get { return ((Pid & 0xFF) > 63) ? "M" : "F"; }
+            get { return ((Pid & 0xFF) > 63) ? "♂" : "♀"; }
         }
 
         public string Female75
         {
-            get { return ((Pid & 0xFF) > 190) ? "M" : "F"; }
+            get { return ((Pid & 0xFF) > 190) ? "♂" : "♀"; }
         }
 
         public string Method { get; set; }

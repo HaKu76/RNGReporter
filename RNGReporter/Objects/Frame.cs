@@ -479,22 +479,22 @@ namespace RNGReporter.Objects
 
         public string Female50
         {
-            get { return ((pid & 0xFF) >= 127) ? "M" : "F"; }
+            get { return ((pid & 0xFF) >= 127) ? "♂" : "♀"; }
         }
 
         public string Female125
         {
-            get { return ((pid & 0xFF) >= 31) ? "M" : "F"; }
+            get { return ((pid & 0xFF) >= 31) ? "♂" : "♀"; }
         }
 
         public string Female25
         {
-            get { return ((pid & 0xFF) >= 63) ? "M" : "F"; }
+            get { return ((pid & 0xFF) >= 63) ? "♂" : "♀"; }
         }
 
         public string Female75
         {
-            get { return ((pid & 0xFF) >= 191) ? "M" : "F"; }
+            get { return ((pid & 0xFF) >= 191) ? "♂" : "♀"; }
         }
 
         public int MaleOnlySpecies
