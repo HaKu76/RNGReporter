@@ -94,11 +94,11 @@ namespace RNGReporter
 
             comboBoxMethod.Items.AddRange(new object[]
                 {
-                    new ComboBoxItem("IVs (Standard Seed)", FrameType.Method5Standard),
-                    new ComboBoxItem("IVs (C-Gear Seed)", FrameType.Method5CGear),
+                    new ComboBoxItem("个体值（普通的Seed）", FrameType.Method5Standard),
+                    new ComboBoxItem("个体值（C装置Seed）", FrameType.Method5CGear),
                     new ComboBoxItem("PIDRNG", FrameType.Method5Natures),
-                    new ComboBoxItem("Wondercard", FrameType.Wondercard5thGen),
-                    new ComboBoxItem("GLAN Wondercard", FrameType.Wondercard5thGenFixed)
+                    new ComboBoxItem("神秘卡片", FrameType.Wondercard5thGen),
+                    new ComboBoxItem("GLAN 神秘卡片", FrameType.Wondercard5thGenFixed)
                 });
 
             var ability = new[]
@@ -455,7 +455,7 @@ namespace RNGReporter
                 //  Need to validate the year here
                 if (year < 2000)
                 {
-                    MessageBox.Show("You must enter a year greater than 1999.", "请输入一个有效年份",
+                    MessageBox.Show("必须输入大于1999的年份", "请输入一个有效年份",
                                     MessageBoxButtons.OK);
                     return;
                 }
@@ -812,7 +812,7 @@ namespace RNGReporter
                         foreach (var partialList in list)
                         {
                             if (partialList == null)
-                                MessageBox.Show("error in loading hashtables");
+                                MessageBox.Show("加载hash表时出错");
                         }
                     }
                 }
@@ -1808,7 +1808,7 @@ namespace RNGReporter
 
                 if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard))
                 {
-                    labelCapMinMaxFrame.Text = "Min / 最大帧";
+                    labelCapMinMaxFrame.Text = "最小/最大帧";
                     labelCapMinMaxFrame.Location = oldLocation;
 
                     if (maskedTextBoxCapMinOffset.Text == "0")
@@ -1821,7 +1821,7 @@ namespace RNGReporter
                 }
                 else
                 {
-                    labelCapMinMaxFrame.Text = "Min / 最大帧";
+                    labelCapMinMaxFrame.Text = "最小/最大帧";
                     labelCapMinMaxFrame.Location = labelShinyMinMaxFrame.Location;
 
                     if (maskedTextBoxCapMinOffset.Text == "1")
@@ -1844,13 +1844,13 @@ namespace RNGReporter
                 //cbCapShinyCharm.Visible = false;
 
                 comboBoxCapMonth.Visible = false;
-                labelCapMonthDelay.Text = "Min \\ Max Delay";
+                labelCapMonthDelay.Text = "最小\\最大Delay";
                 maskedTextBoxCapMinDelay.Visible = true;
                 maskedTextBoxCapMaxDelay.Visible = true;
                 maskedTextBoxCapMinDelay.TabStop = true;
                 maskedTextBoxCapMaxDelay.TabStop = true;
 
-                labelCapMinMaxFrame.Text = "Min / 最大帧";
+                labelCapMinMaxFrame.Text = "最小/最大帧";
                 labelCapMinMaxFrame.Location = oldLocation;
 
                 if (maskedTextBoxCapMinOffset.Text == "0")
@@ -1880,7 +1880,7 @@ namespace RNGReporter
                 maskedTextBoxCapMinDelay.Visible = false;
                 maskedTextBoxCapMaxDelay.Visible = false;
 
-                labelCapMinMaxFrame.Text = "最小 / 最大帧";
+                labelCapMinMaxFrame.Text = "最小/最大帧";
                 labelCapMinMaxFrame.Location = labelShinyMinMaxFrame.Location;
 
                 if (maskedTextBoxCapMinOffset.Text == "1")
@@ -1896,7 +1896,7 @@ namespace RNGReporter
 
             checkBoxShinyOnly.Text =
                 ((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5Standard)
-                    ? "Search for Nearby Shiny Frames"
+                    ? "搜索附近异色帧"
                     : "仅异色";
 
             controlsShowHide();
@@ -2060,7 +2060,7 @@ namespace RNGReporter
 
             if (checkBoxShinyDreamWorld.Checked && checkBoxShinyDittoParent.Checked)
             {
-                MessageBox.Show("Unable to have Ditto parent and Dream World ability at the same time.");
+                MessageBox.Show("不能同时拥有同上父母和梦特性。");
                 checkBoxShinyDittoParent.Focus();
                 return;
             }
@@ -2069,7 +2069,7 @@ namespace RNGReporter
             int year = Convert.ToInt32(maskedTextBoxShinyYear.Text);
             if (year < 2000 || year > 2099)
             {
-                MessageBox.Show("Year must be between 2000 and 2099.");
+                MessageBox.Show("年份必须在2000到2099之间");
                 maskedTextBoxShinyYear.Focus();
                 return;
             }
@@ -2191,7 +2191,7 @@ namespace RNGReporter
 
             if (parentPassCount < 3)
             {
-                MessageBox.Show("The parent IVs you have listed cannot produce your desired search results.");
+                MessageBox.Show("您填入的父母个体无法产生您想要的搜索结果");
                 return;
             }
 
@@ -2624,27 +2624,27 @@ namespace RNGReporter
         private void IVFilters_Changed(object sender, EventArgs e)
         {
             if (FastCapFilters() && FastCapFrames())
-                label9.Text = "IV filters are set for fast searching.";
+                label9.Text = "个体值筛选设置为快速搜索。";
             else if (FastCapFilters())
             {
                 if (((ComboBoxItem)comboBoxMethod.SelectedItem).Reference.Equals(FrameType.Method5CGear))
-                    label9.Text = "IV filters are set for Entralink fast searching, but\r\n" +
-                                  "Min and 最大帧s need to be between\r\n" +
-                                  "21 and 26.  (Setting both to 21 is recommended.)";
+                    label9.Text = "个体值筛选已设置为连入之森快速搜索，但最小和最大\r\n" +
+                                  "帧需要位于21和26之间（建议将两者都设置为21。）" ;
                 else
                 {
-                    label9.Text = "IV filters are set for fast searching, but\r\n" +
-                                  "Min and 最大帧s need to be between\r\n" +
-                                  "1 and 6.  (Setting both to 1 is recommended.)";
+                    label9.Text = "个体值筛选已设置为快速搜索，但最小和最大\r\n" +
+                                  "帧需要位于1和6之间（建议将两者都设置为1。）";
                     if (((Profile)comboBoxProfiles.SelectedItem).IsBW2())
                     {
-                        label9.Text += "\r\nOr 25 and 30 for Entralink abuse";
+                        label9.Text += "\r\n或者，对于连入之森乱数的情况，设为25和30。";
                     }
                 }
             }
             else
-                label9.Text = "IV filters are not set to allow fast searching.\r\nTry searching for a common spread" +
-                              "\r\nsuch as flawless, or a Trick Room spread.";
+                //IV filters are not set to allow fast searching.\r\nTry searching for a common spread" +
+                //"\r\nsuch as flawless, or a Trick Room spread.
+                label9.Text = "个体值筛选未设置为允许快速搜索。\r\n尝试搜索常见的分配方案" +
+                              "\r\n如完美的分配方案，或戏法空间的分配方案";
         }
 
         private GenderFilter constructGenderFilter()
@@ -2777,12 +2777,11 @@ namespace RNGReporter
                             ((IFrameCapture)dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod)
                         {
                             case Objects.EncounterMod.Synchronize:
-                                toolTipDataGrid.ToolTipTitle = "Synchronize";
+                                toolTipDataGrid.ToolTipTitle = "同步";
 
                                 toolTipDataGrid.Show(
-                                    "When encountering the desired Pokémon, the lead Pokémon in your party\r\n" +
-                                    "must have the ability Synchronize, and have a nature that matches your\r\n" +
-                                    "desired nature.  This will cause the target Pokémon to have your desired nature.",
+                                    "在遇到目标宝可梦时，你的背包中的首发宝可梦必须是“同步”特性，并且\r\n" +
+                                    "其性格与你想要的目标性格相匹配。这样，目标宝可梦就会是你想要的性格。",
                                     this,
                                     dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                     dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2797,37 +2796,36 @@ namespace RNGReporter
                             case Objects.EncounterMod.CuteCharm75M:
                             case Objects.EncounterMod.CuteCharm25M:
                             case Objects.EncounterMod.CuteCharmFemale:
-                                toolTipDataGrid.ToolTipTitle = "Cute Charm";
+                                toolTipDataGrid.ToolTipTitle = "迷人之躯";
 
                                 toolTipDataGrid.Show(
-                                    "When encountering the target Pokémon, the lead Pokémon in your party\r\n" +
-                                    "must have the ability Cute Charm, and be the opposite gender of the listed target.\r\n" +
-                                    "The listed gender ratio must also match that of the target Pokémon.\r\n\r\n" +
-                                    "For example: Cute Charm (75% M) indicates that the target Pokémon must be\r\n" +
-                                    "male (requiring a female Cute Charm lead), and must be of a species that has a\r\n" +
-                                    "75% male gender ratio, such as Alakazam.\r\n\r\n" +
-                                    "Cute Charm does not work for species with only one gender, such as Tauros.",
+                                    "在遇到目标宝可梦时，你的背包中的首发宝可梦必须是“迷人之躯”特性，并且与列出的目\r\n" +
+                                    "标宝可梦性别相反。\r\n" +
+                                    "列出的性别比例也必须与目标宝可梦的性别比例相匹配。\r\n\r\n" +
+                                    "例如：“迷人之躯（75%♂）”表示目标宝可梦必定是雄性（需要雌性拥有“迷人之躯”特\r\n" +
+                                    "性的首发），并且必须是性别比例为75%雄性的宝可梦，如胡地。\r\n" +
+                                    "然而，“迷人之躯（♀）”则需要雄性首发，并且会对所有雌性宝可梦起作用（除了只有雌\r\n" +
+                                    "性的宝可梦，如迷唇姐）\r\n\r\n" +
+                                    "“迷人之躯”对只有单一性别的宝可梦（如肯泰罗）不起作用",
                                     this,
                                     dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                     dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
                                     15000);
                                 break;
                             case Objects.EncounterMod.SuctionCups:
-                                toolTipDataGrid.ToolTipTitle = "Suction Cups";
+                                toolTipDataGrid.ToolTipTitle = "吸盘";
 
                                 toolTipDataGrid.Show(
-                                    "When fishing for the target Pokémon, the lead Pokémon in your party\r\n" +
-                                    "must have the ability Suction Cups.  Otherwise, fishing will fail\r\n" +
-                                    "with \"Not even a nibble.\"\r\n\r\n" +
-                                    "Some non-fishing encounters may also require Suction Cups in order\r\n" +
-                                    "to make the frame appear.",
+                                    "在钓鱼捕捉目标宝可梦时，你的背包中的首发宝可梦必须是“吸盘”特性。\r\n\r\n" +
+                                    "否则，钓鱼会失败，并显示“没有鱼上钩”\r\n\r\n" +
+                                    "一些非钓鱼遭遇也可能需要吸盘能力，以便让画面出现",
                                     this,
                                     dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                     dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
                                     5000);
                                 break;
                             case Objects.EncounterMod.Compoundeyes:
-                                toolTipDataGrid.ToolTipTitle = "Compoundeyes";
+                                toolTipDataGrid.ToolTipTitle = "复眼";
                                 break;
                             case Objects.EncounterMod.None:
                                 toolTipDataGrid.Hide(this);
@@ -2837,11 +2835,10 @@ namespace RNGReporter
                 }
                 else if (dataGridViewCapValues.Columns[e.ColumnIndex].Name == "Nature")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Nature";
+                    toolTipDataGrid.ToolTipTitle = "性格（没搞懂这个什么意思，凑合着看吧）";
 
-                    toolTipDataGrid.Show("A bolded nature indicates that the nature can be changed by a lead\r\n" +
-                                         "Pokémon with Synchronize.\r\n\r\n" +
-                                         "Greyed-out natures are natures with no competitive value.",
+                    toolTipDataGrid.Show("加粗黑色的性格说明可以通过同步特性的宝可梦使其同步性格\r\n\r\n" +
+                                         "灰色的性格则说明该性格的无同步的默认性格",
                                          this,
                                          dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2849,9 +2846,9 @@ namespace RNGReporter
                 }
                 else if (dataGridViewCapValues.Columns[e.ColumnIndex].Name == "Shiny")
                 {
-                    toolTipDataGrid.ToolTipTitle = "!!!";
+                    toolTipDataGrid.ToolTipTitle = "异色";
 
-                    toolTipDataGrid.Show("A !!! in this column indicates the frame will be shiny.",
+                    toolTipDataGrid.Show("如果该帧的异色列有!!!则说明该帧是异色",
                                          this,
                                          dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2861,9 +2858,8 @@ namespace RNGReporter
                 {
                     toolTipDataGrid.ToolTipTitle = "遭遇槽位";
 
-                    toolTipDataGrid.Show("Encounter slots are used to determine what Pokémon appears for\r\n" +
-                                         "a wild battle.  Use the encounter tables under the main menus to look up\r\n" +
-                                         "which Pokémon appears for each slot in each area.\r\n",
+                    toolTipDataGrid.Show("遭遇槽位是用来确定野生战斗中会出现哪种宝可梦。\r\n" +
+                                         "请使用菜单下的遭遇表来查找每个区域每个槽位会出现哪种宝可梦",
                                          this,
                                          dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2953,7 +2949,7 @@ namespace RNGReporter
         {
             labelProfileInformation.Text = Profiles.List.Count > 0
                                                ? ((Profile)comboBoxProfiles.SelectedItem).ProfileInformation()
-                                               : "No profiles found.";
+                                               : "没有找到存档信息";
             Settings.Default.ID = ((Profile)comboBoxProfiles.SelectedItem).ID.ToString();
             Settings.Default.SID = ((Profile)comboBoxProfiles.SelectedItem).SID.ToString();
             Settings.Default.Save();
@@ -2967,14 +2963,14 @@ namespace RNGReporter
         private void buttonLoadEggSeeds_Click(object sender, EventArgs e)
         {
             new Thread(LoadSeeds).Start();
-            MessageBox.Show("Loading the seeds file. Please be patient and wait for it to finish.");
+            MessageBox.Show("正在加载seed文件。请耐心等待直至完成");
         }
 
         private void LoadSeeds()
         {
             if (EggSeedSearcher.LoadSeeds("eggseeds.dat", out eggSeeds))
             {
-                MessageBox.Show("Seeds successfully loaded.");
+                MessageBox.Show("seed记载成功");
             }
         }
 

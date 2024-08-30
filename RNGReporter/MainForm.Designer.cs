@@ -1307,7 +1307,7 @@ namespace RNGReporter
             this.toolTipDataGrid.AutoPopDelay = 6000;
             this.toolTipDataGrid.InitialDelay = 300;
             this.toolTipDataGrid.ReshowDelay = 100;
-            this.toolTipDataGrid.ToolTipTitle = "Chatot Pitch";
+            this.toolTipDataGrid.ToolTipTitle = "聒噪鸟音高";
             // 
             // buttonLead
             // 

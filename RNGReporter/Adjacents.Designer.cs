@@ -130,7 +130,7 @@ namespace RNGReporter
             // 
             this.generateTimesToolStripMenuItem.Name = "generateTimesToolStripMenuItem";
             this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(260, 24);
-            this.generateTimesToolStripMenuItem.Text = "计算更多的时间 ...";
+            this.generateTimesToolStripMenuItem.Text = "复制seed到seed to time";
             // 
             // generateAdjacentSeedsFrame1ToolStripMenuItem
             // 

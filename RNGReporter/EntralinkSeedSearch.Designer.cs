@@ -125,20 +125,20 @@ namespace RNGReporter
             // 
             this.generateTimesToolStripMenuItem.Name = "generateTimesToolStripMenuItem";
             this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
-            this.generateTimesToolStripMenuItem.Text = "Generate More Times ...";
+            this.generateTimesToolStripMenuItem.Text = "复制seed到seed to time";
             // 
             // generateAdjacentSeedsFrame1ToolStripMenuItem
             // 
             this.generateAdjacentSeedsFrame1ToolStripMenuItem.Name = "generateAdjacentSeedsFrame1ToolStripMenuItem";
             this.generateAdjacentSeedsFrame1ToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
-            this.generateAdjacentSeedsFrame1ToolStripMenuItem.Text = "Generate Adjacent Seeds (Frame 1)";
+            this.generateAdjacentSeedsFrame1ToolStripMenuItem.Text = "计算相邻的 Seeds (1帧)";
             this.generateAdjacentSeedsFrame1ToolStripMenuItem.Visible = false;
             // 
             // generateAdjacentSeedsToolStripMenuItem
             // 
             this.generateAdjacentSeedsToolStripMenuItem.Name = "generateAdjacentSeedsToolStripMenuItem";
             this.generateAdjacentSeedsToolStripMenuItem.Size = new System.Drawing.Size(380, 24);
-            this.generateAdjacentSeedsToolStripMenuItem.Text = "Generate Adjacent Seeds (Current Frame)";
+            this.generateAdjacentSeedsToolStripMenuItem.Text = "计算相邻的 Seeds (当前帧)";
             this.generateAdjacentSeedsToolStripMenuItem.Visible = false;
             // 
             // toolStripMenuItem3
@@ -237,8 +237,7 @@ namespace RNGReporter
             this.maskedTextBoxDelayCalibration.Size = new System.Drawing.Size(51, 24);
             this.maskedTextBoxDelayCalibration.TabIndex = 10;
             this.maskedTextBoxDelayCalibration.Text = "0";
-            this.toolTip1.SetToolTip(this.maskedTextBoxDelayCalibration, "This is the amount to offset the time difference between the Standard Seed and th" +
-        "e CGear Seed.");
+            this.toolTip1.SetToolTip(this.maskedTextBoxDelayCalibration, "这是用来抵消普通seed和C装置seed之间时间差的数值");
             // 
             // label12
             // 

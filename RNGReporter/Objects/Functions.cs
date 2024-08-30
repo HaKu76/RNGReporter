@@ -84,7 +84,7 @@ namespace RNGReporter.Objects
         {
             if (nature == -2)
             {
-                return "Any";
+                return "任意";
             }
 
             if (nature == -1)

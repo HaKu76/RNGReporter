@@ -95,11 +95,11 @@ namespace RNGReporter
 
             comboBoxMethod.Items.AddRange(new object[]
                 {
-                    new ComboBoxItem("IVs (Standard Seed)", FrameType.Method5Standard),
+                    new ComboBoxItem("个体值（普通的Seed）", FrameType.Method5Standard),
                     new ComboBoxItem("PIDRNG", FrameType.Method5Natures),
-                    new ComboBoxItem("Eggs", FrameType.BWBred),
-                    new ComboBoxItem("Wondercard", FrameType.Wondercard5thGen),
-                    new ComboBoxItem("GLAN Wondercard", FrameType.Wondercard5thGenFixed)
+                    new ComboBoxItem("蛋", FrameType.BWBred),
+                    new ComboBoxItem("神秘卡片", FrameType.Wondercard5thGen),
+                    new ComboBoxItem("GLAN 神秘卡片", FrameType.Wondercard5thGenFixed)
                 });
 
             comboBoxEncounterType.Items.AddRange(new object[]

@@ -60,12 +60,12 @@ namespace RNGReporter.Objects
             uint.TryParse(maxFrame.Text, out frame);
 
             natureList = null;
-            if (comboBoxNature.Text != "Any" && comboBoxNature.CheckBoxItems.Count > 0)
+            if (comboBoxNature.Text != "任意" && comboBoxNature.CheckBoxItems.Count > 0)
                 natureList = (from t in comboBoxNature.CheckBoxItems where t.Checked select (uint)((Nature)t.ComboBoxItem).Number).ToList();
 
             spotList = null;
             List<String> temp = new List<String>();
-            if (comboBoxSpotType.Text != "Any" && comboBoxSpotType.CheckBoxItems.Count > 0)
+            if (comboBoxSpotType.Text != "任意" && comboBoxSpotType.CheckBoxItems.Count > 0)
                 for (int x = 1; x < 4; x++)
                     if (comboBoxSpotType.CheckBoxItems[x].Checked)
                         temp.Add(comboBoxSpotType.CheckBoxItems[x].Text);

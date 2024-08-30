@@ -507,13 +507,13 @@ namespace RNGReporter
             if (radioButtonEggDPPt.Checked)
             {
                 generator.FrameType = FrameType.DPPtBred;
-                Flips.HeaderText = "Flip Sequence";
+                Flips.HeaderText = "硬币序列";
                 Flips.DataPropertyName = "Flips";
             }
             else
             {
                 generator.FrameType = FrameType.HGSSBred;
-                Flips.HeaderText = "Elm Sequence";
+                Flips.HeaderText = "电话序列";
                 Flips.DataPropertyName = "ElmResponses";
             }
 
@@ -1381,7 +1381,7 @@ namespace RNGReporter
                         "定点宝可梦",
                         "捕虫大赛",
                         "狩猎地带",
-                        "Headbutt"
+                        "头锤树"
                     };
 
                 comboBoxEncounterType.Enabled = true;
@@ -1408,7 +1408,7 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Stationary\\Gift Pokémon"
+                        "定点\\礼物宝可梦"
                     };
 
                 comboBoxEncounterType.Enabled = false;
@@ -1419,7 +1419,7 @@ namespace RNGReporter
             {
                 encounterMenu = new[]
                     {
-                        "Stationary\\Gift Pokémon"
+                        "定点\\礼物宝可梦"
                     };
 
                 comboBoxEncounterType.Enabled = false;
@@ -2186,12 +2186,11 @@ namespace RNGReporter
                             ((IFrameCapture)dataGridViewCapValues.Rows[e.RowIndex].DataBoundItem).Frame.EncounterMod)
                         {
                             case Objects.EncounterMod.Synchronize:
-                                toolTipDataGrid.ToolTipTitle = "Synchronize";
+                                toolTipDataGrid.ToolTipTitle = "同步";
 
                                 toolTipDataGrid.Show(
-                                    "When encountering the desired Pokémon, the lead Pokémon in your party\r\n" +
-                                    "must have the ability Synchronize, and have a nature that matches your\r\n" +
-                                    "desired nature.  This will cause the target Pokémon to have your desired nature.",
+                                    "在遇到目标宝可梦时，你的背包中的首发宝可梦必须是“同步”特性，并且\r\n" +
+                                    "其性格与你想要的目标性格相匹配。这样，目标宝可梦就会是你想要的性格。",
                                     this,
                                     dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                     dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2206,29 +2205,28 @@ namespace RNGReporter
                             case Objects.EncounterMod.CuteCharm75M:
                             case Objects.EncounterMod.CuteCharm25M:
                             case Objects.EncounterMod.CuteCharmFemale:
-                                toolTipDataGrid.ToolTipTitle = "Cute Charm";
+                                toolTipDataGrid.ToolTipTitle = "迷人之躯";
 
                                 toolTipDataGrid.Show(
-                                    "When encountering the target Pokémon, the lead Pokémon in your party\r\n" +
-                                    "must have the ability Cute Charm, and be the opposite gender of the listed target.\r\n" +
-                                    "The listed gender ratio must also match that of the target Pokémon.\r\n\r\n" +
-                                    "For example: Cute Charm (75% M) indicates that the target Pokémon must be\r\n" +
-                                    "male (requiring a female Cute Charm lead), and must be of a species that has a\r\n" +
-                                    "75% male gender ratio, such as Alakazam.  However, Cute Charm (Female), requires a\r\n" +
-                                    "male lead and will work for all female Pokémon (except female-only Pokémon such as Jynx).\r\n\r\n" +
-                                    "Cute Charm does not work for species with only one gender, such as Tauros.",
+                                    "在遇到目标宝可梦时，你的背包中的首发宝可梦必须是“迷人之躯”特性，并且与列出的目\r\n" +
+                                    "标宝可梦性别相反。\r\n" +
+                                    "列出的性别比例也必须与目标宝可梦的性别比例相匹配。\r\n\r\n" +
+                                    "例如：“迷人之躯（75%♂）”表示目标宝可梦必定是雄性（需要雌性拥有“迷人之躯”特\r\n" +
+                                    "性的首发），并且必须是性别比例为75%雄性的宝可梦，如胡地。\r\n" +
+                                    "然而，“迷人之躯（♀）”则需要雄性首发，并且会对所有雌性宝可梦起作用（除了只有雌\r\n" +
+                                    "性的宝可梦，如迷唇姐）\r\n\r\n" +
+                                    "“迷人之躯”对只有单一性别的宝可梦（如肯泰罗）不起作用",
                                     this,
                                     dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                     dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
                                     15000);
                                 break;
                             case Objects.EncounterMod.SuctionCups:
-                                toolTipDataGrid.ToolTipTitle = "Suction Cups";
+                                toolTipDataGrid.ToolTipTitle = "吸盘";
 
                                 toolTipDataGrid.Show(
-                                    "When fishing for the target Pokémon, the lead Pokémon in your party\r\n" +
-                                    "must have the ability Suction Cups.\r\n\r\n" +
-                                    "Otherwise, fishing will fail with \"Not even a nibble.\"",
+                                    "在钓鱼捕捉目标宝可梦时，你的背包中的首发宝可梦必须是“吸盘”特性。\r\n\r\n" +
+                                    "否则，钓鱼会失败，并显示“没有鱼上钩”",
                                     this,
                                     dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                     dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2242,9 +2240,9 @@ namespace RNGReporter
                 }
                 else if (dataGridViewCapValues.Columns[e.ColumnIndex].Name == "Nature")
                 {
-                    toolTipDataGrid.ToolTipTitle = "Nature";
+                    toolTipDataGrid.ToolTipTitle = "性格";
 
-                    toolTipDataGrid.Show("Greyed-out natures are natures with no competitive value.",
+                    toolTipDataGrid.Show("灰色字体的性格是没有竞争价值的性格。",
                                          this,
                                          dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2252,9 +2250,9 @@ namespace RNGReporter
                 }
                 else if (dataGridViewCapValues.Columns[e.ColumnIndex].Name == "Shiny")
                 {
-                    toolTipDataGrid.ToolTipTitle = "!!!";
+                    toolTipDataGrid.ToolTipTitle = "异色";
 
-                    toolTipDataGrid.Show("A !!! in this column indicates the frame will be shiny.",
+                    toolTipDataGrid.Show("如果该帧的异色列有!!!则说明该帧是异色",
                                          this,
                                          dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,
@@ -2264,9 +2262,8 @@ namespace RNGReporter
                 {
                     toolTipDataGrid.ToolTipTitle = "遭遇槽位";
 
-                    toolTipDataGrid.Show("Encounter slots are used to determine what Pokémon appears for\r\n" +
-                                         "a wild battle.  Use the encounter tables under the main menus to look up\r\n" +
-                                         "which Pokémon appears for each slot in each area.\r\n",
+                    toolTipDataGrid.Show("遭遇槽位是用来确定野生战斗中会出现哪种宝可梦。\r\n" +
+                                         "请使用菜单下的遭遇表来查找每个区域每个槽位会出现哪种宝可梦",
                                          this,
                                          dataGridViewCapValues.Location.X + cellRect.X + cellRect.Size.Width,
                                          dataGridViewCapValues.Location.Y + cellRect.Y + cellRect.Size.Height,

@@ -2515,9 +2515,9 @@ namespace RNGReporter
             this.cbCapGender.ForeColor = System.Drawing.Color.Black;
             this.cbCapGender.FormattingEnabled = true;
             this.cbCapGender.Items.AddRange(new object[] {
-            "Any",
-            "Male",
-            "Female"});
+            "任意",
+            "♂",
+            "♀"});
             this.cbCapGender.Location = new System.Drawing.Point(725, 90);
             this.cbCapGender.MaxDropDownItems = 3;
             this.cbCapGender.Name = "cbCapGender";
@@ -2632,9 +2632,9 @@ namespace RNGReporter
             this.cbAbility.ForeColor = System.Drawing.Color.Black;
             this.cbAbility.FormattingEnabled = true;
             this.cbAbility.Items.AddRange(new object[] {
-            "Any",
-            "Ability 0",
-            "Ability 1"});
+            "任意",
+            "特性0",
+            "特性1"});
             this.cbAbility.Location = new System.Drawing.Point(725, 36);
             this.cbAbility.Name = "cbAbility";
             this.cbAbility.ShineColor = System.Drawing.SystemColors.Window;
@@ -3653,9 +3653,9 @@ namespace RNGReporter
             this.comboEPIDAbility.ForeColor = System.Drawing.Color.Black;
             this.comboEPIDAbility.FormattingEnabled = true;
             this.comboEPIDAbility.Items.AddRange(new object[] {
-            "Any",
-            "Ability 0",
-            "Ability 1"});
+            "任意",
+            "特性0",
+            "特性1"});
             this.comboEPIDAbility.Location = new System.Drawing.Point(695, 53);
             this.comboEPIDAbility.MaxDropDownItems = 3;
             this.comboEPIDAbility.Name = "comboEPIDAbility";
@@ -4177,9 +4177,9 @@ namespace RNGReporter
             this.comboBoxShiny3rdAbility.ForeColor = System.Drawing.Color.Black;
             this.comboBoxShiny3rdAbility.FormattingEnabled = true;
             this.comboBoxShiny3rdAbility.Items.AddRange(new object[] {
-            "Any",
-            "Ability 0",
-            "Ability 1"});
+            "任意",
+            "特性0",
+            "特性1"});
             this.comboBoxShiny3rdAbility.Location = new System.Drawing.Point(342, 39);
             this.comboBoxShiny3rdAbility.MaxDropDownItems = 3;
             this.comboBoxShiny3rdAbility.Name = "comboBoxShiny3rdAbility";
@@ -5012,9 +5012,9 @@ namespace RNGReporter
             this.glassComboBoxAbilityFRLG.ForeColor = System.Drawing.Color.Black;
             this.glassComboBoxAbilityFRLG.FormattingEnabled = true;
             this.glassComboBoxAbilityFRLG.Items.AddRange(new object[] {
-            "Any",
-            "Ability 0",
-            "Ability 1"});
+            "任意",
+            "特性0",
+            "特性1"});
             this.glassComboBoxAbilityFRLG.Location = new System.Drawing.Point(342, 39);
             this.glassComboBoxAbilityFRLG.MaxDropDownItems = 3;
             this.glassComboBoxAbilityFRLG.Name = "glassComboBoxAbilityFRLG";

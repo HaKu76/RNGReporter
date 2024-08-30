@@ -819,7 +819,7 @@ namespace RNGReporter
             // 
             this.generateTimesToolStripMenuItem.Name = "generateTimesToolStripMenuItem";
             this.generateTimesToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.generateTimesToolStripMenuItem.Text = "计算更多时间 ...";
+            this.generateTimesToolStripMenuItem.Text = "复制seed到seed to time";
             this.generateTimesToolStripMenuItem.Click += new System.EventHandler(this.generateTimesToolStripMenuItem_Click);
             // 
             // bgwIDInf
