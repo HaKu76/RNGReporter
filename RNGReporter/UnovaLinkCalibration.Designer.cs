@@ -536,8 +536,8 @@
             this.comboBoxVersion.ForeColor = System.Drawing.Color.Black;
             this.comboBoxVersion.FormattingEnabled = true;
             this.comboBoxVersion.Items.AddRange(new object[] {
-            "Black 2",
-            "White 2"});
+            "黑2",
+            "白2"});
             this.comboBoxVersion.Location = new System.Drawing.Point(218, 50);
             this.comboBoxVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxVersion.Name = "comboBoxVersion";

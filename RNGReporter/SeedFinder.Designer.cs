@@ -2316,10 +2316,10 @@ namespace RNGReporter
             this.comboBoxVersion.ForeColor = System.Drawing.Color.Black;
             this.comboBoxVersion.FormattingEnabled = true;
             this.comboBoxVersion.Items.AddRange(new object[] {
-            "Black",
-            "White",
-            "Black 2",
-            "White 2"});
+            "黑",
+            "白",
+            "黑2",
+            "白2"});
             this.comboBoxVersion.Location = new System.Drawing.Point(338, 146);
             this.comboBoxVersion.Name = "comboBoxVersion";
             this.comboBoxVersion.ShineColor = System.Drawing.SystemColors.Window;

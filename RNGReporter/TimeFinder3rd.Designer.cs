@@ -2548,7 +2548,7 @@ namespace RNGReporter
             this.cbEncounterType.ForeColor = System.Drawing.Color.Black;
             this.cbEncounterType.FormattingEnabled = true;
             this.cbEncounterType.Items.AddRange(new object[] {
-            "Stationary\\Gift Pokémon"});
+            "定点\\礼物宝可梦"});
             this.cbEncounterType.Location = new System.Drawing.Point(128, 108);
             this.cbEncounterType.Name = "cbEncounterType";
             this.cbEncounterType.ShineColor = System.Drawing.SystemColors.Window;

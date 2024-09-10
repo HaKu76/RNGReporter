@@ -376,7 +376,7 @@ namespace RNGReporter
             // 
             this.calculatePoketechTapsToolStripMenuItem.Name = "calculatePoketechTapsToolStripMenuItem";
             this.calculatePoketechTapsToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.calculatePoketechTapsToolStripMenuItem.Text = "计算Poketech Taps ...";
+            this.calculatePoketechTapsToolStripMenuItem.Text = "计算宝可表轻触次数 ...";
             this.calculatePoketechTapsToolStripMenuItem.Click += new System.EventHandler(this.calculatePoketechTapsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
@@ -1163,7 +1163,7 @@ namespace RNGReporter
             // 简体中文ToolStripMenuItem
             // 
             this.简体中文ToolStripMenuItem.CheckOnClick = true;
-            this.简体中文ToolStripMenuItem.Font = new System.Drawing.Font("Malgun Gothic", 8.25F);
+            this.简体中文ToolStripMenuItem.Font = new System.Drawing.Font("宋体", 9F);
             this.简体中文ToolStripMenuItem.Name = "简体中文ToolStripMenuItem";
             this.简体中文ToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.简体中文ToolStripMenuItem.Text = "简体中文";
@@ -1340,9 +1340,9 @@ namespace RNGReporter
             this.cbNidoBeat.AutoSize = true;
             this.cbNidoBeat.Location = new System.Drawing.Point(545, 220);
             this.cbNidoBeat.Name = "cbNidoBeat";
-            this.cbNidoBeat.Size = new System.Drawing.Size(103, 17);
+            this.cbNidoBeat.Size = new System.Drawing.Size(115, 17);
             this.cbNidoBeat.TabIndex = 330;
-            this.cbNidoBeat.Text = "尼多朗/电萤虫";
+            this.cbNidoBeat.Text = "尼多一家/电萤虫";
             this.cbNidoBeat.UseVisualStyleBackColor = true;
             // 
             // cbShinyCharm
@@ -1668,7 +1668,7 @@ namespace RNGReporter
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1722,14 +1722,14 @@ namespace RNGReporter
             this.dataGridViewValues.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewValues.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewValues.RowHeadersVisible = false;
-            this.dataGridViewValues.RowHeadersWidth = 21;
+            this.dataGridViewValues.RowHeadersWidth = 22;
             this.dataGridViewValues.RowTemplate.Height = 20;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewValues.ShowCellErrors = false;
@@ -2124,7 +2124,7 @@ namespace RNGReporter
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = " RNG Reporter 10.3.4[汉化:自然公園/白白不是公主/Hakuhiro]";
+            this.Text = " RNG Reporter 10.3.4[汉化by:自然公園/白白不是公主/Hakuhiro]";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.contextMenuStripGrid.ResumeLayout(false);

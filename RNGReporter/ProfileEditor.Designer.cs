@@ -183,7 +183,7 @@
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(29, 12);
             this.label50.TabIndex = 142;
-            this.label50.Text = "版本";
+            this.label50.Text = "游戏版本";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // checkBoxSoftReset
@@ -202,10 +202,10 @@
             this.comboBoxVersion.ForeColor = System.Drawing.Color.Black;
             this.comboBoxVersion.FormattingEnabled = true;
             this.comboBoxVersion.Items.AddRange(new object[] {
-            "Black",
-            "White",
-            "Black 2",
-            "White 2"});
+            "黑",
+            "白",
+            "黑2",
+            "白2"});
             this.comboBoxVersion.Location = new System.Drawing.Point(207, 94);
             this.comboBoxVersion.Name = "comboBoxVersion";
             this.comboBoxVersion.ShineColor = System.Drawing.SystemColors.Window;

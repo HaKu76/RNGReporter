@@ -890,10 +890,10 @@ namespace RNGReporter
             this.comboBoxVersion.ForeColor = System.Drawing.Color.Black;
             this.comboBoxVersion.FormattingEnabled = true;
             this.comboBoxVersion.Items.AddRange(new object[] {
-            "Black",
-            "White",
-            "Black 2",
-            "White 2"});
+            "黑",
+            "白",
+            "黑2",
+            "白2"});
             this.comboBoxVersion.Location = new System.Drawing.Point(325, 62);
             this.comboBoxVersion.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxVersion.Name = "comboBoxVersion";

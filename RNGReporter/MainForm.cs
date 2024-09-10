@@ -34,6 +34,7 @@ using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
 using Version = RNGReporter.Objects.Version;
+using System.Threading;
 
 namespace RNGReporter
 {
@@ -86,9 +87,9 @@ namespace RNGReporter
                     new ComboBoxItem("GEN4蛋PID（普通的）", FrameType.Gen4Normal),
                     new ComboBoxItem("GEN4蛋PID（异国）",
                                      FrameType.Gen4International),
-                    new ComboBoxItem("孵蛋（绿宝石 No Splits）", FrameType.Bred),
-                    new ComboBoxItem("孵蛋（绿宝石 Splits）", FrameType.BredSplit),
-                    new ComboBoxItem("孵蛋（绿宝石 Alternate）",
+                    new ComboBoxItem("孵蛋（绿宝石 普通遗传）", FrameType.Bred),
+                    new ComboBoxItem("孵蛋（绿宝石 分裂遗传）", FrameType.BredSplit),
+                    new ComboBoxItem("孵蛋（绿宝石 交替遗传）",
                                      FrameType.BredAlternate),
                     new ComboBoxItem("孵蛋（红蓝宝石）", FrameType.RSBredUpper),
                     new ComboBoxItem("孵蛋（钻石珍珠白金）", FrameType.DPPtBred),
@@ -2618,7 +2619,7 @@ namespace RNGReporter
                      frameType == FrameType.Method5Natures) &&
                     textBoxSeed.Text.Length == 8)
                 {
-                    MessageBox.Show("This method requires you to copy the Full Seed from the Time Finder window.");
+                    MessageBox.Show("这个算法需要你从Time Finder窗口中复制完整的seed");
                     seed = uint.Parse(textBoxSeed.Text, NumberStyles.HexNumber);
                 }
                 else if (textBoxSeed.Text.Length > 8)
@@ -2808,19 +2809,19 @@ namespace RNGReporter
                     한국어ToolStripMenuItem.Checked = true;
                     break;
                 case (Language.SimplifiedChinese):
-                    // 尝试设置字体为Microsoft Sans Serif
+                    // 尝试设置字体为宋体
                     try
                     {
-                        CellStyle.Font = new Font("Microsoft Sans Serif", 8.25F);
+                        CellStyle.Font = new Font("宋体", 8.25F);
                     }
                     catch (ArgumentException) // 如果字体不存在，将抛出 ArgumentException  
                     {
-                        // 如果Microsoft Sans Serif不可用，则尝试宋体
-                        CellStyle.Font = new Font("宋体", 8.25F);
+                        // 如果宋体不可用，则尝试Microsoft Sans Serif
+                        CellStyle.Font = new Font("Microsoft Sans Serif", 8.25F);
 
-                        if (CellStyle.Font.Name != "宋体")
+                        if (CellStyle.Font.Name != "Microsoft Sans Serif")
                         {
-                            // 如果宋体不可用，则尝试微软雅黑
+                            // 如果Microsoft Sans Serif不可用，则尝试微软雅黑
                             CellStyle.Font = new Font("微软雅黑", 8.25F);
 
                             if (CellStyle.Font.Name != "微软雅黑")
