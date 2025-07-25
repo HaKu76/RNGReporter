@@ -1232,7 +1232,7 @@ namespace RNGReporter
             this.labelCalcWarning.Name = "labelCalcWarning";
             this.labelCalcWarning.Size = new System.Drawing.Size(207, 13);
             this.labelCalcWarning.TabIndex = 110;
-            this.labelCalcWarning.Text = "注意:如果区域内有npc，帧预测将不会不准确";
+            this.labelCalcWarning.Text = "注意:如果区域内有npc，帧预测将会不准确";
             this.labelCalcWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkBoxRoamerReleased

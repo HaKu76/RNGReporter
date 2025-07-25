@@ -2812,7 +2812,7 @@ namespace RNGReporter
                     // 尝试设置字体为宋体
                     try
                     {
-                        CellStyle.Font = new Font("宋体", 8.25F);
+                        CellStyle.Font = new Font("宋体", 9F);
                     }
                     catch (ArgumentException) // 如果字体不存在，将抛出 ArgumentException  
                     {
@@ -2844,7 +2844,7 @@ namespace RNGReporter
 
                     Settings.Default.Language = (int)Language.English;
                     clearLanguageChecks();
-                    englishToolStripMenuItem.Checked = true;
+                    简体中文ToolStripMenuItem.Checked = true;
                     break;
             }
 
