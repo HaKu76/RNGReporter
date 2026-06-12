@@ -214,12 +214,11 @@ namespace RNGReporter
                     }
                 }
             }
-            catch (Exception exception)
+            catch (ObjectDisposedException)
             {
-                if (exception.Message != "Operation Cancelled")
-                {
-                    throw;
-                }
+            }
+            catch (OperationCanceledException)
+            {
             }
             finally
             {
@@ -233,6 +232,7 @@ namespace RNGReporter
                     if (jobs[i] != null)
                     {
                         jobs[i].Abort();
+                        jobs[i].Join(250);
                     }
                 }
             }

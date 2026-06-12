@@ -70,6 +70,7 @@ namespace RNGReporter.Objects.Searchers
             ResortGridDelegate gridSorter = ResortGrid;
             var sortParams = new object[] { bindingSource, grid, frameType };
             SetButtonDelegate setButton = SetGenerateButton;
+            bool cancelled = false;
 
             try
             {
@@ -102,17 +103,17 @@ namespace RNGReporter.Objects.Searchers
             {
                 // This keeps the program from crashing when the Time Finder progress box
                 // is closed from the Windows taskbar.
+                cancelled = true;
             }
-            catch (Exception exception)
+            catch (OperationCanceledException)
             {
-                if (exception.Message != "Operation Cancelled")
-                {
-                    throw;
-                }
+                cancelled = true;
             }
             finally
             {
                 progress.Finish();
+                if (waitHandle != null)
+                    waitHandle.Set();
 
                 if (jobs != null)
                 {
@@ -121,12 +122,17 @@ namespace RNGReporter.Objects.Searchers
                         if (t != null)
                         {
                             t.Abort();
+                            t.Join(250);
                         }
                     }
                 }
 
-                caller.Invoke(setButton, true);
-                caller.Invoke(gridSorter, sortParams);
+                if (caller != null && !caller.IsDisposed && caller.IsHandleCreated)
+                {
+                    caller.Invoke(setButton, true);
+                    if (!cancelled)
+                        caller.Invoke(gridSorter, sortParams);
+                }
             }
         }
 

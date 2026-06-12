@@ -142,13 +142,10 @@ namespace RNGReporter
             }
              */
 
-            //  Only allow certain things
-            if (pleaseAbort)
-            {
-                Application.RemoveMessageFilter(this);
-                Hide();
-                throw new Exception("操作被取消");
-            }
+            // Process the cancel click before callers refresh large result grids.
+            Application.DoEvents();
+            ThrowIfCancellationRequested();
+
             if (allowPause)
             {
                 if (pleasePause)
@@ -162,7 +159,16 @@ namespace RNGReporter
                     pleaseUnpause = false;
                 }
             }
-            Application.DoEvents();
+        }
+
+        private void ThrowIfCancellationRequested()
+        {
+            if (!pleaseAbort) return;
+
+            Application.RemoveMessageFilter(this);
+            if (!IsDisposed)
+                Hide();
+            throw new OperationCanceledException("操作被取消");
         }
 
 
@@ -173,9 +179,20 @@ namespace RNGReporter
 
         public void Finish()
         {
-            Application.DoEvents(); //this clears the event queue of unwanted clicks
-            Hide();
             Application.RemoveMessageFilter(this);
+            if (IsDisposed)
+                return;
+
+            try
+            {
+                Application.DoEvents(); //this clears the event queue of unwanted clicks
+                Hide();
+            }
+            catch (ObjectDisposedException)
+            {
+                return;
+            }
+
             Dispose();
         }
 
